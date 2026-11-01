@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dimensions Mod Status</title>
+<meta name="description" content="Project status of the Remnant 2 Dimensions mod, from its ClickUp tasks.">
+<style>
+:root {
+  --bg: #f6f5f2; --panel: #ffffff; --text: #1d1c1a; --muted: #6b6862; --line: #e3e0da;
+  --accent: #b5482a; --done: #2f7d4f; --blocked: #b23a3a; --track: #ebe8e2;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #151413; --panel: #1f1e1c; --text: #ece9e3; --muted: #9a958c; --line: #33312d;
+    --accent: #e0754f; --done: #5dbb83; --blocked: #e06a6a; --track: #2c2a27; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #151413; --panel: #1f1e1c; --text: #ece9e3; --muted: #9a958c; --line: #33312d;
+  --accent: #e0754f; --done: #5dbb83; --blocked: #e06a6a; --track: #2c2a27; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text);
+  font: 15px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+main { max-width: 960px; margin: 0 auto; padding: 32px 16px 64px; }
+a { color: inherit; }
+h1 { font-size: 26px; margin: 0 0 4px; letter-spacing: -0.01em; }
+.sub { color: var(--muted); margin: 0 0 24px; }
+.sub a { color: var(--muted); }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-bottom: 20px; }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; }
+.card .k { color: var(--muted); font-size: 13px; }
+.card .v { font-size: 24px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.bar { height: 8px; background: var(--track); border-radius: 99px; overflow: hidden; margin-top: 8px; }
+.bar > span { display: block; height: 100%; background: var(--done); border-radius: 99px; }
+.controls { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 8px 0 20px; }
+.chip { border: 1px solid var(--line); background: var(--panel); color: var(--text); border-radius: 99px;
+  padding: 4px 10px; font: inherit; font-size: 13px; cursor: pointer; display: inline-flex; gap: 6px; align-items: center; }
+.chip[aria-pressed="true"] { border-color: var(--text); box-shadow: inset 0 0 0 1px var(--text); }
+.dot { width: 9px; height: 9px; border-radius: 50%; flex: none; background: var(--muted); }
+input[type=search] { flex: 1 1 200px; min-width: 0; border: 1px solid var(--line); background: var(--panel); color: var(--text);
+  border-radius: 8px; padding: 7px 10px; font: inherit; }
+details.list { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; margin-bottom: 10px; }
+details.list > summary { list-style: none; cursor: pointer; padding: 12px 16px; display: grid;
+  grid-template-columns: 1fr auto; gap: 4px 12px; align-items: center; }
+details.list > summary::-webkit-details-marker { display: none; }
+summary .name { font-weight: 600; }
+summary .name::before { content: "▸"; display: inline-block; width: 1em; color: var(--muted); transition: transform .15s; }
+details[open] > summary .name::before { transform: rotate(90deg); }
+summary .count { color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; }
+summary .bar { grid-column: 1 / -1; margin-top: 2px; height: 5px; }
+ul.tasks { list-style: none; margin: 0; padding: 0 0 6px; border-top: 1px solid var(--line); }
+ul.tasks li { display: grid; grid-template-columns: 120px 1fr auto; gap: 10px; padding: 8px 16px; align-items: baseline; }
+ul.tasks li + li { border-top: 1px solid var(--line); }
+ul.tasks li.sub { padding-left: 40px; }
+.st { display: inline-flex; gap: 6px; align-items: center; font-size: 12px; color: var(--muted); text-transform: capitalize; white-space: nowrap; overflow: hidden; }
+.st .dot { transform: translateY(1px); }
+.t a { text-decoration: none; }
+.t a:hover { text-decoration: underline; }
+.t .id { color: var(--muted); font-size: 12px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; margin-right: 6px; }
+.t .wait { display: block; color: var(--blocked); font-size: 12px; margin-top: 2px; }
+.t .wait a { color: var(--blocked); }
+li.done .t a { color: var(--muted); text-decoration: line-through; text-decoration-color: var(--line); }
+.h { color: var(--muted); font-size: 12px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.msg { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 20px; color: var(--muted); }
+.empty { padding: 12px 16px; color: var(--muted); font-size: 13px; border-top: 1px solid var(--line); }
+footer { margin-top: 32px; color: var(--muted); font-size: 13px; }
+@media (max-width: 560px) {
+  ul.tasks li { grid-template-columns: 1fr auto; }
+  ul.tasks li .st { grid-column: 1 / -1; }
+  ul.tasks li.sub { padding-left: 28px; }
+}
+</style>
+</head>
+<body>
+<main>
+  <h1>Remnant 2 Dimensions</h1>
+  <p class="sub" id="sub">Project status from ClickUp</p>
+  <div id="app"><div class="msg">Loading status…</div></div>
+  <footer>
+    Synced from ClickUp by a scheduled GitHub Action.
+    <a href="https://github.com/clboyrun/steam-remnant2-dimensions-mod">Source on GitHub</a>.
+  </footer>
+</main>
+<script>
+(function () {
+  const app = document.getElementById("app");
+  const sub = document.getElementById("sub");
+  const state = { status: null, q: "", blocked: false };
+  let data;
+
+  const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const pct = (a, b) => (b ? Math.round((a / b) * 100) : 0);
+  const fmtH = h => (h == null ? "" : (Math.round(h * 10) / 10) + " h");
+  const ago = iso => {
+    const s = (Date.now() - new Date(iso).getTime()) / 1000;
+    if (s < 90) return "just now";
+    if (s < 5400) return Math.round(s / 60) + " min ago";
+    if (s < 129600) return Math.round(s / 3600) + " h ago";
+    return Math.round(s / 86400) + " days ago";
+  };
+
+  fetch("status.json", { cache: "no-store" })
+    .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(d => { data = d; index(); render(); })
+    .catch(() => { app.innerHTML = '<div class="msg">No status snapshot yet. It appears after the first run of the “Status page” GitHub Action.</div>'; });
+
+  let byId = {};
+  function index() {
+    byId = {};
+    data.lists.forEach(l => l.tasks.forEach(t => { byId[t.id] = t; }));
+    const when = new Date(data.generated_at);
+    sub.innerHTML = 'Project status from ClickUp · updated <time datetime="' + esc(data.generated_at) + '" title="' +
+      esc(when.toLocaleString()) + '">' + ago(data.generated_at) + "</time>";
+  }
+
+  function matches(t) {
+    if (state.status && t.status !== state.status) return false;
+    if (state.blocked && !t.blocked) return false;
+    if (state.q) {
+      const hay = (t.name + " " + (t.tracker_id || "")).toLowerCase();
+      if (!hay.includes(state.q.trim().toLowerCase())) return false;
+    }
+    return true;
+  }
+
+  function summary() {
+    const all = data.lists.flatMap(l => l.tasks);
+    const done = all.filter(t => t.done);
+    const hrs = all.reduce((a, t) => a + (t.estimate_hours || 0), 0);
+    const hrsDone = done.reduce((a, t) => a + (t.estimate_hours || 0), 0);
+    const blocked = all.filter(t => t.blocked).length;
+    return '<div class="cards">' +
+      card("Tasks done", done.length + " / " + all.length, pct(done.length, all.length)) +
+      card("Estimated hours done", fmtH(hrsDone) + " / " + fmtH(hrs), pct(hrsDone, hrs)) +
+      card("Waiting on another task", String(blocked)) +
+      "</div>";
+  }
+  function card(k, v, p) {
+    return '<div class="card"><div class="k">' + esc(k) + '</div><div class="v">' + esc(v) + "</div>" +
+      (p == null ? "" : '<div class="bar" role="img" aria-label="' + p + '% done"><span style="width:' + p + '%"></span></div>') + "</div>";
+  }
+
+  function controls() {
+    let h = '<div class="controls"><input type="search" id="q" placeholder="Search tasks or IDs (E1, T3…)" value="' + esc(state.q) + '">';
+    h += '<button class="chip" data-status="" aria-pressed="' + (state.status === null && !state.blocked) + '">All</button>';
+    data.statuses.forEach(s => {
+      h += '<button class="chip" data-status="' + esc(s.status) + '" aria-pressed="' + (state.status === s.status) + '">' +
+        '<span class="dot" style="background:' + esc(s.color || "") + '"></span>' + esc(s.status) + " · " + s.count + "</button>";
+    });
+    h += '<button class="chip" data-blocked="1" aria-pressed="' + state.blocked + '"><span class="dot" style="background:var(--blocked)"></span>Waiting</button>';
+    return h + "</div>";
+  }
+
+  function row(t, isSub) {
+    const waits = t.blocked
+      ? '<span class="wait">Waiting on ' + t.waits_on.filter(id => !(byId[id] && byId[id].done)).map(id => {
+          const d = byId[id];
+          return d ? '<a href="' + esc(d.url) + '">' + esc(d.tracker_id || d.name) + "</a>" : esc(id);
+        }).join(", ") + "</span>"
+      : "";
+    return '<li class="' + (isSub ? "sub " : "") + (t.done ? "done" : "") + '">' +
+      '<span class="st"><span class="dot" style="background:' + esc(t.status_color || "") + '"></span>' + esc(t.status) + "</span>" +
+      '<span class="t">' + (t.tracker_id ? '<span class="id">' + esc(t.tracker_id) + "</span>" : "") +
+      '<a href="' + esc(t.url) + '" target="_blank" rel="noopener">' + esc(t.name) + "</a>" + waits + "</span>" +
+      '<span class="h">' + fmtH(t.estimate_hours) + "</span></li>";
+  }
+
+  function lists() {
+    const filtering = state.status !== null || state.blocked || state.q.trim();
+    return data.lists.map(l => {
+      const done = l.tasks.filter(t => t.done).length;
+      const ids = new Set(l.tasks.map(t => t.id));
+      const kids = {};
+      l.tasks.forEach(t => { if (t.parent && ids.has(t.parent)) (kids[t.parent] = kids[t.parent] || []).push(t); });
+      let items = "";
+      l.tasks.filter(t => !(t.parent && ids.has(t.parent))).forEach(t => {
+        const ch = (kids[t.id] || []).filter(matches);
+        if (matches(t) || ch.length) {
+          items += row(t, false);
+          ch.forEach(c => { items += row(c, true); });
+        }
+      });
+      if (filtering && !items) return "";
+      const open = filtering || sessionOpen.has(l.id);
+      return '<details class="list" data-id="' + esc(l.id) + '"' + (open ? " open" : "") + "><summary>" +
+        '<span class="name">' + esc(l.name) + '</span><span class="count">' + done + " / " + l.tasks.length + " done</span>" +
+        '<span class="bar"><span style="width:' + pct(done, l.tasks.length) + '%"></span></span></summary>' +
+        (items ? '<ul class="tasks">' + items + "</ul>" : '<div class="empty">No tasks</div>') + "</details>";
+    }).join("") || '<div class="msg">No tasks match.</div>';
+  }
+
+  const sessionOpen = new Set();
+  function render() {
+    const hadFocus = document.activeElement && document.activeElement.id === "q";
+    app.innerHTML = summary() + controls() + lists();
+    const q = document.getElementById("q");
+    q.addEventListener("input", e => { state.q = e.target.value; render(); });
+    if (hadFocus) { q.focus(); q.setSelectionRange(q.value.length, q.value.length); }
+    app.querySelectorAll(".chip").forEach(b => b.addEventListener("click", () => {
+      if (b.dataset.blocked) { state.blocked = !state.blocked; state.status = null; }
+      else { state.status = b.dataset.status || null; state.blocked = false; }
+      render();
+    }));
+    app.querySelectorAll("details.list").forEach(d => d.addEventListener("toggle", () => {
+      if (d.open) sessionOpen.add(d.dataset.id); else sessionOpen.delete(d.dataset.id);
+    }));
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+name: Status page
+
+# Publishes status/site plus a fresh ClickUp snapshot (status.json) to the gh-pages branch.
+# Needs the CLICKUP_API_TOKEN repository secret; see status/README.md.
+on:
+  schedule:
+    - cron: "17 * * * *" # hourly
+  workflow_dispatch:
+  push:
+    branches: [main, claude/project-thread-y6nbhi]
+    paths: ["status/**", ".github/workflows/status-page.yml"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: status-page
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Test the sync script
+        working-directory: status
+        run: python -m unittest -q
+      - name: Fetch ClickUp status
+        env:
+          CLICKUP_API_TOKEN: ${{ secrets.CLICKUP_API_TOKEN }}
+          CLICKUP_FOLDER_ID: ${{ vars.CLICKUP_FOLDER_ID }}
+        run: |
+          cp -r status/site _site
+          touch _site/.nojekyll
+          python status/sync_clickup.py --out _site/status.json
+      - name: Publish to gh-pages
+        working-directory: _site
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git init -q -b gh-pages
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "Status snapshot $(date -u +%Y-%m-%dT%H:%MZ) from ${GITHUB_SHA::7}"
+          # Single-commit branch: each run replaces it, so hourly snapshots don't pile up in history.
+          git push -q -f "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" gh-pages

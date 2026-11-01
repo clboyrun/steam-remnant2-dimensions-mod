@@ -29,3 +29,6 @@ jobs:
         run: |
           python -m py_compile dimensions_apply.py dimensions_names.py
           python -m unittest -q
+      - name: Status page sync script
+        working-directory: status
+        run: python -m unittest -q
