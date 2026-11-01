@@ -11,3 +11,5 @@ out/
 *.uasset
 *.umap
 *.sav
+__pycache__/
+*.pyc

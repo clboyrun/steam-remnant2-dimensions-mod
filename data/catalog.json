@@ -33,7 +33,11 @@
       },
       "verified": true
     },
-    "weaponMod": { "folder": "Mods", "prefix": "Mod_", "verified": true },
+    "weaponMod": {
+      "folder": "Mods",
+      "prefix": "Mod_",
+      "verified": true
+    },
     "mutator": {
       "folder": "Mutators",
       "prefix": "MetaGem_",
@@ -55,7 +59,12 @@
     "armor": {
       "folder": "Armor",
       "prefix": "Armor_",
-      "slotNames": { "head": "Head", "body": "Body", "hands": "Gloves", "legs": "Legs" },
+      "slotNames": {
+        "head": "Head",
+        "body": "Body",
+        "hands": "Gloves",
+        "legs": "Legs"
+      },
       "statsStruct": "/Game/_Core/Stats/Base/StatDef_Armor.StatDef_Armor",
       "statFields": {
         "armor": "Armor",
@@ -89,7 +98,8 @@
       "class": "/Script/GunfireRuntime.SpawnTable",
       "itemEntryClass": "/Script/GunfireRuntime.SpawnTableItem",
       "linkEntryClass": "/Script/GunfireRuntime.SpawnTableLink",
-      "verified": true
+      "verified": true,
+      "characterEntryClass": "/Script/GunfireRuntime.SpawnTableCharacter"
     },
     "world": {
       "folder": "World",
@@ -104,7 +114,77 @@
       "template": "/Game/_Core/Blueprints/Quests/Quest_RootQuest.Quest_RootQuest_C",
       "verified": false
     },
-    "blueprint": { "folder": "Misc", "prefix": "", "verified": true }
+    "blueprint": {
+      "folder": "Misc",
+      "prefix": "",
+      "verified": true
+    },
+    "npc": {
+      "folder": "NPCs",
+      "prefix": "Character_",
+      "template": "/Game/Characters/NPC/Common/Character_NPC.Character_NPC_C",
+      "meshComponent": "Mesh",
+      "dialogueComponent": "Dialog",
+      "dialogueProperty": "EventTree",
+      "vendorProperty": "RecipeList",
+      "statsStruct": "/Game/_Core/Stats/Base/StatDef_EnemyCharacter.StatDef_EnemyCharacter",
+      "verified": false,
+      "hub": {
+        "$comment": "How a hub NPC gets spawned without overriding the hub map. Fill in from FModel: the Ward 13 persistent level and how its NPCs appear after story events (a hub quest, a spawn point list, or a level sequence).",
+        "ward13": null,
+        "spawnHook": null,
+        "unlockCondition": "/Script/GunfireRuntime.QuestStateCondition"
+      }
+    },
+    "enemy": {
+      "folder": "Enemies",
+      "prefix": "Character_",
+      "meshComponent": "Mesh",
+      "statsStruct": "/Game/_Core/Stats/Base/StatDef_EnemyCharacter.StatDef_EnemyCharacter",
+      "lootProperty": "LootTable",
+      "verified": false
+    },
+    "animationSet": {
+      "folder": "Animations",
+      "prefix": "AS_",
+      "class": "/Script/GunfireRuntime.AnimationSet",
+      "verified": true
+    },
+    "dialogue": {
+      "folder": "Dialogue",
+      "prefix": "ET_",
+      "class": "/Script/GunfireRuntime.EventTree",
+      "nodes": {
+        "say": "/Script/GunfireRuntime.EventTreeNode_Dialog",
+        "choices": "/Script/GunfireRuntime.EventTreeNode_DialogOptions",
+        "choice": "/Script/GunfireRuntime.Branch_DialogOption",
+        "trigger": "/Script/GunfireRuntime.EventTreeNode_Trigger",
+        "onItem": "/Script/GunfireRuntime.EventTreeNode_ItemTrigger",
+        "activateObjective": "/Script/GunfireRuntime.EventTreeNode_ActivateObjective",
+        "completeObjective": "/Script/GunfireRuntime.EventTreeNode_CompleteObjective",
+        "completeQuest": "/Script/GunfireRuntime.EventTreeNode_CompleteQuest",
+        "event": "/Script/GunfireRuntime.EventTreeNode_Event",
+        "jump": "/Script/GunfireRuntime.EventTreeNode_Jump",
+        "exit": "/Script/GunfireRuntime.EventTreeNode_Exit",
+        "questSwitch": "/Script/GunfireRuntime.EventTreeNode_QuestSwitch",
+        "questSwitchBranch": "/Script/GunfireRuntime.Branch_QuestSwitch"
+      },
+      "$comment": "Node classes and fields are from the GunfireRuntime headers. How the game wires the interact trigger (its TriggerName) isn't confirmed.",
+      "verified": false
+    },
+    "quest": {
+      "folder": "Quests",
+      "prefix": "Quest_",
+      "objectiveClass": "/Script/GunfireRuntime.QuestObjective",
+      "entityClass": "/Script/GunfireRuntime.QuestEntity",
+      "subQuestClass": "/Script/Remnant.RemnantQuestSubQuest",
+      "verified": false
+    },
+    "questItem": {
+      "folder": "QuestItems",
+      "prefix": "Quest_Item_",
+      "verified": false
+    }
   },
   "recipe": {
     "class": "/Script/GunfireRuntime.CraftingRecipe",
@@ -117,5 +197,20 @@
     "Quest": "/Script/Remnant.RemnantQuest",
     "RecipeList": "/Script/GunfireRuntime.CraftingRecipeList",
     "RemnantArchetype": "/Script/Remnant.RemnantArchetype"
+  },
+  "campaign": {
+    "$comment": "How the base campaign rolls a world into each slot. Fill these in from FModel (the Quest_Campaign root quest and its sub-quest components) before campaign alternatives can be generated.",
+    "rootQuest": null,
+    "slots": {
+      "losomn": null,
+      "yaesha": null,
+      "nerud": null
+    },
+    "slotProperty": null,
+    "storyCampaignList": null,
+    "storyCampaignProperty": null,
+    "onceProperty": null,
+    "difficultyProperty": null,
+    "verified": false
   }
 }

@@ -127,7 +127,10 @@ def get_prop(obj, name):
 
 def set_prop(obj, name, value):
     current, python_name = get_prop(obj, name)
-    obj.set_editor_property(python_name, convert(value, current, obj))
+    try:
+        obj.set_editor_property(python_name, convert(value, current, obj))
+    except Deferred:
+        DEFERRED.append((obj, name, value))
 
 
 def text(value, ctx_culture):
@@ -143,6 +146,34 @@ def stable_name(prefix, payload):
 
 
 CULTURE = "en"
+
+# Instanced objects made with "$new" and a "$key", so other values can point at them with {"$node": key}.
+NODES = {}
+# (object, property, value) whose {"$node"} target didn't exist yet; set again once everything is built.
+DEFERRED = []
+
+
+class Deferred(Exception):
+    pass
+
+
+def merge_by_key(current, key, items, outer):
+    """Updates elements of `current` whose `key` field matches an item, and appends the rest."""
+    result = list(current or [])
+    python_key = snake_case(key)
+    for item in items:
+        fields = item.get("$struct", item)
+        wanted = convert(fields[key], None, outer)
+        match = next((i for i, e in enumerate(result) if str(e.get_editor_property(python_key)) == str(wanted)), None)
+        if match is None:
+            result.append(convert(item, result[0] if result else None, outer))
+            continue
+        element = result[match]
+        for field, value in fields.items():
+            field_current, python_name = get_prop(element, field)
+            element.set_editor_property(python_name, convert(value, field_current, outer))
+        result[match] = element
+    return result
 
 
 def convert(value, current, outer):
@@ -174,6 +205,12 @@ def convert(value, current, outer):
             if not hasattr(enum_type, member):
                 raise PlanError("{} has no value {}".format(enum_type.__name__, value["$enum"]))
             return getattr(enum_type, member)
+        if "$node" in value:
+            if value["$node"] not in NODES:
+                raise Deferred(value["$node"])
+            return NODES[value["$node"]]
+        if "$mergeByKey" in value:
+            return merge_by_key(current, value["$mergeByKey"], value["items"], outer)
         if "$rowHandle" in value:
             handle = unreal.DataTableRowHandle()
             handle.set_editor_property("data_table", load_asset(value["$rowHandle"]["table"]))
@@ -183,6 +220,8 @@ def convert(value, current, outer):
             cls = load_class(value["$new"])
             name = stable_name("Dim_" + cls.get_name(), value)
             obj = unreal.new_object(cls, outer=outer, name=name)
+            if "$key" in value:
+                NODES[value["$key"]] = obj
             for key, prop in value.get("properties", {}).items():
                 set_prop(obj, key, prop)
             return obj
@@ -324,13 +363,55 @@ def create_data_table(ctx, op):
 def create_blueprint(ctx, op):
     folder, name = split_package(op["asset"])
     prepare_slot(ctx, op["asset"])
-    factory = unreal.BlueprintFactory()
-    factory.set_editor_property("parent_class", load_class(op["parent"]))
+    parent = load_class(op["parent"])
+    if issubclass(parent, unreal.AnimInstance):
+        # A child animation blueprint: same skeleton as its parent, layers changed through properties.
+        factory = unreal.AnimBlueprintFactory()
+        factory.set_editor_property("parent_class", parent)
+        parent_bp = assets.load_asset(package_of(op["parent"]))
+        if isinstance(parent_bp, unreal.AnimBlueprint):
+            factory.set_editor_property("target_skeleton", parent_bp.get_editor_property("target_skeleton"))
+    else:
+        factory = unreal.BlueprintFactory()
+        factory.set_editor_property("parent_class", parent)
     blueprint = tools.create_asset(name, folder, None, factory)
     if blueprint is None:
         raise PlanError("couldn't create blueprint {} from {}".format(op["asset"], op["parent"]))
     unreal.BlueprintEditorLibrary.compile_blueprint(blueprint)
     ctx.created[op["asset"]] = blueprint
+
+
+def import_animation(ctx, op):
+    folder, name = split_package(op["asset"])
+    prepare_slot(ctx, op["asset"])
+    task = unreal.AssetImportTask()
+    task.set_editor_property("filename", op["source"])
+    task.set_editor_property("destination_path", folder)
+    task.set_editor_property("destination_name", name)
+    task.set_editor_property("automated", True)
+    task.set_editor_property("replace_existing", True)
+    task.set_editor_property("save", False)
+    ui = unreal.FbxImportUI()
+    ui.set_editor_property("import_mesh", False)
+    ui.set_editor_property("import_animations", True)
+    ui.set_editor_property("import_materials", False)
+    ui.set_editor_property("import_textures", False)
+    ui.set_editor_property("mesh_type_to_import", unreal.FBXImportType.FBXIT_ANIMATION)
+    if op.get("skeleton"):
+        ui.set_editor_property("skeleton", load_asset(op["skeleton"]))
+    task.set_editor_property("options", ui)
+    tools.import_asset_tasks([task])
+    anim = assets.load_asset(op["asset"])
+    if anim is None:
+        # FBX imports name the sequence after the take; find what landed in the folder.
+        imported = [p for p in task.get_editor_property("imported_object_paths") or []]
+        anim = assets.load_asset(imported[0]) if imported else None
+        if anim is not None and package_of(anim.get_path_name()) != op["asset"]:
+            assets.rename_asset(package_of(anim.get_path_name()), op["asset"])
+            anim = assets.load_asset(op["asset"])
+    if anim is None:
+        raise PlanError("animation import failed: " + op["source"] + " (does it match the skeleton?)")
+    ctx.created[op["asset"]] = anim
 
 
 def create_object(ctx, op):
@@ -379,8 +460,33 @@ def apply_properties(ctx, op):
             set_prop(target, key, value)
         except Exception as e:  # noqa: BLE001
             ctx.error("{}: setting {} failed: {}".format(op["asset"], key, e))
+    if op.get("addComponents"):
+        add_components(ctx, op["asset"], asset, op["addComponents"])
     if op.get("components"):
         apply_components(ctx, op["asset"], asset, op["components"])
+
+
+def add_components(ctx, package, blueprint, components):
+    """Adds new components (quest objectives, quest entities, sub-quests) to a blueprint, then sets them up."""
+    subsystem = unreal.get_engine_subsystem(unreal.SubobjectDataSubsystem)
+    handles = subsystem.k2_gather_subobject_data_for_blueprint(blueprint)
+    if not handles:
+        ctx.error("{}: couldn't read its components".format(package))
+        return
+    root = handles[0]
+    existing = blueprint_components(blueprint)
+    for spec in components:
+        name = spec["name"]
+        if name not in existing:
+            params = unreal.AddNewSubobjectParams(
+                parent_handle=root, new_class=load_class(spec["class"]), blueprint_context=blueprint)
+            handle, failure = subsystem.add_new_subobject(params)
+            if not unreal.SubobjectDataBlueprintFunctionLibrary.is_handle_valid(handle):
+                ctx.error("{}: couldn't add component {}: {}".format(package, name, failure))
+                continue
+            subsystem.rename_subobject(handle, unreal.Text(name))
+    if any(spec.get("properties") for spec in components):
+        apply_components(ctx, package, blueprint, {spec["name"]: spec.get("properties", {}) for spec in components})
 
 
 def blueprint_components(blueprint):
@@ -505,6 +611,7 @@ CREATE = {
     "importMesh": import_mesh,
     "createMaterialInstance": create_material_instance,
     "createDataTable": create_data_table,
+    "importAnimation": import_animation,
     "createBlueprint": create_blueprint,
     "createObject": create_object,
     "copyAsset": copy_asset,
@@ -543,6 +650,12 @@ def run(plan_path, result_path):
         for op in operations:  # 4: properties now that everything exists
             if op["op"] in ("createBlueprint", "createObject", "copyAsset") and op["asset"] in ctx.created:
                 apply_properties(ctx, op)
+        for obj, name, value in list(DEFERRED):  # values that point at a node made later (dialogue jumps)
+            try:
+                current, python_name = get_prop(obj, name)
+                obj.set_editor_property(python_name, convert(value, current, obj))
+            except Deferred as missing:
+                ctx.error("{}: nothing has the node key '{}'".format(obj.get_path_name(), missing))
         for op in operations:
             try:
                 if op["op"] == "appendToList":

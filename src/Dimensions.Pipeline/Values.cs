@@ -29,5 +29,11 @@ public static class Values
     public static JsonObject RowHandle(string tableObjectPath, string row) =>
         new() { ["$rowHandle"] = new JsonObject { ["table"] = GamePath.ObjectPath(tableObjectPath), ["row"] = row } };
 
+    /// <summary>Merges items into the existing array by a key field: matching elements are updated, others added.</summary>
+    public static JsonObject MergeByKey(string key, JsonArray items) => new() { ["$mergeByKey"] = key, ["items"] = items };
+
+    /// <summary>A reference to an instanced object made elsewhere in the same asset, by its "$key".</summary>
+    public static JsonObject NodeRef(string key) => new() { ["$node"] = key };
+
     public static JsonArray Array(IEnumerable<JsonNode?> items) => new([.. items]);
 }

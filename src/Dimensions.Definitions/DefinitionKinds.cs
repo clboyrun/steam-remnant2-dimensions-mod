@@ -14,15 +14,25 @@ public static class DefinitionKinds
     public const string World = "world";
     public const string Adventure = "adventure";
     public const string Blueprint = "blueprint";
+    public const string Npc = "npc";
+    public const string Enemy = "enemy";
+    public const string AnimationSet = "animationSet";
+    public const string Dialogue = "dialogue";
+    public const string Quest = "quest";
+    public const string QuestItem = "questItem";
 
     public static readonly IReadOnlySet<string> All = new HashSet<string>
     {
         Weapon, WeaponMod, Mutator, Ring, Amulet, Armor, Trait, Archetype, LootTable, World, Adventure, Blueprint,
+        Npc, Enemy, AnimationSet, Dialogue, Quest, QuestItem,
     };
 
     /// <summary>Kinds that are items the player can hold, so they can go in loot, recipes and starting gear.</summary>
     public static readonly IReadOnlySet<string> Items = new HashSet<string>
     {
-        Weapon, WeaponMod, Mutator, Ring, Amulet, Armor, Blueprint,
+        Weapon, WeaponMod, Mutator, Ring, Amulet, Armor, QuestItem, Blueprint,
     };
+
+    /// <summary>Kinds that are characters, so they can be spawned from a spawn table.</summary>
+    public static readonly IReadOnlySet<string> Characters = new HashSet<string> { Npc, Enemy, Blueprint };
 }

@@ -30,7 +30,7 @@ of the schemas anywhere you like. Comments (`//`) and trailing commas are allowe
 
 | Field | |
 | --- | --- |
-| `kind` | `weapon`, `weaponMod`, `mutator`, `ring`, `amulet`, `armor`, `trait`, `archetype`, `lootTable`, `world`, `adventure`, `blueprint` |
+| `kind` | `weapon`, `weaponMod`, `mutator`, `ring`, `amulet`, `armor`, `trait`, `archetype`, `lootTable`, `world`, `adventure`, `npc`, `enemy`, `animationSet`, `dialogue`, `quest`, `questItem`, `blueprint` |
 | `id` | Unique in the dimension, PascalCase. Asset names come from it (`Weapon_<id>`, `Ring_<id>`...). |
 | `extends` | Id of another definition of the same kind. Objects merge key by key; arrays and values replace; `null` removes. |
 | `abstract` | `true`: only a base for `extends`, nothing generated. |
@@ -86,13 +86,60 @@ row, `mod` (a fixed weaponMod), `mutatorSlot`.
 
 **lootTable**: `tableType` (ESpawnTableType: `List`, `Table`, `TableGroup`, `IndividualChance`,
 `IndividualChanceOneShot`), `rolls` (`min`, `max`), `entries` (`item` or nested `table`, `chance`, `quantity`,
-`levelMin`, `levelMax`, `tags`), `injectInto` (`[{ "table": "<game spawn table>", "chance": 100 }]`).
+`levelMin`, `levelMax`, `tags`; or `character`: an npc/enemy to spawn, for encounter tables), `injectInto` (`[{ "table": "<game spawn table>", "chance": 100 }]`).
 
-**world**: `biomeName`, `loot`, `zones`: `[{ "id", "name", "template", "maps": ["/Game/Dimensions/<id>/Maps/..."], "tileSet", "loot", "properties" }]`, `registration`.
-Maps are made by hand in the editor.
+**world**: `biomeName`, `loot`, `zones`: `[{ "id", "name", "template", "maps": ["/Game/Dimensions/<id>/Maps/..."], "tileSet", "loot", "encounters", "properties" }]`, `registration`.
+Maps are made by hand in the editor. `campaign`: `{ "alternativeTo": "yaesha", "chance": 0.25, "quest": "<storyline quest>" }`
+makes the world an **extra** roll for that base campaign slot (`losomn`, `yaesha`, `nerud`); the base world stays in
+the pool. This is how the World of Grimm (Yaesha slot) and the Lovecraftian world (N'Erud slot) plug in.
 
 **adventure**: `template` (a root quest), `world`, `container` (the persistent map), `levelMin`, `levelMax`,
-`rarity` (`Common`...`Legendary`), `icon`, `registration`.
+`rarity` (`Common`...`Legendary`), `icon`, `registration`, `storyline` (quests it can roll: ids or
+`{ "quest", "chance", "optional" }`). `mode`: `adventure` (an Adventure mode option, default) or `storyCampaign` (a
+standalone story picked from the campaign menu, like One True King), with `once` (finish once per character) and
+`difficulty` (extra difficulty steps).
+
+**animationSet**: `skeleton`, `template` (a game AnimationSet to start from: your IDs replace or add to its own),
+`animations`: `{ "<AnimationID>": { "files": ["animations/x.fbx"], "loop", "blendTime", "blendOut", "startTime", "tags" } }`.
+Several files under one ID play at random. Files can also be game animation assets.
+
+**enemy**: `template` (a game enemy, whose AI is kept), `model`, `animBlueprint` (`{ "template": "<game ABP>",
+"layers": { "<layer NameID>": "<animationSet>" } }`), `stats` (its stats row), `faction`, `loot` (dropped on death).
+Spawn it from a loot table entry with `character`, and use that table as a zone's `encounters`.
+
+**npc**: `template` (a game NPC), `model`, `animBlueprint`, `stats`, `faction`, `dialogue`, `vendor`:
+`{ "items": [ { "item", "scrap", "materials", "requires": [ { "item", "quantity", "show": "hidden" | "secret" } ] } ] }`.
+`requires` gates stock: the entry is hidden (or shown as ???) until the player owns that item. Each vendor entry has
+4 ingredient slots shared by materials, scrap and requires. `unlock`: `{ "after": "<quest>", "state": "Complete",
+"objective" }` and `location`: `{ "hub": "ward13" | "map": "...", "position": [x, y, z], "rotation" }` say when and
+where the NPC appears (see the open points in [architecture](architecture.md#risks-and-unknowns)).
+
+**dialogue**: `nodes`, a list of steps. Each node does one thing:
+
+| Node | |
+| --- | --- |
+| `{ "say": "...", "facial", "audio" }` | A line. |
+| `{ "choices": [ { "label": "...", "hidden", "then": [...] } ] }` | Player options. |
+| `{ "trigger": "Interact", "then": [...] }` | Runs when the named trigger fires (talking to the NPC). |
+| `{ "onItem": "<item>", "then": [...] }` | Runs when the player hands over that item. |
+| `{ "questSwitch": [ { "when": "QuestInProgress", "objectives": [...], "then": [...] } ] }` | Branches on the owning quest's state; `when` is `QuestNotStarted`, `QuestInProgress`, `QuestCompleteSuccess`, `QuestCompleteFailure` or `All`. |
+| `{ "activateObjective": "Id" }`, `{ "completeObjective": "Id" }`, `{ "completeQuest": "Success" }` | Quest steps. |
+| `{ "event": "Name", "context" }` | Sends an event to the quest or level blueprint (open a vendor, give a reward). |
+| `{ "jump": "<node id>" }`, `{ "exit": true }` | Go to a node with that `id`, or end the conversation. |
+| `{ "node": "/Script/...EventTreeNode_X", "properties": {} }` | Any other node class. |
+
+Any node can have `id` (a `jump` target) and `once` (runs the first time only).
+
+**quest**: `template` (a game quest to start from), `name`, `description`, `questType`, `levelMin`, `levelMax`,
+`container` (its map or tile), `objectives` (`[{ "id", "name", "description", "hidden" }]`), `entities`
+(`[{ "id", "name", "npc", "dialogue" }]`: who talks during the quest), `rewards`. Add it to an adventure's `storyline`.
+
+**questItem**: `template` (a game quest item), `name`, `description`, `icon`, `quest`. Hand it in with `onItem`, sell
+it from a vendor, or drop it from a loot table.
+
+See `examples/Ashfall/content/story` (an enemy, an NPC and a hand-in quest) and `content/hub/clementine.json` (a
+Ward 13 NPC that unlocks after Root Earth, gives clues with `questSwitch`, and sells quest books gated on campaign
+tokens).
 
 **blueprint**: anything else. `template` (any class), `folder` (under the content root), `asset` (`blueprint`
 child class, `copy` of an asset, or `dataAsset`/object of a class), `properties`, `components`.

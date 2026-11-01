@@ -46,7 +46,7 @@ public sealed class Planner(Catalog catalog)
         {
             foreach (var d in project.Concrete) AssignTarget(d);
             // Loot tables first, so items that drop from them add their entries straight into the table.
-            foreach (var d in project.Concrete.OrderBy(d => d.Kind == K.LootTable ? 0 : 1))
+            foreach (var d in project.Concrete.OrderBy(d => d.Kind is K.LootTable ? 0 : d.Kind is K.Archetype or K.Adventure ? 2 : 1))
             {
                 switch (d.Kind)
                 {
@@ -58,9 +58,14 @@ public sealed class Planner(Catalog catalog)
                     case K.Trait: PlanTrait(d); break;
                     case K.Archetype: PlanArchetype(d); break;
                     case K.LootTable: PlanLootTable(d); break;
-                    case K.World: PlanWorld(d); break;
+                    case K.World: PlanWorld(d); CampaignAlternative(d); break;
                     case K.Adventure: PlanAdventure(d); break;
                     case K.Blueprint: PlanGenericBlueprint(d); break;
+                    case K.QuestItem: PlanTrinket(d); break;
+                    case K.AnimationSet: PlanAnimationSet(d); break;
+                    case K.Dialogue: PlanDialogue(d); break;
+                    case K.Npc or K.Enemy: PlanCharacter(d); break;
+                    case K.Quest: PlanQuest(d); break;
                 }
                 Acquisition(d, d.Json["acquisition"] as JsonArray);
                 Registration(d);
@@ -104,7 +109,7 @@ public sealed class Planner(Catalog catalog)
             var package = replaces is not null ? GamePath.PackageOf(replaces) : $"{Folder(d)}/{AssetName(d)}";
             var isBlueprint = d.Kind switch
             {
-                K.LootTable => false,
+                K.LootTable or K.Dialogue or K.AnimationSet => false,
                 K.Blueprint => (d.GetString("asset") ?? "blueprint") == "blueprint",
                 _ => true,
             };
@@ -330,7 +335,7 @@ public sealed class Planner(Catalog catalog)
         private void Unverified(Definition d, string what)
         {
             if (!catalog.Verified(d.Kind))
-                _plan.Notes.Add($"{d.Kind} {d.Id}: {what} uses catalog entries that aren't confirmed against the game yet (data/catalog.json, verified=false).");
+                _plan.Notes.Add($"{d.Kind} {d.Id}: the catalog entries for {what} aren't confirmed against the game yet (data/catalog.json, verified=false).");
         }
 
         // ---------- kinds ----------
@@ -526,6 +531,17 @@ public sealed class Planner(Catalog catalog)
         {
             var p = new JsonObject();
             string cls;
+            if (entry["character"]?.GetValue<string>() is { } character)
+            {
+                cls = catalog.Get(K.LootTable, "characterEntryClass")!;
+                p["CharacterBP"] = SoftClassValue(character);
+                p["Chance"] = entry["chance"]?.GetValue<int>() ?? 100;
+                if (entry["quantity"] is { } count) { p["QuantityMin"] = count.DeepClone(); p["QuantityMax"] = count.DeepClone(); }
+                if (entry["levelMin"] is { } cmin) p["LevelMin"] = cmin.DeepClone();
+                if (entry["levelMax"] is { } cmax) p["LevelMax"] = cmax.DeepClone();
+                if (entry["tags"] is JsonArray ctags) p["Tags"] = Values.Array(ctags.Select(t => (JsonNode?)Values.Name(t!.GetValue<string>())));
+                return Values.New(cls, p);
+            }
             if (entry["table"]?.GetValue<string>() is { } table)
             {
                 cls = catalog.Get(K.LootTable, "linkEntryClass")!;
@@ -598,8 +614,15 @@ public sealed class Planner(Catalog catalog)
                         ["SpawnTable"] = Values.Asset(Resolve(loot) ?? loot),
                     })]);
                 }
-                if (zone["encounters"] is JsonArray { Count: > 0 })
-                    _plan.Notes.Add($"world {d.Id} zone {zoneId}: 'encounters' isn't generated yet; set EncounterGroups through the zone's 'properties'.");
+                if (zone["encounters"] is JsonArray { Count: > 0 } encounters)
+                {
+                    var e = 0;
+                    p["EncounterGroups"] = Values.Array(encounters.Select(enc => (JsonNode?)Values.Struct("EncounterGroup", new JsonObject
+                    {
+                        ["NameID"] = Values.Name($"{zoneId}_Encounter{++e}"),
+                        ["SpawnTable"] = Values.Asset(Resolve(enc!.GetValue<string>()) ?? enc.GetValue<string>()),
+                    })));
+                }
                 foreach (var m in zone["maps"] as JsonArray ?? [])
                 {
                     var map = m!.GetValue<string>();
@@ -614,13 +637,32 @@ public sealed class Planner(Catalog catalog)
             }
         }
 
+        private void CampaignAlternative(Definition d)
+        {
+            if (d.Json["campaign"] is not JsonObject campaign) return;
+            var slot = campaign["alternativeTo"]!.GetValue<string>();
+            var quest = campaign["quest"]!.GetValue<string>();
+            var slotList = catalog.Json["campaign"]?["slots"]?[slot] is JsonValue v && v.TryGetValue<string>(out var sl) ? sl : null;
+            var property = catalog.Json["campaign"]?["slotProperty"] is JsonValue pv && pv.TryGetValue<string>(out var ps) ? ps : null;
+            if (slotList is null || property is null)
+            {
+                _plan.Notes.Add($"world {d.Id}: adding it as an extra '{slot}' roll needs the campaign's slot list (catalog campaign.slots.{slot} and campaign.slotProperty). Export Quest_Campaign from FModel so they can be filled in.");
+                return;
+            }
+            var entry = new JsonObject { ["QuestBP"] = SoftClassValue(quest) };
+            if (campaign["chance"] is { } chance) entry["ChanceToSpawn"] = chance.DeepClone();
+            Append(slotList, property, Values.New(catalog.Get(K.Quest, "subQuestClass")!, entry));
+        }
+
         private void PlanAdventure(Definition d)
         {
+            var storyCampaign = d.GetString("mode") == "storyCampaign";
             var p = new JsonObject
             {
                 ["QuestNameID"] = Values.Name(Name(d)),
-                ["QuestGameMode"] = Values.Enum("Adventure"),
+                ["QuestGameMode"] = Values.Enum(storyCampaign ? "Campaign" : "Adventure"),
             };
+            CampaignOption(d, p, storyCampaign);
             Text(p, "Label", d.Json["name"]);
             Text(p, "Description", d.Json["description"]);
             if (d.Json["icon"]?["small"]?.GetValue<string>() is { } icon) p["Icon"] = Values.Soft(Texture(icon, $"{Dir(d)}/T_{Name(d)}_Icon"));
@@ -634,10 +676,52 @@ public sealed class Planner(Catalog catalog)
             if (d.GetString("rarity") is { } rarity) p["Rarity"] = Values.Enum(rarity);
             if (d.GetString("world") is { } worldId && project.Find(worldId) is { } world && world.GetString("biomeName") is { } biome)
                 p["BiomeName"] = biome;
-            if (d.Json["rewards"] is JsonArray { Count: > 0 } || d.Json["storyline"] is JsonArray { Count: > 0 })
-                _plan.Notes.Add($"adventure {d.Id}: 'rewards' and 'storyline' are placed by the quest graph in the container map; they're listed but not wired automatically yet.");
-            CreateBlueprint(d, d.Template!, WithRaw(p, d.Json["properties"]));
+            if (d.Json["rewards"] is JsonArray { Count: > 0 })
+                _plan.Notes.Add($"adventure {d.Id}: 'rewards' are given by the quest graph in the container map; they're listed but not wired automatically yet.");
+            var subQuests = new JsonArray();
+            foreach (var entry in d.Json["storyline"] as JsonArray ?? [])
+            {
+                var quest = entry is JsonObject o ? o["quest"]!.GetValue<string>() : entry!.GetValue<string>();
+                var sp = new JsonObject { ["QuestBP"] = SoftClassValue(quest) };
+                if (entry is JsonObject eo)
+                {
+                    if (eo["chance"] is { } chance) sp["ChanceToSpawn"] = chance.DeepClone();
+                    if (eo["optional"] is { } optional) sp["Optional"] = optional.DeepClone();
+                }
+                subQuests.Add(new JsonObject
+                {
+                    ["name"] = $"SubQuest_{(GamePath.IsGamePath(quest) ? GamePath.PackageOf(quest)[(GamePath.PackageOf(quest).LastIndexOf('/') + 1)..] : quest)}",
+                    ["class"] = catalog.Get(K.Quest, "subQuestClass")!,
+                    ["properties"] = sp,
+                });
+            }
+            var op = CreateBlueprint(d, d.Template!, WithRaw(p, d.Json["properties"]));
+            if (subQuests.Count > 0) op["addComponents"] = subQuests;
             Unverified(d, "the adventure quest template");
+        }
+
+        /// <summary>
+        /// Story-campaign registration, play-once and extra difficulty. These need facts about the campaign menu that
+        /// aren't in the catalog yet; until they are, the plan says what's missing instead of guessing.
+        /// </summary>
+        private void CampaignOption(Definition d, JsonObject p, bool storyCampaign)
+        {
+            string? Campaign(string key) => catalog.Json["campaign"]?[key] is JsonValue v && v.TryGetValue<string>(out var s) ? s : null;
+            if (d.Json["once"]?.GetValue<bool>() == true)
+            {
+                if (Campaign("onceProperty") is { } once) p[once] = true;
+                else _plan.Notes.Add($"adventure {d.Id}: 'once' needs the play-once property (catalog campaign.onceProperty).");
+            }
+            if (d.Json["difficulty"] is { } difficulty)
+            {
+                if (Campaign("difficultyProperty") is { } prop) p[prop] = difficulty.DeepClone();
+                else _plan.Notes.Add($"adventure {d.Id}: 'difficulty' needs the property that raises difficulty (catalog campaign.difficultyProperty).");
+            }
+            if (!storyCampaign) return;
+            if (Campaign("storyCampaignList") is { } list && Campaign("storyCampaignProperty") is { } property)
+                Append(list, property, Values.Class(_targets[d.Id].ClassPath));
+            else
+                _plan.Notes.Add($"adventure {d.Id}: story campaigns are added to the campaign menu's list, which isn't in the catalog yet (catalog campaign.storyCampaignList). Export the DLC campaign setup from FModel.");
         }
 
         private void PlanGenericBlueprint(Definition d)
@@ -662,11 +746,310 @@ public sealed class Planner(Catalog catalog)
             _creates[d.Id] = op;
         }
 
+        // ---------- characters, animation, dialogue, quests ----------
+
+        private void PlanAnimationSet(Definition d)
+        {
+            var dir = Dir(d);
+            var name = Name(d);
+            var skeleton = d.GetString("skeleton");
+            if (skeleton is not null) Require(skeleton);
+            var ids = new JsonArray();
+            foreach (var (animId, animNode) in d.Json["animations"] as JsonObject ?? [])
+            {
+                var anim = (JsonObject)animNode!;
+                var sequences = new JsonArray();
+                var i = 0;
+                foreach (var file in (anim["files"] as JsonArray ?? []).Select(f => f!.GetValue<string>()))
+                {
+                    if (GamePath.IsGamePath(file)) { Require(file); sequences.Add(Values.Asset(file)); continue; }
+                    var package = $"{dir}/A_{name}_{animId}{(i++ == 0 ? "" : "_" + i)}";
+                    var import = new JsonObject { ["op"] = "importAnimation", ["asset"] = package, ["source"] = project.ResolveFile(file) };
+                    if (skeleton is not null) import["skeleton"] = skeleton;
+                    _plan.Operations.Add(import);
+                    sequences.Add(Values.Asset(package));
+                }
+                var entry = new JsonObject { ["Animations"] = sequences };
+                if (anim["tags"] is JsonArray tags) entry["Tags"] = Values.Array(tags.Select(t => (JsonNode?)Values.Name(t!.GetValue<string>())));
+                var fields = new JsonObject
+                {
+                    ["NameID"] = Values.Name(animId),
+                    ["Entries"] = Values.Array([Values.Struct("AnimationEntry", entry)]),
+                };
+                if (anim["loop"] is { } loop) fields["Loop"] = loop.DeepClone();
+                if (anim["blendTime"] is { } blend) fields["BlendTime"] = blend.DeepClone();
+                if (anim["blendOut"] is { } blendOut) fields["BlendOut"] = blendOut.DeepClone();
+                if (anim["startTime"] is { } start) fields["StartTime"] = start.DeepClone();
+                foreach (var (k, v) in anim["properties"] as JsonObject ?? []) fields[k] = ResolveRefs(v?.DeepClone());
+                ids.Add(Values.Struct("AnimationID", fields));
+            }
+
+            var p = new JsonObject();
+            if (skeleton is not null) p["Skeleton"] = Values.Asset(skeleton);
+            JsonObject op;
+            if (d.Template is { } template)
+            {
+                // Start from a game animation set and replace or add IDs, so everything else it plays still works.
+                Require(template);
+                p["AnimationsIDs"] = Values.MergeByKey("NameID", ids);
+                op = new JsonObject { ["op"] = "copyAsset", ["id"] = d.Id, ["asset"] = _targets[d.Id].Package, ["source"] = template };
+            }
+            else
+            {
+                p["AnimationsIDs"] = ids;
+                op = new JsonObject { ["op"] = "createObject", ["id"] = d.Id, ["asset"] = _targets[d.Id].Package, ["class"] = catalog.Get(K.AnimationSet, "class")! };
+            }
+            op["properties"] = WithRaw(p, d.Json["properties"]);
+            _plan.Operations.Add(op);
+            _creates[d.Id] = op;
+        }
+
+        private void PlanCharacter(Definition d)
+        {
+            var kind = d.Kind;
+            var dir = Dir(d);
+            var name = Name(d);
+            var parent = d.Template ?? catalog.Get(kind, "template")
+                ?? throw new InvalidOperationException($"{kind} {d.Id} has no template");
+            var p = new JsonObject();
+            var meshComponent = d.Json["model"]?["component"]?.GetValue<string>() ?? catalog.Get(kind, "meshComponent") ?? "Mesh";
+            var model = d.Json["model"] is JsonObject m ? (JsonObject)m.DeepClone() : null;
+            if (model is not null) model["component"] = meshComponent;
+            var components = Model(d, model);
+
+            if (d.Json["animBlueprint"] is JsonObject abp)
+            {
+                var abpPackage = $"{dir}/ABP_{name}";
+                var layers = new JsonArray();
+                foreach (var (layer, set) in abp["layers"] as JsonObject ?? [])
+                {
+                    layers.Add(Values.Struct("AnimationLayer", new JsonObject
+                    {
+                        ["NameID"] = Values.Name(layer),
+                        ["AnimationSet"] = Values.Asset(Resolve(set!.GetValue<string>()) ?? set.GetValue<string>()),
+                    }));
+                }
+                var abpProps = new JsonObject();
+                if (layers.Count > 0) abpProps["AnimationLayers"] = Values.MergeByKey("NameID", layers);
+                CreateSubBlueprint(abpPackage, abp["template"]!.GetValue<string>(), WithRaw(abpProps, abp["properties"]));
+                var mesh = components[meshComponent] as JsonObject ?? [];
+                mesh["AnimClass"] = Values.Class(GamePath.ClassPath(abpPackage));
+                components[meshComponent] = mesh;
+            }
+
+            if (d.Json["stats"] is JsonObject stats && stats.Count > 0)
+            {
+                var table = $"{dir}/DT_{name}_Stats";
+                DataTable(table, catalog.Get(kind, "statsStruct")!, new JsonObject { [name] = stats.DeepClone() });
+                p["Data"] = Values.RowHandle(table, name);
+            }
+            if (d.GetString("faction") is { } faction) { p["Faction"] = Values.Class(faction); Require(faction); }
+
+            if (d.GetString("dialogue") is { } dialogue)
+            {
+                var component = d.GetString("dialogueComponent") ?? catalog.Get(kind, "dialogueComponent") ?? "Dialog";
+                var props = components[component] as JsonObject ?? [];
+                props[catalog.Get(kind, "dialogueProperty") ?? "EventTree"] = Values.Asset(Resolve(dialogue) ?? dialogue);
+                components[component] = props;
+            }
+            if (d.Json["vendor"] is JsonObject vendor)
+            {
+                var list = $"{dir}/RL_{name}";
+                var recipes = (vendor["items"] as JsonArray ?? []).OfType<JsonObject>()
+                    .Select(i => (JsonNode?)Recipe(Resolve(i["item"]!.GetValue<string>()) ?? i["item"]!.GetValue<string>(), i));
+                _plan.Operations.Add(new JsonObject
+                {
+                    ["op"] = "createObject",
+                    ["asset"] = list,
+                    ["class"] = "/Script/GunfireRuntime.CraftingRecipeList",
+                    ["properties"] = new JsonObject { [catalog.RecipeListProperty] = Values.Array(recipes) },
+                });
+                p[vendor["property"]?.GetValue<string>() ?? catalog.Get(kind, "vendorProperty") ?? "RecipeList"] = Values.Asset(list);
+            }
+            if (d.GetString("loot") is { } loot)
+                p[d.GetString("lootProperty") ?? catalog.Get(kind, "lootProperty") ?? "LootTable"] = Values.Asset(Resolve(loot) ?? loot);
+            if (d.Json["unlock"] is JsonObject unlock)
+            {
+                var after = unlock["after"]!.GetValue<string>();
+                if (GamePath.IsGamePath(after)) Require(after);
+                _plan.Notes.Add($"{kind} {d.Id}: appears after {after} is {unlock["state"]?.GetValue<string>() ?? "Complete"}"
+                    + (unlock["objective"] is { } o ? $" (objective {o})" : "")
+                    + ". The condition is a QuestStateCondition, but the hub's spawn hook that would check it isn't in the catalog yet (npc.hub.spawnHook); until then gate her with a hub quest in the editor.");
+            }
+            if (d.Json["location"] is JsonObject location)
+            {
+                var hub = location["hub"]?.GetValue<string>();
+                var map = location["map"]?.GetValue<string>() ?? (hub is null ? null : catalog.Get(kind, $"hub/{hub}"));
+                if (map is not null && !map.StartsWith(Root + "/", StringComparison.Ordinal)) Require(map);
+                _plan.Notes.Add(map is null
+                    ? $"{kind} {d.Id}: location hub '{hub}' isn't mapped in the catalog (npc.hub.{hub}); export the hub map's path from FModel."
+                    : $"{kind} {d.Id}: placing an actor in {map} would mean overriding that map, which no pak mod can do safely. She's spawned by the hub hook once npc.hub.spawnHook is known; the position is kept for it.");
+            }
+            if (d.Json["name"] is not null && d.Json["properties"]?["Label"] is null)
+                _plan.Notes.Add($"{kind} {d.Id}: the character's display name property isn't known yet; 'name' is kept for documentation. Set it through 'properties' once found in FModel.");
+
+            CreateBlueprint(d, parent, WithRaw(p, d.Json["properties"]), Components(d, components));
+            Unverified(d, "the component and property names for dialogue, vendor, loot and stats");
+        }
+
+        private void PlanDialogue(Definition d)
+        {
+            var nodes = DialogueNodes(d, d.Json["nodes"] as JsonArray);
+            var op = new JsonObject
+            {
+                ["op"] = "createObject",
+                ["id"] = d.Id,
+                ["asset"] = _targets[d.Id].Package,
+                ["class"] = catalog.Get(K.Dialogue, "class")!,
+                ["properties"] = WithRaw(new JsonObject { ["Nodes"] = nodes }, d.Json["properties"]),
+            };
+            _plan.Operations.Add(op);
+            _creates[d.Id] = op;
+            Unverified(d, "the conversation's trigger names");
+        }
+
+        private JsonArray DialogueNodes(Definition d, JsonArray? nodes) =>
+            new([.. (nodes ?? []).OfType<JsonObject>().Select(n => (JsonNode?)DialogueNode(d, n))]);
+
+        private JsonObject DialogueNode(Definition d, JsonObject n)
+        {
+            string NodeClass(string key) => catalog.Get(K.Dialogue, $"nodes/{key}")!;
+            var p = new JsonObject();
+            string cls;
+            if (n["say"] is { } say)
+            {
+                cls = NodeClass("say");
+                p["Text"] = Values.Text(LocalizedText.From(say, Culture)!);
+                if (n["facial"]?.GetValue<string>() is { } facial) p["FacialAnimation"] = Values.Soft(facial);
+                if (n["audio"] is not null)
+                    _plan.Notes.Add($"dialogue {d.Id}: voice audio isn't wired yet (the sound struct isn't mapped); set 'Dialog' through the node's 'properties'.");
+            }
+            else if (n["choices"] is JsonArray choices)
+            {
+                cls = NodeClass("choices");
+                p["Branches"] = Values.Array(choices.OfType<JsonObject>().Select(c =>
+                {
+                    var cp = new JsonObject
+                    {
+                        ["Label"] = Values.Text(LocalizedText.From(c["label"], Culture)!),
+                        ["Nodes"] = DialogueNodes(d, c["then"] as JsonArray),
+                    };
+                    if (c["hidden"] is { } hidden) cp["Hidden"] = hidden.DeepClone();
+                    return (JsonNode?)Values.New(NodeClass("choice"), cp);
+                }));
+            }
+            else if (n["trigger"]?.GetValue<string>() is { } trigger)
+            {
+                cls = NodeClass("trigger");
+                p["TriggerName"] = Values.Name(trigger);
+                p["Nodes"] = DialogueNodes(d, n["then"] as JsonArray);
+            }
+            else if (n["onItem"]?.GetValue<string>() is { } item)
+            {
+                cls = NodeClass("onItem");
+                p["ItemBP"] = SoftClassValue(item);
+                p["Nodes"] = DialogueNodes(d, n["then"] as JsonArray);
+            }
+            else if (n["activateObjective"]?.GetValue<string>() is { } activate)
+            {
+                cls = NodeClass("activateObjective");
+                p["Objective"] = Values.Name(activate);
+            }
+            else if (n["completeObjective"]?.GetValue<string>() is { } complete)
+            {
+                cls = NodeClass("completeObjective");
+                p["Objective"] = Values.Name(complete);
+            }
+            else if (n["completeQuest"]?.GetValue<string>() is { } result)
+            {
+                cls = NodeClass("completeQuest");
+                p["Result"] = Values.Enum(result);
+            }
+            else if (n["event"]?.GetValue<string>() is { } ev)
+            {
+                cls = NodeClass("event");
+                p["EventName"] = Values.Name(ev);
+                if (n["context"]?.GetValue<string>() is { } context) p["Context"] = Values.Name(context);
+            }
+            else if (n["questSwitch"] is JsonArray cases)
+            {
+                cls = NodeClass("questSwitch");
+                p["Branches"] = Values.Array(cases.OfType<JsonObject>().Select(c =>
+                {
+                    var bp = new JsonObject
+                    {
+                        ["ValidForState"] = Values.Enum(c["when"]!.GetValue<string>()),
+                        ["Nodes"] = DialogueNodes(d, c["then"] as JsonArray),
+                    };
+                    if (c["objectives"] is JsonArray objectives)
+                        bp["ValidObjectives"] = Values.Array(objectives.Select(o => (JsonNode?)Values.Name(o!.GetValue<string>())));
+                    return (JsonNode?)Values.New(NodeClass("questSwitchBranch"), bp);
+                }));
+            }
+            else if (n["jump"]?.GetValue<string>() is { } jump)
+            {
+                cls = NodeClass("jump");
+                p["JumpNode"] = Values.NodeRef($"{d.Id}.{jump}");
+            }
+            else if (n["exit"] is not null)
+            {
+                cls = NodeClass("exit");
+            }
+            else
+            {
+                cls = n["node"]!.GetValue<string>();
+            }
+            if (n["once"]?.GetValue<bool>() == true) p["DoOnce"] = true;
+            var node = Values.New(cls, WithRaw(p, n["properties"]));
+            if (n["id"]?.GetValue<string>() is { } id) node["$key"] = $"{d.Id}.{id}";
+            return node;
+        }
+
+        private void PlanQuest(Definition d)
+        {
+            var p = new JsonObject { ["QuestNameID"] = Values.Name(Name(d)) };
+            Text(p, "Label", d.Json["name"]);
+            Text(p, "Description", d.Json["description"]);
+            if (d.Json["icon"]?["small"]?.GetValue<string>() is { } icon) p["Icon"] = Values.Soft(Texture(icon, $"{Dir(d)}/T_{Name(d)}_Icon"));
+            if (d.GetString("questType") is { } type) p["Type"] = Values.Enum(type);
+            if (d.Json["levelMin"] is { } min) p["LevelMin"] = min.DeepClone();
+            if (d.Json["levelMax"] is { } max) p["LevelMax"] = max.DeepClone();
+            if (d.GetString("container") is { } container)
+            {
+                p["Container"] = Values.Soft(container);
+                if (!container.StartsWith(Root + "/", StringComparison.Ordinal)) Require(container);
+            }
+
+            var add = new JsonArray();
+            foreach (var o in (d.Json["objectives"] as JsonArray ?? []).OfType<JsonObject>())
+            {
+                var op = new JsonObject();
+                Text(op, "Label", o["name"]);
+                Text(op, "Description", o["description"]);
+                if (o["hidden"] is { } hidden) op["Hidden"] = hidden.DeepClone();
+                add.Add(new JsonObject { ["name"] = o["id"]!.GetValue<string>(), ["class"] = catalog.Get(K.Quest, "objectiveClass")!, ["properties"] = op });
+            }
+            foreach (var e in (d.Json["entities"] as JsonArray ?? []).OfType<JsonObject>())
+            {
+                var ep = new JsonObject { ["EventTree"] = Values.Soft(Resolve(e["dialogue"]!.GetValue<string>()) ?? e["dialogue"]!.GetValue<string>()) };
+                Text(ep, "Label", e["name"]);
+                add.Add(new JsonObject { ["name"] = e["id"]!.GetValue<string>(), ["class"] = catalog.Get(K.Quest, "entityClass")!, ["properties"] = ep });
+                if (e["npc"] is not null)
+                    _plan.Notes.Add($"quest {d.Id}: entity {e["id"]} names an NPC; how the game ties a quest entity to a placed NPC isn't confirmed, so place the NPC in the quest's map and check it in game.");
+            }
+            if (d.Json["rewards"] is JsonArray { Count: > 0 })
+                _plan.Notes.Add($"quest {d.Id}: 'rewards' are listed but not wired yet; give them from the dialogue (event node) or the quest blueprint.");
+            var create = CreateBlueprint(d, d.Template!, WithRaw(p, d.Json["properties"]), Components(d));
+            if (add.Count > 0) create["addComponents"] = add;
+            Unverified(d, "the quest objective and entity components");
+        }
+
         // ---------- acquisition and registration ----------
 
         private void Acquisition(Definition d, JsonArray? list)
         {
-            if (d.Kind is K.Archetype or K.LootTable or K.World or K.Adventure || !_targets.ContainsKey(d.Id)) return;
+            if (d.Kind is K.Archetype or K.LootTable or K.World or K.Adventure or K.Dialogue or K.AnimationSet or K.Quest
+                || !_targets.ContainsKey(d.Id)) return;
             AcquireItem(d, _targets[d.Id].ReferencePath, list);
         }
 
@@ -691,26 +1074,7 @@ public sealed class Planner(Catalog catalog)
                         else Append(_targets[table].Package, "Entries", entry); // table defined later in the file order
                         break;
                     case "craft" or "vendor":
-                        var recipe = new JsonObject
-                        {
-                            ["Item"] = Values.SoftClass(itemClass),
-                            ["ItemQuantity"] = 1,
-                            ["Type"] = Values.Enum("Craft"),
-                        };
-                        var n = 1;
-                        foreach (var m in (a["materials"] as JsonArray ?? []).OfType<JsonObject>())
-                        {
-                            recipe[$"Ingredient{n}"] = SoftClassValue(m["item"]!.GetValue<string>());
-                            recipe[$"Ingredient{n}Quantity"] = m["quantity"]!.DeepClone();
-                            n++;
-                        }
-                        if (a["scrap"] is { } scrap)
-                        {
-                            recipe[$"Ingredient{n}"] = Values.SoftClass(catalog.ScrapItem);
-                            recipe[$"Ingredient{n}Quantity"] = scrap.DeepClone();
-                        }
-                        foreach (var (k, v) in a["properties"] as JsonObject ?? []) recipe[k] = ResolveRefs(v?.DeepClone());
-                        Append(a["recipeList"]!.GetValue<string>(), catalog.RecipeListProperty, Values.New(catalog.RecipeClass, recipe));
+                        Append(a["recipeList"]!.GetValue<string>(), catalog.RecipeListProperty, Recipe(itemClass, a));
                         break;
                     case "startingGear":
                         var archetype = a["archetype"]!.GetValue<string>();
@@ -734,6 +1098,42 @@ public sealed class Planner(Catalog catalog)
                         break;
                 }
             }
+        }
+
+        /// <summary>A UCraftingRecipe for an item: materials as ingredients, scrap as the last one.</summary>
+        private JsonObject Recipe(string itemClass, JsonObject a)
+        {
+            var recipe = new JsonObject
+            {
+                ["Item"] = Values.SoftClass(itemClass),
+                ["ItemQuantity"] = 1,
+                ["Type"] = Values.Enum("Craft"),
+            };
+            var n = 1;
+            foreach (var m in (a["materials"] as JsonArray ?? []).OfType<JsonObject>())
+            {
+                recipe[$"Ingredient{n}"] = SoftClassValue(m["item"]!.GetValue<string>());
+                recipe[$"Ingredient{n}Quantity"] = m["quantity"]!.DeepClone();
+                n++;
+            }
+            if (a["scrap"] is { } scrap)
+            {
+                recipe[$"Ingredient{n}"] = Values.SoftClass(catalog.ScrapItem);
+                recipe[$"Ingredient{n}Quantity"] = scrap.DeepClone();
+                n++;
+            }
+            foreach (var r in (a["requires"] as JsonArray ?? []).OfType<JsonObject>())
+            {
+                // A gate: an ingredient the vendor hides (or shows as ???) until the player owns it.
+                recipe[$"Ingredient{n}"] = SoftClassValue(r["item"]!.GetValue<string>());
+                recipe[$"Ingredient{n}Quantity"] = r["quantity"]?.DeepClone() ?? 1;
+                if (r["level"] is { } level) recipe[$"Ingredient{n}LevelRequirement"] = level.DeepClone();
+                var show = r["show"]?.GetValue<string>() ?? "hidden";
+                recipe[show == "secret" ? $"bIngredient{n}SecretIfMissing" : $"bIngredient{n}HideIfMissing"] = true;
+                n++;
+            }
+            foreach (var (k, v) in a["properties"] as JsonObject ?? []) recipe[k] = ResolveRefs(v?.DeepClone());
+            return Values.New(catalog.RecipeClass, recipe);
         }
 
         private void Registration(Definition d)

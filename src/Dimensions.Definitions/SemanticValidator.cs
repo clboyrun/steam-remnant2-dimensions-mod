@@ -39,9 +39,10 @@ internal static class SemanticValidator
     private sealed class Checker(DimensionProject project, Definition d, DiagnosticBag bag, string culture)
     {
         private static readonly HashSet<string> TextFields =
-            ["name", "description", "flavorText", "briefDescription"];
+            ["name", "description", "flavorText", "briefDescription", "say", "label"];
 
         private static readonly HashSet<string> FileFields = ["small", "large", "hud", "image", "mesh"];
+        private static bool IsFileList(string pointer) => pointer.Contains("/animations/", StringComparison.Ordinal) && pointer.Contains("/files/", StringComparison.Ordinal);
 
         public void Walk(JsonNode? node, string pointer, string? key = null, bool inProperties = false)
         {
@@ -63,7 +64,7 @@ internal static class SemanticValidator
                     for (var i = 0; i < arr.Count; i++) Walk(arr[i], $"{pointer}/{i}", key, inProperties);
                     break;
                 case JsonValue v when !inProperties && key is not null && v.TryGetValue<string>(out var s):
-                    if (FileFields.Contains(key) || IsTextureParameter(pointer)) File(s, pointer);
+                    if (FileFields.Contains(key) || IsTextureParameter(pointer) || IsFileList(pointer)) File(s, pointer);
                     if (s.StartsWith("/Game/Dimensions/", StringComparison.Ordinal) &&
                         !s.StartsWith($"/Game/Dimensions/{project.Manifest.Id}/", StringComparison.Ordinal))
                     {
@@ -114,7 +115,10 @@ internal static class SemanticValidator
         private static readonly HashSet<string> Traits = [Trait];
         private static readonly HashSet<string> Worlds = [World];
         private static readonly HashSet<string> Archetypes = [Archetype];
-        private static readonly HashSet<string> Quests = [Adventure, Blueprint];
+        private static readonly HashSet<string> Quests = [Adventure, Quest, Blueprint];
+        private static readonly HashSet<string> Dialogues = [Dialogue];
+        private static readonly HashSet<string> AnimationSets = [AnimationSet];
+        private static readonly HashSet<string> Npcs = [Npc, Blueprint];
 
         public void KindRules()
         {
@@ -150,11 +154,13 @@ internal static class SemanticValidator
                     {
                         Ref(n?["item"], ptr + "/item", Items, "an item");
                         Ref(n?["table"], ptr + "/table", LootTables);
+                        Ref(n?["character"], ptr + "/character", Characters, "an npc or enemy");
                         Range(n as JsonObject, ptr);
                     });
                     break;
                 case World:
                     Ref(json["loot"], p + "/loot", LootTables);
+                    Ref(json["campaign"]?["quest"], p + "/campaign/quest", Quests, "a quest or adventure");
                     var zoneIds = new HashSet<string>();
                     Each(json["zones"], p + "/zones", (n, ptr) =>
                     {
@@ -167,7 +173,54 @@ internal static class SemanticValidator
                 case Adventure:
                     Ref(json["world"], p + "/world", Worlds);
                     Each(json["rewards"], p + "/rewards", (n, ptr) => Ref(n, ptr, Items, "an item"));
-                    Each(json["storyline"], p + "/storyline", (n, ptr) => Ref(n, ptr, Quests, "an adventure or blueprint"));
+                    Each(json["storyline"], p + "/storyline", (n, ptr) =>
+                    {
+                        if (n is JsonObject o) Ref(o["quest"], ptr + "/quest", Quests, "a quest");
+                        else Ref(n, ptr, Quests, "a quest");
+                    });
+                    break;
+                case Npc or Enemy:
+                    Ref(json["dialogue"], p + "/dialogue", Dialogues);
+                    Ref(json["loot"], p + "/loot", LootTables);
+                    foreach (var (layer, set) in json["animBlueprint"]?["layers"] as JsonObject ?? [])
+                        Ref(set, $"{p}/animBlueprint/layers/{Escape(layer)}", AnimationSets);
+                    Each(json["vendor"]?["items"], p + "/vendor/items", (n, ptr) =>
+                    {
+                        Ref(n?["item"], ptr + "/item", Items, "an item");
+                        Each(n?["materials"], ptr + "/materials", (m, mptr) => Ref(m?["item"], mptr + "/item", Items, "an item"));
+                        Each(n?["requires"], ptr + "/requires", (m, mptr) => Ref(m?["item"], mptr + "/item", Items, "an item"));
+                        var slots = (n?["materials"] as JsonArray)?.Count ?? 0;
+                        slots += n?["scrap"] is null ? 0 : 1;
+                        slots += (n?["requires"] as JsonArray)?.Count ?? 0;
+                        if (slots > 4) bag.Error($"a vendor entry has 4 ingredient slots; materials, scrap and requires use {slots}", d.File, ptr);
+                    });
+                    Ref(json["unlock"]?["after"], p + "/unlock/after", Quests, "a quest");
+                    if (json["location"] is JsonObject loc && loc["map"] is null && loc["hub"] is null)
+                        bag.Error("'location' needs 'map' or 'hub'", d.File, p + "/location");
+                    break;
+                case Quest:
+                    var objectives = new HashSet<string>();
+                    Each(json["objectives"], p + "/objectives", (n, ptr) =>
+                    {
+                        if (n?["id"]?.GetValue<string>() is { } oid && !objectives.Add(oid))
+                            bag.Error($"objective id '{oid}' is used twice", d.File, ptr + "/id");
+                    });
+                    Each(json["entities"], p + "/entities", (n, ptr) =>
+                    {
+                        Ref(n?["npc"], ptr + "/npc", Npcs, "an npc");
+                        Ref(n?["dialogue"], ptr + "/dialogue", Dialogues);
+                    });
+                    Each(json["rewards"], p + "/rewards", (n, ptr) => Ref(n, ptr, Items, "an item"));
+                    break;
+                case QuestItem:
+                    Ref(json["quest"], p + "/quest", Quests, "a quest");
+                    break;
+                case Dialogue:
+                    var ids = new HashSet<string>();
+                    var jumps = new List<(string Target, string Pointer)>();
+                    DialogueNodes(json["nodes"] as JsonArray, p + "/nodes", ids, jumps);
+                    foreach (var (target, ptr) in jumps)
+                        if (!ids.Contains(target)) bag.Error($"jump to '{target}', but no node has that id", d.File, ptr);
                     break;
             }
 
@@ -178,6 +231,35 @@ internal static class SemanticValidator
                     bag.Error("registration mode 'append' needs 'list' and 'property'", d.File, p + "/registration");
                 if (mode == "replace" && reg["replaces"] is null)
                     bag.Error("registration mode 'replace' needs 'replaces'", d.File, p + "/registration");
+            }
+        }
+
+        private void DialogueNodes(JsonArray? nodes, string pointer, HashSet<string> ids, List<(string, string)> jumps)
+        {
+            if (nodes is null) return;
+            for (var i = 0; i < nodes.Count; i++)
+            {
+                var n = nodes[i] as JsonObject;
+                var ptr = $"{pointer}/{i}";
+                if (n is null) continue;
+                if (n["id"]?.GetValue<string>() is { } id && !ids.Add(id)) bag.Error($"node id '{id}' is used twice", d.File, ptr + "/id");
+                if (n["jump"]?.GetValue<string>() is { } jump) jumps.Add((jump, ptr + "/jump"));
+                Ref(n["onItem"], ptr + "/onItem", Items, "an item");
+                var actions = new[] { "say", "choices", "trigger", "onItem", "activateObjective", "completeObjective", "completeQuest", "event", "jump", "exit", "questSwitch", "node" }
+                    .Where(n.ContainsKey).ToList();
+                if (actions.Count != 1)
+                    bag.Error(actions.Count == 0
+                        ? "a dialogue node needs one of: say, choices, trigger, onItem, activateObjective, completeObjective, completeQuest, event, jump, exit, questSwitch, node"
+                        : $"a dialogue node does one thing; this one has {string.Join(", ", actions)}", d.File, ptr);
+                if (n["then"] is not null && actions.FirstOrDefault() is not ("trigger" or "onItem"))
+                    bag.Error("'then' goes with 'trigger' or 'onItem'", d.File, ptr + "/then");
+                DialogueNodes(n["then"] as JsonArray, ptr + "/then", ids, jumps);
+                var choices = n["choices"] as JsonArray ?? [];
+                for (var c = 0; c < choices.Count; c++)
+                    DialogueNodes(choices[c]?["then"] as JsonArray, $"{ptr}/choices/{c}/then", ids, jumps);
+                var cases = n["questSwitch"] as JsonArray ?? [];
+                for (var c = 0; c < cases.Count; c++)
+                    DialogueNodes(cases[c]?["then"] as JsonArray, $"{ptr}/questSwitch/{c}/then", ids, jumps);
             }
         }
 

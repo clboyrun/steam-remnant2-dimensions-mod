@@ -80,6 +80,10 @@ exposes.
 | Loot table | Linked from a game spawn table (`injectInto`) or from a zone's spawn list | `USpawnTableLink` entry, or `SpawnLists` |
 | Archetype | Asset registry scan for `RemnantArchetype` (discover), or a list/slot (append/replace) | `registration` |
 | World zones, adventure | Asset registry scan for `ZoneDef`/`Quest` (discover), or append/replace | `registration` |
+| Enemy | A spawn table entry (`USpawnTableCharacter`) used as a zone's encounter group | `encounters` |
+| NPC | Placed in a map, or spawned by a quest | A blueprint; placement is open (below) |
+| Dialogue, objectives | A quest entity (`UQuestEntity.EventTree`) or an NPC's dialogue component | `addComponents` on the quest |
+| Campaign alternative world | The campaign root quest's slot for that world | Note only until the catalog has `campaign.*` |
 
 Adding to a game list means packing a **modified copy** of that game asset (an override). The plan lists every
 override, and the planner merges all of a dimension's additions to one list into a single edit. Two separate mods
@@ -99,7 +103,18 @@ that override the same game list conflict; keep related content in one dimension
    graph). The JSON references them; it can't generate level geometry.
 5. **Localization**: only the default culture's text is written into assets so far; other cultures in the JSON
    are kept for a later string-table step.
-6. **retoc and UE 5.2**: retoc notes missing dependency data before 5.3 "should not be an issue for modding". If
+6. **Campaign slots and story campaigns**: making the Grimm world an extra Yaesha roll, or the Lovecraftian world an
+   extra N'Erud roll, means adding a sub-quest to the campaign root quest's slot. Which asset and property that is
+   isn't known yet, so the plan writes a note. Export `Quest_Campaign` (and a DLC story campaign's setup) from FModel
+   and fill in `campaign` in the catalog.
+7. **Hub NPCs**: a pak can't safely add an actor to Ward 13's map (that would replace the whole map). The way the
+   game makes NPCs appear there after story events (a hub quest, spawn points, a sequence) has to be found in FModel
+   and recorded under `npc.hub` in the catalog. Until then, `unlock` and `location` are written as notes. Vendor
+   gates (`requires`) use the recipe's own hide-if-missing ingredient flags; whether a gate ingredient is consumed on
+   purchase needs an in-game test, and the campaign tokens need something that hands them out when a campaign ends.
+8. **Dialogue wiring**: node classes and fields come from the headers, but the trigger name the game fires on
+   interact (`Interact` in the examples) and the voice audio struct still need confirming.
+9. **retoc and UE 5.2**: retoc notes missing dependency data before 5.3 "should not be an issue for modding". If
    IoStore output misbehaves, set `"pak": { "format": "legacy" }` and test a plain pak.
 
 ## First test in game

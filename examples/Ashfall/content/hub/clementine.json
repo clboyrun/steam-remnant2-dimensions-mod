@@ -1,0 +1,109 @@
+{
+  "$schema": "../../../../schema/definition.schema.json",
+  // Clementine's holographic interface in Ward 13. Unlocks after Root Earth, gives clues for unlockables,
+  // and sells quest books for campaigns the character has finished.
+  // Game paths marked "check" are guesses to confirm in FModel.
+  "definitions": [
+    {
+      "kind": "npc",
+      "id": "ClementineInterface",
+      "name": "Clementine (Interface)",
+      "template": "/Game/Characters/NPC/Common/Character_NPC.Character_NPC_C",
+      "model": {
+        "mesh": "models/clementine_hologram.fbx",
+        "materials": [
+          {
+            // check: any translucent/emissive master material from the game works as the hologram base
+            "parent": "/Game/_Core/Materials/M_Hologram.M_Hologram",
+            "vectors": { "Tint": [0.3, 0.8, 1.0] },
+            "scalars": { "Opacity": 0.6 }
+          }
+        ]
+      },
+      // check: Root Earth's story quest
+      "unlock": { "after": "/Game/World_Earth/Quests/Quest_Story_RootEarth/Quest_Story_RootEarth.Quest_Story_RootEarth_C", "state": "Complete" },
+      "location": { "hub": "ward13", "position": [1200, -340, 80], "rotation": 90 },
+      "dialogue": "ClementineTalk",
+      "vendor": {
+        "items": [
+          { "item": "QuestBookLosomn", "scrap": 1000, "requires": [ { "item": "CampaignSealLosomn" } ] },
+          { "item": "QuestBookYaesha", "scrap": 1000, "requires": [ { "item": "CampaignSealYaesha" } ] },
+          { "item": "QuestBookNerud", "scrap": 1000, "requires": [ { "item": "CampaignSealNerud", "show": "secret" } ] }
+        ]
+      }
+    },
+    {
+      "kind": "quest",
+      "id": "ClementineInterfaceQuest",
+      "assetName": "Quest_Hub_ClementineInterface",
+      // check: a Ward 13 hub quest to start from
+      "template": "/Game/World_City/Quests/Quest_Ward13/Quest_Ward13.Quest_Ward13_C",
+      "name": "The Interface",
+      "objectives": [
+        { "id": "ClueEmberline", "name": "Find the Emberline", "hidden": true },
+        { "id": "CluePyrelord", "name": "Learn the Pyrelord's craft", "hidden": true }
+      ],
+      "entities": [
+        { "id": "Clementine", "name": "Clementine", "npc": "ClementineInterface", "dialogue": "ClementineTalk" }
+      ]
+    },
+    {
+      "kind": "dialogue",
+      "id": "ClementineTalk",
+      "nodes": [
+        {
+          "trigger": "Interact",
+          "then": [
+            { "once": true, "say": "Interface online. I kept a copy of everything we found out there." },
+            { "once": true, "activateObjective": "ClueEmberline" },
+            { "once": true, "activateObjective": "CluePyrelord" },
+            {
+              "id": "Menu",
+              "choices": [
+                { "label": "Any leads?", "then": [
+                  {
+                    "questSwitch": [
+                      { "when": "QuestInProgress", "objectives": ["ClueEmberline"], "then": [
+                        { "say": "Something in the Cinderfields still burns hot enough to forge with. Look past the spire." }
+                      ] },
+                      { "when": "QuestInProgress", "objectives": ["CluePyrelord"], "then": [
+                        { "say": "There's an engram in the ash. Whoever carries it learns to live with fire." }
+                      ] },
+                      { "when": "All", "then": [ { "say": "Nothing new. You've found everything I've seen." } ] }
+                    ]
+                  },
+                  { "jump": "Menu" }
+                ] },
+                { "label": "Show me the archive.", "then": [ { "event": "OpenVendor" } ] },
+                { "label": "Goodbye, Clem.", "then": [ { "exit": true } ] }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+
+    // Quest books: one per finished campaign.
+    {
+      "kind": "questItem",
+      "id": "QuestBookBase",
+      "abstract": true,
+      "template": "/Game/World_DLC1/Quests/Quest_Story_OneTrueKing/Items/Quest_Item_OTK_ScribeTome/Quest_Item_OTK_ScribeTome.Quest_Item_OTK_ScribeTome_C",
+      "icon": { "small": "art/quest_book_icon.png" }
+    },
+    { "kind": "questItem", "id": "QuestBookLosomn", "extends": "QuestBookBase", "name": "Chronicle of Losomn", "description": "Everything that happened in the Dran city and the Fae court, as Clementine remembers it." },
+    { "kind": "questItem", "id": "QuestBookYaesha", "extends": "QuestBookBase", "name": "Chronicle of Yaesha", "description": "The Pan, the Ravager and the Guardian, written down before the forest forgets." },
+    { "kind": "questItem", "id": "QuestBookNerud", "extends": "QuestBookBase", "name": "Chronicle of N'Erud", "description": "Notes on the Drzyr, the Phantom and the Timekeeper." },
+
+    // Tokens the vendor checks. The campaign has to hand these out when it's finished (open: see the plan notes).
+    {
+      "kind": "questItem",
+      "id": "CampaignSealBase",
+      "abstract": true,
+      "template": "/Game/World_City/Quests/Quest_Story_Intro/Items/Quest_Item_Ward13Key.Quest_Item_Ward13Key_C"
+    },
+    { "kind": "questItem", "id": "CampaignSealLosomn", "extends": "CampaignSealBase", "name": "Losomn Seal" },
+    { "kind": "questItem", "id": "CampaignSealYaesha", "extends": "CampaignSealBase", "name": "Yaesha Seal" },
+    { "kind": "questItem", "id": "CampaignSealNerud", "extends": "CampaignSealBase", "name": "N'Erud Seal" }
+  ]
+}
