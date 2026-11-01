@@ -1713,7 +1713,7 @@
         },
         "rowName": {
           "type": "string",
-          "description": "Row name in the scaling table. Default: the id."
+          "description": "Row name in the scaling table. Default: rank + 1 (the game's rows are '1' to '4')."
         },
         "enemyHealth": {
           "type": "number",
@@ -1743,6 +1743,85 @@
         "row": {
           "type": "object",
           "description": "Any other row fields, by their Unreal names."
+        },
+        "eliteHealth": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "description": "Elites, on top of enemyHealth."
+        },
+        "eliteDamage": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "bruteHealth": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "bruteDamage": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "aberrationHealth": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "aberrationDamage": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "miniBossHealth": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "miniBossDamage": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "worldBossHealth": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "worldBossDamage": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "healing": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "friendlyFire": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "playerStatusDamage": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "playerBlightBuildUp": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "consumableDrops": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "ammoDrops": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "gemDrops": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "basedOn": {
+          "enum": [
+            "Survivor",
+            "Veteran",
+            "Nightmare",
+            "Apocalypse"
+          ],
+          "default": "Apocalypse",
+          "description": "Fields you don't set are copied from this difficulty's row."
         }
       },
       "required": [

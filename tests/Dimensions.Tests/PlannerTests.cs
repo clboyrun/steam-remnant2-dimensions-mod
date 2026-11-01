@@ -77,7 +77,7 @@ public class PlannerTests
         Assert.Contains(items, i => i.EndsWith("Ring_AshenSeal_C"));
         Assert.Contains(items, i => i.EndsWith("Engram_Pyrelord_C"));
         Assert.Empty(plan.OperationsOf("appendToList"));
-        Assert.Empty(plan.Overrides);
+        Assert.Equal(["/Game/_Core/Stats/Stats_Scaling_Difficulty"], plan.Overrides); // only the difficulty row
     }
 
     [Fact]

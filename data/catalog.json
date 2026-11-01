@@ -197,14 +197,31 @@
       "verified": false
     },
     "difficulty": {
-      "$comment": "Difficulty is an int index (RemnantQuest.Difficulty, SavedCharacter.QuestDifficulty) into UDifficultyScalingComponent.DifficultyScalingTable, whose rows are FDifficultyScalingData. Fill in the table path and the menu's list from FModel.",
-      "rowStruct": "/Script/GunfireRuntime.DifficultyScalingData",
+      "$comment": "Difficulty is an int (RemnantQuest.Difficulty, SavedCharacter.QuestDifficulty). The game's table is Stats_Scaling_Difficulty (rows '1'..'4' = Survivor..Apocalypse, struct StatDef_Scaling), found in Rem2Proj Content. Elite/brute/aberration/boss scalars multiply on top of the enemy scalars. The menu list is still unknown.",
+      "rowStruct": "/Game/_Core/Stats/Base/StatDef_Scaling.StatDef_Scaling",
       "statFields": {
         "enemyHealth": "EnemyHealthScalar",
         "enemyDamage": "EnemyDamageScalar",
         "spawnQuantity": "SpawnQuantityScalar",
         "currency": "CurrencyScalar",
-        "experience": "ExperienceScalar"
+        "experience": "ExperienceScalar",
+        "eliteHealth": "EliteHealthScalar",
+        "eliteDamage": "EliteDamageScalar",
+        "bruteHealth": "BruteHealthScalar",
+        "bruteDamage": "BruteDamageScalar",
+        "aberrationHealth": "AberattionHealthScalar",
+        "aberrationDamage": "AberrationDamageScalar",
+        "miniBossHealth": "MiniBossHealthScalar",
+        "miniBossDamage": "MiniBossDamageScalar",
+        "worldBossHealth": "WorldBossHealthScalar",
+        "worldBossDamage": "WorldBossDamageScalar",
+        "healing": "HealingScalar",
+        "friendlyFire": "FriendlyFireDamageScalar",
+        "playerStatusDamage": "PlayerStatusDamageScalar",
+        "playerBlightBuildUp": "PlayerBlightBuildUpScalar",
+        "consumableDrops": "ConsumableDropChanceScalar",
+        "ammoDrops": "AmmoDropChanceScalar",
+        "gemDrops": "GemDropChanceScalar"
       },
       "baseDifficulties": [
         "Survivor",
@@ -212,7 +229,7 @@
         "Nightmare",
         "Apocalypse"
       ],
-      "scalingTable": null,
+      "scalingTable": "/Game/_Core/Stats/Stats_Scaling_Difficulty.Stats_Scaling_Difficulty",
       "menuList": null,
       "menuProperty": null,
       "verified": false

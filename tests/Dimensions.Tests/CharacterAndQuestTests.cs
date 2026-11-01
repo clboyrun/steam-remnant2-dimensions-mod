@@ -181,17 +181,14 @@ public class CharacterAndQuestTests
     }
 
     [Fact]
-    public void DifficultyIsARowInTheScalingTableOnceItsPathIsKnown()
+    public void DifficultyAddsRowFiveToTheScalingTableBasedOnApocalypse()
     {
         var plan = PlanExample();
-        Assert.Contains(plan.Notes, n => n.StartsWith("difficulty VexAndTorment: 'Vex and Torment' is difficulty index 4"));
-        Assert.Contains(plan.Notes, n => n.Contains("\"EnemyHealthScalar\":1.6"));
-
-        var catalog = Catalog.Load();
-        ((JsonObject)catalog.Json["kinds"]!["difficulty"]!)["scalingTable"] = "/Game/_Core/Difficulty/DT_Difficulty.DT_Difficulty";
-        var withTable = Planner.Plan(DimensionProject.Load(Path.Combine(TestDimension.RepoRoot, "examples", "Ashfall")), catalog);
-        var add = Op(withTable, "addTableRows", "/Game/_Core/Difficulty/DT_Difficulty");
-        Assert.Equal(1.5, add["rows"]!["VexAndTorment"]!["EnemyDamageScalar"]!.GetValue<double>());
-        Assert.Contains("/Game/_Core/Difficulty/DT_Difficulty", withTable.Overrides);
+        var add = Op(plan, "addTableRows", "/Game/_Core/Stats/Stats_Scaling_Difficulty");
+        Assert.Equal(3.25, add["rows"]!["5"]!["EnemyDamageScalar"]!.GetValue<double>());
+        Assert.Equal(1.85, add["rows"]!["5"]!["WorldBossHealthScalar"]!.GetValue<double>());
+        Assert.Equal("4", add["baseRows"]!["5"]!.GetValue<string>());
+        Assert.Contains("/Game/_Core/Stats/Stats_Scaling_Difficulty", plan.Overrides);
+        Assert.Contains(plan.Notes, n => n.StartsWith("difficulty VexAndTorment: 'Vex and Torment' is difficulty 4 (row 5)"));
     }
 }

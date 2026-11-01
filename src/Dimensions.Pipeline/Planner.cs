@@ -226,20 +226,25 @@ public sealed class Planner(Catalog catalog)
             foreach (var (field, unrealName) in catalog.Map(K.Difficulty, "statFields"))
                 if (d.Json[field] is { } v) row[unrealName] = v.DeepClone();
             foreach (var (k, v) in d.Json["row"] as JsonObject ?? []) row[k] = v?.DeepClone();
-            var rowName = d.GetString("rowName") ?? d.Id;
-            var known = (catalog.Kind(K.Difficulty)["baseDifficulties"] as JsonArray)?.Count ?? 4;
-            var rank = d.Json["rank"]?.GetValue<int>() ?? known;
+            var bases = (catalog.Kind(K.Difficulty)["baseDifficulties"] as JsonArray ?? []).Select(n => n!.GetValue<string>()).ToList();
+            var rank = d.Json["rank"]?.GetValue<int>() ?? bases.Count;
+            var rowName = d.GetString("rowName") ?? (rank + 1).ToString(System.Globalization.CultureInfo.InvariantCulture);
+            var basedOn = d.GetString("basedOn") ?? bases.LastOrDefault();
             var name = d.Json["name"] is JsonValue nv ? nv.GetValue<string>() : d.Json["name"]?[Culture]?.GetValue<string>() ?? d.Id;
             if (catalog.Get(K.Difficulty, "scalingTable") is { } table)
             {
                 var package = GamePath.PackageOf(table);
-                _plan.Operations.Add(new JsonObject { ["op"] = "addTableRows", ["asset"] = package, ["rows"] = new JsonObject { [rowName] = row } });
-                _plan.Overrides.Add(package);
+                var op = new JsonObject { ["op"] = "addTableRows", ["asset"] = package, ["rows"] = new JsonObject { [rowName] = row } };
+                if (basedOn is not null && bases.IndexOf(basedOn) is >= 0 and var i)
+                    op["baseRows"] = new JsonObject { [rowName] = (i + 1).ToString(System.Globalization.CultureInfo.InvariantCulture) };
+                _plan.Operations.Add(op);
+                if (!_plan.Overrides.Contains(package)) _plan.Overrides.Add(package);
                 Require(table);
             }
             else
-                _plan.Notes.Add($"difficulty {d.Id}: the difficulty scaling table isn't in the catalog yet (difficulty.scalingTable); export DifficultyScalingTable's asset from the player or game state blueprint in FModel. Row {rowName}: {row.ToJsonString()}.");
-            _plan.Notes.Add($"difficulty {d.Id}: '{name}' is difficulty index {rank}. The difficulty menu and its names live in the game's UI (catalog difficulty.menuList); until that's mapped, the new option won't be listed. Also check how loot level and enemy level scale with the index.");
+                _plan.Notes.Add($"difficulty {d.Id}: the difficulty scaling table isn't in the catalog (difficulty.scalingTable). Row {rowName}: {row.ToJsonString()}.");
+            _plan.Notes.Add($"difficulty {d.Id}: '{name}' is difficulty {rank} (row {rowName}). The difficulty menu and its names live in the game's UI (catalog difficulty.menuList); until that's mapped, the new option won't be listed. Also check how loot and enemy level follow the difficulty.");
+            Unverified(d, "the difficulty row names and menu");
         }
 
         private void PlanItemCategory(Definition d)

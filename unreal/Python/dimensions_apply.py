@@ -604,7 +604,8 @@ def add_table_rows(ctx, op):
         raise PlanError("data table not found: " + package)
     rows = {str(r.get("Name")): r for r in table_rows_json(table)}
     for name, row in op["rows"].items():
-        rows[name] = dict(rows.get(name, {}), **row, Name=name)
+        base = rows.get(op.get("baseRows", {}).get(name), {}) if name not in rows else rows[name]
+        rows[name] = dict(base, **row, Name=name)
     if not unreal.DataTableFunctionLibrary.fill_data_table_from_json_string(table, json.dumps(list(rows.values()))):
         raise PlanError("{}: the new rows don't match the table's row struct".format(package))
     if package not in ctx.created:
