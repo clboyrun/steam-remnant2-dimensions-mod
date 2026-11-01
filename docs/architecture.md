@@ -118,9 +118,12 @@ that override the same game list conflict; keep related content in one dimension
    icon), and inventory panels list items through `FItemQueryFilter.RequiredCategories`. A new category is plain
    data. If the inventory groups by category on its own, the new section just appears; if its tabs are fixed in the
    inventory widget, that widget blueprint is overridden (`ui.inventoryWidget` in the catalog).
-9. **Dialogue wiring**: node classes and fields come from the headers, but the trigger name the game fires on
+9. **Difficulty**: a difficulty is an index into `DifficultyScalingTable` (rows of `FDifficultyScalingData`: enemy
+   health, enemy damage, spawn quantity, currency, experience). Adding a row is data; the table's asset path, the
+   difficulty menu's list, and how loot and enemy level follow the index still need finding in FModel.
+10. **Dialogue wiring**: node classes and fields come from the headers, but the trigger name the game fires on
    interact (`Interact` in the examples) and the voice audio struct still need confirming.
-10. **retoc and UE 5.2**: retoc notes missing dependency data before 5.3 "should not be an issue for modding". If
+11. **retoc and UE 5.2**: retoc notes missing dependency data before 5.3 "should not be an issue for modding". If
    IoStore output misbehaves, set `"pak": { "format": "legacy" }` and test a plain pak.
 
 ## First test in game

@@ -195,6 +195,27 @@
       },
       "$comment": "AItem.Category is a UItemCategory class (Label, Icon) and inventory panels list items through FItemQueryFilter.RequiredCategories. Whether the inventory makes a section per category on its own, or each tab's filter is fixed in its widget, needs a test (set ui.inventoryWidget if it's the widget).",
       "verified": false
+    },
+    "difficulty": {
+      "$comment": "Difficulty is an int index (RemnantQuest.Difficulty, SavedCharacter.QuestDifficulty) into UDifficultyScalingComponent.DifficultyScalingTable, whose rows are FDifficultyScalingData. Fill in the table path and the menu's list from FModel.",
+      "rowStruct": "/Script/GunfireRuntime.DifficultyScalingData",
+      "statFields": {
+        "enemyHealth": "EnemyHealthScalar",
+        "enemyDamage": "EnemyDamageScalar",
+        "spawnQuantity": "SpawnQuantityScalar",
+        "currency": "CurrencyScalar",
+        "experience": "ExperienceScalar"
+      },
+      "baseDifficulties": [
+        "Survivor",
+        "Veteran",
+        "Nightmare",
+        "Apocalypse"
+      ],
+      "scalingTable": null,
+      "menuList": null,
+      "menuProperty": null,
+      "verified": false
     }
   },
   "recipe": {

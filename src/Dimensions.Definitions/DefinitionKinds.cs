@@ -21,11 +21,12 @@ public static class DefinitionKinds
     public const string Quest = "quest";
     public const string QuestItem = "questItem";
     public const string ItemCategory = "itemCategory";
+    public const string Difficulty = "difficulty";
 
     public static readonly IReadOnlySet<string> All = new HashSet<string>
     {
         Weapon, WeaponMod, Mutator, Ring, Amulet, Armor, Trait, Archetype, LootTable, World, Adventure, Blueprint,
-        Npc, Enemy, AnimationSet, Dialogue, Quest, QuestItem, ItemCategory,
+        Npc, Enemy, AnimationSet, Dialogue, Quest, QuestItem, ItemCategory, Difficulty,
     };
 
     /// <summary>Kinds that are items the player can hold, so they can go in loot, recipes and starting gear.</summary>

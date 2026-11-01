@@ -140,6 +140,9 @@
         },
         {
           "$ref": "#/$defs/itemCategory"
+        },
+        {
+          "$ref": "#/$defs/difficulty"
         }
       ]
     },
@@ -1690,6 +1693,61 @@
           "description": "Sort hint kept for the inventory override, if one turns out to be needed."
         }
       },
+      "unevaluatedProperties": false
+    },
+    "difficulty": {
+      "description": "A new difficulty above the game's own (Survivor, Veteran, Nightmare, Apocalypse): a row in the game's difficulty scaling table plus its entry in the difficulty menu.",
+      "allOf": [
+        {
+          "$ref": "#/$defs/base"
+        }
+      ],
+      "properties": {
+        "kind": {
+          "const": "difficulty"
+        },
+        "rank": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Its difficulty index. Default: right after the highest one the catalog knows (Apocalypse)."
+        },
+        "rowName": {
+          "type": "string",
+          "description": "Row name in the scaling table. Default: the id."
+        },
+        "enemyHealth": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "description": "EnemyHealthScalar."
+        },
+        "enemyDamage": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "description": "EnemyDamageScalar."
+        },
+        "spawnQuantity": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "description": "SpawnQuantityScalar."
+        },
+        "currency": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "description": "CurrencyScalar."
+        },
+        "experience": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "description": "ExperienceScalar."
+        },
+        "row": {
+          "type": "object",
+          "description": "Any other row fields, by their Unreal names."
+        }
+      },
+      "required": [
+        "name"
+      ],
       "unevaluatedProperties": false
     }
   }

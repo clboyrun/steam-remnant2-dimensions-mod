@@ -30,7 +30,7 @@ of the schemas anywhere you like. Comments (`//`) and trailing commas are allowe
 
 | Field | |
 | --- | --- |
-| `kind` | `weapon`, `weaponMod`, `mutator`, `ring`, `amulet`, `armor`, `trait`, `archetype`, `lootTable`, `world`, `adventure`, `npc`, `enemy`, `animationSet`, `dialogue`, `quest`, `questItem`, `itemCategory`, `blueprint` |
+| `kind` | `weapon`, `weaponMod`, `mutator`, `ring`, `amulet`, `armor`, `trait`, `archetype`, `lootTable`, `world`, `adventure`, `npc`, `enemy`, `animationSet`, `dialogue`, `quest`, `questItem`, `itemCategory`, `difficulty`, `blueprint` |
 | `id` | Unique in the dimension, PascalCase. Asset names come from it (`Weapon_<id>`, `Ring_<id>`...). |
 | `extends` | Id of another definition of the same kind. Objects merge key by key; arrays and values replace; `null` removes. |
 | `abstract` | `true`: only a base for `extends`, nothing generated. |
@@ -138,6 +138,11 @@ Any node can have `id` (a `jump` target) and `once` (runs the first time only).
 it's made from). A section of the inventory. Any item (weapon, mod, mutator, ring, amulet, armor, questItem) joins it
 with `"category": "<itemCategory id>"` (or a game UItemCategory class). The Clementine example puts the campaign
 completion tokens in a `CompletionTokens` category.
+
+**difficulty**: `name`, `description`, `rank` (index; default 4, right after Apocalypse), `rowName`, and the
+scaling multipliers `enemyHealth`, `enemyDamage`, `spawnQuantity`, `currency`, `experience` (plus any other row field
+in `row`). Becomes a row in the game's difficulty scaling table (an override) and an entry in the difficulty menu.
+See `content/difficulty/torment.json`.
 
 **questItem**: `template` (a game quest item), `name`, `description`, `icon`, `quest`, `category`. Hand it in with `onItem`, sell
 it from a vendor, or drop it from a loot table.

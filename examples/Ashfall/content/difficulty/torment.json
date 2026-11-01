@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../../schema/definition.schema.json",
+  // A difficulty above Apocalypse for Masterwork, Forge and Ascension builds. The numbers are a starting point.
+  "kind": "difficulty",
+  "id": "VexAndTorment",
+  "name": "Vex and Torment",
+  "description": "For characters who outgrew Apocalypse.",
+  "enemyHealth": 1.6,
+  "enemyDamage": 1.5,
+  "spawnQuantity": 1.25,
+  "currency": 1.5,
+  "experience": 1.5
+}

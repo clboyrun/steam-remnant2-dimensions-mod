@@ -179,4 +179,19 @@ public class CharacterAndQuestTests
             """);
         Assert.Contains("'R' is a ring; expected an itemCategory", Errors(t.Load()));
     }
+
+    [Fact]
+    public void DifficultyIsARowInTheScalingTableOnceItsPathIsKnown()
+    {
+        var plan = PlanExample();
+        Assert.Contains(plan.Notes, n => n.StartsWith("difficulty VexAndTorment: 'Vex and Torment' is difficulty index 4"));
+        Assert.Contains(plan.Notes, n => n.Contains("\"EnemyHealthScalar\":1.6"));
+
+        var catalog = Catalog.Load();
+        ((JsonObject)catalog.Json["kinds"]!["difficulty"]!)["scalingTable"] = "/Game/_Core/Difficulty/DT_Difficulty.DT_Difficulty";
+        var withTable = Planner.Plan(DimensionProject.Load(Path.Combine(TestDimension.RepoRoot, "examples", "Ashfall")), catalog);
+        var add = Op(withTable, "addTableRows", "/Game/_Core/Difficulty/DT_Difficulty");
+        Assert.Equal(1.5, add["rows"]!["VexAndTorment"]!["EnemyDamageScalar"]!.GetValue<double>());
+        Assert.Contains("/Game/_Core/Difficulty/DT_Difficulty", withTable.Overrides);
+    }
 }

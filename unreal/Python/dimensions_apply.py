@@ -584,6 +584,33 @@ def append_to_list(ctx, op):
         ctx.modified[package] = asset
 
 
+def table_rows_json(table):
+    """The rows of an existing data table as a list of dicts (with Name), via whichever exporter this build has."""
+    lib = unreal.DataTableFunctionLibrary
+    for exporter in ("export_data_table_to_json_string", "get_data_table_as_json_string"):
+        fn = getattr(lib, exporter, None)
+        if fn is not None:
+            exported = fn(table)
+            data = json.loads(exported) if exported else []
+            return data if isinstance(data, list) else [dict(v, Name=k) for k, v in data.items()]
+    raise PlanError("this editor build can't export data tables to JSON")
+
+
+def add_table_rows(ctx, op):
+    """Adds rows to (or replaces rows of) an existing data table, keeping the rest."""
+    package = op["asset"]
+    table = ctx.created.get(package) or assets.load_asset(package)
+    if not isinstance(table, unreal.DataTable):
+        raise PlanError("data table not found: " + package)
+    rows = {str(r.get("Name")): r for r in table_rows_json(table)}
+    for name, row in op["rows"].items():
+        rows[name] = dict(rows.get(name, {}), **row, Name=name)
+    if not unreal.DataTableFunctionLibrary.fill_data_table_from_json_string(table, json.dumps(list(rows.values()))):
+        raise PlanError("{}: the new rows don't match the table's row struct".format(package))
+    if package not in ctx.created:
+        ctx.modified[package] = table
+
+
 def create_chunk_label(ctx, op):
     folder, name = split_package(op["asset"])
     prepare_slot(ctx, op["asset"])
@@ -660,6 +687,8 @@ def run(plan_path, result_path):
             try:
                 if op["op"] == "appendToList":
                     append_to_list(ctx, op)
+                elif op["op"] == "addTableRows":
+                    add_table_rows(ctx, op)
                 elif op["op"] == "createChunkLabel":
                     create_chunk_label(ctx, op)
             except Exception as e:  # noqa: BLE001
