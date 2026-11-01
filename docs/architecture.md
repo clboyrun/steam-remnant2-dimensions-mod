@@ -85,7 +85,9 @@ exposes.
 | Dialogue, objectives | A quest entity (`UQuestEntity.EventTree`) or an NPC's dialogue component | `addComponents` on the quest |
 | Campaign alternative world | The campaign root quest's slot for that world | Note only until the catalog has `campaign.*` |
 
-Adding to a game list means packing a **modified copy** of that game asset (an override). The plan lists every
+Adding to a game list means packing a **modified copy** of that game asset (an override). Compatibility with other
+pak mods is **not a goal** (decided 2026-11-01): when overriding a game asset (the inventory widget, the campaign
+root quest, a hub quest) is the simplest way to add something, do that. The plan lists every
 override, and the planner merges all of a dimension's additions to one list into a single edit. Two separate mods
 that override the same game list conflict; keep related content in one dimension.
 
@@ -115,8 +117,7 @@ that override the same game list conflict; keep related content in one dimension
 8. **Inventory sections**: an item's section comes from `AItem.Category` (a `UItemCategory` class with a label and
    icon), and inventory panels list items through `FItemQueryFilter.RequiredCategories`. A new category is plain
    data. If the inventory groups by category on its own, the new section just appears; if its tabs are fixed in the
-   inventory widget, that widget blueprint has to be overridden (`ui.inventoryWidget` in the catalog), which would
-   conflict with any other mod touching the inventory screen.
+   inventory widget, that widget blueprint is overridden (`ui.inventoryWidget` in the catalog).
 9. **Dialogue wiring**: node classes and fields come from the headers, but the trigger name the game fires on
    interact (`Interact` in the examples) and the voice audio struct still need confirming.
 10. **retoc and UE 5.2**: retoc notes missing dependency data before 5.3 "should not be an issue for modding". If
