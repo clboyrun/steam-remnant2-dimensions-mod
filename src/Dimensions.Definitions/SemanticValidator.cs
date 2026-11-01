@@ -119,6 +119,7 @@ internal static class SemanticValidator
         private static readonly HashSet<string> Dialogues = [Dialogue];
         private static readonly HashSet<string> AnimationSets = [AnimationSet];
         private static readonly HashSet<string> Npcs = [Npc, Blueprint];
+        private static readonly HashSet<string> Categories = [ItemCategory, Blueprint];
 
         public void KindRules()
         {
@@ -126,6 +127,7 @@ internal static class SemanticValidator
             var p = d.Pointer;
             Acquisition(json["acquisition"] as JsonArray, p + "/acquisition");
             Range(json, p);
+            Ref(json["category"], p + "/category", Categories, "an itemCategory");
 
             switch (d.Kind)
             {

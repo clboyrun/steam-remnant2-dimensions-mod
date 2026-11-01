@@ -184,6 +184,17 @@
       "folder": "QuestItems",
       "prefix": "Quest_Item_",
       "verified": false
+    },
+    "itemCategory": {
+      "folder": "Categories",
+      "prefix": "ItemCategory_",
+      "templates": {
+        "quest": "/Script/Remnant.ItemCategory_Quest",
+        "playerQuest": "/Script/Remnant.ItemCategory_PlayerQuest",
+        "other": "/Script/GunfireRuntime.ItemCategory"
+      },
+      "$comment": "AItem.Category is a UItemCategory class (Label, Icon) and inventory panels list items through FItemQueryFilter.RequiredCategories. Whether the inventory makes a section per category on its own, or each tab's filter is fixed in its widget, needs a test (set ui.inventoryWidget if it's the widget).",
+      "verified": false
     }
   },
   "recipe": {
@@ -211,6 +222,12 @@
     "storyCampaignProperty": null,
     "onceProperty": null,
     "difficultyProperty": null,
+    "verified": false
+  },
+  "ui": {
+    "$comment": "Game UI assets that may need overriding. Fill in from FModel (the inventory screen's widget blueprint and the property holding its tabs/filters).",
+    "inventoryWidget": null,
+    "inventoryTabsProperty": null,
     "verified": false
   }
 }

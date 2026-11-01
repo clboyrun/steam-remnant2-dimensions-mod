@@ -30,7 +30,7 @@ of the schemas anywhere you like. Comments (`//`) and trailing commas are allowe
 
 | Field | |
 | --- | --- |
-| `kind` | `weapon`, `weaponMod`, `mutator`, `ring`, `amulet`, `armor`, `trait`, `archetype`, `lootTable`, `world`, `adventure`, `npc`, `enemy`, `animationSet`, `dialogue`, `quest`, `questItem`, `blueprint` |
+| `kind` | `weapon`, `weaponMod`, `mutator`, `ring`, `amulet`, `armor`, `trait`, `archetype`, `lootTable`, `world`, `adventure`, `npc`, `enemy`, `animationSet`, `dialogue`, `quest`, `questItem`, `itemCategory`, `blueprint` |
 | `id` | Unique in the dimension, PascalCase. Asset names come from it (`Weapon_<id>`, `Ring_<id>`...). |
 | `extends` | Id of another definition of the same kind. Objects merge key by key; arrays and values replace; `null` removes. |
 | `abstract` | `true`: only a base for `extends`, nothing generated. |
@@ -134,7 +134,12 @@ Any node can have `id` (a `jump` target) and `once` (runs the first time only).
 `container` (its map or tile), `objectives` (`[{ "id", "name", "description", "hidden" }]`), `entities`
 (`[{ "id", "name", "npc", "dialogue" }]`: who talks during the quest), `rewards`. Add it to an adventure's `storyline`.
 
-**questItem**: `template` (a game quest item), `name`, `description`, `icon`, `quest`. Hand it in with `onItem`, sell
+**itemCategory**: `name`, `icon`, `group` (`playerQuest` default, `quest`, or `other`: which game category class
+it's made from). A section of the inventory. Any item (weapon, mod, mutator, ring, amulet, armor, questItem) joins it
+with `"category": "<itemCategory id>"` (or a game UItemCategory class). The Clementine example puts the campaign
+completion tokens in a `CompletionTokens` category.
+
+**questItem**: `template` (a game quest item), `name`, `description`, `icon`, `quest`, `category`. Hand it in with `onItem`, sell
 it from a vendor, or drop it from a loot table.
 
 See `examples/Ashfall/content/story` (an enemy, an NPC and a hand-in quest) and `content/hub/clementine.json` (a

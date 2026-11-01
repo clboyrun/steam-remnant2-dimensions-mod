@@ -46,7 +46,7 @@ public sealed class Planner(Catalog catalog)
         {
             foreach (var d in project.Concrete) AssignTarget(d);
             // Loot tables first, so items that drop from them add their entries straight into the table.
-            foreach (var d in project.Concrete.OrderBy(d => d.Kind is K.LootTable ? 0 : d.Kind is K.Archetype or K.Adventure ? 2 : 1))
+            foreach (var d in project.Concrete.OrderBy(d => d.Kind is K.LootTable or K.ItemCategory ? 0 : d.Kind is K.Archetype or K.Adventure ? 2 : 1))
             {
                 switch (d.Kind)
                 {
@@ -62,6 +62,7 @@ public sealed class Planner(Catalog catalog)
                     case K.Adventure: PlanAdventure(d); break;
                     case K.Blueprint: PlanGenericBlueprint(d); break;
                     case K.QuestItem: PlanTrinket(d); break;
+                    case K.ItemCategory: PlanItemCategory(d); break;
                     case K.AnimationSet: PlanAnimationSet(d); break;
                     case K.Dialogue: PlanDialogue(d); break;
                     case K.Npc or K.Enemy: PlanCharacter(d); break;
@@ -210,7 +211,23 @@ public sealed class Planner(Catalog catalog)
             Text(p, "Description", d.Json["description"]);
             Text(p, "FlavorText", d.Json["flavorText"]);
             Icons(d, p, d.Json["icon"] as JsonObject);
+            if (d.GetString("category") is { } category)
+            {
+                if (GamePath.IsGamePath(category)) Require(category);
+                p["Category"] = ClassValue(category);
+            }
             return p;
+        }
+
+        private void PlanItemCategory(Definition d)
+        {
+            var p = new JsonObject();
+            Text(p, "Label", d.Json["name"]);
+            if (d.Json["icon"]?["small"]?.GetValue<string>() is { } icon) p["Icon"] = Values.Asset(Texture(icon, $"{Dir(d)}/T_{Name(d)}_Icon"));
+            var group = d.GetString("group") ?? "playerQuest";
+            var parent = d.Template ?? catalog.Get(K.ItemCategory, $"templates/{group}")!;
+            CreateBlueprint(d, parent, WithRaw(p, d.Json["properties"]), Components(d));
+            _plan.Notes.Add($"itemCategory {d.Id}: check in game that the inventory lists it as its own section. If the inventory's tabs are fixed in its widget instead, that widget has to be overridden (catalog ui.inventoryWidget, export it from FModel).");
         }
 
         private void Text(JsonObject properties, string name, JsonNode? text)

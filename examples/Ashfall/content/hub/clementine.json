@@ -96,11 +96,19 @@
     { "kind": "questItem", "id": "QuestBookNerud", "extends": "QuestBookBase", "name": "Chronicle of N'Erud", "description": "Notes on the Drzyr, the Phantom and the Timekeeper." },
 
     // Tokens the vendor checks. The campaign has to hand these out when it's finished (open: see the plan notes).
+    // They get their own inventory section.
+    {
+      "kind": "itemCategory",
+      "id": "CompletionTokens",
+      "name": "Completion Tokens",
+      "icon": { "small": "art/ashen_seal_icon.png" }
+    },
     {
       "kind": "questItem",
       "id": "CampaignSealBase",
       "abstract": true,
-      "template": "/Game/World_City/Quests/Quest_Story_Intro/Items/Quest_Item_Ward13Key.Quest_Item_Ward13Key_C"
+      "template": "/Game/World_City/Quests/Quest_Story_Intro/Items/Quest_Item_Ward13Key.Quest_Item_Ward13Key_C",
+      "category": "CompletionTokens"
     },
     { "kind": "questItem", "id": "CampaignSealLosomn", "extends": "CampaignSealBase", "name": "Losomn Seal" },
     { "kind": "questItem", "id": "CampaignSealYaesha", "extends": "CampaignSealBase", "name": "Yaesha Seal" },

@@ -137,6 +137,9 @@
         },
         {
           "$ref": "#/$defs/questItem"
+        },
+        {
+          "$ref": "#/$defs/itemCategory"
         }
       ]
     },
@@ -259,6 +262,10 @@
         "mutatorSlot": {
           "type": "boolean",
           "default": true
+        },
+        "category": {
+          "$ref": "common.schema.json#/$defs/ref",
+          "description": "Inventory category: an itemCategory id or a game UItemCategory class."
         }
       },
       "unevaluatedProperties": false,
@@ -301,6 +308,10 @@
         },
         "stats": {
           "$ref": "common.schema.json#/$defs/stats"
+        },
+        "category": {
+          "$ref": "common.schema.json#/$defs/ref",
+          "description": "Inventory category: an itemCategory id or a game UItemCategory class."
         }
       },
       "unevaluatedProperties": false,
@@ -345,6 +356,10 @@
           "items": {
             "$ref": "common.schema.json#/$defs/stats"
           }
+        },
+        "category": {
+          "$ref": "common.schema.json#/$defs/ref",
+          "description": "Inventory category: an itemCategory id or a game UItemCategory class."
         }
       },
       "unevaluatedProperties": false,
@@ -374,6 +389,10 @@
         },
         "stats": {
           "$ref": "common.schema.json#/$defs/stats"
+        },
+        "category": {
+          "$ref": "common.schema.json#/$defs/ref",
+          "description": "Inventory category: an itemCategory id or a game UItemCategory class."
         }
       },
       "unevaluatedProperties": false,
@@ -402,6 +421,10 @@
         },
         "stats": {
           "$ref": "common.schema.json#/$defs/stats"
+        },
+        "category": {
+          "$ref": "common.schema.json#/$defs/ref",
+          "description": "Inventory category: an itemCategory id or a game UItemCategory class."
         }
       },
       "unevaluatedProperties": false,
@@ -470,6 +493,10 @@
         },
         "stats": {
           "$ref": "common.schema.json#/$defs/stats"
+        },
+        "category": {
+          "$ref": "common.schema.json#/$defs/ref",
+          "description": "Inventory category: an itemCategory id or a game UItemCategory class."
         }
       },
       "unevaluatedProperties": false,
@@ -1618,6 +1645,10 @@
         },
         "quest": {
           "$ref": "common.schema.json#/$defs/ref"
+        },
+        "category": {
+          "$ref": "common.schema.json#/$defs/ref",
+          "description": "Inventory category: an itemCategory id or a game UItemCategory class."
         }
       },
       "anyOf": [
@@ -1632,6 +1663,33 @@
           ]
         }
       ],
+      "unevaluatedProperties": false
+    },
+    "itemCategory": {
+      "description": "An inventory category (UItemCategory): its own section in the inventory with a label and icon. Items join it with 'category'.",
+      "allOf": [
+        {
+          "$ref": "#/$defs/base"
+        }
+      ],
+      "properties": {
+        "kind": {
+          "const": "itemCategory"
+        },
+        "group": {
+          "enum": [
+            "quest",
+            "playerQuest",
+            "other"
+          ],
+          "default": "playerQuest",
+          "description": "Which game category it's made from (template default): quest items, the player's own quest items, or the plain base class."
+        },
+        "order": {
+          "type": "integer",
+          "description": "Sort hint kept for the inventory override, if one turns out to be needed."
+        }
+      },
       "unevaluatedProperties": false
     }
   }

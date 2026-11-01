@@ -112,9 +112,14 @@ that override the same game list conflict; keep related content in one dimension
    and recorded under `npc.hub` in the catalog. Until then, `unlock` and `location` are written as notes. Vendor
    gates (`requires`) use the recipe's own hide-if-missing ingredient flags; whether a gate ingredient is consumed on
    purchase needs an in-game test, and the campaign tokens need something that hands them out when a campaign ends.
-8. **Dialogue wiring**: node classes and fields come from the headers, but the trigger name the game fires on
+8. **Inventory sections**: an item's section comes from `AItem.Category` (a `UItemCategory` class with a label and
+   icon), and inventory panels list items through `FItemQueryFilter.RequiredCategories`. A new category is plain
+   data. If the inventory groups by category on its own, the new section just appears; if its tabs are fixed in the
+   inventory widget, that widget blueprint has to be overridden (`ui.inventoryWidget` in the catalog), which would
+   conflict with any other mod touching the inventory screen.
+9. **Dialogue wiring**: node classes and fields come from the headers, but the trigger name the game fires on
    interact (`Interact` in the examples) and the voice audio struct still need confirming.
-9. **retoc and UE 5.2**: retoc notes missing dependency data before 5.3 "should not be an issue for modding". If
+10. **retoc and UE 5.2**: retoc notes missing dependency data before 5.3 "should not be an issue for modding". If
    IoStore output misbehaves, set `"pak": { "format": "legacy" }` and test a plain pak.
 
 ## First test in game

@@ -162,4 +162,21 @@ public class CharacterAndQuestTests
         var adventure = Op(plan, "createBlueprint", "Quest_AdventureMode_GrimmCampaign");
         Assert.Contains("/Script/Remnant.RemnantQuestSubQuest", adventure.ToJsonString());
     }
+
+    [Fact]
+    public void CompletionTokensGetTheirOwnInventoryCategory()
+    {
+        var plan = PlanExample();
+        var category = Op(plan, "createBlueprint", "ItemCategory_CompletionTokens");
+        Assert.Equal("/Script/Remnant.ItemCategory_PlayerQuest", category["parent"]!.GetValue<string>());
+        Assert.Equal("Completion Tokens", category["properties"]!["Label"]!["$text"]!["en"]!.GetValue<string>());
+        var seal = Op(plan, "createBlueprint", "Quest_Item_CampaignSealYaesha");
+        Assert.EndsWith("ItemCategory_CompletionTokens_C", seal["properties"]!["Category"]!["$class"]!.GetValue<string>());
+        Assert.Contains(plan.Notes, n => n.StartsWith("itemCategory CompletionTokens"));
+
+        using var t = new TestDimension().Content("x.json", """
+            { "definitions": [ { "kind": "ring", "id": "R", "template": "/Game/R.R_C", "category": "R" } ] }
+            """);
+        Assert.Contains("'R' is a ring; expected an itemCategory", Errors(t.Load()));
+    }
 }
