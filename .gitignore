@@ -1,0 +1,13 @@
+bin/
+obj/
+*.user
+.vs/
+out/
+# Build output and anything taken from the game
+*.pak
+*.utoc
+*.ucas
+*.usmap
+*.uasset
+*.umap
+*.sav

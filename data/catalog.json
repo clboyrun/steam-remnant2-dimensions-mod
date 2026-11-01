@@ -1,0 +1,121 @@
+{
+  "$comment": "What the generator knows about Remnant 2's own classes and assets. Paths come from the Rem2Proj headers and content (UE 5.2) and from the item database. Entries with verified=false are best guesses: check them in FModel (with the game's .usmap) and fix them here, no code change needed.",
+  "contentRoot": "/Game/Dimensions",
+  "kinds": {
+    "weapon": {
+      "folder": "Weapons",
+      "prefix": "Weapon_",
+      "templates": {
+        "longGun": "/Game/Items/Weapons/Common/Weapon_LongGun_Base.Weapon_LongGun_Base_C",
+        "handGun": "/Game/Items/Weapons/Common/Weapon_HandGun_Base.Weapon_HandGun_Base_C",
+        "melee": "/Script/Remnant.RemnantMeleeWeapon"
+      },
+      "statsStruct": {
+        "ranged": "/Script/GunfireRuntime.RangedWeaponData",
+        "melee": "/Game/_Core/Stats/Base/StatDef_MeleeWeapon.StatDef_MeleeWeapon"
+      },
+      "statFields": {
+        "damage": "Damage",
+        "rateOfFire": "RateOfFire",
+        "magazine": "AmmoPerClip",
+        "maxAmmo": "MaxAmmo",
+        "ammoPerReload": "AmmoPerReload",
+        "range": "Range",
+        "falloffStart": "PrimaryFalloff",
+        "falloffEnd": "SecondaryFalloff",
+        "spread": "Spread",
+        "pellets": "SprayCount",
+        "automatic": "IsAutomatic",
+        "burstCount": "BurstCount",
+        "burstRateOfFire": "BurstRateOfFire",
+        "scope": "HasScope",
+        "scopeFov": "ScopeFOV"
+      },
+      "verified": true
+    },
+    "weaponMod": { "folder": "Mods", "prefix": "Mod_", "verified": true },
+    "mutator": {
+      "folder": "Mutators",
+      "prefix": "MetaGem_",
+      "levelStruct": "/Game/_Core/Stats/Base/StatDef_Item.StatDef_Item",
+      "verified": false
+    },
+    "ring": {
+      "folder": "Rings",
+      "prefix": "Ring_",
+      "statsStruct": "/Game/_Core/Stats/Base/StatDef_Item.StatDef_Item",
+      "verified": false
+    },
+    "amulet": {
+      "folder": "Amulets",
+      "prefix": "Amulet_",
+      "statsStruct": "/Game/_Core/Stats/Base/StatDef_Item.StatDef_Item",
+      "verified": false
+    },
+    "armor": {
+      "folder": "Armor",
+      "prefix": "Armor_",
+      "slotNames": { "head": "Head", "body": "Body", "hands": "Gloves", "legs": "Legs" },
+      "statsStruct": "/Game/_Core/Stats/Base/StatDef_Armor.StatDef_Armor",
+      "statFields": {
+        "armor": "Armor",
+        "weight": "Weight",
+        "bleed": "BleedResistance",
+        "fire": "FireResistance",
+        "shock": "ShockResistance",
+        "blight": "BlightResistance",
+        "toxin": "ToxinResistance"
+      },
+      "verified": false
+    },
+    "trait": {
+      "folder": "Traits",
+      "prefix": "Trait_",
+      "template": "/Script/Remnant.RemnantTrait",
+      "levelStruct": "/Game/_Core/Stats/Base/StatDef_Item.StatDef_Item",
+      "verified": false
+    },
+    "archetype": {
+      "folder": "Archetypes",
+      "prefix": "Archetype_",
+      "template": "/Script/Remnant.RemnantArchetype",
+      "traitTemplate": "/Script/Remnant.RemnantArchetypeTrait",
+      "engramTemplate": "/Game/World_Base/Items/Archetypes/Alchemist/Engram_Alchemist.Engram_Alchemist_C",
+      "verified": false
+    },
+    "lootTable": {
+      "folder": "Loot",
+      "prefix": "ST_",
+      "class": "/Script/GunfireRuntime.SpawnTable",
+      "itemEntryClass": "/Script/GunfireRuntime.SpawnTableItem",
+      "linkEntryClass": "/Script/GunfireRuntime.SpawnTableLink",
+      "verified": true
+    },
+    "world": {
+      "folder": "World",
+      "prefix": "World_",
+      "zoneTemplate": "/Script/Remnant.ZoneDef",
+      "zonePrefix": "Zone_",
+      "verified": true
+    },
+    "adventure": {
+      "folder": "Quests",
+      "prefix": "Quest_AdventureMode_",
+      "template": "/Game/_Core/Blueprints/Quests/Quest_RootQuest.Quest_RootQuest_C",
+      "verified": false
+    },
+    "blueprint": { "folder": "Misc", "prefix": "", "verified": true }
+  },
+  "recipe": {
+    "class": "/Script/GunfireRuntime.CraftingRecipe",
+    "listProperty": "Recipes",
+    "verified": true
+  },
+  "primaryAssetTypes": {
+    "$comment": "From Rem2Proj Config/DefaultGame.ini: the asset manager scans /Game for these.",
+    "ZoneDef": "/Script/Remnant.ZoneDef",
+    "Quest": "/Script/Remnant.RemnantQuest",
+    "RecipeList": "/Script/GunfireRuntime.CraftingRecipeList",
+    "RemnantArchetype": "/Script/Remnant.RemnantArchetype"
+  }
+}
