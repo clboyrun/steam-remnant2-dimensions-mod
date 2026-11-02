@@ -50,6 +50,10 @@ class ClickUp:
     def folder(self, folder_id: str) -> dict:
         return self.get(f"/folder/{folder_id}")
 
+    def lists(self, folder_id: str) -> list[dict]:
+        # GET /folder/{id} doesn't always include its lists, so ask for them directly.
+        return self.get(f"/folder/{folder_id}/list", {"archived": "false"}).get("lists", [])
+
     def tasks(self, list_id: str) -> list[dict]:
         out, page = [], 0
         while True:
@@ -126,6 +130,9 @@ def main() -> None:
     tracker_ids = json.loads((HERE / "tracker-ids.json").read_text(encoding="utf-8"))
     api = ClickUp(token)
     folder = api.folder(args.folder)
+    folder["lists"] = api.lists(args.folder) or folder.get("lists") or []
+    if not folder["lists"]:
+        sys.exit(f"ClickUp folder {args.folder} ({folder.get('name')}) has no lists the token can see; status.json left unchanged.")
     tasks_by_list = {l["id"]: api.tasks(l["id"]) for l in folder.get("lists", [])}
     snap = build_snapshot(folder, tasks_by_list, tracker_ids)
 
