@@ -129,10 +129,25 @@ def main() -> None:
 
     tracker_ids = json.loads((HERE / "tracker-ids.json").read_text(encoding="utf-8"))
     api = ClickUp(token)
-    folder = api.folder(args.folder)
-    folder["lists"] = api.lists(args.folder) or folder.get("lists") or []
-    if not folder["lists"]:
-        sys.exit(f"ClickUp folder {args.folder} ({folder.get('name')}) has no lists the token can see; status.json left unchanged.")
+    folder_id = args.folder
+    lists = api.lists(folder_id)
+    if not lists:
+        # The configured folder is empty (e.g. the tasks were imported into a copy of it).
+        # Follow a known tracker task to the folder it lives in now.
+        for task_id in list(tracker_ids)[:5]:
+            try:
+                found = (api.get(f"/task/{task_id}").get("folder") or {}).get("id")
+            except SystemExit as e:
+                print(f"Tracker task {tracker_ids[task_id]} not readable: {e}")
+                continue
+            if found:
+                print(f"Folder {folder_id} has no lists; using folder {found}, which holds task {tracker_ids[task_id]}")
+                folder_id, lists = found, api.lists(found)
+                break
+    if not lists:
+        sys.exit(f"No ClickUp lists found in folder {args.folder} or via the tracker tasks; status.json left unchanged.")
+    folder = api.folder(folder_id)
+    folder["lists"] = lists
     tasks_by_list = {l["id"]: api.tasks(l["id"]) for l in folder.get("lists", [])}
     snap = build_snapshot(folder, tasks_by_list, tracker_ids)
 
