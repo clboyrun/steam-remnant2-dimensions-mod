@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-02T02:54:28+00:00",
+ "generated_at": "2026-11-02T03:55:38+00:00",
  "folder": {
   "id": "901414898053",
   "name": "hidden"
@@ -9,13 +9,19 @@
    "status": "to do",
    "color": "#b5bcc2",
    "done": false,
-   "count": 27
+   "count": 14
+  },
+  {
+   "status": "in process",
+   "color": "#ffc53d",
+   "done": false,
+   "count": 3
   },
   {
    "status": "complete",
    "color": "#008844",
    "done": true,
-   "count": 9
+   "count": 19
   }
  ],
  "lists": [
@@ -23,57 +29,6 @@
    "id": "901422848600",
    "name": "Required data inputs",
    "tasks": [
-    {
-     "id": "86bcw8799",
-     "tracker_id": "E6",
-     "name": "#6 Traits panel widget",
-     "status": "to do",
-     "status_color": "#b5bcc2",
-     "done": false,
-     "parent": null,
-     "estimate_hours": 0.5,
-     "waits_on": [
-      "86bcw878v"
-     ],
-     "url": "https://app.clickup.com/t/86bcw8799",
-     "updated": 1793574101023,
-     "order": 10001793562311.662,
-     "blocked": false
-    },
-    {
-     "id": "86bcw879c",
-     "tracker_id": "E7",
-     "name": "#7 Equipment selection widget",
-     "status": "to do",
-     "status_color": "#b5bcc2",
-     "done": false,
-     "parent": null,
-     "estimate_hours": 0.5,
-     "waits_on": [
-      "86bcw878v"
-     ],
-     "url": "https://app.clickup.com/t/86bcw879c",
-     "updated": 1793574101011,
-     "order": 10001793562311.86,
-     "blocked": false
-    },
-    {
-     "id": "86bcw879e",
-     "tracker_id": "E8",
-     "name": "#8 Inventory screen widget",
-     "status": "to do",
-     "status_color": "#b5bcc2",
-     "done": false,
-     "parent": null,
-     "estimate_hours": 0.5,
-     "waits_on": [
-      "86bcw878v"
-     ],
-     "url": "https://app.clickup.com/t/86bcw879e",
-     "updated": 1793574101002,
-     "order": 10001793562312.068,
-     "blocked": false
-    },
     {
      "id": "86bcw879h",
      "tracker_id": "E9",
@@ -87,42 +42,8 @@
       "86bcw878v"
      ],
      "url": "https://app.clickup.com/t/86bcw879h",
-     "updated": 1793574101039,
+     "updated": 1793589432820,
      "order": 10001793562312.273,
-     "blocked": false
-    },
-    {
-     "id": "86bcw879k",
-     "tracker_id": "E10",
-     "name": "#10 One mutator's level table",
-     "status": "to do",
-     "status_color": "#b5bcc2",
-     "done": false,
-     "parent": null,
-     "estimate_hours": 0.5,
-     "waits_on": [
-      "86bcw878v"
-     ],
-     "url": "https://app.clickup.com/t/86bcw879k",
-     "updated": 1793574101022,
-     "order": 10001793562312.453,
-     "blocked": false
-    },
-    {
-     "id": "86bcw879m",
-     "tracker_id": "E11",
-     "name": "#11 StatDef_Armor table and one armor blueprint",
-     "status": "to do",
-     "status_color": "#b5bcc2",
-     "done": false,
-     "parent": null,
-     "estimate_hours": 1.0,
-     "waits_on": [
-      "86bcw878v"
-     ],
-     "url": "https://app.clickup.com/t/86bcw879m",
-     "updated": 1793574101073,
-     "order": 10001793562312.652,
      "blocked": false
     },
     {
@@ -138,25 +59,8 @@
       "86bcw878v"
      ],
      "url": "https://app.clickup.com/t/86bcw879n",
-     "updated": 1793574101020,
+     "updated": 1793589432820,
      "order": 10001793562312.857,
-     "blocked": false
-    },
-    {
-     "id": "86bcw879q",
-     "tracker_id": "E13",
-     "name": "#13 Difficulty selection menu and live Stats_Scaling_Difficulty",
-     "status": "to do",
-     "status_color": "#b5bcc2",
-     "done": false,
-     "parent": null,
-     "estimate_hours": 1.0,
-     "waits_on": [
-      "86bcw878v"
-     ],
-     "url": "https://app.clickup.com/t/86bcw879q",
-     "updated": 1793574101057,
-     "order": 10001793562313.035,
      "blocked": false
     },
     {
@@ -172,42 +76,8 @@
       "86bcw878v"
      ],
      "url": "https://app.clickup.com/t/86bcw879u",
-     "updated": 1793574101101,
+     "updated": 1793591268122,
      "order": 10001793562313.438,
-     "blocked": false
-    },
-    {
-     "id": "86bcw879v",
-     "tracker_id": "E16",
-     "name": "#16 Player character inventory component",
-     "status": "to do",
-     "status_color": "#b5bcc2",
-     "done": false,
-     "parent": null,
-     "estimate_hours": 1.0,
-     "waits_on": [
-      "86bcw878v"
-     ],
-     "url": "https://app.clickup.com/t/86bcw879v",
-     "updated": 1793574101021,
-     "order": 10001793562313.613,
-     "blocked": false
-    },
-    {
-     "id": "86bcw879w",
-     "tracker_id": "E17",
-     "name": "#17 Character equipment screen widget",
-     "status": "to do",
-     "status_color": "#b5bcc2",
-     "done": false,
-     "parent": null,
-     "estimate_hours": 1.0,
-     "waits_on": [
-      "86bcw878v"
-     ],
-     "url": "https://app.clickup.com/t/86bcw879w",
-     "updated": 1793574101219,
-     "order": 10001793562313.81,
      "blocked": false
     },
     {
@@ -223,7 +93,7 @@
       "86bcw878v"
      ],
      "url": "https://app.clickup.com/t/86bcw87a0",
-     "updated": 1793574101034,
+     "updated": 1793591269050,
      "order": 10001793562314.16,
      "blocked": false
     },
@@ -240,25 +110,8 @@
       "86bcw878v"
      ],
      "url": "https://app.clickup.com/t/86bcw87a1",
-     "updated": 1793574101033,
+     "updated": 1793591269590,
      "order": 10001793562314.35,
-     "blocked": false
-    },
-    {
-     "id": "86bcw87a2",
-     "tracker_id": "E21",
-     "name": "#21 Corrupted shard item",
-     "status": "to do",
-     "status_color": "#b5bcc2",
-     "done": false,
-     "parent": null,
-     "estimate_hours": 0.5,
-     "waits_on": [
-      "86bcw878v"
-     ],
-     "url": "https://app.clickup.com/t/86bcw87a2",
-     "updated": 1793574101025,
-     "order": 10001793562314.58,
      "blocked": false
     },
     {
@@ -274,7 +127,7 @@
       "86bcw878v"
      ],
      "url": "https://app.clickup.com/t/86bcw87a3",
-     "updated": 1793574113966,
+     "updated": 1793591270821,
      "order": 10001793562314.764,
      "blocked": false
     },
@@ -291,42 +144,8 @@
       "86bcw878v"
      ],
      "url": "https://app.clickup.com/t/86bcw87a4",
-     "updated": 1793574114448,
+     "updated": 1793591272894,
      "order": 10001793562314.941,
-     "blocked": false
-    },
-    {
-     "id": "86bcw87a7",
-     "tracker_id": "E24",
-     "name": "#24 Map screen's quest log widget",
-     "status": "to do",
-     "status_color": "#b5bcc2",
-     "done": false,
-     "parent": null,
-     "estimate_hours": 1.0,
-     "waits_on": [
-      "86bcw878v"
-     ],
-     "url": "https://app.clickup.com/t/86bcw87a7",
-     "updated": 1793574126750,
-     "order": 10001793562315.139,
-     "blocked": false
-    },
-    {
-     "id": "86bcw87a9",
-     "tracker_id": "E25",
-     "name": "#25 Pickup notification widget",
-     "status": "to do",
-     "status_color": "#b5bcc2",
-     "done": false,
-     "parent": null,
-     "estimate_hours": 0.5,
-     "waits_on": [
-      "86bcw878v"
-     ],
-     "url": "https://app.clickup.com/t/86bcw87a9",
-     "updated": 1793574126770,
-     "order": 10001793562315.324,
      "blocked": false
     },
     {
@@ -342,7 +161,7 @@
       "86bcw878v"
      ],
      "url": "https://app.clickup.com/t/86bcw87ab",
-     "updated": 1793574126879,
+     "updated": 1793591272259,
      "order": 10001793562315.498,
      "blocked": false
     },
@@ -359,7 +178,7 @@
       "86bcw878v"
      ],
      "url": "https://app.clickup.com/t/86bcw87ad",
-     "updated": 1793574126798,
+     "updated": 1793591273531,
      "order": 10001793562315.688,
      "blocked": false
     },
@@ -376,7 +195,7 @@
       "86bcw878v"
      ],
      "url": "https://app.clickup.com/t/86bcw87ak",
-     "updated": 1793574127032,
+     "updated": 1793591275790,
      "order": 10001793562316.08,
      "blocked": false
     },
@@ -393,7 +212,7 @@
       "86bcw878v"
      ],
      "url": "https://app.clickup.com/t/86bcw87ap",
-     "updated": 1793574126860,
+     "updated": 1793591276356,
      "order": 10001793562316.475,
      "blocked": false
     },
@@ -410,7 +229,7 @@
       "86bcw878v"
      ],
      "url": "https://app.clickup.com/t/86bcw87at",
-     "updated": 1793574126851,
+     "updated": 1793591276900,
      "order": 10001793562316.658,
      "blocked": false
     },
@@ -427,7 +246,7 @@
       "86bcw878v"
      ],
      "url": "https://app.clickup.com/t/86bcw87av",
-     "updated": 1793574126818,
+     "updated": 1793591277584,
      "order": 10001793562316.86,
      "blocked": false
     },
@@ -444,38 +263,8 @@
       "86bcw878v"
      ],
      "url": "https://app.clickup.com/t/86bcw87ax",
-     "updated": 1793574127116,
+     "updated": 1793591278061,
      "order": 10001793562317.086,
-     "blocked": false
-    },
-    {
-     "id": "86bcwayh3",
-     "tracker_id": null,
-     "name": "#35 PrismStone limits read live in UE4SS",
-     "status": "to do",
-     "status_color": "#b5bcc2",
-     "done": false,
-     "parent": null,
-     "estimate_hours": 0.5,
-     "waits_on": [],
-     "url": "https://app.clickup.com/t/86bcwayh3",
-     "updated": 1793586307902,
-     "order": 10001793586307.918,
-     "blocked": false
-    },
-    {
-     "id": "86bcwayhj",
-     "tracker_id": null,
-     "name": "#36 Re-export Quest_Story_OneTrueKing",
-     "status": "to do",
-     "status_color": "#b5bcc2",
-     "done": false,
-     "parent": null,
-     "estimate_hours": 0.5,
-     "waits_on": [],
-     "url": "https://app.clickup.com/t/86bcwayhj",
-     "updated": 1793586312344,
-     "order": 10001793586312.365,
      "blocked": false
     },
     {
@@ -491,7 +280,7 @@
       "86bcw878v"
      ],
      "url": "https://app.clickup.com/t/86bcw87an",
-     "updated": 1793586552773,
+     "updated": 1793589439909,
      "order": 10001793586552.566,
      "blocked": false
     },
@@ -508,7 +297,7 @@
       "86bcw878v"
      ],
      "url": "https://app.clickup.com/t/86bcw879z",
-     "updated": 1793586552773,
+     "updated": 1793589443071,
      "order": 10001793586552.611,
      "blocked": false
     },
@@ -523,7 +312,7 @@
      "estimate_hours": 1.0,
      "waits_on": [],
      "url": "https://app.clickup.com/t/86bcw878v",
-     "updated": 1793586552510,
+     "updated": 1793589445416,
      "order": 10001793586552.916,
      "blocked": false
     },
@@ -540,7 +329,7 @@
       "86bcw878v"
      ],
      "url": "https://app.clickup.com/t/86bcw87aj",
-     "updated": 1793586714900,
+     "updated": 1793589428359,
      "order": 10001793586714.965,
      "blocked": false
     },
@@ -557,7 +346,7 @@
       "86bcw878v"
      ],
      "url": "https://app.clickup.com/t/86bcw879t",
-     "updated": 1793586716473,
+     "updated": 1793589428359,
      "order": 10001793586716.553,
      "blocked": false
     },
@@ -574,7 +363,7 @@
       "86bcw878v"
      ],
      "url": "https://app.clickup.com/t/86bcw8796",
-     "updated": 1793586717882,
+     "updated": 1793589428359,
      "order": 10001793586717.963,
      "blocked": false
     },
@@ -591,7 +380,7 @@
       "86bcw878v"
      ],
      "url": "https://app.clickup.com/t/86bcw878w",
-     "updated": 1793586719377,
+     "updated": 1793589428359,
      "order": 10001793586719.432,
      "blocked": false
     },
@@ -608,7 +397,7 @@
       "86bcw878v"
      ],
      "url": "https://app.clickup.com/t/86bcw8791",
-     "updated": 1793586727106,
+     "updated": 1793589466188,
      "order": 10001793586727.16,
      "blocked": false
     },
@@ -625,8 +414,225 @@
       "86bcw878v"
      ],
      "url": "https://app.clickup.com/t/86bcw8792",
-     "updated": 1793586731843,
+     "updated": 1793589472369,
      "order": 10001793586731.898,
+     "blocked": false
+    },
+    {
+     "id": "86bcw8799",
+     "tracker_id": "E6",
+     "name": "#6 Traits panel widget",
+     "status": "complete",
+     "status_color": "#008844",
+     "done": true,
+     "parent": null,
+     "estimate_hours": 0.5,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "url": "https://app.clickup.com/t/86bcw8799",
+     "updated": 1793589479890,
+     "order": 10001793589133.836,
+     "blocked": false
+    },
+    {
+     "id": "86bcw879c",
+     "tracker_id": "E7",
+     "name": "#7 Equipment selection widget",
+     "status": "complete",
+     "status_color": "#008844",
+     "done": true,
+     "parent": null,
+     "estimate_hours": 0.5,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "url": "https://app.clickup.com/t/86bcw879c",
+     "updated": 1793589486313,
+     "order": 10001793589192.34,
+     "blocked": false
+    },
+    {
+     "id": "86bcw879e",
+     "tracker_id": "E8",
+     "name": "#8 Inventory screen widget",
+     "status": "complete",
+     "status_color": "#008844",
+     "done": true,
+     "parent": null,
+     "estimate_hours": 0.5,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "url": "https://app.clickup.com/t/86bcw879e",
+     "updated": 1793589490960,
+     "order": 10001793589301.336,
+     "blocked": false
+    },
+    {
+     "id": "86bcw879v",
+     "tracker_id": "E16",
+     "name": "#16 Player character inventory component",
+     "status": "complete",
+     "status_color": "#008844",
+     "done": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "url": "https://app.clickup.com/t/86bcw879v",
+     "updated": 1793589599699,
+     "order": 10001793589383.623,
+     "blocked": false
+    },
+    {
+     "id": "86bcw879w",
+     "tracker_id": "E17",
+     "name": "#17 Character equipment screen widget",
+     "status": "complete",
+     "status_color": "#008844",
+     "done": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "url": "https://app.clickup.com/t/86bcw879w",
+     "updated": 1793589498566,
+     "order": 10001793589408.365,
+     "blocked": false
+    },
+    {
+     "id": "86bcw87a9",
+     "tracker_id": "E25",
+     "name": "#25 Pickup notification widget",
+     "status": "complete",
+     "status_color": "#008844",
+     "done": true,
+     "parent": null,
+     "estimate_hours": 0.5,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "url": "https://app.clickup.com/t/86bcw87a9",
+     "updated": 1793589778887,
+     "order": 10001793589778.951,
+     "blocked": false
+    },
+    {
+     "id": "86bcw879k",
+     "tracker_id": "E10",
+     "name": "#10 One mutator's level table",
+     "status": "complete",
+     "status_color": "#008844",
+     "done": true,
+     "parent": null,
+     "estimate_hours": 0.5,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "url": "https://app.clickup.com/t/86bcw879k",
+     "updated": 1793590234744,
+     "order": 10001793590234.807,
+     "blocked": false
+    },
+    {
+     "id": "86bcw879m",
+     "tracker_id": "E11",
+     "name": "#11 StatDef_Armor table and one armor blueprint",
+     "status": "complete",
+     "status_color": "#008844",
+     "done": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "url": "https://app.clickup.com/t/86bcw879m",
+     "updated": 1793590295925,
+     "order": 10001793590296.004,
+     "blocked": false
+    },
+    {
+     "id": "86bcwayh3",
+     "tracker_id": null,
+     "name": "#35 PrismStone limits read live in UE4SS",
+     "status": "in process",
+     "status_color": "#ffc53d",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 0.5,
+     "waits_on": [],
+     "url": "https://app.clickup.com/t/86bcwayh3",
+     "updated": 1793590359909,
+     "order": 10001793590359.967,
+     "blocked": false
+    },
+    {
+     "id": "86bcw879q",
+     "tracker_id": "E13",
+     "name": "#13 Difficulty selection menu and live Stats_Scaling_Difficulty",
+     "status": "in process",
+     "status_color": "#ffc53d",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "url": "https://app.clickup.com/t/86bcw879q",
+     "updated": 1793590567606,
+     "order": 10001793590562.988,
+     "blocked": false
+    },
+    {
+     "id": "86bcw87a2",
+     "tracker_id": "E21",
+     "name": "#21 Corrupted shard item",
+     "status": "in process",
+     "status_color": "#ffc53d",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 0.5,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "url": "https://app.clickup.com/t/86bcw87a2",
+     "updated": 1793590734518,
+     "order": 10001793590730.17,
+     "blocked": false
+    },
+    {
+     "id": "86bcwayhj",
+     "tracker_id": null,
+     "name": "#36 Re-export Quest_Story_OneTrueKing",
+     "status": "complete",
+     "status_color": "#008844",
+     "done": true,
+     "parent": null,
+     "estimate_hours": 0.5,
+     "waits_on": [],
+     "url": "https://app.clickup.com/t/86bcwayhj",
+     "updated": 1793591066507,
+     "order": 10001793591066.58,
+     "blocked": false
+    },
+    {
+     "id": "86bcw87a7",
+     "tracker_id": "E24",
+     "name": "#24 Map screen's quest log widget",
+     "status": "complete",
+     "status_color": "#008844",
+     "done": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "url": "https://app.clickup.com/t/86bcw87a7",
+     "updated": 1793591137543,
+     "order": 10001793591137.605,
      "blocked": false
     }
    ]
