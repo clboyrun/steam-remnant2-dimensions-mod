@@ -35,7 +35,7 @@ and `dimensions build` turns them into game assets in a UE 5.2 project, cooks th
 | `unreal/Python` | The UE 5.2 editor script that applies a build plan to the project. |
 | `unreal/Plugins/DimensionsEditor` | A tiny editor plugin (one asset factory) the script uses for spawn tables and other plain objects. |
 | `examples/Ashfall` | A complete example dimension with placeholder art. |
-| `status/` | [Project status page](https://clboyrun.github.io/steam-remnant2-dimensions-mod/) built from the ClickUp tasks ([setup](status/README.md)). |
+| `gh-pages` branch | [Project status page](https://clboyrun.github.io/steam-remnant2-dimensions-mod/), refreshed hourly from ClickUp ([how it works](https://github.com/clboyrun/steam-remnant2-dimensions-mod/blob/gh-pages/README.md)). |
 | `docs/` | [Architecture and what's proven vs. not](docs/architecture.md), [authoring reference](docs/authoring.md). |
 
 ## Quick start

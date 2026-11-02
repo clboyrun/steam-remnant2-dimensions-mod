@@ -1,14 +1,16 @@
 name: Status page
 
-# Publishes status/site plus a fresh ClickUp snapshot (status.json) to the gh-pages branch.
-# Needs the CLICKUP_API_TOKEN repository secret; see status/README.md.
+# Refreshes status.json on the gh-pages branch from ClickUp. Everything else for the page
+# (index.html, the sync script, its tests) lives on gh-pages; see its README.md.
+# This file has to be on the default branch because GitHub only runs scheduled workflows from there.
+# Needs the CLICKUP_API_TOKEN repository secret.
 on:
   schedule:
     - cron: "17 * * * *" # hourly
   workflow_dispatch:
   push:
-    branches: [main, claude/project-thread-y6nbhi]
-    paths: ["status/**", ".github/workflows/status-page.yml"]
+    branches: [gh-pages]
+    paths: ["index.html", "tools/**"]
 
 permissions:
   contents: write
@@ -18,33 +20,32 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  publish:
+  refresh:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: gh-pages
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
       - name: Test the sync script
-        working-directory: status
+        working-directory: tools
         run: python -m unittest -q
       - name: Fetch ClickUp status
         env:
           CLICKUP_API_TOKEN: ${{ secrets.CLICKUP_API_TOKEN }}
           CLICKUP_FOLDER_ID: ${{ vars.CLICKUP_FOLDER_ID }}
+        run: python tools/sync_clickup.py --out status.json
+      - name: Commit the snapshot to gh-pages
         run: |
-          cp -r status/site _site
-          touch _site/.nojekyll
-          python status/sync_clickup.py --out _site/status.json
-      - name: Publish to gh-pages
-        working-directory: _site
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          git init -q -b gh-pages
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A
-          git commit -q -m "Status snapshot $(date -u +%Y-%m-%dT%H:%MZ) from ${GITHUB_SHA::7}"
-          # Single-commit branch: each run replaces it, so hourly snapshots don't pile up in history.
-          git push -q -f "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" gh-pages
+          git add status.json
+          # generated_at changes every run, so only commit when the tasks themselves changed.
+          if git diff --cached --quiet -I '"generated_at"' -- status.json && git cat-file -e HEAD:status.json 2>/dev/null; then
+            echo "No task changes."
+            exit 0
+          fi
+          git commit -q -m "Status snapshot $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push -q origin HEAD:gh-pages

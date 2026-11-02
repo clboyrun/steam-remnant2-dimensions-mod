@@ -13,4 +13,3 @@ out/
 *.sav
 __pycache__/
 *.pyc
-status/site/status.json
