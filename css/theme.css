@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Barlow+Condensed:wght@500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap");
+
+/* Theme tokens for every page on this site.
+   To re-theme a deployment, change values here (or load a different file with the same names).
+   Dark is the default; light follows the system unless a page sets data-theme="dark" on <html>
+   (the About poster does), or a visitor/deployment sets data-theme="light". */
+:root {
+  /* surfaces and text */
+  --bg: #0e0c0b; --bg2: #171412; --panel: #1c1815; --line: #3a322b; --track: #2c2622;
+  --text: #efe7dc; --text-soft: #d9cfc2; --muted: #a89c8d;
+  /* brand */
+  --ember: #e0754f; --ember-hover: #f08a63; --on-ember: #1a0f0a; --gold: #d8b25a; --steel: #9fb0c4;
+  --accent: var(--ember);
+  --accent-soft: #4a2a1d;
+  --done: #5dbb83;
+  --edge: #6b7771;
+  /* worlds */
+  --grimm: #8db36f; --deep: #3fb8aa; --arcade: #ec5bd6; --hell: #e5452f;
+  /* data-viz hue lightness used by the dependency wheel */
+  --sat: 45%; --lit: 62%;
+  /* type */
+  --font-display: "Cinzel", Georgia, serif;
+  --font-label: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --font-body: "Source Serif 4", Georgia, serif;
+  --font-ui: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+  --radius: 10px;
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --bg: #f6f3ee; --bg2: #ece7de; --panel: #ffffff; --line: #ddd5ca; --track: #e9e3d9;
+    --text: #1f1b17; --text-soft: #3b342c; --muted: #6b6358;
+    --ember: #b5482a; --ember-hover: #9c3a1f; --on-ember: #ffffff; --gold: #8f6c1e; --steel: #5b6e86;
+    --accent-soft: #f2d9cc; --done: #2f7d4f; --edge: #8a948e;
+    --grimm: #4f7a35; --deep: #1c8176; --arcade: #b5249f; --hell: #c0321e;
+    --sat: 42%; --lit: 46%;
+    color-scheme: light;
+  }
+}
+:root[data-theme="light"] {
+  --bg: #f6f3ee; --bg2: #ece7de; --panel: #ffffff; --line: #ddd5ca; --track: #e9e3d9;
+  --text: #1f1b17; --text-soft: #3b342c; --muted: #6b6358;
+  --ember: #b5482a; --ember-hover: #9c3a1f; --on-ember: #ffffff; --gold: #8f6c1e; --steel: #5b6e86;
+  --accent-soft: #f2d9cc; --done: #2f7d4f; --edge: #8a948e;
+  --grimm: #4f7a35; --deep: #1c8176; --arcade: #b5249f; --hell: #c0321e;
+  --sat: 42%; --lit: 46%;
+  color-scheme: light;
+}

@@ -1,0 +1,45 @@
+/* Shared building blocks: reset, page frame, top bar, links, tag chips, buttons, panels, footer strip.
+   Page files (about.css, status.css, wheel.css) only add what is specific to that page. */
+* { box-sizing: border-box; }
+html { background: var(--bg); overflow-x: clip; }
+body { margin: 0; overflow-x: clip; background: var(--bg); color: var(--text); font: 17px/1.55 var(--font-body); -webkit-font-smoothing: antialiased; }
+a { color: var(--ember); }
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+:focus-visible { outline: 2px solid var(--ember); outline-offset: 2px; }
+
+/* top bar / site navigation */
+.top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px 18px; padding: 16px 0;
+  font: 600 14px/1 var(--font-label); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.top nav, .top .links { display: flex; flex-wrap: wrap; gap: 8px 18px; }
+.top a { color: var(--muted); text-decoration: none; }
+.top a:hover { color: var(--text); }
+
+/* labels */
+.kicker { font: 700 15px/1 var(--font-label); letter-spacing: .3em; text-transform: uppercase; color: var(--ember); margin: 0 0 18px; }
+.fine { font: 600 13px/1.3 var(--font-label); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin: 14px 0 0; }
+
+/* panels */
+.panel { background: var(--panel); border: 1px solid var(--line); }
+.mini { background: var(--bg2); border: 1px solid var(--line); padding: 18px 20px; }
+
+/* tag chips: regions, bosses and anything else that wants "label: value" tags */
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; list-style: none; }
+.chips li { font: 600 14px/1 var(--font-label); letter-spacing: .06em; padding: 6px 9px; border: 1px solid var(--line); background: var(--bg2); color: var(--text); }
+.chips li i { font-style: normal; color: var(--c, var(--muted)); }
+.chips li.t-world { border-color: var(--c, var(--line)); color: var(--c, var(--text)); }
+
+/* buttons */
+.cta { display: inline-block; margin-top: 18px; background: var(--ember); color: var(--on-ember); text-decoration: none; border: 0; cursor: pointer;
+  font: 700 15px/1 var(--font-label); letter-spacing: .18em; text-transform: uppercase; padding: 13px 18px; }
+.cta:hover { background: var(--ember-hover); }
+
+/* closing strip used at the foot of poster pages */
+.foot { margin: 72px 0 0; border-top: 1px solid var(--line); background: var(--bg2); }
+.foot .wrap { display: grid; grid-template-columns: 1.3fr 1fr; gap: 32px; padding-top: 36px; padding-bottom: 44px; }
+.foot p { color: var(--muted); margin: 10px 0 0; }
+.foot ul { margin: 0; padding: 0; list-style: none; font: 600 16px/1.4 var(--font-label); letter-spacing: .06em; }
+.foot li { padding: 9px 0; border-bottom: 1px solid var(--line); }
+.foot li:last-child { border-bottom: 0; }
+@media (max-width: 900px) { .foot .wrap { grid-template-columns: 1fr; } }
+@media (max-width: 620px) { body { font-size: 16px; } }
