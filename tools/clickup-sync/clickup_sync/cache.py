@@ -14,13 +14,14 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 EDITABLE = ["name", "status", "assignees", "priority", "start_date", "due_date",
-            "time_estimate_hours", "description"]
-READONLY = ["id", "url", "list", "list_id", "space", "parent", "depends_on", "blocks", "tags",
-            "remote_updated"]
+            "time_estimate_hours", "parent", "depends_on", "blocks", "links", "description"]
+LIST_KEYS = ("depends_on", "blocks", "links")
+READONLY = ["id", "url", "list", "list_id", "space", "tags", "remote_updated"]
 PRIORITIES = {"urgent": 1, "high": 2, "normal": 3, "low": 4}
 PRIORITY_NAMES = {v: k for k, v in PRIORITIES.items()}
 SECTION_RE = re.compile(r"^## (Description|Post comment|Agent notes)[ \t]*$", re.M)
 FILE_RE = re.compile(r"^([0-9a-z]+) - .*\.md$")
+NEW_RE = re.compile(r"^NEW\b.*\.md$", re.I)
 STATE_DIR = ".state"
 
 
@@ -51,10 +52,15 @@ def normalize(task, list_name, space_name=""):
     est = task.get("time_estimate")
     deps = task.get("dependencies") or []
     me = task["id"]
+    links = set()
+    for l in task.get("linked_tasks") or []:
+        other = l.get("link_id") if l.get("task_id") == me else l.get("task_id")
+        if other and other != me:
+            links.add(other)
     return {
         "id": me, "url": task.get("url", f"https://app.clickup.com/t/{me}"),
         "list": list_name, "list_id": (task.get("list") or {}).get("id", ""), "space": space_name,
-        "parent": task.get("parent") or None,
+        "parent": task.get("parent") or None, "links": sorted(links),
         "depends_on": sorted(d["depends_on"] for d in deps if d.get("task_id") == me and d.get("depends_on")),
         "blocks": sorted(d["task_id"] for d in deps if d.get("depends_on") == me),
         "tags": [t["name"] for t in task.get("tags", [])],
@@ -118,6 +124,10 @@ def clean(fields):
     h = f["time_estimate_hours"]
     f["time_estimate_hours"] = round(float(h), 2) if h not in (None, "") else None
     f["description"] = (f["description"] or "").strip()
+    f["parent"] = (str(f["parent"]).strip() or None) if f["parent"] else None
+    for k in LIST_KEYS:
+        v = f[k]
+        f[k] = sorted({str(x).strip() for x in ([v] if isinstance(v, str) else v or []) if str(x).strip()})
     return f
 
 
@@ -132,9 +142,37 @@ class Cache:
         if self.root.is_dir():
             for p in self.root.glob("*/*.md"):
                 m = FILE_RE.match(p.name)
-                if m and p.parent.name != STATE_DIR:
+                if m and p.parent.name != STATE_DIR and m.group(1).lower() != "new":
                     out[m.group(1)] = p
         return out
+
+    def new_files(self):
+        """Files named `NEW - <slug>.md` in a list folder: tickets to create."""
+        out = []
+        if self.root.is_dir():
+            for p in sorted(self.root.glob("*/*.md")):
+                if NEW_RE.match(p.name) and not (FILE_RE.match(p.name) and p.name.split(" ")[0] != "NEW"):
+                    out.append(p)
+        return out
+
+    def save_lists(self, lists):
+        self.state.mkdir(parents=True, exist_ok=True)
+        (self.state / "lists.json").write_text(json.dumps(lists), encoding="utf-8")
+
+    def load_lists(self):
+        try:
+            return json.loads((self.state / "lists.json").read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            return {}
+
+    def write_new(self, list_name, name):
+        p = self.root / safe_dir(list_name) / f"NEW - {slug(name)}.md"
+        p.parent.mkdir(parents=True, exist_ok=True)
+        f = {"name": name, "status": "", "assignees": [], "priority": None, "start_date": None, "due_date": None,
+             "time_estimate_hours": None, "parent": None, "depends_on": [], "blocks": [], "links": [],
+             "description": ""}
+        p.write_text(render(f), encoding="utf-8", newline="\n")
+        return p
 
     def path_for(self, fields):
         return self.root / safe_dir(fields["list"]) / f"{fields['id']} - {slug(fields['name'])}.md"
@@ -172,7 +210,8 @@ class Cache:
         if base is None:
             return {}, comment
         mine, theirs = clean(fields), clean(base)
-        return {k: mine[k] for k in EDITABLE if mine[k] != theirs[k]}, comment
+        # keys missing from an older snapshot are not treated as edits
+        return {k: mine[k] for k in EDITABLE if k in base and mine[k] != theirs[k]}, comment
 
     def write_index(self, list_name, rows):
         d = self.root / safe_dir(list_name)

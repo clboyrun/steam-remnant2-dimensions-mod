@@ -50,7 +50,7 @@ class H(BaseHTTPRequestHandler):
             return self._send(200, {"lists": [{"id": "L1", "name": "Required data inputs"}]})
         if p == "/space/S/folder":
             return self._send(200, {"folders": []})
-        if p == "/list/L1/task":
+        if p == "/list/L1/task" and method == "GET":
             return self._send(200, {"tasks": list(STATE["tasks"].values()), "last_page": True})
         if p == "/task/t1" and method == "PUT":
             t = STATE["tasks"]["t1"]
@@ -62,6 +62,18 @@ class H(BaseHTTPRequestHandler):
             return self._send(200, t)
         if p == "/task/t1" and method == "GET":
             return self._send(200, STATE["tasks"]["t1"])
+        if p == "/list/L1/task" and method == "POST":
+            n = len([k for k in STATE["tasks"] if k.startswith("n")]) + 1
+            t = {"id": f"n{n}", "name": body["name"], "status": {"status": body.get("status", "to do")},
+                 "markdown_description": body.get("markdown_description", ""), "date_updated": "5",
+                 "parent": body.get("parent"), "list": {"id": "L1", "name": "Required data inputs"},
+                 "assignees": [], "tags": [], "time_estimate": body.get("time_estimate")}
+            STATE["tasks"][t["id"]] = t
+            return self._send(200, t)
+        if p.endswith("/dependency") or "/link/" in p:
+            return self._send(200, {})
+        if p.startswith("/task/n") and method == "GET":
+            return self._send(200, STATE["tasks"][p.split("/")[2]])
         if p == "/task/t1/comment":
             return self._send(200, {"id": 1})
         self._send(404, {})
@@ -137,6 +149,30 @@ class Tests(unittest.TestCase):
         STATE["tasks"]["t1"]["date_updated"] = "9"
         self.eng.pull()
         self.assertIn('status: "problem"', f.read_text())
+
+    def test_create_with_hierarchy_and_links(self):
+        self.eng.pull()
+        d = Path(self.tmp) / "Required data inputs"
+        c = self.eng.cache
+        c.write_new("Required data inputs", "Child card").write_text(
+            c.write_new("Required data inputs", "Child card").read_text()
+            .replace('parent: null', 'parent: "Parent card"').replace('depends_on: []', 'depends_on: ["t1"]')
+            .replace('links: []', 'links: ["Parent card"]').replace('time_estimate_hours: null', 'time_estimate_hours: 3'))
+        c.write_new("Required data inputs", "Parent card")
+        STATE["calls"].clear()
+        self.eng.push()
+        posts = [(m, p, b) for m, p, b in STATE["calls"] if m == "POST"]
+        creates = [b for m, p, b in posts if p == "/list/L1/task"]
+        self.assertEqual([b["name"] for b in creates], ["Parent card", "Child card"])  # parent first
+        self.assertEqual(creates[1]["parent"], "n1")
+        self.assertEqual(creates[1]["time_estimate"], 10800000)
+        self.assertIn(("POST", "/task/n2/dependency", {"depends_on": "t1"}), posts)
+        self.assertIn(("POST", "/task/n2/link/n1", {}), posts)
+        self.assertEqual(len(list(d.glob("NEW - *.md"))), 0)
+        self.assertEqual(len(list(d.glob("n1 - *.md"))), 1)
+        STATE["calls"].clear()
+        self.eng.push()
+        self.assertFalse([c for c in STATE["calls"] if c[0] in ("POST", "PUT")])
 
     def test_quiet_gate(self):
         now = [1000.0]

@@ -1,4 +1,4 @@
-"""python -m clickup_sync [--headless | --pull | --push | --install-startup | --remove-startup]"""
+"""py -m clickup_sync [--headless | --pull | --push | --install-startup | --remove-startup]"""
 import argparse
 import os
 import sys
@@ -15,8 +15,8 @@ def startup_file():
 
 def install_startup():
     root = Path(__file__).resolve().parent.parent
-    py = Path(sys.executable)
-    pyw = py.with_name("pythonw.exe") if py.with_name("pythonw.exe").exists() else py
+    # Windows py launcher: pyw.exe = windowless py.exe
+    pyw = "pyw"
     f = startup_file()
     f.parent.mkdir(parents=True, exist_ok=True)
     f.write_text(f'Set s = CreateObject("WScript.Shell")\ns.CurrentDirectory = "{root}"\n'
@@ -30,6 +30,7 @@ def main():
     ap.add_argument("--minimized", action="store_true", help="start hidden in the tray")
     ap.add_argument("--pull", action="store_true", help="one pull, then exit")
     ap.add_argument("--push", action="store_true", help="one push, then exit")
+    ap.add_argument("--new", nargs=2, metavar=("LIST", "NAME"), help="create a NEW ticket template file in the cache")
     ap.add_argument("--install-startup", action="store_true")
     ap.add_argument("--remove-startup", action="store_true")
     a = ap.parse_args()
@@ -38,6 +39,10 @@ def main():
     if a.remove_startup:
         return startup_file().unlink(missing_ok=True)
     cfg = cfgmod.load()
+    if a.new:
+        from .cache import Cache
+        print(Cache(cfg.cache_path()).write_new(*a.new))
+        return
     if a.pull or a.push:
         r = Runner(cfg)
         eng = r._engine()

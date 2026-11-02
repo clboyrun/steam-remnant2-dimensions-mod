@@ -17,6 +17,13 @@ modified or deleted) for the configured time (default 3 minutes).
   Read-only keys (id, url, list, parent, depends_on, blocks, tags, remote_updated) are ignored.
 * To close a ticket set `status: "complete"` (and assign the person who should own it).
   start_date is NOT pushed unless "Push start dates" is switched on in the tool.
+* New ticket: create `<List name>/NEW - <anything>.md` (or `py -m clickup_sync --new "<List>" "<Name>"`).
+  Same keys, `status` may be empty. It becomes a ClickUp task on the next push and the file is
+  renamed to `<id> - <slug>.md`. Parents are created first.
+* Hierarchy and links (existing and new tickets): `parent` (id or exact ticket name; changing it
+  moves the subtask), `depends_on` (this waits on these), `blocks` (these wait on this), `links`
+  (plain "related" links). Each value is a list of ticket ids or exact ticket names, including
+  names of other NEW files in the same push.
 * `## Post comment`: text here is posted as a comment on the next push, then cleared.
 * `## Agent notes`: local only, never pushed, kept across pulls. Read it before working on a
   ticket and add research / decisions / evidence there, so nothing has to be re-fetched.
@@ -114,7 +121,9 @@ class Engine:
         team = self._team()
         existing, stats = self.cache.files(), {"new": 0, "updated": 0, "kept_local": 0, "same": 0}
         notes_backup = self._load_notes_backup()
+        lists = {}
         for space_name, lst in self._lists(team):
+            lists[C.safe_dir(lst["name"])] = {"id": lst["id"], "name": lst["name"]}
             rows = []
             for task in self._tasks(lst["id"]):
                 f = C.normalize(task, lst["name"], space_name)
@@ -145,6 +154,7 @@ class Engine:
                 self.cache.write(f, notes=notes, old_path=path)
                 stats["updated"] += 1
             self.cache.write_index(lst["name"], rows)
+        self.cache.save_lists({**self.cache.load_lists(), **lists})
         self.log(f"pull done: {stats} ({self.client.calls} API calls so far)")
         return stats
 
@@ -157,7 +167,7 @@ class Engine:
 
     # ---------- push ----------
     def pending(self):
-        out = []
+        out = []  # existing tickets with edits
         for tid, path in self.cache.files().items():
             try:
                 changes, comment = self.cache.dirty(tid, path)
@@ -194,6 +204,12 @@ class Engine:
                     body["start_date_time"] = False
                 else:
                     warn.append("start_date change not pushed (disabled)")
+            elif k == "parent":
+                pid = self._resolve(v) if v else None
+                if v and not pid:
+                    warn.append(f"unknown parent {v!r}")
+                else:
+                    body["parent"] = pid
             elif k == "time_estimate_hours":
                 body["time_estimate"] = int(v * 3600000) if v is not None else None
         return body, warn
@@ -213,16 +229,175 @@ class Engine:
                 rem.append(self.members[name])
         return add, rem, warn
 
+    # ---------- references, links, creation ----------
+    def _resolve(self, ref):
+        """Ticket id, or the exact name (case-insensitive) of a known/just-created ticket -> id."""
+        ref = str(ref).strip()
+        if ref in self._ids:
+            return ref
+        hit = self._names.get(ref.lower())
+        if hit:
+            return hit
+        if " " not in ref and ref.lower() != "new" and ref.isalnum():
+            return ref  # looks like an id we haven't cached (other space); let the API decide
+        self.log(f"cannot resolve reference {ref!r}")
+        return None
+
+    def _index_refs(self):
+        self._ids = set(self.cache.files())
+        self._names = {}
+        dup = set()
+        for tid in self._ids:
+            b = self.cache.load_base(tid)
+            if b and b.get("name"):
+                k = b["name"].strip().lower()
+                if k in self._names:
+                    dup.add(k)
+                self._names[k] = tid
+        for k in dup:
+            del self._names[k]
+
+    def _apply_links(self, tid, old, new):
+        """Diff depends_on / blocks / links lists; one API call per change."""
+        for key in C.LIST_KEYS:
+            want = {self._resolve(x) for x in new.get(key, [])} - {None}
+            have = set(old.get(key, []))
+            for other in sorted(want - have):
+                try:
+                    if key == "links":
+                        self.client.post(f"/task/{tid}/link/{other}", {})
+                    else:
+                        self.client.post(f"/task/{tid}/dependency",
+                                         {"depends_on": other} if key == "depends_on" else {"dependency_of": other})
+                except Exception as e:
+                    self.log(f"{tid}: could not add {key} {other}: {e}")
+            for other in sorted(have - want):
+                try:
+                    if key == "links":
+                        self.client.delete(f"/task/{tid}/link/{other}")
+                    else:
+                        self.client.delete(f"/task/{tid}/dependency",
+                                           {"depends_on": other} if key == "depends_on" else {"dependency_of": other})
+                except Exception as e:
+                    self.log(f"{tid}: could not remove {key} {other}: {e}")
+
+    def create_new(self, dry_run=False):
+        """Create ClickUp tasks from `NEW - *.md` files. Parents first; links after all exist."""
+        files = self.cache.new_files()
+        if not files:
+            return 0
+        if not self.members:
+            self._team()
+        lists = self.cache.load_lists()
+        queue = []
+        for p in files:
+            try:
+                fields, comment, notes = self.cache.read(p)
+            except ValueError as e:
+                self.log(f"skip {p.name}: {e}")
+                continue
+            lst = lists.get(p.parent.name) or next(
+                (l for l in lists.values() if l["name"] == p.parent.name), None)
+            if not lst:
+                self.log(f"{p}: folder is not a known list (run a pull first); skipped")
+                continue
+            queue.append((p, C.clean(fields), comment, notes, lst))
+        made, pending_links = 0, []
+        while queue:
+            qnames = {it[1]["name"].strip().lower() for it in queue}
+            progress, rest = False, []
+            for item in queue:
+                p, f, comment, notes, lst = item
+                parent, pref = None, f["parent"]
+                if pref:
+                    k = pref.strip().lower()
+                    if k in qnames and k not in self._names:
+                        rest.append(item)  # parent is itself a NEW file not created yet
+                        continue
+                    parent = self._resolve(pref)
+                    if not parent:
+                        rest.append(item)
+                        continue
+                if not f["name"]:
+                    self.log(f"{p.name}: no name; skipped")
+                    continue
+                body = {"name": f["name"], "markdown_description": f["description"]}
+                if f["status"]:
+                    body["status"] = f["status"]
+                if parent:
+                    body["parent"] = parent
+                if f["priority"] in C.PRIORITIES:
+                    body["priority"] = C.PRIORITIES[f["priority"]]
+                if f["due_date"]:
+                    body["due_date"], body["due_date_time"] = C.date_to_ms(f["due_date"]), False
+                if f["start_date"] and self.cfg.push_start_date:
+                    body["start_date"], body["start_date_time"] = C.date_to_ms(f["start_date"]), False
+                if f["time_estimate_hours"] is not None:
+                    body["time_estimate"] = int(f["time_estimate_hours"] * 3600000)
+                ids = [self.members[a] for a in f["assignees"] if a in self.members]
+                for a in f["assignees"]:
+                    if a not in self.members:
+                        self.log(f"{p.name}: unknown assignee {a!r}")
+                if ids:
+                    body["assignees"] = ids
+                self.log(f"create '{f['name']}' in {lst['name']}" + (f" under {parent}" if parent else ""))
+                if dry_run:
+                    progress = True
+                    continue
+                try:
+                    task = self.client.post(f"/list/{lst['id']}/task", body)
+                except Exception as e:
+                    self.log(f"{p.name}: create failed, will retry: {e}")
+                    continue
+                tid = task["id"]
+                self._ids.add(tid)
+                self._names[f["name"].strip().lower()] = tid
+                nf = C.normalize(task, lst["name"])
+                nf["list"] = lst["name"]
+                self.cache.write(nf, notes=notes if not notes.startswith("(local only") else "", old_path=p)
+                if comment:
+                    try:
+                        self.client.post(f"/task/{tid}/comment", {"comment_text": comment, "notify_all": False})
+                    except Exception as e:
+                        self.log(f"{tid}: comment failed: {e}")
+                pending_links.append((tid, {k: f[k] for k in C.LIST_KEYS}))
+                made += 1
+                progress = True
+            queue = rest
+            if not progress:
+                break
+        for p, f, *_ in queue:
+            self.log(f"{p.name}: parent {f['parent']!r} not found/created; left for the next push")
+        for tid, wanted in pending_links:
+            self._apply_links(tid, {}, wanted)
+            try:
+                fresh = self.client.get(f"/task/{tid}", {"include_markdown_description": "true"})
+                path = self.cache.files().get(tid)
+                b = self.cache.load_base(tid) or {}
+                if path:
+                    _, _, n = self.cache.read(path)
+                    nf = C.normalize(fresh, b.get("list", ""), b.get("space", ""))
+                    nf["list"] = (fresh.get("list") or {}).get("name") or nf["list"]
+                    self.cache.write(nf, notes=n if not n.startswith("(local only") else "", old_path=path)
+            except Exception as e:
+                self.log(f"{tid}: refresh failed (next pull fixes it): {e}")
+        self.log(f"create done: {made} new tickets")
+        return made
+
     def push(self, dry_run=False):
+        self._index_refs()
+        created = self.create_new(dry_run)
         todo = self.pending()
         if not todo:
             self.log("push: nothing to send")
-            return 0
+            return created
         if not self.members:
             self._team()
         sent = 0
         for tid, path, changes, comment in todo:
-            body, warns = self._payload({k: v for k, v in changes.items() if k != "assignees"})
+            link_new = {k: changes[k] for k in C.LIST_KEYS if k in changes}
+            body, warns = self._payload({k: v for k, v in changes.items()
+                                         if k != "assignees" and k not in C.LIST_KEYS})
             if "assignees" in changes:
                 add, rem, w = self._assignee_delta(tid, changes["assignees"])
                 warns += w
@@ -238,6 +413,9 @@ class Engine:
                     self.client.put(f"/task/{tid}", body)
                 if comment:
                     self.client.post(f"/task/{tid}/comment", {"comment_text": comment, "notify_all": False})
+                if link_new:
+                    cur = self.cache.load_base(tid) or {}
+                    self._apply_links(tid, {k: cur.get(k, []) for k in C.LIST_KEYS}, link_new)
                 fresh = self.client.get(f"/task/{tid}", {"include_markdown_description": "true"})
             except Exception as e:  # keep local edits; next round retries
                 self.log(f"{tid}: push failed, will retry: {e}")
@@ -258,8 +436,8 @@ class Engine:
             else:
                 self.cache.write(f, notes=notes, old_path=path)
             sent += 1
-        self.log(f"push done: {sent} tickets")
-        return sent
+        self.log(f"push done: {sent} edited, {created} created")
+        return sent + created
 
     # ---------- reset ----------
     def reset(self, keep_notes=True):

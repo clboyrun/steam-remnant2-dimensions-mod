@@ -101,5 +101,6 @@ class Client:
         return min(60, 5 * (attempt + 1))
 
     get = lambda self, p, params=None: self.request("GET", p, params)
+    delete = lambda self, p, params=None: self.request("DELETE", p, params)
     put = lambda self, p, body: self.request("PUT", p, body=body)
     post = lambda self, p, body: self.request("POST", p, body=body)
