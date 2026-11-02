@@ -27,7 +27,11 @@ class SnapshotTests(unittest.TestCase):
             "L1": [task("b", "B", "in progress", "custom", order=2), task("a", "A", "complete", "closed", est=7_200_000, order=1)],
             "L2": [task("c", "C", "to do", "open", deps=["b"]), task("d", "D", "to do", "open", deps=["a"], parent="c")],
         }
-        self.snap = build_snapshot(folder, tasks, {"a": "E1"})
+        known = [{"status": "to do", "color": "#111", "type": "open", "orderindex": 0},
+                 {"status": "PROBLEM", "color": "#d33", "type": "custom", "orderindex": 1},
+                 {"status": "in progress", "color": "#222", "type": "custom", "orderindex": 2},
+                 {"status": "complete", "color": "#333", "type": "closed", "orderindex": 3}]
+        self.snap = build_snapshot(folder, tasks, {"a": "E1"}, known)
 
     def test_lists_and_tasks_keep_clickup_order(self):
         self.assertEqual([l["name"] for l in self.snap["lists"]], ["First", "Second"])
@@ -44,8 +48,9 @@ class SnapshotTests(unittest.TestCase):
         self.assertEqual(self.snap["lists"][1]["tasks"][1]["parent"], "c")
 
     def test_status_counts(self):
-        counts = {s["status"]: s["count"] for s in self.snap["statuses"]}
-        self.assertEqual(counts, {"complete": 1, "in progress": 1, "to do": 2})
+        counts = [(s["status"], s["count"]) for s in self.snap["statuses"]]
+        # Unused statuses (PROBLEM) are listed too, in ClickUp's order, done ones last.
+        self.assertEqual(counts, [("to do", 2), ("PROBLEM", 0), ("in progress", 1), ("complete", 1)])
         self.assertTrue(self.snap["statuses"][-1]["done"])
 
 

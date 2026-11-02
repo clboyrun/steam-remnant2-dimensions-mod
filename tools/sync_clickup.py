@@ -55,7 +55,8 @@ class ClickUp:
         return self.get(f"/folder/{folder_id}/list", {"archived": "false"}).get("lists", [])
 
     def space_lists(self, space_id: str) -> list[dict]:
-        out = list(self.get(f"/space/{space_id}/list", {"archived": "false"}).get("lists", []))
+        out = self.get(f"/space/{space_id}/list", {"archived": "false"}).get("lists", [])
+        out.sort(key=lambda l: int(l.get("orderindex") or 0))
         for f in self.get(f"/space/{space_id}/folder", {"archived": "false"}).get("folders", []):
             out.extend(f.get("lists") or self.lists(f["id"]))
         for i, l in enumerate(out):  # keep folders' own order, folderless lists first
@@ -97,20 +98,26 @@ def task_record(t: dict, tracker_ids: dict[str, str]) -> dict:
     }
 
 
-def build_snapshot(folder: dict, tasks_by_list: dict[str, list[dict]], tracker_ids: dict[str, str]) -> dict:
+def build_snapshot(
+    folder: dict, tasks_by_list: dict[str, list[dict]], tracker_ids: dict[str, str], known_statuses: list[dict] = ()
+) -> dict:
+    # Every status ClickUp defines is listed, in ClickUp's order, even with no tasks in it yet.
     lists, statuses = [], {}
+    for k in sorted(known_statuses, key=lambda k: int(k.get("orderindex") or 0)):
+        statuses.setdefault(k["status"], {"status": k["status"], "color": k.get("color"), "done": is_done(k), "count": 0})
     for lst in sorted(folder.get("lists", []), key=lambda l: int(l.get("orderindex") or 0)):
         tasks = [task_record(t, tracker_ids) for t in tasks_by_list.get(lst["id"], [])]
         tasks.sort(key=lambda r: r["order"])
         for r in tasks:
             s = statuses.setdefault(r["status"], {"status": r["status"], "color": r["status_color"], "done": r["done"], "count": 0})
+            s["color"] = s["color"] or r["status_color"]
             s["count"] += 1
         lists.append({"id": lst["id"], "name": lst["name"], "tasks": tasks})
 
     return {
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "folder": {"id": folder["id"], "name": folder.get("name", "")},
-        "statuses": sorted(statuses.values(), key=lambda s: (s["done"], -s["count"])),
+        "statuses": sorted(statuses.values(), key=lambda s: s["done"]),  # stable: keeps ClickUp's order
         "lists": lists,
     }
 
@@ -139,14 +146,17 @@ def main() -> None:
             break
     if not space.get("id"):
         space = api.folder(args.folder).get("space") or {}
-    if not space.get("name"):
-        space["name"] = api.get(f"/space/{space['id']}").get("name", "")
+    space_info = api.get(f"/space/{space['id']}")
+    space["name"] = space.get("name") or space_info.get("name", "")
     lists = api.space_lists(space["id"])
     if not lists:
         sys.exit(f"No ClickUp lists found in space {space.get('name')} ({space.get('id')}); status.json left unchanged.")
     folder = {"id": space["id"], "name": space["name"], "lists": lists}
     tasks_by_list = {l["id"]: api.tasks(l["id"]) for l in folder.get("lists", [])}
-    snap = build_snapshot(folder, tasks_by_list, tracker_ids)
+    known = list(space_info.get("statuses") or [])
+    for l in lists:  # lists can override the space's statuses
+        known += [st for st in l.get("statuses") or [] if st.get("status") not in {k.get("status") for k in known}]
+    snap = build_snapshot(folder, tasks_by_list, tracker_ids, known)
 
     args.out.parent.mkdir(parents=True, exist_ok=True)
     args.out.write_text(json.dumps(snap, indent=1), encoding="utf-8")
