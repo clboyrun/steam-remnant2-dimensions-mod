@@ -1,15 +1,15 @@
 {
- "generated_at": "2026-11-02T03:55:38+00:00",
+ "generated_at": "2026-11-02T04:23:11+00:00",
  "folder": {
-  "id": "901414898053",
-  "name": "hidden"
+  "id": "90149675055",
+  "name": "Dimensions Mod"
  },
  "statuses": [
   {
    "status": "to do",
    "color": "#b5bcc2",
    "done": false,
-   "count": 14
+   "count": 167
   },
   {
    "status": "in process",
@@ -21,10 +21,865 @@
    "status": "complete",
    "color": "#008844",
    "done": true,
-   "count": 19
+   "count": 24
   }
  ],
  "lists": [
+  {
+   "id": "901422848633",
+   "name": "Abandoned Arcade",
+   "tasks": [
+    {
+     "id": "86bcw88bf",
+     "tracker_id": "A1",
+     "name": "Arcade: alternative roll for the Losomn slot",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 12.0,
+     "url": "https://app.clickup.com/t/86bcw88bf",
+     "updated": 1793586571289,
+     "order": 10001793562521.033
+    },
+    {
+     "id": "86bcw88bh",
+     "tracker_id": "A2",
+     "name": "Arcade hub: abandoned arcade nexus with no enemies",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 30.0,
+     "url": "https://app.clickup.com/t/86bcw88bh",
+     "updated": 1793565368136,
+     "order": 10001793562521.316
+    },
+    {
+     "id": "86bcw88bk",
+     "tracker_id": "A3",
+     "name": "Arcade machine portals and broken machines",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 16.0,
+     "url": "https://app.clickup.com/t/86bcw88bk",
+     "updated": 1793565368194,
+     "order": 10001793562521.57
+    },
+    {
+     "id": "86bcw88bm",
+     "tracker_id": "A4",
+     "name": "Coin-in portal animation",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 12.0,
+     "url": "https://app.clickup.com/t/86bcw88bm",
+     "updated": 1793562521813,
+     "order": 10001793562521.836
+    },
+    {
+     "id": "86bcw88bn",
+     "tracker_id": "A5",
+     "name": "Dungeon generation: roll 6 of 9-12",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 12.0,
+     "url": "https://app.clickup.com/t/86bcw88bn",
+     "updated": 1793586356292,
+     "order": 10001793562522.072
+    },
+    {
+     "id": "86bcw88br",
+     "tracker_id": "A6",
+     "name": "Dungeon: Maze chase",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 40.0,
+     "url": "https://app.clickup.com/t/86bcw88br",
+     "updated": 1793562522299,
+     "order": 10001793562522.314
+    },
+    {
+     "id": "86bcw88bt",
+     "tracker_id": "A7",
+     "name": "Dungeon: Side-scroller brawl",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 40.0,
+     "url": "https://app.clickup.com/t/86bcw88bt",
+     "updated": 1793562522547,
+     "order": 10001793562522.568
+    },
+    {
+     "id": "86bcw88bw",
+     "tracker_id": "A8",
+     "name": "Dungeon: Collectables run",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 30.0,
+     "url": "https://app.clickup.com/t/86bcw88bw",
+     "updated": 1793562522830,
+     "order": 10001793562522.865
+    },
+    {
+     "id": "86bcw88bx",
+     "tracker_id": "A9",
+     "name": "Pick the remaining 6-9 arcade dungeons",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 2.0,
+     "url": "https://app.clickup.com/t/86bcw88bx",
+     "updated": 1793562523114,
+     "order": 10001793562523.13
+    },
+    {
+     "id": "86bcw88by",
+     "tracker_id": "A10",
+     "name": "Final boss gate: win 3 of 6 dungeons",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 8.0,
+     "url": "https://app.clickup.com/t/86bcw88by",
+     "updated": 1793565390011,
+     "order": 10001793562523.379
+    },
+    {
+     "id": "86bcw88c0",
+     "tracker_id": "A11",
+     "name": "Arcade final boss",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 60.0,
+     "url": "https://app.clickup.com/t/86bcw88c0",
+     "updated": 1793562523577,
+     "order": 10001793562523.596
+    },
+    {
+     "id": "86bcw899n",
+     "tracker_id": null,
+     "name": "Shoot-em-up: enemy waves down a long corridor",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": "86bcw88bx",
+     "estimate_hours": 0.5,
+     "url": "https://app.clickup.com/t/86bcw899n",
+     "updated": 1793562713246,
+     "order": 10001793562713.271
+    },
+    {
+     "id": "86bcw899q",
+     "tracker_id": null,
+     "name": "Light-gun gallery: on-rails moving platform",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": "86bcw88bx",
+     "estimate_hours": 0.5,
+     "url": "https://app.clickup.com/t/86bcw899q",
+     "updated": 1793562713581,
+     "order": 10001793562713.61
+    },
+    {
+     "id": "86bcw899r",
+     "tracker_id": null,
+     "name": "Racer: run the track against a clock",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": "86bcw88bx",
+     "estimate_hours": 0.5,
+     "url": "https://app.clickup.com/t/86bcw899r",
+     "updated": 1793562713924,
+     "order": 10001793562713.96
+    },
+    {
+     "id": "86bcw899v",
+     "tracker_id": null,
+     "name": "Platformer: climb while ranged enemies hold high ground",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": "86bcw88bx",
+     "estimate_hours": 0.5,
+     "url": "https://app.clickup.com/t/86bcw899v",
+     "updated": 1793562714266,
+     "order": 10001793562714.291
+    },
+    {
+     "id": "86bcw899x",
+     "tracker_id": null,
+     "name": "Brick breaker: shoot through brick walls",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": "86bcw88bx",
+     "estimate_hours": 0.5,
+     "url": "https://app.clickup.com/t/86bcw899x",
+     "updated": 1793562714558,
+     "order": 10001793562714.586
+    },
+    {
+     "id": "86bcw89a1",
+     "tracker_id": null,
+     "name": "Falling blocks: shoot blocks to clear rows",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": "86bcw88bx",
+     "estimate_hours": 0.5,
+     "url": "https://app.clickup.com/t/86bcw89a1",
+     "updated": 1793562714836,
+     "order": 10001793562714.861
+    },
+    {
+     "id": "86bcw89a5",
+     "tracker_id": null,
+     "name": "Rhythm: enemies and hazards on the beat",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": "86bcw88bx",
+     "estimate_hours": 0.5,
+     "url": "https://app.clickup.com/t/86bcw89a5",
+     "updated": 1793562715110,
+     "order": 10001793562715.135
+    },
+    {
+     "id": "86bcw89a6",
+     "tracker_id": null,
+     "name": "Pinball: giant ball as a rolling hazard",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": "86bcw88bx",
+     "estimate_hours": 0.5,
+     "url": "https://app.clickup.com/t/86bcw89a6",
+     "updated": 1793562715423,
+     "order": 10001793562715.45
+    },
+    {
+     "id": "86bcw89a8",
+     "tracker_id": null,
+     "name": "Claw machine: claw drops enemies into the pit",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": "86bcw88bx",
+     "estimate_hours": 0.5,
+     "url": "https://app.clickup.com/t/86bcw89a8",
+     "updated": 1793562715784,
+     "order": 10001793562715.809
+    }
+   ]
+  },
+  {
+   "id": "901422848638",
+   "name": "Ward 13 NPCs",
+   "tasks": [
+    {
+     "id": "86bcw88kp",
+     "tracker_id": "N1",
+     "name": "Falada, the talking horse (vendor)",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 40.0,
+     "url": "https://app.clickup.com/t/86bcw88kp",
+     "updated": 1793586571090,
+     "order": 10001793562587.84
+    },
+    {
+     "id": "86bcw88kr",
+     "tracker_id": "N2",
+     "name": "The AI (Ascension NPC)",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 16.0,
+     "url": "https://app.clickup.com/t/86bcw88kr",
+     "updated": 1793586492438,
+     "order": 10001793562588.145
+    },
+    {
+     "id": "86bcw88kt",
+     "tracker_id": "N3",
+     "name": "Forge NPC",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 12.0,
+     "url": "https://app.clickup.com/t/86bcw88kt",
+     "updated": 1793591290428,
+     "order": 10001793562588.455
+    },
+    {
+     "id": "86bcw88kv",
+     "tracker_id": "N4",
+     "name": "Masterwork NPC and the Corrupted Shop",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 20.0,
+     "url": "https://app.clickup.com/t/86bcw88kv",
+     "updated": 1793586501274,
+     "order": 10001793562588.713
+    },
+    {
+     "id": "86bcw88kw",
+     "tracker_id": "N5",
+     "name": "Enchanter NPC",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 12.0,
+     "url": "https://app.clickup.com/t/86bcw88kw",
+     "updated": 1793591291364,
+     "order": 10001793562588.994
+    }
+   ]
+  },
+  {
+   "id": "901422848637",
+   "name": "Cross-world systems",
+   "tasks": [
+    {
+     "id": "86bcw88kg",
+     "tracker_id": "S2",
+     "name": "New difficulty: Vex and Torment",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 8.0,
+     "url": "https://app.clickup.com/t/86bcw88kg",
+     "updated": 1793565368194,
+     "order": 10001793562586.42
+    },
+    {
+     "id": "86bcw88kj",
+     "tracker_id": "S3",
+     "name": "New status effect: Lust",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 16.0,
+     "url": "https://app.clickup.com/t/86bcw88kj",
+     "updated": 1793591213153,
+     "order": 10001793562586.629
+    },
+    {
+     "id": "86bcw88kk",
+     "tracker_id": "S4",
+     "name": "Corrupted dungeons",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 12.0,
+     "url": "https://app.clickup.com/t/86bcw88kk",
+     "updated": 1793574126786,
+     "order": 10001793562586.836
+    },
+    {
+     "id": "86bcw88km",
+     "tracker_id": "S5",
+     "name": "Labyrinth: two new portal locations",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 16.0,
+     "url": "https://app.clickup.com/t/86bcw88km",
+     "updated": 1793574126819,
+     "order": 10001793562587.06
+    },
+    {
+     "id": "86bcw88ke",
+     "tracker_id": "S1",
+     "name": "Status effects: confirm Madness and Ravenous behaviour",
+     "status": "complete",
+     "status_color": "#008844",
+     "done": true,
+     "parent": null,
+     "estimate_hours": 4.0,
+     "url": "https://app.clickup.com/t/86bcw88ke",
+     "updated": 1793589428359,
+     "order": 10001793586552.508
+    }
+   ]
+  },
+  {
+   "id": "901422848640",
+   "name": "Quests",
+   "tasks": [
+    {
+     "id": "86bcw88kz",
+     "tracker_id": "Q1",
+     "name": "Falada unlock: save the horse from the beheading",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 16.0,
+     "url": "https://app.clickup.com/t/86bcw88kz",
+     "updated": 1793586571165,
+     "order": 10001793562589.76
+    },
+    {
+     "id": "86bcw88m0",
+     "tracker_id": "Q2",
+     "name": "Forge questline (Grimm)",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 24.0,
+     "url": "https://app.clickup.com/t/86bcw88m0",
+     "updated": 1793562590010,
+     "order": 10001793562590.035
+    },
+    {
+     "id": "86bcw88m3",
+     "tracker_id": "Q3",
+     "name": "Enchanter questline (Lovecraft)",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 24.0,
+     "url": "https://app.clickup.com/t/86bcw88m3",
+     "updated": 1793562590263,
+     "order": 10001793562590.285
+    },
+    {
+     "id": "86bcw88m6",
+     "tracker_id": "Q4",
+     "name": "Masterwork questline",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 4.0,
+     "url": "https://app.clickup.com/t/86bcw88m6",
+     "updated": 1793565389962,
+     "order": 10001793562590.504
+    },
+    {
+     "id": "86bcw88m7",
+     "tracker_id": "Q5",
+     "name": "N'Erud alternative boss quest",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 40.0,
+     "url": "https://app.clickup.com/t/86bcw88m7",
+     "updated": 1793565389976,
+     "order": 10001793562590.754
+    },
+    {
+     "id": "86bcw89ac",
+     "tracker_id": null,
+     "name": "Ask the base weapon NPC: 'Are you sure we can't upgrade my weapons further?'",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": "86bcw88m6",
+     "estimate_hours": 4.0,
+     "url": "https://app.clickup.com/t/86bcw89ac",
+     "updated": 1793562716498,
+     "order": 10001793562716.523
+    },
+    {
+     "id": "86bcw89af",
+     "tracker_id": null,
+     "name": "Go through the new worlds to capture an item and bring it back",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": "86bcw88m6",
+     "estimate_hours": 8.0,
+     "url": "https://app.clickup.com/t/86bcw89af",
+     "updated": 1793562716746,
+     "order": 10001793562716.77
+    },
+    {
+     "id": "86bcw89ah",
+     "tracker_id": null,
+     "name": "Weapon NPC leaves for one real hour of play time",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": "86bcw88m6",
+     "estimate_hours": 6.0,
+     "url": "https://app.clickup.com/t/86bcw89ah",
+     "updated": 1793562716978,
+     "order": 10001793562717.0
+    },
+    {
+     "id": "86bcw89aj",
+     "tracker_id": null,
+     "name": "On next return, weapon NPC is back with the Masterwork NPC",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": "86bcw88m6",
+     "estimate_hours": 2.0,
+     "url": "https://app.clickup.com/t/86bcw89aj",
+     "updated": 1793562717195,
+     "order": 10001793562717.217
+    },
+    {
+     "id": "86bcw89ak",
+     "tracker_id": null,
+     "name": "Hand in: a +10 mutator, 10 corrupted shards, a max-level weapon, the Hammer of Modulation",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": "86bcw88m6",
+     "estimate_hours": 4.0,
+     "url": "https://app.clickup.com/t/86bcw89ak",
+     "updated": 1793562717386,
+     "order": 10001793562717.412
+    }
+   ]
+  },
+  {
+   "id": "901422848645",
+   "name": "Risks and open questions",
+   "tasks": [
+    {
+     "id": "86bcw88zj",
+     "tracker_id": "R1",
+     "name": "asset discovery from a mod pak",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 2.0,
+     "url": "https://app.clickup.com/t/86bcw88zj",
+     "updated": 1793586571135,
+     "order": 10001793562670.752
+    },
+    {
+     "id": "86bcw88zp",
+     "tracker_id": "R2",
+     "name": "unconfirmed catalog entries",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 2.0,
+     "url": "https://app.clickup.com/t/86bcw88zp",
+     "updated": 1793591259849,
+     "order": 10001793562671.08
+    },
+    {
+     "id": "86bcw88zq",
+     "tracker_id": "R3",
+     "name": "weapon level scaling past +20",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 2.0,
+     "url": "https://app.clickup.com/t/86bcw88zq",
+     "updated": 1793574822394,
+     "order": 10001793562671.375
+    },
+    {
+     "id": "86bcw88zt",
+     "tracker_id": "R4",
+     "name": "vendor gate consumption",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "url": "https://app.clickup.com/t/86bcw88zt",
+     "updated": 1793574678476,
+     "order": 10001793562671.656
+    },
+    {
+     "id": "86bcw88zu",
+     "tracker_id": "R5",
+     "name": "permanent trait levels on archetype switch",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 3.0,
+     "url": "https://app.clickup.com/t/86bcw88zu",
+     "updated": 1793586471891,
+     "order": 10001793562671.965
+    },
+    {
+     "id": "86bcw88zx",
+     "tracker_id": "R7",
+     "name": "Open question: final name for the new difficulty",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 0.5,
+     "url": "https://app.clickup.com/t/86bcw88zx",
+     "updated": 1793562672234,
+     "order": 10001793562672.25
+    },
+    {
+     "id": "86bcw8905",
+     "tracker_id": "R10",
+     "name": "native logic (Prism 51, sort orders, armor levels, some UI)",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 4.0,
+     "url": "https://app.clickup.com/t/86bcw8905",
+     "updated": 1793574806385,
+     "order": 10001793562673.041
+    },
+    {
+     "id": "86bcw8906",
+     "tracker_id": "R11",
+     "name": "cooked maps can't be edited (NPC placement)",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 4.0,
+     "url": "https://app.clickup.com/t/86bcw8906",
+     "updated": 1793586509061,
+     "order": 10001793562673.334
+    },
+    {
+     "id": "86bcw8909",
+     "tracker_id": "R12",
+     "name": "widget overrides of cooked screens",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 6.0,
+     "url": "https://app.clickup.com/t/86bcw8909",
+     "updated": 1793574699034,
+     "order": 10001793562673.604
+    },
+    {
+     "id": "86bcw890a",
+     "tracker_id": "R13",
+     "name": "retoc with UE 5.2 IoStore",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 3.0,
+     "url": "https://app.clickup.com/t/86bcw890a",
+     "updated": 1793574693730,
+     "order": 10001793562673.893
+    },
+    {
+     "id": "86bcw890d",
+     "tracker_id": "R14",
+     "name": "Rem2Proj headers predate DLC3",
+     "status": "complete",
+     "status_color": "#008844",
+     "done": true,
+     "parent": null,
+     "estimate_hours": 4.0,
+     "url": "https://app.clickup.com/t/86bcw890d",
+     "updated": 1793589508062,
+     "order": 10001793586718.72
+    },
+    {
+     "id": "86bcw8902",
+     "tracker_id": "R9",
+     "name": "Open question: how campaigns grant completion tokens",
+     "status": "complete",
+     "status_color": "#008844",
+     "done": true,
+     "parent": null,
+     "estimate_hours": 3.0,
+     "url": "https://app.clickup.com/t/86bcw8902",
+     "updated": 1793589462696,
+     "order": 10001793586725.006
+    },
+    {
+     "id": "86bcw8900",
+     "tracker_id": "R8",
+     "name": "Open question: is 'the AI' the Custodian?",
+     "status": "complete",
+     "status_color": "#008844",
+     "done": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "url": "https://app.clickup.com/t/86bcw8900",
+     "updated": 1793591821376,
+     "order": 10001793591821.426
+    },
+    {
+     "id": "86bcwayhu",
+     "tracker_id": null,
+     "name": "Open question: rename Archetype Mastery (the game already uses the name)",
+     "status": "complete",
+     "status_color": "#008844",
+     "done": true,
+     "parent": null,
+     "estimate_hours": 0.5,
+     "url": "https://app.clickup.com/t/86bcwayhu",
+     "updated": 1793592005413,
+     "order": 10001793592005.465
+    }
+   ]
+  },
+  {
+   "id": "901422848643",
+   "name": "Character progression",
+   "tasks": [
+    {
+     "id": "86bcw88u2",
+     "tracker_id": "P1",
+     "name": "Ascension+ (\"Handler+\")",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 30.0,
+     "url": "https://app.clickup.com/t/86bcw88u2",
+     "updated": 1793586450696,
+     "order": 10001793562631.764
+    },
+    {
+     "id": "86bcw88u4",
+     "tracker_id": "P2",
+     "name": "Ascension++ (\"Handler++\")",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 20.0,
+     "url": "https://app.clickup.com/t/86bcw88u4",
+     "updated": 1793586454223,
+     "order": 10001793562632.035
+    },
+    {
+     "id": "86bcw88u6",
+     "tracker_id": "P3",
+     "name": "Permanent trait points outside the cap",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 16.0,
+     "url": "https://app.clickup.com/t/86bcw88u6",
+     "updated": 1793591240263,
+     "order": 10001793562632.297
+    },
+    {
+     "id": "86bcw88u9",
+     "tracker_id": "P4",
+     "name": "Ascension skills and perks",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 40.0,
+     "url": "https://app.clickup.com/t/86bcw88u9",
+     "updated": 1793586457919,
+     "order": 10001793562632.518
+    },
+    {
+     "id": "86bcw88ua",
+     "tracker_id": "P5",
+     "name": "Handler companions: summon framework",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 6.0,
+     "url": "https://app.clickup.com/t/86bcw88ua",
+     "updated": 1793586462543,
+     "order": 10001793562632.746
+    },
+    {
+     "id": "86bcw88ub",
+     "tracker_id": "P6",
+     "name": "Archetype Mastery trait (+1 max health per mastery)",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 16.0,
+     "url": "https://app.clickup.com/t/86bcw88ub",
+     "updated": 1793591241502,
+     "order": 10001793562632.99
+    },
+    {
+     "id": "86bcw89aq",
+     "tracker_id": null,
+     "name": "Companion: cat",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": "86bcw88ua",
+     "estimate_hours": 16.0,
+     "url": "https://app.clickup.com/t/86bcw89aq",
+     "updated": 1793562718193,
+     "order": 10001793562718.22
+    },
+    {
+     "id": "86bcw89ax",
+     "tracker_id": null,
+     "name": "Companion: bird of prey",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": "86bcw88ua",
+     "estimate_hours": 22.0,
+     "url": "https://app.clickup.com/t/86bcw89ax",
+     "updated": 1793562718468,
+     "order": 10001793562718.502
+    },
+    {
+     "id": "86bcw89ay",
+     "tracker_id": null,
+     "name": "Companion: bear",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": "86bcw88ua",
+     "estimate_hours": 16.0,
+     "url": "https://app.clickup.com/t/86bcw89ay",
+     "updated": 1793562718724,
+     "order": 10001793562718.748
+    }
+   ]
+  },
   {
    "id": "901422848600",
    "name": "Required data inputs",
@@ -38,13 +893,9 @@
      "done": false,
      "parent": null,
      "estimate_hours": 1.0,
-     "waits_on": [
-      "86bcw878v"
-     ],
      "url": "https://app.clickup.com/t/86bcw879h",
      "updated": 1793589432820,
-     "order": 10001793562312.273,
-     "blocked": false
+     "order": 10001793562312.273
     },
     {
      "id": "86bcw879n",
@@ -55,13 +906,9 @@
      "done": false,
      "parent": null,
      "estimate_hours": 1.0,
-     "waits_on": [
-      "86bcw878v"
-     ],
      "url": "https://app.clickup.com/t/86bcw879n",
      "updated": 1793589432820,
-     "order": 10001793562312.857,
-     "blocked": false
+     "order": 10001793562312.857
     },
     {
      "id": "86bcw879u",
@@ -72,13 +919,9 @@
      "done": false,
      "parent": null,
      "estimate_hours": 1.0,
-     "waits_on": [
-      "86bcw878v"
-     ],
      "url": "https://app.clickup.com/t/86bcw879u",
      "updated": 1793591268122,
-     "order": 10001793562313.438,
-     "blocked": false
+     "order": 10001793562313.438
     },
     {
      "id": "86bcw87a0",
@@ -89,13 +932,9 @@
      "done": false,
      "parent": null,
      "estimate_hours": 0.5,
-     "waits_on": [
-      "86bcw878v"
-     ],
      "url": "https://app.clickup.com/t/86bcw87a0",
      "updated": 1793591269050,
-     "order": 10001793562314.16,
-     "blocked": false
+     "order": 10001793562314.16
     },
     {
      "id": "86bcw87a1",
@@ -106,13 +945,9 @@
      "done": false,
      "parent": null,
      "estimate_hours": 1.0,
-     "waits_on": [
-      "86bcw878v"
-     ],
      "url": "https://app.clickup.com/t/86bcw87a1",
      "updated": 1793591269590,
-     "order": 10001793562314.35,
-     "blocked": false
+     "order": 10001793562314.35
     },
     {
      "id": "86bcw87a3",
@@ -123,13 +958,9 @@
      "done": false,
      "parent": null,
      "estimate_hours": 1.0,
-     "waits_on": [
-      "86bcw878v"
-     ],
      "url": "https://app.clickup.com/t/86bcw87a3",
      "updated": 1793591270821,
-     "order": 10001793562314.764,
-     "blocked": false
+     "order": 10001793562314.764
     },
     {
      "id": "86bcw87a4",
@@ -140,13 +971,9 @@
      "done": false,
      "parent": null,
      "estimate_hours": 1.0,
-     "waits_on": [
-      "86bcw878v"
-     ],
      "url": "https://app.clickup.com/t/86bcw87a4",
      "updated": 1793591272894,
-     "order": 10001793562314.941,
-     "blocked": false
+     "order": 10001793562314.941
     },
     {
      "id": "86bcw87ab",
@@ -157,13 +984,9 @@
      "done": false,
      "parent": null,
      "estimate_hours": 1.0,
-     "waits_on": [
-      "86bcw878v"
-     ],
      "url": "https://app.clickup.com/t/86bcw87ab",
      "updated": 1793591272259,
-     "order": 10001793562315.498,
-     "blocked": false
+     "order": 10001793562315.498
     },
     {
      "id": "86bcw87ad",
@@ -174,13 +997,9 @@
      "done": false,
      "parent": null,
      "estimate_hours": 0.5,
-     "waits_on": [
-      "86bcw878v"
-     ],
      "url": "https://app.clickup.com/t/86bcw87ad",
      "updated": 1793591273531,
-     "order": 10001793562315.688,
-     "blocked": false
+     "order": 10001793562315.688
     },
     {
      "id": "86bcw87ak",
@@ -191,13 +1010,9 @@
      "done": false,
      "parent": null,
      "estimate_hours": 1.0,
-     "waits_on": [
-      "86bcw878v"
-     ],
      "url": "https://app.clickup.com/t/86bcw87ak",
      "updated": 1793591275790,
-     "order": 10001793562316.08,
-     "blocked": false
+     "order": 10001793562316.08
     },
     {
      "id": "86bcw87ap",
@@ -208,13 +1023,9 @@
      "done": false,
      "parent": null,
      "estimate_hours": 1.0,
-     "waits_on": [
-      "86bcw878v"
-     ],
      "url": "https://app.clickup.com/t/86bcw87ap",
      "updated": 1793591276356,
-     "order": 10001793562316.475,
-     "blocked": false
+     "order": 10001793562316.475
     },
     {
      "id": "86bcw87at",
@@ -225,13 +1036,9 @@
      "done": false,
      "parent": null,
      "estimate_hours": 1.0,
-     "waits_on": [
-      "86bcw878v"
-     ],
      "url": "https://app.clickup.com/t/86bcw87at",
      "updated": 1793591276900,
-     "order": 10001793562316.658,
-     "blocked": false
+     "order": 10001793562316.658
     },
     {
      "id": "86bcw87av",
@@ -242,13 +1049,9 @@
      "done": false,
      "parent": null,
      "estimate_hours": 1.5,
-     "waits_on": [
-      "86bcw878v"
-     ],
      "url": "https://app.clickup.com/t/86bcw87av",
      "updated": 1793591277584,
-     "order": 10001793562316.86,
-     "blocked": false
+     "order": 10001793562316.86
     },
     {
      "id": "86bcw87ax",
@@ -259,13 +1062,9 @@
      "done": false,
      "parent": null,
      "estimate_hours": 1.0,
-     "waits_on": [
-      "86bcw878v"
-     ],
      "url": "https://app.clickup.com/t/86bcw87ax",
      "updated": 1793591278061,
-     "order": 10001793562317.086,
-     "blocked": false
+     "order": 10001793562317.086
     },
     {
      "id": "86bcw87an",
@@ -276,13 +1075,9 @@
      "done": true,
      "parent": null,
      "estimate_hours": 1.0,
-     "waits_on": [
-      "86bcw878v"
-     ],
      "url": "https://app.clickup.com/t/86bcw87an",
      "updated": 1793589439909,
-     "order": 10001793586552.566,
-     "blocked": false
+     "order": 10001793586552.566
     },
     {
      "id": "86bcw879z",
@@ -293,13 +1088,9 @@
      "done": true,
      "parent": null,
      "estimate_hours": 1.0,
-     "waits_on": [
-      "86bcw878v"
-     ],
      "url": "https://app.clickup.com/t/86bcw879z",
      "updated": 1793589443071,
-     "order": 10001793586552.611,
-     "blocked": false
+     "order": 10001793586552.611
     },
     {
      "id": "86bcw878v",
@@ -310,11 +1101,9 @@
      "done": true,
      "parent": null,
      "estimate_hours": 1.0,
-     "waits_on": [],
      "url": "https://app.clickup.com/t/86bcw878v",
      "updated": 1793589445416,
-     "order": 10001793586552.916,
-     "blocked": false
+     "order": 10001793586552.916
     },
     {
      "id": "86bcw87aj",
@@ -325,13 +1114,9 @@
      "done": true,
      "parent": null,
      "estimate_hours": 1.0,
-     "waits_on": [
-      "86bcw878v"
-     ],
      "url": "https://app.clickup.com/t/86bcw87aj",
      "updated": 1793589428359,
-     "order": 10001793586714.965,
-     "blocked": false
+     "order": 10001793586714.965
     },
     {
      "id": "86bcw879t",
@@ -342,13 +1127,9 @@
      "done": true,
      "parent": null,
      "estimate_hours": 0.5,
-     "waits_on": [
-      "86bcw878v"
-     ],
      "url": "https://app.clickup.com/t/86bcw879t",
      "updated": 1793589428359,
-     "order": 10001793586716.553,
-     "blocked": false
+     "order": 10001793586716.553
     },
     {
      "id": "86bcw8796",
@@ -359,13 +1140,9 @@
      "done": true,
      "parent": null,
      "estimate_hours": 2.0,
-     "waits_on": [
-      "86bcw878v"
-     ],
      "url": "https://app.clickup.com/t/86bcw8796",
      "updated": 1793589428359,
-     "order": 10001793586717.963,
-     "blocked": false
+     "order": 10001793586717.963
     },
     {
      "id": "86bcw878w",
@@ -376,13 +1153,9 @@
      "done": true,
      "parent": null,
      "estimate_hours": 1.0,
-     "waits_on": [
-      "86bcw878v"
-     ],
      "url": "https://app.clickup.com/t/86bcw878w",
      "updated": 1793589428359,
-     "order": 10001793586719.432,
-     "blocked": false
+     "order": 10001793586719.432
     },
     {
      "id": "86bcw8791",
@@ -393,13 +1166,9 @@
      "done": true,
      "parent": null,
      "estimate_hours": 1.0,
-     "waits_on": [
-      "86bcw878v"
-     ],
      "url": "https://app.clickup.com/t/86bcw8791",
      "updated": 1793589466188,
-     "order": 10001793586727.16,
-     "blocked": false
+     "order": 10001793586727.16
     },
     {
      "id": "86bcw8792",
@@ -410,13 +1179,9 @@
      "done": true,
      "parent": null,
      "estimate_hours": 2.0,
-     "waits_on": [
-      "86bcw878v"
-     ],
      "url": "https://app.clickup.com/t/86bcw8792",
      "updated": 1793589472369,
-     "order": 10001793586731.898,
-     "blocked": false
+     "order": 10001793586731.898
     },
     {
      "id": "86bcw8799",
@@ -427,13 +1192,9 @@
      "done": true,
      "parent": null,
      "estimate_hours": 0.5,
-     "waits_on": [
-      "86bcw878v"
-     ],
      "url": "https://app.clickup.com/t/86bcw8799",
      "updated": 1793589479890,
-     "order": 10001793589133.836,
-     "blocked": false
+     "order": 10001793589133.836
     },
     {
      "id": "86bcw879c",
@@ -444,13 +1205,9 @@
      "done": true,
      "parent": null,
      "estimate_hours": 0.5,
-     "waits_on": [
-      "86bcw878v"
-     ],
      "url": "https://app.clickup.com/t/86bcw879c",
      "updated": 1793589486313,
-     "order": 10001793589192.34,
-     "blocked": false
+     "order": 10001793589192.34
     },
     {
      "id": "86bcw879e",
@@ -461,13 +1218,9 @@
      "done": true,
      "parent": null,
      "estimate_hours": 0.5,
-     "waits_on": [
-      "86bcw878v"
-     ],
      "url": "https://app.clickup.com/t/86bcw879e",
      "updated": 1793589490960,
-     "order": 10001793589301.336,
-     "blocked": false
+     "order": 10001793589301.336
     },
     {
      "id": "86bcw879v",
@@ -478,13 +1231,9 @@
      "done": true,
      "parent": null,
      "estimate_hours": 1.0,
-     "waits_on": [
-      "86bcw878v"
-     ],
      "url": "https://app.clickup.com/t/86bcw879v",
      "updated": 1793589599699,
-     "order": 10001793589383.623,
-     "blocked": false
+     "order": 10001793589383.623
     },
     {
      "id": "86bcw879w",
@@ -495,13 +1244,9 @@
      "done": true,
      "parent": null,
      "estimate_hours": 1.0,
-     "waits_on": [
-      "86bcw878v"
-     ],
      "url": "https://app.clickup.com/t/86bcw879w",
      "updated": 1793589498566,
-     "order": 10001793589408.365,
-     "blocked": false
+     "order": 10001793589408.365
     },
     {
      "id": "86bcw87a9",
@@ -512,13 +1257,9 @@
      "done": true,
      "parent": null,
      "estimate_hours": 0.5,
-     "waits_on": [
-      "86bcw878v"
-     ],
      "url": "https://app.clickup.com/t/86bcw87a9",
      "updated": 1793589778887,
-     "order": 10001793589778.951,
-     "blocked": false
+     "order": 10001793589778.951
     },
     {
      "id": "86bcw879k",
@@ -529,13 +1270,9 @@
      "done": true,
      "parent": null,
      "estimate_hours": 0.5,
-     "waits_on": [
-      "86bcw878v"
-     ],
      "url": "https://app.clickup.com/t/86bcw879k",
      "updated": 1793590234744,
-     "order": 10001793590234.807,
-     "blocked": false
+     "order": 10001793590234.807
     },
     {
      "id": "86bcw879m",
@@ -546,13 +1283,9 @@
      "done": true,
      "parent": null,
      "estimate_hours": 1.0,
-     "waits_on": [
-      "86bcw878v"
-     ],
      "url": "https://app.clickup.com/t/86bcw879m",
      "updated": 1793590295925,
-     "order": 10001793590296.004,
-     "blocked": false
+     "order": 10001793590296.004
     },
     {
      "id": "86bcwayh3",
@@ -563,11 +1296,9 @@
      "done": false,
      "parent": null,
      "estimate_hours": 0.5,
-     "waits_on": [],
      "url": "https://app.clickup.com/t/86bcwayh3",
      "updated": 1793590359909,
-     "order": 10001793590359.967,
-     "blocked": false
+     "order": 10001793590359.967
     },
     {
      "id": "86bcw879q",
@@ -578,13 +1309,9 @@
      "done": false,
      "parent": null,
      "estimate_hours": 1.0,
-     "waits_on": [
-      "86bcw878v"
-     ],
      "url": "https://app.clickup.com/t/86bcw879q",
      "updated": 1793590567606,
-     "order": 10001793590562.988,
-     "blocked": false
+     "order": 10001793590562.988
     },
     {
      "id": "86bcw87a2",
@@ -595,13 +1322,9 @@
      "done": false,
      "parent": null,
      "estimate_hours": 0.5,
-     "waits_on": [
-      "86bcw878v"
-     ],
      "url": "https://app.clickup.com/t/86bcw87a2",
      "updated": 1793590734518,
-     "order": 10001793590730.17,
-     "blocked": false
+     "order": 10001793590730.17
     },
     {
      "id": "86bcwayhj",
@@ -612,11 +1335,9 @@
      "done": true,
      "parent": null,
      "estimate_hours": 0.5,
-     "waits_on": [],
      "url": "https://app.clickup.com/t/86bcwayhj",
      "updated": 1793591066507,
-     "order": 10001793591066.58,
-     "blocked": false
+     "order": 10001793591066.58
     },
     {
      "id": "86bcw87a7",
@@ -627,13 +1348,1280 @@
      "done": true,
      "parent": null,
      "estimate_hours": 1.0,
-     "waits_on": [
-      "86bcw878v"
-     ],
      "url": "https://app.clickup.com/t/86bcw87a7",
      "updated": 1793591137543,
-     "order": 10001793591137.605,
-     "blocked": false
+     "order": 10001793591137.605
+    }
+   ]
+  },
+  {
+   "id": "901422848601",
+   "name": "Toolchain and in-game tests",
+   "tasks": [
+    {
+     "id": "86bcw87e8",
+     "tracker_id": "T1",
+     "name": "First pak: build, cook, pack and install end to end",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 16.0,
+     "url": "https://app.clickup.com/t/86bcw87e8",
+     "updated": 1793591280720,
+     "order": 10001793562335.766
+    },
+    {
+     "id": "86bcw87ea",
+     "tracker_id": "T2",
+     "name": "Ring with a new icon and name as starting gear",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 4.0,
+     "url": "https://app.clickup.com/t/86bcw87ea",
+     "updated": 1793574941354,
+     "order": 10001793562336.027
+    },
+    {
+     "id": "86bcw87eb",
+     "tracker_id": "T3",
+     "name": "Emberline weapon with a real mesh",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 12.0,
+     "url": "https://app.clickup.com/t/86bcw87eb",
+     "updated": 1793574911441,
+     "order": 10001793562336.309
+    },
+    {
+     "id": "86bcw87ed",
+     "tracker_id": "T4",
+     "name": "Loot table injected into a game table",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 4.0,
+     "url": "https://app.clickup.com/t/86bcw87ed",
+     "updated": 1793574928847,
+     "order": 10001793562336.572
+    },
+    {
+     "id": "86bcw87ef",
+     "tracker_id": "T5",
+     "name": "Archetype registered by discovery",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 6.0,
+     "url": "https://app.clickup.com/t/86bcw87ef",
+     "updated": 1793574972254,
+     "order": 10001793562336.814
+    },
+    {
+     "id": "86bcw87eh",
+     "tracker_id": "T6",
+     "name": "One zone with a simple map, then the adventure quest",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 16.0,
+     "url": "https://app.clickup.com/t/86bcw87eh",
+     "updated": 1793586570998,
+     "order": 10001793562337.1
+    },
+    {
+     "id": "86bcw87em",
+     "tracker_id": "T7",
+     "name": "Does buying a gated vendor entry consume the token?",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 3.0,
+     "url": "https://app.clickup.com/t/86bcw87em",
+     "updated": 1793574896300,
+     "order": 10001793562337.367
+    },
+    {
+     "id": "86bcw87en",
+     "tracker_id": "T8",
+     "name": "Does a weapon at +21 keep scaling damage?",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 3.0,
+     "url": "https://app.clickup.com/t/86bcw87en",
+     "updated": 1793574954156,
+     "order": 10001793562337.693
+    },
+    {
+     "id": "86bcw87eq",
+     "tracker_id": "T9",
+     "name": "Verify catalog entries marked verified:false",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 8.0,
+     "url": "https://app.clickup.com/t/86bcw87eq",
+     "updated": 1793591281980,
+     "order": 10001793562337.98
+    },
+    {
+     "id": "86bcwayg0",
+     "tracker_id": null,
+     "name": "Test: a pak-added story quest joins a world slot",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 8.0,
+     "url": "https://app.clickup.com/t/86bcwayg0",
+     "updated": 1793586571208,
+     "order": 10001793586286.41
+    },
+    {
+     "id": "86bcwayg7",
+     "tracker_id": null,
+     "name": "Test: a hidden token item survives a new campaign",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 2.0,
+     "url": "https://app.clickup.com/t/86bcwayg7",
+     "updated": 1793586571039,
+     "order": 10001793586290.904
+    },
+    {
+     "id": "86bcwaygh",
+     "tracker_id": null,
+     "name": "Test: a one-shot story quest rolls once per save",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 3.0,
+     "url": "https://app.clickup.com/t/86bcwaygh",
+     "updated": 1793586571065,
+     "order": 10001793586294.932
+    },
+    {
+     "id": "86bcwaygn",
+     "tracker_id": null,
+     "name": "Test: measure Burning damage per tick in game",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 0.5,
+     "url": "https://app.clickup.com/t/86bcwaygn",
+     "updated": 1793586571041,
+     "order": 10001793586299.23
+    },
+    {
+     "id": "86bcwaygt",
+     "tracker_id": null,
+     "name": "Replace Rem2Proj header stubs with the UE4SS UHT header dump",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 4.0,
+     "url": "https://app.clickup.com/t/86bcwaygt",
+     "updated": 1793586570837,
+     "order": 10001793586303.67
+    }
+   ]
+  },
+  {
+   "id": "901422848632",
+   "name": "Lovecraftian world",
+   "tasks": [
+    {
+     "id": "86bcw888f",
+     "tracker_id": "L1",
+     "name": "Lovecraft: alternative roll for the N'Erud slot",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 12.0,
+     "url": "https://app.clickup.com/t/86bcw888f",
+     "updated": 1793586571157,
+     "order": 10001793562497.104
+    },
+    {
+     "id": "86bcw888g",
+     "tracker_id": "L2",
+     "name": "Lovecraft: story campaign and Adventure option",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 16.0,
+     "url": "https://app.clickup.com/t/86bcw888g",
+     "updated": 1793586571296,
+     "order": 10001793562497.363
+    },
+    {
+     "id": "86bcw888h",
+     "tracker_id": "L3",
+     "name": "Boss: Cthulhu",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 60.0,
+     "url": "https://app.clickup.com/t/86bcw888h",
+     "updated": 1793586413602,
+     "order": 10001793562497.635
+    },
+    {
+     "id": "86bcw888k",
+     "tracker_id": "L4",
+     "name": "Boss: Dagon",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 60.0,
+     "url": "https://app.clickup.com/t/86bcw888k",
+     "updated": 1793565355197,
+     "order": 10001793562497.871
+    },
+    {
+     "id": "86bcw888n",
+     "tracker_id": "L5",
+     "name": "Boss: Shoggoth",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 60.0,
+     "url": "https://app.clickup.com/t/86bcw888n",
+     "updated": 1793586425292,
+     "order": 10001793562498.104
+    },
+    {
+     "id": "86bcw888p",
+     "tracker_id": "L6",
+     "name": "Boss: Shub-Niggurath",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 60.0,
+     "url": "https://app.clickup.com/t/86bcw888p",
+     "updated": 1793586429428,
+     "order": 10001793562498.373
+    },
+    {
+     "id": "86bcw888r",
+     "tracker_id": "L7",
+     "name": "Boss: The Hounds of Tindalos",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 60.0,
+     "url": "https://app.clickup.com/t/86bcw888r",
+     "updated": 1793586432785,
+     "order": 10001793562498.639
+    },
+    {
+     "id": "86bcw888t",
+     "tracker_id": "L8",
+     "name": "Boss: Hastur, the King in Yellow",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 60.0,
+     "url": "https://app.clickup.com/t/86bcw888t",
+     "updated": 1793586417698,
+     "order": 10001793562498.918
+    },
+    {
+     "id": "86bcw888w",
+     "tracker_id": "L9",
+     "name": "Boss: Nyarlathotep",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 60.0,
+     "url": "https://app.clickup.com/t/86bcw888w",
+     "updated": 1793586421691,
+     "order": 10001793562499.146
+    },
+    {
+     "id": "86bcw888x",
+     "tracker_id": "L10",
+     "name": "Boss: Azathoth",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 60.0,
+     "url": "https://app.clickup.com/t/86bcw888x",
+     "updated": 1793565727147,
+     "order": 10001793562499.4
+    },
+    {
+     "id": "86bcw888y",
+     "tracker_id": "L11",
+     "name": "Decide the space-themed boss (drops Hammer of Modulation)",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "url": "https://app.clickup.com/t/86bcw888y",
+     "updated": 1793565727119,
+     "order": 10001793562499.648
+    }
+   ]
+  },
+  {
+   "id": "901422848636",
+   "name": "Hell (Root Earth variant)",
+   "tasks": [
+    {
+     "id": "86bcw88ex",
+     "tracker_id": "H1",
+     "name": "Hell: alternative world for the Root Earth slot",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 12.0,
+     "url": "https://app.clickup.com/t/86bcw88ex",
+     "updated": 1793586372237,
+     "order": 10001793562552.068
+    },
+    {
+     "id": "86bcw88ey",
+     "tracker_id": "H2",
+     "name": "Sin boss: Gluttony",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 60.0,
+     "url": "https://app.clickup.com/t/86bcw88ey",
+     "updated": 1793586571075,
+     "order": 10001793562552.324
+    },
+    {
+     "id": "86bcw88f1",
+     "tracker_id": "H3",
+     "name": "Sin boss: Lust",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 60.0,
+     "url": "https://app.clickup.com/t/86bcw88f1",
+     "updated": 1793586380969,
+     "order": 10001793562552.555
+    },
+    {
+     "id": "86bcw88f2",
+     "tracker_id": "H4",
+     "name": "Sin boss: Sloth",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 60.0,
+     "url": "https://app.clickup.com/t/86bcw88f2",
+     "updated": 1793586384227,
+     "order": 10001793562552.785
+    },
+    {
+     "id": "86bcw88f3",
+     "tracker_id": "H5",
+     "name": "Sin boss: Pride",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 60.0,
+     "url": "https://app.clickup.com/t/86bcw88f3",
+     "updated": 1793586389849,
+     "order": 10001793562553.025
+    },
+    {
+     "id": "86bcw88f4",
+     "tracker_id": "H6",
+     "name": "Sin boss: Greed",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 60.0,
+     "url": "https://app.clickup.com/t/86bcw88f4",
+     "updated": 1793586394105,
+     "order": 10001793562553.293
+    },
+    {
+     "id": "86bcw88f8",
+     "tracker_id": "H7",
+     "name": "Sin boss: Envy",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 60.0,
+     "url": "https://app.clickup.com/t/86bcw88f8",
+     "updated": 1793586397633,
+     "order": 10001793562553.512
+    },
+    {
+     "id": "86bcw88f9",
+     "tracker_id": "H8",
+     "name": "Sin boss: Wrath",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 60.0,
+     "url": "https://app.clickup.com/t/86bcw88f9",
+     "updated": 1793586406106,
+     "order": 10001793562553.756
+    },
+    {
+     "id": "86bcw88fb",
+     "tracker_id": "H9",
+     "name": "Final boss: the demon and its cutscene",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 80.0,
+     "url": "https://app.clickup.com/t/86bcw88fb",
+     "updated": 1793586376287,
+     "order": 10001793562553.98
+    },
+    {
+     "id": "86bcw88fc",
+     "tracker_id": "H10",
+     "name": "Phase two opening: the cards angel's throw",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 16.0,
+     "url": "https://app.clickup.com/t/86bcw88fc",
+     "updated": 1793565368204,
+     "order": 10001793562554.205
+    },
+    {
+     "id": "86bcw88fe",
+     "tracker_id": "H11",
+     "name": "Angel: Winged angel",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 40.0,
+     "url": "https://app.clickup.com/t/86bcw88fe",
+     "updated": 1793565368223,
+     "order": 10001793562554.438
+    },
+    {
+     "id": "86bcw88fg",
+     "tracker_id": "H12",
+     "name": "Angel: Mirror angel",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 40.0,
+     "url": "https://app.clickup.com/t/86bcw88fg",
+     "updated": 1793562554654,
+     "order": 10001793562554.672
+    },
+    {
+     "id": "86bcw88fh",
+     "tracker_id": "H13",
+     "name": "Angel: Cards angel",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 40.0,
+     "url": "https://app.clickup.com/t/86bcw88fh",
+     "updated": 1793565368147,
+     "order": 10001793562554.898
+    },
+    {
+     "id": "86bcw88fj",
+     "tracker_id": "H15",
+     "name": "Arena stage: Slaughterhouse",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 24.0,
+     "url": "https://app.clickup.com/t/86bcw88fj",
+     "updated": 1793562555134,
+     "order": 10001793562555.152
+    },
+    {
+     "id": "86bcw88fn",
+     "tracker_id": "H16",
+     "name": "Arena stage: Frozen mountain",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 24.0,
+     "url": "https://app.clickup.com/t/86bcw88fn",
+     "updated": 1793562555382,
+     "order": 10001793562555.4
+    },
+    {
+     "id": "86bcw88fq",
+     "tracker_id": "H17",
+     "name": "Arena stage: Destroyed moon",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 24.0,
+     "url": "https://app.clickup.com/t/86bcw88fq",
+     "updated": 1793565368217,
+     "order": 10001793562555.611
+    },
+    {
+     "id": "86bcw88fr",
+     "tracker_id": "H18",
+     "name": "Realm-switch timer UI",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 6.0,
+     "url": "https://app.clickup.com/t/86bcw88fr",
+     "updated": 1793562555850,
+     "order": 10001793562555.87
+    },
+    {
+     "id": "86bcw88fu",
+     "tracker_id": "H14",
+     "name": "Angel: Vampiric angel",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 40.0,
+     "url": "https://app.clickup.com/t/86bcw88fu",
+     "updated": 1793562556087,
+     "order": 10001793562556.107
+    }
+   ]
+  },
+  {
+   "id": "901422848642",
+   "name": "Equipment",
+   "tasks": [
+    {
+     "id": "86bcw88t9",
+     "tracker_id": "EQ1",
+     "name": "Masterwork weapons: +21 to +30 (boss weapons +11 to +15)",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 16.0,
+     "url": "https://app.clickup.com/t/86bcw88t9",
+     "updated": 1793586487901,
+     "order": 10001793562627.648
+    },
+    {
+     "id": "86bcw88ta",
+     "tracker_id": "EQ2",
+     "name": "Radar gun with a map side screen",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 30.0,
+     "url": "https://app.clickup.com/t/86bcw88ta",
+     "updated": 1793565390012,
+     "order": 10001793562627.89
+    },
+    {
+     "id": "86bcw88tc",
+     "tracker_id": "EQ3",
+     "name": "Masterwork mutators: levels 11 to 20, gold icon",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 10.0,
+     "url": "https://app.clickup.com/t/86bcw88tc",
+     "updated": 1793562628136,
+     "order": 10001793562628.16
+    },
+    {
+     "id": "86bcw88te",
+     "tracker_id": "EQ4",
+     "name": "Forge armor tiers: base to +10",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 20.0,
+     "url": "https://app.clickup.com/t/86bcw88te",
+     "updated": 1793591246943,
+     "order": 10001793562628.393
+    },
+    {
+     "id": "86bcw88tf",
+     "tracker_id": "EQ5",
+     "name": "Enchanter ring slot on armor (up to 8 rings)",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 30.0,
+     "url": "https://app.clickup.com/t/86bcw88tf",
+     "updated": 1793591246173,
+     "order": 10001793562628.613
+    },
+    {
+     "id": "86bcw88th",
+     "tracker_id": "EQ6",
+     "name": "Corruption-chance ring",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 6.0,
+     "url": "https://app.clickup.com/t/86bcw88th",
+     "updated": 1793562628887,
+     "order": 10001793562628.904
+    },
+    {
+     "id": "86bcw88tm",
+     "tracker_id": "EQ7",
+     "name": "Multi-crit ring",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 16.0,
+     "url": "https://app.clickup.com/t/86bcw88tm",
+     "updated": 1793562629204,
+     "order": 10001793562629.22
+    },
+    {
+     "id": "86bcw88tp",
+     "tracker_id": "EQ8",
+     "name": "Sonar Neckpiece amulet",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 20.0,
+     "url": "https://app.clickup.com/t/86bcw88tp",
+     "updated": 1793565389966,
+     "order": 10001793562629.443
+    },
+    {
+     "id": "86bcw88tq",
+     "tracker_id": "EQ9",
+     "name": "Prism: all fragment pair fusions",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 12.0,
+     "url": "https://app.clickup.com/t/86bcw88tq",
+     "updated": 1793586436749,
+     "order": 10001793562629.678
+    },
+    {
+     "id": "86bcw88tr",
+     "tracker_id": "EQ10",
+     "name": "Prism: level 51 tenth fragment rule",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 16.0,
+     "url": "https://app.clickup.com/t/86bcw88tr",
+     "updated": 1793586570974,
+     "order": 10001793562629.957
+    },
+    {
+     "id": "86bcw88tv",
+     "tracker_id": "EQ11",
+     "name": "Quest books",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 8.0,
+     "url": "https://app.clickup.com/t/86bcw88tv",
+     "updated": 1793586333578,
+     "order": 10001793562630.303
+    },
+    {
+     "id": "86bcw88tw",
+     "tracker_id": "EQ12",
+     "name": "Campaign completion tokens",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 6.0,
+     "url": "https://app.clickup.com/t/86bcw88tw",
+     "updated": 1793591788829,
+     "order": 10001793562630.535
+    },
+    {
+     "id": "86bcw88tx",
+     "tracker_id": "EQ13",
+     "name": "Hammer of Modulation",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 4.0,
+     "url": "https://app.clickup.com/t/86bcw88tx",
+     "updated": 1793562630749,
+     "order": 10001793562630.768
+    },
+    {
+     "id": "86bcw88tz",
+     "tracker_id": "EQ14",
+     "name": "Shard Pouch",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 3.0,
+     "url": "https://app.clickup.com/t/86bcw88tz",
+     "updated": 1793562631003,
+     "order": 10001793562631.021
+    }
+   ]
+  },
+  {
+   "id": "901422848631",
+   "name": "World of Grimm",
+   "tasks": [
+    {
+     "id": "86bcw885b",
+     "tracker_id": "G1",
+     "name": "Grimm: alternative roll for the Yaesha slot",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 12.0,
+     "url": "https://app.clickup.com/t/86bcw885b",
+     "updated": 1793586571219,
+     "order": 10001793562472.525
+    },
+    {
+     "id": "86bcw885d",
+     "tracker_id": "G2",
+     "name": "Grimm: once-only story campaign and Adventure option",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 16.0,
+     "url": "https://app.clickup.com/t/86bcw885d",
+     "updated": 1793586571250,
+     "order": 10001793562472.738
+    },
+    {
+     "id": "86bcw885e",
+     "tracker_id": "G3",
+     "name": "Grimm: world theme and art direction",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 8.0,
+     "url": "https://app.clickup.com/t/86bcw885e",
+     "updated": 1793565355286,
+     "order": 10001793562472.943
+    },
+    {
+     "id": "86bcw885g",
+     "tracker_id": "G4",
+     "name": "Grimm: choose tale dungeons from the 26 tales",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 2.0,
+     "url": "https://app.clickup.com/t/86bcw885g",
+     "updated": 1793586360238,
+     "order": 10001793562473.148
+    },
+    {
+     "id": "86bcw885h",
+     "tracker_id": "G5",
+     "name": "Grimm: choose NPCs, quest items and equipment from the tales",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 4.0,
+     "url": "https://app.clickup.com/t/86bcw885h",
+     "updated": 1793565355201,
+     "order": 10001793562473.312
+    },
+    {
+     "id": "86bcw898a",
+     "tracker_id": null,
+     "name": "The Frog King, or Iron Henry",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": "86bcw885g",
+     "estimate_hours": 0.25,
+     "url": "https://app.clickup.com/t/86bcw898a",
+     "updated": 1793562706807,
+     "order": 10001793562706.84
+    },
+    {
+     "id": "86bcw898b",
+     "tracker_id": null,
+     "name": "The Youth Who Went Forth to Learn What Fear Was",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": "86bcw885g",
+     "estimate_hours": 0.25,
+     "url": "https://app.clickup.com/t/86bcw898b",
+     "updated": 1793562707034,
+     "order": 10001793562707.062
+    },
+    {
+     "id": "86bcw898c",
+     "tracker_id": null,
+     "name": "The Wolf and the Seven Young Goats",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": "86bcw885g",
+     "estimate_hours": 0.25,
+     "url": "https://app.clickup.com/t/86bcw898c",
+     "updated": 1793562707265,
+     "order": 10001793562707.287
+    },
+    {
+     "id": "86bcw898e",
+     "tracker_id": null,
+     "name": "Brother and Sister",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": "86bcw885g",
+     "estimate_hours": 0.25,
+     "url": "https://app.clickup.com/t/86bcw898e",
+     "updated": 1793562707499,
+     "order": 10001793562707.525
+    },
+    {
+     "id": "86bcw898f",
+     "tracker_id": null,
+     "name": "Rapunzel",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": "86bcw885g",
+     "estimate_hours": 0.25,
+     "url": "https://app.clickup.com/t/86bcw898f",
+     "updated": 1793562707730,
+     "order": 10001793562707.754
+    },
+    {
+     "id": "86bcw898h",
+     "tracker_id": null,
+     "name": "Hansel and Gretel",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": "86bcw885g",
+     "estimate_hours": 0.25,
+     "url": "https://app.clickup.com/t/86bcw898h",
+     "updated": 1793562707966,
+     "order": 10001793562707.992
+    },
+    {
+     "id": "86bcw898j",
+     "tracker_id": null,
+     "name": "Cinderella (Aschenputtel)",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": "86bcw885g",
+     "estimate_hours": 0.25,
+     "url": "https://app.clickup.com/t/86bcw898j",
+     "updated": 1793562708240,
+     "order": 10001793562708.26
+    },
+    {
+     "id": "86bcw898m",
+     "tracker_id": null,
+     "name": "Mother Holle",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": "86bcw885g",
+     "estimate_hours": 0.25,
+     "url": "https://app.clickup.com/t/86bcw898m",
+     "updated": 1793562708467,
+     "order": 10001793562708.492
+    },
+    {
+     "id": "86bcw898p",
+     "tracker_id": null,
+     "name": "The Seven Ravens",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": "86bcw885g",
+     "estimate_hours": 0.25,
+     "url": "https://app.clickup.com/t/86bcw898p",
+     "updated": 1793562708808,
+     "order": 10001793562708.838
+    },
+    {
+     "id": "86bcw898r",
+     "tracker_id": null,
+     "name": "Little Red Cap",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": "86bcw885g",
+     "estimate_hours": 0.25,
+     "url": "https://app.clickup.com/t/86bcw898r",
+     "updated": 1793562709021,
+     "order": 10001793562709.047
+    },
+    {
+     "id": "86bcw898t",
+     "tracker_id": null,
+     "name": "The Singing Bone",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": "86bcw885g",
+     "estimate_hours": 0.25,
+     "url": "https://app.clickup.com/t/86bcw898t",
+     "updated": 1793562709236,
+     "order": 10001793562709.285
+    },
+    {
+     "id": "86bcw898u",
+     "tracker_id": null,
+     "name": "The Devil with the Three Golden Hairs",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": "86bcw885g",
+     "estimate_hours": 0.25,
+     "url": "https://app.clickup.com/t/86bcw898u",
+     "updated": 1793562709481,
+     "order": 10001793562709.508
+    },
+    {
+     "id": "86bcw898x",
+     "tracker_id": null,
+     "name": "The Girl Without Hands",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": "86bcw885g",
+     "estimate_hours": 0.25,
+     "url": "https://app.clickup.com/t/86bcw898x",
+     "updated": 1793562709736,
+     "order": 10001793562709.76
+    },
+    {
+     "id": "86bcw898z",
+     "tracker_id": null,
+     "name": "The Robber Bridegroom",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": "86bcw885g",
+     "estimate_hours": 0.25,
+     "url": "https://app.clickup.com/t/86bcw898z",
+     "updated": 1793562709949,
+     "order": 10001793562709.975
+    },
+    {
+     "id": "86bcw8990",
+     "tracker_id": null,
+     "name": "Frau Trude",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": "86bcw885g",
+     "estimate_hours": 0.25,
+     "url": "https://app.clickup.com/t/86bcw8990",
+     "updated": 1793562710163,
+     "order": 10001793562710.186
+    },
+    {
+     "id": "86bcw8992",
+     "tracker_id": null,
+     "name": "Godfather Death",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": "86bcw885g",
+     "estimate_hours": 0.25,
+     "url": "https://app.clickup.com/t/86bcw8992",
+     "updated": 1793562710356,
+     "order": 10001793562710.398
+    },
+    {
+     "id": "86bcw8994",
+     "tracker_id": null,
+     "name": "Fitcher's Bird",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": "86bcw885g",
+     "estimate_hours": 0.25,
+     "url": "https://app.clickup.com/t/86bcw8994",
+     "updated": 1793562710573,
+     "order": 10001793562710.596
+    },
+    {
+     "id": "86bcw8995",
+     "tracker_id": null,
+     "name": "The Juniper Tree",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": "86bcw885g",
+     "estimate_hours": 0.25,
+     "url": "https://app.clickup.com/t/86bcw8995",
+     "updated": 1793562710787,
+     "order": 10001793562710.81
+    },
+    {
+     "id": "86bcw8996",
+     "tracker_id": null,
+     "name": "The Six Swans",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": "86bcw885g",
+     "estimate_hours": 0.25,
+     "url": "https://app.clickup.com/t/86bcw8996",
+     "updated": 1793562711006,
+     "order": 10001793562711.027
+    },
+    {
+     "id": "86bcw8998",
+     "tracker_id": null,
+     "name": "Briar Rose",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": "86bcw885g",
+     "estimate_hours": 0.25,
+     "url": "https://app.clickup.com/t/86bcw8998",
+     "updated": 1793562711201,
+     "order": 10001793562711.223
+    },
+    {
+     "id": "86bcw899a",
+     "tracker_id": null,
+     "name": "Little Snow-White",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": "86bcw885g",
+     "estimate_hours": 0.25,
+     "url": "https://app.clickup.com/t/86bcw899a",
+     "updated": 1793562711403,
+     "order": 10001793562711.426
+    },
+    {
+     "id": "86bcw899b",
+     "tracker_id": null,
+     "name": "Rumpelstiltskin",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": "86bcw885g",
+     "estimate_hours": 0.25,
+     "url": "https://app.clickup.com/t/86bcw899b",
+     "updated": 1793562711597,
+     "order": 10001793562711.621
+    },
+    {
+     "id": "86bcw899c",
+     "tracker_id": null,
+     "name": "The Goose Girl",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": "86bcw885g",
+     "estimate_hours": 0.25,
+     "url": "https://app.clickup.com/t/86bcw899c",
+     "updated": 1793562711827,
+     "order": 10001793562711.85
+    },
+    {
+     "id": "86bcw899d",
+     "tracker_id": null,
+     "name": "Iron John",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": "86bcw885g",
+     "estimate_hours": 0.25,
+     "url": "https://app.clickup.com/t/86bcw899d",
+     "updated": 1793562712029,
+     "order": 10001793562712.049
+    },
+    {
+     "id": "86bcw899g",
+     "tracker_id": null,
+     "name": "The Nixie of the Mill-Pond",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": "86bcw885g",
+     "estimate_hours": 0.25,
+     "url": "https://app.clickup.com/t/86bcw899g",
+     "updated": 1793562712249,
+     "order": 10001793562712.271
+    },
+    {
+     "id": "86bcw899j",
+     "tracker_id": null,
+     "name": "The Pied Piper of Hamelin",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": "86bcw885g",
+     "estimate_hours": 0.25,
+     "url": "https://app.clickup.com/t/86bcw899j",
+     "updated": 1793562712454,
+     "order": 10001793562712.48
+    }
+   ]
+  },
+  {
+   "id": "901422848644",
+   "name": "Interface",
+   "tasks": [
+    {
+     "id": "86bcw88yz",
+     "tracker_id": "I1",
+     "name": "Equipment sort options",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 16.0,
+     "url": "https://app.clickup.com/t/86bcw88yz",
+     "updated": 1793565399808,
+     "order": 10001793562668.436
+    },
+    {
+     "id": "86bcw88z2",
+     "tracker_id": "I2",
+     "name": "Inventory: Completion Tokens section",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 8.0,
+     "url": "https://app.clickup.com/t/86bcw88z2",
+     "updated": 1793565399770,
+     "order": 10001793562668.69
+    },
+    {
+     "id": "86bcw88z5",
+     "tracker_id": "I3",
+     "name": "Quest Books category on the map screen",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 24.0,
+     "url": "https://app.clickup.com/t/86bcw88z5",
+     "updated": 1793562668944,
+     "order": 10001793562668.975
+    },
+    {
+     "id": "86bcw88z6",
+     "tracker_id": "I4",
+     "name": "Character screen: rings beside armor",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 12.0,
+     "url": "https://app.clickup.com/t/86bcw88z6",
+     "updated": 1793562669206,
+     "order": 10001793562669.227
+    },
+    {
+     "id": "86bcw88z8",
+     "tracker_id": "I5",
+     "name": "Traits and archetype screens",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 20.0,
+     "url": "https://app.clickup.com/t/86bcw88z8",
+     "updated": 1793591251326,
+     "order": 10001793562669.445
+    },
+    {
+     "id": "86bcw88za",
+     "tracker_id": "I6",
+     "name": "Radar screen on the radar gun",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 16.0,
+     "url": "https://app.clickup.com/t/86bcw88za",
+     "updated": 1793562669680,
+     "order": 10001793562669.7
+    },
+    {
+     "id": "86bcw88zc",
+     "tracker_id": "I7",
+     "name": "Campaign map: new worlds on the outer circle",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 24.0,
+     "url": "https://app.clickup.com/t/86bcw88zc",
+     "updated": 1793586551364,
+     "order": 10001793562669.951
     }
    ]
   }
