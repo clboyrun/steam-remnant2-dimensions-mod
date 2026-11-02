@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-02T12:16:10+00:00",
+ "generated_at": "2026-11-02T15:33:48+00:00",
  "folder": {
   "id": "90149675055",
   "name": "Dimensions Mod"
@@ -10,14 +10,14 @@
    "color": "#b5bcc2",
    "done": false,
    "open": true,
-   "count": 159
+   "count": 158
   },
   {
    "status": "in process",
    "color": "#ffc53d",
    "done": false,
    "open": false,
-   "count": 2
+   "count": 1
   },
   {
    "status": "problem",
@@ -31,7 +31,7 @@
    "color": "#008844",
    "done": true,
    "open": false,
-   "count": 33
+   "count": 35
   }
  ],
  "lists": [
@@ -49,6 +49,14 @@
      "open": true,
      "parent": null,
      "estimate_hours": 12.0,
+     "waits_on": [
+      "86bcw87ak"
+     ],
+     "links": [
+      "86bcw88ex",
+      "86bcw88zc",
+      "86bcwayg0"
+     ],
      "url": "https://app.clickup.com/t/86bcw88bf",
      "updated": 1793586571289,
      "order": 10001793562521.033
@@ -63,6 +71,10 @@
      "open": true,
      "parent": null,
      "estimate_hours": 30.0,
+     "waits_on": [],
+     "links": [
+      "86bcw88bk"
+     ],
      "url": "https://app.clickup.com/t/86bcw88bh",
      "updated": 1793565368136,
      "order": 10001793562521.316
@@ -77,6 +89,15 @@
      "open": true,
      "parent": null,
      "estimate_hours": 16.0,
+     "waits_on": [
+      "86bcw87ap"
+     ],
+     "links": [
+      "86bcw88bh",
+      "86bcw88bm",
+      "86bcw88bn",
+      "86bcw88bw"
+     ],
      "url": "https://app.clickup.com/t/86bcw88bk",
      "updated": 1793565368194,
      "order": 10001793562521.57
@@ -91,6 +112,12 @@
      "open": true,
      "parent": null,
      "estimate_hours": 12.0,
+     "waits_on": [
+      "86bcw87ap"
+     ],
+     "links": [
+      "86bcw88bk"
+     ],
      "url": "https://app.clickup.com/t/86bcw88bm",
      "updated": 1793562521813,
      "order": 10001793562521.836
@@ -105,6 +132,17 @@
      "open": true,
      "parent": null,
      "estimate_hours": 12.0,
+     "waits_on": [
+      "86bcw87a4"
+     ],
+     "links": [
+      "86bcw88bk",
+      "86bcw88br",
+      "86bcw88bt",
+      "86bcw88bw",
+      "86bcw88bx",
+      "86bcw88by"
+     ],
      "url": "https://app.clickup.com/t/86bcw88bn",
      "updated": 1793586356292,
      "order": 10001793562522.072
@@ -119,6 +157,10 @@
      "open": true,
      "parent": null,
      "estimate_hours": 40.0,
+     "waits_on": [],
+     "links": [
+      "86bcw88bn"
+     ],
      "url": "https://app.clickup.com/t/86bcw88br",
      "updated": 1793562522299,
      "order": 10001793562522.314
@@ -133,6 +175,10 @@
      "open": true,
      "parent": null,
      "estimate_hours": 40.0,
+     "waits_on": [],
+     "links": [
+      "86bcw88bn"
+     ],
      "url": "https://app.clickup.com/t/86bcw88bt",
      "updated": 1793562522547,
      "order": 10001793562522.568
@@ -147,6 +193,11 @@
      "open": true,
      "parent": null,
      "estimate_hours": 30.0,
+     "waits_on": [],
+     "links": [
+      "86bcw88bk",
+      "86bcw88bn"
+     ],
      "url": "https://app.clickup.com/t/86bcw88bw",
      "updated": 1793562522830,
      "order": 10001793562522.865
@@ -161,6 +212,10 @@
      "open": true,
      "parent": null,
      "estimate_hours": 2.0,
+     "waits_on": [],
+     "links": [
+      "86bcw88bn"
+     ],
      "url": "https://app.clickup.com/t/86bcw88bx",
      "updated": 1793562523114,
      "order": 10001793562523.13
@@ -175,6 +230,13 @@
      "open": true,
      "parent": null,
      "estimate_hours": 8.0,
+     "waits_on": [
+      "86bcw87at"
+     ],
+     "links": [
+      "86bcw88bn",
+      "86bcw88c0"
+     ],
      "url": "https://app.clickup.com/t/86bcw88by",
      "updated": 1793565390011,
      "order": 10001793562523.379
@@ -189,6 +251,10 @@
      "open": true,
      "parent": null,
      "estimate_hours": 60.0,
+     "waits_on": [],
+     "links": [
+      "86bcw88by"
+     ],
      "url": "https://app.clickup.com/t/86bcw88c0",
      "updated": 1793562523577,
      "order": 10001793562523.596
@@ -203,6 +269,8 @@
      "open": true,
      "parent": "86bcw88bx",
      "estimate_hours": 0.5,
+     "waits_on": [],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw899n",
      "updated": 1793562713246,
      "order": 10001793562713.271
@@ -217,6 +285,8 @@
      "open": true,
      "parent": "86bcw88bx",
      "estimate_hours": 0.5,
+     "waits_on": [],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw899q",
      "updated": 1793562713581,
      "order": 10001793562713.61
@@ -231,6 +301,8 @@
      "open": true,
      "parent": "86bcw88bx",
      "estimate_hours": 0.5,
+     "waits_on": [],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw899r",
      "updated": 1793562713924,
      "order": 10001793562713.96
@@ -245,6 +317,8 @@
      "open": true,
      "parent": "86bcw88bx",
      "estimate_hours": 0.5,
+     "waits_on": [],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw899v",
      "updated": 1793562714266,
      "order": 10001793562714.291
@@ -259,6 +333,8 @@
      "open": true,
      "parent": "86bcw88bx",
      "estimate_hours": 0.5,
+     "waits_on": [],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw899x",
      "updated": 1793562714558,
      "order": 10001793562714.586
@@ -273,6 +349,8 @@
      "open": true,
      "parent": "86bcw88bx",
      "estimate_hours": 0.5,
+     "waits_on": [],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw89a1",
      "updated": 1793562714836,
      "order": 10001793562714.861
@@ -287,6 +365,8 @@
      "open": true,
      "parent": "86bcw88bx",
      "estimate_hours": 0.5,
+     "waits_on": [],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw89a5",
      "updated": 1793562715110,
      "order": 10001793562715.135
@@ -301,6 +381,8 @@
      "open": true,
      "parent": "86bcw88bx",
      "estimate_hours": 0.5,
+     "waits_on": [],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw89a6",
      "updated": 1793562715423,
      "order": 10001793562715.45
@@ -315,6 +397,8 @@
      "open": true,
      "parent": "86bcw88bx",
      "estimate_hours": 0.5,
+     "waits_on": [],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw89a8",
      "updated": 1793562715784,
      "order": 10001793562715.809
@@ -335,6 +419,21 @@
      "open": true,
      "parent": null,
      "estimate_hours": 40.0,
+     "waits_on": [
+      "86bcw8791"
+     ],
+     "links": [
+      "86bcw87em",
+      "86bcw885h",
+      "86bcw88kz",
+      "86bcw88tv",
+      "86bcw88tw",
+      "86bcw88z5",
+      "86bcw88zt",
+      "86bcw8902",
+      "86bcw8906",
+      "86bcwayg7"
+     ],
      "url": "https://app.clickup.com/t/86bcw88kp",
      "updated": 1793586571090,
      "order": 10001793562587.84
@@ -349,6 +448,16 @@
      "open": true,
      "parent": null,
      "estimate_hours": 16.0,
+     "waits_on": [
+      "86bcw8791"
+     ],
+     "links": [
+      "86bcw88m7",
+      "86bcw88u2",
+      "86bcw88u4",
+      "86bcw8900",
+      "86bcw8906"
+     ],
      "url": "https://app.clickup.com/t/86bcw88kr",
      "updated": 1793586492438,
      "order": 10001793562588.145
@@ -363,6 +472,16 @@
      "open": true,
      "parent": null,
      "estimate_hours": 12.0,
+     "waits_on": [
+      "86bcw8791",
+      "86bcw879z"
+     ],
+     "links": [
+      "86bcw885h",
+      "86bcw88m0",
+      "86bcw88te",
+      "86bcw8906"
+     ],
      "url": "https://app.clickup.com/t/86bcw88kt",
      "updated": 1793591290428,
      "order": 10001793562588.455
@@ -377,6 +496,19 @@
      "open": true,
      "parent": null,
      "estimate_hours": 20.0,
+     "waits_on": [
+      "86bcw8791",
+      "86bcw87a1"
+     ],
+     "links": [
+      "86bcw88m6",
+      "86bcw88t9",
+      "86bcw88tc",
+      "86bcw88th",
+      "86bcw88tm",
+      "86bcw88tz",
+      "86bcw8906"
+     ],
      "url": "https://app.clickup.com/t/86bcw88kv",
      "updated": 1793586501274,
      "order": 10001793562588.713
@@ -391,6 +523,16 @@
      "open": true,
      "parent": null,
      "estimate_hours": 12.0,
+     "waits_on": [
+      "86bcw8791",
+      "86bcw879v",
+      "86bcw879z"
+     ],
+     "links": [
+      "86bcw88m3",
+      "86bcw88tf",
+      "86bcw8906"
+     ],
      "url": "https://app.clickup.com/t/86bcw88kw",
      "updated": 1793591291364,
      "order": 10001793562588.994
@@ -411,6 +553,13 @@
      "open": true,
      "parent": null,
      "estimate_hours": 8.0,
+     "waits_on": [
+      "86bcw879q"
+     ],
+     "links": [
+      "86bcw88kk",
+      "86bcw88zx"
+     ],
      "url": "https://app.clickup.com/t/86bcw88kg",
      "updated": 1793565368194,
      "order": 10001793562586.42
@@ -425,6 +574,14 @@
      "open": true,
      "parent": null,
      "estimate_hours": 16.0,
+     "waits_on": [
+      "86bcw87aj"
+     ],
+     "links": [
+      "86bcw88f1",
+      "86bcw88ke",
+      "86bcwaygn"
+     ],
      "url": "https://app.clickup.com/t/86bcw88kj",
      "updated": 1793591213153,
      "order": 10001793562586.629
@@ -439,6 +596,14 @@
      "open": true,
      "parent": null,
      "estimate_hours": 12.0,
+     "waits_on": [
+      "86bcw87a3",
+      "86bcw87a4"
+     ],
+     "links": [
+      "86bcw88kg",
+      "86bcw88th"
+     ],
      "url": "https://app.clickup.com/t/86bcw88kk",
      "updated": 1793574126786,
      "order": 10001793562586.836
@@ -453,6 +618,12 @@
      "open": true,
      "parent": null,
      "estimate_hours": 16.0,
+     "waits_on": [
+      "86bcw87ax"
+     ],
+     "links": [
+      "86bcw88zc"
+     ],
      "url": "https://app.clickup.com/t/86bcw88km",
      "updated": 1793574126819,
      "order": 10001793562587.06
@@ -467,6 +638,22 @@
      "open": false,
      "parent": null,
      "estimate_hours": 4.0,
+     "waits_on": [
+      "86bcw87aj"
+     ],
+     "links": [
+      "86bcw885e",
+      "86bcw888h",
+      "86bcw888k",
+      "86bcw888n",
+      "86bcw888p",
+      "86bcw888r",
+      "86bcw888t",
+      "86bcw888w",
+      "86bcw888x",
+      "86bcw88ey",
+      "86bcw88kj"
+     ],
      "url": "https://app.clickup.com/t/86bcw88ke",
      "updated": 1793589428359,
      "order": 10001793586552.508
@@ -487,6 +674,14 @@
      "open": true,
      "parent": null,
      "estimate_hours": 16.0,
+     "waits_on": [],
+     "links": [
+      "86bcw885h",
+      "86bcw88kp",
+      "86bcw88m0",
+      "86bcw899c",
+      "86bcwayg7"
+     ],
      "url": "https://app.clickup.com/t/86bcw88kz",
      "updated": 1793586571165,
      "order": 10001793562589.76
@@ -501,6 +696,13 @@
      "open": true,
      "parent": null,
      "estimate_hours": 24.0,
+     "waits_on": [],
+     "links": [
+      "86bcw885b",
+      "86bcw885h",
+      "86bcw88kt",
+      "86bcw88kz"
+     ],
      "url": "https://app.clickup.com/t/86bcw88m0",
      "updated": 1793562590010,
      "order": 10001793562590.035
@@ -515,6 +717,11 @@
      "open": true,
      "parent": null,
      "estimate_hours": 24.0,
+     "waits_on": [],
+     "links": [
+      "86bcw888f",
+      "86bcw88kw"
+     ],
      "url": "https://app.clickup.com/t/86bcw88m3",
      "updated": 1793562590263,
      "order": 10001793562590.285
@@ -529,6 +736,17 @@
      "open": true,
      "parent": null,
      "estimate_hours": 4.0,
+     "waits_on": [
+      "86bcw87a0",
+      "86bcw87ad"
+     ],
+     "links": [
+      "86bcw888y",
+      "86bcw88kv",
+      "86bcw88t9",
+      "86bcw88tc",
+      "86bcw88tx"
+     ],
      "url": "https://app.clickup.com/t/86bcw88m6",
      "updated": 1793565389962,
      "order": 10001793562590.504
@@ -543,6 +761,14 @@
      "open": true,
      "parent": null,
      "estimate_hours": 40.0,
+     "waits_on": [
+      "86bcw879n"
+     ],
+     "links": [
+      "86bcw888f",
+      "86bcw88kr",
+      "86bcw8900"
+     ],
      "url": "https://app.clickup.com/t/86bcw88m7",
      "updated": 1793565389976,
      "order": 10001793562590.754
@@ -557,6 +783,8 @@
      "open": true,
      "parent": "86bcw88m6",
      "estimate_hours": 4.0,
+     "waits_on": [],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw89ac",
      "updated": 1793562716498,
      "order": 10001793562716.523
@@ -571,6 +799,8 @@
      "open": true,
      "parent": "86bcw88m6",
      "estimate_hours": 8.0,
+     "waits_on": [],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw89af",
      "updated": 1793562716746,
      "order": 10001793562716.77
@@ -585,6 +815,8 @@
      "open": true,
      "parent": "86bcw88m6",
      "estimate_hours": 6.0,
+     "waits_on": [],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw89ah",
      "updated": 1793562716978,
      "order": 10001793562717.0
@@ -599,6 +831,8 @@
      "open": true,
      "parent": "86bcw88m6",
      "estimate_hours": 2.0,
+     "waits_on": [],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw89aj",
      "updated": 1793562717195,
      "order": 10001793562717.217
@@ -613,6 +847,8 @@
      "open": true,
      "parent": "86bcw88m6",
      "estimate_hours": 4.0,
+     "waits_on": [],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw89ak",
      "updated": 1793562717386,
      "order": 10001793562717.412
@@ -633,6 +869,11 @@
      "open": true,
      "parent": null,
      "estimate_hours": 2.0,
+     "waits_on": [],
+     "links": [
+      "86bcw87ef",
+      "86bcwayg0"
+     ],
      "url": "https://app.clickup.com/t/86bcw88zj",
      "updated": 1793586571135,
      "order": 10001793562670.752
@@ -647,6 +888,12 @@
      "open": true,
      "parent": null,
      "estimate_hours": 2.0,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "links": [
+      "86bcw87eq"
+     ],
      "url": "https://app.clickup.com/t/86bcw88zp",
      "updated": 1793591259849,
      "order": 10001793562671.08
@@ -661,6 +908,13 @@
      "open": true,
      "parent": null,
      "estimate_hours": 2.0,
+     "waits_on": [
+      "86bcw879h"
+     ],
+     "links": [
+      "86bcw87en",
+      "86bcw88t9"
+     ],
      "url": "https://app.clickup.com/t/86bcw88zq",
      "updated": 1793574822394,
      "order": 10001793562671.375
@@ -675,6 +929,11 @@
      "open": true,
      "parent": null,
      "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [
+      "86bcw87em",
+      "86bcw88kp"
+     ],
      "url": "https://app.clickup.com/t/86bcw88zt",
      "updated": 1793574678476,
      "order": 10001793562671.656
@@ -689,6 +948,13 @@
      "open": true,
      "parent": null,
      "estimate_hours": 3.0,
+     "waits_on": [
+      "86bcw8796"
+     ],
+     "links": [
+      "86bcw88u2",
+      "86bcw88u6"
+     ],
      "url": "https://app.clickup.com/t/86bcw88zu",
      "updated": 1793586471891,
      "order": 10001793562671.965
@@ -703,6 +969,10 @@
      "open": true,
      "parent": null,
      "estimate_hours": 0.5,
+     "waits_on": [],
+     "links": [
+      "86bcw88kg"
+     ],
      "url": "https://app.clickup.com/t/86bcw88zx",
      "updated": 1793562672234,
      "order": 10001793562672.25
@@ -717,6 +987,14 @@
      "open": true,
      "parent": null,
      "estimate_hours": 4.0,
+     "waits_on": [
+      "86bcw8792"
+     ],
+     "links": [
+      "86bcw88te",
+      "86bcw88tr",
+      "86bcw88yz"
+     ],
      "url": "https://app.clickup.com/t/86bcw8905",
      "updated": 1793574806385,
      "order": 10001793562673.041
@@ -731,6 +1009,16 @@
      "open": true,
      "parent": null,
      "estimate_hours": 4.0,
+     "waits_on": [
+      "86bcw8791"
+     ],
+     "links": [
+      "86bcw88kp",
+      "86bcw88kr",
+      "86bcw88kt",
+      "86bcw88kv",
+      "86bcw88kw"
+     ],
      "url": "https://app.clickup.com/t/86bcw8906",
      "updated": 1793586509061,
      "order": 10001793562673.334
@@ -745,6 +1033,12 @@
      "open": true,
      "parent": null,
      "estimate_hours": 6.0,
+     "waits_on": [],
+     "links": [
+      "86bcw88yz",
+      "86bcw88z2",
+      "86bcw88z8"
+     ],
      "url": "https://app.clickup.com/t/86bcw8909",
      "updated": 1793574699034,
      "order": 10001793562673.604
@@ -759,6 +1053,10 @@
      "open": true,
      "parent": null,
      "estimate_hours": 3.0,
+     "waits_on": [],
+     "links": [
+      "86bcw87e8"
+     ],
      "url": "https://app.clickup.com/t/86bcw890a",
      "updated": 1793574693730,
      "order": 10001793562673.893
@@ -773,6 +1071,14 @@
      "open": false,
      "parent": null,
      "estimate_hours": 4.0,
+     "waits_on": [
+      "86bcw8792"
+     ],
+     "links": [
+      "86bcw88tq",
+      "86bcw88tr",
+      "86bcwaygt"
+     ],
      "url": "https://app.clickup.com/t/86bcw890d",
      "updated": 1793589508062,
      "order": 10001793586718.72
@@ -787,6 +1093,12 @@
      "open": false,
      "parent": null,
      "estimate_hours": 3.0,
+     "waits_on": [],
+     "links": [
+      "86bcw88kp",
+      "86bcw88tw",
+      "86bcwayg7"
+     ],
      "url": "https://app.clickup.com/t/86bcw8902",
      "updated": 1793589462696,
      "order": 10001793586725.006
@@ -801,6 +1113,11 @@
      "open": false,
      "parent": null,
      "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [
+      "86bcw88kr",
+      "86bcw88m7"
+     ],
      "url": "https://app.clickup.com/t/86bcw8900",
      "updated": 1793591821376,
      "order": 10001793591821.426
@@ -815,6 +1132,10 @@
      "open": false,
      "parent": null,
      "estimate_hours": 0.5,
+     "waits_on": [],
+     "links": [
+      "86bcw88ub"
+     ],
      "url": "https://app.clickup.com/t/86bcwayhu",
      "updated": 1793592005413,
      "order": 10001793592005.465
@@ -835,6 +1156,17 @@
      "open": true,
      "parent": null,
      "estimate_hours": 30.0,
+     "waits_on": [
+      "86bcw8796"
+     ],
+     "links": [
+      "86bcw88kr",
+      "86bcw88u4",
+      "86bcw88u6",
+      "86bcw88ua",
+      "86bcw88ub",
+      "86bcw88zu"
+     ],
      "url": "https://app.clickup.com/t/86bcw88u2",
      "updated": 1793586450696,
      "order": 10001793562631.764
@@ -849,6 +1181,14 @@
      "open": true,
      "parent": null,
      "estimate_hours": 20.0,
+     "waits_on": [
+      "86bcw8796"
+     ],
+     "links": [
+      "86bcw88kr",
+      "86bcw88u2",
+      "86bcw88u9"
+     ],
      "url": "https://app.clickup.com/t/86bcw88u4",
      "updated": 1793586454223,
      "order": 10001793562632.035
@@ -863,6 +1203,16 @@
      "open": true,
      "parent": null,
      "estimate_hours": 16.0,
+     "waits_on": [
+      "86bcw8796",
+      "86bcw8799"
+     ],
+     "links": [
+      "86bcw88u2",
+      "86bcw88ub",
+      "86bcw88z8",
+      "86bcw88zu"
+     ],
      "url": "https://app.clickup.com/t/86bcw88u6",
      "updated": 1793591240263,
      "order": 10001793562632.297
@@ -877,6 +1227,13 @@
      "open": true,
      "parent": null,
      "estimate_hours": 40.0,
+     "waits_on": [
+      "86bcw8796"
+     ],
+     "links": [
+      "86bcw88u4",
+      "86bcw88z8"
+     ],
      "url": "https://app.clickup.com/t/86bcw88u9",
      "updated": 1793586457919,
      "order": 10001793562632.518
@@ -891,6 +1248,12 @@
      "open": true,
      "parent": null,
      "estimate_hours": 6.0,
+     "waits_on": [
+      "86bcw8796"
+     ],
+     "links": [
+      "86bcw88u2"
+     ],
      "url": "https://app.clickup.com/t/86bcw88ua",
      "updated": 1793586462543,
      "order": 10001793562632.746
@@ -905,6 +1268,16 @@
      "open": true,
      "parent": null,
      "estimate_hours": 16.0,
+     "waits_on": [
+      "86bcw8796",
+      "86bcw8799"
+     ],
+     "links": [
+      "86bcw88u2",
+      "86bcw88u6",
+      "86bcw88z8",
+      "86bcwayhu"
+     ],
      "url": "https://app.clickup.com/t/86bcw88ub",
      "updated": 1793591241502,
      "order": 10001793562632.99
@@ -919,6 +1292,8 @@
      "open": true,
      "parent": "86bcw88ua",
      "estimate_hours": 16.0,
+     "waits_on": [],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw89aq",
      "updated": 1793562718193,
      "order": 10001793562718.22
@@ -933,6 +1308,8 @@
      "open": true,
      "parent": "86bcw88ua",
      "estimate_hours": 22.0,
+     "waits_on": [],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw89ax",
      "updated": 1793562718468,
      "order": 10001793562718.502
@@ -947,6 +1324,8 @@
      "open": true,
      "parent": "86bcw88ua",
      "estimate_hours": 16.0,
+     "waits_on": [],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw89ay",
      "updated": 1793562718724,
      "order": 10001793562718.748
@@ -967,6 +1346,10 @@
      "open": true,
      "parent": null,
      "estimate_hours": 1.0,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw879u",
      "updated": 1793591268122,
      "order": 10001793562313.438
@@ -981,6 +1364,10 @@
      "open": true,
      "parent": null,
      "estimate_hours": 1.0,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw87a3",
      "updated": 1793591270821,
      "order": 10001793562314.764
@@ -995,6 +1382,10 @@
      "open": true,
      "parent": null,
      "estimate_hours": 1.0,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw87a4",
      "updated": 1793591272894,
      "order": 10001793562314.941
@@ -1009,23 +1400,13 @@
      "open": true,
      "parent": null,
      "estimate_hours": 1.0,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw87ab",
      "updated": 1793591272259,
      "order": 10001793562315.498
-    },
-    {
-     "id": "86bcw87ak",
-     "tracker_id": "E29",
-     "name": "#29 Losomn's world setup and its campaign slot",
-     "status": "to do",
-     "status_color": "#b5bcc2",
-     "done": false,
-     "open": true,
-     "parent": null,
-     "estimate_hours": 1.0,
-     "url": "https://app.clickup.com/t/86bcw87ak",
-     "updated": 1793591275790,
-     "order": 10001793562316.08
     },
     {
      "id": "86bcw87at",
@@ -1037,6 +1418,10 @@
      "open": true,
      "parent": null,
      "estimate_hours": 1.0,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw87at",
      "updated": 1793591276900,
      "order": 10001793562316.658
@@ -1051,6 +1436,10 @@
      "open": true,
      "parent": null,
      "estimate_hours": 1.5,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw87av",
      "updated": 1793591277584,
      "order": 10001793562316.86
@@ -1065,6 +1454,10 @@
      "open": false,
      "parent": null,
      "estimate_hours": 1.0,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw87an",
      "updated": 1793589439909,
      "order": 10001793586552.566
@@ -1079,6 +1472,10 @@
      "open": false,
      "parent": null,
      "estimate_hours": 1.0,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw879z",
      "updated": 1793589443071,
      "order": 10001793586552.611
@@ -1093,6 +1490,8 @@
      "open": false,
      "parent": null,
      "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw878v",
      "updated": 1793589445416,
      "order": 10001793586552.916
@@ -1107,6 +1506,12 @@
      "open": false,
      "parent": null,
      "estimate_hours": 1.0,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "links": [
+      "86bcwaygn"
+     ],
      "url": "https://app.clickup.com/t/86bcw87aj",
      "updated": 1793589428359,
      "order": 10001793586714.965
@@ -1121,6 +1526,10 @@
      "open": false,
      "parent": null,
      "estimate_hours": 0.5,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw879t",
      "updated": 1793589428359,
      "order": 10001793586716.553
@@ -1135,6 +1544,10 @@
      "open": false,
      "parent": null,
      "estimate_hours": 2.0,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw8796",
      "updated": 1793589428359,
      "order": 10001793586717.963
@@ -1149,6 +1562,10 @@
      "open": false,
      "parent": null,
      "estimate_hours": 1.0,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw878w",
      "updated": 1793589428359,
      "order": 10001793586719.432
@@ -1163,6 +1580,10 @@
      "open": false,
      "parent": null,
      "estimate_hours": 1.0,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw8791",
      "updated": 1793589466188,
      "order": 10001793586727.16
@@ -1177,6 +1598,10 @@
      "open": false,
      "parent": null,
      "estimate_hours": 2.0,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw8792",
      "updated": 1793589472369,
      "order": 10001793586731.898
@@ -1191,6 +1616,10 @@
      "open": false,
      "parent": null,
      "estimate_hours": 0.5,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw8799",
      "updated": 1793589479890,
      "order": 10001793589133.836
@@ -1205,6 +1634,10 @@
      "open": false,
      "parent": null,
      "estimate_hours": 0.5,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw879c",
      "updated": 1793589486313,
      "order": 10001793589192.34
@@ -1219,6 +1652,10 @@
      "open": false,
      "parent": null,
      "estimate_hours": 0.5,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw879e",
      "updated": 1793589490960,
      "order": 10001793589301.336
@@ -1233,6 +1670,10 @@
      "open": false,
      "parent": null,
      "estimate_hours": 1.0,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw879v",
      "updated": 1793589599699,
      "order": 10001793589383.623
@@ -1247,6 +1688,10 @@
      "open": false,
      "parent": null,
      "estimate_hours": 1.0,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw879w",
      "updated": 1793589498566,
      "order": 10001793589408.365
@@ -1261,6 +1706,10 @@
      "open": false,
      "parent": null,
      "estimate_hours": 0.5,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw87a9",
      "updated": 1793589778887,
      "order": 10001793589778.951
@@ -1275,6 +1724,10 @@
      "open": false,
      "parent": null,
      "estimate_hours": 0.5,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw879k",
      "updated": 1793590234744,
      "order": 10001793590234.807
@@ -1289,23 +1742,13 @@
      "open": false,
      "parent": null,
      "estimate_hours": 1.0,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw879m",
      "updated": 1793590295925,
      "order": 10001793590296.004
-    },
-    {
-     "id": "86bcwayh3",
-     "tracker_id": null,
-     "name": "#35 PrismStone limits read live in UE4SS",
-     "status": "in process",
-     "status_color": "#ffc53d",
-     "done": false,
-     "open": false,
-     "parent": null,
-     "estimate_hours": 0.5,
-     "url": "https://app.clickup.com/t/86bcwayh3",
-     "updated": 1793590359909,
-     "order": 10001793590359.967
     },
     {
      "id": "86bcwayhj",
@@ -1317,6 +1760,8 @@
      "open": false,
      "parent": null,
      "estimate_hours": 0.5,
+     "waits_on": [],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcwayhj",
      "updated": 1793591066507,
      "order": 10001793591066.58
@@ -1331,6 +1776,10 @@
      "open": false,
      "parent": null,
      "estimate_hours": 1.0,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw87a7",
      "updated": 1793591137543,
      "order": 10001793591137.605
@@ -1345,6 +1794,10 @@
      "open": false,
      "parent": null,
      "estimate_hours": 0.5,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw87a2",
      "updated": 1793615135960,
      "order": 10001793615136.045
@@ -1359,6 +1812,10 @@
      "open": false,
      "parent": null,
      "estimate_hours": 1.0,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw879q",
      "updated": 1793615141972,
      "order": 10001793615142.03
@@ -1373,6 +1830,10 @@
      "open": false,
      "parent": null,
      "estimate_hours": 0.5,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw87ad",
      "updated": 1793615157464,
      "order": 10001793615155.793
@@ -1387,6 +1848,10 @@
      "open": false,
      "parent": null,
      "estimate_hours": 0.5,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw87a0",
      "updated": 1793615171150,
      "order": 10001793615168.066
@@ -1401,6 +1866,10 @@
      "open": false,
      "parent": null,
      "estimate_hours": 1.0,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw879h",
      "updated": 1793615181195,
      "order": 10001793615181.326
@@ -1415,6 +1884,10 @@
      "open": false,
      "parent": null,
      "estimate_hours": 1.0,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw879n",
      "updated": 1793615186611,
      "order": 10001793615186.666
@@ -1429,6 +1902,10 @@
      "open": false,
      "parent": null,
      "estimate_hours": 1.0,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw87a1",
      "updated": 1793615197520,
      "order": 10001793615194.062
@@ -1443,6 +1920,10 @@
      "open": false,
      "parent": null,
      "estimate_hours": 1.0,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw87ap",
      "updated": 1793615216818,
      "order": 10001793615213.623
@@ -1457,9 +1938,47 @@
      "open": false,
      "parent": null,
      "estimate_hours": 1.0,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw87ax",
      "updated": 1793615226637,
      "order": 10001793615223.498
+    },
+    {
+     "id": "86bcwayh3",
+     "tracker_id": null,
+     "name": "#35 PrismStone limits read live in UE4SS",
+     "status": "complete",
+     "status_color": "#008844",
+     "done": true,
+     "open": false,
+     "parent": null,
+     "estimate_hours": 0.5,
+     "waits_on": [],
+     "links": [],
+     "url": "https://app.clickup.com/t/86bcwayh3",
+     "updated": 1793632941476,
+     "order": 10001793632941.537
+    },
+    {
+     "id": "86bcw87ak",
+     "tracker_id": "E29",
+     "name": "#29 Losomn's world setup and its campaign slot",
+     "status": "complete",
+     "status_color": "#008844",
+     "done": true,
+     "open": false,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "links": [],
+     "url": "https://app.clickup.com/t/86bcw87ak",
+     "updated": 1793633038158,
+     "order": 10001793632977.2
     }
    ]
   },
@@ -1477,6 +1996,13 @@
      "open": true,
      "parent": null,
      "estimate_hours": 16.0,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "links": [
+      "86bcw890a",
+      "86bcwaygt"
+     ],
      "url": "https://app.clickup.com/t/86bcw87e8",
      "updated": 1793591280720,
      "order": 10001793562335.766
@@ -1491,6 +2017,10 @@
      "open": true,
      "parent": null,
      "estimate_hours": 4.0,
+     "waits_on": [
+      "86bcw87e8"
+     ],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw87ea",
      "updated": 1793574941354,
      "order": 10001793562336.027
@@ -1505,6 +2035,12 @@
      "open": true,
      "parent": null,
      "estimate_hours": 12.0,
+     "waits_on": [
+      "86bcw87e8"
+     ],
+     "links": [
+      "86bcw88t9"
+     ],
      "url": "https://app.clickup.com/t/86bcw87eb",
      "updated": 1793574911441,
      "order": 10001793562336.309
@@ -1519,6 +2055,10 @@
      "open": true,
      "parent": null,
      "estimate_hours": 4.0,
+     "waits_on": [
+      "86bcw87e8"
+     ],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw87ed",
      "updated": 1793574928847,
      "order": 10001793562336.572
@@ -1533,6 +2073,12 @@
      "open": true,
      "parent": null,
      "estimate_hours": 6.0,
+     "waits_on": [
+      "86bcw87e8"
+     ],
+     "links": [
+      "86bcw88zj"
+     ],
      "url": "https://app.clickup.com/t/86bcw87ef",
      "updated": 1793574972254,
      "order": 10001793562336.814
@@ -1547,6 +2093,14 @@
      "open": true,
      "parent": null,
      "estimate_hours": 16.0,
+     "waits_on": [
+      "86bcw87e8"
+     ],
+     "links": [
+      "86bcw885b",
+      "86bcwayg0",
+      "86bcwaygn"
+     ],
      "url": "https://app.clickup.com/t/86bcw87eh",
      "updated": 1793586570998,
      "order": 10001793562337.1
@@ -1561,6 +2115,13 @@
      "open": true,
      "parent": null,
      "estimate_hours": 3.0,
+     "waits_on": [
+      "86bcw87e8"
+     ],
+     "links": [
+      "86bcw88kp",
+      "86bcw88zt"
+     ],
      "url": "https://app.clickup.com/t/86bcw87em",
      "updated": 1793574896300,
      "order": 10001793562337.367
@@ -1575,6 +2136,13 @@
      "open": true,
      "parent": null,
      "estimate_hours": 3.0,
+     "waits_on": [
+      "86bcw87e8"
+     ],
+     "links": [
+      "86bcw88t9",
+      "86bcw88zq"
+     ],
      "url": "https://app.clickup.com/t/86bcw87en",
      "updated": 1793574954156,
      "order": 10001793562337.693
@@ -1589,6 +2157,12 @@
      "open": true,
      "parent": null,
      "estimate_hours": 8.0,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "links": [
+      "86bcw88zp"
+     ],
      "url": "https://app.clickup.com/t/86bcw87eq",
      "updated": 1793591281980,
      "order": 10001793562337.98
@@ -1603,6 +2177,16 @@
      "open": true,
      "parent": null,
      "estimate_hours": 8.0,
+     "waits_on": [
+      "86bcw87e8"
+     ],
+     "links": [
+      "86bcw87eh",
+      "86bcw885b",
+      "86bcw888f",
+      "86bcw88bf",
+      "86bcw88zj"
+     ],
      "url": "https://app.clickup.com/t/86bcwayg0",
      "updated": 1793586571208,
      "order": 10001793586286.41
@@ -1617,6 +2201,15 @@
      "open": true,
      "parent": null,
      "estimate_hours": 2.0,
+     "waits_on": [
+      "86bcw87e8"
+     ],
+     "links": [
+      "86bcw88kp",
+      "86bcw88kz",
+      "86bcw88tw",
+      "86bcw8902"
+     ],
      "url": "https://app.clickup.com/t/86bcwayg7",
      "updated": 1793586571039,
      "order": 10001793586290.904
@@ -1631,6 +2224,13 @@
      "open": true,
      "parent": null,
      "estimate_hours": 3.0,
+     "waits_on": [
+      "86bcw87e8"
+     ],
+     "links": [
+      "86bcw885d",
+      "86bcw888g"
+     ],
      "url": "https://app.clickup.com/t/86bcwaygh",
      "updated": 1793586571065,
      "order": 10001793586294.932
@@ -1645,6 +2245,15 @@
      "open": true,
      "parent": null,
      "estimate_hours": 0.5,
+     "waits_on": [
+      "86bcw87e8"
+     ],
+     "links": [
+      "86bcw87aj",
+      "86bcw87eh",
+      "86bcw88f9",
+      "86bcw88kj"
+     ],
      "url": "https://app.clickup.com/t/86bcwaygn",
      "updated": 1793586571041,
      "order": 10001793586299.23
@@ -1659,6 +2268,11 @@
      "open": true,
      "parent": null,
      "estimate_hours": 4.0,
+     "waits_on": [],
+     "links": [
+      "86bcw87e8",
+      "86bcw890d"
+     ],
      "url": "https://app.clickup.com/t/86bcwaygt",
      "updated": 1793586570837,
      "order": 10001793586303.67
@@ -1679,6 +2293,17 @@
      "open": true,
      "parent": null,
      "estimate_hours": 12.0,
+     "waits_on": [
+      "86bcw878w"
+     ],
+     "links": [
+      "86bcw885b",
+      "86bcw888g",
+      "86bcw88m3",
+      "86bcw88m7",
+      "86bcw88zc",
+      "86bcwayg0"
+     ],
      "url": "https://app.clickup.com/t/86bcw888f",
      "updated": 1793586571157,
      "order": 10001793562497.104
@@ -1693,6 +2318,15 @@
      "open": true,
      "parent": null,
      "estimate_hours": 16.0,
+     "waits_on": [
+      "86bcw878w"
+     ],
+     "links": [
+      "86bcw885b",
+      "86bcw885d",
+      "86bcw888f",
+      "86bcwaygh"
+     ],
      "url": "https://app.clickup.com/t/86bcw888g",
      "updated": 1793586571296,
      "order": 10001793562497.363
@@ -1707,6 +2341,12 @@
      "open": true,
      "parent": null,
      "estimate_hours": 60.0,
+     "waits_on": [
+      "86bcw87aj"
+     ],
+     "links": [
+      "86bcw88ke"
+     ],
      "url": "https://app.clickup.com/t/86bcw888h",
      "updated": 1793586413602,
      "order": 10001793562497.635
@@ -1721,6 +2361,12 @@
      "open": true,
      "parent": null,
      "estimate_hours": 60.0,
+     "waits_on": [
+      "86bcw87aj"
+     ],
+     "links": [
+      "86bcw88ke"
+     ],
      "url": "https://app.clickup.com/t/86bcw888k",
      "updated": 1793565355197,
      "order": 10001793562497.871
@@ -1735,6 +2381,12 @@
      "open": true,
      "parent": null,
      "estimate_hours": 60.0,
+     "waits_on": [
+      "86bcw87aj"
+     ],
+     "links": [
+      "86bcw88ke"
+     ],
      "url": "https://app.clickup.com/t/86bcw888n",
      "updated": 1793586425292,
      "order": 10001793562498.104
@@ -1749,6 +2401,12 @@
      "open": true,
      "parent": null,
      "estimate_hours": 60.0,
+     "waits_on": [
+      "86bcw87aj"
+     ],
+     "links": [
+      "86bcw88ke"
+     ],
      "url": "https://app.clickup.com/t/86bcw888p",
      "updated": 1793586429428,
      "order": 10001793562498.373
@@ -1763,6 +2421,13 @@
      "open": true,
      "parent": null,
      "estimate_hours": 60.0,
+     "waits_on": [
+      "86bcw87aj"
+     ],
+     "links": [
+      "86bcw88ey",
+      "86bcw88ke"
+     ],
      "url": "https://app.clickup.com/t/86bcw888r",
      "updated": 1793586432785,
      "order": 10001793562498.639
@@ -1777,6 +2442,12 @@
      "open": true,
      "parent": null,
      "estimate_hours": 60.0,
+     "waits_on": [
+      "86bcw87aj"
+     ],
+     "links": [
+      "86bcw88ke"
+     ],
      "url": "https://app.clickup.com/t/86bcw888t",
      "updated": 1793586417698,
      "order": 10001793562498.918
@@ -1791,6 +2462,12 @@
      "open": true,
      "parent": null,
      "estimate_hours": 60.0,
+     "waits_on": [
+      "86bcw87aj"
+     ],
+     "links": [
+      "86bcw88ke"
+     ],
      "url": "https://app.clickup.com/t/86bcw888w",
      "updated": 1793586421691,
      "order": 10001793562499.146
@@ -1805,6 +2482,13 @@
      "open": true,
      "parent": null,
      "estimate_hours": 60.0,
+     "waits_on": [
+      "86bcw87aj"
+     ],
+     "links": [
+      "86bcw888y",
+      "86bcw88ke"
+     ],
      "url": "https://app.clickup.com/t/86bcw888x",
      "updated": 1793565727147,
      "order": 10001793562499.4
@@ -1819,6 +2503,12 @@
      "open": true,
      "parent": null,
      "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [
+      "86bcw888x",
+      "86bcw88m6",
+      "86bcw88tx"
+     ],
      "url": "https://app.clickup.com/t/86bcw888y",
      "updated": 1793565727119,
      "order": 10001793562499.648
@@ -1839,6 +2529,13 @@
      "open": true,
      "parent": null,
      "estimate_hours": 12.0,
+     "waits_on": [
+      "86bcw87an"
+     ],
+     "links": [
+      "86bcw88bf",
+      "86bcw88zc"
+     ],
      "url": "https://app.clickup.com/t/86bcw88ex",
      "updated": 1793586372237,
      "order": 10001793562552.068
@@ -1853,6 +2550,13 @@
      "open": true,
      "parent": null,
      "estimate_hours": 60.0,
+     "waits_on": [
+      "86bcw87aj"
+     ],
+     "links": [
+      "86bcw888r",
+      "86bcw88ke"
+     ],
      "url": "https://app.clickup.com/t/86bcw88ey",
      "updated": 1793586571075,
      "order": 10001793562552.324
@@ -1867,6 +2571,12 @@
      "open": true,
      "parent": null,
      "estimate_hours": 60.0,
+     "waits_on": [
+      "86bcw87aj"
+     ],
+     "links": [
+      "86bcw88kj"
+     ],
      "url": "https://app.clickup.com/t/86bcw88f1",
      "updated": 1793586380969,
      "order": 10001793562552.555
@@ -1881,6 +2591,10 @@
      "open": true,
      "parent": null,
      "estimate_hours": 60.0,
+     "waits_on": [
+      "86bcw87aj"
+     ],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw88f2",
      "updated": 1793586384227,
      "order": 10001793562552.785
@@ -1895,6 +2609,10 @@
      "open": true,
      "parent": null,
      "estimate_hours": 60.0,
+     "waits_on": [
+      "86bcw87aj"
+     ],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw88f3",
      "updated": 1793586389849,
      "order": 10001793562553.025
@@ -1909,6 +2627,10 @@
      "open": true,
      "parent": null,
      "estimate_hours": 60.0,
+     "waits_on": [
+      "86bcw87aj"
+     ],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw88f4",
      "updated": 1793586394105,
      "order": 10001793562553.293
@@ -1923,6 +2645,10 @@
      "open": true,
      "parent": null,
      "estimate_hours": 60.0,
+     "waits_on": [
+      "86bcw87aj"
+     ],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw88f8",
      "updated": 1793586397633,
      "order": 10001793562553.512
@@ -1937,6 +2663,12 @@
      "open": true,
      "parent": null,
      "estimate_hours": 60.0,
+     "waits_on": [
+      "86bcw87aj"
+     ],
+     "links": [
+      "86bcwaygn"
+     ],
      "url": "https://app.clickup.com/t/86bcw88f9",
      "updated": 1793586406106,
      "order": 10001793562553.756
@@ -1951,6 +2683,14 @@
      "open": true,
      "parent": null,
      "estimate_hours": 80.0,
+     "waits_on": [],
+     "links": [
+      "86bcw88fc",
+      "86bcw88fj",
+      "86bcw88fn",
+      "86bcw88fq",
+      "86bcw88fu"
+     ],
      "url": "https://app.clickup.com/t/86bcw88fb",
      "updated": 1793586376287,
      "order": 10001793562553.98
@@ -1965,6 +2705,14 @@
      "open": true,
      "parent": null,
      "estimate_hours": 16.0,
+     "waits_on": [],
+     "links": [
+      "86bcw88fb",
+      "86bcw88fe",
+      "86bcw88fg",
+      "86bcw88fh",
+      "86bcw88fu"
+     ],
      "url": "https://app.clickup.com/t/86bcw88fc",
      "updated": 1793565368204,
      "order": 10001793562554.205
@@ -1979,6 +2727,11 @@
      "open": true,
      "parent": null,
      "estimate_hours": 40.0,
+     "waits_on": [],
+     "links": [
+      "86bcw88fc",
+      "86bcw88fq"
+     ],
      "url": "https://app.clickup.com/t/86bcw88fe",
      "updated": 1793565368223,
      "order": 10001793562554.438
@@ -1993,6 +2746,10 @@
      "open": true,
      "parent": null,
      "estimate_hours": 40.0,
+     "waits_on": [],
+     "links": [
+      "86bcw88fc"
+     ],
      "url": "https://app.clickup.com/t/86bcw88fg",
      "updated": 1793562554654,
      "order": 10001793562554.672
@@ -2007,6 +2764,11 @@
      "open": true,
      "parent": null,
      "estimate_hours": 40.0,
+     "waits_on": [],
+     "links": [
+      "86bcw88fc",
+      "86bcw88fr"
+     ],
      "url": "https://app.clickup.com/t/86bcw88fh",
      "updated": 1793565368147,
      "order": 10001793562554.898
@@ -2021,6 +2783,10 @@
      "open": true,
      "parent": null,
      "estimate_hours": 24.0,
+     "waits_on": [],
+     "links": [
+      "86bcw88fb"
+     ],
      "url": "https://app.clickup.com/t/86bcw88fj",
      "updated": 1793562555134,
      "order": 10001793562555.152
@@ -2035,6 +2801,10 @@
      "open": true,
      "parent": null,
      "estimate_hours": 24.0,
+     "waits_on": [],
+     "links": [
+      "86bcw88fb"
+     ],
      "url": "https://app.clickup.com/t/86bcw88fn",
      "updated": 1793562555382,
      "order": 10001793562555.4
@@ -2049,6 +2819,12 @@
      "open": true,
      "parent": null,
      "estimate_hours": 24.0,
+     "waits_on": [],
+     "links": [
+      "86bcw88fb",
+      "86bcw88fe",
+      "86bcw88fu"
+     ],
      "url": "https://app.clickup.com/t/86bcw88fq",
      "updated": 1793565368217,
      "order": 10001793562555.611
@@ -2063,6 +2839,10 @@
      "open": true,
      "parent": null,
      "estimate_hours": 6.0,
+     "waits_on": [],
+     "links": [
+      "86bcw88fh"
+     ],
      "url": "https://app.clickup.com/t/86bcw88fr",
      "updated": 1793562555850,
      "order": 10001793562555.87
@@ -2077,6 +2857,12 @@
      "open": true,
      "parent": null,
      "estimate_hours": 40.0,
+     "waits_on": [],
+     "links": [
+      "86bcw88fb",
+      "86bcw88fc",
+      "86bcw88fq"
+     ],
      "url": "https://app.clickup.com/t/86bcw88fu",
      "updated": 1793562556087,
      "order": 10001793562556.107
@@ -2097,6 +2883,16 @@
      "open": true,
      "parent": null,
      "estimate_hours": 16.0,
+     "waits_on": [
+      "86bcw879h"
+     ],
+     "links": [
+      "86bcw87eb",
+      "86bcw87en",
+      "86bcw88kv",
+      "86bcw88m6",
+      "86bcw88zq"
+     ],
      "url": "https://app.clickup.com/t/86bcw88t9",
      "updated": 1793586487901,
      "order": 10001793562627.648
@@ -2111,6 +2907,13 @@
      "open": true,
      "parent": null,
      "estimate_hours": 30.0,
+     "waits_on": [
+      "86bcw879u"
+     ],
+     "links": [
+      "86bcw88tp",
+      "86bcw88za"
+     ],
      "url": "https://app.clickup.com/t/86bcw88ta",
      "updated": 1793565390012,
      "order": 10001793562627.89
@@ -2125,6 +2928,13 @@
      "open": true,
      "parent": null,
      "estimate_hours": 10.0,
+     "waits_on": [
+      "86bcw879k"
+     ],
+     "links": [
+      "86bcw88kv",
+      "86bcw88m6"
+     ],
      "url": "https://app.clickup.com/t/86bcw88tc",
      "updated": 1793562628136,
      "order": 10001793562628.16
@@ -2139,6 +2949,14 @@
      "open": true,
      "parent": null,
      "estimate_hours": 20.0,
+     "waits_on": [
+      "86bcw879m",
+      "86bcw879z"
+     ],
+     "links": [
+      "86bcw88kt",
+      "86bcw8905"
+     ],
      "url": "https://app.clickup.com/t/86bcw88te",
      "updated": 1793591246943,
      "order": 10001793562628.393
@@ -2153,6 +2971,14 @@
      "open": true,
      "parent": null,
      "estimate_hours": 30.0,
+     "waits_on": [
+      "86bcw879v",
+      "86bcw879z"
+     ],
+     "links": [
+      "86bcw88kw",
+      "86bcw88z6"
+     ],
      "url": "https://app.clickup.com/t/86bcw88tf",
      "updated": 1793591246173,
      "order": 10001793562628.613
@@ -2167,6 +2993,14 @@
      "open": true,
      "parent": null,
      "estimate_hours": 6.0,
+     "waits_on": [
+      "86bcw87a1",
+      "86bcw87a3"
+     ],
+     "links": [
+      "86bcw88kk",
+      "86bcw88kv"
+     ],
      "url": "https://app.clickup.com/t/86bcw88th",
      "updated": 1793562628887,
      "order": 10001793562628.904
@@ -2181,6 +3015,12 @@
      "open": true,
      "parent": null,
      "estimate_hours": 16.0,
+     "waits_on": [
+      "86bcw87a1"
+     ],
+     "links": [
+      "86bcw88kv"
+     ],
      "url": "https://app.clickup.com/t/86bcw88tm",
      "updated": 1793562629204,
      "order": 10001793562629.22
@@ -2195,6 +3035,13 @@
      "open": true,
      "parent": null,
      "estimate_hours": 20.0,
+     "waits_on": [
+      "86bcw879u"
+     ],
+     "links": [
+      "86bcw88ta",
+      "86bcw88za"
+     ],
      "url": "https://app.clickup.com/t/86bcw88tp",
      "updated": 1793565389966,
      "order": 10001793562629.443
@@ -2209,6 +3056,13 @@
      "open": true,
      "parent": null,
      "estimate_hours": 12.0,
+     "waits_on": [
+      "86bcw8792"
+     ],
+     "links": [
+      "86bcw88tr",
+      "86bcw890d"
+     ],
      "url": "https://app.clickup.com/t/86bcw88tq",
      "updated": 1793586436749,
      "order": 10001793562629.678
@@ -2223,6 +3077,15 @@
      "open": true,
      "parent": null,
      "estimate_hours": 16.0,
+     "waits_on": [
+      "86bcw8792",
+      "86bcwayh3"
+     ],
+     "links": [
+      "86bcw88tq",
+      "86bcw8905",
+      "86bcw890d"
+     ],
      "url": "https://app.clickup.com/t/86bcw88tr",
      "updated": 1793586570974,
      "order": 10001793562629.957
@@ -2237,6 +3100,12 @@
      "open": true,
      "parent": null,
      "estimate_hours": 8.0,
+     "waits_on": [],
+     "links": [
+      "86bcw88kp",
+      "86bcw88tw",
+      "86bcw88z5"
+     ],
      "url": "https://app.clickup.com/t/86bcw88tv",
      "updated": 1793586333578,
      "order": 10001793562630.303
@@ -2251,6 +3120,14 @@
      "open": true,
      "parent": null,
      "estimate_hours": 6.0,
+     "waits_on": [],
+     "links": [
+      "86bcw88kp",
+      "86bcw88tv",
+      "86bcw88z2",
+      "86bcw8902",
+      "86bcwayg7"
+     ],
      "url": "https://app.clickup.com/t/86bcw88tw",
      "updated": 1793591788829,
      "order": 10001793562630.535
@@ -2265,6 +3142,11 @@
      "open": true,
      "parent": null,
      "estimate_hours": 4.0,
+     "waits_on": [],
+     "links": [
+      "86bcw888y",
+      "86bcw88m6"
+     ],
      "url": "https://app.clickup.com/t/86bcw88tx",
      "updated": 1793562630749,
      "order": 10001793562630.768
@@ -2279,6 +3161,12 @@
      "open": true,
      "parent": null,
      "estimate_hours": 3.0,
+     "waits_on": [
+      "86bcw87a2"
+     ],
+     "links": [
+      "86bcw88kv"
+     ],
      "url": "https://app.clickup.com/t/86bcw88tz",
      "updated": 1793562631003,
      "order": 10001793562631.021
@@ -2299,6 +3187,18 @@
      "open": true,
      "parent": null,
      "estimate_hours": 12.0,
+     "waits_on": [
+      "86bcw878w"
+     ],
+     "links": [
+      "86bcw87eh",
+      "86bcw885d",
+      "86bcw888f",
+      "86bcw888g",
+      "86bcw88m0",
+      "86bcw88zc",
+      "86bcwayg0"
+     ],
      "url": "https://app.clickup.com/t/86bcw885b",
      "updated": 1793586571219,
      "order": 10001793562472.525
@@ -2313,6 +3213,14 @@
      "open": true,
      "parent": null,
      "estimate_hours": 16.0,
+     "waits_on": [
+      "86bcw878w"
+     ],
+     "links": [
+      "86bcw885b",
+      "86bcw888g",
+      "86bcwaygh"
+     ],
      "url": "https://app.clickup.com/t/86bcw885d",
      "updated": 1793586571250,
      "order": 10001793562472.738
@@ -2327,6 +3235,11 @@
      "open": true,
      "parent": null,
      "estimate_hours": 8.0,
+     "waits_on": [],
+     "links": [
+      "86bcw885g",
+      "86bcw88ke"
+     ],
      "url": "https://app.clickup.com/t/86bcw885e",
      "updated": 1793565355286,
      "order": 10001793562472.943
@@ -2341,6 +3254,11 @@
      "open": true,
      "parent": null,
      "estimate_hours": 2.0,
+     "waits_on": [],
+     "links": [
+      "86bcw885e",
+      "86bcw885h"
+     ],
      "url": "https://app.clickup.com/t/86bcw885g",
      "updated": 1793586360238,
      "order": 10001793562473.148
@@ -2355,6 +3273,14 @@
      "open": true,
      "parent": null,
      "estimate_hours": 4.0,
+     "waits_on": [],
+     "links": [
+      "86bcw885g",
+      "86bcw88kp",
+      "86bcw88kt",
+      "86bcw88kz",
+      "86bcw88m0"
+     ],
      "url": "https://app.clickup.com/t/86bcw885h",
      "updated": 1793565355201,
      "order": 10001793562473.312
@@ -2369,6 +3295,8 @@
      "open": true,
      "parent": "86bcw885g",
      "estimate_hours": 0.25,
+     "waits_on": [],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw898a",
      "updated": 1793562706807,
      "order": 10001793562706.84
@@ -2383,6 +3311,8 @@
      "open": true,
      "parent": "86bcw885g",
      "estimate_hours": 0.25,
+     "waits_on": [],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw898b",
      "updated": 1793562707034,
      "order": 10001793562707.062
@@ -2397,6 +3327,8 @@
      "open": true,
      "parent": "86bcw885g",
      "estimate_hours": 0.25,
+     "waits_on": [],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw898c",
      "updated": 1793562707265,
      "order": 10001793562707.287
@@ -2411,6 +3343,8 @@
      "open": true,
      "parent": "86bcw885g",
      "estimate_hours": 0.25,
+     "waits_on": [],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw898e",
      "updated": 1793562707499,
      "order": 10001793562707.525
@@ -2425,6 +3359,8 @@
      "open": true,
      "parent": "86bcw885g",
      "estimate_hours": 0.25,
+     "waits_on": [],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw898f",
      "updated": 1793562707730,
      "order": 10001793562707.754
@@ -2439,6 +3375,8 @@
      "open": true,
      "parent": "86bcw885g",
      "estimate_hours": 0.25,
+     "waits_on": [],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw898h",
      "updated": 1793562707966,
      "order": 10001793562707.992
@@ -2453,6 +3391,8 @@
      "open": true,
      "parent": "86bcw885g",
      "estimate_hours": 0.25,
+     "waits_on": [],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw898j",
      "updated": 1793562708240,
      "order": 10001793562708.26
@@ -2467,6 +3407,8 @@
      "open": true,
      "parent": "86bcw885g",
      "estimate_hours": 0.25,
+     "waits_on": [],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw898m",
      "updated": 1793562708467,
      "order": 10001793562708.492
@@ -2481,6 +3423,8 @@
      "open": true,
      "parent": "86bcw885g",
      "estimate_hours": 0.25,
+     "waits_on": [],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw898p",
      "updated": 1793562708808,
      "order": 10001793562708.838
@@ -2495,6 +3439,8 @@
      "open": true,
      "parent": "86bcw885g",
      "estimate_hours": 0.25,
+     "waits_on": [],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw898r",
      "updated": 1793562709021,
      "order": 10001793562709.047
@@ -2509,6 +3455,8 @@
      "open": true,
      "parent": "86bcw885g",
      "estimate_hours": 0.25,
+     "waits_on": [],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw898t",
      "updated": 1793562709236,
      "order": 10001793562709.285
@@ -2523,6 +3471,8 @@
      "open": true,
      "parent": "86bcw885g",
      "estimate_hours": 0.25,
+     "waits_on": [],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw898u",
      "updated": 1793562709481,
      "order": 10001793562709.508
@@ -2537,6 +3487,8 @@
      "open": true,
      "parent": "86bcw885g",
      "estimate_hours": 0.25,
+     "waits_on": [],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw898x",
      "updated": 1793562709736,
      "order": 10001793562709.76
@@ -2551,6 +3503,8 @@
      "open": true,
      "parent": "86bcw885g",
      "estimate_hours": 0.25,
+     "waits_on": [],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw898z",
      "updated": 1793562709949,
      "order": 10001793562709.975
@@ -2565,6 +3519,8 @@
      "open": true,
      "parent": "86bcw885g",
      "estimate_hours": 0.25,
+     "waits_on": [],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw8990",
      "updated": 1793562710163,
      "order": 10001793562710.186
@@ -2579,6 +3535,8 @@
      "open": true,
      "parent": "86bcw885g",
      "estimate_hours": 0.25,
+     "waits_on": [],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw8992",
      "updated": 1793562710356,
      "order": 10001793562710.398
@@ -2593,6 +3551,8 @@
      "open": true,
      "parent": "86bcw885g",
      "estimate_hours": 0.25,
+     "waits_on": [],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw8994",
      "updated": 1793562710573,
      "order": 10001793562710.596
@@ -2607,6 +3567,8 @@
      "open": true,
      "parent": "86bcw885g",
      "estimate_hours": 0.25,
+     "waits_on": [],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw8995",
      "updated": 1793562710787,
      "order": 10001793562710.81
@@ -2621,6 +3583,8 @@
      "open": true,
      "parent": "86bcw885g",
      "estimate_hours": 0.25,
+     "waits_on": [],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw8996",
      "updated": 1793562711006,
      "order": 10001793562711.027
@@ -2635,6 +3599,8 @@
      "open": true,
      "parent": "86bcw885g",
      "estimate_hours": 0.25,
+     "waits_on": [],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw8998",
      "updated": 1793562711201,
      "order": 10001793562711.223
@@ -2649,6 +3615,8 @@
      "open": true,
      "parent": "86bcw885g",
      "estimate_hours": 0.25,
+     "waits_on": [],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw899a",
      "updated": 1793562711403,
      "order": 10001793562711.426
@@ -2663,6 +3631,8 @@
      "open": true,
      "parent": "86bcw885g",
      "estimate_hours": 0.25,
+     "waits_on": [],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw899b",
      "updated": 1793562711597,
      "order": 10001793562711.621
@@ -2677,6 +3647,10 @@
      "open": true,
      "parent": "86bcw885g",
      "estimate_hours": 0.25,
+     "waits_on": [],
+     "links": [
+      "86bcw88kz"
+     ],
      "url": "https://app.clickup.com/t/86bcw899c",
      "updated": 1793562711827,
      "order": 10001793562711.85
@@ -2691,6 +3665,8 @@
      "open": true,
      "parent": "86bcw885g",
      "estimate_hours": 0.25,
+     "waits_on": [],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw899d",
      "updated": 1793562712029,
      "order": 10001793562712.049
@@ -2705,6 +3681,8 @@
      "open": true,
      "parent": "86bcw885g",
      "estimate_hours": 0.25,
+     "waits_on": [],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw899g",
      "updated": 1793562712249,
      "order": 10001793562712.271
@@ -2719,6 +3697,8 @@
      "open": true,
      "parent": "86bcw885g",
      "estimate_hours": 0.25,
+     "waits_on": [],
+     "links": [],
      "url": "https://app.clickup.com/t/86bcw899j",
      "updated": 1793562712454,
      "order": 10001793562712.48
@@ -2739,6 +3719,13 @@
      "open": true,
      "parent": null,
      "estimate_hours": 8.0,
+     "waits_on": [
+      "86bcw879e"
+     ],
+     "links": [
+      "86bcw88tw",
+      "86bcw8909"
+     ],
      "url": "https://app.clickup.com/t/86bcw88z2",
      "updated": 1793619048455,
      "order": 10001793562668.69
@@ -2753,6 +3740,15 @@
      "open": true,
      "parent": null,
      "estimate_hours": 24.0,
+     "waits_on": [
+      "86bcw87a7",
+      "86bcw87a9",
+      "86bcw87ab"
+     ],
+     "links": [
+      "86bcw88kp",
+      "86bcw88tv"
+     ],
      "url": "https://app.clickup.com/t/86bcw88z5",
      "updated": 1793562668944,
      "order": 10001793562668.975
@@ -2767,6 +3763,12 @@
      "open": true,
      "parent": null,
      "estimate_hours": 12.0,
+     "waits_on": [
+      "86bcw879w"
+     ],
+     "links": [
+      "86bcw88tf"
+     ],
      "url": "https://app.clickup.com/t/86bcw88z6",
      "updated": 1793562669206,
      "order": 10001793562669.227
@@ -2781,6 +3783,16 @@
      "open": true,
      "parent": null,
      "estimate_hours": 20.0,
+     "waits_on": [
+      "86bcw8796",
+      "86bcw8799"
+     ],
+     "links": [
+      "86bcw88u6",
+      "86bcw88u9",
+      "86bcw88ub",
+      "86bcw8909"
+     ],
      "url": "https://app.clickup.com/t/86bcw88z8",
      "updated": 1793591251326,
      "order": 10001793562669.445
@@ -2795,6 +3807,13 @@
      "open": true,
      "parent": null,
      "estimate_hours": 16.0,
+     "waits_on": [
+      "86bcw879u"
+     ],
+     "links": [
+      "86bcw88ta",
+      "86bcw88tp"
+     ],
      "url": "https://app.clickup.com/t/86bcw88za",
      "updated": 1793562669680,
      "order": 10001793562669.7
@@ -2809,6 +3828,16 @@
      "open": true,
      "parent": null,
      "estimate_hours": 24.0,
+     "waits_on": [
+      "86bcw87av"
+     ],
+     "links": [
+      "86bcw885b",
+      "86bcw888f",
+      "86bcw88bf",
+      "86bcw88ex",
+      "86bcw88km"
+     ],
      "url": "https://app.clickup.com/t/86bcw88zc",
      "updated": 1793586551364,
      "order": 10001793562669.951
@@ -2823,6 +3852,13 @@
      "open": false,
      "parent": null,
      "estimate_hours": 16.0,
+     "waits_on": [
+      "86bcw879c"
+     ],
+     "links": [
+      "86bcw8905",
+      "86bcw8909"
+     ],
      "url": "https://app.clickup.com/t/86bcw88yz",
      "updated": 1793616572224,
      "order": 10001793616572.283
