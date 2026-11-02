@@ -3,6 +3,7 @@
 This branch is the project's public status page:
 https://clboyrun.github.io/steam-remnant2-dimensions-mod/
 
+- `about.html`: a poster-style About page that lists what the mod adds (planned features from the design doc). Linked from the status page.
 - `index.html`: the page. It reads `status.json`, so the ClickUp token never reaches the browser.
 - `status.json`: the latest snapshot of the ClickUp tasks in the **Remnant 2 Dimensions** folder. Don't edit it by
   hand; the "Status page" GitHub Action rewrites it every hour.
