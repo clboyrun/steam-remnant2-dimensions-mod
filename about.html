@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About Dimensions</title>
+<meta name="description" content="What the Remnant 2 Dimensions mod adds: four new worlds, five Ward 13 NPCs, late-game upgrades and new progression. All planned, in development.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Barlow+Condensed:wght@500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0e0c0b; --bg2: #171412; --panel: #1c1815; --line: #3a322b; --text: #efe7dc; --muted: #a89c8d;
+  --ember: #e0754f; --gold: #d8b25a;
+  --grimm: #8db36f; --deep: #3fb8aa; --arcade: #ec5bd6; --hell: #e5452f;
+  --display: "Cinzel", Georgia, serif;
+  --label: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --body: "Source Serif 4", Georgia, serif;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { background: var(--bg); overflow-x: clip; }
+body { overflow-x: clip; margin: 0; background: var(--bg); color: var(--text); font: 17px/1.55 var(--body); -webkit-font-smoothing: antialiased; }
+a { color: var(--ember); }
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
+
+/* top bar */
+.top { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 16px 0;
+  font: 600 14px/1 var(--label); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.top a { color: var(--muted); text-decoration: none; }
+.top a:hover { color: var(--text); }
+
+/* hero */
+.hero { position: relative; display: grid; grid-template-columns: minmax(0,1.25fr) minmax(0,.75fr); gap: 32px; align-items: center;
+  padding: 40px 0 56px; border-bottom: 1px solid var(--line); }
+.hero::before { content: ""; position: absolute; inset: -40px -20vw 0; z-index: -1;
+  background: radial-gradient(60% 70% at 72% 45%, rgba(224,117,79,.18), transparent 70%); }
+.kicker { font: 700 15px/1 var(--label); letter-spacing: .3em; text-transform: uppercase; color: var(--ember); margin: 0 0 18px; }
+h1 { font: 900 clamp(42px, 7.2vw, 88px)/.9 var(--display); letter-spacing: .02em; margin: 0; text-transform: uppercase;
+  background: linear-gradient(180deg, #fff3e6 0%, #e7c9a8 55%, #b4673f 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.tag { font: 500 clamp(20px, 2.6vw, 28px)/1.25 var(--display); margin: 20px 0 22px; color: var(--text); max-width: 30ch; }
+.lede { color: var(--muted); max-width: 52ch; margin: 0 0 24px; }
+.stamp { display: inline-flex; gap: 10px; align-items: center; border: 1.5px solid var(--ember); color: var(--ember);
+  padding: 7px 14px; font: 700 14px/1 var(--label); letter-spacing: .2em; text-transform: uppercase; transform: rotate(-2deg); }
+.stamp::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--ember); box-shadow: 0 0 10px var(--ember); }
+.ring { width: 100%; max-width: 440px; justify-self: center; }
+.ring text { font-family: var(--label); font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+
+/* stat strip */
+.stats { display: grid; grid-template-columns: repeat(6, 1fr); border-bottom: 1px solid var(--line); }
+.stat { padding: 22px 12px; text-align: center; border-right: 1px solid var(--line); }
+.stat:last-child { border-right: 0; }
+.stat b { display: block; font: 900 clamp(30px, 4vw, 44px)/1 var(--display); color: var(--gold); }
+.stat span { display: block; margin-top: 8px; font: 600 13px/1.2 var(--label); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+
+/* sections */
+section { padding: 64px 0 8px; }
+.sh { display: flex; align-items: baseline; gap: 16px; margin-bottom: 8px; }
+.sh .n { font: 700 15px/1 var(--label); letter-spacing: .2em; color: var(--ember); }
+h2 { font: 700 clamp(30px, 4.4vw, 46px)/1.05 var(--display); margin: 0; text-transform: uppercase; letter-spacing: .03em; }
+.intro { color: var(--muted); max-width: 64ch; margin: 8px 0 28px; }
+
+/* world cards */
+.worlds { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.world { --c: var(--ember); position: relative; overflow: hidden; background: var(--panel); border: 1px solid var(--line);
+  border-top: 4px solid var(--c); padding: 24px 24px 22px; }
+.world::after { content: ""; position: absolute; right: -60px; top: -60px; width: 220px; height: 220px; border-radius: 50%;
+  background: radial-gradient(circle, color-mix(in srgb, var(--c) 28%, transparent), transparent 70%); pointer-events: none; }
+.world.grimm { --c: var(--grimm); } .world.deep { --c: var(--deep); } .world.arcade { --c: var(--arcade); } .world.hell { --c: var(--hell); }
+.slot { font: 700 13px/1 var(--label); letter-spacing: .18em; text-transform: uppercase; color: var(--c); }
+.world h3 { font: 700 28px/1.1 var(--display); margin: 10px 0 10px; }
+.world p { margin: 0 0 14px; color: #d9cfc2; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; list-style: none; }
+.chips li { font: 600 14px/1 var(--label); letter-spacing: .06em; padding: 6px 9px; border: 1px solid var(--line); background: var(--bg2); color: var(--text); }
+.chips li i { font-style: normal; color: var(--c, var(--muted)); }
+.fine { font: 600 13px/1.3 var(--label); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin: 14px 0 0; }
+.also { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 16px; }
+.mini { background: var(--bg2); border: 1px solid var(--line); padding: 18px 20px; }
+.mini h4 { font: 700 20px/1.2 var(--display); margin: 0 0 6px; }
+.mini p { margin: 0; color: var(--muted); font-size: 16px; }
+.mini .k { font: 700 12px/1 var(--label); letter-spacing: .2em; text-transform: uppercase; color: var(--ember); display: block; margin-bottom: 8px; }
+
+/* NPC roster */
+.roster { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; border: 1px solid var(--line); }
+.npc { padding: 22px 18px; border-right: 1px solid var(--line); background: var(--panel); }
+.npc:last-child { border-right: 0; }
+.npc .sigil { width: 44px; height: 44px; margin-bottom: 14px; }
+.npc h3 { font: 700 21px/1.15 var(--display); margin: 0 0 4px; }
+.npc .role { font: 700 13px/1.2 var(--label); letter-spacing: .14em; text-transform: uppercase; color: var(--gold); margin: 0 0 10px; }
+.npc p { margin: 0 0 10px; font-size: 15.5px; color: #d9cfc2; }
+.npc .from { font: 600 13px/1.3 var(--label); letter-spacing: .08em; color: var(--muted); margin: 0; }
+
+/* gear */
+.gear { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.g { background: var(--panel); border: 1px solid var(--line); padding: 22px; }
+.g .big { font: 900 44px/1 var(--display); color: var(--gold); margin: 0 0 4px; }
+.g .big small { font: 700 16px/1 var(--label); letter-spacing: .14em; color: var(--muted); margin-left: 6px; text-transform: uppercase; }
+.g h3 { font: 700 20px/1.2 var(--display); margin: 8px 0 8px; }
+.g p { margin: 0; color: #d9cfc2; font-size: 16px; }
+.g.wide { grid-column: span 2; }
+
+/* progression ladder */
+.ladder { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border: 1px solid var(--line); }
+.rung { padding: 24px; background: var(--panel); border-right: 1px solid var(--line); position: relative; }
+.rung:last-child { border-right: 0; }
+.rung .tier { font: 900 30px/1 var(--display); margin: 0 0 12px; }
+.rung .tier em { font-style: normal; color: #9fb0c4; }
+.rung p { margin: 0 0 8px; color: #d9cfc2; font-size: 16px; }
+.dots { display: flex; gap: 6px; margin-top: 12px; }
+.dots span { width: 12px; height: 12px; border-radius: 50%; border: 1.5px solid var(--muted); }
+.dots span.p { background: #9fb0c4; border-color: #9fb0c4; }
+.dots span.f { background: var(--gold); border-color: var(--gold); }
+.side { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 16px; }
+
+/* interface list */
+.ui { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 32px; }
+.ui div { padding: 16px 0; border-top: 1px solid var(--line); }
+.ui h3 { font: 700 19px/1.2 var(--display); margin: 0 0 4px; }
+.ui p { margin: 0; color: var(--muted); font-size: 16px; }
+
+/* footer flyer strip */
+.foot { margin: 72px 0 0; border-top: 1px solid var(--line); background: var(--bg2); }
+.foot .wrap { display: grid; grid-template-columns: 1.3fr 1fr; gap: 32px; padding-top: 36px; padding-bottom: 44px; }
+.foot h2 { font-size: 28px; }
+.foot p { color: var(--muted); margin: 10px 0 0; }
+.foot ul { margin: 0; padding: 0; list-style: none; font: 600 16px/1.4 var(--label); letter-spacing: .06em; }
+.foot li { padding: 9px 0; border-bottom: 1px solid var(--line); }
+.foot li:last-child { border-bottom: 0; }
+.cta { display: inline-block; margin-top: 18px; background: var(--ember); color: #1a0f0a; text-decoration: none;
+  font: 700 15px/1 var(--label); letter-spacing: .18em; text-transform: uppercase; padding: 13px 18px; }
+.cta:hover { background: #f08a63; }
+
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; padding-top: 16px; }
+  .ring { max-width: 360px; order: -1; }
+  .stats { grid-template-columns: repeat(3, 1fr); }
+  .stat:nth-child(3) { border-right: 0; }
+  .stat:nth-child(-n+3) { border-bottom: 1px solid var(--line); }
+  .roster { grid-template-columns: repeat(2, 1fr); }
+  .npc { border-bottom: 1px solid var(--line); }
+  .npc:nth-child(2n) { border-right: 0; }
+  .npc:last-child { grid-column: span 2; border-bottom: 0; }
+  .gear, .also { grid-template-columns: 1fr 1fr; }
+  .g.wide { grid-column: span 2; }
+  .foot .wrap { grid-template-columns: 1fr; }
+}
+@media (max-width: 620px) {
+  body { font-size: 16px; }
+  .worlds, .gear, .also, .ladder, .side, .ui, .roster { grid-template-columns: 1fr; }
+  .g.wide, .npc:last-child { grid-column: auto; }
+  .npc, .rung { border-right: 0; border-bottom: 1px solid var(--line); }
+  .rung:last-child, .npc:last-child { border-bottom: 0; }
+  .stats { grid-template-columns: repeat(2, 1fr); }
+  .stat { border-bottom: 1px solid var(--line); }
+  .stat:nth-child(3) { border-right: 1px solid var(--line); }
+  .stat:nth-child(2n) { border-right: 0; }
+  .stat:nth-last-child(-n+2) { border-bottom: 0; }
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <nav class="top">
+    <span>Remnant 2 mod</span>
+    <a href="./">Project status →</a>
+  </nav>
+
+  <header class="hero">
+    <div>
+      <p class="kicker">A Remnant 2 content mod</p>
+      <h1>Dimensions</h1>
+      <p class="tag">Four new worlds. Five new allies in Ward&nbsp;13. A late game that keeps going.</p>
+      <p class="lede">Dimensions adds new worlds, campaigns, gear, NPCs and progression to Remnant 2, built as a single pak with no runtime scripting. Everything below is planned and in development.</p>
+      <span class="stamp">In development</span>
+    </div>
+
+    <svg class="ring" viewBox="-70 0 540 400" role="img" aria-label="Campaign map: the four base worlds in the inner circle, the four new worlds on an outer ring around them">
+      <defs>
+        <radialGradient id="core" cx="50%" cy="50%" r="50%">
+          <stop offset="0" stop-color="#e0754f" stop-opacity=".55"/>
+          <stop offset="1" stop-color="#e0754f" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <circle cx="200" cy="200" r="70" fill="url(#core)"/>
+      <!-- outer arcs: new worlds -->
+      <g fill="none" stroke-width="16">
+        <circle cx="200" cy="200" r="170" stroke="#8db36f" stroke-dasharray="237 831.1" transform="rotate(-130 200 200)"/>
+        <circle cx="200" cy="200" r="170" stroke="#3fb8aa" stroke-dasharray="237 831.1" transform="rotate(-40 200 200)"/>
+        <circle cx="200" cy="200" r="170" stroke="#ec5bd6" stroke-dasharray="237 831.1" transform="rotate(50 200 200)"/>
+        <circle cx="200" cy="200" r="170" stroke="#e5452f" stroke-dasharray="237 831.1" transform="rotate(140 200 200)"/>
+      </g>
+      <circle cx="200" cy="200" r="150" fill="none" stroke="#3a322b" stroke-dasharray="2 6"/>
+      <!-- inner: base worlds -->
+      <circle cx="200" cy="200" r="104" fill="#171412" stroke="#3a322b"/>
+      <g stroke="#3a322b"><line x1="200" y1="96" x2="200" y2="304"/><line x1="96" y1="200" x2="304" y2="200"/></g>
+      <g fill="#a89c8d" font-size="13" text-anchor="middle">
+        <text x="200" y="152">Yaesha</text>
+        <text x="252" y="205">N'Erud</text>
+        <text x="200" y="258">Losomn</text>
+        <text x="148" y="205">Root Earth</text>
+      </g>
+      <circle cx="200" cy="200" r="6" fill="#e0754f"/>
+      <g font-size="14">
+        <text x="200" y="14" text-anchor="middle" fill="#8db36f">Grimm</text>
+        <text x="384" y="205" fill="#3fb8aa">Lovecraft</text>
+        <text x="200" y="397" text-anchor="middle" fill="#ec5bd6">Arcade</text>
+        <text x="16" y="205" text-anchor="end" fill="#e5452f">Hell</text>
+      </g>
+    </svg>
+  </header>
+</div>
+
+<div class="wrap">
+  <div class="stats">
+    <div class="stat"><b>4</b><span>New worlds</span></div>
+    <div class="stat"><b>5</b><span>Ward 13 NPCs</span></div>
+    <div class="stat"><b>+30</b><span>Weapon levels</span></div>
+    <div class="stat"><b>8</b><span>Ring slots</span></div>
+    <div class="stat"><b>990</b><span>Prism fusion pairs</span></div>
+    <div class="stat"><b>5th</b><span>Difficulty</span></div>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <section id="worlds">
+    <div class="sh"><span class="n">01</span><h2>New worlds</h2></div>
+    <p class="intro">Each new world is an extra roll for one of the base campaign's slots. The base worlds stay in the pool. Each is also a harder story campaign you can pick once, and an Adventure option. They stay hidden until your character finishes a campaign, then appear on an outer ring of the world map.</p>
+
+    <div class="worlds">
+      <article class="world grimm">
+        <span class="slot">Rolls in Yaesha's slot</span>
+        <h3>World of Grimm</h3>
+        <p>The Brothers Grimm the way they first wrote it down. Rotting half-timbered villages, mills, wells and towers in a deep German forest, full of bargains, curses and hunger.</p>
+        <ul class="chips">
+          <li><i>26</i> tales as dungeon ideas</li><li>Hansel and Gretel</li><li>Fitcher's Bird</li><li>The Juniper Tree</li><li>The Pied Piper</li>
+        </ul>
+        <p class="fine">Bleeding · Curse · Ravenous · Madness</p>
+      </article>
+
+      <article class="world deep">
+        <span class="slot">Rolls in N'Erud's slot</span>
+        <h3>The Lovecraftian World</h3>
+        <p>A world built on the Cthulhu mythos, where the bosses are Great Old Ones and Outer Gods, each carrying its own blight.</p>
+        <ul class="chips">
+          <li>Cthulhu</li><li>Dagon</li><li>Shoggoth</li><li>Shub-Niggurath</li><li>Hounds of Tindalos</li><li>Hastur</li><li>Nyarlathotep</li><li>Azathoth</li>
+        </ul>
+        <p class="fine">Madness · Corroded · Ravenous · Overloaded</p>
+      </article>
+
+      <article class="world arcade">
+        <span class="slot">Rolls in Losomn's slot</span>
+        <h3>The Abandoned Arcade</h3>
+        <p>A dead arcade with no enemies, only cabinets. Each portal is a working machine: put in a coin, grab the controls, and fade into its dungeon. Six machines roll per world; the rest are broken. Win three to reach the final boss, and win more to change that fight.</p>
+        <ul class="chips">
+          <li><i>9–12</i> cabinets in the pool</li><li>Maze chase</li><li>Side-scroller brawl</li><li>Collectables run</li>
+        </ul>
+        <p class="fine">Win 3 of 6 to open the final boss</p>
+      </article>
+
+      <article class="world hell">
+        <span class="slot">Rolls in Root Earth's slot</span>
+        <h3>Hell</h3>
+        <p>A hell dimension ruled by the seven deadly sins, each one pushing its sin on you. At the end waits a clothed demon whose defeat releases four demonic angels and carries the fight across shifting realms.</p>
+        <ul class="chips">
+          <li>Gluttony</li><li>Lust</li><li>Sloth</li><li>Pride</li><li>Greed</li><li>Envy</li><li>Wrath</li><li><i>+</i> the demon</li>
+        </ul>
+        <p class="fine">Slaughterhouse · Frozen mountain · Destroyed moon</p>
+      </article>
+    </div>
+
+    <div class="also">
+      <div class="mini"><span class="k">Difficulty</span><h4>Beyond Apocalypse</h4><p>A fifth difficulty for late-game builds, working name "Vex and Torment".</p></div>
+      <div class="mini"><span class="k">Dungeons</span><h4>Corrupted dungeons</h4><p>Any dungeon can roll Corrupted: every enemy inside spawns red and glitching. Up to a 10% chance on the hardest difficulties.</p></div>
+      <div class="mini"><span class="k">Labyrinth</span><h4>Two new portals</h4><p>New gateways in the Labyrinth. After the full campaign, every new world can be reached from there.</p></div>
+    </div>
+  </section>
+
+  <section id="npcs">
+    <div class="sh"><span class="n">02</span><h2>New faces in Ward 13</h2></div>
+    <p class="intro">Five new residents, each earned through a quest in the new worlds and each offering a service.</p>
+
+    <div class="roster">
+      <article class="npc">
+        <svg class="sigil" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="20" fill="none" stroke="#8db36f" stroke-width="1.5"/><path d="M15 31 L17 16 L22 11 L27 14 L29 21 L25 23 L23 31" fill="none" stroke="#8db36f" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        <h3>Falada</h3>
+        <p class="role">Hints &amp; quest books</p>
+        <p>The talking horse from The Goose Girl. Save it from the beheading and it sells quest books that point you to missing unlocks.</p>
+        <p class="from">From the World of Grimm</p>
+      </article>
+      <article class="npc">
+        <svg class="sigil" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="20" fill="none" stroke="#3fb8aa" stroke-width="1.5"/><circle cx="22" cy="22" r="7" fill="none" stroke="#3fb8aa" stroke-width="1.8"/><circle cx="22" cy="22" r="2" fill="#3fb8aa"/></svg>
+        <h3>The AI</h3>
+        <p class="role">Ascension</p>
+        <p>N'Erud's Custodian, kept alive through a new ending at The Core. It ascends archetypes past their limits.</p>
+        <p class="from">From N'Erud</p>
+      </article>
+      <article class="npc">
+        <svg class="sigil" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="20" fill="none" stroke="#8db36f" stroke-width="1.5"/><path d="M13 27 H31 M16 27 V20 H28 V27 M20 20 V14 H24 V20" fill="none" stroke="#8db36f" stroke-width="1.8"/></svg>
+        <h3>The Forge</h3>
+        <p class="role">Armor +1 to +10</p>
+        <p>Tempers armor through ten levels, each one adding armor and resistances.</p>
+        <p class="from">From the Grimm questline</p>
+      </article>
+      <article class="npc">
+        <svg class="sigil" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="20" fill="none" stroke="#d8b25a" stroke-width="1.5"/><path d="M14 30 L26 18 M22 14 L30 22 L27 25 L19 17 Z" fill="none" stroke="#d8b25a" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        <h3>Masterwork</h3>
+        <p class="role">Weapons &amp; mutators</p>
+        <p>Rigs goes looking for a way past max level and comes back with a master smith, who also runs a Corrupted Shop.</p>
+        <p class="from">Quest through every new world</p>
+      </article>
+      <article class="npc">
+        <svg class="sigil" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="20" fill="none" stroke="#3fb8aa" stroke-width="1.5"/><circle cx="22" cy="22" r="9" fill="none" stroke="#3fb8aa" stroke-width="1.8"/><path d="M22 9 V13 M22 31 V35 M9 22 H13 M31 22 H35" stroke="#3fb8aa" stroke-width="1.8"/></svg>
+        <h3>The Enchanter</h3>
+        <p class="role">Ring slots</p>
+        <p>An unholy sacrament that binds a ring slot to a piece of armor. Enchant all four and wear eight rings.</p>
+        <p class="from">From the Lovecraftian questline</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="gear">
+    <div class="sh"><span class="n">03</span><h2>Gear &amp; upgrades</h2></div>
+    <p class="intro">Upgrades meant to give the late game somewhere to go without breaking the base game's balance.</p>
+
+    <div class="gear">
+      <div class="g"><p class="big">+30<small>weapons</small></p><h3>Masterwork weapons</h3><p>Ten more levels for normal weapons (+21 to +30) and five for boss weapons (up to +15), on the base game's own damage curve.</p></div>
+      <div class="g"><p class="big" style="color:var(--gold)">20<small>mutators</small></p><h3>Gold mutators</h3><p>Mutators climb to level 20, extending their own curves. Past level 10 their icons turn gold.</p></div>
+      <div class="g"><p class="big">+10<small>armor</small></p><h3>Forged armor</h3><p>Each Forge level adds 10% armor and +1 to every resistance.</p></div>
+      <div class="g"><p class="big">8<small>rings</small></p><h3>Enchanted armor</h3><p>Each enchanted armor piece holds one extra ring, shown right next to it on the character screen.</p></div>
+      <div class="g wide"><p class="big">990<small>pairs</small></p><h3>Prism: every fusion</h3><p>Every pair of Prism fragments gets a fusion, where the base game has only 23. At level 51, add a tenth fragment to merge a fifth fusion.</p></div>
+      <div class="g"><h3>Sonar Neckpiece</h3><p>An amulet that pulses every 10 seconds and finds everything within 25 yards: allies in green, hostiles in red.</p></div>
+      <div class="g"><h3>The radar gun</h3><p>A gun with a side screen that always shows the map, even while aiming. With the Neckpiece on, it shows what the sonar finds.</p></div>
+      <div class="g"><h3>Corrupted Shop</h3><p>Weapon corruption, a ring that brings out more corrupted enemies, a multi-crit ring, and a Shard Pouch that holds 50 shards.</p></div>
+    </div>
+  </section>
+
+  <section id="progression">
+    <div class="sh"><span class="n">04</span><h2>Ascension</h2></div>
+    <p class="intro">Max out an archetype, then take it further. The AI ascends it with a Simulacrum, you level it again, and the trait points it gives stay with you for good.</p>
+
+    <div class="ladder">
+      <div class="rung">
+        <p class="tier">Handler</p>
+        <p>Your archetype at level 10, as in the base game.</p>
+        <div class="dots"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+      </div>
+      <div class="rung">
+        <p class="tier">Handler<em>+</em></p>
+        <p>Level it again from 1. Trait gains become permanent, shown as blue-grey dots, and new perks open up.</p>
+        <div class="dots"><span class="p"></span><span class="p"></span><span class="p"></span><span class="p"></span><span class="p"></span><span></span><span></span><span></span><span></span><span></span></div>
+      </div>
+      <div class="rung">
+        <p class="tier">Handler<em>++</em></p>
+        <p>All ten points become permanent, and the archetype's remaining skills open for selection.</p>
+        <div class="dots"><span class="p"></span><span class="p"></span><span class="p"></span><span class="p"></span><span class="p"></span><span class="p"></span><span class="p"></span><span class="p"></span><span class="p"></span><span class="p"></span></div>
+      </div>
+    </div>
+
+    <div class="side">
+      <div class="mini"><span class="k">Max health</span><h4>A dot for every mastery</h4><p>A locked trait gains a point each time an archetype stage reaches level 10: up to 42 extra max health, each dot in the colour of the archetype that earned it.</p></div>
+      <div class="mini"><span class="k">Handler</span><h4>New companions</h4><p>More animals beyond the dog, such as a cat, a bird of prey or a bear.</p></div>
+    </div>
+  </section>
+
+  <section id="interface">
+    <div class="sh"><span class="n">05</span><h2>Quality of life</h2></div>
+    <div class="ui">
+      <div><h3>Equipment sorting</h3><p>Sort gear A–Z, Z–A, by upgrade level, or for weapons by highest or lowest DPS.</p></div>
+      <div><h3>Quest Books on the map</h3><p>A map tab of their own, so new quests don't crowd your list. A book vanishes once you own its item.</p></div>
+      <div><h3>Completion tokens</h3><p>A new inventory section that tracks which campaigns your character has finished.</p></div>
+      <div><h3>A bigger world map</h3><p>The new worlds sit on an outer ring around the base worlds, and only appear once you've earned them.</p></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div>
+      <h2>Work in progress</h2>
+      <p>Everything on this page is designed and being built. Nothing has been tested in game yet, so names, numbers and details will change. Follow the build task by task on the status page.</p>
+      <a class="cta" href="./">See project status</a>
+    </div>
+    <ul>
+      <li>One .pak file. No UE4SS needed.</li>
+      <li>Needs the usual "Allow Asset Mods" pak bypass</li>
+      <li>Install to Remnant2\Content\Paks\~mods</li>
+      <li><a href="https://github.com/clboyrun/steam-remnant2-dimensions-mod">Source on GitHub</a></li>
+    </ul>
+  </div>
+</footer>
+
+</body>
+</html>
