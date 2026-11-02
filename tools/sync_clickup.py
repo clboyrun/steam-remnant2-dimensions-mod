@@ -22,7 +22,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 API = "https://api.clickup.com/api/v2"
-DEFAULT_FOLDER_ID = "901414897445"  # "Remnant 2 Dimensions" in the "Dimensions Mod" space
+DEFAULT_FOLDER_ID = "901414897445"  # "Remnant 2 Dimensions"; every list in its space is read
 HERE = Path(__file__).resolve().parent
 
 
@@ -53,6 +53,14 @@ class ClickUp:
     def lists(self, folder_id: str) -> list[dict]:
         # GET /folder/{id} doesn't always include its lists, so ask for them directly.
         return self.get(f"/folder/{folder_id}/list", {"archived": "false"}).get("lists", [])
+
+    def space_lists(self, space_id: str) -> list[dict]:
+        out = list(self.get(f"/space/{space_id}/list", {"archived": "false"}).get("lists", []))
+        for f in self.get(f"/space/{space_id}/folder", {"archived": "false"}).get("folders", []):
+            out.extend(f.get("lists") or self.lists(f["id"]))
+        for i, l in enumerate(out):  # keep folders' own order, folderless lists first
+            l["orderindex"] = i
+        return out
 
     def tasks(self, list_id: str) -> list[dict]:
         out, page = [], 0
@@ -129,25 +137,24 @@ def main() -> None:
 
     tracker_ids = json.loads((HERE / "tracker-ids.json").read_text(encoding="utf-8"))
     api = ClickUp(token)
-    folder_id = args.folder
-    lists = api.lists(folder_id)
+    # The tasks are spread over folders and folderless lists of the "Dimensions Mod" space,
+    # so collect every list in the space. Find the space through a tracker task, else the folder.
+    space = {}
+    for task_id in list(tracker_ids)[:3]:
+        try:
+            space = api.get(f"/task/{task_id}").get("space") or {}
+        except SystemExit as e:
+            print(f"Tracker task {tracker_ids[task_id]} not readable: {e}")
+        if space.get("id"):
+            break
+    if not space.get("id"):
+        space = api.folder(args.folder).get("space") or {}
+    if not space.get("name"):
+        space["name"] = api.get(f"/space/{space['id']}").get("name", "")
+    lists = api.space_lists(space["id"])
     if not lists:
-        # The configured folder is empty (e.g. the tasks were imported into a copy of it).
-        # Follow a known tracker task to the folder it lives in now.
-        for task_id in list(tracker_ids)[:5]:
-            try:
-                found = (api.get(f"/task/{task_id}").get("folder") or {}).get("id")
-            except SystemExit as e:
-                print(f"Tracker task {tracker_ids[task_id]} not readable: {e}")
-                continue
-            if found:
-                print(f"Folder {folder_id} has no lists; using folder {found}, which holds task {tracker_ids[task_id]}")
-                folder_id, lists = found, api.lists(found)
-                break
-    if not lists:
-        sys.exit(f"No ClickUp lists found in folder {args.folder} or via the tracker tasks; status.json left unchanged.")
-    folder = api.folder(folder_id)
-    folder["lists"] = lists
+        sys.exit(f"No ClickUp lists found in space {space.get('name')} ({space.get('id')}); status.json left unchanged.")
+    folder = {"id": space["id"], "name": space["name"], "lists": lists}
     tasks_by_list = {l["id"]: api.tasks(l["id"]) for l in folder.get("lists", [])}
     snap = build_snapshot(folder, tasks_by_list, tracker_ids)
 
