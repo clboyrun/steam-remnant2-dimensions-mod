@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,163 +7,20 @@
 <meta name="description" content="What the Remnant 2 Dimensions mod adds: four new worlds, five Ward 13 NPCs, late-game upgrades and new progression. All planned, in development.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Barlow+Condensed:wght@500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
-<style>
-:root {
-  --bg: #0e0c0b; --bg2: #171412; --panel: #1c1815; --line: #3a322b; --text: #efe7dc; --muted: #a89c8d;
-  --ember: #e0754f; --gold: #d8b25a;
-  --grimm: #8db36f; --deep: #3fb8aa; --arcade: #ec5bd6; --hell: #e5452f;
-  --display: "Cinzel", Georgia, serif;
-  --label: "Barlow Condensed", "Arial Narrow", sans-serif;
-  --body: "Source Serif 4", Georgia, serif;
-  color-scheme: dark;
-}
-* { box-sizing: border-box; }
-html { background: var(--bg); overflow-x: clip; }
-body { overflow-x: clip; margin: 0; background: var(--bg); color: var(--text); font: 17px/1.55 var(--body); -webkit-font-smoothing: antialiased; }
-a { color: var(--ember); }
-.wrap { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
-
-/* top bar */
-.top { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 16px 0;
-  font: 600 14px/1 var(--label); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
-.top a { color: var(--muted); text-decoration: none; }
-.top a:hover { color: var(--text); }
-
-/* hero */
-.hero { position: relative; display: grid; grid-template-columns: minmax(0,1.25fr) minmax(0,.75fr); gap: 32px; align-items: center;
-  padding: 40px 0 56px; border-bottom: 1px solid var(--line); }
-.hero::before { content: ""; position: absolute; inset: -40px -20vw 0; z-index: -1;
-  background: radial-gradient(60% 70% at 72% 45%, rgba(224,117,79,.18), transparent 70%); }
-.kicker { font: 700 15px/1 var(--label); letter-spacing: .3em; text-transform: uppercase; color: var(--ember); margin: 0 0 18px; }
-h1 { font: 900 clamp(42px, 7.2vw, 88px)/.9 var(--display); letter-spacing: .02em; margin: 0; text-transform: uppercase;
-  background: linear-gradient(180deg, #fff3e6 0%, #e7c9a8 55%, #b4673f 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
-.tag { font: 500 clamp(20px, 2.6vw, 28px)/1.25 var(--display); margin: 20px 0 22px; color: var(--text); max-width: 30ch; }
-.lede { color: var(--muted); max-width: 52ch; margin: 0 0 24px; }
-.stamp { display: inline-flex; gap: 10px; align-items: center; border: 1.5px solid var(--ember); color: var(--ember);
-  padding: 7px 14px; font: 700 14px/1 var(--label); letter-spacing: .2em; text-transform: uppercase; transform: rotate(-2deg); }
-.stamp::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--ember); box-shadow: 0 0 10px var(--ember); }
-.ring { width: 100%; max-width: 440px; justify-self: center; }
-.ring text { font-family: var(--label); font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
-
-/* stat strip */
-.stats { display: grid; grid-template-columns: repeat(6, 1fr); border-bottom: 1px solid var(--line); }
-.stat { padding: 22px 12px; text-align: center; border-right: 1px solid var(--line); }
-.stat:last-child { border-right: 0; }
-.stat b { display: block; font: 900 clamp(30px, 4vw, 44px)/1 var(--display); color: var(--gold); }
-.stat span { display: block; margin-top: 8px; font: 600 13px/1.2 var(--label); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
-
-/* sections */
-section { padding: 64px 0 8px; }
-.sh { display: flex; align-items: baseline; gap: 16px; margin-bottom: 8px; }
-.sh .n { font: 700 15px/1 var(--label); letter-spacing: .2em; color: var(--ember); }
-h2 { font: 700 clamp(30px, 4.4vw, 46px)/1.05 var(--display); margin: 0; text-transform: uppercase; letter-spacing: .03em; }
-.intro { color: var(--muted); max-width: 64ch; margin: 8px 0 28px; }
-
-/* world cards */
-.worlds { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
-.world { --c: var(--ember); position: relative; overflow: hidden; background: var(--panel); border: 1px solid var(--line);
-  border-top: 4px solid var(--c); padding: 24px 24px 22px; }
-.world::after { content: ""; position: absolute; right: -60px; top: -60px; width: 220px; height: 220px; border-radius: 50%;
-  background: radial-gradient(circle, color-mix(in srgb, var(--c) 28%, transparent), transparent 70%); pointer-events: none; }
-.world.grimm { --c: var(--grimm); } .world.deep { --c: var(--deep); } .world.arcade { --c: var(--arcade); } .world.hell { --c: var(--hell); }
-.slot { font: 700 13px/1 var(--label); letter-spacing: .18em; text-transform: uppercase; color: var(--c); }
-.world h3 { font: 700 28px/1.1 var(--display); margin: 10px 0 10px; }
-.world p { margin: 0 0 14px; color: #d9cfc2; }
-.chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; list-style: none; }
-.chips li { font: 600 14px/1 var(--label); letter-spacing: .06em; padding: 6px 9px; border: 1px solid var(--line); background: var(--bg2); color: var(--text); }
-.chips li i { font-style: normal; color: var(--c, var(--muted)); }
-.fine { font: 600 13px/1.3 var(--label); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin: 14px 0 0; }
-.also { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 16px; }
-.mini { background: var(--bg2); border: 1px solid var(--line); padding: 18px 20px; }
-.mini h4 { font: 700 20px/1.2 var(--display); margin: 0 0 6px; }
-.mini p { margin: 0; color: var(--muted); font-size: 16px; }
-.mini .k { font: 700 12px/1 var(--label); letter-spacing: .2em; text-transform: uppercase; color: var(--ember); display: block; margin-bottom: 8px; }
-
-/* NPC roster */
-.roster { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; border: 1px solid var(--line); }
-.npc { padding: 22px 18px; border-right: 1px solid var(--line); background: var(--panel); }
-.npc:last-child { border-right: 0; }
-.npc .sigil { width: 44px; height: 44px; margin-bottom: 14px; }
-.npc h3 { font: 700 21px/1.15 var(--display); margin: 0 0 4px; }
-.npc .role { font: 700 13px/1.2 var(--label); letter-spacing: .14em; text-transform: uppercase; color: var(--gold); margin: 0 0 10px; }
-.npc p { margin: 0 0 10px; font-size: 15.5px; color: #d9cfc2; }
-.npc .from { font: 600 13px/1.3 var(--label); letter-spacing: .08em; color: var(--muted); margin: 0; }
-
-/* gear */
-.gear { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-.g { background: var(--panel); border: 1px solid var(--line); padding: 22px; }
-.g .big { font: 900 44px/1 var(--display); color: var(--gold); margin: 0 0 4px; }
-.g .big small { font: 700 16px/1 var(--label); letter-spacing: .14em; color: var(--muted); margin-left: 6px; text-transform: uppercase; }
-.g h3 { font: 700 20px/1.2 var(--display); margin: 8px 0 8px; }
-.g p { margin: 0; color: #d9cfc2; font-size: 16px; }
-.g.wide { grid-column: span 2; }
-
-/* progression ladder */
-.ladder { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border: 1px solid var(--line); }
-.rung { padding: 24px; background: var(--panel); border-right: 1px solid var(--line); position: relative; }
-.rung:last-child { border-right: 0; }
-.rung .tier { font: 900 30px/1 var(--display); margin: 0 0 12px; }
-.rung .tier em { font-style: normal; color: #9fb0c4; }
-.rung p { margin: 0 0 8px; color: #d9cfc2; font-size: 16px; }
-.dots { display: flex; gap: 6px; margin-top: 12px; }
-.dots span { width: 12px; height: 12px; border-radius: 50%; border: 1.5px solid var(--muted); }
-.dots span.p { background: #9fb0c4; border-color: #9fb0c4; }
-.dots span.f { background: var(--gold); border-color: var(--gold); }
-.side { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 16px; }
-
-/* interface list */
-.ui { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 32px; }
-.ui div { padding: 16px 0; border-top: 1px solid var(--line); }
-.ui h3 { font: 700 19px/1.2 var(--display); margin: 0 0 4px; }
-.ui p { margin: 0; color: var(--muted); font-size: 16px; }
-
-/* footer flyer strip */
-.foot { margin: 72px 0 0; border-top: 1px solid var(--line); background: var(--bg2); }
-.foot .wrap { display: grid; grid-template-columns: 1.3fr 1fr; gap: 32px; padding-top: 36px; padding-bottom: 44px; }
-.foot h2 { font-size: 28px; }
-.foot p { color: var(--muted); margin: 10px 0 0; }
-.foot ul { margin: 0; padding: 0; list-style: none; font: 600 16px/1.4 var(--label); letter-spacing: .06em; }
-.foot li { padding: 9px 0; border-bottom: 1px solid var(--line); }
-.foot li:last-child { border-bottom: 0; }
-.cta { display: inline-block; margin-top: 18px; background: var(--ember); color: #1a0f0a; text-decoration: none;
-  font: 700 15px/1 var(--label); letter-spacing: .18em; text-transform: uppercase; padding: 13px 18px; }
-.cta:hover { background: #f08a63; }
-
-@media (max-width: 900px) {
-  .hero { grid-template-columns: 1fr; padding-top: 16px; }
-  .ring { max-width: 360px; order: -1; }
-  .stats { grid-template-columns: repeat(3, 1fr); }
-  .stat:nth-child(3) { border-right: 0; }
-  .stat:nth-child(-n+3) { border-bottom: 1px solid var(--line); }
-  .roster { grid-template-columns: repeat(2, 1fr); }
-  .npc { border-bottom: 1px solid var(--line); }
-  .npc:nth-child(2n) { border-right: 0; }
-  .npc:last-child { grid-column: span 2; border-bottom: 0; }
-  .gear, .also { grid-template-columns: 1fr 1fr; }
-  .g.wide { grid-column: span 2; }
-  .foot .wrap { grid-template-columns: 1fr; }
-}
-@media (max-width: 620px) {
-  body { font-size: 16px; }
-  .worlds, .gear, .also, .ladder, .side, .ui, .roster { grid-template-columns: 1fr; }
-  .g.wide, .npc:last-child { grid-column: auto; }
-  .npc, .rung { border-right: 0; border-bottom: 1px solid var(--line); }
-  .rung:last-child, .npc:last-child { border-bottom: 0; }
-  .stats { grid-template-columns: repeat(2, 1fr); }
-  .stat { border-bottom: 1px solid var(--line); }
-  .stat:nth-child(3) { border-right: 1px solid var(--line); }
-  .stat:nth-child(2n) { border-right: 0; }
-  .stat:nth-last-child(-n+2) { border-bottom: 0; }
-}
-</style>
+<link rel="stylesheet" href="css/theme.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/about.css">
 </head>
 <body>
 
 <div class="wrap">
-  <nav class="top">
+  <nav class="top" aria-label="Site">
     <span>Remnant 2 mod</span>
-    <a href="./">Project status →</a>
+    <div class="links">
+      <a href="#bosses">Bosses</a>
+      <a href="#signup">Mailing list</a>
+      <a href="./">Project status →</a>
+    </div>
   </nav>
 
   <header class="hero">
@@ -277,8 +134,156 @@ h2 { font: 700 clamp(30px, 4.4vw, 46px)/1.05 var(--display); margin: 0; text-tra
     </div>
   </section>
 
+  <section id="bosses">
+    <div class="sh"><span class="n">02</span><h2>New bosses</h2></div>
+    <p class="intro">The big, well-known names and ideas for the new worlds. Tags show each boss’s world, story and the effect or fighting style intended for it. How each one will change a Boss Rush run is still to be worked out, so every card carries a note for that data. Nothing here is final.</p>
+
+    <div class="filters" role="group" aria-label="Filter bosses by world">
+      <button type="button" class="chipbtn" data-filter="all" aria-pressed="true">All worlds</button><button type="button" class="chipbtn" data-filter="grimm" aria-pressed="false">Grimm</button><button type="button" class="chipbtn" data-filter="deep" aria-pressed="false">Lovecraftian</button><button type="button" class="chipbtn" data-filter="arcade" aria-pressed="false">Arcade</button><button type="button" class="chipbtn" data-filter="hell" aria-pressed="false">Hell</button><button type="button" class="chipbtn" data-filter="nerud" aria-pressed="false">N’Erud</button>
+    </div>
+
+    <div class="bosses">
+      <article class="boss deep" data-world="deep">
+        <span class="slot">Great Old One</span>
+        <h3>Cthulhu</h3>
+        <p>The sleeper of R’lyeh: winged, tentacled, vast. A mind-breaking dread from the deep.</p>
+        <ul class="chips"><li class="t-world"><i>World</i> Lovecraftian</li><li class="t-story"><i>Story</i> Cthulhu mythos</li><li class="t-effect"><i>Effect</i> Madness</li><li class="t-effect"><i>Effect</i> Corroded</li></ul>
+        <p class="rush"><b>Boss rush</b> Effect on boss rush: data to be captured.</p>
+        <p class="fine">Intended effects</p>
+      </article>
+      <article class="boss deep" data-world="deep">
+        <span class="slot">Deep One patriarch</span>
+        <h3>Dagon</h3>
+        <p>Father of the Deep Ones, a fish-headed giant risen from the sea.</p>
+        <ul class="chips"><li class="t-world"><i>World</i> Lovecraftian</li><li class="t-story"><i>Story</i> Cthulhu mythos</li><li class="t-effect"><i>Effect</i> Bleeding</li><li class="t-effect"><i>Effect</i> Corroded</li></ul>
+        <p class="rush"><b>Boss rush</b> Effect on boss rush: data to be captured.</p>
+        <p class="fine">Intended effects</p>
+      </article>
+      <article class="boss deep" data-world="deep">
+        <span class="slot">Formless horror</span>
+        <h3>Shoggoth</h3>
+        <p>A vast, shifting mass of eyes and mouths, a servant that outgrew its masters.</p>
+        <ul class="chips"><li class="t-world"><i>World</i> Lovecraftian</li><li class="t-story"><i>Story</i> Cthulhu mythos</li><li class="t-effect"><i>Effect</i> Corroded</li><li class="t-effect"><i>Effect</i> Ravenous</li></ul>
+        <p class="rush"><b>Boss rush</b> Effect on boss rush: data to be captured.</p>
+        <p class="fine">Intended effects</p>
+      </article>
+      <article class="boss deep" data-world="deep">
+        <span class="slot">The Black Goat of the Woods</span>
+        <h3>Shub-Niggurath</h3>
+        <p>A swollen, many-limbed mother of a thousand young.</p>
+        <ul class="chips"><li class="t-world"><i>World</i> Lovecraftian</li><li class="t-story"><i>Story</i> Cthulhu mythos</li><li class="t-effect"><i>Effect</i> Root Rot</li><li class="t-effect"><i>Effect</i> Ravenous</li></ul>
+        <p class="rush"><b>Boss rush</b> Effect on boss rush: data to be captured.</p>
+        <p class="fine">Intended effects</p>
+      </article>
+      <article class="boss deep" data-world="deep">
+        <span class="slot">Hunters from the angles of time</span>
+        <h3>Hounds of Tindalos</h3>
+        <p>Gaunt hounds that come through sharp corners and never stop tracking their prey.</p>
+        <ul class="chips"><li class="t-world"><i>World</i> Lovecraftian</li><li class="t-story"><i>Story</i> Cthulhu mythos</li><li class="t-effect"><i>Effect</i> Ravenous</li><li class="t-effect"><i>Effect</i> Bleeding</li></ul>
+        <p class="rush"><b>Boss rush</b> Effect on boss rush: data to be captured.</p>
+        <p class="fine">Intended effects</p>
+      </article>
+      <article class="boss deep" data-world="deep">
+        <span class="slot">The King in Yellow</span>
+        <h3>Hastur</h3>
+        <p>A masked, tattered king whose play drives its audience mad.</p>
+        <ul class="chips"><li class="t-world"><i>World</i> Lovecraftian</li><li class="t-story"><i>Story</i> Cthulhu mythos</li><li class="t-effect"><i>Effect</i> Madness</li><li class="t-effect"><i>Effect</i> Overloaded</li></ul>
+        <p class="rush"><b>Boss rush</b> Effect on boss rush: data to be captured.</p>
+        <p class="fine">Intended effects</p>
+      </article>
+      <article class="boss deep" data-world="deep">
+        <span class="slot">The Crawling Chaos</span>
+        <h3>Nyarlathotep</h3>
+        <p>A messenger of the Outer Gods who wears a thousand faces.</p>
+        <ul class="chips"><li class="t-world"><i>World</i> Lovecraftian</li><li class="t-story"><i>Story</i> Cthulhu mythos</li><li class="t-effect"><i>Effect</i> Burning</li><li class="t-effect"><i>Effect</i> Madness</li></ul>
+        <p class="rush"><b>Boss rush</b> Effect on boss rush: data to be captured.</p>
+        <p class="fine">Intended effects</p>
+      </article>
+      <article class="boss deep" data-world="deep">
+        <span class="slot">Blind idiot god</span>
+        <h3>Azathoth</h3>
+        <p>The mindless centre of the cosmos, piped to by its court. A suggestion for a space-themed boss, not decided.</p>
+        <ul class="chips"><li class="t-world"><i>World</i> Lovecraftian</li><li class="t-story"><i>Story</i> Cthulhu mythos</li><li class="t-effect"><i>Effect</i> Overloaded</li><li class="t-effect"><i>Effect</i> Burning</li></ul>
+        <p class="rush"><b>Boss rush</b> Effect on boss rush: data to be captured.</p>
+        <p class="fine">Suggested</p>
+      </article>
+      <article class="boss hell" data-world="hell">
+        <span class="slot">Sin · a chef</span>
+        <h3>Gluttony</h3>
+        <p>A chef who wants everyone to eat, including the mobs.</p>
+        <ul class="chips"><li class="t-world"><i>World</i> Hell</li><li class="t-story"><i>Story</i> Seven sins</li><li class="t-effect"><i>Effect</i> Ravenous</li></ul>
+        <p class="rush"><b>Boss rush</b> Effect on boss rush: data to be captured.</p>
+        <p class="fine">Intended effect</p>
+      </article>
+      <article class="boss hell" data-world="hell">
+        <span class="slot">Sin</span>
+        <h3>Lust</h3>
+        <p>Leads an orgy without joining in. Its effect needs a new status that does not exist in the base game yet.</p>
+        <ul class="chips"><li class="t-world"><i>World</i> Hell</li><li class="t-story"><i>Story</i> Seven sins</li><li class="t-effect"><i>Effect</i> New status: Lust</li></ul>
+        <p class="rush"><b>Boss rush</b> Effect on boss rush: data to be captured.</p>
+        <p class="fine">Intended effect</p>
+      </article>
+      <article class="boss hell" data-world="hell">
+        <span class="slot">Sin</span>
+        <h3>Sloth</h3>
+        <p>Wants everyone to rest. Slow mobs that hit hard.</p>
+        <ul class="chips"><li class="t-world"><i>World</i> Hell</li><li class="t-story"><i>Story</i> Seven sins</li><li class="t-effect"><i>Effect</i> Slow</li></ul>
+        <p class="rush"><b>Boss rush</b> Effect on boss rush: data to be captured.</p>
+        <p class="fine">Intended effect</p>
+      </article>
+      <article class="boss hell" data-world="hell">
+        <span class="slot">Sin</span>
+        <h3>Pride</h3>
+        <p>Wants people to persevere. A slow-burn fight where you work with the stage to hurt the boss.</p>
+        <ul class="chips"><li class="t-world"><i>World</i> Hell</li><li class="t-story"><i>Story</i> Seven sins</li><li class="t-style"><i>Style</i> Slow burn</li><li class="t-style"><i>Style</i> Stage interaction</li></ul>
+        <p class="rush"><b>Boss rush</b> Effect on boss rush: data to be captured.</p>
+        <p class="fine">Intended style</p>
+      </article>
+      <article class="boss hell" data-world="hell">
+        <span class="slot">Sins · three bosses</span>
+        <h3>Greed, Envy, Wrath</h3>
+        <p>Not described yet. Suggested effects are Suppression for Greed, Curse for Envy and Burning for Wrath.</p>
+        <ul class="chips"><li class="t-world"><i>World</i> Hell</li><li class="t-story"><i>Story</i> Seven sins</li><li class="t-effect"><i>Effect</i> Suppression</li><li class="t-effect"><i>Effect</i> Curse</li><li class="t-effect"><i>Effect</i> Burning</li></ul>
+        <p class="rush"><b>Boss rush</b> Effect on boss rush: data to be captured.</p>
+        <p class="fine">Suggested</p>
+      </article>
+      <article class="boss hell" data-world="hell">
+        <span class="slot">Final boss of Hell</span>
+        <h3>The Demon</h3>
+        <p>A clothed demonic creature fought in a multi-stage arena, each stage with different elemental effects. Beating it lets four demonic angels out of the cloud.</p>
+        <ul class="chips"><li class="t-world"><i>World</i> Hell</li><li class="t-story"><i>Story</i> Seven sins finale</li><li class="t-style"><i>Style</i> Multi-stage arena</li><li class="t-style"><i>Style</i> Four angels</li></ul>
+        <p class="rush"><b>Boss rush</b> Effect on boss rush: data to be captured.</p>
+        <p class="fine">Described</p>
+      </article>
+      <article class="boss grimm" data-world="grimm">
+        <span class="slot">26 tales to pick from</span>
+        <h3>Tale antagonists</h3>
+        <p>The wicked parties of the Brothers Grimm and the Pied Piper, such as the witch of Hansel and Gretel and the wizard of Fitcher’s Bird. Each is a possible dungeon boss.</p>
+        <ul class="chips"><li class="t-world"><i>World</i> Grimm</li><li class="t-story"><i>Story</i> Brothers Grimm</li><li class="t-effect"><i>Effect</i> Bleeding</li><li class="t-effect"><i>Effect</i> Curse</li><li class="t-effect"><i>Effect</i> Ravenous</li><li class="t-effect"><i>Effect</i> Madness</li></ul>
+        <p class="rush"><b>Boss rush</b> Effect on boss rush: data to be captured.</p>
+        <p class="fine">Options, none picked</p>
+      </article>
+      <article class="boss arcade" data-world="arcade">
+        <span class="slot">Not yet described</span>
+        <h3>Arcade final boss</h3>
+        <p>Win three cabinets to reach it; winning more changes the fight.</p>
+        <ul class="chips"><li class="t-world"><i>World</i> Arcade</li><li class="t-story"><i>Story</i> Abandoned Arcade</li><li class="t-style"><i>Style</i> Scales with cabinets won</li></ul>
+        <p class="rush"><b>Boss rush</b> Effect on boss rush: data to be captured.</p>
+        <p class="fine">To be designed</p>
+      </article>
+      <article class="boss nerud" data-world="nerud">
+        <span class="slot">Replaces the Guardian</span>
+        <h3>N’Erud alternative boss</h3>
+        <p>A different boss for the “AI survives” route. The shape of the route is still open.</p>
+        <ul class="chips"><li class="t-world"><i>World</i> N’Erud</li><li class="t-story"><i>Story</i> The Custodian’s fate</li></ul>
+        <p class="rush"><b>Boss rush</b> Effect on boss rush: data to be captured.</p>
+        <p class="fine">Undecided</p>
+      </article>
+    </div>
+  </section>
+
   <section id="npcs">
-    <div class="sh"><span class="n">02</span><h2>New faces in Ward 13</h2></div>
+    <div class="sh"><span class="n">03</span><h2>New faces in Ward 13</h2></div>
     <p class="intro">Five new residents, each earned through a quest in the new worlds and each offering a service.</p>
 
     <div class="roster">
@@ -321,7 +326,7 @@ h2 { font: 700 clamp(30px, 4.4vw, 46px)/1.05 var(--display); margin: 0; text-tra
   </section>
 
   <section id="gear">
-    <div class="sh"><span class="n">03</span><h2>Gear &amp; upgrades</h2></div>
+    <div class="sh"><span class="n">04</span><h2>Gear &amp; upgrades</h2></div>
     <p class="intro">Upgrades meant to give the late game somewhere to go without breaking the base game's balance.</p>
 
     <div class="gear">
@@ -337,7 +342,7 @@ h2 { font: 700 clamp(30px, 4.4vw, 46px)/1.05 var(--display); margin: 0; text-tra
   </section>
 
   <section id="progression">
-    <div class="sh"><span class="n">04</span><h2>Ascension</h2></div>
+    <div class="sh"><span class="n">05</span><h2>Ascension</h2></div>
     <p class="intro">Max out an archetype, then take it further. The AI ascends it with a Simulacrum, you level it again, and the trait points it gives stay with you for good.</p>
 
     <div class="ladder">
@@ -365,13 +370,77 @@ h2 { font: 700 clamp(30px, 4.4vw, 46px)/1.05 var(--display); margin: 0; text-tra
   </section>
 
   <section id="interface">
-    <div class="sh"><span class="n">05</span><h2>Quality of life</h2></div>
+    <div class="sh"><span class="n">06</span><h2>Quality of life</h2></div>
     <div class="ui">
       <div><h3>Equipment sorting</h3><p>Sort gear A–Z, Z–A, by upgrade level, or for weapons by highest or lowest DPS.</p></div>
       <div><h3>Quest Books on the map</h3><p>A map tab of their own, so new quests don't crowd your list. A book vanishes once you own its item.</p></div>
       <div><h3>Completion tokens</h3><p>A new inventory section that tracks which campaigns your character has finished.</p></div>
       <div><h3>A bigger world map</h3><p>The new worlds sit on an outer ring around the base worlds, and only appear once you've earned them.</p></div>
     </div>
+  </section>
+
+  <section id="signup">
+    <div class="sh"><span class="n">07</span><h2>Mailing list</h2></div>
+    <p class="intro">Want to hear when something lands, or help playtest it? Tell us what you care about.</p>
+
+    <details class="signup">
+      <summary><span><strong>Join the mailing list</strong></span><small>Choose builds and milestones</small></summary>
+      <form id="signup-form" novalidate>
+        <p class="hp" aria-hidden="true"><label>Leave this empty <input type="text" name="website" tabindex="-1" autocomplete="off"></label></p>
+
+        <div class="fields">
+          <label class="field">Player name <b class="req">required</b>
+            <input type="text" name="player" required autocomplete="nickname" maxlength="60" placeholder="Name you play under">
+          </label>
+          <label class="field">How to reach you <small>optional: email, Steam or Discord</small>
+            <input type="text" name="contact" autocomplete="email" maxlength="120" placeholder="So we can actually send the news">
+          </label>
+        </div>
+
+        <fieldset class="tree">
+          <legend>Which builds</legend>
+          <ul class="two">
+            <li><label class="opt locked"><input type="checkbox" name="build" value="release" checked data-locked> <span><strong>Release</strong><em>Always on: you will hear about the finished mod</em></span></label></li>
+            <li><label class="opt"><input type="checkbox" name="build" value="beta"> <span><strong>Beta</strong><em>Also invite me to playtest early builds</em></span></label></li>
+          </ul>
+        </fieldset>
+
+        <fieldset class="tree">
+          <legend>What to be told about</legend>
+          <ul class="root">
+            <li>
+              <label class="opt locked"><input type="checkbox" name="topic" value="full-game" checked data-locked> <span><strong>Full Game</strong><em>Always on: the complete mod</em></span></label>
+              <ul class="two kids">
+                <li class="group">
+                  <label class="opt"><input type="checkbox" name="topic" value="region" data-parent="region"> <span><strong>Region</strong><em>New worlds on the campaign map</em></span></label>
+                  <ul class="kids" data-group="region">
+                    <li><label class="opt"><input type="checkbox" name="topic" value="region-grimm"> <span><strong>Grimm</strong></span></label></li>
+                    <li><label class="opt"><input type="checkbox" name="topic" value="region-lovecraftian"> <span><strong>Lovecraftian</strong></span></label></li>
+                    <li><label class="opt"><input type="checkbox" name="topic" value="region-arcade"> <span><strong>Arcade</strong></span></label></li>
+                    <li><label class="opt"><input type="checkbox" name="topic" value="region-hell"> <span><strong>Hell</strong></span></label></li>
+                  </ul>
+                </li>
+                <li><label class="opt"><input type="checkbox" name="topic" value="bosses"> <span><strong>New bosses</strong><em>Including boss rush changes</em></span></label></li>
+                <li><label class="opt"><input type="checkbox" name="topic" value="armor-forge"> <span><strong>Armor Forge</strong><em>Armor +1 to +10</em></span></label></li>
+                <li><label class="opt"><input type="checkbox" name="topic" value="weapon-masterwork"> <span><strong>Weapon Masterwork</strong><em>Weapons and mutators past max level</em></span></label></li>
+                <li><label class="opt"><input type="checkbox" name="topic" value="corruption-shop"> <span><strong>Corruption Shop</strong></span></label></li>
+                <li><label class="opt"><input type="checkbox" name="topic" value="enchanter"> <span><strong>Enchanter</strong><em>Extra ring slots</em></span></label></li>
+                <li><label class="opt"><input type="checkbox" name="topic" value="ascension"> <span><strong>Archetype Ascension</strong><em>The AI and permanent traits</em></span></label></li>
+                <li><label class="opt"><input type="checkbox" name="topic" value="prism"> <span><strong>Prism fusions</strong><em>Every fusion pair</em></span></label></li>
+                <li><label class="opt"><input type="checkbox" name="topic" value="sonar"> <span><strong>Sonar Neckpiece and radar gun</strong></span></label></li>
+                <li><label class="opt"><input type="checkbox" name="topic" value="difficulty"> <span><strong>Beyond Apocalypse</strong><em>A fifth difficulty</em></span></label></li>
+                <li><label class="opt"><input type="checkbox" name="topic" value="qol"> <span><strong>Quality of life</strong><em>Sorting, quest books, completion tokens</em></span></label></li>
+              </ul>
+            </li>
+          </ul>
+        </fieldset>
+
+        <div class="actions">
+          <button class="cta" type="submit">Sign me up</button>
+          <p class="status" id="signup-status" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+    </details>
   </section>
 
 </main>
@@ -392,5 +461,7 @@ h2 { font: 700 clamp(30px, 4.4vw, 46px)/1.05 var(--display); margin: 0; text-tra
   </div>
 </footer>
 
+<script src="js/signup.js"></script>
+<script src="js/bosses.js"></script>
 </body>
 </html>
