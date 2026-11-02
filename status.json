@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-02T04:27:22+00:00",
+ "generated_at": "2026-11-02T12:16:10+00:00",
  "folder": {
   "id": "90149675055",
   "name": "Dimensions Mod"
@@ -10,14 +10,14 @@
    "color": "#b5bcc2",
    "done": false,
    "open": true,
-   "count": 167
+   "count": 159
   },
   {
    "status": "in process",
    "color": "#ffc53d",
    "done": false,
    "open": false,
-   "count": 3
+   "count": 2
   },
   {
    "status": "problem",
@@ -31,7 +31,7 @@
    "color": "#008844",
    "done": true,
    "open": false,
-   "count": 24
+   "count": 33
   }
  ],
  "lists": [
@@ -958,34 +958,6 @@
    "name": "Required data inputs",
    "tasks": [
     {
-     "id": "86bcw879h",
-     "tracker_id": "E9",
-     "name": "#9 McCabe's upgrade recipes, a standard and a boss weapon, weapon stat scaling asset",
-     "status": "to do",
-     "status_color": "#b5bcc2",
-     "done": false,
-     "open": true,
-     "parent": null,
-     "estimate_hours": 1.0,
-     "url": "https://app.clickup.com/t/86bcw879h",
-     "updated": 1793589432820,
-     "order": 10001793562312.273
-    },
-    {
-     "id": "86bcw879n",
-     "tracker_id": "E12",
-     "name": "#12 N'Erud quest that involves the AI, and its boss",
-     "status": "to do",
-     "status_color": "#b5bcc2",
-     "done": false,
-     "open": true,
-     "parent": null,
-     "estimate_hours": 1.0,
-     "url": "https://app.clickup.com/t/86bcw879n",
-     "updated": 1793589432820,
-     "order": 10001793562312.857
-    },
-    {
      "id": "86bcw879u",
      "tracker_id": "E15",
      "name": "#15 Range-increase stat and friendly/hostile faction classes",
@@ -998,34 +970,6 @@
      "url": "https://app.clickup.com/t/86bcw879u",
      "updated": 1793591268122,
      "order": 10001793562313.438
-    },
-    {
-     "id": "86bcw87a0",
-     "tracker_id": "E19",
-     "name": "#19 Base weapon NPC's dialogue tree",
-     "status": "to do",
-     "status_color": "#b5bcc2",
-     "done": false,
-     "open": true,
-     "parent": null,
-     "estimate_hours": 0.5,
-     "url": "https://app.clickup.com/t/86bcw87a0",
-     "updated": 1793591269050,
-     "order": 10001793562314.16
-    },
-    {
-     "id": "86bcw87a1",
-     "tracker_id": "E20",
-     "name": "#20 Mutator NPC's corruption recipe list",
-     "status": "to do",
-     "status_color": "#b5bcc2",
-     "done": false,
-     "open": true,
-     "parent": null,
-     "estimate_hours": 1.0,
-     "url": "https://app.clickup.com/t/86bcw87a1",
-     "updated": 1793591269590,
-     "order": 10001793562314.35
     },
     {
      "id": "86bcw87a3",
@@ -1070,20 +1014,6 @@
      "order": 10001793562315.498
     },
     {
-     "id": "86bcw87ad",
-     "tracker_id": "E27",
-     "name": "#27 The game's play-time source",
-     "status": "to do",
-     "status_color": "#b5bcc2",
-     "done": false,
-     "open": true,
-     "parent": null,
-     "estimate_hours": 0.5,
-     "url": "https://app.clickup.com/t/86bcw87ad",
-     "updated": 1793591273531,
-     "order": 10001793562315.688
-    },
-    {
      "id": "86bcw87ak",
      "tracker_id": "E29",
      "name": "#29 Losomn's world setup and its campaign slot",
@@ -1096,20 +1026,6 @@
      "url": "https://app.clickup.com/t/86bcw87ak",
      "updated": 1793591275790,
      "order": 10001793562316.08
-    },
-    {
-     "id": "86bcw87ap",
-     "tracker_id": "E31",
-     "name": "#31 One world portal/world stone BP and one interaction montage",
-     "status": "to do",
-     "status_color": "#b5bcc2",
-     "done": false,
-     "open": true,
-     "parent": null,
-     "estimate_hours": 1.0,
-     "url": "https://app.clickup.com/t/86bcw87ap",
-     "updated": 1793591276356,
-     "order": 10001793562316.475
     },
     {
      "id": "86bcw87at",
@@ -1138,20 +1054,6 @@
      "url": "https://app.clickup.com/t/86bcw87av",
      "updated": 1793591277584,
      "order": 10001793562316.86
-    },
-    {
-     "id": "86bcw87ax",
-     "tracker_id": "E34",
-     "name": "#34 Labyrinth map and one existing portal",
-     "status": "to do",
-     "status_color": "#b5bcc2",
-     "done": false,
-     "open": true,
-     "parent": null,
-     "estimate_hours": 1.0,
-     "url": "https://app.clickup.com/t/86bcw87ax",
-     "updated": 1793591278061,
-     "order": 10001793562317.086
     },
     {
      "id": "86bcw87an",
@@ -1406,34 +1308,6 @@
      "order": 10001793590359.967
     },
     {
-     "id": "86bcw879q",
-     "tracker_id": "E13",
-     "name": "#13 Difficulty selection menu and live Stats_Scaling_Difficulty",
-     "status": "in process",
-     "status_color": "#ffc53d",
-     "done": false,
-     "open": false,
-     "parent": null,
-     "estimate_hours": 1.0,
-     "url": "https://app.clickup.com/t/86bcw879q",
-     "updated": 1793590567606,
-     "order": 10001793590562.988
-    },
-    {
-     "id": "86bcw87a2",
-     "tracker_id": "E21",
-     "name": "#21 Corrupted shard item",
-     "status": "in process",
-     "status_color": "#ffc53d",
-     "done": false,
-     "open": false,
-     "parent": null,
-     "estimate_hours": 0.5,
-     "url": "https://app.clickup.com/t/86bcw87a2",
-     "updated": 1793590734518,
-     "order": 10001793590730.17
-    },
-    {
      "id": "86bcwayhj",
      "tracker_id": null,
      "name": "#36 Re-export Quest_Story_OneTrueKing",
@@ -1460,6 +1334,132 @@
      "url": "https://app.clickup.com/t/86bcw87a7",
      "updated": 1793591137543,
      "order": 10001793591137.605
+    },
+    {
+     "id": "86bcw87a2",
+     "tracker_id": "E21",
+     "name": "#21 Corrupted shard item",
+     "status": "complete",
+     "status_color": "#008844",
+     "done": true,
+     "open": false,
+     "parent": null,
+     "estimate_hours": 0.5,
+     "url": "https://app.clickup.com/t/86bcw87a2",
+     "updated": 1793615135960,
+     "order": 10001793615136.045
+    },
+    {
+     "id": "86bcw879q",
+     "tracker_id": "E13",
+     "name": "#13 Difficulty selection menu and live Stats_Scaling_Difficulty",
+     "status": "complete",
+     "status_color": "#008844",
+     "done": true,
+     "open": false,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "url": "https://app.clickup.com/t/86bcw879q",
+     "updated": 1793615141972,
+     "order": 10001793615142.03
+    },
+    {
+     "id": "86bcw87ad",
+     "tracker_id": "E27",
+     "name": "#27 The game's play-time source",
+     "status": "complete",
+     "status_color": "#008844",
+     "done": true,
+     "open": false,
+     "parent": null,
+     "estimate_hours": 0.5,
+     "url": "https://app.clickup.com/t/86bcw87ad",
+     "updated": 1793615157464,
+     "order": 10001793615155.793
+    },
+    {
+     "id": "86bcw87a0",
+     "tracker_id": "E19",
+     "name": "#19 Base weapon NPC's dialogue tree",
+     "status": "complete",
+     "status_color": "#008844",
+     "done": true,
+     "open": false,
+     "parent": null,
+     "estimate_hours": 0.5,
+     "url": "https://app.clickup.com/t/86bcw87a0",
+     "updated": 1793615171150,
+     "order": 10001793615168.066
+    },
+    {
+     "id": "86bcw879h",
+     "tracker_id": "E9",
+     "name": "#9 McCabe's upgrade recipes, a standard and a boss weapon, weapon stat scaling asset",
+     "status": "complete",
+     "status_color": "#008844",
+     "done": true,
+     "open": false,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "url": "https://app.clickup.com/t/86bcw879h",
+     "updated": 1793615181195,
+     "order": 10001793615181.326
+    },
+    {
+     "id": "86bcw879n",
+     "tracker_id": "E12",
+     "name": "#12 N'Erud quest that involves the AI, and its boss",
+     "status": "complete",
+     "status_color": "#008844",
+     "done": true,
+     "open": false,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "url": "https://app.clickup.com/t/86bcw879n",
+     "updated": 1793615186611,
+     "order": 10001793615186.666
+    },
+    {
+     "id": "86bcw87a1",
+     "tracker_id": "E20",
+     "name": "#20 Mutator NPC's corruption recipe list",
+     "status": "complete",
+     "status_color": "#008844",
+     "done": true,
+     "open": false,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "url": "https://app.clickup.com/t/86bcw87a1",
+     "updated": 1793615197520,
+     "order": 10001793615194.062
+    },
+    {
+     "id": "86bcw87ap",
+     "tracker_id": "E31",
+     "name": "#31 One world portal/world stone BP and one interaction montage",
+     "status": "complete",
+     "status_color": "#008844",
+     "done": true,
+     "open": false,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "url": "https://app.clickup.com/t/86bcw87ap",
+     "updated": 1793615216818,
+     "order": 10001793615213.623
+    },
+    {
+     "id": "86bcw87ax",
+     "tracker_id": "E34",
+     "name": "#34 Labyrinth map and one existing portal",
+     "status": "complete",
+     "status_color": "#008844",
+     "done": true,
+     "open": false,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "url": "https://app.clickup.com/t/86bcw87ax",
+     "updated": 1793615226637,
+     "order": 10001793615223.498
     }
    ]
   },
@@ -2730,20 +2730,6 @@
    "name": "Interface",
    "tasks": [
     {
-     "id": "86bcw88yz",
-     "tracker_id": "I1",
-     "name": "Equipment sort options",
-     "status": "to do",
-     "status_color": "#b5bcc2",
-     "done": false,
-     "open": true,
-     "parent": null,
-     "estimate_hours": 16.0,
-     "url": "https://app.clickup.com/t/86bcw88yz",
-     "updated": 1793565399808,
-     "order": 10001793562668.436
-    },
-    {
      "id": "86bcw88z2",
      "tracker_id": "I2",
      "name": "Inventory: Completion Tokens section",
@@ -2754,7 +2740,7 @@
      "parent": null,
      "estimate_hours": 8.0,
      "url": "https://app.clickup.com/t/86bcw88z2",
-     "updated": 1793565399770,
+     "updated": 1793619048455,
      "order": 10001793562668.69
     },
     {
@@ -2826,6 +2812,20 @@
      "url": "https://app.clickup.com/t/86bcw88zc",
      "updated": 1793586551364,
      "order": 10001793562669.951
+    },
+    {
+     "id": "86bcw88yz",
+     "tracker_id": "I1",
+     "name": "Equipment sort options",
+     "status": "in process",
+     "status_color": "#ffc53d",
+     "done": false,
+     "open": false,
+     "parent": null,
+     "estimate_hours": 16.0,
+     "url": "https://app.clickup.com/t/86bcw88yz",
+     "updated": 1793616572224,
+     "order": 10001793616572.283
     }
    ]
   }
