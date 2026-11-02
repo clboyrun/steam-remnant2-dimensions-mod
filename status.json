@@ -1,9 +1,635 @@
 {
- "generated_at": "2026-11-02T02:52:57+00:00",
+ "generated_at": "2026-11-02T02:54:28+00:00",
  "folder": {
-  "id": "901414897445",
-  "name": "Remnant 2 Dimensions"
+  "id": "901414898053",
+  "name": "hidden"
  },
- "statuses": [],
- "lists": []
+ "statuses": [
+  {
+   "status": "to do",
+   "color": "#b5bcc2",
+   "done": false,
+   "count": 27
+  },
+  {
+   "status": "complete",
+   "color": "#008844",
+   "done": true,
+   "count": 9
+  }
+ ],
+ "lists": [
+  {
+   "id": "901422848600",
+   "name": "Required data inputs",
+   "tasks": [
+    {
+     "id": "86bcw8799",
+     "tracker_id": "E6",
+     "name": "#6 Traits panel widget",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 0.5,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "url": "https://app.clickup.com/t/86bcw8799",
+     "updated": 1793574101023,
+     "order": 10001793562311.662,
+     "blocked": false
+    },
+    {
+     "id": "86bcw879c",
+     "tracker_id": "E7",
+     "name": "#7 Equipment selection widget",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 0.5,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "url": "https://app.clickup.com/t/86bcw879c",
+     "updated": 1793574101011,
+     "order": 10001793562311.86,
+     "blocked": false
+    },
+    {
+     "id": "86bcw879e",
+     "tracker_id": "E8",
+     "name": "#8 Inventory screen widget",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 0.5,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "url": "https://app.clickup.com/t/86bcw879e",
+     "updated": 1793574101002,
+     "order": 10001793562312.068,
+     "blocked": false
+    },
+    {
+     "id": "86bcw879h",
+     "tracker_id": "E9",
+     "name": "#9 McCabe's upgrade recipes, a standard and a boss weapon, weapon stat scaling asset",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "url": "https://app.clickup.com/t/86bcw879h",
+     "updated": 1793574101039,
+     "order": 10001793562312.273,
+     "blocked": false
+    },
+    {
+     "id": "86bcw879k",
+     "tracker_id": "E10",
+     "name": "#10 One mutator's level table",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 0.5,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "url": "https://app.clickup.com/t/86bcw879k",
+     "updated": 1793574101022,
+     "order": 10001793562312.453,
+     "blocked": false
+    },
+    {
+     "id": "86bcw879m",
+     "tracker_id": "E11",
+     "name": "#11 StatDef_Armor table and one armor blueprint",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "url": "https://app.clickup.com/t/86bcw879m",
+     "updated": 1793574101073,
+     "order": 10001793562312.652,
+     "blocked": false
+    },
+    {
+     "id": "86bcw879n",
+     "tracker_id": "E12",
+     "name": "#12 N'Erud quest that involves the AI, and its boss",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "url": "https://app.clickup.com/t/86bcw879n",
+     "updated": 1793574101020,
+     "order": 10001793562312.857,
+     "blocked": false
+    },
+    {
+     "id": "86bcw879q",
+     "tracker_id": "E13",
+     "name": "#13 Difficulty selection menu and live Stats_Scaling_Difficulty",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "url": "https://app.clickup.com/t/86bcw879q",
+     "updated": 1793574101057,
+     "order": 10001793562313.035,
+     "blocked": false
+    },
+    {
+     "id": "86bcw879u",
+     "tracker_id": "E15",
+     "name": "#15 Range-increase stat and friendly/hostile faction classes",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "url": "https://app.clickup.com/t/86bcw879u",
+     "updated": 1793574101101,
+     "order": 10001793562313.438,
+     "blocked": false
+    },
+    {
+     "id": "86bcw879v",
+     "tracker_id": "E16",
+     "name": "#16 Player character inventory component",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "url": "https://app.clickup.com/t/86bcw879v",
+     "updated": 1793574101021,
+     "order": 10001793562313.613,
+     "blocked": false
+    },
+    {
+     "id": "86bcw879w",
+     "tracker_id": "E17",
+     "name": "#17 Character equipment screen widget",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "url": "https://app.clickup.com/t/86bcw879w",
+     "updated": 1793574101219,
+     "order": 10001793562313.81,
+     "blocked": false
+    },
+    {
+     "id": "86bcw87a0",
+     "tracker_id": "E19",
+     "name": "#19 Base weapon NPC's dialogue tree",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 0.5,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "url": "https://app.clickup.com/t/86bcw87a0",
+     "updated": 1793574101034,
+     "order": 10001793562314.16,
+     "blocked": false
+    },
+    {
+     "id": "86bcw87a1",
+     "tracker_id": "E20",
+     "name": "#20 Mutator NPC's corruption recipe list",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "url": "https://app.clickup.com/t/86bcw87a1",
+     "updated": 1793574101033,
+     "order": 10001793562314.35,
+     "blocked": false
+    },
+    {
+     "id": "86bcw87a2",
+     "tracker_id": "E21",
+     "name": "#21 Corrupted shard item",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 0.5,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "url": "https://app.clickup.com/t/86bcw87a2",
+     "updated": 1793574101025,
+     "order": 10001793562314.58,
+     "blocked": false
+    },
+    {
+     "id": "86bcw87a3",
+     "tracker_id": "E22",
+     "name": "#22 How a spawn decides to be corrupted",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "url": "https://app.clickup.com/t/86bcw87a3",
+     "updated": 1793574113966,
+     "order": 10001793562314.764,
+     "blocked": false
+    },
+    {
+     "id": "86bcw87a4",
+     "tracker_id": "E23",
+     "name": "#23 How dungeons are generated per zone",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "url": "https://app.clickup.com/t/86bcw87a4",
+     "updated": 1793574114448,
+     "order": 10001793562314.941,
+     "blocked": false
+    },
+    {
+     "id": "86bcw87a7",
+     "tracker_id": "E24",
+     "name": "#24 Map screen's quest log widget",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "url": "https://app.clickup.com/t/86bcw87a7",
+     "updated": 1793574126750,
+     "order": 10001793562315.139,
+     "blocked": false
+    },
+    {
+     "id": "86bcw87a9",
+     "tracker_id": "E25",
+     "name": "#25 Pickup notification widget",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 0.5,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "url": "https://app.clickup.com/t/86bcw87a9",
+     "updated": 1793574126770,
+     "order": 10001793562315.324,
+     "blocked": false
+    },
+    {
+     "id": "86bcw87ab",
+     "tracker_id": "E26",
+     "name": "#26 Point where a save finishes loading on the player",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "url": "https://app.clickup.com/t/86bcw87ab",
+     "updated": 1793574126879,
+     "order": 10001793562315.498,
+     "blocked": false
+    },
+    {
+     "id": "86bcw87ad",
+     "tracker_id": "E27",
+     "name": "#27 The game's play-time source",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 0.5,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "url": "https://app.clickup.com/t/86bcw87ad",
+     "updated": 1793574126798,
+     "order": 10001793562315.688,
+     "blocked": false
+    },
+    {
+     "id": "86bcw87ak",
+     "tracker_id": "E29",
+     "name": "#29 Losomn's world setup and its campaign slot",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "url": "https://app.clickup.com/t/86bcw87ak",
+     "updated": 1793574127032,
+     "order": 10001793562316.08,
+     "blocked": false
+    },
+    {
+     "id": "86bcw87ap",
+     "tracker_id": "E31",
+     "name": "#31 One world portal/world stone BP and one interaction montage",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "url": "https://app.clickup.com/t/86bcw87ap",
+     "updated": 1793574126860,
+     "order": 10001793562316.475,
+     "blocked": false
+    },
+    {
+     "id": "86bcw87at",
+     "tracker_id": "E32",
+     "name": "#32 One world's boss gate",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "url": "https://app.clickup.com/t/86bcw87at",
+     "updated": 1793574126851,
+     "order": 10001793562316.658,
+     "blocked": false
+    },
+    {
+     "id": "86bcw87av",
+     "tracker_id": "E33",
+     "name": "#33 Campaign map widget, Labyrinth world selection, campaign-complete save flag",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 1.5,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "url": "https://app.clickup.com/t/86bcw87av",
+     "updated": 1793574126818,
+     "order": 10001793562316.86,
+     "blocked": false
+    },
+    {
+     "id": "86bcw87ax",
+     "tracker_id": "E34",
+     "name": "#34 Labyrinth map and one existing portal",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "url": "https://app.clickup.com/t/86bcw87ax",
+     "updated": 1793574127116,
+     "order": 10001793562317.086,
+     "blocked": false
+    },
+    {
+     "id": "86bcwayh3",
+     "tracker_id": null,
+     "name": "#35 PrismStone limits read live in UE4SS",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 0.5,
+     "waits_on": [],
+     "url": "https://app.clickup.com/t/86bcwayh3",
+     "updated": 1793586307902,
+     "order": 10001793586307.918,
+     "blocked": false
+    },
+    {
+     "id": "86bcwayhj",
+     "tracker_id": null,
+     "name": "#36 Re-export Quest_Story_OneTrueKing",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "parent": null,
+     "estimate_hours": 0.5,
+     "waits_on": [],
+     "url": "https://app.clickup.com/t/86bcwayhj",
+     "updated": 1793586312344,
+     "order": 10001793586312.365,
+     "blocked": false
+    },
+    {
+     "id": "86bcw87an",
+     "tracker_id": "E30",
+     "name": "#30 Root Earth's world setup and how the campaign reaches it",
+     "status": "complete",
+     "status_color": "#008844",
+     "done": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "url": "https://app.clickup.com/t/86bcw87an",
+     "updated": 1793586552773,
+     "order": 10001793586552.566,
+     "blocked": false
+    },
+    {
+     "id": "86bcw879z",
+     "tracker_id": "E18",
+     "name": "#18 Item instance data fields",
+     "status": "complete",
+     "status_color": "#008844",
+     "done": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "url": "https://app.clickup.com/t/86bcw879z",
+     "updated": 1793586552773,
+     "order": 10001793586552.611,
+     "blocked": false
+    },
+    {
+     "id": "86bcw878v",
+     "tracker_id": "E1",
+     "name": "#1 Game .usmap mappings file",
+     "status": "complete",
+     "status_color": "#008844",
+     "done": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "url": "https://app.clickup.com/t/86bcw878v",
+     "updated": 1793586552510,
+     "order": 10001793586552.916,
+     "blocked": false
+    },
+    {
+     "id": "86bcw87aj",
+     "tracker_id": "E28",
+     "name": "#28 One existing status effect (e.g. Burning) and how it builds up",
+     "status": "complete",
+     "status_color": "#008844",
+     "done": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "url": "https://app.clickup.com/t/86bcw87aj",
+     "updated": 1793586714900,
+     "order": 10001793586714.965,
+     "blocked": false
+    },
+    {
+     "id": "86bcw879t",
+     "tracker_id": "E14",
+     "name": "#14 Root Earth's story quest path",
+     "status": "complete",
+     "status_color": "#008844",
+     "done": true,
+     "parent": null,
+     "estimate_hours": 0.5,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "url": "https://app.clickup.com/t/86bcw879t",
+     "updated": 1793586716473,
+     "order": 10001793586716.553,
+     "blocked": false
+    },
+    {
+     "id": "86bcw8796",
+     "tracker_id": "E5",
+     "name": "#5 Archetype_Handler, its engram, skills, perks and the dog companion",
+     "status": "complete",
+     "status_color": "#008844",
+     "done": true,
+     "parent": null,
+     "estimate_hours": 2.0,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "url": "https://app.clickup.com/t/86bcw8796",
+     "updated": 1793586717882,
+     "order": 10001793586717.963,
+     "blocked": false
+    },
+    {
+     "id": "86bcw878w",
+     "tracker_id": "E2",
+     "name": "#2 Quest_Campaign root quest and one DLC story campaign setup",
+     "status": "complete",
+     "status_color": "#008844",
+     "done": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "url": "https://app.clickup.com/t/86bcw878w",
+     "updated": 1793586719377,
+     "order": 10001793586719.432,
+     "blocked": false
+    },
+    {
+     "id": "86bcw8791",
+     "tracker_id": "E3",
+     "name": "#3 Ward 13 hub quest and how its NPCs spawn after story events",
+     "status": "complete",
+     "status_color": "#008844",
+     "done": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "url": "https://app.clickup.com/t/86bcw8791",
+     "updated": 1793586727106,
+     "order": 10001793586727.16,
+     "blocked": false
+    },
+    {
+     "id": "86bcw8792",
+     "tracker_id": "E4",
+     "name": "#4 Prism: segment table, one fusion BP, Prism stone BP, UE4SS header dump",
+     "status": "complete",
+     "status_color": "#008844",
+     "done": true,
+     "parent": null,
+     "estimate_hours": 2.0,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "url": "https://app.clickup.com/t/86bcw8792",
+     "updated": 1793586731843,
+     "order": 10001793586731.898,
+     "blocked": false
+    }
+   ]
+  }
+ ]
 }
