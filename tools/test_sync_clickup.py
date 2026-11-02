@@ -40,12 +40,8 @@ class SnapshotTests(unittest.TestCase):
         self.assertEqual(a["estimate_hours"], 2)
         self.assertEqual(a["url"], "https://app.clickup.com/t/a")
 
-    def test_only_own_waits_on_and_blocked(self):
-        c, d = self.snap["lists"][1]["tasks"]
-        self.assertEqual(c["waits_on"], ["b"])
-        self.assertTrue(c["blocked"])       # b is in progress
-        self.assertFalse(d["blocked"])      # a is complete
-        self.assertEqual(d["parent"], "c")
+    def test_parent(self):
+        self.assertEqual(self.snap["lists"][1]["tasks"][1]["parent"], "c")
 
     def test_status_counts(self):
         counts = {s["status"]: s["count"] for s in self.snap["statuses"]}

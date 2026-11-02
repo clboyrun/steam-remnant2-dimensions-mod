@@ -7,7 +7,7 @@ https://clboyrun.github.io/steam-remnant2-dimensions-mod/
 - `status.json`: the latest snapshot of the ClickUp tasks in the **Remnant 2 Dimensions** folder. Don't edit it by
   hand; the "Status page" GitHub Action rewrites it every hour.
 - `tools/sync_clickup.py`: makes `status.json` from the ClickUp API. Only task names, statuses, parent tasks, time
-  estimates and "waiting on" dependencies are published. Descriptions, comments and assignees are left out.
+  and estimates are published. Descriptions, comments and assignees are left out.
 - `tools/tracker-ids.json`: ClickUp task id to tracker id (E1, T3, G2…), shown on the page.
 
 To change how the page looks, edit `index.html` on this branch. To change what's on it, change the tasks in ClickUp.

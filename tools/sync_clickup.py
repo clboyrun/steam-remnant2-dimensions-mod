@@ -5,7 +5,7 @@ ClickUp token in a repository secret, so the token never reaches the browser.
 
     CLICKUP_API_TOKEN=pk_... python tools/sync_clickup.py --out status.json
 
-Only task names, statuses, hierarchy, estimates and dependencies are written.
+Only task names, statuses, hierarchy and estimates are written.
 Descriptions, comments and assignees are left out because the page is public.
 """
 
@@ -82,9 +82,6 @@ def is_done(status: dict) -> bool:
 def task_record(t: dict, tracker_ids: dict[str, str]) -> dict:
     status = t.get("status") or {}
     estimate = t.get("time_estimate")
-    waits_on = sorted(
-        {d["depends_on"] for d in t.get("dependencies") or [] if d.get("task_id") == t["id"] and d.get("depends_on")}
-    )
     return {
         "id": t["id"],
         "tracker_id": tracker_ids.get(t["id"]),
@@ -94,7 +91,6 @@ def task_record(t: dict, tracker_ids: dict[str, str]) -> dict:
         "done": is_done(status),
         "parent": t.get("parent"),
         "estimate_hours": round(int(estimate) / 3_600_000, 2) if estimate else None,
-        "waits_on": waits_on,
         "url": t.get("url") or f"https://app.clickup.com/t/{t['id']}",
         "updated": int(t["date_updated"]) if t.get("date_updated") else None,
         "order": float(t.get("orderindex") or 0),
@@ -110,12 +106,6 @@ def build_snapshot(folder: dict, tasks_by_list: dict[str, list[dict]], tracker_i
             s = statuses.setdefault(r["status"], {"status": r["status"], "color": r["status_color"], "done": r["done"], "count": 0})
             s["count"] += 1
         lists.append({"id": lst["id"], "name": lst["name"], "tasks": tasks})
-
-    # Blocked: waiting on a task that is not done yet.
-    done = {r["id"]: r["done"] for l in lists for r in l["tasks"]}
-    for l in lists:
-        for r in l["tasks"]:
-            r["blocked"] = not r["done"] and any(not done.get(d, False) for d in r["waits_on"])
 
     return {
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),

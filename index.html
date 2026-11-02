@@ -8,18 +8,18 @@
 <style>
 :root {
   --bg: #f6f5f2; --panel: #ffffff; --text: #1d1c1a; --muted: #6b6862; --line: #e3e0da;
-  --accent: #b5482a; --done: #2f7d4f; --blocked: #b23a3a; --track: #ebe8e2;
+  --accent: #b5482a; --done: #2f7d4f; --track: #ebe8e2;
   color-scheme: light;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --bg: #151413; --panel: #1f1e1c; --text: #ece9e3; --muted: #9a958c; --line: #33312d;
-    --accent: #e0754f; --done: #5dbb83; --blocked: #e06a6a; --track: #2c2a27; color-scheme: dark;
+    --accent: #e0754f; --done: #5dbb83; --track: #2c2a27; color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
   --bg: #151413; --panel: #1f1e1c; --text: #ece9e3; --muted: #9a958c; --line: #33312d;
-  --accent: #e0754f; --done: #5dbb83; --blocked: #e06a6a; --track: #2c2a27; color-scheme: dark;
+  --accent: #e0754f; --done: #5dbb83; --track: #2c2a27; color-scheme: dark;
 }
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--bg); color: var(--text);
@@ -55,13 +55,11 @@ ul.tasks { list-style: none; margin: 0; padding: 0 0 6px; border-top: 1px solid 
 ul.tasks li { display: grid; grid-template-columns: 120px 1fr auto; gap: 10px; padding: 8px 16px; align-items: baseline; }
 ul.tasks li + li { border-top: 1px solid var(--line); }
 ul.tasks li.sub { padding-left: 40px; }
-.st { display: inline-flex; gap: 6px; align-items: center; font-size: 12px; color: var(--muted); text-transform: capitalize; white-space: nowrap; overflow: hidden; }
+.st { display: inline-flex; gap: 6px; align-items: center; font-size: 12px; color: var(--muted); white-space: nowrap; overflow: hidden; }
 .st .dot { transform: translateY(1px); }
 .t a { text-decoration: none; }
 .t a:hover { text-decoration: underline; }
 .t .id { color: var(--muted); font-size: 12px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; margin-right: 6px; }
-.t .wait { display: block; color: var(--blocked); font-size: 12px; margin-top: 2px; }
-.t .wait a { color: var(--blocked); }
 li.done .t a { color: var(--muted); text-decoration: line-through; text-decoration-color: var(--line); }
 .h { color: var(--muted); font-size: 12px; font-variant-numeric: tabular-nums; white-space: nowrap; }
 .msg { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 20px; color: var(--muted); }
@@ -88,10 +86,11 @@ footer { margin-top: 32px; color: var(--muted); font-size: 13px; }
 (function () {
   const app = document.getElementById("app");
   const sub = document.getElementById("sub");
-  const state = { status: null, q: "", blocked: false };
+  const state = { status: null, q: "" };
   let data;
 
   const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const label = s => { s = String(s); return s.charAt(0).toUpperCase() + s.slice(1).toLowerCase(); };
   const pct = (a, b) => (b ? Math.round((a / b) * 100) : 0);
   const fmtH = h => (h == null ? "" : (Math.round(h * 10) / 10) + " h");
   const ago = iso => {
@@ -118,7 +117,6 @@ footer { margin-top: 32px; color: var(--muted); font-size: 13px; }
 
   function matches(t) {
     if (state.status && t.status !== state.status) return false;
-    if (state.blocked && !t.blocked) return false;
     if (state.q) {
       const hay = (t.name + " " + (t.tracker_id || "")).toLowerCase();
       if (!hay.includes(state.q.trim().toLowerCase())) return false;
@@ -131,11 +129,9 @@ footer { margin-top: 32px; color: var(--muted); font-size: 13px; }
     const done = all.filter(t => t.done);
     const hrs = all.reduce((a, t) => a + (t.estimate_hours || 0), 0);
     const hrsDone = done.reduce((a, t) => a + (t.estimate_hours || 0), 0);
-    const blocked = all.filter(t => t.blocked).length;
     return '<div class="cards">' +
       card("Tasks done", done.length + " / " + all.length, pct(done.length, all.length)) +
       card("Estimated hours done", fmtH(hrsDone) + " / " + fmtH(hrs), pct(hrsDone, hrs)) +
-      card("Waiting on another task", String(blocked)) +
       "</div>";
   }
   function card(k, v, p) {
@@ -145,31 +141,24 @@ footer { margin-top: 32px; color: var(--muted); font-size: 13px; }
 
   function controls() {
     let h = '<div class="controls"><input type="search" id="q" placeholder="Search tasks or IDs (E1, T3…)" value="' + esc(state.q) + '">';
-    h += '<button class="chip" data-status="" aria-pressed="' + (state.status === null && !state.blocked) + '">All</button>';
+    h += '<button class="chip" data-status="" aria-pressed="' + (state.status === null) + '">All</button>';
     data.statuses.forEach(s => {
       h += '<button class="chip" data-status="' + esc(s.status) + '" aria-pressed="' + (state.status === s.status) + '">' +
-        '<span class="dot" style="background:' + esc(s.color || "") + '"></span>' + esc(s.status) + " · " + s.count + "</button>";
+        '<span class="dot" style="background:' + esc(s.color || "") + '"></span>' + esc(label(s.status)) + " · " + s.count + "</button>";
     });
-    h += '<button class="chip" data-blocked="1" aria-pressed="' + state.blocked + '"><span class="dot" style="background:var(--blocked)"></span>Waiting</button>';
     return h + "</div>";
   }
 
   function row(t, isSub) {
-    const waits = t.blocked
-      ? '<span class="wait">Waiting on ' + t.waits_on.filter(id => !(byId[id] && byId[id].done)).map(id => {
-          const d = byId[id];
-          return d ? '<a href="' + esc(d.url) + '">' + esc(d.tracker_id || d.name) + "</a>" : esc(id);
-        }).join(", ") + "</span>"
-      : "";
     return '<li class="' + (isSub ? "sub " : "") + (t.done ? "done" : "") + '">' +
-      '<span class="st"><span class="dot" style="background:' + esc(t.status_color || "") + '"></span>' + esc(t.status) + "</span>" +
+      '<span class="st"><span class="dot" style="background:' + esc(t.status_color || "") + '"></span>' + esc(label(t.status)) + "</span>" +
       '<span class="t">' + (t.tracker_id ? '<span class="id">' + esc(t.tracker_id) + "</span>" : "") +
-      '<a href="' + esc(t.url) + '" target="_blank" rel="noopener">' + esc(t.name) + "</a>" + waits + "</span>" +
+      '<a href="' + esc(t.url) + '" target="_blank" rel="noopener">' + esc(t.name) + "</a></span>" +
       '<span class="h">' + fmtH(t.estimate_hours) + "</span></li>";
   }
 
   function lists() {
-    const filtering = state.status !== null || state.blocked || state.q.trim();
+    const filtering = state.status !== null || state.q.trim();
     return data.lists.map(l => {
       const done = l.tasks.filter(t => t.done).length;
       const ids = new Set(l.tasks.map(t => t.id));
@@ -200,8 +189,7 @@ footer { margin-top: 32px; color: var(--muted); font-size: 13px; }
     q.addEventListener("input", e => { state.q = e.target.value; render(); });
     if (hadFocus) { q.focus(); q.setSelectionRange(q.value.length, q.value.length); }
     app.querySelectorAll(".chip").forEach(b => b.addEventListener("click", () => {
-      if (b.dataset.blocked) { state.blocked = !state.blocked; state.status = null; }
-      else { state.status = b.dataset.status || null; state.blocked = false; }
+      state.status = b.dataset.status || null;
       render();
     }));
     app.querySelectorAll("details.list").forEach(d => d.addEventListener("toggle", () => {
