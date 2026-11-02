@@ -3,7 +3,7 @@
 The GitHub Pages status page reads this file. It runs in a GitHub Action with the
 ClickUp token in a repository secret, so the token never reaches the browser.
 
-    CLICKUP_API_TOKEN=pk_... python status/sync_clickup.py --out _site/status.json
+    CLICKUP_API_TOKEN=pk_... python tools/sync_clickup.py --out status.json
 
 Only task names, statuses, hierarchy, estimates and dependencies are written.
 Descriptions, comments and assignees are left out because the page is public.
@@ -121,7 +121,7 @@ def main() -> None:
 
     token = os.environ.get("CLICKUP_API_TOKEN", "").strip()
     if not token:
-        sys.exit("CLICKUP_API_TOKEN is not set. Add it as a repository secret (see status/README.md).")
+        sys.exit("CLICKUP_API_TOKEN is not set. Add it as a repository secret (see README.md on the gh-pages branch).")
 
     tracker_ids = json.loads((HERE / "tracker-ids.json").read_text(encoding="utf-8"))
     api = ClickUp(token)

@@ -80,7 +80,7 @@ footer { margin-top: 32px; color: var(--muted); font-size: 13px; }
   <p class="sub" id="sub">Project status from ClickUp</p>
   <div id="app"><div class="msg">Loading status…</div></div>
   <footer>
-    Synced from ClickUp by a scheduled GitHub Action.
+    Checked against ClickUp every hour.
     <a href="https://github.com/clboyrun/steam-remnant2-dimensions-mod">Source on GitHub</a>.
   </footer>
 </main>
@@ -112,7 +112,7 @@ footer { margin-top: 32px; color: var(--muted); font-size: 13px; }
     byId = {};
     data.lists.forEach(l => l.tasks.forEach(t => { byId[t.id] = t; }));
     const when = new Date(data.generated_at);
-    sub.innerHTML = 'Project status from ClickUp · updated <time datetime="' + esc(data.generated_at) + '" title="' +
+    sub.innerHTML = 'Project status from ClickUp · last change <time datetime="' + esc(data.generated_at) + '" title="' +
       esc(when.toLocaleString()) + '">' + ago(data.generated_at) + "</time>";
   }
 
