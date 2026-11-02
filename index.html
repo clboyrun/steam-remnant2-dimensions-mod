@@ -34,7 +34,9 @@ h1 { font-size: 26px; margin: 0 0 4px; letter-spacing: -0.01em; }
 .card .k { color: var(--muted); font-size: 13px; }
 .card .v { font-size: 24px; font-weight: 600; font-variant-numeric: tabular-nums; }
 .bar { height: 8px; background: var(--track); border-radius: 99px; overflow: hidden; margin-top: 8px; }
-.bar > span { display: block; height: 100%; background: var(--done); border-radius: 99px; }
+.bar { display: flex; }
+.bar > span { display: block; height: 100%; background: var(--done); flex: none; }
+.bar > span + span { box-shadow: inset 1px 0 0 var(--panel); }
 .controls { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 8px 0 20px; }
 .chip { border: 1px solid var(--line); background: var(--panel); color: var(--text); border-radius: 99px;
   padding: 4px 10px; font: inherit; font-size: 13px; cursor: pointer; display: inline-flex; gap: 6px; align-items: center; }
@@ -130,13 +132,29 @@ footer { margin-top: 32px; color: var(--muted); font-size: 13px; }
     const hrs = all.reduce((a, t) => a + (t.estimate_hours || 0), 0);
     const hrsDone = done.reduce((a, t) => a + (t.estimate_hours || 0), 0);
     return '<div class="cards">' +
-      card("Tasks done", done.length + " / " + all.length, pct(done.length, all.length)) +
-      card("Estimated hours done", fmtH(hrsDone) + " / " + fmtH(hrs), pct(hrsDone, hrs)) +
+      card("Tasks done", done.length + " / " + all.length, bar(all, () => 1, "tasks")) +
+      card("Estimated hours done", fmtH(hrsDone) + " / " + fmtH(hrs), bar(all, t => t.estimate_hours || 0, "hours")) +
       "</div>";
+  }
+  // Stacked bar: one segment per status (done ones first), in the status's colour. To do is the empty track.
+  const isOpen = s => (s.open !== undefined ? s.open : s.status.toLowerCase() === "to do");
+  function bar(tasks, weight, unit, tag) {
+    tag = tag || "div";
+    const total = tasks.reduce((a, t) => a + weight(t), 0);
+    const shown = data.statuses.filter(s => !isOpen(s)).sort((a, b) => b.done - a.done);
+    const parts = [], segs = shown.map(s => {
+      const w = tasks.filter(t => t.status === s.status).reduce((a, t) => a + weight(t), 0);
+      const p = total ? (w / total) * 100 : 0;
+      if (!w) return "";
+      const txt = label(s.status) + " " + Math.round(p) + "% of " + unit;
+      parts.push(txt);
+      return '<span style="width:' + p + "%;background:" + esc(s.color || "var(--done)") + '" title="' + esc(txt) + '"></span>';
+    }).join("");
+    return "<" + tag + ' class="bar" role="img" aria-label="' + esc(parts.join(", ") || "Nothing started") + '">' + segs + "</" + tag + ">";
   }
   function card(k, v, p) {
     return '<div class="card"><div class="k">' + esc(k) + '</div><div class="v">' + esc(v) + "</div>" +
-      (p == null ? "" : '<div class="bar" role="img" aria-label="' + p + '% done"><span style="width:' + p + '%"></span></div>') + "</div>";
+      (p == null ? "" : p) + "</div>";
   }
 
   function controls() {
@@ -176,7 +194,7 @@ footer { margin-top: 32px; color: var(--muted); font-size: 13px; }
       const open = filtering || sessionOpen.has(l.id);
       return '<details class="list" data-id="' + esc(l.id) + '"' + (open ? " open" : "") + "><summary>" +
         '<span class="name">' + esc(l.name) + '</span><span class="count">' + done + " / " + l.tasks.length + " done</span>" +
-        '<span class="bar"><span style="width:' + pct(done, l.tasks.length) + '%"></span></span></summary>' +
+        bar(l.tasks, () => 1, "tasks", "span") + "</summary>" +
         (items ? '<ul class="tasks">' + items + "</ul>" : '<div class="empty">No tasks</div>') + "</details>";
     }).join("") || '<div class="msg">No tasks match.</div>';
   }

@@ -90,6 +90,7 @@ def task_record(t: dict, tracker_ids: dict[str, str]) -> dict:
         "status": status.get("status", "unknown"),
         "status_color": status.get("color"),
         "done": is_done(status),
+        "open": status.get("type") == "open",
         "parent": t.get("parent"),
         "estimate_hours": round(int(estimate) / 3_600_000, 2) if estimate else None,
         "url": t.get("url") or f"https://app.clickup.com/t/{t['id']}",
@@ -104,12 +105,12 @@ def build_snapshot(
     # Every status ClickUp defines is listed, in ClickUp's order, even with no tasks in it yet.
     lists, statuses = [], {}
     for k in sorted(known_statuses, key=lambda k: int(k.get("orderindex") or 0)):
-        statuses.setdefault(k["status"], {"status": k["status"], "color": k.get("color"), "done": is_done(k), "count": 0})
+        statuses.setdefault(k["status"], {"status": k["status"], "color": k.get("color"), "done": is_done(k), "open": k.get("type") == "open", "count": 0})
     for lst in sorted(folder.get("lists", []), key=lambda l: int(l.get("orderindex") or 0)):
         tasks = [task_record(t, tracker_ids) for t in tasks_by_list.get(lst["id"], [])]
         tasks.sort(key=lambda r: r["order"])
         for r in tasks:
-            s = statuses.setdefault(r["status"], {"status": r["status"], "color": r["status_color"], "done": r["done"], "count": 0})
+            s = statuses.setdefault(r["status"], {"status": r["status"], "color": r["status_color"], "done": r["done"], "open": r["open"], "count": 0})
             s["color"] = s["color"] or r["status_color"]
             s["count"] += 1
         lists.append({"id": lst["id"], "name": lst["name"], "tasks": tasks})

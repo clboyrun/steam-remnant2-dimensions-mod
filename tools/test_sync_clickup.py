@@ -52,6 +52,7 @@ class SnapshotTests(unittest.TestCase):
         # Unused statuses (PROBLEM) are listed too, in ClickUp's order, done ones last.
         self.assertEqual(counts, [("to do", 2), ("PROBLEM", 0), ("in progress", 1), ("complete", 1)])
         self.assertTrue(self.snap["statuses"][-1]["done"])
+        self.assertEqual([s["status"] for s in self.snap["statuses"] if s["open"]], ["to do"])
 
 
 if __name__ == "__main__":
