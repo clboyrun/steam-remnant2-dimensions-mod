@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dimensions Dependency Wheel</title>
+<meta name="description" content="Which Remnant 2 Dimensions tickets wait on which, live from ClickUp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;600;800&family=Chivo+Mono:wght@400;600&display=swap">
+<style>
+
+/* Layout: a radial dependency wheel (exports in the hub ring, work on the rim) beside a reading column; ranked start order below. */
+:root{
+  --bg:#f3f4f1; --panel:#fbfbf9; --fg:#1d2420; --muted:#5d6862; --line:#c9cfca;
+  --accent:#b4471f; --accent-soft:#f2d9cc; --ready:#2f6f4f; --edge:#8a948e;
+  --sat:42%; --lit:46%;
+  --display:"Chivo",ui-sans-serif,system-ui,sans-serif; --body:"Chivo",ui-sans-serif,system-ui,sans-serif; --mono:"Chivo Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#151a17;--panel:#1c2320;--fg:#e4e9e5;--muted:#9aa59f;--line:#34403a;--accent:#ff8a5c;--accent-soft:#4a2a1d;--ready:#6fc79a;--edge:#6b7771;--sat:45%;--lit:62%;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#151a17;--panel:#1c2320;--fg:#e4e9e5;--muted:#9aa59f;--line:#34403a;--accent:#ff8a5c;--accent-soft:#4a2a1d;--ready:#6fc79a;--edge:#6b7771;--sat:45%;--lit:62%;color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:15px;line-height:1.5}
+.wrap{max-width:1280px;margin:0 auto;padding-block:28px 56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:28px}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(26px,4vw,38px);line-height:1.1;margin:0;text-wrap:balance;letter-spacing:-.01em}
+h2{font-family:var(--display);font-weight:800;font-size:19px;margin:0 0 10px;text-wrap:balance}
+.lede{color:var(--muted);max-width:68ch;margin:8px 0 0}
+.kpis{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:14px;font-family:var(--mono);font-size:13px;color:var(--muted)}
+.kpis b{display:block;font-family:var(--display);font-size:22px;color:var(--fg);font-variant-numeric:tabular-nums}
+.main{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:24px;align-items:start}
+@media (max-width:900px){.main{grid-template-columns:1fr}}
+.wheelbox{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px;overflow-x:auto}
+.wheelbox svg{display:block;width:100%;min-width:560px;height:auto}
+.controls{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;font-size:13px;color:var(--muted);padding:4px 6px 8px}
+.controls label{display:flex;gap:6px;align-items:center;cursor:pointer}
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:12px;color:var(--muted);padding:8px 6px 2px}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.sw{width:10px;height:10px;border-radius:50%;display:inline-block}
+.col{display:grid;gap:18px;min-width:0}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px 18px;min-width:0}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.detail h3{font-family:var(--display);font-size:18px;margin:4px 0 8px;text-wrap:balance}
+.facts{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;font-size:13px;margin:0}
+.facts dt{color:var(--muted)} .facts dd{margin:0;font-variant-numeric:tabular-nums}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.chip{font:12px var(--mono);border:1px solid var(--line);background:var(--bg);color:var(--fg);border-radius:999px;padding:2px 9px;cursor:pointer}
+.chip:hover,.chip:focus-visible{border-color:var(--accent);outline:none}
+.sub{font-size:13px;color:var(--muted);margin:10px 0 2px}
+ol.steps{list-style:none;margin:0;padding:0;display:grid;gap:14px;counter-reset:s}
+ol.steps>li{display:grid;grid-template-columns:34px 1fr;gap:10px;counter-increment:s}
+ol.steps>li::before{content:counter(s);font-family:var(--display);font-weight:800;font-size:20px;color:var(--accent);line-height:1.2}
+.steps p{margin:2px 0 0;font-size:13.5px;color:var(--muted)}
+.steps strong{font-family:var(--display)}
+.bars{display:grid;gap:7px}
+.bar{display:grid;grid-template-columns:minmax(0,15em) 1fr 4.5em;gap:10px;align-items:center;font-size:13px;cursor:pointer}
+.bar .nm{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.bar .tr{height:12px;background:var(--bg);border-radius:3px;position:relative}
+.bar .fl{position:absolute;inset:0 auto 0 0;background:var(--accent);border-radius:3px}
+.bar .v{font-family:var(--mono);text-align:right;font-variant-numeric:tabular-nums;color:var(--muted)}
+.bar:hover .nm{color:var(--accent)}
+@media (max-width:520px){.bar{grid-template-columns:minmax(0,9em) 1fr 4em}}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media (max-width:900px){.grid2{grid-template-columns:1fr}}
+.late{columns:2 15em;column-gap:24px;font-size:13px;margin:0;padding-left:18px}
+.late li{break-inside:avoid;margin-bottom:3px}
+.late .h{font-family:var(--mono);color:var(--muted)}
+.tid{font-family:var(--mono);font-size:11px;color:var(--muted)}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.steplinks{display:block;font-family:var(--mono);font-size:12px;margin-top:4px}
+.note{font-size:12.5px;color:var(--muted);max-width:80ch}
+svg text{font-family:var(--mono)}
+.n{cursor:pointer}
+.n:focus-visible circle{stroke:var(--accent);stroke-width:3}
+.dim .n:not(.on) {opacity:.18}
+.dim path.e:not(.on){opacity:.06}
+path.e{fill:none;stroke:var(--edge);stroke-width:.9;opacity:.55}
+path.e.imp{stroke-dasharray:2 3;opacity:.35}
+path.e.soft{stroke:var(--muted);stroke-width:.6;opacity:.25;stroke-dasharray:1 2}
+path.e.on{stroke:var(--accent);opacity:.95;stroke-width:1.6}
+.lbl{fill:var(--muted);font-size:8.6px}
+.n.on .lbl{fill:var(--fg)}
+.sel .lbl{fill:var(--accent);font-weight:600}
+@media (prefers-reduced-motion:no-preference){.n circle,path.e{transition:opacity .15s}}
+/* Live additions: nav, status rings, loading state. */
+body{margin:0}
+*{box-sizing:border-box}
+.top{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:13px;margin-bottom:10px}
+.top a{color:var(--muted)} .top a:hover{color:var(--accent)}
+.n.done{opacity:.4}
+.dim .n.done.on{opacity:.75}
+.stat{display:inline-flex;align-items:center;gap:6px}
+.msg{color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <nav class="top"><a href="index.html">← Project status</a><a href="about.html">About the mod</a></nav>
+    <div class="eyebrow" id="eyebrow">Remnant 2 Dimensions · live from ClickUp</div>
+    <h1>Where the dependencies pile up</h1>
+    <p class="lede">Every top-level ticket on one wheel, updated with the status page. Game-file exports sit in the hub, sized by the hours of unfinished work waiting on them. Feature tickets sit on the rim, grouped by list. Click any dot to light up what it waits on and what waits on it.</p>
+    <div class="kpis" id="kpis"></div>
+  </header>
+  <div id="app" class="msg">Loading the latest ClickUp snapshot…</div>
+  <div class="main" id="main" hidden>
+    <div class="wheelbox">
+      <div class="controls">
+        <label><input type="checkbox" id="soft"> Show related links (not blockers)</label>
+        <label><input type="checkbox" id="imp" checked> Show the spokes from the hub ticket</label>
+      </div>
+      <svg id="wheel" viewBox="-560 -560 1120 1120" role="img" aria-label="Dependency wheel of all tickets"></svg>
+      <div class="legend" id="legend"></div>
+    </div>
+    <div class="col">
+      <div class="card detail" id="detail" aria-live="polite"></div>
+      <div class="card">
+        <h2>Start here: free now, most work behind them</h2>
+        <ol class="steps" id="steps"></ol>
+      </div>
+    </div>
+  </div>
+  <div class="grid2" id="lower" hidden>
+    <div class="card">
+      <h2>Highest concentration: hours waiting on each ticket</h2>
+      <div class="bars" id="bars"></div>
+      <p class="note">Hours of every unfinished ticket that waits on it, directly or through a chain, including subtasks. Bars share one scale.</p>
+    </div>
+    <div class="card">
+      <h2>Lowest concentration: free to start, but not first</h2>
+      <p class="note" style="margin-top:0">Nothing waits on these and nothing blocks them. They're often the most fun to pick up, and they're safe to leave until the foundation is in.</p>
+      <ul class="late" id="late"></ul>
+    </div>
+  </div>
+  <p class="note">Every ticket shows its tracker ID (E28, H9, P3 and so on), and its name links to that task in ClickUp. Finished tickets are faded; a coloured ring shows any other status that isn't To do. Rebuilt from the same ClickUp snapshot as the status page, so it changes whenever the tasks do.</p>
+</div>
+<script>
+(function(){
+const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+const label=s=>{s=String(s);return s.charAt(0).toUpperCase()+s.slice(1).toLowerCase()};
+const fmt=h=>h>=10?Math.round(h).toLocaleString():(+h.toFixed(1)).toString();
+const ago=iso=>{const s=(Date.now()-new Date(iso).getTime())/1000;if(s<90)return'just now';if(s<5400)return Math.round(s/60)+' min ago';if(s<129600)return Math.round(s/3600)+' h ago';return Math.round(s/86400)+' days ago'};
+fetch('status.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error(r.status);return r.json()}).then(build)
+  .catch(()=>{document.getElementById('app').textContent='No ClickUp snapshot yet. It appears after the next hourly refresh.'});
+
+function build(data){
+// ---- Turn the snapshot into one node per top-level ticket ----
+const all=[];data.lists.forEach(l=>l.tasks.forEach(t=>all.push(Object.assign({list:l.name},t))));
+const byCU=Object.fromEntries(all.map(t=>[t.id,t]));
+const topOf=id=>{let t=byCU[id],guard=0;while(t&&t.parent&&byCU[t.parent]&&guard++<20)t=byCU[t.parent];return t?t.id:null};
+const tops=all.filter(t=>!t.parent||!byCU[t.parent]);
+const kidsOf={};all.forEach(t=>{if(t.parent&&byCU[t.parent]){const p=topOf(t.id);(kidsOf[p]=kidsOf[p]||[]).push(t)}});
+const statusInfo=Object.fromEntries((data.statuses||[]).map(s=>[s.status,s]));
+const D=tops.map(t=>{const kids=kidsOf[t.id]||[];const fam=[t,...kids];
+  const rel=k=>[...new Set(fam.flatMap(x=>x[k]||[]).map(topOf).filter(x=>x&&x!==t.id))];
+  return{key:t.id,id:t.tracker_id||'·',name:t.name,list:t.list,url:t.url,status:t.status,color:t.status_color,done:t.done,
+    open:statusInfo[t.status]?statusInfo[t.status].open:/^to ?do$/i.test(t.status),
+    h:fam.reduce((a,x)=>a+(x.estimate_hours||0),0),wait:rel('waits_on'),link:rel('links'),kids:kids.length,kidnames:kids.map(k=>k.name)}});
+const byId=Object.fromEntries(D.map(n=>[n.key,n]));
+const down={};D.forEach(n=>n.wait.forEach(w=>(down[w]=down[w]||[]).push(n.key)));
+const trans=(id,dir,seen=new Set())=>{(dir=='down'?(down[id]||[]):byId[id].wait).forEach(x=>{if(!seen.has(x)){seen.add(x);trans(x,dir,seen)}});return seen};
+D.forEach(n=>{const dn=[...trans(n.key,'down')];n.direct=(down[n.key]||[]).length;n.down=dn.filter(k=>!byId[k].done).length;
+  n.downh=dn.reduce((a,k)=>a+(byId[k].done?0:byId[k].h),0);n.blocked=n.wait.some(w=>!byId[w].done)});
+const depth=(id,seen=new Set())=>{if(seen.has(id))return 0;seen.add(id);const w=byId[id].wait;return w.length?1+Math.max(...w.map(x=>depth(x,new Set(seen)))):0};
+D.forEach(n=>n.depth=depth(n.key));
+
+// Hub = the data-inputs list; centre = its ticket with the most dependents (the usmap file).
+const listNames=data.lists.map(l=>l.name).filter(l=>D.some(n=>n.list==l));
+const hubList=listNames.find(l=>/required data inputs/i.test(l))||listNames.slice().sort((a,b)=>D.filter(n=>n.list==b).reduce((s,n)=>s+n.direct,0)-D.filter(n=>n.list==a).reduce((s,n)=>s+n.direct,0))[0];
+const ORDER=[hubList,...listNames.filter(l=>l!==hubList)];
+const hubD=D.filter(n=>n.list==hubList);
+const center=hubD.find(n=>/\.usmap/i.test(n.name))||hubD.sort((a,b)=>b.direct-a.direct)[0];
+const idTxt=n=>/^E\d+$/.test(n.id)?n.id.replace('E','#'):n.id;
+const cuLink=(n,text)=>n.url?`<a href="${esc(n.url)}" target="_blank" rel="noopener">${text}</a>`:text;
+
+document.getElementById('eyebrow').innerHTML=`Remnant 2 Dimensions · live from ClickUp · last change <time datetime="${esc(data.generated_at)}" title="${esc(new Date(data.generated_at).toLocaleString())}">${ago(data.generated_at)}</time>`;
+document.getElementById('app').hidden=true;document.getElementById('main').hidden=false;document.getElementById('lower').hidden=false;
+
+// ---- Layout ----
+const svg=document.getElementById('wheel'),NS='http://www.w3.org/2000/svg';
+const hue={};ORDER.forEach((l,i)=>hue[l]=Math.round((i*360/ORDER.length+20)%360));
+const pos={},R1=150,R2=330;
+const rim=D.filter(n=>n.list!==hubList);
+const groups=ORDER.slice(1).map(l=>rim.filter(n=>n.list==l));
+const gap=0.045,total=Math.max(rim.length,1);let a=-Math.PI/2+gap/2;const step=(2*Math.PI-gap*groups.length)/total;
+const arcs=[];
+groups.forEach((g,gi)=>{g.sort((x,y)=>(y.down-x.down)||x.id.localeCompare(y.id,undefined,{numeric:true}));const a0=a;g.forEach(n=>{pos[n.key]={a:a+step/2,r:R2};a+=step});arcs.push({l:ORDER[gi+1],a0,a1:a});a+=gap});
+const ex=D.filter(n=>n.list==hubList&&n!==center);
+ex.forEach(n=>{const ds=(down[n.key]||[]).filter(x=>pos[x]);let sx=0,sy=0;ds.forEach(x=>{sx+=Math.cos(pos[x].a);sy+=Math.sin(pos[x].a)});n._a=ds.length?Math.atan2(sy,sx):0});
+ex.sort((x,y)=>x._a-y._a);
+let best=0,bs=-1e9;for(let k=0;k<ex.length;k++){let s=0;ex.forEach((n,i)=>{s+=Math.cos(n._a-(-Math.PI/2+((i+k)%ex.length)*2*Math.PI/ex.length))});if(s>bs){bs=s;best=k}}
+ex.forEach((n,i)=>pos[n.key]={a:-Math.PI/2+((i+best)%ex.length)*2*Math.PI/ex.length,r:R1});
+if(center)pos[center.key]={a:0,r:0};
+const xy=id=>{const p=pos[id];return[p.r*Math.cos(p.a),p.r*Math.sin(p.a)]};
+const el=(t,at,par)=>{const e=document.createElementNS(NS,t);for(const k in at)e.setAttribute(k,at[k]);(par||svg).appendChild(e);return e};
+const gArc=el('g',{});
+arcs.forEach(s=>{if(s.a1<=s.a0)return;const r=R2-16,[x0,y0]=[r*Math.cos(s.a0),r*Math.sin(s.a0)],[x1,y1]=[r*Math.cos(s.a1),r*Math.sin(s.a1)];
+  el('path',{d:`M${x0} ${y0}A${r} ${r} 0 ${s.a1-s.a0>Math.PI?1:0} 1 ${x1} ${y1}`,style:`stroke:hsl(${hue[s.l]} var(--sat) var(--lit));stroke-width:6;fill:none;stroke-linecap:round;opacity:.85`},gArc)});
+el('circle',{cx:0,cy:0,r:R1,style:'fill:none;stroke:var(--line);stroke-dasharray:2 4'});
+const gE=el('g',{}),edges=[];
+const curve=(p,q)=>{const[x0,y0]=xy(p),[x1,y1]=xy(q);const k=(pos[p].r&&pos[q].r==pos[p].r)?0.55:0.75;const mx=(x0+x1)/2*k,my=(y0+y1)/2*k;return`M${x0} ${y0}Q${mx} ${my} ${x1} ${y1}`};
+D.forEach(n=>n.wait.forEach(w=>{if(!pos[w]||!pos[n.key])return;const imp=center&&w===center.key;const p=el('path',{d:imp?`M0 0L${xy(n.key).join(' ')}`:curve(w,n.key),class:'e'+(imp?' imp':'')},gE);edges.push({p,a:w,b:n.key,kind:imp?'imp':'hard'})}));
+const seenL=new Set();
+D.forEach(n=>n.link.forEach(l=>{const k=[n.key,l].sort().join('|');if(seenL.has(k)||!byId[l]||!pos[l]||!pos[n.key])return;seenL.add(k);const p=el('path',{d:curve(n.key,l),class:'e soft'},gE);p.style.display='none';edges.push({p,a:n.key,b:l,kind:'soft'})}));
+const ring=(n,x,y,r,g)=>{if(!n.done&&!n.open&&n.color)el('circle',{cx:x,cy:y,r:r+3.2,style:`fill:none;stroke:${n.color};stroke-width:2`},g)};
+const gN=el('g',{}),nodes={};
+const maxDh=Math.max(1,...ex.map(n=>n.downh));
+D.forEach(n=>{if(!pos[n.key])return;const [x,y]=xy(n.key);const g=el('g',{class:'n'+(n.done?' done':''),tabindex:0,role:'button','aria-label':n.name+', '+label(n.status)},gN);nodes[n.key]=g;
+  if(n===center){ring(n,0,0,30,g);el('circle',{cx:0,cy:0,r:30,style:'fill:var(--accent)'},g);const t=el('text',{x:0,y:-2,'text-anchor':'middle',style:'fill:var(--bg);font-size:12px;font-weight:600'},g);t.textContent=idTxt(n);const t2=el('text',{x:0,y:12,'text-anchor':'middle',style:'fill:var(--bg);font-size:9px'},g);t2.textContent=fmt(n.downh)+' h';}
+  else if(n.list==hubList){const r=4+Math.sqrt(n.downh)*0.52;const f=0.15+0.85*Math.sqrt(n.downh/maxDh);ring(n,x,y,r,g);
+    el('circle',{cx:x,cy:y,r,style:`fill:color-mix(in srgb,var(--accent) ${Math.round(f*100)}%,var(--panel));stroke:var(--accent);stroke-width:1`},g);
+    const la=pos[n.key].a;const t=el('text',{x:x-(r+7)*Math.cos(la),y:y-(r+7)*Math.sin(la)+3,'text-anchor':'middle',class:'lbl'},g);t.textContent=idTxt(n);}
+  else{const r=2.6+Math.sqrt(n.h)*0.42,c=`hsl(${hue[n.list]} var(--sat) var(--lit))`;ring(n,x,y,r,g);
+    el('circle',{cx:x,cy:y,r,style:n.blocked?`fill:var(--panel);stroke:${c};stroke-width:1.8`:`fill:${c}`},g);
+    const la=pos[n.key].a,deg=la*180/Math.PI,flip=Math.cos(la)<0;const lx=(R2+12)*Math.cos(la),ly=(R2+12)*Math.sin(la);
+    let nm=n.name.replace(/^(Boss|Sin boss|Angel|Dungeon|Arena stage|Test|Risk|Open question): /,'');if(nm.length>30)nm=nm.slice(0,29)+'…';
+    const t=el('text',{x:lx,y:ly,transform:`rotate(${flip?deg+180:deg} ${lx} ${ly})`,'text-anchor':flip?'end':'start',dy:'3',class:'lbl'},g);t.textContent=nm;}
+  g.addEventListener('click',()=>select(n.key));g.addEventListener('keydown',e=>{if(e.key=='Enter'||e.key==' '){e.preventDefault();select(n.key)}});
+  const ti=el('title',{},g);ti.textContent=n.id+' · '+n.name+' · '+label(n.status);});
+const stat=(data.statuses||[]).filter(s=>!s.open).map(s=>`<span><i class="sw" style="${s.done?`background:${esc(s.color||'var(--muted)')};opacity:.45`:`border:2px solid ${esc(s.color||'var(--muted)')}`}"></i>${esc(label(s.status))}${s.done?' (faded)':' (ring)'}</span>`).join('');
+document.getElementById('legend').innerHTML=ORDER.slice(1).map(l=>`<span><i class="sw" style="background:hsl(${hue[l]} var(--sat) var(--lit))"></i>${esc(l)}</span>`).join('')+`<span><i class="sw" style="border:2px solid var(--muted)"></i>Hollow: waiting on unfinished work</span>`+stat;
+
+// ---- Selection ----
+const detail=document.getElementById('detail');
+const short=s=>s.length>34?s.slice(0,33)+'…':s;
+const chip=k=>{const n=byId[k];return`<button class="chip" data-id="${esc(k)}" title="${esc(n.name)}">${/^E\d+$/.test(n.id)?idTxt(n):esc(n.id+' · '+short(n.name))}</button>`};
+function select(id){const n=byId[id];const up=trans(id,'up'),dn=trans(id,'down');const on=new Set([id,...up,...dn]);
+  svg.classList.add('dim');Object.entries(nodes).forEach(([k,g])=>{g.classList.toggle('on',on.has(k));g.classList.toggle('sel',k==id)});
+  edges.forEach(e=>e.p.classList.toggle('on',e.kind!='soft'&&on.has(e.a)&&on.has(e.b)&&((dn.has(e.b)||e.b==id)&&(e.a==id||dn.has(e.a))||(up.has(e.a)&&(up.has(e.b)||e.b==id)))));
+  const waiting=n.wait.filter(w=>!byId[w].done).length;
+  detail.innerHTML=`<div class="eyebrow">${esc(n.list)} · ${esc(n.id)}</div><h3>${cuLink(n,esc(n.name))}</h3>${n.url?`<p style="margin:0 0 10px"><a href="${esc(n.url)}" target="_blank" rel="noopener">Open in ClickUp →</a></p>`:''}
+  <dl class="facts"><dt>Status</dt><dd><span class="stat"><i class="sw" style="background:${esc(n.color||'var(--muted)')}"></i>${esc(label(n.status))}</span></dd>
+  <dt>Own estimate</dt><dd>${fmt(n.h)} h${n.kids?` (incl. ${n.kids} subtasks)`:''}</dd>
+  <dt>Unblocks</dt><dd>${n.down} unfinished ticket${n.down==1?'':'s'}, ${fmt(n.downh)} h</dd>
+  <dt>Waits on</dt><dd>${n.wait.length?`${n.wait.length} ticket${n.wait.length>1?'s':''}${waiting?`, ${waiting} unfinished`:', all finished'}`:'nothing, free to start'}</dd>
+  <dt>Chain depth</dt><dd>${n.depth} step${n.depth==1?'':'s'} from a free start</dd></dl>
+  ${n.wait.length?`<div class="sub">Waits on</div><div class="chips">${n.wait.map(chip).join('')}</div>`:''}
+  ${(down[id]||[]).length?`<div class="sub">Directly unblocks</div><div class="chips">${down[id].map(chip).join('')}</div>`:''}
+  ${n.link.length?`<div class="sub">Related</div><div class="chips">${n.link.filter(l=>byId[l]).map(chip).join('')}</div>`:''}
+  ${n.kids?`<div class="sub">Subtasks (open from the parent in ClickUp)</div><div class="note">${n.kidnames.map((k,i)=>esc(n.id+'.'+(i+1)+' '+k)).join(' · ')}</div>`:''}`;
+  detail.querySelectorAll('.chip').forEach(c=>c.addEventListener('click',()=>select(c.dataset.id)));
+  detail.querySelectorAll('a').forEach(x=>x.addEventListener('click',e=>e.stopPropagation()));}
+
+// ---- Numbers and lists ----
+const todo=D.filter(n=>!n.done);
+const tot=D.reduce((s,n)=>s+n.h,0),left=todo.reduce((s,n)=>s+n.h,0),free=todo.filter(n=>!n.blocked),sub=D.reduce((s,n)=>s+n.kids,0);
+document.getElementById('kpis').innerHTML=`<span><b>${D.length}</b>tickets (+${sub} subtasks)</span><span><b>${fmt(left)} h</b>left of ${fmt(tot)} h</span>`+
+  (center?`<span><b>${fmt(center.downh)} h</b>behind ${esc(idTxt(center))}</span>`:'')+`<span><b>${free.length}</b>free to start now</span>`;
+const rankedFree=free.filter(n=>n.down>0).sort((a,b)=>b.downh-a.downh).slice(0,5);
+document.getElementById('steps').innerHTML=rankedFree.map(n=>`<li><div><strong>${cuLink(n,esc(n.name))}</strong> (${fmt(n.h)} h)<p>${esc(label(n.status))}. ${n.down} unfinished ticket${n.down==1?'':'s'} (${fmt(n.downh)} h) wait on it.</p><span class="steplinks"><button class="chip" data-id="${esc(n.key)}">${esc(n.id)} on the wheel</button></span></div></li>`).join('')||'<li><div><p>Nothing is free to start that unblocks other work.</p></div></li>';
+document.querySelectorAll('#steps .chip').forEach(c=>c.addEventListener('click',()=>select(c.dataset.id)));
+const topList=todo.filter(n=>n.downh>0).sort((a,b)=>b.downh-a.downh).slice(0,14),mx=topList.length?topList[0].downh:1;
+document.getElementById('bars').innerHTML=topList.map(n=>`<div class="bar" data-id="${esc(n.key)}" tabindex="0"><span class="nm" title="${esc(n.name)}"><span class="tid">${esc(n.id)}</span> ${cuLink(n,esc(n.name))}</span><span class="tr"><span class="fl" style="width:${(n.downh/mx*100).toFixed(1)}%"></span></span><span class="v">${fmt(n.downh)} h</span></div>`).join('')||'<p class="note">Nothing unfinished is waiting on anything.</p>';
+document.querySelectorAll('.bar').forEach(b=>{b.addEventListener('click',()=>select(b.dataset.id));b.addEventListener('keydown',e=>{if(e.key=='Enter')select(b.dataset.id)})});
+const late=todo.filter(n=>!n.blocked&&n.down==0&&n.h>=16).sort((a,b)=>b.h-a.h);
+document.getElementById('late').innerHTML=late.map(n=>`<li><span class="tid">${esc(n.id)}</span> ${cuLink(n,esc(n.name))} <span class="h">${fmt(n.h)} h</span></li>`).join('');
+document.getElementById('soft').addEventListener('change',e=>edges.forEach(x=>{if(x.kind=='soft')x.p.style.display=e.target.checked?'':'none'}));
+document.getElementById('imp').addEventListener('change',e=>edges.forEach(x=>{if(x.kind=='imp')x.p.style.display=e.target.checked?'':'none'}));
+svg.addEventListener('click',e=>{if(e.target===svg){svg.classList.remove('dim');Object.values(nodes).forEach(g=>g.classList.remove('on','sel'));edges.forEach(x=>x.p.classList.remove('on'))}});
+document.querySelectorAll('.bar a,.late a,#steps a').forEach(x=>x.addEventListener('click',e=>e.stopPropagation()));
+if(center)select(center.key);
+}
+})();
+</script>
+</body>
+</html>

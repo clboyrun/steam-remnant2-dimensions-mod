@@ -5,7 +5,7 @@ ClickUp token in a repository secret, so the token never reaches the browser.
 
     CLICKUP_API_TOKEN=pk_... python tools/sync_clickup.py --out status.json
 
-Only task names, statuses, hierarchy and estimates are written.
+Only task names, statuses, hierarchy, estimates, dependencies and links are written.
 Descriptions, comments and assignees are left out because the page is public.
 """
 
@@ -83,6 +83,11 @@ def is_done(status: dict) -> bool:
 def task_record(t: dict, tracker_ids: dict[str, str]) -> dict:
     status = t.get("status") or {}
     estimate = t.get("time_estimate")
+    # For the dependency wheel: tasks this one waits on, and "related" links (not blockers).
+    waits_on = sorted({d["depends_on"] for d in t.get("dependencies") or []
+                       if d.get("task_id") == t["id"] and d.get("depends_on")})
+    links = sorted({(l.get("link_id") if l.get("task_id") == t["id"] else l.get("task_id"))
+                    for l in t.get("linked_tasks") or []} - {None, t["id"]})
     return {
         "id": t["id"],
         "tracker_id": tracker_ids.get(t["id"]),
@@ -93,6 +98,8 @@ def task_record(t: dict, tracker_ids: dict[str, str]) -> dict:
         "open": status.get("type") == "open",
         "parent": t.get("parent"),
         "estimate_hours": round(int(estimate) / 3_600_000, 2) if estimate else None,
+        "waits_on": waits_on,
+        "links": links,
         "url": t.get("url") or f"https://app.clickup.com/t/{t['id']}",
         "updated": int(t["date_updated"]) if t.get("date_updated") else None,
         "order": float(t.get("orderindex") or 0),
