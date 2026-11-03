@@ -55,7 +55,7 @@
   </div>
   <section class="card" id="calendar" aria-labelledby="cal-h">
     <h2 id="cal-h">Calendar: when tickets are open and when they close</h2>
-    <p class="note">Each day is split corner to corner. The top-right triangle shows how many tickets were open that day; the bottom-left triangle shows how many closed that day. Both run on the same scale, full colour at 5 tickets. Follows the “Include closed tickets” box.</p>
+    <p class="note">Each day is split corner to corner. The top-right triangle shows how many tickets were open that day; the bottom-left triangle shows how many closed that day. Both run on the same scale, full colour at 5 tickets. Always counts every ticket, open and closed, whatever the “Include closed tickets” box says.</p>
     <div id="cal-mount"><p class="note">Loading…</p></div>
   </section>
   <section class="card" id="burndown" aria-labelledby="bd-h">
@@ -111,7 +111,7 @@ const cuLink=(n,text)=>n.url?`<a href="${esc(n.url)}" target="_blank" rel="noope
 
 document.getElementById('eyebrow').innerHTML=`Remnant 2 Dimensions · live from ClickUp · last change <time datetime="${esc(data.generated_at)}" title="${esc(new Date(data.generated_at).toLocaleString())}">${ago(data.generated_at)}</time>`;
 renderBurndown(data,document.getElementById('bd-mount'));
-renderCalendar(data,!!incl,document.getElementById('cal-mount'));
+if(!document.getElementById('cal-mount').dataset.done){document.getElementById('cal-mount').dataset.done=1;renderCalendar(data,document.getElementById('cal-mount'));} // drawn once: the wheel's box doesn't affect it
 document.getElementById('app').hidden=true;document.getElementById('main').hidden=false;document.getElementById('lower').hidden=false;
 
 // ---- Layout ----
