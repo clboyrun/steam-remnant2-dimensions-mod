@@ -15,6 +15,7 @@ def task(tid, name, status, stype, parent=None, deps=(), est=None, order=0):
         "linked_tasks": [{"task_id": tid, "link_id": "z"}, {"task_id": "y", "link_id": tid}],
         "orderindex": str(order),
         "date_updated": "1700000000000",
+        "date_created": "1699000000000",
     }
 
 
@@ -50,6 +51,13 @@ class SnapshotTests(unittest.TestCase):
         self.assertEqual(c["waits_on"], ["b"])   # not "other", which waits on c
         self.assertEqual(d["waits_on"], ["a"])
         self.assertEqual(c["links"], ["y", "z"])
+
+    def test_dates(self):
+        a, b = self.snap["lists"][0]["tasks"]
+        self.assertEqual(a["created"], 1699000000000)
+        self.assertEqual(a["closed"], 1700000000000)  # done, no close date: falls back to the last update
+        self.assertIsNone(b["closed"])
+        self.assertIsNone(b["start"])
 
     def test_parent(self):
         self.assertEqual(self.snap["lists"][1]["tasks"][1]["parent"], "c")
