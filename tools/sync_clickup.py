@@ -114,6 +114,9 @@ def task_record(t: dict, tracker_ids: dict[str, str]) -> dict:
         # For the calendar heat map (milliseconds since the epoch). A finished ticket with no close date falls back to its last update.
         "created": _ms(t.get("date_created")),
         "start": _ms(t.get("start_date")),
+        "due": _ms(t.get("due_date")),
+        # Only whether someone is assigned. Who is left out because the page is public.
+        "assigned": bool(t.get("assignees")),
         "closed": _ms(t.get("date_closed") or t.get("date_done")) or (_ms(t.get("date_updated")) if is_done(status) else None),
         "order": float(t.get("orderindex") or 0),
     }
