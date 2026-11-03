@@ -36,6 +36,12 @@ across Reset cache unless you answer "No" to keep notes).
   than its parent is up to ClickUp; keep parent and child in the same list to be safe.
 * **Hierarchy and links:** `parent`, `depends_on`, `blocks` and `links` (related) are editable on new
   and existing tickets. Values are ticket ids or exact ticket names (including other NEW files).
+* **Milestones:** the Milestones list is cached like any other list. Milestone cards are normal tickets
+  that `depends_on` the tickets they wait for; tickets carry `ms-…` tags. `tags` is editable (added or
+  removed on push, missing tags are created in the space), and `_milestones.md` at the cache root is a
+  generated overview of each `ms-` tag with closed/total counts.
+* **Closing:** a ticket whose status is set to `complete`/`closed`/`done` with nobody assigned is assigned to
+  the configured closer (`close_assignee`, default Astra; empty = off). Start dates are still never set.
 * Not synced: comments (other than posting), attachments, custom fields, dependencies (shown read-only).
 
 ## Tests

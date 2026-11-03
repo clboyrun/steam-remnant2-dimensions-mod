@@ -14,9 +14,9 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 EDITABLE = ["name", "status", "assignees", "priority", "start_date", "due_date",
-            "time_estimate_hours", "parent", "depends_on", "blocks", "links", "description"]
+            "time_estimate_hours", "parent", "depends_on", "blocks", "links", "tags", "description"]
 LIST_KEYS = ("depends_on", "blocks", "links")
-READONLY = ["id", "url", "list", "list_id", "space", "tags", "remote_updated"]
+READONLY = ["id", "url", "list", "list_id", "space", "remote_updated"]
 PRIORITIES = {"urgent": 1, "high": 2, "normal": 3, "low": 4}
 PRIORITY_NAMES = {v: k for k, v in PRIORITIES.items()}
 SECTION_RE = re.compile(r"^## (Description|Post comment|Agent notes)[ \t]*$", re.M)
@@ -63,7 +63,7 @@ def normalize(task, list_name, space_name=""):
         "parent": task.get("parent") or None, "links": sorted(links),
         "depends_on": sorted(d["depends_on"] for d in deps if d.get("task_id") == me and d.get("depends_on")),
         "blocks": sorted(d["task_id"] for d in deps if d.get("depends_on") == me),
-        "tags": [t["name"] for t in task.get("tags", [])],
+        "tags": sorted(t["name"].lower() for t in task.get("tags", [])),
         "remote_updated": str(task.get("date_updated") or ""),
         "name": task.get("name", ""),
         "status": ((task.get("status") or {}).get("status") or "").lower(),
@@ -124,6 +124,8 @@ def clean(fields):
     h = f["time_estimate_hours"]
     f["time_estimate_hours"] = round(float(h), 2) if h not in (None, "") else None
     f["description"] = (f["description"] or "").strip()
+    t = f["tags"]
+    f["tags"] = sorted({str(x).strip().lower() for x in ([t] if isinstance(t, str) else t or []) if str(x).strip()})
     f["parent"] = (str(f["parent"]).strip() or None) if f["parent"] else None
     for k in LIST_KEYS:
         v = f[k]
@@ -170,7 +172,7 @@ class Cache:
         p.parent.mkdir(parents=True, exist_ok=True)
         f = {"name": name, "status": "", "assignees": [], "priority": None, "start_date": None, "due_date": None,
              "time_estimate_hours": None, "parent": None, "depends_on": [], "blocks": [], "links": [],
-             "description": ""}
+             "tags": [], "description": ""}
         p.write_text(render(f), encoding="utf-8", newline="\n")
         return p
 
@@ -216,8 +218,29 @@ class Cache:
     def write_index(self, list_name, rows):
         d = self.root / safe_dir(list_name)
         lines = [f"# {list_name}", "", "Generated index. Do not edit (overwritten on every pull).", "",
-                 "| id | status | name | est h | parent |", "|---|---|---|---|---|"]
+                 "| id | status | name | est h | parent | tags |", "|---|---|---|---|---|---|"]
         for r in sorted(rows, key=lambda r: r["name"].lower()):
             lines.append(f"| {r['id']} | {r['status']} | {r['name'].replace('|', '/')} | "
-                         f"{r['time_estimate_hours'] or ''} | {r['parent'] or ''} |")
+                         f"{r['time_estimate_hours'] or ''} | {r['parent'] or ''} | {' '.join(r['tags'])} |")
         (d / "_index.md").write_text("\n".join(lines) + "\n", encoding="utf-8", newline="\n")
+
+    def write_milestones(self, rows, prefix="ms-"):
+        """_milestones.md at the cache root: tickets grouped by their `ms-*` tag, plus milestone cards."""
+        groups = {}
+        for r in rows:
+            for t in r["tags"]:
+                if t.startswith(prefix):
+                    groups.setdefault(t, []).append(r)
+        lines = ["# Milestones (generated; overwritten on every pull)", "",
+                 f"Tickets grouped by `{prefix}*` tag. A milestone card is a task in the Milestones list that "
+                 "`depends_on` its tickets.", ""]
+        for tag in sorted(groups):
+            rs = sorted(groups[tag], key=lambda r: r["name"].lower())
+            done = sum(1 for r in rs if r["status"] in ("complete", "closed", "done"))
+            cards = [r for r in rs if r["list"].lower().startswith("milestone")]
+            lines.append(f"## {tag} ({done}/{len(rs)} closed)")
+            for r in rs:
+                lines.append(f"- {r['id']} [{r['status']}] {r['name']} ({r['list']})")
+            lines.append("")
+        self.root.mkdir(parents=True, exist_ok=True)
+        (self.root / "_milestones.md").write_text("\n".join(lines) + "\n", encoding="utf-8", newline="\n")
