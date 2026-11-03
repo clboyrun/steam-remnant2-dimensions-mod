@@ -4129,5 +4129,3917 @@
     }
    ]
   }
- ]
+ ],
+ "burndown": {
+  "hours_per_week": 40.0,
+  "total_hours": 2535.0,
+  "week_count": 64,
+  "tickets": [
+   {
+    "id": "86bcwwjdg",
+    "tracker_id": null,
+    "name": "Kill a red glitchy enemy (Aberration or not, drop table)",
+    "url": "https://app.clickup.com/t/86bcwwjdg",
+    "list": "Toolchain and in-game tests",
+    "status": "in process",
+    "hours": 1.0,
+    "in_flight": true,
+    "pick": 1,
+    "first_week": 1,
+    "last_week": 1,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88tw",
+    "tracker_id": "EQ12",
+    "name": "Campaign completion tokens",
+    "url": "https://app.clickup.com/t/86bcw88tw",
+    "list": "Equipment",
+    "status": "in process",
+    "hours": 6.0,
+    "in_flight": true,
+    "pick": 2,
+    "first_week": 1,
+    "last_week": 1,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88yz",
+    "tracker_id": "I1",
+    "name": "Equipment sort options",
+    "url": "https://app.clickup.com/t/86bcw88yz",
+    "list": "Interface",
+    "status": "in process",
+    "hours": 16.0,
+    "in_flight": true,
+    "pick": 3,
+    "first_week": 1,
+    "last_week": 1,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw87e8",
+    "tracker_id": "T1",
+    "name": "First pak: build, cook, pack and install end to end",
+    "url": "https://app.clickup.com/t/86bcw87e8",
+    "list": "Toolchain and in-game tests",
+    "status": "to do",
+    "hours": 16.0,
+    "in_flight": false,
+    "pick": 4,
+    "first_week": 1,
+    "last_week": 1,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcwwjd3",
+    "tracker_id": null,
+    "name": "Decision: Masterwork cost materials",
+    "url": "https://app.clickup.com/t/86bcwwjd3",
+    "list": "Risks and open questions",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 5,
+    "first_week": 1,
+    "last_week": 1,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw87a4",
+    "tracker_id": "E23",
+    "name": "#23 How dungeons are generated per zone",
+    "url": "https://app.clickup.com/t/86bcw87a4",
+    "list": "Required data inputs",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 6,
+    "first_week": 2,
+    "last_week": 2,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw87av",
+    "tracker_id": "E33",
+    "name": "#33 Campaign map widget, Labyrinth world selection, campaign-complete save flag",
+    "url": "https://app.clickup.com/t/86bcw87av",
+    "list": "Required data inputs",
+    "status": "to do",
+    "hours": 1.5,
+    "in_flight": false,
+    "pick": 7,
+    "first_week": 2,
+    "last_week": 2,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw87a3",
+    "tracker_id": "E22",
+    "name": "#22 How a spawn decides to be corrupted",
+    "url": "https://app.clickup.com/t/86bcw87a3",
+    "list": "Required data inputs",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 8,
+    "first_week": 2,
+    "last_week": 2,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcwwjd6",
+    "tracker_id": null,
+    "name": "Decision: scope of new fusions (chosen set vs all pairs)",
+    "url": "https://app.clickup.com/t/86bcwwjd6",
+    "list": "Risks and open questions",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 9,
+    "first_week": 2,
+    "last_week": 2,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw87at",
+    "tracker_id": "E32",
+    "name": "#32 One world's boss gate",
+    "url": "https://app.clickup.com/t/86bcw87at",
+    "list": "Required data inputs",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 10,
+    "first_week": 2,
+    "last_week": 2,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcwwjc8",
+    "tracker_id": null,
+    "name": "Generic fusion blueprint (PrismSegmentObject_Base child)",
+    "url": "https://app.clickup.com/t/86bcwwjc8",
+    "list": "Equipment",
+    "status": "to do",
+    "hours": 8.0,
+    "in_flight": false,
+    "pick": 11,
+    "first_week": 2,
+    "last_week": 2,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88bf",
+    "tracker_id": "A1",
+    "name": "Arcade: alternative roll for the Losomn slot",
+    "url": "https://app.clickup.com/t/86bcw88bf",
+    "list": "Abandoned Arcade",
+    "status": "to do",
+    "hours": 12.0,
+    "in_flight": false,
+    "pick": 12,
+    "first_week": 2,
+    "last_week": 2,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88bh",
+    "tracker_id": "A2",
+    "name": "Arcade hub: abandoned arcade nexus with no enemies",
+    "url": "https://app.clickup.com/t/86bcw88bh",
+    "list": "Abandoned Arcade",
+    "status": "to do",
+    "hours": 30.0,
+    "in_flight": false,
+    "pick": 13,
+    "first_week": 2,
+    "last_week": 3,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88bk",
+    "tracker_id": "A3",
+    "name": "Arcade machine portals and broken machines",
+    "url": "https://app.clickup.com/t/86bcw88bk",
+    "list": "Abandoned Arcade",
+    "status": "to do",
+    "hours": 16.0,
+    "in_flight": false,
+    "pick": 14,
+    "first_week": 3,
+    "last_week": 3,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88bm",
+    "tracker_id": "A4",
+    "name": "Coin-in portal animation",
+    "url": "https://app.clickup.com/t/86bcw88bm",
+    "list": "Abandoned Arcade",
+    "status": "to do",
+    "hours": 12.0,
+    "in_flight": false,
+    "pick": 15,
+    "first_week": 3,
+    "last_week": 4,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88bn",
+    "tracker_id": "A5",
+    "name": "Dungeon generation: roll 6 of 9-12",
+    "url": "https://app.clickup.com/t/86bcw88bn",
+    "list": "Abandoned Arcade",
+    "status": "to do",
+    "hours": 12.0,
+    "in_flight": false,
+    "pick": 16,
+    "first_week": 4,
+    "last_week": 4,
+    "unblocked_by": [
+     {
+      "id": "86bcw87a4",
+      "tracker_id": "E23",
+      "name": "#23 How dungeons are generated per zone",
+      "url": "https://app.clickup.com/t/86bcw87a4"
+     }
+    ]
+   },
+   {
+    "id": "86bcw88br",
+    "tracker_id": "A6",
+    "name": "Dungeon: Maze chase",
+    "url": "https://app.clickup.com/t/86bcw88br",
+    "list": "Abandoned Arcade",
+    "status": "to do",
+    "hours": 40.0,
+    "in_flight": false,
+    "pick": 17,
+    "first_week": 4,
+    "last_week": 5,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88bt",
+    "tracker_id": "A7",
+    "name": "Dungeon: Side-scroller brawl",
+    "url": "https://app.clickup.com/t/86bcw88bt",
+    "list": "Abandoned Arcade",
+    "status": "to do",
+    "hours": 40.0,
+    "in_flight": false,
+    "pick": 18,
+    "first_week": 5,
+    "last_week": 6,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88bw",
+    "tracker_id": "A8",
+    "name": "Dungeon: Collectables run",
+    "url": "https://app.clickup.com/t/86bcw88bw",
+    "list": "Abandoned Arcade",
+    "status": "to do",
+    "hours": 30.0,
+    "in_flight": false,
+    "pick": 19,
+    "first_week": 6,
+    "last_week": 7,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88bx",
+    "tracker_id": "A9",
+    "name": "Pick the remaining 6-9 arcade dungeons",
+    "url": "https://app.clickup.com/t/86bcw88bx",
+    "list": "Abandoned Arcade",
+    "status": "to do",
+    "hours": 2.0,
+    "in_flight": false,
+    "pick": 20,
+    "first_week": 7,
+    "last_week": 7,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88by",
+    "tracker_id": "A10",
+    "name": "Final boss gate: win 3 of 6 dungeons",
+    "url": "https://app.clickup.com/t/86bcw88by",
+    "list": "Abandoned Arcade",
+    "status": "to do",
+    "hours": 8.0,
+    "in_flight": false,
+    "pick": 21,
+    "first_week": 7,
+    "last_week": 7,
+    "unblocked_by": [
+     {
+      "id": "86bcw87at",
+      "tracker_id": "E32",
+      "name": "#32 One world's boss gate",
+      "url": "https://app.clickup.com/t/86bcw87at"
+     }
+    ]
+   },
+   {
+    "id": "86bcw88c0",
+    "tracker_id": "A11",
+    "name": "Arcade final boss",
+    "url": "https://app.clickup.com/t/86bcw88c0",
+    "list": "Abandoned Arcade",
+    "status": "to do",
+    "hours": 60.0,
+    "in_flight": false,
+    "pick": 22,
+    "first_week": 7,
+    "last_week": 8,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw899n",
+    "tracker_id": null,
+    "name": "Shoot-em-up: enemy waves down a long corridor",
+    "url": "https://app.clickup.com/t/86bcw899n",
+    "list": "Abandoned Arcade",
+    "status": "to do",
+    "hours": 0.5,
+    "in_flight": false,
+    "pick": 23,
+    "first_week": 8,
+    "last_week": 8,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw899q",
+    "tracker_id": null,
+    "name": "Light-gun gallery: on-rails moving platform",
+    "url": "https://app.clickup.com/t/86bcw899q",
+    "list": "Abandoned Arcade",
+    "status": "to do",
+    "hours": 0.5,
+    "in_flight": false,
+    "pick": 24,
+    "first_week": 8,
+    "last_week": 8,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw899r",
+    "tracker_id": null,
+    "name": "Racer: run the track against a clock",
+    "url": "https://app.clickup.com/t/86bcw899r",
+    "list": "Abandoned Arcade",
+    "status": "to do",
+    "hours": 0.5,
+    "in_flight": false,
+    "pick": 25,
+    "first_week": 8,
+    "last_week": 8,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw899v",
+    "tracker_id": null,
+    "name": "Platformer: climb while ranged enemies hold high ground",
+    "url": "https://app.clickup.com/t/86bcw899v",
+    "list": "Abandoned Arcade",
+    "status": "to do",
+    "hours": 0.5,
+    "in_flight": false,
+    "pick": 26,
+    "first_week": 8,
+    "last_week": 8,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw899x",
+    "tracker_id": null,
+    "name": "Brick breaker: shoot through brick walls",
+    "url": "https://app.clickup.com/t/86bcw899x",
+    "list": "Abandoned Arcade",
+    "status": "to do",
+    "hours": 0.5,
+    "in_flight": false,
+    "pick": 27,
+    "first_week": 8,
+    "last_week": 8,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw89a1",
+    "tracker_id": null,
+    "name": "Falling blocks: shoot blocks to clear rows",
+    "url": "https://app.clickup.com/t/86bcw89a1",
+    "list": "Abandoned Arcade",
+    "status": "to do",
+    "hours": 0.5,
+    "in_flight": false,
+    "pick": 28,
+    "first_week": 8,
+    "last_week": 8,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw89a5",
+    "tracker_id": null,
+    "name": "Rhythm: enemies and hazards on the beat",
+    "url": "https://app.clickup.com/t/86bcw89a5",
+    "list": "Abandoned Arcade",
+    "status": "to do",
+    "hours": 0.5,
+    "in_flight": false,
+    "pick": 29,
+    "first_week": 8,
+    "last_week": 8,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw89a6",
+    "tracker_id": null,
+    "name": "Pinball: giant ball as a rolling hazard",
+    "url": "https://app.clickup.com/t/86bcw89a6",
+    "list": "Abandoned Arcade",
+    "status": "to do",
+    "hours": 0.5,
+    "in_flight": false,
+    "pick": 30,
+    "first_week": 8,
+    "last_week": 8,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw89a8",
+    "tracker_id": null,
+    "name": "Claw machine: claw drops enemies into the pit",
+    "url": "https://app.clickup.com/t/86bcw89a8",
+    "list": "Abandoned Arcade",
+    "status": "to do",
+    "hours": 0.5,
+    "in_flight": false,
+    "pick": 31,
+    "first_week": 8,
+    "last_week": 8,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88kp",
+    "tracker_id": "N1",
+    "name": "Falada, the talking horse (vendor)",
+    "url": "https://app.clickup.com/t/86bcw88kp",
+    "list": "Ward 13 NPCs",
+    "status": "to do",
+    "hours": 40.0,
+    "in_flight": false,
+    "pick": 32,
+    "first_week": 9,
+    "last_week": 9,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88kr",
+    "tracker_id": "N2",
+    "name": "The AI (Ascension NPC)",
+    "url": "https://app.clickup.com/t/86bcw88kr",
+    "list": "Ward 13 NPCs",
+    "status": "to do",
+    "hours": 16.0,
+    "in_flight": false,
+    "pick": 33,
+    "first_week": 10,
+    "last_week": 10,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88kt",
+    "tracker_id": "N3",
+    "name": "Forge NPC",
+    "url": "https://app.clickup.com/t/86bcw88kt",
+    "list": "Ward 13 NPCs",
+    "status": "to do",
+    "hours": 12.0,
+    "in_flight": false,
+    "pick": 34,
+    "first_week": 10,
+    "last_week": 10,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88kv",
+    "tracker_id": "N4",
+    "name": "Masterwork NPC and the Corrupted Shop",
+    "url": "https://app.clickup.com/t/86bcw88kv",
+    "list": "Ward 13 NPCs",
+    "status": "to do",
+    "hours": 20.0,
+    "in_flight": false,
+    "pick": 35,
+    "first_week": 10,
+    "last_week": 11,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88kw",
+    "tracker_id": "N5",
+    "name": "Enchanter NPC",
+    "url": "https://app.clickup.com/t/86bcw88kw",
+    "list": "Ward 13 NPCs",
+    "status": "to do",
+    "hours": 12.0,
+    "in_flight": false,
+    "pick": 36,
+    "first_week": 11,
+    "last_week": 11,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88kg",
+    "tracker_id": "S2",
+    "name": "New difficulty: Vex and Torment",
+    "url": "https://app.clickup.com/t/86bcw88kg",
+    "list": "Cross-world systems",
+    "status": "to do",
+    "hours": 8.0,
+    "in_flight": false,
+    "pick": 37,
+    "first_week": 11,
+    "last_week": 11,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88kj",
+    "tracker_id": "S3",
+    "name": "New status effect: Lust",
+    "url": "https://app.clickup.com/t/86bcw88kj",
+    "list": "Cross-world systems",
+    "status": "to do",
+    "hours": 16.0,
+    "in_flight": false,
+    "pick": 38,
+    "first_week": 11,
+    "last_week": 12,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88kk",
+    "tracker_id": "S4",
+    "name": "Corrupted dungeons",
+    "url": "https://app.clickup.com/t/86bcw88kk",
+    "list": "Cross-world systems",
+    "status": "to do",
+    "hours": 12.0,
+    "in_flight": false,
+    "pick": 39,
+    "first_week": 12,
+    "last_week": 12,
+    "unblocked_by": [
+     {
+      "id": "86bcw87a3",
+      "tracker_id": "E22",
+      "name": "#22 How a spawn decides to be corrupted",
+      "url": "https://app.clickup.com/t/86bcw87a3"
+     }
+    ]
+   },
+   {
+    "id": "86bcw88km",
+    "tracker_id": "S5",
+    "name": "Labyrinth: two new portal locations",
+    "url": "https://app.clickup.com/t/86bcw88km",
+    "list": "Cross-world systems",
+    "status": "to do",
+    "hours": 16.0,
+    "in_flight": false,
+    "pick": 40,
+    "first_week": 12,
+    "last_week": 12,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88kz",
+    "tracker_id": "Q1",
+    "name": "Falada unlock: save the horse from the beheading",
+    "url": "https://app.clickup.com/t/86bcw88kz",
+    "list": "Quests",
+    "status": "to do",
+    "hours": 16.0,
+    "in_flight": false,
+    "pick": 41,
+    "first_week": 12,
+    "last_week": 13,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88m0",
+    "tracker_id": "Q2",
+    "name": "Forge questline (Grimm)",
+    "url": "https://app.clickup.com/t/86bcw88m0",
+    "list": "Quests",
+    "status": "to do",
+    "hours": 24.0,
+    "in_flight": false,
+    "pick": 42,
+    "first_week": 13,
+    "last_week": 13,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88m3",
+    "tracker_id": "Q3",
+    "name": "Enchanter questline (Lovecraft)",
+    "url": "https://app.clickup.com/t/86bcw88m3",
+    "list": "Quests",
+    "status": "to do",
+    "hours": 24.0,
+    "in_flight": false,
+    "pick": 43,
+    "first_week": 13,
+    "last_week": 14,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88m6",
+    "tracker_id": "Q4",
+    "name": "Masterwork questline",
+    "url": "https://app.clickup.com/t/86bcw88m6",
+    "list": "Quests",
+    "status": "to do",
+    "hours": 4.0,
+    "in_flight": false,
+    "pick": 44,
+    "first_week": 14,
+    "last_week": 14,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88m7",
+    "tracker_id": "Q5",
+    "name": "N'Erud alternative boss quest",
+    "url": "https://app.clickup.com/t/86bcw88m7",
+    "list": "Quests",
+    "status": "to do",
+    "hours": 40.0,
+    "in_flight": false,
+    "pick": 45,
+    "first_week": 14,
+    "last_week": 15,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw89ac",
+    "tracker_id": null,
+    "name": "Ask Rigs: 'Are you sure we can't upgrade my weapons further?'",
+    "url": "https://app.clickup.com/t/86bcw89ac",
+    "list": "Quests",
+    "status": "to do",
+    "hours": 4.0,
+    "in_flight": false,
+    "pick": 46,
+    "first_week": 15,
+    "last_week": 15,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw89af",
+    "tracker_id": null,
+    "name": "Go through the new worlds to capture an item and bring it back",
+    "url": "https://app.clickup.com/t/86bcw89af",
+    "list": "Quests",
+    "status": "to do",
+    "hours": 8.0,
+    "in_flight": false,
+    "pick": 47,
+    "first_week": 15,
+    "last_week": 15,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw89ah",
+    "tracker_id": null,
+    "name": "Rigs leaves for one real hour of play time",
+    "url": "https://app.clickup.com/t/86bcw89ah",
+    "list": "Quests",
+    "status": "to do",
+    "hours": 6.0,
+    "in_flight": false,
+    "pick": 48,
+    "first_week": 15,
+    "last_week": 15,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw89aj",
+    "tracker_id": null,
+    "name": "On next return, Rigs is back with the Masterwork NPC",
+    "url": "https://app.clickup.com/t/86bcw89aj",
+    "list": "Quests",
+    "status": "to do",
+    "hours": 2.0,
+    "in_flight": false,
+    "pick": 49,
+    "first_week": 15,
+    "last_week": 15,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw89ak",
+    "tracker_id": null,
+    "name": "Hand in: a +10 mutator, 10 corrupted shards, a max-level weapon, the Hammer of Modulation",
+    "url": "https://app.clickup.com/t/86bcw89ak",
+    "list": "Quests",
+    "status": "to do",
+    "hours": 4.0,
+    "in_flight": false,
+    "pick": 50,
+    "first_week": 16,
+    "last_week": 16,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88zj",
+    "tracker_id": "R1",
+    "name": "asset discovery from a mod pak",
+    "url": "https://app.clickup.com/t/86bcw88zj",
+    "list": "Risks and open questions",
+    "status": "to do",
+    "hours": 2.0,
+    "in_flight": false,
+    "pick": 51,
+    "first_week": 16,
+    "last_week": 16,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88zp",
+    "tracker_id": "R2",
+    "name": "unconfirmed catalog entries",
+    "url": "https://app.clickup.com/t/86bcw88zp",
+    "list": "Risks and open questions",
+    "status": "to do",
+    "hours": 2.0,
+    "in_flight": false,
+    "pick": 52,
+    "first_week": 16,
+    "last_week": 16,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88zq",
+    "tracker_id": "R3",
+    "name": "weapon level scaling past +20",
+    "url": "https://app.clickup.com/t/86bcw88zq",
+    "list": "Risks and open questions",
+    "status": "to do",
+    "hours": 2.0,
+    "in_flight": false,
+    "pick": 53,
+    "first_week": 16,
+    "last_week": 16,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88zt",
+    "tracker_id": "R4",
+    "name": "vendor gate consumption",
+    "url": "https://app.clickup.com/t/86bcw88zt",
+    "list": "Risks and open questions",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 54,
+    "first_week": 16,
+    "last_week": 16,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88zu",
+    "tracker_id": "R5",
+    "name": "permanent trait levels on archetype switch",
+    "url": "https://app.clickup.com/t/86bcw88zu",
+    "list": "Risks and open questions",
+    "status": "to do",
+    "hours": 3.0,
+    "in_flight": false,
+    "pick": 55,
+    "first_week": 16,
+    "last_week": 16,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88zx",
+    "tracker_id": "R7",
+    "name": "Open question: final name for the new difficulty",
+    "url": "https://app.clickup.com/t/86bcw88zx",
+    "list": "Risks and open questions",
+    "status": "to do",
+    "hours": 0.5,
+    "in_flight": false,
+    "pick": 56,
+    "first_week": 16,
+    "last_week": 16,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw8905",
+    "tracker_id": "R10",
+    "name": "native logic (Prism 51, sort orders, armor levels, some UI)",
+    "url": "https://app.clickup.com/t/86bcw8905",
+    "list": "Risks and open questions",
+    "status": "to do",
+    "hours": 4.0,
+    "in_flight": false,
+    "pick": 57,
+    "first_week": 16,
+    "last_week": 16,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw8906",
+    "tracker_id": "R11",
+    "name": "cooked maps can't be edited (NPC placement)",
+    "url": "https://app.clickup.com/t/86bcw8906",
+    "list": "Risks and open questions",
+    "status": "to do",
+    "hours": 4.0,
+    "in_flight": false,
+    "pick": 58,
+    "first_week": 16,
+    "last_week": 16,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw8909",
+    "tracker_id": "R12",
+    "name": "widget overrides of cooked screens",
+    "url": "https://app.clickup.com/t/86bcw8909",
+    "list": "Risks and open questions",
+    "status": "to do",
+    "hours": 6.0,
+    "in_flight": false,
+    "pick": 59,
+    "first_week": 16,
+    "last_week": 16,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw890a",
+    "tracker_id": "R13",
+    "name": "retoc with UE 5.2 IoStore",
+    "url": "https://app.clickup.com/t/86bcw890a",
+    "list": "Risks and open questions",
+    "status": "to do",
+    "hours": 3.0,
+    "in_flight": false,
+    "pick": 60,
+    "first_week": 16,
+    "last_week": 16,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcwwjcu",
+    "tracker_id": null,
+    "name": "Catalog fixes: Encumbrance, AcidResistance, Dialogue, RecipeTags, RemnantQuestEntity, campaign tags",
+    "url": "https://app.clickup.com/t/86bcwwjcu",
+    "list": "Risks and open questions",
+    "status": "to do",
+    "hours": 3.0,
+    "in_flight": false,
+    "pick": 61,
+    "first_week": 16,
+    "last_week": 16,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcwwjd0",
+    "tracker_id": null,
+    "name": "Decision: confirm the drop to 41 is gone from the Prism rule",
+    "url": "https://app.clickup.com/t/86bcwwjd0",
+    "list": "Risks and open questions",
+    "status": "to do",
+    "hours": 0.5,
+    "in_flight": false,
+    "pick": 62,
+    "first_week": 16,
+    "last_week": 16,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88u2",
+    "tracker_id": "P1",
+    "name": "Ascension+ (\"Handler+\")",
+    "url": "https://app.clickup.com/t/86bcw88u2",
+    "list": "Character progression",
+    "status": "to do",
+    "hours": 30.0,
+    "in_flight": false,
+    "pick": 63,
+    "first_week": 16,
+    "last_week": 17,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88u4",
+    "tracker_id": "P2",
+    "name": "Ascension++ (\"Handler++\")",
+    "url": "https://app.clickup.com/t/86bcw88u4",
+    "list": "Character progression",
+    "status": "to do",
+    "hours": 20.0,
+    "in_flight": false,
+    "pick": 64,
+    "first_week": 17,
+    "last_week": 18,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88u6",
+    "tracker_id": "P3",
+    "name": "Permanent trait points outside the cap",
+    "url": "https://app.clickup.com/t/86bcw88u6",
+    "list": "Character progression",
+    "status": "to do",
+    "hours": 16.0,
+    "in_flight": false,
+    "pick": 65,
+    "first_week": 18,
+    "last_week": 18,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88u9",
+    "tracker_id": "P4",
+    "name": "Ascension skills and perks",
+    "url": "https://app.clickup.com/t/86bcw88u9",
+    "list": "Character progression",
+    "status": "to do",
+    "hours": 40.0,
+    "in_flight": false,
+    "pick": 66,
+    "first_week": 18,
+    "last_week": 19,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88ua",
+    "tracker_id": "P5",
+    "name": "Handler companions: summon framework",
+    "url": "https://app.clickup.com/t/86bcw88ua",
+    "list": "Character progression",
+    "status": "to do",
+    "hours": 6.0,
+    "in_flight": false,
+    "pick": 67,
+    "first_week": 19,
+    "last_week": 19,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88ub",
+    "tracker_id": "P6",
+    "name": "Ascension Mastery trait (+1 max health per mastery)",
+    "url": "https://app.clickup.com/t/86bcw88ub",
+    "list": "Character progression",
+    "status": "to do",
+    "hours": 16.0,
+    "in_flight": false,
+    "pick": 68,
+    "first_week": 19,
+    "last_week": 20,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw89aq",
+    "tracker_id": null,
+    "name": "Companion: cat",
+    "url": "https://app.clickup.com/t/86bcw89aq",
+    "list": "Character progression",
+    "status": "to do",
+    "hours": 16.0,
+    "in_flight": false,
+    "pick": 69,
+    "first_week": 20,
+    "last_week": 20,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw89ax",
+    "tracker_id": null,
+    "name": "Companion: bird of prey",
+    "url": "https://app.clickup.com/t/86bcw89ax",
+    "list": "Character progression",
+    "status": "to do",
+    "hours": 22.0,
+    "in_flight": false,
+    "pick": 70,
+    "first_week": 20,
+    "last_week": 21,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw89ay",
+    "tracker_id": null,
+    "name": "Companion: bear",
+    "url": "https://app.clickup.com/t/86bcw89ay",
+    "list": "Character progression",
+    "status": "to do",
+    "hours": 16.0,
+    "in_flight": false,
+    "pick": 71,
+    "first_week": 21,
+    "last_week": 21,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw87ea",
+    "tracker_id": "T2",
+    "name": "Ring with a new icon and name as starting gear",
+    "url": "https://app.clickup.com/t/86bcw87ea",
+    "list": "Toolchain and in-game tests",
+    "status": "to do",
+    "hours": 4.0,
+    "in_flight": false,
+    "pick": 72,
+    "first_week": 21,
+    "last_week": 21,
+    "unblocked_by": [
+     {
+      "id": "86bcw87e8",
+      "tracker_id": "T1",
+      "name": "First pak: build, cook, pack and install end to end",
+      "url": "https://app.clickup.com/t/86bcw87e8"
+     }
+    ]
+   },
+   {
+    "id": "86bcw87eb",
+    "tracker_id": "T3",
+    "name": "Emberline weapon with a real mesh",
+    "url": "https://app.clickup.com/t/86bcw87eb",
+    "list": "Toolchain and in-game tests",
+    "status": "to do",
+    "hours": 12.0,
+    "in_flight": false,
+    "pick": 73,
+    "first_week": 21,
+    "last_week": 21,
+    "unblocked_by": [
+     {
+      "id": "86bcw87e8",
+      "tracker_id": "T1",
+      "name": "First pak: build, cook, pack and install end to end",
+      "url": "https://app.clickup.com/t/86bcw87e8"
+     }
+    ]
+   },
+   {
+    "id": "86bcw87ed",
+    "tracker_id": "T4",
+    "name": "Loot table injected into a game table",
+    "url": "https://app.clickup.com/t/86bcw87ed",
+    "list": "Toolchain and in-game tests",
+    "status": "to do",
+    "hours": 4.0,
+    "in_flight": false,
+    "pick": 74,
+    "first_week": 21,
+    "last_week": 21,
+    "unblocked_by": [
+     {
+      "id": "86bcw87e8",
+      "tracker_id": "T1",
+      "name": "First pak: build, cook, pack and install end to end",
+      "url": "https://app.clickup.com/t/86bcw87e8"
+     }
+    ]
+   },
+   {
+    "id": "86bcw87ef",
+    "tracker_id": "T5",
+    "name": "Archetype registered by discovery",
+    "url": "https://app.clickup.com/t/86bcw87ef",
+    "list": "Toolchain and in-game tests",
+    "status": "to do",
+    "hours": 6.0,
+    "in_flight": false,
+    "pick": 75,
+    "first_week": 21,
+    "last_week": 22,
+    "unblocked_by": [
+     {
+      "id": "86bcw87e8",
+      "tracker_id": "T1",
+      "name": "First pak: build, cook, pack and install end to end",
+      "url": "https://app.clickup.com/t/86bcw87e8"
+     }
+    ]
+   },
+   {
+    "id": "86bcw87eh",
+    "tracker_id": "T6",
+    "name": "One zone with a simple map, then the adventure quest",
+    "url": "https://app.clickup.com/t/86bcw87eh",
+    "list": "Toolchain and in-game tests",
+    "status": "to do",
+    "hours": 16.0,
+    "in_flight": false,
+    "pick": 76,
+    "first_week": 22,
+    "last_week": 22,
+    "unblocked_by": [
+     {
+      "id": "86bcw87e8",
+      "tracker_id": "T1",
+      "name": "First pak: build, cook, pack and install end to end",
+      "url": "https://app.clickup.com/t/86bcw87e8"
+     }
+    ]
+   },
+   {
+    "id": "86bcw87em",
+    "tracker_id": "T7",
+    "name": "Does buying a gated vendor entry consume the token?",
+    "url": "https://app.clickup.com/t/86bcw87em",
+    "list": "Toolchain and in-game tests",
+    "status": "to do",
+    "hours": 3.0,
+    "in_flight": false,
+    "pick": 77,
+    "first_week": 22,
+    "last_week": 22,
+    "unblocked_by": [
+     {
+      "id": "86bcw87e8",
+      "tracker_id": "T1",
+      "name": "First pak: build, cook, pack and install end to end",
+      "url": "https://app.clickup.com/t/86bcw87e8"
+     }
+    ]
+   },
+   {
+    "id": "86bcw87en",
+    "tracker_id": "T8",
+    "name": "Does a weapon at +21 keep scaling damage?",
+    "url": "https://app.clickup.com/t/86bcw87en",
+    "list": "Toolchain and in-game tests",
+    "status": "to do",
+    "hours": 3.0,
+    "in_flight": false,
+    "pick": 78,
+    "first_week": 22,
+    "last_week": 22,
+    "unblocked_by": [
+     {
+      "id": "86bcw87e8",
+      "tracker_id": "T1",
+      "name": "First pak: build, cook, pack and install end to end",
+      "url": "https://app.clickup.com/t/86bcw87e8"
+     }
+    ]
+   },
+   {
+    "id": "86bcw87eq",
+    "tracker_id": "T9",
+    "name": "Verify catalog entries marked verified:false",
+    "url": "https://app.clickup.com/t/86bcw87eq",
+    "list": "Toolchain and in-game tests",
+    "status": "to do",
+    "hours": 8.0,
+    "in_flight": false,
+    "pick": 79,
+    "first_week": 22,
+    "last_week": 22,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcwayg0",
+    "tracker_id": null,
+    "name": "A pak-added story quest joins a world slot",
+    "url": "https://app.clickup.com/t/86bcwayg0",
+    "list": "Toolchain and in-game tests",
+    "status": "to do",
+    "hours": 8.0,
+    "in_flight": false,
+    "pick": 80,
+    "first_week": 22,
+    "last_week": 23,
+    "unblocked_by": [
+     {
+      "id": "86bcw87e8",
+      "tracker_id": "T1",
+      "name": "First pak: build, cook, pack and install end to end",
+      "url": "https://app.clickup.com/t/86bcw87e8"
+     }
+    ]
+   },
+   {
+    "id": "86bcwayg7",
+    "tracker_id": null,
+    "name": "A hidden token item survives a new campaign",
+    "url": "https://app.clickup.com/t/86bcwayg7",
+    "list": "Toolchain and in-game tests",
+    "status": "to do",
+    "hours": 2.0,
+    "in_flight": false,
+    "pick": 81,
+    "first_week": 23,
+    "last_week": 23,
+    "unblocked_by": [
+     {
+      "id": "86bcw87e8",
+      "tracker_id": "T1",
+      "name": "First pak: build, cook, pack and install end to end",
+      "url": "https://app.clickup.com/t/86bcw87e8"
+     }
+    ]
+   },
+   {
+    "id": "86bcwaygh",
+    "tracker_id": null,
+    "name": "A one-shot story quest rolls once per save",
+    "url": "https://app.clickup.com/t/86bcwaygh",
+    "list": "Toolchain and in-game tests",
+    "status": "to do",
+    "hours": 3.0,
+    "in_flight": false,
+    "pick": 82,
+    "first_week": 23,
+    "last_week": 23,
+    "unblocked_by": [
+     {
+      "id": "86bcw87e8",
+      "tracker_id": "T1",
+      "name": "First pak: build, cook, pack and install end to end",
+      "url": "https://app.clickup.com/t/86bcw87e8"
+     }
+    ]
+   },
+   {
+    "id": "86bcwaygn",
+    "tracker_id": null,
+    "name": "Measure Burning damage per tick in game",
+    "url": "https://app.clickup.com/t/86bcwaygn",
+    "list": "Toolchain and in-game tests",
+    "status": "to do",
+    "hours": 0.5,
+    "in_flight": false,
+    "pick": 83,
+    "first_week": 23,
+    "last_week": 23,
+    "unblocked_by": [
+     {
+      "id": "86bcw87e8",
+      "tracker_id": "T1",
+      "name": "First pak: build, cook, pack and install end to end",
+      "url": "https://app.clickup.com/t/86bcw87e8"
+     }
+    ]
+   },
+   {
+    "id": "86bcwaygt",
+    "tracker_id": null,
+    "name": "Replace Rem2Proj header stubs with the UE4SS UHT header dump",
+    "url": "https://app.clickup.com/t/86bcwaygt",
+    "list": "Toolchain and in-game tests",
+    "status": "to do",
+    "hours": 4.0,
+    "in_flight": false,
+    "pick": 84,
+    "first_week": 23,
+    "last_week": 23,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcwwjda",
+    "tracker_id": null,
+    "name": "Planner campaign code: pick world by WorldTags (Planner.cs:690)",
+    "url": "https://app.clickup.com/t/86bcwwjda",
+    "list": "Toolchain and in-game tests",
+    "status": "to do",
+    "hours": 4.0,
+    "in_flight": false,
+    "pick": 85,
+    "first_week": 23,
+    "last_week": 23,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcwwjdd",
+    "tracker_id": null,
+    "name": "CommandConsole Ending C",
+    "url": "https://app.clickup.com/t/86bcwwjdd",
+    "list": "Toolchain and in-game tests",
+    "status": "to do",
+    "hours": 3.0,
+    "in_flight": false,
+    "pick": 86,
+    "first_week": 23,
+    "last_week": 23,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcwwjdq",
+    "tracker_id": null,
+    "name": "LevelUpRollsToChooseFrom 5 shows 5 choices",
+    "url": "https://app.clickup.com/t/86bcwwjdq",
+    "list": "Toolchain and in-game tests",
+    "status": "to do",
+    "hours": 2.0,
+    "in_flight": false,
+    "pick": 87,
+    "first_week": 23,
+    "last_week": 23,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcwwjdt",
+    "tracker_id": null,
+    "name": "Prism fusion merge frees a slot and the stone holds 5",
+    "url": "https://app.clickup.com/t/86bcwwjdt",
+    "list": "Toolchain and in-game tests",
+    "status": "to do",
+    "hours": 2.0,
+    "in_flight": false,
+    "pick": 88,
+    "first_week": 23,
+    "last_week": 23,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcwwjdv",
+    "tracker_id": null,
+    "name": "Ring slots 5-8 accepted by the game",
+    "url": "https://app.clickup.com/t/86bcwwjdv",
+    "list": "Toolchain and in-game tests",
+    "status": "to do",
+    "hours": 2.0,
+    "in_flight": false,
+    "pick": 89,
+    "first_week": 23,
+    "last_week": 23,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcwwjdz",
+    "tracker_id": null,
+    "name": "Waypoint_Grab on the arcade cabinet",
+    "url": "https://app.clickup.com/t/86bcwwjdz",
+    "list": "Toolchain and in-game tests",
+    "status": "to do",
+    "hours": 2.0,
+    "in_flight": false,
+    "pick": 90,
+    "first_week": 23,
+    "last_week": 23,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw888f",
+    "tracker_id": "L1",
+    "name": "Lovecraft: alternative roll for the N'Erud slot",
+    "url": "https://app.clickup.com/t/86bcw888f",
+    "list": "Lovecraftian world",
+    "status": "to do",
+    "hours": 12.0,
+    "in_flight": false,
+    "pick": 91,
+    "first_week": 23,
+    "last_week": 23,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw888g",
+    "tracker_id": "L2",
+    "name": "Lovecraft: story campaign and Adventure option",
+    "url": "https://app.clickup.com/t/86bcw888g",
+    "list": "Lovecraftian world",
+    "status": "to do",
+    "hours": 16.0,
+    "in_flight": false,
+    "pick": 92,
+    "first_week": 23,
+    "last_week": 24,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw888h",
+    "tracker_id": "L3",
+    "name": "Boss: Cthulhu",
+    "url": "https://app.clickup.com/t/86bcw888h",
+    "list": "Lovecraftian world",
+    "status": "to do",
+    "hours": 60.0,
+    "in_flight": false,
+    "pick": 93,
+    "first_week": 24,
+    "last_week": 25,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw888k",
+    "tracker_id": "L4",
+    "name": "Boss: Dagon",
+    "url": "https://app.clickup.com/t/86bcw888k",
+    "list": "Lovecraftian world",
+    "status": "to do",
+    "hours": 60.0,
+    "in_flight": false,
+    "pick": 94,
+    "first_week": 25,
+    "last_week": 27,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw888n",
+    "tracker_id": "L5",
+    "name": "Boss: Shoggoth",
+    "url": "https://app.clickup.com/t/86bcw888n",
+    "list": "Lovecraftian world",
+    "status": "to do",
+    "hours": 60.0,
+    "in_flight": false,
+    "pick": 95,
+    "first_week": 27,
+    "last_week": 28,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw888p",
+    "tracker_id": "L6",
+    "name": "Boss: Shub-Niggurath",
+    "url": "https://app.clickup.com/t/86bcw888p",
+    "list": "Lovecraftian world",
+    "status": "to do",
+    "hours": 60.0,
+    "in_flight": false,
+    "pick": 96,
+    "first_week": 28,
+    "last_week": 30,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw888r",
+    "tracker_id": "L7",
+    "name": "Boss: The Hounds of Tindalos",
+    "url": "https://app.clickup.com/t/86bcw888r",
+    "list": "Lovecraftian world",
+    "status": "to do",
+    "hours": 60.0,
+    "in_flight": false,
+    "pick": 97,
+    "first_week": 30,
+    "last_week": 31,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw888t",
+    "tracker_id": "L8",
+    "name": "Boss: Hastur, the King in Yellow",
+    "url": "https://app.clickup.com/t/86bcw888t",
+    "list": "Lovecraftian world",
+    "status": "to do",
+    "hours": 60.0,
+    "in_flight": false,
+    "pick": 98,
+    "first_week": 31,
+    "last_week": 33,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw888w",
+    "tracker_id": "L9",
+    "name": "Boss: Nyarlathotep",
+    "url": "https://app.clickup.com/t/86bcw888w",
+    "list": "Lovecraftian world",
+    "status": "to do",
+    "hours": 60.0,
+    "in_flight": false,
+    "pick": 99,
+    "first_week": 33,
+    "last_week": 34,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw888x",
+    "tracker_id": "L10",
+    "name": "Boss: Azathoth",
+    "url": "https://app.clickup.com/t/86bcw888x",
+    "list": "Lovecraftian world",
+    "status": "to do",
+    "hours": 60.0,
+    "in_flight": false,
+    "pick": 100,
+    "first_week": 34,
+    "last_week": 36,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw888y",
+    "tracker_id": "L11",
+    "name": "Decide the space-themed boss (drops Hammer of Modulation)",
+    "url": "https://app.clickup.com/t/86bcw888y",
+    "list": "Lovecraftian world",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 101,
+    "first_week": 36,
+    "last_week": 36,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88ex",
+    "tracker_id": "H1",
+    "name": "Hell: alternative world for the Root Earth slot",
+    "url": "https://app.clickup.com/t/86bcw88ex",
+    "list": "Hell (Root Earth variant)",
+    "status": "to do",
+    "hours": 12.0,
+    "in_flight": false,
+    "pick": 102,
+    "first_week": 36,
+    "last_week": 36,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88ey",
+    "tracker_id": "H2",
+    "name": "Sin boss: Gluttony",
+    "url": "https://app.clickup.com/t/86bcw88ey",
+    "list": "Hell (Root Earth variant)",
+    "status": "to do",
+    "hours": 60.0,
+    "in_flight": false,
+    "pick": 103,
+    "first_week": 36,
+    "last_week": 38,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88f1",
+    "tracker_id": "H3",
+    "name": "Sin boss: Lust",
+    "url": "https://app.clickup.com/t/86bcw88f1",
+    "list": "Hell (Root Earth variant)",
+    "status": "to do",
+    "hours": 60.0,
+    "in_flight": false,
+    "pick": 104,
+    "first_week": 38,
+    "last_week": 39,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88f2",
+    "tracker_id": "H4",
+    "name": "Sin boss: Sloth",
+    "url": "https://app.clickup.com/t/86bcw88f2",
+    "list": "Hell (Root Earth variant)",
+    "status": "to do",
+    "hours": 60.0,
+    "in_flight": false,
+    "pick": 105,
+    "first_week": 39,
+    "last_week": 41,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88f3",
+    "tracker_id": "H5",
+    "name": "Sin boss: Pride",
+    "url": "https://app.clickup.com/t/86bcw88f3",
+    "list": "Hell (Root Earth variant)",
+    "status": "to do",
+    "hours": 60.0,
+    "in_flight": false,
+    "pick": 106,
+    "first_week": 41,
+    "last_week": 42,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88f4",
+    "tracker_id": "H6",
+    "name": "Sin boss: Greed",
+    "url": "https://app.clickup.com/t/86bcw88f4",
+    "list": "Hell (Root Earth variant)",
+    "status": "to do",
+    "hours": 60.0,
+    "in_flight": false,
+    "pick": 107,
+    "first_week": 42,
+    "last_week": 44,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88f8",
+    "tracker_id": "H7",
+    "name": "Sin boss: Envy",
+    "url": "https://app.clickup.com/t/86bcw88f8",
+    "list": "Hell (Root Earth variant)",
+    "status": "to do",
+    "hours": 60.0,
+    "in_flight": false,
+    "pick": 108,
+    "first_week": 44,
+    "last_week": 45,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88f9",
+    "tracker_id": "H8",
+    "name": "Sin boss: Wrath",
+    "url": "https://app.clickup.com/t/86bcw88f9",
+    "list": "Hell (Root Earth variant)",
+    "status": "to do",
+    "hours": 60.0,
+    "in_flight": false,
+    "pick": 109,
+    "first_week": 45,
+    "last_week": 47,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88fb",
+    "tracker_id": "H9",
+    "name": "Final boss: the demon and its cutscene",
+    "url": "https://app.clickup.com/t/86bcw88fb",
+    "list": "Hell (Root Earth variant)",
+    "status": "to do",
+    "hours": 80.0,
+    "in_flight": false,
+    "pick": 110,
+    "first_week": 47,
+    "last_week": 49,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88fc",
+    "tracker_id": "H10",
+    "name": "Phase two opening: the cards angel's throw",
+    "url": "https://app.clickup.com/t/86bcw88fc",
+    "list": "Hell (Root Earth variant)",
+    "status": "to do",
+    "hours": 16.0,
+    "in_flight": false,
+    "pick": 111,
+    "first_week": 49,
+    "last_week": 49,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88fe",
+    "tracker_id": "H11",
+    "name": "Angel: Winged angel",
+    "url": "https://app.clickup.com/t/86bcw88fe",
+    "list": "Hell (Root Earth variant)",
+    "status": "to do",
+    "hours": 40.0,
+    "in_flight": false,
+    "pick": 112,
+    "first_week": 49,
+    "last_week": 50,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88fg",
+    "tracker_id": "H12",
+    "name": "Angel: Mirror angel",
+    "url": "https://app.clickup.com/t/86bcw88fg",
+    "list": "Hell (Root Earth variant)",
+    "status": "to do",
+    "hours": 40.0,
+    "in_flight": false,
+    "pick": 113,
+    "first_week": 50,
+    "last_week": 51,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88fh",
+    "tracker_id": "H13",
+    "name": "Angel: Cards angel",
+    "url": "https://app.clickup.com/t/86bcw88fh",
+    "list": "Hell (Root Earth variant)",
+    "status": "to do",
+    "hours": 40.0,
+    "in_flight": false,
+    "pick": 114,
+    "first_week": 51,
+    "last_week": 52,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88fj",
+    "tracker_id": "H15",
+    "name": "Arena stage: Slaughterhouse",
+    "url": "https://app.clickup.com/t/86bcw88fj",
+    "list": "Hell (Root Earth variant)",
+    "status": "to do",
+    "hours": 24.0,
+    "in_flight": false,
+    "pick": 115,
+    "first_week": 52,
+    "last_week": 53,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88fn",
+    "tracker_id": "H16",
+    "name": "Arena stage: Frozen mountain",
+    "url": "https://app.clickup.com/t/86bcw88fn",
+    "list": "Hell (Root Earth variant)",
+    "status": "to do",
+    "hours": 24.0,
+    "in_flight": false,
+    "pick": 116,
+    "first_week": 53,
+    "last_week": 53,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88fq",
+    "tracker_id": "H17",
+    "name": "Arena stage: Destroyed moon",
+    "url": "https://app.clickup.com/t/86bcw88fq",
+    "list": "Hell (Root Earth variant)",
+    "status": "to do",
+    "hours": 24.0,
+    "in_flight": false,
+    "pick": 117,
+    "first_week": 53,
+    "last_week": 54,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88fr",
+    "tracker_id": "H18",
+    "name": "Realm-switch timer UI",
+    "url": "https://app.clickup.com/t/86bcw88fr",
+    "list": "Hell (Root Earth variant)",
+    "status": "to do",
+    "hours": 6.0,
+    "in_flight": false,
+    "pick": 118,
+    "first_week": 54,
+    "last_week": 54,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88fu",
+    "tracker_id": "H14",
+    "name": "Angel: Vampiric angel",
+    "url": "https://app.clickup.com/t/86bcw88fu",
+    "list": "Hell (Root Earth variant)",
+    "status": "to do",
+    "hours": 40.0,
+    "in_flight": false,
+    "pick": 119,
+    "first_week": 54,
+    "last_week": 55,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88t9",
+    "tracker_id": "EQ1",
+    "name": "Masterwork weapons: +21 to +30 (boss weapons +11 to +15)",
+    "url": "https://app.clickup.com/t/86bcw88t9",
+    "list": "Equipment",
+    "status": "to do",
+    "hours": 16.0,
+    "in_flight": false,
+    "pick": 120,
+    "first_week": 55,
+    "last_week": 55,
+    "unblocked_by": [
+     {
+      "id": "86bcwwjd3",
+      "tracker_id": null,
+      "name": "Decision: Masterwork cost materials",
+      "url": "https://app.clickup.com/t/86bcwwjd3"
+     }
+    ]
+   },
+   {
+    "id": "86bcw88ta",
+    "tracker_id": "EQ2",
+    "name": "Radar gun with a map side screen",
+    "url": "https://app.clickup.com/t/86bcw88ta",
+    "list": "Equipment",
+    "status": "to do",
+    "hours": 30.0,
+    "in_flight": false,
+    "pick": 121,
+    "first_week": 55,
+    "last_week": 56,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88tc",
+    "tracker_id": "EQ3",
+    "name": "Masterwork mutators: levels 11 to 20, gold icon",
+    "url": "https://app.clickup.com/t/86bcw88tc",
+    "list": "Equipment",
+    "status": "to do",
+    "hours": 10.0,
+    "in_flight": false,
+    "pick": 122,
+    "first_week": 56,
+    "last_week": 56,
+    "unblocked_by": [
+     {
+      "id": "86bcwwjd3",
+      "tracker_id": null,
+      "name": "Decision: Masterwork cost materials",
+      "url": "https://app.clickup.com/t/86bcwwjd3"
+     }
+    ]
+   },
+   {
+    "id": "86bcw88te",
+    "tracker_id": "EQ4",
+    "name": "Forge armor tiers: base to +10",
+    "url": "https://app.clickup.com/t/86bcw88te",
+    "list": "Equipment",
+    "status": "to do",
+    "hours": 20.0,
+    "in_flight": false,
+    "pick": 123,
+    "first_week": 56,
+    "last_week": 57,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88tf",
+    "tracker_id": "EQ5",
+    "name": "Enchanter ring slot on armor (player ring slots 5-8, one per armor piece)",
+    "url": "https://app.clickup.com/t/86bcw88tf",
+    "list": "Equipment",
+    "status": "to do",
+    "hours": 30.0,
+    "in_flight": false,
+    "pick": 124,
+    "first_week": 57,
+    "last_week": 58,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88th",
+    "tracker_id": "EQ6",
+    "name": "Corruption-chance ring",
+    "url": "https://app.clickup.com/t/86bcw88th",
+    "list": "Equipment",
+    "status": "to do",
+    "hours": 6.0,
+    "in_flight": false,
+    "pick": 125,
+    "first_week": 58,
+    "last_week": 58,
+    "unblocked_by": [
+     {
+      "id": "86bcw87a3",
+      "tracker_id": "E22",
+      "name": "#22 How a spawn decides to be corrupted",
+      "url": "https://app.clickup.com/t/86bcw87a3"
+     }
+    ]
+   },
+   {
+    "id": "86bcw88tm",
+    "tracker_id": "EQ7",
+    "name": "Multi-crit ring",
+    "url": "https://app.clickup.com/t/86bcw88tm",
+    "list": "Equipment",
+    "status": "to do",
+    "hours": 16.0,
+    "in_flight": false,
+    "pick": 126,
+    "first_week": 58,
+    "last_week": 58,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88tp",
+    "tracker_id": "EQ8",
+    "name": "Sonar Neckpiece amulet",
+    "url": "https://app.clickup.com/t/86bcw88tp",
+    "list": "Equipment",
+    "status": "to do",
+    "hours": 20.0,
+    "in_flight": false,
+    "pick": 127,
+    "first_week": 58,
+    "last_week": 59,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88tq",
+    "tracker_id": "EQ9",
+    "name": "Prism: all fragment pair fusions",
+    "url": "https://app.clickup.com/t/86bcw88tq",
+    "list": "Equipment",
+    "status": "to do",
+    "hours": 12.0,
+    "in_flight": false,
+    "pick": 128,
+    "first_week": 59,
+    "last_week": 59,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88tr",
+    "tracker_id": "EQ10",
+    "name": "Prism: up to 5 Fusion Fragments, mythic at level 51",
+    "url": "https://app.clickup.com/t/86bcw88tr",
+    "list": "Equipment",
+    "status": "to do",
+    "hours": 16.0,
+    "in_flight": false,
+    "pick": 129,
+    "first_week": 59,
+    "last_week": 59,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88tv",
+    "tracker_id": "EQ11",
+    "name": "Quest books",
+    "url": "https://app.clickup.com/t/86bcw88tv",
+    "list": "Equipment",
+    "status": "to do",
+    "hours": 8.0,
+    "in_flight": false,
+    "pick": 130,
+    "first_week": 59,
+    "last_week": 60,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88tx",
+    "tracker_id": "EQ13",
+    "name": "Hammer of Modulation",
+    "url": "https://app.clickup.com/t/86bcw88tx",
+    "list": "Equipment",
+    "status": "to do",
+    "hours": 4.0,
+    "in_flight": false,
+    "pick": 131,
+    "first_week": 60,
+    "last_week": 60,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88tz",
+    "tracker_id": "EQ14",
+    "name": "Shard Pouch",
+    "url": "https://app.clickup.com/t/86bcw88tz",
+    "list": "Equipment",
+    "status": "to do",
+    "hours": 3.0,
+    "in_flight": false,
+    "pick": 132,
+    "first_week": 60,
+    "last_week": 60,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcwwjcg",
+    "tracker_id": null,
+    "name": "Prism fusion generator (planner fusion kind)",
+    "url": "https://app.clickup.com/t/86bcwwjcg",
+    "list": "Equipment",
+    "status": "to do",
+    "hours": 8.0,
+    "in_flight": false,
+    "pick": 133,
+    "first_week": 60,
+    "last_week": 60,
+    "unblocked_by": [
+     {
+      "id": "86bcwwjc8",
+      "tracker_id": null,
+      "name": "Generic fusion blueprint (PrismSegmentObject_Base child)",
+      "url": "https://app.clickup.com/t/86bcwwjc8"
+     }
+    ]
+   },
+   {
+    "id": "86bcw885b",
+    "tracker_id": "G1",
+    "name": "Grimm: alternative roll for the Yaesha slot",
+    "url": "https://app.clickup.com/t/86bcw885b",
+    "list": "World of Grimm",
+    "status": "to do",
+    "hours": 12.0,
+    "in_flight": false,
+    "pick": 134,
+    "first_week": 60,
+    "last_week": 60,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw885d",
+    "tracker_id": "G2",
+    "name": "Grimm: once-only story campaign and Adventure option",
+    "url": "https://app.clickup.com/t/86bcw885d",
+    "list": "World of Grimm",
+    "status": "to do",
+    "hours": 16.0,
+    "in_flight": false,
+    "pick": 135,
+    "first_week": 60,
+    "last_week": 61,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw885e",
+    "tracker_id": "G3",
+    "name": "Grimm: world theme and art direction",
+    "url": "https://app.clickup.com/t/86bcw885e",
+    "list": "World of Grimm",
+    "status": "to do",
+    "hours": 8.0,
+    "in_flight": false,
+    "pick": 136,
+    "first_week": 61,
+    "last_week": 61,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw885g",
+    "tracker_id": "G4",
+    "name": "Grimm: choose tale dungeons from the 26 tales",
+    "url": "https://app.clickup.com/t/86bcw885g",
+    "list": "World of Grimm",
+    "status": "to do",
+    "hours": 2.0,
+    "in_flight": false,
+    "pick": 137,
+    "first_week": 61,
+    "last_week": 61,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw885h",
+    "tracker_id": "G5",
+    "name": "Grimm: choose NPCs, quest items and equipment from the tales",
+    "url": "https://app.clickup.com/t/86bcw885h",
+    "list": "World of Grimm",
+    "status": "to do",
+    "hours": 4.0,
+    "in_flight": false,
+    "pick": 138,
+    "first_week": 61,
+    "last_week": 61,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw898a",
+    "tracker_id": null,
+    "name": "The Frog King, or Iron Henry",
+    "url": "https://app.clickup.com/t/86bcw898a",
+    "list": "World of Grimm",
+    "status": "to do",
+    "hours": 0.25,
+    "in_flight": false,
+    "pick": 139,
+    "first_week": 61,
+    "last_week": 61,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw898b",
+    "tracker_id": null,
+    "name": "The Youth Who Went Forth to Learn What Fear Was",
+    "url": "https://app.clickup.com/t/86bcw898b",
+    "list": "World of Grimm",
+    "status": "to do",
+    "hours": 0.25,
+    "in_flight": false,
+    "pick": 140,
+    "first_week": 61,
+    "last_week": 61,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw898c",
+    "tracker_id": null,
+    "name": "The Wolf and the Seven Young Goats",
+    "url": "https://app.clickup.com/t/86bcw898c",
+    "list": "World of Grimm",
+    "status": "to do",
+    "hours": 0.25,
+    "in_flight": false,
+    "pick": 141,
+    "first_week": 61,
+    "last_week": 61,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw898e",
+    "tracker_id": null,
+    "name": "Brother and Sister",
+    "url": "https://app.clickup.com/t/86bcw898e",
+    "list": "World of Grimm",
+    "status": "to do",
+    "hours": 0.25,
+    "in_flight": false,
+    "pick": 142,
+    "first_week": 61,
+    "last_week": 61,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw898f",
+    "tracker_id": null,
+    "name": "Rapunzel",
+    "url": "https://app.clickup.com/t/86bcw898f",
+    "list": "World of Grimm",
+    "status": "to do",
+    "hours": 0.25,
+    "in_flight": false,
+    "pick": 143,
+    "first_week": 61,
+    "last_week": 61,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw898h",
+    "tracker_id": null,
+    "name": "Hansel and Gretel",
+    "url": "https://app.clickup.com/t/86bcw898h",
+    "list": "World of Grimm",
+    "status": "to do",
+    "hours": 0.25,
+    "in_flight": false,
+    "pick": 144,
+    "first_week": 61,
+    "last_week": 61,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw898j",
+    "tracker_id": null,
+    "name": "Cinderella (Aschenputtel)",
+    "url": "https://app.clickup.com/t/86bcw898j",
+    "list": "World of Grimm",
+    "status": "to do",
+    "hours": 0.25,
+    "in_flight": false,
+    "pick": 145,
+    "first_week": 61,
+    "last_week": 61,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw898m",
+    "tracker_id": null,
+    "name": "Mother Holle",
+    "url": "https://app.clickup.com/t/86bcw898m",
+    "list": "World of Grimm",
+    "status": "to do",
+    "hours": 0.25,
+    "in_flight": false,
+    "pick": 146,
+    "first_week": 61,
+    "last_week": 61,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw898p",
+    "tracker_id": null,
+    "name": "The Seven Ravens",
+    "url": "https://app.clickup.com/t/86bcw898p",
+    "list": "World of Grimm",
+    "status": "to do",
+    "hours": 0.25,
+    "in_flight": false,
+    "pick": 147,
+    "first_week": 61,
+    "last_week": 61,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw898r",
+    "tracker_id": null,
+    "name": "Little Red Cap",
+    "url": "https://app.clickup.com/t/86bcw898r",
+    "list": "World of Grimm",
+    "status": "to do",
+    "hours": 0.25,
+    "in_flight": false,
+    "pick": 148,
+    "first_week": 61,
+    "last_week": 61,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw898t",
+    "tracker_id": null,
+    "name": "The Singing Bone",
+    "url": "https://app.clickup.com/t/86bcw898t",
+    "list": "World of Grimm",
+    "status": "to do",
+    "hours": 0.25,
+    "in_flight": false,
+    "pick": 149,
+    "first_week": 61,
+    "last_week": 61,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw898u",
+    "tracker_id": null,
+    "name": "The Devil with the Three Golden Hairs",
+    "url": "https://app.clickup.com/t/86bcw898u",
+    "list": "World of Grimm",
+    "status": "to do",
+    "hours": 0.25,
+    "in_flight": false,
+    "pick": 150,
+    "first_week": 61,
+    "last_week": 61,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw898x",
+    "tracker_id": null,
+    "name": "The Girl Without Hands",
+    "url": "https://app.clickup.com/t/86bcw898x",
+    "list": "World of Grimm",
+    "status": "to do",
+    "hours": 0.25,
+    "in_flight": false,
+    "pick": 151,
+    "first_week": 61,
+    "last_week": 61,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw898z",
+    "tracker_id": null,
+    "name": "The Robber Bridegroom",
+    "url": "https://app.clickup.com/t/86bcw898z",
+    "list": "World of Grimm",
+    "status": "to do",
+    "hours": 0.25,
+    "in_flight": false,
+    "pick": 152,
+    "first_week": 61,
+    "last_week": 61,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw8990",
+    "tracker_id": null,
+    "name": "Frau Trude",
+    "url": "https://app.clickup.com/t/86bcw8990",
+    "list": "World of Grimm",
+    "status": "to do",
+    "hours": 0.25,
+    "in_flight": false,
+    "pick": 153,
+    "first_week": 61,
+    "last_week": 61,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw8992",
+    "tracker_id": null,
+    "name": "Godfather Death",
+    "url": "https://app.clickup.com/t/86bcw8992",
+    "list": "World of Grimm",
+    "status": "to do",
+    "hours": 0.25,
+    "in_flight": false,
+    "pick": 154,
+    "first_week": 61,
+    "last_week": 61,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw8994",
+    "tracker_id": null,
+    "name": "Fitcher's Bird",
+    "url": "https://app.clickup.com/t/86bcw8994",
+    "list": "World of Grimm",
+    "status": "to do",
+    "hours": 0.25,
+    "in_flight": false,
+    "pick": 155,
+    "first_week": 61,
+    "last_week": 61,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw8995",
+    "tracker_id": null,
+    "name": "The Juniper Tree",
+    "url": "https://app.clickup.com/t/86bcw8995",
+    "list": "World of Grimm",
+    "status": "to do",
+    "hours": 0.25,
+    "in_flight": false,
+    "pick": 156,
+    "first_week": 61,
+    "last_week": 61,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw8996",
+    "tracker_id": null,
+    "name": "The Six Swans",
+    "url": "https://app.clickup.com/t/86bcw8996",
+    "list": "World of Grimm",
+    "status": "to do",
+    "hours": 0.25,
+    "in_flight": false,
+    "pick": 157,
+    "first_week": 61,
+    "last_week": 61,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw8998",
+    "tracker_id": null,
+    "name": "Briar Rose",
+    "url": "https://app.clickup.com/t/86bcw8998",
+    "list": "World of Grimm",
+    "status": "to do",
+    "hours": 0.25,
+    "in_flight": false,
+    "pick": 158,
+    "first_week": 61,
+    "last_week": 61,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw899a",
+    "tracker_id": null,
+    "name": "Little Snow-White",
+    "url": "https://app.clickup.com/t/86bcw899a",
+    "list": "World of Grimm",
+    "status": "to do",
+    "hours": 0.25,
+    "in_flight": false,
+    "pick": 159,
+    "first_week": 61,
+    "last_week": 61,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw899b",
+    "tracker_id": null,
+    "name": "Rumpelstiltskin",
+    "url": "https://app.clickup.com/t/86bcw899b",
+    "list": "World of Grimm",
+    "status": "to do",
+    "hours": 0.25,
+    "in_flight": false,
+    "pick": 160,
+    "first_week": 61,
+    "last_week": 61,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw899c",
+    "tracker_id": null,
+    "name": "The Goose Girl",
+    "url": "https://app.clickup.com/t/86bcw899c",
+    "list": "World of Grimm",
+    "status": "to do",
+    "hours": 0.25,
+    "in_flight": false,
+    "pick": 161,
+    "first_week": 61,
+    "last_week": 61,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw899d",
+    "tracker_id": null,
+    "name": "Iron John",
+    "url": "https://app.clickup.com/t/86bcw899d",
+    "list": "World of Grimm",
+    "status": "to do",
+    "hours": 0.25,
+    "in_flight": false,
+    "pick": 162,
+    "first_week": 61,
+    "last_week": 61,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw899g",
+    "tracker_id": null,
+    "name": "The Nixie of the Mill-Pond",
+    "url": "https://app.clickup.com/t/86bcw899g",
+    "list": "World of Grimm",
+    "status": "to do",
+    "hours": 0.25,
+    "in_flight": false,
+    "pick": 163,
+    "first_week": 61,
+    "last_week": 61,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw899j",
+    "tracker_id": null,
+    "name": "The Pied Piper of Hamelin",
+    "url": "https://app.clickup.com/t/86bcw899j",
+    "list": "World of Grimm",
+    "status": "to do",
+    "hours": 0.25,
+    "in_flight": false,
+    "pick": 164,
+    "first_week": 61,
+    "last_week": 61,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88z2",
+    "tracker_id": "I2",
+    "name": "Inventory: Completion Tokens section",
+    "url": "https://app.clickup.com/t/86bcw88z2",
+    "list": "Interface",
+    "status": "to do",
+    "hours": 8.0,
+    "in_flight": false,
+    "pick": 165,
+    "first_week": 61,
+    "last_week": 61,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88z5",
+    "tracker_id": "I3",
+    "name": "Quest Books widget on the map screen",
+    "url": "https://app.clickup.com/t/86bcw88z5",
+    "list": "Interface",
+    "status": "to do",
+    "hours": 24.0,
+    "in_flight": false,
+    "pick": 166,
+    "first_week": 61,
+    "last_week": 62,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88z6",
+    "tracker_id": "I4",
+    "name": "Character screen: ring slots 5-8 beside armor",
+    "url": "https://app.clickup.com/t/86bcw88z6",
+    "list": "Interface",
+    "status": "to do",
+    "hours": 12.0,
+    "in_flight": false,
+    "pick": 167,
+    "first_week": 62,
+    "last_week": 62,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88z8",
+    "tracker_id": "I5",
+    "name": "Traits and archetype screens",
+    "url": "https://app.clickup.com/t/86bcw88z8",
+    "list": "Interface",
+    "status": "to do",
+    "hours": 20.0,
+    "in_flight": false,
+    "pick": 168,
+    "first_week": 62,
+    "last_week": 63,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88za",
+    "tracker_id": "I6",
+    "name": "Radar screen on the radar gun",
+    "url": "https://app.clickup.com/t/86bcw88za",
+    "list": "Interface",
+    "status": "to do",
+    "hours": 16.0,
+    "in_flight": false,
+    "pick": 169,
+    "first_week": 63,
+    "last_week": 63,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcw88zc",
+    "tracker_id": "I7",
+    "name": "Campaign map: new worlds on the outer circle",
+    "url": "https://app.clickup.com/t/86bcw88zc",
+    "list": "Interface",
+    "status": "to do",
+    "hours": 24.0,
+    "in_flight": false,
+    "pick": 170,
+    "first_week": 63,
+    "last_week": 64,
+    "unblocked_by": [
+     {
+      "id": "86bcw87av",
+      "tracker_id": "E33",
+      "name": "#33 Campaign map widget, Labyrinth world selection, campaign-complete save flag",
+      "url": "https://app.clickup.com/t/86bcw87av"
+     }
+    ]
+   },
+   {
+    "id": "86bcwwjcn",
+    "tracker_id": null,
+    "name": "UI audit: extend, never modify (rings 5-8, tokens, sort, quest books, traits)",
+    "url": "https://app.clickup.com/t/86bcwwjcn",
+    "list": "Interface",
+    "status": "to do",
+    "hours": 3.0,
+    "in_flight": false,
+    "pick": 171,
+    "first_week": 64,
+    "last_week": 64,
+    "unblocked_by": []
+   }
+  ],
+  "weeks": [
+   {
+    "week": 1,
+    "segments": [
+     {
+      "id": "86bcwwjdg",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcw88tw",
+      "hours": 6.0
+     },
+     {
+      "id": "86bcw88yz",
+      "hours": 16.0
+     },
+     {
+      "id": "86bcw87e8",
+      "hours": 16.0
+     },
+     {
+      "id": "86bcwwjd3",
+      "hours": 1.0
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 2495.0
+   },
+   {
+    "week": 2,
+    "segments": [
+     {
+      "id": "86bcw87a4",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcw87av",
+      "hours": 1.5
+     },
+     {
+      "id": "86bcw87a3",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcwwjd6",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcw87at",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcwwjc8",
+      "hours": 8.0
+     },
+     {
+      "id": "86bcw88bf",
+      "hours": 12.0
+     },
+     {
+      "id": "86bcw88bh",
+      "hours": 14.5
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 2455.0
+   },
+   {
+    "week": 3,
+    "segments": [
+     {
+      "id": "86bcw88bh",
+      "hours": 15.5
+     },
+     {
+      "id": "86bcw88bk",
+      "hours": 16.0
+     },
+     {
+      "id": "86bcw88bm",
+      "hours": 8.5
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 2415.0
+   },
+   {
+    "week": 4,
+    "segments": [
+     {
+      "id": "86bcw88bm",
+      "hours": 3.5
+     },
+     {
+      "id": "86bcw88bn",
+      "hours": 12.0
+     },
+     {
+      "id": "86bcw88br",
+      "hours": 24.5
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 2375.0
+   },
+   {
+    "week": 5,
+    "segments": [
+     {
+      "id": "86bcw88br",
+      "hours": 15.5
+     },
+     {
+      "id": "86bcw88bt",
+      "hours": 24.5
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 2335.0
+   },
+   {
+    "week": 6,
+    "segments": [
+     {
+      "id": "86bcw88bt",
+      "hours": 15.5
+     },
+     {
+      "id": "86bcw88bw",
+      "hours": 24.5
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 2295.0
+   },
+   {
+    "week": 7,
+    "segments": [
+     {
+      "id": "86bcw88bw",
+      "hours": 5.5
+     },
+     {
+      "id": "86bcw88bx",
+      "hours": 2.0
+     },
+     {
+      "id": "86bcw88by",
+      "hours": 8.0
+     },
+     {
+      "id": "86bcw88c0",
+      "hours": 24.5
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 2255.0
+   },
+   {
+    "week": 8,
+    "segments": [
+     {
+      "id": "86bcw88c0",
+      "hours": 35.5
+     },
+     {
+      "id": "86bcw899n",
+      "hours": 0.5
+     },
+     {
+      "id": "86bcw899q",
+      "hours": 0.5
+     },
+     {
+      "id": "86bcw899r",
+      "hours": 0.5
+     },
+     {
+      "id": "86bcw899v",
+      "hours": 0.5
+     },
+     {
+      "id": "86bcw899x",
+      "hours": 0.5
+     },
+     {
+      "id": "86bcw89a1",
+      "hours": 0.5
+     },
+     {
+      "id": "86bcw89a5",
+      "hours": 0.5
+     },
+     {
+      "id": "86bcw89a6",
+      "hours": 0.5
+     },
+     {
+      "id": "86bcw89a8",
+      "hours": 0.5
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 2215.0
+   },
+   {
+    "week": 9,
+    "segments": [
+     {
+      "id": "86bcw88kp",
+      "hours": 40.0
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 2175.0
+   },
+   {
+    "week": 10,
+    "segments": [
+     {
+      "id": "86bcw88kr",
+      "hours": 16.0
+     },
+     {
+      "id": "86bcw88kt",
+      "hours": 12.0
+     },
+     {
+      "id": "86bcw88kv",
+      "hours": 12.0
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 2135.0
+   },
+   {
+    "week": 11,
+    "segments": [
+     {
+      "id": "86bcw88kv",
+      "hours": 8.0
+     },
+     {
+      "id": "86bcw88kw",
+      "hours": 12.0
+     },
+     {
+      "id": "86bcw88kg",
+      "hours": 8.0
+     },
+     {
+      "id": "86bcw88kj",
+      "hours": 12.0
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 2095.0
+   },
+   {
+    "week": 12,
+    "segments": [
+     {
+      "id": "86bcw88kj",
+      "hours": 4.0
+     },
+     {
+      "id": "86bcw88kk",
+      "hours": 12.0
+     },
+     {
+      "id": "86bcw88km",
+      "hours": 16.0
+     },
+     {
+      "id": "86bcw88kz",
+      "hours": 8.0
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 2055.0
+   },
+   {
+    "week": 13,
+    "segments": [
+     {
+      "id": "86bcw88kz",
+      "hours": 8.0
+     },
+     {
+      "id": "86bcw88m0",
+      "hours": 24.0
+     },
+     {
+      "id": "86bcw88m3",
+      "hours": 8.0
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 2015.0
+   },
+   {
+    "week": 14,
+    "segments": [
+     {
+      "id": "86bcw88m3",
+      "hours": 16.0
+     },
+     {
+      "id": "86bcw88m6",
+      "hours": 4.0
+     },
+     {
+      "id": "86bcw88m7",
+      "hours": 20.0
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 1975.0
+   },
+   {
+    "week": 15,
+    "segments": [
+     {
+      "id": "86bcw88m7",
+      "hours": 20.0
+     },
+     {
+      "id": "86bcw89ac",
+      "hours": 4.0
+     },
+     {
+      "id": "86bcw89af",
+      "hours": 8.0
+     },
+     {
+      "id": "86bcw89ah",
+      "hours": 6.0
+     },
+     {
+      "id": "86bcw89aj",
+      "hours": 2.0
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 1935.0
+   },
+   {
+    "week": 16,
+    "segments": [
+     {
+      "id": "86bcw89ak",
+      "hours": 4.0
+     },
+     {
+      "id": "86bcw88zj",
+      "hours": 2.0
+     },
+     {
+      "id": "86bcw88zp",
+      "hours": 2.0
+     },
+     {
+      "id": "86bcw88zq",
+      "hours": 2.0
+     },
+     {
+      "id": "86bcw88zt",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcw88zu",
+      "hours": 3.0
+     },
+     {
+      "id": "86bcw88zx",
+      "hours": 0.5
+     },
+     {
+      "id": "86bcw8905",
+      "hours": 4.0
+     },
+     {
+      "id": "86bcw8906",
+      "hours": 4.0
+     },
+     {
+      "id": "86bcw8909",
+      "hours": 6.0
+     },
+     {
+      "id": "86bcw890a",
+      "hours": 3.0
+     },
+     {
+      "id": "86bcwwjcu",
+      "hours": 3.0
+     },
+     {
+      "id": "86bcwwjd0",
+      "hours": 0.5
+     },
+     {
+      "id": "86bcw88u2",
+      "hours": 5.0
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 1895.0
+   },
+   {
+    "week": 17,
+    "segments": [
+     {
+      "id": "86bcw88u2",
+      "hours": 25.0
+     },
+     {
+      "id": "86bcw88u4",
+      "hours": 15.0
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 1855.0
+   },
+   {
+    "week": 18,
+    "segments": [
+     {
+      "id": "86bcw88u4",
+      "hours": 5.0
+     },
+     {
+      "id": "86bcw88u6",
+      "hours": 16.0
+     },
+     {
+      "id": "86bcw88u9",
+      "hours": 19.0
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 1815.0
+   },
+   {
+    "week": 19,
+    "segments": [
+     {
+      "id": "86bcw88u9",
+      "hours": 21.0
+     },
+     {
+      "id": "86bcw88ua",
+      "hours": 6.0
+     },
+     {
+      "id": "86bcw88ub",
+      "hours": 13.0
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 1775.0
+   },
+   {
+    "week": 20,
+    "segments": [
+     {
+      "id": "86bcw88ub",
+      "hours": 3.0
+     },
+     {
+      "id": "86bcw89aq",
+      "hours": 16.0
+     },
+     {
+      "id": "86bcw89ax",
+      "hours": 21.0
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 1735.0
+   },
+   {
+    "week": 21,
+    "segments": [
+     {
+      "id": "86bcw89ax",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcw89ay",
+      "hours": 16.0
+     },
+     {
+      "id": "86bcw87ea",
+      "hours": 4.0
+     },
+     {
+      "id": "86bcw87eb",
+      "hours": 12.0
+     },
+     {
+      "id": "86bcw87ed",
+      "hours": 4.0
+     },
+     {
+      "id": "86bcw87ef",
+      "hours": 3.0
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 1695.0
+   },
+   {
+    "week": 22,
+    "segments": [
+     {
+      "id": "86bcw87ef",
+      "hours": 3.0
+     },
+     {
+      "id": "86bcw87eh",
+      "hours": 16.0
+     },
+     {
+      "id": "86bcw87em",
+      "hours": 3.0
+     },
+     {
+      "id": "86bcw87en",
+      "hours": 3.0
+     },
+     {
+      "id": "86bcw87eq",
+      "hours": 8.0
+     },
+     {
+      "id": "86bcwayg0",
+      "hours": 7.0
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 1655.0
+   },
+   {
+    "week": 23,
+    "segments": [
+     {
+      "id": "86bcwayg0",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcwayg7",
+      "hours": 2.0
+     },
+     {
+      "id": "86bcwaygh",
+      "hours": 3.0
+     },
+     {
+      "id": "86bcwaygn",
+      "hours": 0.5
+     },
+     {
+      "id": "86bcwaygt",
+      "hours": 4.0
+     },
+     {
+      "id": "86bcwwjda",
+      "hours": 4.0
+     },
+     {
+      "id": "86bcwwjdd",
+      "hours": 3.0
+     },
+     {
+      "id": "86bcwwjdq",
+      "hours": 2.0
+     },
+     {
+      "id": "86bcwwjdt",
+      "hours": 2.0
+     },
+     {
+      "id": "86bcwwjdv",
+      "hours": 2.0
+     },
+     {
+      "id": "86bcwwjdz",
+      "hours": 2.0
+     },
+     {
+      "id": "86bcw888f",
+      "hours": 12.0
+     },
+     {
+      "id": "86bcw888g",
+      "hours": 2.5
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 1615.0
+   },
+   {
+    "week": 24,
+    "segments": [
+     {
+      "id": "86bcw888g",
+      "hours": 13.5
+     },
+     {
+      "id": "86bcw888h",
+      "hours": 26.5
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 1575.0
+   },
+   {
+    "week": 25,
+    "segments": [
+     {
+      "id": "86bcw888h",
+      "hours": 33.5
+     },
+     {
+      "id": "86bcw888k",
+      "hours": 6.5
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 1535.0
+   },
+   {
+    "week": 26,
+    "segments": [
+     {
+      "id": "86bcw888k",
+      "hours": 40.0
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 1495.0
+   },
+   {
+    "week": 27,
+    "segments": [
+     {
+      "id": "86bcw888k",
+      "hours": 13.5
+     },
+     {
+      "id": "86bcw888n",
+      "hours": 26.5
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 1455.0
+   },
+   {
+    "week": 28,
+    "segments": [
+     {
+      "id": "86bcw888n",
+      "hours": 33.5
+     },
+     {
+      "id": "86bcw888p",
+      "hours": 6.5
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 1415.0
+   },
+   {
+    "week": 29,
+    "segments": [
+     {
+      "id": "86bcw888p",
+      "hours": 40.0
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 1375.0
+   },
+   {
+    "week": 30,
+    "segments": [
+     {
+      "id": "86bcw888p",
+      "hours": 13.5
+     },
+     {
+      "id": "86bcw888r",
+      "hours": 26.5
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 1335.0
+   },
+   {
+    "week": 31,
+    "segments": [
+     {
+      "id": "86bcw888r",
+      "hours": 33.5
+     },
+     {
+      "id": "86bcw888t",
+      "hours": 6.5
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 1295.0
+   },
+   {
+    "week": 32,
+    "segments": [
+     {
+      "id": "86bcw888t",
+      "hours": 40.0
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 1255.0
+   },
+   {
+    "week": 33,
+    "segments": [
+     {
+      "id": "86bcw888t",
+      "hours": 13.5
+     },
+     {
+      "id": "86bcw888w",
+      "hours": 26.5
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 1215.0
+   },
+   {
+    "week": 34,
+    "segments": [
+     {
+      "id": "86bcw888w",
+      "hours": 33.5
+     },
+     {
+      "id": "86bcw888x",
+      "hours": 6.5
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 1175.0
+   },
+   {
+    "week": 35,
+    "segments": [
+     {
+      "id": "86bcw888x",
+      "hours": 40.0
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 1135.0
+   },
+   {
+    "week": 36,
+    "segments": [
+     {
+      "id": "86bcw888x",
+      "hours": 13.5
+     },
+     {
+      "id": "86bcw888y",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcw88ex",
+      "hours": 12.0
+     },
+     {
+      "id": "86bcw88ey",
+      "hours": 13.5
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 1095.0
+   },
+   {
+    "week": 37,
+    "segments": [
+     {
+      "id": "86bcw88ey",
+      "hours": 40.0
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 1055.0
+   },
+   {
+    "week": 38,
+    "segments": [
+     {
+      "id": "86bcw88ey",
+      "hours": 6.5
+     },
+     {
+      "id": "86bcw88f1",
+      "hours": 33.5
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 1015.0
+   },
+   {
+    "week": 39,
+    "segments": [
+     {
+      "id": "86bcw88f1",
+      "hours": 26.5
+     },
+     {
+      "id": "86bcw88f2",
+      "hours": 13.5
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 975.0
+   },
+   {
+    "week": 40,
+    "segments": [
+     {
+      "id": "86bcw88f2",
+      "hours": 40.0
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 935.0
+   },
+   {
+    "week": 41,
+    "segments": [
+     {
+      "id": "86bcw88f2",
+      "hours": 6.5
+     },
+     {
+      "id": "86bcw88f3",
+      "hours": 33.5
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 895.0
+   },
+   {
+    "week": 42,
+    "segments": [
+     {
+      "id": "86bcw88f3",
+      "hours": 26.5
+     },
+     {
+      "id": "86bcw88f4",
+      "hours": 13.5
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 855.0
+   },
+   {
+    "week": 43,
+    "segments": [
+     {
+      "id": "86bcw88f4",
+      "hours": 40.0
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 815.0
+   },
+   {
+    "week": 44,
+    "segments": [
+     {
+      "id": "86bcw88f4",
+      "hours": 6.5
+     },
+     {
+      "id": "86bcw88f8",
+      "hours": 33.5
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 775.0
+   },
+   {
+    "week": 45,
+    "segments": [
+     {
+      "id": "86bcw88f8",
+      "hours": 26.5
+     },
+     {
+      "id": "86bcw88f9",
+      "hours": 13.5
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 735.0
+   },
+   {
+    "week": 46,
+    "segments": [
+     {
+      "id": "86bcw88f9",
+      "hours": 40.0
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 695.0
+   },
+   {
+    "week": 47,
+    "segments": [
+     {
+      "id": "86bcw88f9",
+      "hours": 6.5
+     },
+     {
+      "id": "86bcw88fb",
+      "hours": 33.5
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 655.0
+   },
+   {
+    "week": 48,
+    "segments": [
+     {
+      "id": "86bcw88fb",
+      "hours": 40.0
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 615.0
+   },
+   {
+    "week": 49,
+    "segments": [
+     {
+      "id": "86bcw88fb",
+      "hours": 6.5
+     },
+     {
+      "id": "86bcw88fc",
+      "hours": 16.0
+     },
+     {
+      "id": "86bcw88fe",
+      "hours": 17.5
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 575.0
+   },
+   {
+    "week": 50,
+    "segments": [
+     {
+      "id": "86bcw88fe",
+      "hours": 22.5
+     },
+     {
+      "id": "86bcw88fg",
+      "hours": 17.5
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 535.0
+   },
+   {
+    "week": 51,
+    "segments": [
+     {
+      "id": "86bcw88fg",
+      "hours": 22.5
+     },
+     {
+      "id": "86bcw88fh",
+      "hours": 17.5
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 495.0
+   },
+   {
+    "week": 52,
+    "segments": [
+     {
+      "id": "86bcw88fh",
+      "hours": 22.5
+     },
+     {
+      "id": "86bcw88fj",
+      "hours": 17.5
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 455.0
+   },
+   {
+    "week": 53,
+    "segments": [
+     {
+      "id": "86bcw88fj",
+      "hours": 6.5
+     },
+     {
+      "id": "86bcw88fn",
+      "hours": 24.0
+     },
+     {
+      "id": "86bcw88fq",
+      "hours": 9.5
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 415.0
+   },
+   {
+    "week": 54,
+    "segments": [
+     {
+      "id": "86bcw88fq",
+      "hours": 14.5
+     },
+     {
+      "id": "86bcw88fr",
+      "hours": 6.0
+     },
+     {
+      "id": "86bcw88fu",
+      "hours": 19.5
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 375.0
+   },
+   {
+    "week": 55,
+    "segments": [
+     {
+      "id": "86bcw88fu",
+      "hours": 20.5
+     },
+     {
+      "id": "86bcw88t9",
+      "hours": 16.0
+     },
+     {
+      "id": "86bcw88ta",
+      "hours": 3.5
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 335.0
+   },
+   {
+    "week": 56,
+    "segments": [
+     {
+      "id": "86bcw88ta",
+      "hours": 26.5
+     },
+     {
+      "id": "86bcw88tc",
+      "hours": 10.0
+     },
+     {
+      "id": "86bcw88te",
+      "hours": 3.5
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 295.0
+   },
+   {
+    "week": 57,
+    "segments": [
+     {
+      "id": "86bcw88te",
+      "hours": 16.5
+     },
+     {
+      "id": "86bcw88tf",
+      "hours": 23.5
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 255.0
+   },
+   {
+    "week": 58,
+    "segments": [
+     {
+      "id": "86bcw88tf",
+      "hours": 6.5
+     },
+     {
+      "id": "86bcw88th",
+      "hours": 6.0
+     },
+     {
+      "id": "86bcw88tm",
+      "hours": 16.0
+     },
+     {
+      "id": "86bcw88tp",
+      "hours": 11.5
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 215.0
+   },
+   {
+    "week": 59,
+    "segments": [
+     {
+      "id": "86bcw88tp",
+      "hours": 8.5
+     },
+     {
+      "id": "86bcw88tq",
+      "hours": 12.0
+     },
+     {
+      "id": "86bcw88tr",
+      "hours": 16.0
+     },
+     {
+      "id": "86bcw88tv",
+      "hours": 3.5
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 175.0
+   },
+   {
+    "week": 60,
+    "segments": [
+     {
+      "id": "86bcw88tv",
+      "hours": 4.5
+     },
+     {
+      "id": "86bcw88tx",
+      "hours": 4.0
+     },
+     {
+      "id": "86bcw88tz",
+      "hours": 3.0
+     },
+     {
+      "id": "86bcwwjcg",
+      "hours": 8.0
+     },
+     {
+      "id": "86bcw885b",
+      "hours": 12.0
+     },
+     {
+      "id": "86bcw885d",
+      "hours": 8.5
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 135.0
+   },
+   {
+    "week": 61,
+    "segments": [
+     {
+      "id": "86bcw885d",
+      "hours": 7.5
+     },
+     {
+      "id": "86bcw885e",
+      "hours": 8.0
+     },
+     {
+      "id": "86bcw885g",
+      "hours": 2.0
+     },
+     {
+      "id": "86bcw885h",
+      "hours": 4.0
+     },
+     {
+      "id": "86bcw898a",
+      "hours": 0.25
+     },
+     {
+      "id": "86bcw898b",
+      "hours": 0.25
+     },
+     {
+      "id": "86bcw898c",
+      "hours": 0.25
+     },
+     {
+      "id": "86bcw898e",
+      "hours": 0.25
+     },
+     {
+      "id": "86bcw898f",
+      "hours": 0.25
+     },
+     {
+      "id": "86bcw898h",
+      "hours": 0.25
+     },
+     {
+      "id": "86bcw898j",
+      "hours": 0.25
+     },
+     {
+      "id": "86bcw898m",
+      "hours": 0.25
+     },
+     {
+      "id": "86bcw898p",
+      "hours": 0.25
+     },
+     {
+      "id": "86bcw898r",
+      "hours": 0.25
+     },
+     {
+      "id": "86bcw898t",
+      "hours": 0.25
+     },
+     {
+      "id": "86bcw898u",
+      "hours": 0.25
+     },
+     {
+      "id": "86bcw898x",
+      "hours": 0.25
+     },
+     {
+      "id": "86bcw898z",
+      "hours": 0.25
+     },
+     {
+      "id": "86bcw8990",
+      "hours": 0.25
+     },
+     {
+      "id": "86bcw8992",
+      "hours": 0.25
+     },
+     {
+      "id": "86bcw8994",
+      "hours": 0.25
+     },
+     {
+      "id": "86bcw8995",
+      "hours": 0.25
+     },
+     {
+      "id": "86bcw8996",
+      "hours": 0.25
+     },
+     {
+      "id": "86bcw8998",
+      "hours": 0.25
+     },
+     {
+      "id": "86bcw899a",
+      "hours": 0.25
+     },
+     {
+      "id": "86bcw899b",
+      "hours": 0.25
+     },
+     {
+      "id": "86bcw899c",
+      "hours": 0.25
+     },
+     {
+      "id": "86bcw899d",
+      "hours": 0.25
+     },
+     {
+      "id": "86bcw899g",
+      "hours": 0.25
+     },
+     {
+      "id": "86bcw899j",
+      "hours": 0.25
+     },
+     {
+      "id": "86bcw88z2",
+      "hours": 8.0
+     },
+     {
+      "id": "86bcw88z5",
+      "hours": 4.0
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 95.0
+   },
+   {
+    "week": 62,
+    "segments": [
+     {
+      "id": "86bcw88z5",
+      "hours": 20.0
+     },
+     {
+      "id": "86bcw88z6",
+      "hours": 12.0
+     },
+     {
+      "id": "86bcw88z8",
+      "hours": 8.0
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 55.0
+   },
+   {
+    "week": 63,
+    "segments": [
+     {
+      "id": "86bcw88z8",
+      "hours": 12.0
+     },
+     {
+      "id": "86bcw88za",
+      "hours": 16.0
+     },
+     {
+      "id": "86bcw88zc",
+      "hours": 12.0
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 15.0
+   },
+   {
+    "week": 64,
+    "segments": [
+     {
+      "id": "86bcw88zc",
+      "hours": 12.0
+     },
+     {
+      "id": "86bcwwjcn",
+      "hours": 3.0
+     }
+    ],
+    "hours": 15.0,
+    "remaining_after": 0.0
+   }
+  ],
+  "unscheduled": {
+   "no_estimate": [],
+   "cycles": [],
+   "stuck": [],
+   "unknown_dependency": [],
+   "blocked": []
+  },
+  "unscheduled_count": 0
+ }
 }

@@ -21,6 +21,8 @@ import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
+from burndown import build_burndown
+
 API = "https://api.clickup.com/api/v2"
 DEFAULT_FOLDER_ID = "901414897445"  # "Remnant 2 Dimensions"; every list in its space is read
 HERE = Path(__file__).resolve().parent
@@ -122,12 +124,14 @@ def build_snapshot(
             s["count"] += 1
         lists.append({"id": lst["id"], "name": lst["name"], "tasks": tasks})
 
-    return {
+    snapshot = {
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "folder": {"id": folder["id"], "name": folder.get("name", "")},
         "statuses": sorted(statuses.values(), key=lambda s: s["done"]),  # stable: keeps ClickUp's order
         "lists": lists,
     }
+    snapshot["burndown"] = build_burndown(snapshot)  # projected schedule for the wheel page's burn-down table
+    return snapshot
 
 
 def main() -> None:
