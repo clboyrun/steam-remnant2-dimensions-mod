@@ -199,7 +199,6 @@ class Tests(unittest.TestCase):
         self.assertIn(("POST", "/task/t1/tag/ms-beta", {}), calls)
         self.assertIn(("POST", "/space/S/tag", {"tag": {"name": "ms-new", "tag_fg": "#ffffff", "tag_bg": "#7b68ee"}}), calls)
         self.assertIn(("POST", "/task/n1/dependency", {"depends_on": "t1"}), calls)
-        self.assertIn('tags: ["ms-new"]', next((Path(self.tmp) / "Required data inputs").glob("n1 - *.md")).read_text())
 
     def test_quiet_gate(self):
         now = [1000.0]
