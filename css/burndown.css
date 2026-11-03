@@ -1,0 +1,26 @@
+/* Burn-down table on the wheel page. Tokens from theme.css. */
+.bd-sum{display:flex;flex-wrap:wrap;gap:10px 28px;margin:0 0 14px;font-family:var(--font-mono);font-size:13px;color:var(--muted)}
+.bd-sum b{display:block;font-family:var(--font-display);font-size:22px;color:var(--text);font-variant-numeric:tabular-nums}
+.bd-sum .warn b{color:var(--hell)}
+.bd-scroll{overflow-x:auto;max-height:70vh;overflow-y:auto;border:1px solid var(--line);border-radius:8px}
+table.bd{border-collapse:collapse;width:100%;min-width:560px;font-size:13px}
+table.bd th,table.bd td{padding:4px 8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:middle}
+table.bd thead th{position:sticky;top:0;background:var(--panel);color:var(--muted);font-weight:600;z-index:1}
+table.bd tbody th{font-family:var(--font-mono);color:var(--muted);font-weight:400;width:3.5em}
+table.bd .num{text-align:right;font-family:var(--font-mono);font-variant-numeric:tabular-nums;white-space:nowrap;width:1%}
+.wk{display:flex;height:26px;gap:1px;background:var(--track);border-radius:4px;overflow:hidden;min-width:300px}
+.seg{display:flex;align-items:center;justify-content:center;min-width:2px;overflow:hidden;text-decoration:none!important;color:#fff;font:600 10.5px var(--font-mono);text-shadow:0 0 3px rgba(0,0,0,.7);white-space:nowrap}
+.seg:hover,.seg:focus-visible{outline:2px solid var(--text);outline-offset:-2px;filter:brightness(1.15)}
+.idle{background:repeating-linear-gradient(45deg,transparent 0 4px,var(--line) 4px 5px)}
+.rem .remtrack{display:inline-block;vertical-align:middle;margin-right:8px}
+.remtrack{width:70px;height:6px;background:var(--track);border-radius:3px;overflow:hidden}
+.remtrack span{display:block;height:100%;background:var(--accent)}
+.bd-key{margin-top:14px;border:1px solid var(--line);border-radius:8px;padding:8px 14px}
+.bd-key summary{cursor:pointer;font-weight:600}
+.bd-key ol{list-style:none;margin:8px 0 0;padding:0;columns:2 22em;column-gap:28px;font-size:13px}
+.bd-key li{break-inside:avoid;display:grid;grid-template-columns:12px 1fr;column-gap:8px;margin-bottom:6px}
+.bd-key li .sw{margin-top:5px;border-radius:2px}
+.bd-key li .h{grid-column:2;font-family:var(--font-mono);font-size:11.5px;color:var(--muted)}
+.bd-flags{margin-top:18px}
+.bd-flags h3{font-size:14px;margin:14px 0 2px}
+.bd-flags ul{margin:4px 0;padding-left:18px;font-size:13px}
