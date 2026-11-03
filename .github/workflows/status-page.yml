@@ -1,0 +1,65 @@
+name: Status page
+
+# Refreshes status.json on the gh-pages branch from ClickUp. Everything else for the page
+# (index.html, the sync script, its tests) lives on gh-pages; see its README.md.
+# This file has to be on the default branch because GitHub only runs scheduled workflows from there.
+# Needs the CLICKUP_API_TOKEN repository secret.
+# GitHub's own cron is best effort and drops runs on busy hours (this one fired about twice in 22 hours),
+# so each run also starts the next one itself, about 15 minutes after the last one started. The cron stays as a restart
+# in case the chain ever breaks (a failed run, a cancelled run).
+on:
+  schedule:
+    - cron: "*/15 * * * *" # on the quarter hour (:00, :15, :30, :45), when GitHub gets to it
+  workflow_dispatch:
+  push: # first run as soon as this file is merged
+    branches: [main]
+    paths: [".github/workflows/status-page.yml"]
+
+permissions:
+  contents: write
+  actions: write # lets the last step start the next run (see "Keep the timer going")
+
+concurrency:
+  group: status-page
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Test the sync script
+        working-directory: tools
+        run: python -m unittest -q
+      - name: Fetch ClickUp status
+        env:
+          CLICKUP_API_TOKEN: ${{ secrets.CLICKUP_API_TOKEN }}
+          CLICKUP_FOLDER_ID: ${{ vars.CLICKUP_FOLDER_ID }}
+        run: python tools/sync_clickup.py --out status.json
+      - name: Commit the snapshot to gh-pages
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add status.json
+          # generated_at changes every run, so only commit when the tasks themselves changed.
+          if git diff --cached --quiet -I '"generated_at"' -- status.json && git cat-file -e HEAD:status.json 2>/dev/null; then
+            echo "No task changes."
+            exit 0
+          fi
+          git commit -q -m "Status snapshot $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push -q origin HEAD:gh-pages
+      - name: Keep the timer going
+        # Always runs, even after a failure, so one bad refresh doesn't stop the timer.
+        # Starting a run with the built-in token is allowed for workflow_dispatch.
+        # Concurrency keeps one run going and one waiting, so extra chains collapse into one.
+        if: ${{ always() }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          sleep 870
+          gh workflow run status-page.yml --repo "$GITHUB_REPOSITORY" --ref "${{ github.event.repository.default_branch }}"
