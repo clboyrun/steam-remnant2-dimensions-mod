@@ -3,7 +3,9 @@ import json
 import shutil
 import time
 from pathlib import Path
+from urllib.parse import quote
 
+from .api import ApiError
 from . import cache as C
 
 README = """# ClickUp cache (written by ClickUp Sync)
@@ -24,6 +26,10 @@ modified or deleted) for the configured time (default 3 minutes).
   moves the subtask), `depends_on` (this waits on these), `blocks` (these wait on this), `links`
   (plain "related" links). Each value is a list of ticket ids or exact ticket names, including
   names of other NEW files in the same push.
+* `tags`: list of tag names (lower-case); added/removed on push, tags missing from the space are created.
+  Milestones: tickets carry an `ms-…` tag, the milestone card (Milestones list) `depends_on` its tickets;
+  `_milestones.md` at the cache root is a generated overview grouped by those tags.
+* Closing a ticket with nobody assigned assigns the configured closer (default Astra).
 * `## Post comment`: text here is posted as a comment on the next push, then cleared.
 * `## Agent notes`: local only, never pushed, kept across pulls. Read it before working on a
   ticket and add research / decisions / evidence there, so nothing has to be re-fetched.
@@ -96,9 +102,11 @@ class Engine:
             if wanted and s["id"] not in wanted:
                 continue
             for l in self.client.get(f"/space/{s['id']}/list", {"archived": "false"}).get("lists", []):
+                l["_space_id"] = s["id"]
                 yield s["name"], l
             for f in self.client.get(f"/space/{s['id']}/folder", {"archived": "false"}).get("folders", []):
                 for l in f.get("lists", []) or self.client.get(f"/folder/{f['id']}/list").get("lists", []):
+                    l["_space_id"] = s["id"]
                     yield s["name"], l
 
     def _tasks(self, list_id):
@@ -121,9 +129,9 @@ class Engine:
         team = self._team()
         existing, stats = self.cache.files(), {"new": 0, "updated": 0, "kept_local": 0, "same": 0}
         notes_backup = self._load_notes_backup()
-        lists = {}
+        lists, all_rows = {}, []
         for space_name, lst in self._lists(team):
-            lists[C.safe_dir(lst["name"])] = {"id": lst["id"], "name": lst["name"]}
+            lists[C.safe_dir(lst["name"])] = {"id": lst["id"], "name": lst["name"], "space_id": lst.get("_space_id", "")}
             rows = []
             for task in self._tasks(lst["id"]):
                 f = C.normalize(task, lst["name"], space_name)
@@ -154,6 +162,8 @@ class Engine:
                 self.cache.write(f, notes=notes, old_path=path)
                 stats["updated"] += 1
             self.cache.write_index(lst["name"], rows)
+            all_rows += rows
+        self.cache.write_milestones(all_rows, self.cfg.milestone_tag_prefix)
         self.cache.save_lists({**self.cache.load_lists(), **lists})
         self.log(f"pull done: {stats} ({self.client.calls} API calls so far)")
         return stats
@@ -281,6 +291,28 @@ class Engine:
                 except Exception as e:
                     self.log(f"{tid}: could not remove {key} {other}: {e}")
 
+    def _space_of(self, list_id):
+        return next((l.get("space_id") for l in self.cache.load_lists().values() if l["id"] == list_id), "")
+
+    def _apply_tags(self, tid, old, new, space_id=""):
+        for tag in sorted(set(new) - set(old)):
+            try:
+                try:
+                    self.client.post(f"/task/{tid}/tag/{quote(tag, safe='')}", {})
+                except ApiError as e:
+                    if e.status in (400, 404) and space_id:  # tag not in the space yet
+                        self.client.post(f"/space/{space_id}/tag", {"tag": {"name": tag, "tag_fg": "#ffffff", "tag_bg": "#7b68ee"}})
+                        self.client.post(f"/task/{tid}/tag/{quote(tag, safe='')}", {})
+                    else:
+                        raise
+            except Exception as e:
+                self.log(f"{tid}: could not add tag {tag}: {e}")
+        for tag in sorted(set(old) - set(new)):
+            try:
+                self.client.delete(f"/task/{tid}/tag/{quote(tag, safe='')}")
+            except Exception as e:
+                self.log(f"{tid}: could not remove tag {tag}: {e}")
+
     def create_new(self, dry_run=False):
         """Create ClickUp tasks from `NEW - *.md` files. Parents first; links after all exist."""
         files = self.cache.new_files()
@@ -360,7 +392,7 @@ class Engine:
                         self.client.post(f"/task/{tid}/comment", {"comment_text": comment, "notify_all": False})
                     except Exception as e:
                         self.log(f"{tid}: comment failed: {e}")
-                pending_links.append((tid, {k: f[k] for k in C.LIST_KEYS}))
+                pending_links.append((tid, {k: f[k] for k in C.LIST_KEYS}, f["tags"], lst.get("space_id", "")))
                 made += 1
                 progress = True
             queue = rest
@@ -368,8 +400,9 @@ class Engine:
                 break
         for p, f, *_ in queue:
             self.log(f"{p.name}: parent {f['parent']!r} not found/created; left for the next push")
-        for tid, wanted in pending_links:
+        for tid, wanted, tags, space_id in pending_links:
             self._apply_links(tid, {}, wanted)
+            self._apply_tags(tid, [], tags, space_id)
             try:
                 fresh = self.client.get(f"/task/{tid}", {"include_markdown_description": "true"})
                 path = self.cache.files().get(tid)
@@ -385,6 +418,7 @@ class Engine:
         return made
 
     def push(self, dry_run=False):
+        self._closed = {x.strip().lower() for x in self.cfg.closed_statuses.split(",") if x.strip()}
         self._index_refs()
         created = self.create_new(dry_run)
         todo = self.pending()
@@ -397,7 +431,15 @@ class Engine:
         for tid, path, changes, comment in todo:
             link_new = {k: changes[k] for k in C.LIST_KEYS if k in changes}
             body, warns = self._payload({k: v for k, v in changes.items()
-                                         if k != "assignees" and k not in C.LIST_KEYS})
+                                         if k not in ("assignees", "tags") and k not in C.LIST_KEYS})
+            if changes.get("status", "").lower() in self._closed and self.cfg.close_assignee:
+                cur = changes.get("assignees", (self.cache.load_base(tid) or {}).get("assignees", []))
+                who = next((u for u in self.members if u.lower() == self.cfg.close_assignee.lower()), None)
+                if not cur and who:
+                    changes = {**changes, "assignees": [who]}
+                    self.log(f"{tid}: closing with no assignee -> assigning {who}")
+                elif not cur:
+                    warns.append(f"closing with no assignee and {self.cfg.close_assignee!r} not found")
             if "assignees" in changes:
                 add, rem, w = self._assignee_delta(tid, changes["assignees"])
                 warns += w
@@ -413,6 +455,9 @@ class Engine:
                     self.client.put(f"/task/{tid}", body)
                 if comment:
                     self.client.post(f"/task/{tid}/comment", {"comment_text": comment, "notify_all": False})
+                if "tags" in changes:
+                    cur = self.cache.load_base(tid) or {}
+                    self._apply_tags(tid, cur.get("tags", []), changes["tags"], self._space_of(cur.get("list_id", "")))
                 if link_new:
                     cur = self.cache.load_base(tid) or {}
                     self._apply_links(tid, {k: cur.get(k, []) for k in C.LIST_KEYS}, link_new)

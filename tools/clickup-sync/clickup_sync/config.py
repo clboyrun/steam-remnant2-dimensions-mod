@@ -31,6 +31,10 @@ class Config:
     include_closed: bool = True
     # Astra, 2026-11-02: the sync must NOT assign start dates. Left off unless explicitly enabled.
     push_start_date: bool = False
+    # Closing a ticket (status in closed_statuses) with nobody assigned assigns this username (empty = off).
+    close_assignee: str = "Astra"
+    closed_statuses: str = "complete,closed,done"
+    milestone_tag_prefix: str = "ms-"
     api_base: str = "https://api.clickup.com/api/v2"
 
     def cache_path(self) -> Path:

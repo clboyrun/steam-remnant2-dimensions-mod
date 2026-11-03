@@ -70,6 +70,11 @@ class H(BaseHTTPRequestHandler):
                  "assignees": [], "tags": [], "time_estimate": body.get("time_estimate")}
             STATE["tasks"][t["id"]] = t
             return self._send(200, t)
+        if "/tag" in p:
+            if method == "POST" and p.startswith("/task/") and p.split("/tag/")[-1] == "ms-new" and not STATE.get("tag_ok"):
+                STATE["tag_ok"] = True
+                return self._send(400, {"err": "Tag does not exist"})
+            return self._send(200, {})
         if p.endswith("/dependency") or "/link/" in p:
             return self._send(200, {})
         if p.startswith("/task/n") and method == "GET":
@@ -173,6 +178,28 @@ class Tests(unittest.TestCase):
         STATE["calls"].clear()
         self.eng.push()
         self.assertFalse([c for c in STATE["calls"] if c[0] in ("POST", "PUT")])
+
+    def test_milestones_tags_and_close_assigns_astra(self):
+        STATE["tasks"]["t1"]["tags"] = [{"name": "MS-Alpha"}]
+        STATE["tag_ok"] = False
+        self.eng.pull()
+        ms = (Path(self.tmp) / "_milestones.md").read_text()
+        self.assertIn("## ms-alpha (0/1 closed)", ms)
+        c = self.eng.cache
+        c.write_new("Required data inputs", "Milestone: New")
+        m = Path(self.tmp) / "Required data inputs" / "NEW - milestone-new.md"
+        m.write_text(m.read_text().replace('tags: []', 'tags: ["ms-new"]').replace('depends_on: []', 'depends_on: ["t1"]'))
+        f = Path(self.tmp) / "Required data inputs" / "t1 - export-rigs.md"
+        f.write_text(f.read_text().replace('status: "to do"', 'status: "complete"').replace('tags: ["ms-alpha"]', 'tags: ["ms-alpha", "ms-beta"]'))
+        STATE["calls"].clear()
+        self.eng.push()
+        calls = [(m_, p_, b) for m_, p_, b in STATE["calls"]]
+        put = next(b for m_, p_, b in calls if m_ == "PUT")
+        self.assertEqual(put["assignees"], {"add": [7], "rem": []})
+        self.assertIn(("POST", "/task/t1/tag/ms-beta", {}), calls)
+        self.assertIn(("POST", "/space/S/tag", {"tag": {"name": "ms-new", "tag_fg": "#ffffff", "tag_bg": "#7b68ee"}}), calls)
+        self.assertIn(("POST", "/task/n1/dependency", {"depends_on": "t1"}), calls)
+        self.assertIn('tags: ["ms-new"]', next((Path(self.tmp) / "Required data inputs").glob("n1 - *.md")).read_text())
 
     def test_quiet_gate(self):
         now = [1000.0]
