@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-02T21:49:43+00:00",
+ "generated_at": "2026-11-03T00:00:17+00:00",
  "folder": {
   "id": "90149675055",
   "name": "Dimensions Mod"
@@ -10,14 +10,14 @@
    "color": "#b5bcc2",
    "done": false,
    "open": true,
-   "count": 158
+   "count": 168
   },
   {
    "status": "in process",
    "color": "#ffc53d",
    "done": false,
    "open": false,
-   "count": 1
+   "count": 3
   },
   {
    "status": "problem",
@@ -31,7 +31,7 @@
    "color": "#008844",
    "done": true,
    "open": false,
-   "count": 35
+   "count": 37
   }
  ],
  "lists": [
@@ -116,7 +116,8 @@
       "86bcw87ap"
      ],
      "links": [
-      "86bcw88bk"
+      "86bcw88bk",
+      "86bcwwjdz"
      ],
      "url": "https://app.clickup.com/t/86bcw88bm",
      "updated": 1793656176051,
@@ -435,7 +436,7 @@
       "86bcwayg7"
      ],
      "url": "https://app.clickup.com/t/86bcw88kp",
-     "updated": 1793586571090,
+     "updated": 1793656241869,
      "order": 10001793562587.84
     },
     {
@@ -459,7 +460,7 @@
       "86bcw8906"
      ],
      "url": "https://app.clickup.com/t/86bcw88kr",
-     "updated": 1793586492438,
+     "updated": 1793656243125,
      "order": 10001793562588.145
     },
     {
@@ -510,7 +511,7 @@
       "86bcw8906"
      ],
      "url": "https://app.clickup.com/t/86bcw88kv",
-     "updated": 1793586501274,
+     "updated": 1793656244495,
      "order": 10001793562588.713
     },
     {
@@ -534,7 +535,7 @@
       "86bcw8906"
      ],
      "url": "https://app.clickup.com/t/86bcw88kw",
-     "updated": 1793591291364,
+     "updated": 1793656246050,
      "order": 10001793562588.994
     }
    ]
@@ -561,7 +562,7 @@
       "86bcw88zx"
      ],
      "url": "https://app.clickup.com/t/86bcw88kg",
-     "updated": 1793565368194,
+     "updated": 1793656178358,
      "order": 10001793562586.42
     },
     {
@@ -602,10 +603,11 @@
      ],
      "links": [
       "86bcw88kg",
-      "86bcw88th"
+      "86bcw88th",
+      "86bcwwjdg"
      ],
      "url": "https://app.clickup.com/t/86bcw88kk",
-     "updated": 1793574126786,
+     "updated": 1793656179508,
      "order": 10001793562586.836
     },
     {
@@ -683,7 +685,7 @@
       "86bcwayg7"
      ],
      "url": "https://app.clickup.com/t/86bcw88kz",
-     "updated": 1793586571165,
+     "updated": 1793656201085,
      "order": 10001793562589.76
     },
     {
@@ -723,7 +725,7 @@
       "86bcw88kw"
      ],
      "url": "https://app.clickup.com/t/86bcw88m3",
-     "updated": 1793562590263,
+     "updated": 1793656202378,
      "order": 10001793562590.285
     },
     {
@@ -748,7 +750,7 @@
       "86bcw88tx"
      ],
      "url": "https://app.clickup.com/t/86bcw88m6",
-     "updated": 1793565389962,
+     "updated": 1793656203885,
      "order": 10001793562590.504
     },
     {
@@ -767,16 +769,17 @@
      "links": [
       "86bcw888f",
       "86bcw88kr",
-      "86bcw8900"
+      "86bcw8900",
+      "86bcwwjdd"
      ],
      "url": "https://app.clickup.com/t/86bcw88m7",
-     "updated": 1793565389976,
+     "updated": 1793656205284,
      "order": 10001793562590.754
     },
     {
      "id": "86bcw89ac",
      "tracker_id": null,
-     "name": "Ask the base weapon NPC: 'Are you sure we can't upgrade my weapons further?'",
+     "name": "Ask Rigs: 'Are you sure we can't upgrade my weapons further?'",
      "status": "to do",
      "status_color": "#b5bcc2",
      "done": false,
@@ -786,7 +789,7 @@
      "waits_on": [],
      "links": [],
      "url": "https://app.clickup.com/t/86bcw89ac",
-     "updated": 1793562716498,
+     "updated": 1793656206771,
      "order": 10001793562716.523
     },
     {
@@ -802,13 +805,13 @@
      "waits_on": [],
      "links": [],
      "url": "https://app.clickup.com/t/86bcw89af",
-     "updated": 1793562716746,
+     "updated": 1793656207973,
      "order": 10001793562716.77
     },
     {
      "id": "86bcw89ah",
      "tracker_id": null,
-     "name": "Weapon NPC leaves for one real hour of play time",
+     "name": "Rigs leaves for one real hour of play time",
      "status": "to do",
      "status_color": "#b5bcc2",
      "done": false,
@@ -818,13 +821,13 @@
      "waits_on": [],
      "links": [],
      "url": "https://app.clickup.com/t/86bcw89ah",
-     "updated": 1793562716978,
+     "updated": 1793656209458,
      "order": 10001793562717.0
     },
     {
      "id": "86bcw89aj",
      "tracker_id": null,
-     "name": "On next return, weapon NPC is back with the Masterwork NPC",
+     "name": "On next return, Rigs is back with the Masterwork NPC",
      "status": "to do",
      "status_color": "#b5bcc2",
      "done": false,
@@ -834,7 +837,7 @@
      "waits_on": [],
      "links": [],
      "url": "https://app.clickup.com/t/86bcw89aj",
-     "updated": 1793562717195,
+     "updated": 1793656210782,
      "order": 10001793562717.217
     },
     {
@@ -850,7 +853,7 @@
      "waits_on": [],
      "links": [],
      "url": "https://app.clickup.com/t/86bcw89ak",
-     "updated": 1793562717386,
+     "updated": 1793656211896,
      "order": 10001793562717.412
     }
    ]
@@ -895,7 +898,7 @@
       "86bcw87eq"
      ],
      "url": "https://app.clickup.com/t/86bcw88zp",
-     "updated": 1793591259849,
+     "updated": 1793656232978,
      "order": 10001793562671.08
     },
     {
@@ -935,7 +938,7 @@
       "86bcw88kp"
      ],
      "url": "https://app.clickup.com/t/86bcw88zt",
-     "updated": 1793574678476,
+     "updated": 1793656234370,
      "order": 10001793562671.656
     },
     {
@@ -1037,10 +1040,11 @@
      "links": [
       "86bcw88yz",
       "86bcw88z2",
-      "86bcw88z8"
+      "86bcw88z8",
+      "86bcwwjcn"
      ],
      "url": "https://app.clickup.com/t/86bcw8909",
-     "updated": 1793574699034,
+     "updated": 1793656237098,
      "order": 10001793562673.604
     },
     {
@@ -1119,7 +1123,7 @@
       "86bcw88m7"
      ],
      "url": "https://app.clickup.com/t/86bcw8900",
-     "updated": 1793591821376,
+     "updated": 1793656236109,
      "order": 10001793591821.426
     },
     {
@@ -1137,8 +1141,76 @@
       "86bcw88ub"
      ],
      "url": "https://app.clickup.com/t/86bcwayhu",
-     "updated": 1793592005413,
+     "updated": 1793656238141,
      "order": 10001793592005.465
+    },
+    {
+     "id": "86bcwwjcu",
+     "tracker_id": null,
+     "name": "Catalog fixes: Encumbrance, AcidResistance, Dialogue, RecipeTags, RemnantQuestEntity, campaign tags",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": "86bcw88zp",
+     "estimate_hours": 3.0,
+     "waits_on": [],
+     "links": [
+      "86bcwwjda"
+     ],
+     "url": "https://app.clickup.com/t/86bcwwjcu",
+     "updated": 1793656450145,
+     "order": 10001793656450.18
+    },
+    {
+     "id": "86bcwwjd0",
+     "tracker_id": null,
+     "name": "Decision: confirm the drop to 41 is gone from the Prism rule",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 0.5,
+     "waits_on": [],
+     "links": [
+      "86bcw88tr"
+     ],
+     "url": "https://app.clickup.com/t/86bcwwjd0",
+     "updated": 1793656450642,
+     "order": 10001793656450.672
+    },
+    {
+     "id": "86bcwwjd3",
+     "tracker_id": null,
+     "name": "Decision: Masterwork cost materials",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [],
+     "url": "https://app.clickup.com/t/86bcwwjd3",
+     "updated": 1793656451178,
+     "order": 10001793656451.203
+    },
+    {
+     "id": "86bcwwjd6",
+     "tracker_id": null,
+     "name": "Decision: scope of new fusions (chosen set vs all pairs)",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [],
+     "url": "https://app.clickup.com/t/86bcwwjd6",
+     "updated": 1793656451828,
+     "order": 10001793656451.846
     }
    ]
   },
@@ -1337,24 +1409,6 @@
    "name": "Required data inputs",
    "tasks": [
     {
-     "id": "86bcw879u",
-     "tracker_id": "E15",
-     "name": "#15 Range-increase stat and friendly/hostile faction classes",
-     "status": "to do",
-     "status_color": "#b5bcc2",
-     "done": false,
-     "open": true,
-     "parent": null,
-     "estimate_hours": 1.0,
-     "waits_on": [
-      "86bcw878v"
-     ],
-     "links": [],
-     "url": "https://app.clickup.com/t/86bcw879u",
-     "updated": 1793591268122,
-     "order": 10001793562313.438
-    },
-    {
      "id": "86bcw87a3",
      "tracker_id": "E22",
      "name": "#22 How a spawn decides to be corrupted",
@@ -1367,9 +1421,11 @@
      "waits_on": [
       "86bcw878v"
      ],
-     "links": [],
+     "links": [
+      "86bcwwjdg"
+     ],
      "url": "https://app.clickup.com/t/86bcw87a3",
-     "updated": 1793591270821,
+     "updated": 1793656224766,
      "order": 10001793562314.764
     },
     {
@@ -1387,26 +1443,8 @@
      ],
      "links": [],
      "url": "https://app.clickup.com/t/86bcw87a4",
-     "updated": 1793591272894,
+     "updated": 1793656226351,
      "order": 10001793562314.941
-    },
-    {
-     "id": "86bcw87ab",
-     "tracker_id": "E26",
-     "name": "#26 Point where a save finishes loading on the player",
-     "status": "to do",
-     "status_color": "#b5bcc2",
-     "done": false,
-     "open": true,
-     "parent": null,
-     "estimate_hours": 1.0,
-     "waits_on": [
-      "86bcw878v"
-     ],
-     "links": [],
-     "url": "https://app.clickup.com/t/86bcw87ab",
-     "updated": 1793591272259,
-     "order": 10001793562315.498
     },
     {
      "id": "86bcw87at",
@@ -1423,7 +1461,7 @@
      ],
      "links": [],
      "url": "https://app.clickup.com/t/86bcw87at",
-     "updated": 1793591276900,
+     "updated": 1793656230367,
      "order": 10001793562316.658
     },
     {
@@ -1441,7 +1479,7 @@
      ],
      "links": [],
      "url": "https://app.clickup.com/t/86bcw87av",
-     "updated": 1793591277584,
+     "updated": 1793656231908,
      "order": 10001793562316.86
     },
     {
@@ -1621,7 +1659,7 @@
      ],
      "links": [],
      "url": "https://app.clickup.com/t/86bcw8799",
-     "updated": 1793589479890,
+     "updated": 1793656212718,
      "order": 10001793589133.836
     },
     {
@@ -1657,7 +1695,7 @@
      ],
      "links": [],
      "url": "https://app.clickup.com/t/86bcw879e",
-     "updated": 1793589490960,
+     "updated": 1793656213713,
      "order": 10001793589301.336
     },
     {
@@ -1675,7 +1713,7 @@
      ],
      "links": [],
      "url": "https://app.clickup.com/t/86bcw879v",
-     "updated": 1793589599699,
+     "updated": 1793656219780,
      "order": 10001793589383.623
     },
     {
@@ -1693,7 +1731,7 @@
      ],
      "links": [],
      "url": "https://app.clickup.com/t/86bcw879w",
-     "updated": 1793589498566,
+     "updated": 1793656221230,
      "order": 10001793589408.365
     },
     {
@@ -1781,7 +1819,7 @@
      ],
      "links": [],
      "url": "https://app.clickup.com/t/86bcw87a7",
-     "updated": 1793591137543,
+     "updated": 1793656227360,
      "order": 10001793591137.605
     },
     {
@@ -1841,7 +1879,7 @@
     {
      "id": "86bcw87a0",
      "tracker_id": "E19",
-     "name": "#19 Base weapon NPC's dialogue tree",
+     "name": "#19 Rigs's (base weapon NPC) dialogue tree",
      "status": "complete",
      "status_color": "#008844",
      "done": true,
@@ -1853,13 +1891,13 @@
      ],
      "links": [],
      "url": "https://app.clickup.com/t/86bcw87a0",
-     "updated": 1793615171150,
+     "updated": 1793656222276,
      "order": 10001793615168.066
     },
     {
      "id": "86bcw879h",
      "tracker_id": "E9",
-     "name": "#9 McCabe's upgrade recipes, a standard and a boss weapon, weapon stat scaling asset",
+     "name": "#9 Rigs's upgrade recipes, a standard and a boss weapon, weapon stat scaling asset",
      "status": "complete",
      "status_color": "#008844",
      "done": true,
@@ -1871,7 +1909,7 @@
      ],
      "links": [],
      "url": "https://app.clickup.com/t/86bcw879h",
-     "updated": 1793615181195,
+     "updated": 1793656214815,
      "order": 10001793615181.326
     },
     {
@@ -1889,13 +1927,13 @@
      ],
      "links": [],
      "url": "https://app.clickup.com/t/86bcw879n",
-     "updated": 1793615186611,
+     "updated": 1793656216582,
      "order": 10001793615186.666
     },
     {
      "id": "86bcw87a1",
      "tracker_id": "E20",
-     "name": "#20 Mutator NPC's corruption recipe list",
+     "name": "#20 Dwell's (mutator NPC) corruption recipe list",
      "status": "complete",
      "status_color": "#008844",
      "done": true,
@@ -1907,7 +1945,7 @@
      ],
      "links": [],
      "url": "https://app.clickup.com/t/86bcw87a1",
-     "updated": 1793615197520,
+     "updated": 1793656223402,
      "order": 10001793615194.062
     },
     {
@@ -1979,6 +2017,42 @@
      "url": "https://app.clickup.com/t/86bcw87ak",
      "updated": 1793633038158,
      "order": 10001793632977.2
+    },
+    {
+     "id": "86bcw879u",
+     "tracker_id": "E15",
+     "name": "#15 Range-increase stat and friendly/hostile faction classes",
+     "status": "complete",
+     "status_color": "#008844",
+     "done": true,
+     "open": false,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "links": [],
+     "url": "https://app.clickup.com/t/86bcw879u",
+     "updated": 1793656218407,
+     "order": 10001793656218.598
+    },
+    {
+     "id": "86bcw87ab",
+     "tracker_id": "E26",
+     "name": "#26 Point where a save finishes loading on the player",
+     "status": "complete",
+     "status_color": "#008844",
+     "done": true,
+     "open": false,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "links": [],
+     "url": "https://app.clickup.com/t/86bcw87ab",
+     "updated": 1793656228520,
+     "order": 10001793656228.645
     }
    ]
   },
@@ -2123,7 +2197,7 @@
       "86bcw88zt"
      ],
      "url": "https://app.clickup.com/t/86bcw87em",
-     "updated": 1793574896300,
+     "updated": 1793656239125,
      "order": 10001793562337.367
     },
     {
@@ -2170,7 +2244,7 @@
     {
      "id": "86bcwayg0",
      "tracker_id": null,
-     "name": "Test: a pak-added story quest joins a world slot",
+     "name": "A pak-added story quest joins a world slot",
      "status": "to do",
      "status_color": "#b5bcc2",
      "done": false,
@@ -2188,13 +2262,13 @@
       "86bcw88zj"
      ],
      "url": "https://app.clickup.com/t/86bcwayg0",
-     "updated": 1793586571208,
+     "updated": 1793657158720,
      "order": 10001793586286.41
     },
     {
      "id": "86bcwayg7",
      "tracker_id": null,
-     "name": "Test: a hidden token item survives a new campaign",
+     "name": "A hidden token item survives a new campaign",
      "status": "to do",
      "status_color": "#b5bcc2",
      "done": false,
@@ -2211,13 +2285,13 @@
       "86bcw8902"
      ],
      "url": "https://app.clickup.com/t/86bcwayg7",
-     "updated": 1793586571039,
+     "updated": 1793657178442,
      "order": 10001793586290.904
     },
     {
      "id": "86bcwaygh",
      "tracker_id": null,
-     "name": "Test: a one-shot story quest rolls once per save",
+     "name": "A one-shot story quest rolls once per save",
      "status": "to do",
      "status_color": "#b5bcc2",
      "done": false,
@@ -2232,13 +2306,13 @@
       "86bcw888g"
      ],
      "url": "https://app.clickup.com/t/86bcwaygh",
-     "updated": 1793586571065,
+     "updated": 1793657150368,
      "order": 10001793586294.932
     },
     {
      "id": "86bcwaygn",
      "tracker_id": null,
-     "name": "Test: measure Burning damage per tick in game",
+     "name": "Measure Burning damage per tick in game",
      "status": "to do",
      "status_color": "#b5bcc2",
      "done": false,
@@ -2255,7 +2329,7 @@
       "86bcw88kj"
      ],
      "url": "https://app.clickup.com/t/86bcwaygn",
-     "updated": 1793586571041,
+     "updated": 1793657185569,
      "order": 10001793586299.23
     },
     {
@@ -2274,8 +2348,136 @@
       "86bcw890d"
      ],
      "url": "https://app.clickup.com/t/86bcwaygt",
-     "updated": 1793586570837,
+     "updated": 1793656240422,
      "order": 10001793586303.67
+    },
+    {
+     "id": "86bcwwjdg",
+     "tracker_id": null,
+     "name": "Kill a red glitchy enemy (Aberration or not, drop table)",
+     "status": "in process",
+     "status_color": "#ffc53d",
+     "done": false,
+     "open": false,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [
+      "86bcw87a3",
+      "86bcw88kk"
+     ],
+     "url": "https://app.clickup.com/t/86bcwwjdg",
+     "updated": 1793657335695,
+     "order": 10001793636916.559
+    },
+    {
+     "id": "86bcwwjda",
+     "tracker_id": null,
+     "name": "Planner campaign code: pick world by WorldTags (Planner.cs:690)",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 4.0,
+     "waits_on": [],
+     "links": [
+      "86bcwwjcu"
+     ],
+     "url": "https://app.clickup.com/t/86bcwwjda",
+     "updated": 1793656452268,
+     "order": 10001793656452.295
+    },
+    {
+     "id": "86bcwwjdd",
+     "tracker_id": null,
+     "name": "CommandConsole Ending C",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 3.0,
+     "waits_on": [],
+     "links": [
+      "86bcw88m7"
+     ],
+     "url": "https://app.clickup.com/t/86bcwwjdd",
+     "updated": 1793657133365,
+     "order": 10001793656452.777
+    },
+    {
+     "id": "86bcwwjdq",
+     "tracker_id": null,
+     "name": "LevelUpRollsToChooseFrom 5 shows 5 choices",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 2.0,
+     "waits_on": [],
+     "links": [
+      "86bcw88tq"
+     ],
+     "url": "https://app.clickup.com/t/86bcwwjdq",
+     "updated": 1793657071498,
+     "order": 10001793656453.816
+    },
+    {
+     "id": "86bcwwjdt",
+     "tracker_id": null,
+     "name": "Prism fusion merge frees a slot and the stone holds 5",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 2.0,
+     "waits_on": [],
+     "links": [
+      "86bcw88tr"
+     ],
+     "url": "https://app.clickup.com/t/86bcwwjdt",
+     "updated": 1793657061564,
+     "order": 10001793656454.248
+    },
+    {
+     "id": "86bcwwjdv",
+     "tracker_id": null,
+     "name": "Ring slots 5-8 accepted by the game",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 2.0,
+     "waits_on": [],
+     "links": [
+      "86bcw88tf",
+      "86bcw88z6"
+     ],
+     "url": "https://app.clickup.com/t/86bcwwjdv",
+     "updated": 1793657054569,
+     "order": 10001793656454.703
+    },
+    {
+     "id": "86bcwwjdz",
+     "tracker_id": null,
+     "name": "Waypoint_Grab on the arcade cabinet",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 2.0,
+     "waits_on": [],
+     "links": [
+      "86bcw88bm"
+     ],
+     "url": "https://app.clickup.com/t/86bcwwjdz",
+     "updated": 1793657044772,
+     "order": 10001793656455.22
     }
    ]
   },
@@ -2884,7 +3086,8 @@
      "parent": null,
      "estimate_hours": 16.0,
      "waits_on": [
-      "86bcw879h"
+      "86bcw879h",
+      "86bcwwjd3"
      ],
      "links": [
       "86bcw87eb",
@@ -2929,14 +3132,15 @@
      "parent": null,
      "estimate_hours": 10.0,
      "waits_on": [
-      "86bcw879k"
+      "86bcw879k",
+      "86bcwwjd3"
      ],
      "links": [
       "86bcw88kv",
       "86bcw88m6"
      ],
      "url": "https://app.clickup.com/t/86bcw88tc",
-     "updated": 1793562628136,
+     "updated": 1793656182992,
      "order": 10001793562628.16
     },
     {
@@ -2958,13 +3162,13 @@
       "86bcw8905"
      ],
      "url": "https://app.clickup.com/t/86bcw88te",
-     "updated": 1793591246943,
+     "updated": 1793656184360,
      "order": 10001793562628.393
     },
     {
      "id": "86bcw88tf",
      "tracker_id": "EQ5",
-     "name": "Enchanter ring slot on armor (up to 8 rings)",
+     "name": "Enchanter ring slot on armor (player ring slots 5-8, one per armor piece)",
      "status": "to do",
      "status_color": "#b5bcc2",
      "done": false,
@@ -2977,10 +3181,11 @@
      ],
      "links": [
       "86bcw88kw",
-      "86bcw88z6"
+      "86bcw88z6",
+      "86bcwwjdv"
      ],
      "url": "https://app.clickup.com/t/86bcw88tf",
-     "updated": 1793591246173,
+     "updated": 1793656185713,
      "order": 10001793562628.613
     },
     {
@@ -3002,7 +3207,7 @@
       "86bcw88kv"
      ],
      "url": "https://app.clickup.com/t/86bcw88th",
-     "updated": 1793562628887,
+     "updated": 1793656186819,
      "order": 10001793562628.904
     },
     {
@@ -3043,7 +3248,7 @@
       "86bcw88za"
      ],
      "url": "https://app.clickup.com/t/86bcw88tp",
-     "updated": 1793565389966,
+     "updated": 1793656187892,
      "order": 10001793562629.443
     },
     {
@@ -3061,16 +3266,17 @@
      ],
      "links": [
       "86bcw88tr",
-      "86bcw890d"
+      "86bcw890d",
+      "86bcwwjdq"
      ],
      "url": "https://app.clickup.com/t/86bcw88tq",
-     "updated": 1793586436749,
+     "updated": 1793656189316,
      "order": 10001793562629.678
     },
     {
      "id": "86bcw88tr",
      "tracker_id": "EQ10",
-     "name": "Prism: level 51 tenth fragment rule",
+     "name": "Prism: up to 5 Fusion Fragments, mythic at level 51",
      "status": "to do",
      "status_color": "#b5bcc2",
      "done": false,
@@ -3084,10 +3290,12 @@
      "links": [
       "86bcw88tq",
       "86bcw8905",
-      "86bcw890d"
+      "86bcw890d",
+      "86bcwwjd0",
+      "86bcwwjdt"
      ],
      "url": "https://app.clickup.com/t/86bcw88tr",
-     "updated": 1793586570974,
+     "updated": 1793656190243,
      "order": 10001793562629.957
     },
     {
@@ -3107,30 +3315,8 @@
       "86bcw88z5"
      ],
      "url": "https://app.clickup.com/t/86bcw88tv",
-     "updated": 1793586333578,
+     "updated": 1793656191700,
      "order": 10001793562630.303
-    },
-    {
-     "id": "86bcw88tw",
-     "tracker_id": "EQ12",
-     "name": "Campaign completion tokens",
-     "status": "to do",
-     "status_color": "#b5bcc2",
-     "done": false,
-     "open": true,
-     "parent": null,
-     "estimate_hours": 6.0,
-     "waits_on": [],
-     "links": [
-      "86bcw88kp",
-      "86bcw88tv",
-      "86bcw88z2",
-      "86bcw8902",
-      "86bcwayg7"
-     ],
-     "url": "https://app.clickup.com/t/86bcw88tw",
-     "updated": 1793591788829,
-     "order": 10001793562630.535
     },
     {
      "id": "86bcw88tx",
@@ -3170,6 +3356,65 @@
      "url": "https://app.clickup.com/t/86bcw88tz",
      "updated": 1793562631003,
      "order": 10001793562631.021
+    },
+    {
+     "id": "86bcwwjc8",
+     "tracker_id": null,
+     "name": "Generic fusion blueprint (PrismSegmentObject_Base child)",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": "86bcw88tq",
+     "estimate_hours": 8.0,
+     "waits_on": [
+      "86bcw8792"
+     ],
+     "links": [],
+     "url": "https://app.clickup.com/t/86bcwwjc8",
+     "updated": 1793656448505,
+     "order": 10001793656448.55
+    },
+    {
+     "id": "86bcwwjcg",
+     "tracker_id": null,
+     "name": "Prism fusion generator (planner fusion kind)",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": "86bcw88tq",
+     "estimate_hours": 8.0,
+     "waits_on": [
+      "86bcwwjc8",
+      "86bcwwjd6"
+     ],
+     "links": [],
+     "url": "https://app.clickup.com/t/86bcwwjcg",
+     "updated": 1793656449023,
+     "order": 10001793656449.066
+    },
+    {
+     "id": "86bcw88tw",
+     "tracker_id": "EQ12",
+     "name": "Campaign completion tokens",
+     "status": "in process",
+     "status_color": "#ffc53d",
+     "done": false,
+     "open": false,
+     "parent": null,
+     "estimate_hours": 6.0,
+     "waits_on": [],
+     "links": [
+      "86bcw88kp",
+      "86bcw88tv",
+      "86bcw88z2",
+      "86bcw8902",
+      "86bcwayg7"
+     ],
+     "url": "https://app.clickup.com/t/86bcw88tw",
+     "updated": 1793657260772,
+     "order": 10001793657260.834
     }
    ]
   },
@@ -3727,13 +3972,13 @@
       "86bcw8909"
      ],
      "url": "https://app.clickup.com/t/86bcw88z2",
-     "updated": 1793619048455,
+     "updated": 1793656195916,
      "order": 10001793562668.69
     },
     {
      "id": "86bcw88z5",
      "tracker_id": "I3",
-     "name": "Quest Books category on the map screen",
+     "name": "Quest Books widget on the map screen",
      "status": "to do",
      "status_color": "#b5bcc2",
      "done": false,
@@ -3750,13 +3995,13 @@
       "86bcw88tv"
      ],
      "url": "https://app.clickup.com/t/86bcw88z5",
-     "updated": 1793562668944,
+     "updated": 1793656197056,
      "order": 10001793562668.975
     },
     {
      "id": "86bcw88z6",
      "tracker_id": "I4",
-     "name": "Character screen: rings beside armor",
+     "name": "Character screen: ring slots 5-8 beside armor",
      "status": "to do",
      "status_color": "#b5bcc2",
      "done": false,
@@ -3767,10 +4012,11 @@
       "86bcw879w"
      ],
      "links": [
-      "86bcw88tf"
+      "86bcw88tf",
+      "86bcwwjdv"
      ],
      "url": "https://app.clickup.com/t/86bcw88z6",
-     "updated": 1793562669206,
+     "updated": 1793656198319,
      "order": 10001793562669.227
     },
     {
@@ -3794,7 +4040,7 @@
       "86bcw8909"
      ],
      "url": "https://app.clickup.com/t/86bcw88z8",
-     "updated": 1793591251326,
+     "updated": 1793656199898,
      "order": 10001793562669.445
     },
     {
@@ -3860,8 +4106,26 @@
       "86bcw8909"
      ],
      "url": "https://app.clickup.com/t/86bcw88yz",
-     "updated": 1793616572224,
+     "updated": 1793656194403,
      "order": 10001793616572.283
+    },
+    {
+     "id": "86bcwwjcn",
+     "tracker_id": null,
+     "name": "UI audit: extend, never modify (rings 5-8, tokens, sort, quest books, traits)",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 3.0,
+     "waits_on": [],
+     "links": [
+      "86bcw8909"
+     ],
+     "url": "https://app.clickup.com/t/86bcwwjcn",
+     "updated": 1793656449517,
+     "order": 10001793656449.545
     }
    ]
   }
