@@ -16,6 +16,8 @@ def task(tid, name, status, stype, parent=None, deps=(), est=None, order=0):
         "orderindex": str(order),
         "date_updated": "1700000000000",
         "date_created": "1699000000000",
+        "assignees": [{"id": 1, "username": "Someone"}] if tid == "a" else [],
+        "due_date": "1701000000000" if tid == "a" else None,
     }
 
 
@@ -58,6 +60,13 @@ class SnapshotTests(unittest.TestCase):
         self.assertEqual(a["closed"], 1700000000000)  # done, no close date: falls back to the last update
         self.assertIsNone(b["closed"])
         self.assertIsNone(b["start"])
+
+    def test_assigned_is_a_flag_not_a_name(self):
+        a, b = self.snap["lists"][0]["tasks"]
+        self.assertIs(a["assigned"], True)
+        self.assertIs(b["assigned"], False)
+        self.assertEqual(a["due"], 1701000000000)
+        self.assertNotIn("Someone", str(self.snap))
 
     def test_parent(self):
         self.assertEqual(self.snap["lists"][1]["tasks"][1]["parent"], "c")

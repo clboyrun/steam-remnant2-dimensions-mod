@@ -1,5 +1,6 @@
 /* Heat map calendar for the wheel page. Each day is a square cut from top left to bottom right:
-   top-right triangle = tickets open that day, bottom-left triangle = tickets closed that day.
+   top-right triangle = tickets assigned to someone whose start-to-end range covers that day,
+   bottom-left triangle = tickets closed that day.
    Both use the same 0 to 5 scale (5 or more is full colour). Dates come from status.json (created, start, closed). */
 (function () {
   const MAX = 5;
@@ -19,17 +20,22 @@
     if (!dated.length) { mount.innerHTML = '<p class="note">Dates appear after the next hourly refresh.</p>'; return; }
 
     // Always every ticket, open and closed: the wheel's "Include closed tickets" box does not apply here.
+    // Top-right ("assigned"): a ticket counts on each day from its start date to its end, but only if it has a start date and an
+    // assignee. The end is the close date when finished, else the due date, else today (still running).
     const used = tasks.filter(t => t.created || t.start || t.closed);
+    const hasFlag = tasks.some(t => "assigned" in t);
     const open = {}, closed = {};
     used.forEach(t => {
-      const from = dayStart(t.start || t.created || t.closed);
-      let to = t.done ? dayStart(t.closed || t.updated || now) : today;
-      if (to < from) to = from;
-      for (let d = from; d <= to; d = addDays(d, 1)) (open[key(d)] = open[key(d)] || []).push(t);
+      if (t.assigned && t.start) {
+        const from = dayStart(t.start);
+        let to = t.done ? dayStart(t.closed || t.updated || now) : (t.due ? dayStart(t.due) : today);
+        if (to < from) to = from;
+        for (let d = from; d <= to; d = addDays(d, 1)) (open[key(d)] = open[key(d)] || []).push(t);
+      }
       if (t.done && t.closed) (closed[key(dayStart(t.closed))] = closed[key(dayStart(t.closed))] || []).push(t);
     });
 
-    const all = used.flatMap(t => [t.created, t.start, t.closed].filter(Boolean));
+    const all = used.flatMap(t => [t.start, t.closed, t.assigned ? t.due : 0, t.created].filter(Boolean));
     let first = dayStart(Math.min.apply(null, all.length ? all : [today]));
     const last = today;
     // Weeks run Monday to Sunday; show at least five weeks so a young project doesn't look like a stub.
@@ -53,7 +59,7 @@
 
     const cells = cols.map(days => '<div class="cal-col">' + days.map(d => {
       const k = key(d), o = (open[k] || []).length, c = (closed[k] || []).length, future = d > today;
-      const lbl = fmtDate(d) + ": " + o + " ticket" + (o === 1 ? "" : "s") + " open, " + c + " closed";
+      const lbl = fmtDate(d) + ": " + o + " ticket" + (o === 1 ? "" : "s") + " assigned, " + c + " closed";
       return '<button type="button" class="cal-cell' + (future ? " future" : "") + (d === today ? " today" : "") + '" data-day="' + k + '" style="--o:' + (level(o) * 100).toFixed(0) + "%;--c:" + (level(c) * 100).toFixed(0) + '%" title="' + esc(lbl) + '" aria-label="' + esc(lbl) + '"' + (future ? " disabled" : "") + "></button>";
     }).join("") + "</div>").join("");
 
@@ -62,9 +68,10 @@
     mount.innerHTML =
       '<div class="cal-wrap"><div class="cal-dow" aria-hidden="true">' + dow + '</div><div class="cal-scroll"><div class="cal-months" style="--weeks:' + weeks + '" aria-hidden="true">' + monthRow + '</div><div class="cal-grid" style="--weeks:' + weeks + '">' + cells + "</div></div></div>" +
       '<div class="cal-legend"><span class="cal-key"><i class="cal-cellkey"></i></span>' +
-      '<span><b>Top right</b>: tickets open that day (from start or created date, until closed) ' + scale("cal-sw-o") + "</span>" +
+      '<span><b>Top right</b>: tickets assigned to someone, from start date to end date ' + scale("cal-sw-o") + "</span>" +
       '<span><b>Bottom left</b>: tickets closed that day ' + scale("cal-sw-c") + "</span>" +
       "<span>0 to 5 tickets; 5 or more is full colour for both</span></div>" +
+      (hasFlag ? "" : '<p class="note">Assignment data appears after the next hourly refresh, so the top-right triangles stay empty until then.</p>') +
       '<div class="cal-detail" id="cal-detail" aria-live="polite"><p class="note">Select a day to list its tickets.</p></div>';
 
     const detail = mount.querySelector("#cal-detail");
@@ -76,7 +83,7 @@
       const t = new Date(k + "T00:00:00").getTime();
       detail.innerHTML = "<h3>" + esc(fmtDate(t)) + "</h3>" +
         "<h4>Closed (" + c.length + ")</h4>" + list(c) +
-        "<h4>Open (" + o.length + ")</h4>" + (o.length > 40 ? '<p class="note">' + o.length + " tickets; first 40 shown.</p>" + list(o.slice(0, 40)) : list(o));
+        "<h4>Assigned and running (" + o.length + ")</h4>" + (o.length > 40 ? '<p class="note">' + o.length + " tickets; first 40 shown.</p>" + list(o.slice(0, 40)) : list(o));
     }));
   };
 })();
