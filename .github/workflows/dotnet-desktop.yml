@@ -1,0 +1,38 @@
+name: build
+
+on:
+  pull_request:
+    branches: [master]
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: build-${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: false
+
+      - name: Init CUE4Parse submodule
+        shell: bash
+        run: git submodule update --init external/CUE4Parse
+
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Restore
+        run: dotnet restore UnrealReZen/UnrealReZen.csproj
+
+      - name: Build
+        run: dotnet build UnrealReZen/UnrealReZen.csproj --no-restore --configuration Release
