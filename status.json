@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-03T12:59:46+00:00",
+ "generated_at": "2026-11-03T18:42:35+00:00",
  "folder": {
   "id": "90149675055",
   "name": "Dimensions Mod"
@@ -10,14 +10,14 @@
    "color": "#b5bcc2",
    "done": false,
    "open": true,
-   "count": 185
+   "count": 184
   },
   {
    "status": "in process",
    "color": "#ffc53d",
    "done": false,
    "open": false,
-   "count": 3
+   "count": 6
   },
   {
    "status": "problem",
@@ -31,7 +31,7 @@
    "color": "#008844",
    "done": true,
    "open": false,
-   "count": 37
+   "count": 39
   }
  ],
  "lists": [
@@ -218,7 +218,8 @@
      ],
      "links": [
       "86bcw8905",
-      "86bcw8909"
+      "86bcw8909",
+      "86bcxgvcf"
      ],
      "url": "https://app.clickup.com/t/86bcw88yz",
      "updated": 1793687063729,
@@ -727,7 +728,11 @@
       "86bcw890a",
       "86bcw890d",
       "86bcwaygt",
-      "86bcwwjcn"
+      "86bcwwjcn",
+      "86bcxgvax",
+      "86bcxgvbf",
+      "86bcxgvcf",
+      "86bcxgvd2"
      ],
      "links": [],
      "url": "https://app.clickup.com/t/86bcx2vxk",
@@ -2087,10 +2092,11 @@
       "86bcw88yz",
       "86bcw88z2",
       "86bcw88z8",
-      "86bcwwjcn"
+      "86bcwwjcn",
+      "86bcxgvcf"
      ],
      "url": "https://app.clickup.com/t/86bcw8909",
-     "updated": 1793687064693,
+     "updated": 1793731262834,
      "created": 1793562673580,
      "start": null,
      "due": null,
@@ -2110,10 +2116,12 @@
      "estimate_hours": 3.0,
      "waits_on": [],
      "links": [
-      "86bcw87e8"
+      "86bcw87e8",
+      "86bcxgvbf",
+      "86bcxgvcf"
      ],
      "url": "https://app.clickup.com/t/86bcw890a",
-     "updated": 1793687064921,
+     "updated": 1793731264232,
      "created": 1793562673875,
      "start": null,
      "due": null,
@@ -2137,7 +2145,8 @@
      "links": [
       "86bcw88tq",
       "86bcw88tr",
-      "86bcwaygt"
+      "86bcwaygt",
+      "86bcxgvd2"
      ],
      "url": "https://app.clickup.com/t/86bcw890d",
      "updated": 1793687065153,
@@ -2232,7 +2241,8 @@
      "estimate_hours": 3.0,
      "waits_on": [],
      "links": [
-      "86bcwwjda"
+      "86bcwwjda",
+      "86bcxgvax"
      ],
      "url": "https://app.clickup.com/t/86bcwwjcu",
      "updated": 1793687065216,
@@ -2933,7 +2943,9 @@
       "86bcwwjc8",
       "86bcwwjd6"
      ],
-     "links": [],
+     "links": [
+      "86bcxgvax"
+     ],
      "url": "https://app.clickup.com/t/86bcwwjcg",
      "updated": 1793687064177,
      "created": 1793656449023,
@@ -3809,32 +3821,6 @@
    "name": "Toolchain and in-game tests",
    "tasks": [
     {
-     "id": "86bcw87e8",
-     "tracker_id": "T1",
-     "name": "First pak: build, cook, pack and install end to end",
-     "status": "to do",
-     "status_color": "#b5bcc2",
-     "done": false,
-     "open": true,
-     "parent": null,
-     "estimate_hours": 16.0,
-     "waits_on": [
-      "86bcw878v"
-     ],
-     "links": [
-      "86bcw890a",
-      "86bcwaygt"
-     ],
-     "url": "https://app.clickup.com/t/86bcw87e8",
-     "updated": 1793687065696,
-     "created": 1793562335747,
-     "start": null,
-     "due": null,
-     "assigned": false,
-     "closed": null,
-     "order": 10001793562335.766
-    },
-    {
      "id": "86bcw87ea",
      "tracker_id": "T2",
      "name": "Ring with a new icon and name as starting gear",
@@ -4023,7 +4009,8 @@
       "86bcw878v"
      ],
      "links": [
-      "86bcw88zp"
+      "86bcw88zp",
+      "86bcxgvax"
      ],
      "url": "https://app.clickup.com/t/86bcw87eq",
      "updated": 1793687066384,
@@ -4146,30 +4133,6 @@
      "order": 10001793586299.23
     },
     {
-     "id": "86bcwaygt",
-     "tracker_id": null,
-     "name": "Replace Rem2Proj header stubs with the UE4SS UHT header dump",
-     "status": "to do",
-     "status_color": "#b5bcc2",
-     "done": false,
-     "open": true,
-     "parent": null,
-     "estimate_hours": 4.0,
-     "waits_on": [],
-     "links": [
-      "86bcw87e8",
-      "86bcw890d"
-     ],
-     "url": "https://app.clickup.com/t/86bcwaygt",
-     "updated": 1793687066542,
-     "created": 1793586303645,
-     "start": null,
-     "due": null,
-     "assigned": false,
-     "closed": null,
-     "order": 10001793586303.67
-    },
-    {
      "id": "86bcwwjdg",
      "tracker_id": null,
      "name": "Kill a red glitchy enemy (Aberration or not, drop table)",
@@ -4205,7 +4168,8 @@
      "estimate_hours": 4.0,
      "waits_on": [],
      "links": [
-      "86bcwwjcu"
+      "86bcwwjcu",
+      "86bcxgvax"
      ],
      "url": "https://app.clickup.com/t/86bcwwjda",
      "updated": 1793687063780,
@@ -4331,6 +4295,163 @@
      "assigned": false,
      "closed": null,
      "order": 10001793656455.22
+    },
+    {
+     "id": "86bcxgvax",
+     "tracker_id": null,
+     "name": "Dimensions JSON pipeline: definitions, planner, CLI and editor script",
+     "status": "in process",
+     "status_color": "#ffc53d",
+     "done": false,
+     "open": false,
+     "parent": null,
+     "estimate_hours": 4.0,
+     "waits_on": [],
+     "links": [
+      "86bcw87e8",
+      "86bcw87eq",
+      "86bcwwjcg",
+      "86bcwwjcu",
+      "86bcwwjda"
+     ],
+     "url": "https://app.clickup.com/t/86bcxgvax",
+     "updated": 1793731252230,
+     "created": 1793731245916,
+     "start": null,
+     "due": null,
+     "assigned": true,
+     "closed": null,
+     "order": 10001793731245.951
+    },
+    {
+     "id": "86bcxgvbf",
+     "tracker_id": null,
+     "name": "Evaluate UnrealReZen as the UE 5.2 IoStore packer",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 4.0,
+     "waits_on": [],
+     "links": [
+      "86bcw87e8",
+      "86bcw890a"
+     ],
+     "url": "https://app.clickup.com/t/86bcxgvbf",
+     "updated": 1793731254489,
+     "created": 1793731246568,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793731246.592
+    },
+    {
+     "id": "86bcxgvcf",
+     "tracker_id": null,
+     "name": "Pak builder tool: stub Blueprint, custom child, cook and UnrealPak",
+     "status": "in process",
+     "status_color": "#ffc53d",
+     "done": false,
+     "open": false,
+     "parent": null,
+     "estimate_hours": 8.0,
+     "waits_on": [],
+     "links": [
+      "86bcw87e8",
+      "86bcw88yz",
+      "86bcw8909",
+      "86bcw890a"
+     ],
+     "url": "https://app.clickup.com/t/86bcxgvcf",
+     "updated": 1793731258373,
+     "created": 1793731247610,
+     "start": null,
+     "due": null,
+     "assigned": true,
+     "closed": null,
+     "order": 10001793731247.64
+    },
+    {
+     "id": "86bcxgvd2",
+     "tracker_id": null,
+     "name": "Rem2Proj Unreal project committed to the repo",
+     "status": "complete",
+     "status_color": "#008844",
+     "done": true,
+     "open": false,
+     "parent": null,
+     "estimate_hours": 2.0,
+     "waits_on": [],
+     "links": [
+      "86bcw87e8",
+      "86bcw890d",
+      "86bcwaygt"
+     ],
+     "url": "https://app.clickup.com/t/86bcxgvd2",
+     "updated": 1793731261782,
+     "created": 1793731248188,
+     "start": null,
+     "due": null,
+     "assigned": true,
+     "closed": 1793731248188,
+     "order": 10001793731248.215
+    },
+    {
+     "id": "86bcw87e8",
+     "tracker_id": "T1",
+     "name": "First pak: build, cook, pack and install end to end",
+     "status": "in process",
+     "status_color": "#ffc53d",
+     "done": false,
+     "open": false,
+     "parent": null,
+     "estimate_hours": 16.0,
+     "waits_on": [
+      "86bcw878v"
+     ],
+     "links": [
+      "86bcw890a",
+      "86bcwaygt",
+      "86bcxgvax",
+      "86bcxgvbf",
+      "86bcxgvcf",
+      "86bcxgvd2"
+     ],
+     "url": "https://app.clickup.com/t/86bcw87e8",
+     "updated": 1793731265355,
+     "created": 1793562335747,
+     "start": null,
+     "due": null,
+     "assigned": true,
+     "closed": null,
+     "order": 10001793731265.453
+    },
+    {
+     "id": "86bcwaygt",
+     "tracker_id": null,
+     "name": "Replace Rem2Proj header stubs with the UE4SS UHT header dump",
+     "status": "complete",
+     "status_color": "#008844",
+     "done": true,
+     "open": false,
+     "parent": null,
+     "estimate_hours": 4.0,
+     "waits_on": [],
+     "links": [
+      "86bcw87e8",
+      "86bcw890d",
+      "86bcxgvd2"
+     ],
+     "url": "https://app.clickup.com/t/86bcwaygt",
+     "updated": 1793731266519,
+     "created": 1793586303645,
+     "start": null,
+     "due": null,
+     "assigned": true,
+     "closed": 1793731266519,
+     "order": 10001793731266.639
     }
    ]
   },
@@ -5759,7 +5880,7 @@
  ],
  "burndown": {
   "hours_per_week": 40.0,
-  "total_hours": 2535.0,
+  "total_hours": 2547.0,
   "week_count": 64,
   "tickets": [
    {
@@ -5805,17 +5926,45 @@
     "unblocked_by": []
    },
    {
+    "id": "86bcxgvax",
+    "tracker_id": null,
+    "name": "Dimensions JSON pipeline: definitions, planner, CLI and editor script",
+    "url": "https://app.clickup.com/t/86bcxgvax",
+    "list": "Toolchain and in-game tests",
+    "status": "in process",
+    "hours": 4.0,
+    "in_flight": true,
+    "pick": 4,
+    "first_week": 1,
+    "last_week": 1,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcxgvcf",
+    "tracker_id": null,
+    "name": "Pak builder tool: stub Blueprint, custom child, cook and UnrealPak",
+    "url": "https://app.clickup.com/t/86bcxgvcf",
+    "list": "Toolchain and in-game tests",
+    "status": "in process",
+    "hours": 8.0,
+    "in_flight": true,
+    "pick": 5,
+    "first_week": 1,
+    "last_week": 1,
+    "unblocked_by": []
+   },
+   {
     "id": "86bcw87e8",
     "tracker_id": "T1",
     "name": "First pak: build, cook, pack and install end to end",
     "url": "https://app.clickup.com/t/86bcw87e8",
     "list": "Toolchain and in-game tests",
-    "status": "to do",
+    "status": "in process",
     "hours": 16.0,
-    "in_flight": false,
-    "pick": 4,
+    "in_flight": true,
+    "pick": 6,
     "first_week": 1,
-    "last_week": 1,
+    "last_week": 2,
     "unblocked_by": []
    },
    {
@@ -5827,9 +5976,9 @@
     "status": "to do",
     "hours": 1.0,
     "in_flight": false,
-    "pick": 5,
-    "first_week": 1,
-    "last_week": 1,
+    "pick": 7,
+    "first_week": 2,
+    "last_week": 2,
     "unblocked_by": []
    },
    {
@@ -5841,7 +5990,7 @@
     "status": "to do",
     "hours": 1.0,
     "in_flight": false,
-    "pick": 6,
+    "pick": 8,
     "first_week": 2,
     "last_week": 2,
     "unblocked_by": []
@@ -5855,7 +6004,7 @@
     "status": "to do",
     "hours": 1.5,
     "in_flight": false,
-    "pick": 7,
+    "pick": 9,
     "first_week": 2,
     "last_week": 2,
     "unblocked_by": []
@@ -5869,7 +6018,7 @@
     "status": "to do",
     "hours": 1.0,
     "in_flight": false,
-    "pick": 8,
+    "pick": 10,
     "first_week": 2,
     "last_week": 2,
     "unblocked_by": []
@@ -5883,7 +6032,7 @@
     "status": "to do",
     "hours": 1.0,
     "in_flight": false,
-    "pick": 9,
+    "pick": 11,
     "first_week": 2,
     "last_week": 2,
     "unblocked_by": []
@@ -5897,7 +6046,7 @@
     "status": "to do",
     "hours": 8.0,
     "in_flight": false,
-    "pick": 10,
+    "pick": 12,
     "first_week": 2,
     "last_week": 2,
     "unblocked_by": []
@@ -5911,7 +6060,7 @@
     "status": "to do",
     "hours": 1.0,
     "in_flight": false,
-    "pick": 11,
+    "pick": 13,
     "first_week": 2,
     "last_week": 2,
     "unblocked_by": []
@@ -5925,7 +6074,7 @@
     "status": "to do",
     "hours": 8.0,
     "in_flight": false,
-    "pick": 12,
+    "pick": 14,
     "first_week": 2,
     "last_week": 2,
     "unblocked_by": []
@@ -5939,7 +6088,7 @@
     "status": "to do",
     "hours": 24.0,
     "in_flight": false,
-    "pick": 13,
+    "pick": 15,
     "first_week": 2,
     "last_week": 3,
     "unblocked_by": []
@@ -5953,7 +6102,7 @@
     "status": "to do",
     "hours": 12.0,
     "in_flight": false,
-    "pick": 14,
+    "pick": 16,
     "first_week": 3,
     "last_week": 3,
     "unblocked_by": []
@@ -5967,9 +6116,9 @@
     "status": "to do",
     "hours": 20.0,
     "in_flight": false,
-    "pick": 15,
+    "pick": 17,
     "first_week": 3,
-    "last_week": 3,
+    "last_week": 4,
     "unblocked_by": []
    },
    {
@@ -5981,8 +6130,8 @@
     "status": "to do",
     "hours": 16.0,
     "in_flight": false,
-    "pick": 16,
-    "first_week": 3,
+    "pick": 18,
+    "first_week": 4,
     "last_week": 4,
     "unblocked_by": []
    },
@@ -5995,9 +6144,9 @@
     "status": "to do",
     "hours": 24.0,
     "in_flight": false,
-    "pick": 17,
+    "pick": 19,
     "first_week": 4,
-    "last_week": 4,
+    "last_week": 5,
     "unblocked_by": [
      {
       "id": "86bcw87av",
@@ -6016,8 +6165,8 @@
     "status": "to do",
     "hours": 3.0,
     "in_flight": false,
-    "pick": 18,
-    "first_week": 4,
+    "pick": 20,
+    "first_week": 5,
     "last_week": 5,
     "unblocked_by": []
    },
@@ -6030,7 +6179,7 @@
     "status": "to do",
     "hours": 16.0,
     "in_flight": false,
-    "pick": 19,
+    "pick": 21,
     "first_week": 5,
     "last_week": 5,
     "unblocked_by": []
@@ -6044,7 +6193,7 @@
     "status": "to do",
     "hours": 24.0,
     "in_flight": false,
-    "pick": 20,
+    "pick": 22,
     "first_week": 5,
     "last_week": 6,
     "unblocked_by": []
@@ -6058,7 +6207,7 @@
     "status": "to do",
     "hours": 24.0,
     "in_flight": false,
-    "pick": 21,
+    "pick": 23,
     "first_week": 6,
     "last_week": 6,
     "unblocked_by": []
@@ -6072,9 +6221,9 @@
     "status": "to do",
     "hours": 4.0,
     "in_flight": false,
-    "pick": 22,
+    "pick": 24,
     "first_week": 6,
-    "last_week": 6,
+    "last_week": 7,
     "unblocked_by": []
    },
    {
@@ -6086,9 +6235,9 @@
     "status": "to do",
     "hours": 40.0,
     "in_flight": false,
-    "pick": 23,
-    "first_week": 6,
-    "last_week": 7,
+    "pick": 25,
+    "first_week": 7,
+    "last_week": 8,
     "unblocked_by": []
    },
    {
@@ -6100,9 +6249,9 @@
     "status": "to do",
     "hours": 4.0,
     "in_flight": false,
-    "pick": 24,
-    "first_week": 7,
-    "last_week": 7,
+    "pick": 26,
+    "first_week": 8,
+    "last_week": 8,
     "unblocked_by": []
    },
    {
@@ -6114,8 +6263,8 @@
     "status": "to do",
     "hours": 8.0,
     "in_flight": false,
-    "pick": 25,
-    "first_week": 7,
+    "pick": 27,
+    "first_week": 8,
     "last_week": 8,
     "unblocked_by": []
    },
@@ -6128,7 +6277,7 @@
     "status": "to do",
     "hours": 6.0,
     "in_flight": false,
-    "pick": 26,
+    "pick": 28,
     "first_week": 8,
     "last_week": 8,
     "unblocked_by": []
@@ -6142,7 +6291,7 @@
     "status": "to do",
     "hours": 2.0,
     "in_flight": false,
-    "pick": 27,
+    "pick": 29,
     "first_week": 8,
     "last_week": 8,
     "unblocked_by": []
@@ -6156,7 +6305,7 @@
     "status": "to do",
     "hours": 4.0,
     "in_flight": false,
-    "pick": 28,
+    "pick": 30,
     "first_week": 8,
     "last_week": 8,
     "unblocked_by": []
@@ -6170,7 +6319,7 @@
     "status": "to do",
     "hours": 40.0,
     "in_flight": false,
-    "pick": 29,
+    "pick": 31,
     "first_week": 8,
     "last_week": 9,
     "unblocked_by": []
@@ -6184,9 +6333,9 @@
     "status": "to do",
     "hours": 16.0,
     "in_flight": false,
-    "pick": 30,
+    "pick": 32,
     "first_week": 9,
-    "last_week": 9,
+    "last_week": 10,
     "unblocked_by": []
    },
    {
@@ -6198,8 +6347,8 @@
     "status": "to do",
     "hours": 12.0,
     "in_flight": false,
-    "pick": 31,
-    "first_week": 9,
+    "pick": 33,
+    "first_week": 10,
     "last_week": 10,
     "unblocked_by": []
    },
@@ -6212,7 +6361,7 @@
     "status": "to do",
     "hours": 20.0,
     "in_flight": false,
-    "pick": 32,
+    "pick": 34,
     "first_week": 10,
     "last_week": 10,
     "unblocked_by": []
@@ -6226,9 +6375,9 @@
     "status": "to do",
     "hours": 12.0,
     "in_flight": false,
-    "pick": 33,
+    "pick": 35,
     "first_week": 10,
-    "last_week": 10,
+    "last_week": 11,
     "unblocked_by": []
    },
    {
@@ -6240,8 +6389,8 @@
     "status": "to do",
     "hours": 12.0,
     "in_flight": false,
-    "pick": 34,
-    "first_week": 10,
+    "pick": 36,
+    "first_week": 11,
     "last_week": 11,
     "unblocked_by": []
    },
@@ -6254,9 +6403,9 @@
     "status": "to do",
     "hours": 30.0,
     "in_flight": false,
-    "pick": 35,
+    "pick": 37,
     "first_week": 11,
-    "last_week": 11,
+    "last_week": 12,
     "unblocked_by": []
    },
    {
@@ -6268,8 +6417,8 @@
     "status": "to do",
     "hours": 16.0,
     "in_flight": false,
-    "pick": 36,
-    "first_week": 11,
+    "pick": 38,
+    "first_week": 12,
     "last_week": 12,
     "unblocked_by": []
    },
@@ -6282,7 +6431,7 @@
     "status": "to do",
     "hours": 12.0,
     "in_flight": false,
-    "pick": 37,
+    "pick": 39,
     "first_week": 12,
     "last_week": 12,
     "unblocked_by": []
@@ -6296,9 +6445,9 @@
     "status": "to do",
     "hours": 12.0,
     "in_flight": false,
-    "pick": 38,
+    "pick": 40,
     "first_week": 12,
-    "last_week": 12,
+    "last_week": 13,
     "unblocked_by": [
      {
       "id": "86bcw87a4",
@@ -6317,9 +6466,9 @@
     "status": "to do",
     "hours": 40.0,
     "in_flight": false,
-    "pick": 39,
-    "first_week": 12,
-    "last_week": 13,
+    "pick": 41,
+    "first_week": 13,
+    "last_week": 14,
     "unblocked_by": []
    },
    {
@@ -6331,9 +6480,9 @@
     "status": "to do",
     "hours": 40.0,
     "in_flight": false,
-    "pick": 40,
-    "first_week": 13,
-    "last_week": 14,
+    "pick": 42,
+    "first_week": 14,
+    "last_week": 15,
     "unblocked_by": []
    },
    {
@@ -6345,8 +6494,8 @@
     "status": "to do",
     "hours": 30.0,
     "in_flight": false,
-    "pick": 41,
-    "first_week": 14,
+    "pick": 43,
+    "first_week": 15,
     "last_week": 15,
     "unblocked_by": []
    },
@@ -6359,7 +6508,7 @@
     "status": "to do",
     "hours": 2.0,
     "in_flight": false,
-    "pick": 42,
+    "pick": 44,
     "first_week": 15,
     "last_week": 15,
     "unblocked_by": []
@@ -6373,9 +6522,9 @@
     "status": "to do",
     "hours": 8.0,
     "in_flight": false,
-    "pick": 43,
+    "pick": 45,
     "first_week": 15,
-    "last_week": 15,
+    "last_week": 16,
     "unblocked_by": [
      {
       "id": "86bcw87at",
@@ -6394,8 +6543,8 @@
     "status": "to do",
     "hours": 60.0,
     "in_flight": false,
-    "pick": 44,
-    "first_week": 15,
+    "pick": 46,
+    "first_week": 16,
     "last_week": 17,
     "unblocked_by": []
    },
@@ -6408,7 +6557,7 @@
     "status": "to do",
     "hours": 0.5,
     "in_flight": false,
-    "pick": 45,
+    "pick": 47,
     "first_week": 17,
     "last_week": 17,
     "unblocked_by": []
@@ -6422,7 +6571,7 @@
     "status": "to do",
     "hours": 0.5,
     "in_flight": false,
-    "pick": 46,
+    "pick": 48,
     "first_week": 17,
     "last_week": 17,
     "unblocked_by": []
@@ -6436,7 +6585,7 @@
     "status": "to do",
     "hours": 0.5,
     "in_flight": false,
-    "pick": 47,
+    "pick": 49,
     "first_week": 17,
     "last_week": 17,
     "unblocked_by": []
@@ -6450,7 +6599,7 @@
     "status": "to do",
     "hours": 0.5,
     "in_flight": false,
-    "pick": 48,
+    "pick": 50,
     "first_week": 17,
     "last_week": 17,
     "unblocked_by": []
@@ -6464,7 +6613,7 @@
     "status": "to do",
     "hours": 0.5,
     "in_flight": false,
-    "pick": 49,
+    "pick": 51,
     "first_week": 17,
     "last_week": 17,
     "unblocked_by": []
@@ -6478,7 +6627,7 @@
     "status": "to do",
     "hours": 0.5,
     "in_flight": false,
-    "pick": 50,
+    "pick": 52,
     "first_week": 17,
     "last_week": 17,
     "unblocked_by": []
@@ -6492,7 +6641,7 @@
     "status": "to do",
     "hours": 0.5,
     "in_flight": false,
-    "pick": 51,
+    "pick": 53,
     "first_week": 17,
     "last_week": 17,
     "unblocked_by": []
@@ -6506,7 +6655,7 @@
     "status": "to do",
     "hours": 0.5,
     "in_flight": false,
-    "pick": 52,
+    "pick": 54,
     "first_week": 17,
     "last_week": 17,
     "unblocked_by": []
@@ -6520,7 +6669,7 @@
     "status": "to do",
     "hours": 0.5,
     "in_flight": false,
-    "pick": 53,
+    "pick": 55,
     "first_week": 17,
     "last_week": 17,
     "unblocked_by": []
@@ -6534,7 +6683,7 @@
     "status": "to do",
     "hours": 8.0,
     "in_flight": false,
-    "pick": 54,
+    "pick": 56,
     "first_week": 17,
     "last_week": 17,
     "unblocked_by": []
@@ -6548,7 +6697,7 @@
     "status": "to do",
     "hours": 16.0,
     "in_flight": false,
-    "pick": 55,
+    "pick": 57,
     "first_week": 17,
     "last_week": 18,
     "unblocked_by": []
@@ -6562,7 +6711,7 @@
     "status": "to do",
     "hours": 12.0,
     "in_flight": false,
-    "pick": 56,
+    "pick": 58,
     "first_week": 18,
     "last_week": 18,
     "unblocked_by": [
@@ -6583,9 +6732,9 @@
     "status": "to do",
     "hours": 16.0,
     "in_flight": false,
-    "pick": 57,
+    "pick": 59,
     "first_week": 18,
-    "last_week": 18,
+    "last_week": 19,
     "unblocked_by": []
    },
    {
@@ -6597,9 +6746,9 @@
     "status": "to do",
     "hours": 2.0,
     "in_flight": false,
-    "pick": 58,
-    "first_week": 18,
-    "last_week": 18,
+    "pick": 60,
+    "first_week": 19,
+    "last_week": 19,
     "unblocked_by": []
    },
    {
@@ -6611,9 +6760,9 @@
     "status": "to do",
     "hours": 2.0,
     "in_flight": false,
-    "pick": 59,
-    "first_week": 18,
-    "last_week": 18,
+    "pick": 61,
+    "first_week": 19,
+    "last_week": 19,
     "unblocked_by": []
    },
    {
@@ -6625,9 +6774,9 @@
     "status": "to do",
     "hours": 2.0,
     "in_flight": false,
-    "pick": 60,
-    "first_week": 18,
-    "last_week": 18,
+    "pick": 62,
+    "first_week": 19,
+    "last_week": 19,
     "unblocked_by": []
    },
    {
@@ -6639,9 +6788,9 @@
     "status": "to do",
     "hours": 1.0,
     "in_flight": false,
-    "pick": 61,
-    "first_week": 18,
-    "last_week": 18,
+    "pick": 63,
+    "first_week": 19,
+    "last_week": 19,
     "unblocked_by": []
    },
    {
@@ -6653,8 +6802,8 @@
     "status": "to do",
     "hours": 3.0,
     "in_flight": false,
-    "pick": 62,
-    "first_week": 18,
+    "pick": 64,
+    "first_week": 19,
     "last_week": 19,
     "unblocked_by": []
    },
@@ -6667,7 +6816,7 @@
     "status": "to do",
     "hours": 0.5,
     "in_flight": false,
-    "pick": 63,
+    "pick": 65,
     "first_week": 19,
     "last_week": 19,
     "unblocked_by": []
@@ -6681,7 +6830,7 @@
     "status": "to do",
     "hours": 4.0,
     "in_flight": false,
-    "pick": 64,
+    "pick": 66,
     "first_week": 19,
     "last_week": 19,
     "unblocked_by": []
@@ -6695,7 +6844,7 @@
     "status": "to do",
     "hours": 4.0,
     "in_flight": false,
-    "pick": 65,
+    "pick": 67,
     "first_week": 19,
     "last_week": 19,
     "unblocked_by": []
@@ -6709,7 +6858,7 @@
     "status": "to do",
     "hours": 6.0,
     "in_flight": false,
-    "pick": 66,
+    "pick": 68,
     "first_week": 19,
     "last_week": 19,
     "unblocked_by": []
@@ -6723,7 +6872,7 @@
     "status": "to do",
     "hours": 3.0,
     "in_flight": false,
-    "pick": 67,
+    "pick": 69,
     "first_week": 19,
     "last_week": 19,
     "unblocked_by": []
@@ -6737,7 +6886,7 @@
     "status": "to do",
     "hours": 3.0,
     "in_flight": false,
-    "pick": 68,
+    "pick": 70,
     "first_week": 19,
     "last_week": 19,
     "unblocked_by": []
@@ -6751,7 +6900,7 @@
     "status": "to do",
     "hours": 0.5,
     "in_flight": false,
-    "pick": 69,
+    "pick": 71,
     "first_week": 19,
     "last_week": 19,
     "unblocked_by": []
@@ -6765,7 +6914,7 @@
     "status": "to do",
     "hours": 30.0,
     "in_flight": false,
-    "pick": 70,
+    "pick": 72,
     "first_week": 19,
     "last_week": 20,
     "unblocked_by": []
@@ -6779,9 +6928,9 @@
     "status": "to do",
     "hours": 20.0,
     "in_flight": false,
-    "pick": 71,
+    "pick": 73,
     "first_week": 20,
-    "last_week": 20,
+    "last_week": 21,
     "unblocked_by": []
    },
    {
@@ -6793,8 +6942,8 @@
     "status": "to do",
     "hours": 16.0,
     "in_flight": false,
-    "pick": 72,
-    "first_week": 20,
+    "pick": 74,
+    "first_week": 21,
     "last_week": 21,
     "unblocked_by": []
    },
@@ -6807,7 +6956,7 @@
     "status": "to do",
     "hours": 40.0,
     "in_flight": false,
-    "pick": 73,
+    "pick": 75,
     "first_week": 21,
     "last_week": 22,
     "unblocked_by": []
@@ -6821,7 +6970,7 @@
     "status": "to do",
     "hours": 6.0,
     "in_flight": false,
-    "pick": 74,
+    "pick": 76,
     "first_week": 22,
     "last_week": 22,
     "unblocked_by": []
@@ -6835,9 +6984,9 @@
     "status": "to do",
     "hours": 16.0,
     "in_flight": false,
-    "pick": 75,
+    "pick": 77,
     "first_week": 22,
-    "last_week": 22,
+    "last_week": 23,
     "unblocked_by": []
    },
    {
@@ -6849,8 +6998,8 @@
     "status": "to do",
     "hours": 16.0,
     "in_flight": false,
-    "pick": 76,
-    "first_week": 22,
+    "pick": 78,
+    "first_week": 23,
     "last_week": 23,
     "unblocked_by": []
    },
@@ -6863,7 +7012,7 @@
     "status": "to do",
     "hours": 22.0,
     "in_flight": false,
-    "pick": 77,
+    "pick": 79,
     "first_week": 23,
     "last_week": 23,
     "unblocked_by": []
@@ -6877,8 +7026,8 @@
     "status": "to do",
     "hours": 16.0,
     "in_flight": false,
-    "pick": 78,
-    "first_week": 23,
+    "pick": 80,
+    "first_week": 24,
     "last_week": 24,
     "unblocked_by": []
    },
@@ -6891,7 +7040,7 @@
     "status": "to do",
     "hours": 16.0,
     "in_flight": false,
-    "pick": 79,
+    "pick": 81,
     "first_week": 24,
     "last_week": 24,
     "unblocked_by": [
@@ -6912,7 +7061,7 @@
     "status": "to do",
     "hours": 30.0,
     "in_flight": false,
-    "pick": 80,
+    "pick": 82,
     "first_week": 24,
     "last_week": 25,
     "unblocked_by": []
@@ -6926,7 +7075,7 @@
     "status": "to do",
     "hours": 10.0,
     "in_flight": false,
-    "pick": 81,
+    "pick": 83,
     "first_week": 25,
     "last_week": 25,
     "unblocked_by": [
@@ -6947,9 +7096,9 @@
     "status": "to do",
     "hours": 20.0,
     "in_flight": false,
-    "pick": 82,
+    "pick": 84,
     "first_week": 25,
-    "last_week": 25,
+    "last_week": 26,
     "unblocked_by": []
    },
    {
@@ -6961,9 +7110,9 @@
     "status": "to do",
     "hours": 30.0,
     "in_flight": false,
-    "pick": 83,
+    "pick": 85,
     "first_week": 26,
-    "last_week": 26,
+    "last_week": 27,
     "unblocked_by": []
    },
    {
@@ -6975,9 +7124,9 @@
     "status": "to do",
     "hours": 6.0,
     "in_flight": false,
-    "pick": 84,
-    "first_week": 26,
-    "last_week": 26,
+    "pick": 86,
+    "first_week": 27,
+    "last_week": 27,
     "unblocked_by": [
      {
       "id": "86bcw87a3",
@@ -6996,8 +7145,8 @@
     "status": "to do",
     "hours": 16.0,
     "in_flight": false,
-    "pick": 85,
-    "first_week": 26,
+    "pick": 87,
+    "first_week": 27,
     "last_week": 27,
     "unblocked_by": []
    },
@@ -7010,9 +7159,9 @@
     "status": "to do",
     "hours": 20.0,
     "in_flight": false,
-    "pick": 86,
+    "pick": 88,
     "first_week": 27,
-    "last_week": 27,
+    "last_week": 28,
     "unblocked_by": []
    },
    {
@@ -7024,8 +7173,8 @@
     "status": "to do",
     "hours": 12.0,
     "in_flight": false,
-    "pick": 87,
-    "first_week": 27,
+    "pick": 89,
+    "first_week": 28,
     "last_week": 28,
     "unblocked_by": []
    },
@@ -7038,7 +7187,7 @@
     "status": "to do",
     "hours": 16.0,
     "in_flight": false,
-    "pick": 88,
+    "pick": 90,
     "first_week": 28,
     "last_week": 28,
     "unblocked_by": []
@@ -7052,7 +7201,7 @@
     "status": "to do",
     "hours": 8.0,
     "in_flight": false,
-    "pick": 89,
+    "pick": 91,
     "first_week": 28,
     "last_week": 28,
     "unblocked_by": []
@@ -7066,9 +7215,9 @@
     "status": "to do",
     "hours": 4.0,
     "in_flight": false,
-    "pick": 90,
-    "first_week": 28,
-    "last_week": 28,
+    "pick": 92,
+    "first_week": 29,
+    "last_week": 29,
     "unblocked_by": []
    },
    {
@@ -7080,9 +7229,9 @@
     "status": "to do",
     "hours": 3.0,
     "in_flight": false,
-    "pick": 91,
-    "first_week": 28,
-    "last_week": 28,
+    "pick": 93,
+    "first_week": 29,
+    "last_week": 29,
     "unblocked_by": []
    },
    {
@@ -7094,8 +7243,8 @@
     "status": "to do",
     "hours": 8.0,
     "in_flight": false,
-    "pick": 92,
-    "first_week": 28,
+    "pick": 94,
+    "first_week": 29,
     "last_week": 29,
     "unblocked_by": [
      {
@@ -7115,7 +7264,7 @@
     "status": "to do",
     "hours": 4.0,
     "in_flight": false,
-    "pick": 93,
+    "pick": 95,
     "first_week": 29,
     "last_week": 29,
     "unblocked_by": [
@@ -7136,7 +7285,7 @@
     "status": "to do",
     "hours": 12.0,
     "in_flight": false,
-    "pick": 94,
+    "pick": 96,
     "first_week": 29,
     "last_week": 29,
     "unblocked_by": [
@@ -7157,7 +7306,7 @@
     "status": "to do",
     "hours": 4.0,
     "in_flight": false,
-    "pick": 95,
+    "pick": 97,
     "first_week": 29,
     "last_week": 29,
     "unblocked_by": [
@@ -7178,9 +7327,9 @@
     "status": "to do",
     "hours": 6.0,
     "in_flight": false,
-    "pick": 96,
+    "pick": 98,
     "first_week": 29,
-    "last_week": 29,
+    "last_week": 30,
     "unblocked_by": [
      {
       "id": "86bcw87e8",
@@ -7199,8 +7348,8 @@
     "status": "to do",
     "hours": 16.0,
     "in_flight": false,
-    "pick": 97,
-    "first_week": 29,
+    "pick": 99,
+    "first_week": 30,
     "last_week": 30,
     "unblocked_by": [
      {
@@ -7220,7 +7369,7 @@
     "status": "to do",
     "hours": 3.0,
     "in_flight": false,
-    "pick": 98,
+    "pick": 100,
     "first_week": 30,
     "last_week": 30,
     "unblocked_by": [
@@ -7241,7 +7390,7 @@
     "status": "to do",
     "hours": 3.0,
     "in_flight": false,
-    "pick": 99,
+    "pick": 101,
     "first_week": 30,
     "last_week": 30,
     "unblocked_by": [
@@ -7262,7 +7411,7 @@
     "status": "to do",
     "hours": 8.0,
     "in_flight": false,
-    "pick": 100,
+    "pick": 102,
     "first_week": 30,
     "last_week": 30,
     "unblocked_by": []
@@ -7276,7 +7425,7 @@
     "status": "to do",
     "hours": 8.0,
     "in_flight": false,
-    "pick": 101,
+    "pick": 103,
     "first_week": 30,
     "last_week": 30,
     "unblocked_by": [
@@ -7297,9 +7446,9 @@
     "status": "to do",
     "hours": 2.0,
     "in_flight": false,
-    "pick": 102,
+    "pick": 104,
     "first_week": 30,
-    "last_week": 30,
+    "last_week": 31,
     "unblocked_by": [
      {
       "id": "86bcw87e8",
@@ -7318,9 +7467,9 @@
     "status": "to do",
     "hours": 3.0,
     "in_flight": false,
-    "pick": 103,
-    "first_week": 30,
-    "last_week": 30,
+    "pick": 105,
+    "first_week": 31,
+    "last_week": 31,
     "unblocked_by": [
      {
       "id": "86bcw87e8",
@@ -7339,9 +7488,9 @@
     "status": "to do",
     "hours": 0.5,
     "in_flight": false,
-    "pick": 104,
-    "first_week": 30,
-    "last_week": 30,
+    "pick": 106,
+    "first_week": 31,
+    "last_week": 31,
     "unblocked_by": [
      {
       "id": "86bcw87e8",
@@ -7352,20 +7501,6 @@
     ]
    },
    {
-    "id": "86bcwaygt",
-    "tracker_id": null,
-    "name": "Replace Rem2Proj header stubs with the UE4SS UHT header dump",
-    "url": "https://app.clickup.com/t/86bcwaygt",
-    "list": "Toolchain and in-game tests",
-    "status": "to do",
-    "hours": 4.0,
-    "in_flight": false,
-    "pick": 105,
-    "first_week": 30,
-    "last_week": 30,
-    "unblocked_by": []
-   },
-   {
     "id": "86bcwwjda",
     "tracker_id": null,
     "name": "Planner campaign code: pick world by WorldTags (Planner.cs:690)",
@@ -7374,8 +7509,8 @@
     "status": "to do",
     "hours": 4.0,
     "in_flight": false,
-    "pick": 106,
-    "first_week": 30,
+    "pick": 107,
+    "first_week": 31,
     "last_week": 31,
     "unblocked_by": []
    },
@@ -7388,7 +7523,7 @@
     "status": "to do",
     "hours": 3.0,
     "in_flight": false,
-    "pick": 107,
+    "pick": 108,
     "first_week": 31,
     "last_week": 31,
     "unblocked_by": []
@@ -7402,7 +7537,7 @@
     "status": "to do",
     "hours": 2.0,
     "in_flight": false,
-    "pick": 108,
+    "pick": 109,
     "first_week": 31,
     "last_week": 31,
     "unblocked_by": []
@@ -7416,7 +7551,7 @@
     "status": "to do",
     "hours": 2.0,
     "in_flight": false,
-    "pick": 109,
+    "pick": 110,
     "first_week": 31,
     "last_week": 31,
     "unblocked_by": []
@@ -7430,7 +7565,7 @@
     "status": "to do",
     "hours": 2.0,
     "in_flight": false,
-    "pick": 110,
+    "pick": 111,
     "first_week": 31,
     "last_week": 31,
     "unblocked_by": []
@@ -7444,7 +7579,21 @@
     "status": "to do",
     "hours": 2.0,
     "in_flight": false,
-    "pick": 111,
+    "pick": 112,
+    "first_week": 31,
+    "last_week": 31,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcxgvbf",
+    "tracker_id": null,
+    "name": "Evaluate UnrealReZen as the UE 5.2 IoStore packer",
+    "url": "https://app.clickup.com/t/86bcxgvbf",
+    "list": "Toolchain and in-game tests",
+    "status": "to do",
+    "hours": 4.0,
+    "in_flight": false,
+    "pick": 113,
     "first_week": 31,
     "last_week": 31,
     "unblocked_by": []
@@ -7458,7 +7607,7 @@
     "status": "to do",
     "hours": 12.0,
     "in_flight": false,
-    "pick": 112,
+    "pick": 114,
     "first_week": 31,
     "last_week": 31,
     "unblocked_by": []
@@ -7472,9 +7621,9 @@
     "status": "to do",
     "hours": 16.0,
     "in_flight": false,
-    "pick": 113,
+    "pick": 115,
     "first_week": 31,
-    "last_week": 31,
+    "last_week": 32,
     "unblocked_by": []
    },
    {
@@ -7486,8 +7635,8 @@
     "status": "to do",
     "hours": 60.0,
     "in_flight": false,
-    "pick": 114,
-    "first_week": 31,
+    "pick": 116,
+    "first_week": 32,
     "last_week": 33,
     "unblocked_by": []
    },
@@ -7500,9 +7649,9 @@
     "status": "to do",
     "hours": 60.0,
     "in_flight": false,
-    "pick": 115,
+    "pick": 117,
     "first_week": 33,
-    "last_week": 34,
+    "last_week": 35,
     "unblocked_by": []
    },
    {
@@ -7514,8 +7663,8 @@
     "status": "to do",
     "hours": 60.0,
     "in_flight": false,
-    "pick": 116,
-    "first_week": 34,
+    "pick": 118,
+    "first_week": 35,
     "last_week": 36,
     "unblocked_by": []
    },
@@ -7528,9 +7677,9 @@
     "status": "to do",
     "hours": 60.0,
     "in_flight": false,
-    "pick": 117,
+    "pick": 119,
     "first_week": 36,
-    "last_week": 37,
+    "last_week": 38,
     "unblocked_by": []
    },
    {
@@ -7542,8 +7691,8 @@
     "status": "to do",
     "hours": 60.0,
     "in_flight": false,
-    "pick": 118,
-    "first_week": 37,
+    "pick": 120,
+    "first_week": 38,
     "last_week": 39,
     "unblocked_by": []
    },
@@ -7556,9 +7705,9 @@
     "status": "to do",
     "hours": 60.0,
     "in_flight": false,
-    "pick": 119,
+    "pick": 121,
     "first_week": 39,
-    "last_week": 40,
+    "last_week": 41,
     "unblocked_by": []
    },
    {
@@ -7570,8 +7719,8 @@
     "status": "to do",
     "hours": 60.0,
     "in_flight": false,
-    "pick": 120,
-    "first_week": 40,
+    "pick": 122,
+    "first_week": 41,
     "last_week": 42,
     "unblocked_by": []
    },
@@ -7584,9 +7733,9 @@
     "status": "to do",
     "hours": 60.0,
     "in_flight": false,
-    "pick": 121,
+    "pick": 123,
     "first_week": 42,
-    "last_week": 43,
+    "last_week": 44,
     "unblocked_by": []
    },
    {
@@ -7598,8 +7747,8 @@
     "status": "to do",
     "hours": 1.0,
     "in_flight": false,
-    "pick": 122,
-    "first_week": 43,
+    "pick": 124,
+    "first_week": 44,
     "last_week": 44,
     "unblocked_by": []
    },
@@ -7612,7 +7761,7 @@
     "status": "to do",
     "hours": 12.0,
     "in_flight": false,
-    "pick": 123,
+    "pick": 125,
     "first_week": 44,
     "last_week": 44,
     "unblocked_by": []
@@ -7626,9 +7775,9 @@
     "status": "to do",
     "hours": 60.0,
     "in_flight": false,
-    "pick": 124,
+    "pick": 126,
     "first_week": 44,
-    "last_week": 45,
+    "last_week": 46,
     "unblocked_by": []
    },
    {
@@ -7640,8 +7789,8 @@
     "status": "to do",
     "hours": 60.0,
     "in_flight": false,
-    "pick": 125,
-    "first_week": 45,
+    "pick": 127,
+    "first_week": 46,
     "last_week": 47,
     "unblocked_by": []
    },
@@ -7654,9 +7803,9 @@
     "status": "to do",
     "hours": 60.0,
     "in_flight": false,
-    "pick": 126,
+    "pick": 128,
     "first_week": 47,
-    "last_week": 48,
+    "last_week": 49,
     "unblocked_by": []
    },
    {
@@ -7668,8 +7817,8 @@
     "status": "to do",
     "hours": 60.0,
     "in_flight": false,
-    "pick": 127,
-    "first_week": 48,
+    "pick": 129,
+    "first_week": 49,
     "last_week": 50,
     "unblocked_by": []
    },
@@ -7682,9 +7831,9 @@
     "status": "to do",
     "hours": 60.0,
     "in_flight": false,
-    "pick": 128,
+    "pick": 130,
     "first_week": 50,
-    "last_week": 51,
+    "last_week": 52,
     "unblocked_by": []
    },
    {
@@ -7696,8 +7845,8 @@
     "status": "to do",
     "hours": 60.0,
     "in_flight": false,
-    "pick": 129,
-    "first_week": 51,
+    "pick": 131,
+    "first_week": 52,
     "last_week": 53,
     "unblocked_by": []
    },
@@ -7710,9 +7859,9 @@
     "status": "to do",
     "hours": 60.0,
     "in_flight": false,
-    "pick": 130,
+    "pick": 132,
     "first_week": 53,
-    "last_week": 54,
+    "last_week": 55,
     "unblocked_by": []
    },
    {
@@ -7724,9 +7873,9 @@
     "status": "to do",
     "hours": 80.0,
     "in_flight": false,
-    "pick": 131,
-    "first_week": 54,
-    "last_week": 56,
+    "pick": 133,
+    "first_week": 55,
+    "last_week": 57,
     "unblocked_by": []
    },
    {
@@ -7738,8 +7887,8 @@
     "status": "to do",
     "hours": 16.0,
     "in_flight": false,
-    "pick": 132,
-    "first_week": 56,
+    "pick": 134,
+    "first_week": 57,
     "last_week": 57,
     "unblocked_by": []
    },
@@ -7752,7 +7901,7 @@
     "status": "to do",
     "hours": 40.0,
     "in_flight": false,
-    "pick": 133,
+    "pick": 135,
     "first_week": 57,
     "last_week": 58,
     "unblocked_by": []
@@ -7766,7 +7915,7 @@
     "status": "to do",
     "hours": 40.0,
     "in_flight": false,
-    "pick": 134,
+    "pick": 136,
     "first_week": 58,
     "last_week": 59,
     "unblocked_by": []
@@ -7780,7 +7929,7 @@
     "status": "to do",
     "hours": 40.0,
     "in_flight": false,
-    "pick": 135,
+    "pick": 137,
     "first_week": 59,
     "last_week": 60,
     "unblocked_by": []
@@ -7794,9 +7943,9 @@
     "status": "to do",
     "hours": 24.0,
     "in_flight": false,
-    "pick": 136,
+    "pick": 138,
     "first_week": 60,
-    "last_week": 60,
+    "last_week": 61,
     "unblocked_by": []
    },
    {
@@ -7808,8 +7957,8 @@
     "status": "to do",
     "hours": 24.0,
     "in_flight": false,
-    "pick": 137,
-    "first_week": 60,
+    "pick": 139,
+    "first_week": 61,
     "last_week": 61,
     "unblocked_by": []
    },
@@ -7822,7 +7971,7 @@
     "status": "to do",
     "hours": 24.0,
     "in_flight": false,
-    "pick": 138,
+    "pick": 140,
     "first_week": 61,
     "last_week": 62,
     "unblocked_by": []
@@ -7836,7 +7985,7 @@
     "status": "to do",
     "hours": 6.0,
     "in_flight": false,
-    "pick": 139,
+    "pick": 141,
     "first_week": 62,
     "last_week": 62,
     "unblocked_by": []
@@ -7850,7 +7999,7 @@
     "status": "to do",
     "hours": 40.0,
     "in_flight": false,
-    "pick": 140,
+    "pick": 142,
     "first_week": 62,
     "last_week": 63,
     "unblocked_by": []
@@ -7864,7 +8013,7 @@
     "status": "to do",
     "hours": 12.0,
     "in_flight": false,
-    "pick": 141,
+    "pick": 143,
     "first_week": 63,
     "last_week": 63,
     "unblocked_by": []
@@ -7878,9 +8027,9 @@
     "status": "to do",
     "hours": 16.0,
     "in_flight": false,
-    "pick": 142,
+    "pick": 144,
     "first_week": 63,
-    "last_week": 63,
+    "last_week": 64,
     "unblocked_by": []
    },
    {
@@ -7892,8 +8041,8 @@
     "status": "to do",
     "hours": 8.0,
     "in_flight": false,
-    "pick": 143,
-    "first_week": 63,
+    "pick": 145,
+    "first_week": 64,
     "last_week": 64,
     "unblocked_by": []
    },
@@ -7906,7 +8055,7 @@
     "status": "to do",
     "hours": 2.0,
     "in_flight": false,
-    "pick": 144,
+    "pick": 146,
     "first_week": 64,
     "last_week": 64,
     "unblocked_by": []
@@ -7920,7 +8069,7 @@
     "status": "to do",
     "hours": 4.0,
     "in_flight": false,
-    "pick": 145,
+    "pick": 147,
     "first_week": 64,
     "last_week": 64,
     "unblocked_by": []
@@ -7934,7 +8083,7 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 146,
+    "pick": 148,
     "first_week": 64,
     "last_week": 64,
     "unblocked_by": []
@@ -7948,7 +8097,7 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 147,
+    "pick": 149,
     "first_week": 64,
     "last_week": 64,
     "unblocked_by": []
@@ -7962,7 +8111,7 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 148,
+    "pick": 150,
     "first_week": 64,
     "last_week": 64,
     "unblocked_by": []
@@ -7976,7 +8125,7 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 149,
+    "pick": 151,
     "first_week": 64,
     "last_week": 64,
     "unblocked_by": []
@@ -7990,7 +8139,7 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 150,
+    "pick": 152,
     "first_week": 64,
     "last_week": 64,
     "unblocked_by": []
@@ -8004,7 +8153,7 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 151,
+    "pick": 153,
     "first_week": 64,
     "last_week": 64,
     "unblocked_by": []
@@ -8018,7 +8167,7 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 152,
+    "pick": 154,
     "first_week": 64,
     "last_week": 64,
     "unblocked_by": []
@@ -8032,7 +8181,7 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 153,
+    "pick": 155,
     "first_week": 64,
     "last_week": 64,
     "unblocked_by": []
@@ -8046,7 +8195,7 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 154,
+    "pick": 156,
     "first_week": 64,
     "last_week": 64,
     "unblocked_by": []
@@ -8060,7 +8209,7 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 155,
+    "pick": 157,
     "first_week": 64,
     "last_week": 64,
     "unblocked_by": []
@@ -8074,7 +8223,7 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 156,
+    "pick": 158,
     "first_week": 64,
     "last_week": 64,
     "unblocked_by": []
@@ -8088,7 +8237,7 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 157,
+    "pick": 159,
     "first_week": 64,
     "last_week": 64,
     "unblocked_by": []
@@ -8102,7 +8251,7 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 158,
+    "pick": 160,
     "first_week": 64,
     "last_week": 64,
     "unblocked_by": []
@@ -8116,7 +8265,7 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 159,
+    "pick": 161,
     "first_week": 64,
     "last_week": 64,
     "unblocked_by": []
@@ -8130,7 +8279,7 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 160,
+    "pick": 162,
     "first_week": 64,
     "last_week": 64,
     "unblocked_by": []
@@ -8144,7 +8293,7 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 161,
+    "pick": 163,
     "first_week": 64,
     "last_week": 64,
     "unblocked_by": []
@@ -8158,7 +8307,7 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 162,
+    "pick": 164,
     "first_week": 64,
     "last_week": 64,
     "unblocked_by": []
@@ -8172,7 +8321,7 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 163,
+    "pick": 165,
     "first_week": 64,
     "last_week": 64,
     "unblocked_by": []
@@ -8186,7 +8335,7 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 164,
+    "pick": 166,
     "first_week": 64,
     "last_week": 64,
     "unblocked_by": []
@@ -8200,7 +8349,7 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 165,
+    "pick": 167,
     "first_week": 64,
     "last_week": 64,
     "unblocked_by": []
@@ -8214,7 +8363,7 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 166,
+    "pick": 168,
     "first_week": 64,
     "last_week": 64,
     "unblocked_by": []
@@ -8228,7 +8377,7 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 167,
+    "pick": 169,
     "first_week": 64,
     "last_week": 64,
     "unblocked_by": []
@@ -8242,7 +8391,7 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 168,
+    "pick": 170,
     "first_week": 64,
     "last_week": 64,
     "unblocked_by": []
@@ -8256,7 +8405,7 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 169,
+    "pick": 171,
     "first_week": 64,
     "last_week": 64,
     "unblocked_by": []
@@ -8270,7 +8419,7 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 170,
+    "pick": 172,
     "first_week": 64,
     "last_week": 64,
     "unblocked_by": []
@@ -8284,7 +8433,7 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 171,
+    "pick": 173,
     "first_week": 64,
     "last_week": 64,
     "unblocked_by": []
@@ -8307,20 +8456,32 @@
       "hours": 1.0
      },
      {
-      "id": "86bcw87e8",
-      "hours": 16.0
+      "id": "86bcxgvax",
+      "hours": 4.0
      },
      {
-      "id": "86bcwwjd3",
-      "hours": 1.0
+      "id": "86bcxgvcf",
+      "hours": 8.0
+     },
+     {
+      "id": "86bcw87e8",
+      "hours": 5.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 2495.0
+    "remaining_after": 2507.0
    },
    {
     "week": 2,
     "segments": [
+     {
+      "id": "86bcw87e8",
+      "hours": 11.0
+     },
+     {
+      "id": "86bcwwjd3",
+      "hours": 1.0
+     },
      {
       "id": "86bcw87a4",
       "hours": 1.0
@@ -8351,18 +8512,18 @@
      },
      {
       "id": "86bcw88z5",
-      "hours": 18.5
+      "hours": 6.5
      }
     ],
     "hours": 40.0,
-    "remaining_after": 2455.0
+    "remaining_after": 2467.0
    },
    {
     "week": 3,
     "segments": [
      {
       "id": "86bcw88z5",
-      "hours": 5.5
+      "hours": 17.5
      },
      {
       "id": "86bcw88z6",
@@ -8370,41 +8531,41 @@
      },
      {
       "id": "86bcw88z8",
-      "hours": 20.0
-     },
-     {
-      "id": "86bcw88za",
-      "hours": 2.5
+      "hours": 10.5
      }
     ],
     "hours": 40.0,
-    "remaining_after": 2415.0
+    "remaining_after": 2427.0
    },
    {
     "week": 4,
     "segments": [
      {
+      "id": "86bcw88z8",
+      "hours": 9.5
+     },
+     {
       "id": "86bcw88za",
-      "hours": 13.5
+      "hours": 16.0
      },
      {
       "id": "86bcw88zc",
-      "hours": 24.0
-     },
-     {
-      "id": "86bcwwjcn",
-      "hours": 2.5
+      "hours": 14.5
      }
     ],
     "hours": 40.0,
-    "remaining_after": 2375.0
+    "remaining_after": 2387.0
    },
    {
     "week": 5,
     "segments": [
      {
+      "id": "86bcw88zc",
+      "hours": 9.5
+     },
+     {
       "id": "86bcwwjcn",
-      "hours": 0.5
+      "hours": 3.0
      },
      {
       "id": "86bcw88kz",
@@ -8412,18 +8573,18 @@
      },
      {
       "id": "86bcw88m0",
-      "hours": 23.5
+      "hours": 11.5
      }
     ],
     "hours": 40.0,
-    "remaining_after": 2335.0
+    "remaining_after": 2347.0
    },
    {
     "week": 6,
     "segments": [
      {
       "id": "86bcw88m0",
-      "hours": 0.5
+      "hours": 12.5
      },
      {
       "id": "86bcw88m3",
@@ -8431,22 +8592,33 @@
      },
      {
       "id": "86bcw88m6",
-      "hours": 4.0
-     },
-     {
-      "id": "86bcw88m7",
-      "hours": 11.5
+      "hours": 3.5
      }
     ],
     "hours": 40.0,
-    "remaining_after": 2295.0
+    "remaining_after": 2307.0
    },
    {
     "week": 7,
     "segments": [
      {
+      "id": "86bcw88m6",
+      "hours": 0.5
+     },
+     {
       "id": "86bcw88m7",
-      "hours": 28.5
+      "hours": 39.5
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 2267.0
+   },
+   {
+    "week": 8,
+    "segments": [
+     {
+      "id": "86bcw88m7",
+      "hours": 0.5
      },
      {
       "id": "86bcw89ac",
@@ -8454,18 +8626,7 @@
      },
      {
       "id": "86bcw89af",
-      "hours": 7.5
-     }
-    ],
-    "hours": 40.0,
-    "remaining_after": 2255.0
-   },
-   {
-    "week": 8,
-    "segments": [
-     {
-      "id": "86bcw89af",
-      "hours": 0.5
+      "hours": 8.0
      },
      {
       "id": "86bcw89ah",
@@ -8481,37 +8642,37 @@
      },
      {
       "id": "86bcw88kp",
-      "hours": 27.5
+      "hours": 15.5
      }
     ],
     "hours": 40.0,
-    "remaining_after": 2215.0
+    "remaining_after": 2227.0
    },
    {
     "week": 9,
     "segments": [
      {
       "id": "86bcw88kp",
-      "hours": 12.5
+      "hours": 24.5
      },
      {
       "id": "86bcw88kr",
-      "hours": 16.0
-     },
-     {
-      "id": "86bcw88kt",
-      "hours": 11.5
+      "hours": 15.5
      }
     ],
     "hours": 40.0,
-    "remaining_after": 2175.0
+    "remaining_after": 2187.0
    },
    {
     "week": 10,
     "segments": [
      {
-      "id": "86bcw88kt",
+      "id": "86bcw88kr",
       "hours": 0.5
+     },
+     {
+      "id": "86bcw88kt",
+      "hours": 12.0
      },
      {
       "id": "86bcw88kv",
@@ -8519,41 +8680,41 @@
      },
      {
       "id": "86bcw88kw",
-      "hours": 12.0
-     },
-     {
-      "id": "86bcw88bf",
       "hours": 7.5
      }
     ],
     "hours": 40.0,
-    "remaining_after": 2135.0
+    "remaining_after": 2147.0
    },
    {
     "week": 11,
     "segments": [
      {
-      "id": "86bcw88bf",
+      "id": "86bcw88kw",
       "hours": 4.5
      },
      {
-      "id": "86bcw88bh",
-      "hours": 30.0
+      "id": "86bcw88bf",
+      "hours": 12.0
      },
      {
-      "id": "86bcw88bk",
-      "hours": 5.5
+      "id": "86bcw88bh",
+      "hours": 23.5
      }
     ],
     "hours": 40.0,
-    "remaining_after": 2095.0
+    "remaining_after": 2107.0
    },
    {
     "week": 12,
     "segments": [
      {
+      "id": "86bcw88bh",
+      "hours": 6.5
+     },
+     {
       "id": "86bcw88bk",
-      "hours": 10.5
+      "hours": 16.0
      },
      {
       "id": "86bcw88bm",
@@ -8561,52 +8722,52 @@
      },
      {
       "id": "86bcw88bn",
-      "hours": 12.0
-     },
-     {
-      "id": "86bcw88br",
       "hours": 5.5
      }
     ],
     "hours": 40.0,
-    "remaining_after": 2055.0
+    "remaining_after": 2067.0
    },
    {
     "week": 13,
     "segments": [
      {
-      "id": "86bcw88br",
-      "hours": 34.5
+      "id": "86bcw88bn",
+      "hours": 6.5
      },
      {
-      "id": "86bcw88bt",
-      "hours": 5.5
+      "id": "86bcw88br",
+      "hours": 33.5
      }
     ],
     "hours": 40.0,
-    "remaining_after": 2015.0
+    "remaining_after": 2027.0
    },
    {
     "week": 14,
     "segments": [
      {
-      "id": "86bcw88bt",
-      "hours": 34.5
+      "id": "86bcw88br",
+      "hours": 6.5
      },
      {
-      "id": "86bcw88bw",
-      "hours": 5.5
+      "id": "86bcw88bt",
+      "hours": 33.5
      }
     ],
     "hours": 40.0,
-    "remaining_after": 1975.0
+    "remaining_after": 1987.0
    },
    {
     "week": 15,
     "segments": [
      {
+      "id": "86bcw88bt",
+      "hours": 6.5
+     },
+     {
       "id": "86bcw88bw",
-      "hours": 24.5
+      "hours": 30.0
      },
      {
       "id": "86bcw88bx",
@@ -8614,33 +8775,33 @@
      },
      {
       "id": "86bcw88by",
-      "hours": 8.0
-     },
-     {
-      "id": "86bcw88c0",
-      "hours": 5.5
+      "hours": 1.5
      }
     ],
     "hours": 40.0,
-    "remaining_after": 1935.0
+    "remaining_after": 1947.0
    },
    {
     "week": 16,
     "segments": [
      {
+      "id": "86bcw88by",
+      "hours": 6.5
+     },
+     {
       "id": "86bcw88c0",
-      "hours": 40.0
+      "hours": 33.5
      }
     ],
     "hours": 40.0,
-    "remaining_after": 1895.0
+    "remaining_after": 1907.0
    },
    {
     "week": 17,
     "segments": [
      {
       "id": "86bcw88c0",
-      "hours": 14.5
+      "hours": 26.5
      },
      {
       "id": "86bcw899n",
@@ -8684,18 +8845,18 @@
      },
      {
       "id": "86bcw88kj",
-      "hours": 13.0
+      "hours": 1.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 1855.0
+    "remaining_after": 1867.0
    },
    {
     "week": 18,
     "segments": [
      {
       "id": "86bcw88kj",
-      "hours": 3.0
+      "hours": 15.0
      },
      {
       "id": "86bcw88kk",
@@ -8703,7 +8864,18 @@
      },
      {
       "id": "86bcw88km",
-      "hours": 16.0
+      "hours": 13.0
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 1827.0
+   },
+   {
+    "week": 19,
+    "segments": [
+     {
+      "id": "86bcw88km",
+      "hours": 3.0
      },
      {
       "id": "86bcw88zj",
@@ -8723,18 +8895,7 @@
      },
      {
       "id": "86bcw88zu",
-      "hours": 2.0
-     }
-    ],
-    "hours": 40.0,
-    "remaining_after": 1815.0
-   },
-   {
-    "week": 19,
-    "segments": [
-     {
-      "id": "86bcw88zu",
-      "hours": 1.0
+      "hours": 3.0
      },
      {
       "id": "86bcw88zx",
@@ -8766,52 +8927,52 @@
      },
      {
       "id": "86bcw88u2",
-      "hours": 18.0
+      "hours": 6.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 1775.0
+    "remaining_after": 1787.0
    },
    {
     "week": 20,
     "segments": [
      {
       "id": "86bcw88u2",
-      "hours": 12.0
+      "hours": 24.0
      },
      {
       "id": "86bcw88u4",
-      "hours": 20.0
-     },
-     {
-      "id": "86bcw88u6",
-      "hours": 8.0
+      "hours": 16.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 1735.0
+    "remaining_after": 1747.0
    },
    {
     "week": 21,
     "segments": [
      {
+      "id": "86bcw88u4",
+      "hours": 4.0
+     },
+     {
       "id": "86bcw88u6",
-      "hours": 8.0
+      "hours": 16.0
      },
      {
       "id": "86bcw88u9",
-      "hours": 32.0
+      "hours": 20.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 1695.0
+    "remaining_after": 1707.0
    },
    {
     "week": 22,
     "segments": [
      {
       "id": "86bcw88u9",
-      "hours": 8.0
+      "hours": 20.0
      },
      {
       "id": "86bcw88ua",
@@ -8819,41 +8980,37 @@
      },
      {
       "id": "86bcw88ub",
-      "hours": 16.0
-     },
-     {
-      "id": "86bcw89aq",
-      "hours": 10.0
+      "hours": 14.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 1655.0
+    "remaining_after": 1667.0
    },
    {
     "week": 23,
     "segments": [
      {
+      "id": "86bcw88ub",
+      "hours": 2.0
+     },
+     {
       "id": "86bcw89aq",
-      "hours": 6.0
+      "hours": 16.0
      },
      {
       "id": "86bcw89ax",
       "hours": 22.0
-     },
-     {
-      "id": "86bcw89ay",
-      "hours": 12.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 1615.0
+    "remaining_after": 1627.0
    },
    {
     "week": 24,
     "segments": [
      {
       "id": "86bcw89ay",
-      "hours": 4.0
+      "hours": 16.0
      },
      {
       "id": "86bcw88t9",
@@ -8861,18 +9018,18 @@
      },
      {
       "id": "86bcw88ta",
-      "hours": 20.0
+      "hours": 8.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 1575.0
+    "remaining_after": 1587.0
    },
    {
     "week": 25,
     "segments": [
      {
       "id": "86bcw88ta",
-      "hours": 10.0
+      "hours": 22.0
      },
      {
       "id": "86bcw88tc",
@@ -8880,18 +9037,33 @@
      },
      {
       "id": "86bcw88te",
-      "hours": 20.0
+      "hours": 8.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 1535.0
+    "remaining_after": 1547.0
    },
    {
     "week": 26,
     "segments": [
      {
+      "id": "86bcw88te",
+      "hours": 12.0
+     },
+     {
       "id": "86bcw88tf",
-      "hours": 30.0
+      "hours": 28.0
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 1507.0
+   },
+   {
+    "week": 27,
+    "segments": [
+     {
+      "id": "86bcw88tf",
+      "hours": 2.0
      },
      {
       "id": "86bcw88th",
@@ -8899,37 +9071,26 @@
      },
      {
       "id": "86bcw88tm",
-      "hours": 4.0
-     }
-    ],
-    "hours": 40.0,
-    "remaining_after": 1495.0
-   },
-   {
-    "week": 27,
-    "segments": [
-     {
-      "id": "86bcw88tm",
-      "hours": 12.0
+      "hours": 16.0
      },
      {
       "id": "86bcw88tp",
-      "hours": 20.0
-     },
-     {
-      "id": "86bcw88tq",
-      "hours": 8.0
+      "hours": 16.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 1455.0
+    "remaining_after": 1467.0
    },
    {
     "week": 28,
     "segments": [
      {
-      "id": "86bcw88tq",
+      "id": "86bcw88tp",
       "hours": 4.0
+     },
+     {
+      "id": "86bcw88tq",
+      "hours": 12.0
      },
      {
       "id": "86bcw88tr",
@@ -8938,7 +9099,14 @@
      {
       "id": "86bcw88tv",
       "hours": 8.0
-     },
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 1427.0
+   },
+   {
+    "week": 29,
+    "segments": [
      {
       "id": "86bcw88tx",
       "hours": 4.0
@@ -8949,18 +9117,7 @@
      },
      {
       "id": "86bcwwjcg",
-      "hours": 5.0
-     }
-    ],
-    "hours": 40.0,
-    "remaining_after": 1415.0
-   },
-   {
-    "week": 29,
-    "segments": [
-     {
-      "id": "86bcwwjcg",
-      "hours": 3.0
+      "hours": 8.0
      },
      {
       "id": "86bcw87ea",
@@ -8976,22 +9133,22 @@
      },
      {
       "id": "86bcw87ef",
-      "hours": 6.0
-     },
-     {
-      "id": "86bcw87eh",
-      "hours": 11.0
+      "hours": 5.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 1375.0
+    "remaining_after": 1387.0
    },
    {
     "week": 30,
     "segments": [
      {
+      "id": "86bcw87ef",
+      "hours": 1.0
+     },
+     {
       "id": "86bcw87eh",
-      "hours": 5.0
+      "hours": 16.0
      },
      {
       "id": "86bcw87em",
@@ -9011,7 +9168,18 @@
      },
      {
       "id": "86bcwayg7",
-      "hours": 2.0
+      "hours": 1.0
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 1347.0
+   },
+   {
+    "week": 31,
+    "segments": [
+     {
+      "id": "86bcwayg7",
+      "hours": 1.0
      },
      {
       "id": "86bcwaygh",
@@ -9022,23 +9190,8 @@
       "hours": 0.5
      },
      {
-      "id": "86bcwaygt",
+      "id": "86bcwwjda",
       "hours": 4.0
-     },
-     {
-      "id": "86bcwwjda",
-      "hours": 3.5
-     }
-    ],
-    "hours": 40.0,
-    "remaining_after": 1335.0
-   },
-   {
-    "week": 31,
-    "segments": [
-     {
-      "id": "86bcwwjda",
-      "hours": 0.5
      },
      {
       "id": "86bcwwjdd",
@@ -9061,191 +9214,195 @@
       "hours": 2.0
      },
      {
+      "id": "86bcxgvbf",
+      "hours": 4.0
+     },
+     {
       "id": "86bcw888f",
       "hours": 12.0
      },
      {
       "id": "86bcw888g",
-      "hours": 16.0
-     },
-     {
-      "id": "86bcw888h",
-      "hours": 0.5
+      "hours": 4.5
      }
     ],
     "hours": 40.0,
-    "remaining_after": 1295.0
+    "remaining_after": 1307.0
    },
    {
     "week": 32,
     "segments": [
      {
+      "id": "86bcw888g",
+      "hours": 11.5
+     },
+     {
       "id": "86bcw888h",
-      "hours": 40.0
+      "hours": 28.5
      }
     ],
     "hours": 40.0,
-    "remaining_after": 1255.0
+    "remaining_after": 1267.0
    },
    {
     "week": 33,
     "segments": [
      {
       "id": "86bcw888h",
-      "hours": 19.5
+      "hours": 31.5
      },
      {
       "id": "86bcw888k",
-      "hours": 20.5
+      "hours": 8.5
      }
     ],
     "hours": 40.0,
-    "remaining_after": 1215.0
+    "remaining_after": 1227.0
    },
    {
     "week": 34,
     "segments": [
      {
       "id": "86bcw888k",
-      "hours": 39.5
-     },
-     {
-      "id": "86bcw888n",
-      "hours": 0.5
+      "hours": 40.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 1175.0
+    "remaining_after": 1187.0
    },
    {
     "week": 35,
     "segments": [
      {
+      "id": "86bcw888k",
+      "hours": 11.5
+     },
+     {
       "id": "86bcw888n",
-      "hours": 40.0
+      "hours": 28.5
      }
     ],
     "hours": 40.0,
-    "remaining_after": 1135.0
+    "remaining_after": 1147.0
    },
    {
     "week": 36,
     "segments": [
      {
       "id": "86bcw888n",
-      "hours": 19.5
+      "hours": 31.5
      },
      {
       "id": "86bcw888p",
-      "hours": 20.5
+      "hours": 8.5
      }
     ],
     "hours": 40.0,
-    "remaining_after": 1095.0
+    "remaining_after": 1107.0
    },
    {
     "week": 37,
     "segments": [
      {
       "id": "86bcw888p",
-      "hours": 39.5
-     },
-     {
-      "id": "86bcw888r",
-      "hours": 0.5
+      "hours": 40.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 1055.0
+    "remaining_after": 1067.0
    },
    {
     "week": 38,
     "segments": [
      {
+      "id": "86bcw888p",
+      "hours": 11.5
+     },
+     {
       "id": "86bcw888r",
-      "hours": 40.0
+      "hours": 28.5
      }
     ],
     "hours": 40.0,
-    "remaining_after": 1015.0
+    "remaining_after": 1027.0
    },
    {
     "week": 39,
     "segments": [
      {
       "id": "86bcw888r",
-      "hours": 19.5
+      "hours": 31.5
      },
      {
       "id": "86bcw888t",
-      "hours": 20.5
+      "hours": 8.5
      }
     ],
     "hours": 40.0,
-    "remaining_after": 975.0
+    "remaining_after": 987.0
    },
    {
     "week": 40,
     "segments": [
      {
       "id": "86bcw888t",
-      "hours": 39.5
-     },
-     {
-      "id": "86bcw888w",
-      "hours": 0.5
+      "hours": 40.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 935.0
+    "remaining_after": 947.0
    },
    {
     "week": 41,
     "segments": [
      {
+      "id": "86bcw888t",
+      "hours": 11.5
+     },
+     {
       "id": "86bcw888w",
-      "hours": 40.0
+      "hours": 28.5
      }
     ],
     "hours": 40.0,
-    "remaining_after": 895.0
+    "remaining_after": 907.0
    },
    {
     "week": 42,
     "segments": [
      {
       "id": "86bcw888w",
-      "hours": 19.5
+      "hours": 31.5
      },
      {
       "id": "86bcw888x",
-      "hours": 20.5
+      "hours": 8.5
      }
     ],
     "hours": 40.0,
-    "remaining_after": 855.0
+    "remaining_after": 867.0
    },
    {
     "week": 43,
     "segments": [
      {
       "id": "86bcw888x",
-      "hours": 39.5
-     },
-     {
-      "id": "86bcw888y",
-      "hours": 0.5
+      "hours": 40.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 815.0
+    "remaining_after": 827.0
    },
    {
     "week": 44,
     "segments": [
      {
+      "id": "86bcw888x",
+      "hours": 11.5
+     },
+     {
       "id": "86bcw888y",
-      "hours": 0.5
+      "hours": 1.0
      },
      {
       "id": "86bcw88ex",
@@ -9253,152 +9410,163 @@
      },
      {
       "id": "86bcw88ey",
-      "hours": 27.5
+      "hours": 15.5
      }
     ],
     "hours": 40.0,
-    "remaining_after": 775.0
+    "remaining_after": 787.0
    },
    {
     "week": 45,
     "segments": [
      {
       "id": "86bcw88ey",
-      "hours": 32.5
-     },
-     {
-      "id": "86bcw88f1",
-      "hours": 7.5
+      "hours": 40.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 735.0
+    "remaining_after": 747.0
    },
    {
     "week": 46,
     "segments": [
      {
+      "id": "86bcw88ey",
+      "hours": 4.5
+     },
+     {
       "id": "86bcw88f1",
-      "hours": 40.0
+      "hours": 35.5
      }
     ],
     "hours": 40.0,
-    "remaining_after": 695.0
+    "remaining_after": 707.0
    },
    {
     "week": 47,
     "segments": [
      {
       "id": "86bcw88f1",
-      "hours": 12.5
+      "hours": 24.5
      },
      {
       "id": "86bcw88f2",
-      "hours": 27.5
+      "hours": 15.5
      }
     ],
     "hours": 40.0,
-    "remaining_after": 655.0
+    "remaining_after": 667.0
    },
    {
     "week": 48,
     "segments": [
      {
       "id": "86bcw88f2",
-      "hours": 32.5
-     },
-     {
-      "id": "86bcw88f3",
-      "hours": 7.5
+      "hours": 40.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 615.0
+    "remaining_after": 627.0
    },
    {
     "week": 49,
     "segments": [
      {
+      "id": "86bcw88f2",
+      "hours": 4.5
+     },
+     {
       "id": "86bcw88f3",
-      "hours": 40.0
+      "hours": 35.5
      }
     ],
     "hours": 40.0,
-    "remaining_after": 575.0
+    "remaining_after": 587.0
    },
    {
     "week": 50,
     "segments": [
      {
       "id": "86bcw88f3",
-      "hours": 12.5
+      "hours": 24.5
      },
      {
       "id": "86bcw88f4",
-      "hours": 27.5
+      "hours": 15.5
      }
     ],
     "hours": 40.0,
-    "remaining_after": 535.0
+    "remaining_after": 547.0
    },
    {
     "week": 51,
     "segments": [
      {
       "id": "86bcw88f4",
-      "hours": 32.5
-     },
-     {
-      "id": "86bcw88f8",
-      "hours": 7.5
+      "hours": 40.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 495.0
+    "remaining_after": 507.0
    },
    {
     "week": 52,
     "segments": [
      {
+      "id": "86bcw88f4",
+      "hours": 4.5
+     },
+     {
       "id": "86bcw88f8",
-      "hours": 40.0
+      "hours": 35.5
      }
     ],
     "hours": 40.0,
-    "remaining_after": 455.0
+    "remaining_after": 467.0
    },
    {
     "week": 53,
     "segments": [
      {
       "id": "86bcw88f8",
-      "hours": 12.5
+      "hours": 24.5
      },
      {
       "id": "86bcw88f9",
-      "hours": 27.5
+      "hours": 15.5
      }
     ],
     "hours": 40.0,
-    "remaining_after": 415.0
+    "remaining_after": 427.0
    },
    {
     "week": 54,
     "segments": [
      {
       "id": "86bcw88f9",
-      "hours": 32.5
-     },
-     {
-      "id": "86bcw88fb",
-      "hours": 7.5
+      "hours": 40.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 375.0
+    "remaining_after": 387.0
    },
    {
     "week": 55,
+    "segments": [
+     {
+      "id": "86bcw88f9",
+      "hours": 4.5
+     },
+     {
+      "id": "86bcw88fb",
+      "hours": 35.5
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 347.0
+   },
+   {
+    "week": 56,
     "segments": [
      {
       "id": "86bcw88fb",
@@ -9406,108 +9574,97 @@
      }
     ],
     "hours": 40.0,
-    "remaining_after": 335.0
-   },
-   {
-    "week": 56,
-    "segments": [
-     {
-      "id": "86bcw88fb",
-      "hours": 32.5
-     },
-     {
-      "id": "86bcw88fc",
-      "hours": 7.5
-     }
-    ],
-    "hours": 40.0,
-    "remaining_after": 295.0
+    "remaining_after": 307.0
    },
    {
     "week": 57,
     "segments": [
      {
+      "id": "86bcw88fb",
+      "hours": 4.5
+     },
+     {
       "id": "86bcw88fc",
-      "hours": 8.5
+      "hours": 16.0
      },
      {
       "id": "86bcw88fe",
-      "hours": 31.5
+      "hours": 19.5
      }
     ],
     "hours": 40.0,
-    "remaining_after": 255.0
+    "remaining_after": 267.0
    },
    {
     "week": 58,
     "segments": [
      {
       "id": "86bcw88fe",
-      "hours": 8.5
+      "hours": 20.5
      },
      {
       "id": "86bcw88fg",
-      "hours": 31.5
+      "hours": 19.5
      }
     ],
     "hours": 40.0,
-    "remaining_after": 215.0
+    "remaining_after": 227.0
    },
    {
     "week": 59,
     "segments": [
      {
       "id": "86bcw88fg",
-      "hours": 8.5
+      "hours": 20.5
      },
      {
       "id": "86bcw88fh",
-      "hours": 31.5
+      "hours": 19.5
      }
     ],
     "hours": 40.0,
-    "remaining_after": 175.0
+    "remaining_after": 187.0
    },
    {
     "week": 60,
     "segments": [
      {
       "id": "86bcw88fh",
-      "hours": 8.5
+      "hours": 20.5
      },
      {
       "id": "86bcw88fj",
-      "hours": 24.0
-     },
-     {
-      "id": "86bcw88fn",
-      "hours": 7.5
+      "hours": 19.5
      }
     ],
     "hours": 40.0,
-    "remaining_after": 135.0
+    "remaining_after": 147.0
    },
    {
     "week": 61,
     "segments": [
      {
+      "id": "86bcw88fj",
+      "hours": 4.5
+     },
+     {
       "id": "86bcw88fn",
-      "hours": 16.5
+      "hours": 24.0
      },
      {
       "id": "86bcw88fq",
-      "hours": 23.5
+      "hours": 11.5
      }
     ],
     "hours": 40.0,
-    "remaining_after": 95.0
+    "remaining_after": 107.0
    },
    {
     "week": 62,
     "segments": [
      {
       "id": "86bcw88fq",
-      "hours": 0.5
+      "hours": 12.5
      },
      {
       "id": "86bcw88fr",
@@ -9515,18 +9672,18 @@
      },
      {
       "id": "86bcw88fu",
-      "hours": 33.5
+      "hours": 21.5
      }
     ],
     "hours": 40.0,
-    "remaining_after": 55.0
+    "remaining_after": 67.0
    },
    {
     "week": 63,
     "segments": [
      {
       "id": "86bcw88fu",
-      "hours": 6.5
+      "hours": 18.5
      },
      {
       "id": "86bcw885b",
@@ -9534,22 +9691,22 @@
      },
      {
       "id": "86bcw885d",
-      "hours": 16.0
-     },
-     {
-      "id": "86bcw885e",
-      "hours": 5.5
+      "hours": 9.5
      }
     ],
     "hours": 40.0,
-    "remaining_after": 15.0
+    "remaining_after": 27.0
    },
    {
     "week": 64,
     "segments": [
      {
+      "id": "86bcw885d",
+      "hours": 6.5
+     },
+     {
       "id": "86bcw885e",
-      "hours": 2.5
+      "hours": 8.0
      },
      {
       "id": "86bcw885g",
@@ -9664,7 +9821,7 @@
       "hours": 0.25
      }
     ],
-    "hours": 15.0,
+    "hours": 27.0,
     "remaining_after": 0.0
    }
   ],
