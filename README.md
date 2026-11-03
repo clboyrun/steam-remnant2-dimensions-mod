@@ -9,6 +9,7 @@ https://clboyrun.github.io/steam-remnant2-dimensions-mod/
 - `wheel.html`: the dependency wheel (which tickets wait on which). It reads the same `status.json`, so it
   updates with the status page. Linked next to the About page.
 - Burn-down: a section of `wheel.html` (`js/burndown.js`, `css/burndown.css`) drawing the `burndown` key of `status.json`, which `tools/burndown.py` projects from the tasks (one person, 40 h weeks, estimates only; see the comments at the top of that file for the rules and what is left unscheduled).
+- Calendar heat map: a section of `wheel.html` (`js/calendar.js`, `css/calendar.css`) built in the browser from each ticket's created, start and closed dates in `status.json`.
 - `status.json`: the latest snapshot of the ClickUp tasks in the **Dimensions Mod** space. Don't edit it by
   hand; the "Status page" GitHub Action rewrites it on a schedule.
 - `tools/sync_clickup.py`: makes `status.json` from the ClickUp API. Only task names, statuses, parent tasks, time

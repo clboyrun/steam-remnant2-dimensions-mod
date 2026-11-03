@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="css/base.css">
 <link rel="stylesheet" href="css/wheel.css">
 <link rel="stylesheet" href="css/burndown.css">
+<link rel="stylesheet" href="css/calendar.css">
 </head>
 <body>
 <div class="wrap">
@@ -52,6 +53,11 @@
       <ul class="late" id="late"></ul>
     </div>
   </div>
+  <section class="card" id="calendar" aria-labelledby="cal-h">
+    <h2 id="cal-h">Calendar: when tickets are open and when they close</h2>
+    <p class="note">Each day is split corner to corner. The top-right triangle shows how many tickets were open that day; the bottom-left triangle shows how many closed that day. Both run on the same scale, full colour at 5 tickets. Follows the “Include closed tickets” box.</p>
+    <div id="cal-mount"><p class="note">Loading…</p></div>
+  </section>
   <section class="card" id="burndown" aria-labelledby="bd-h">
     <h2 id="bd-h">Burn-down: when the work lands, 40 hours a week</h2>
     <p class="note">A projection, not a promise. One person works one ticket at a time. In-progress tickets go first, then tickets that are ready (To do, nothing unfinished blocking them), the one with the most work waiting behind it first. Each ticket is treated as closed when its estimated hours are used up, which makes the tickets behind it ready. Estimates are the only duration used. It covers open tickets only, whatever the wheel's “Include closed tickets” box says.</p>
@@ -60,6 +66,7 @@
   <p class="note">Every ticket shows its tracker ID (E28, H9, P3 and so on), and its name links to that task in ClickUp. Finished tickets are faded; a coloured ring shows any other status that isn't To do. Rebuilt from the same ClickUp snapshot as the status page, so it changes whenever the tasks do.</p>
 </div>
 <script src="js/burndown.js"></script>
+<script src="js/calendar.js"></script>
 <script>
 (function(){
 const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
@@ -104,6 +111,7 @@ const cuLink=(n,text)=>n.url?`<a href="${esc(n.url)}" target="_blank" rel="noope
 
 document.getElementById('eyebrow').innerHTML=`Remnant 2 Dimensions · live from ClickUp · last change <time datetime="${esc(data.generated_at)}" title="${esc(new Date(data.generated_at).toLocaleString())}">${ago(data.generated_at)}</time>`;
 renderBurndown(data,document.getElementById('bd-mount'));
+renderCalendar(data,!!incl,document.getElementById('cal-mount'));
 document.getElementById('app').hidden=true;document.getElementById('main').hidden=false;document.getElementById('lower').hidden=false;
 
 // ---- Layout ----

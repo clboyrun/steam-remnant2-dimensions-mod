@@ -1,0 +1,30 @@
+/* Heat map calendar on the wheel page. Tokens from theme.css. */
+.cal-wrap{display:flex;gap:8px;align-items:flex-start}
+.cal-dow{display:grid;grid-template-rows:repeat(7,var(--cell,22px));gap:3px;margin-top:20px;font:11px var(--font-mono);color:var(--muted);text-align:right}
+.cal-dow span{line-height:var(--cell,22px)}
+.cal-scroll{overflow-x:auto;padding-bottom:6px;min-width:0}
+.cal-months,.cal-grid{display:grid;grid-template-columns:repeat(var(--weeks),var(--cell,22px));gap:3px;width:max-content}
+.cal-months{height:20px;font:11px var(--font-mono);color:var(--muted)}
+.cal-months span{white-space:nowrap;overflow:visible}
+.cal-col{display:grid;grid-template-rows:repeat(7,var(--cell,22px));gap:3px}
+/* The cut runs top left to bottom right: top-right triangle = open, bottom-left triangle = closed. */
+.cal-cell,.cal-cellkey,.cal-sw{--ob:color-mix(in srgb,var(--steel) var(--o,0%),var(--track));--cb:color-mix(in srgb,var(--done) var(--c,0%),var(--track))}
+.cal-cell{width:var(--cell,22px);height:var(--cell,22px);padding:0;border:1px solid var(--line);border-radius:3px;cursor:pointer;
+  background:linear-gradient(to top right,var(--cb) 50%,var(--ob) 50%)}
+.cal-cell:hover,.cal-cell:focus-visible{outline:2px solid var(--text);outline-offset:1px}
+.cal-cell.sel{outline:2px solid var(--accent);outline-offset:1px}
+.cal-cell.today{border-color:var(--text)}
+.cal-cell.future{opacity:.25;cursor:default}
+.cal-legend{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:12px;font-size:12.5px;color:var(--muted);align-items:center}
+.cal-legend b{color:var(--text);font-weight:600}
+.cal-legend span{display:inline-flex;align-items:center;gap:6px;flex-wrap:wrap}
+.cal-sw{display:inline-block;width:14px;height:14px;border:1px solid var(--line);border-radius:2px}
+.cal-sw-o{background:var(--ob)}
+.cal-sw-c{background:var(--cb)}
+.cal-cellkey{display:inline-block;width:26px;height:26px;border:1px solid var(--line);border-radius:3px;--o:100%;--c:100%;
+  background:linear-gradient(to top right,var(--cb) 50%,var(--ob) 50%)}
+.cal-detail{margin-top:12px;font-size:13px}
+.cal-detail h3{font-size:15px;margin:0 0 4px}
+.cal-detail h4{font-size:13px;margin:10px 0 2px;color:var(--muted)}
+.cal-detail ul{margin:2px 0;padding-left:18px;columns:2 20em}
+@media (max-width:520px){.cal-wrap{--cell:18px}}

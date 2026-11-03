@@ -82,6 +82,13 @@ def is_done(status: dict) -> bool:
     return (status or {}).get("type") in ("closed", "done")
 
 
+def _ms(value) -> int | None:
+    try:
+        return int(value) if value else None
+    except (TypeError, ValueError):
+        return None
+
+
 def task_record(t: dict, tracker_ids: dict[str, str]) -> dict:
     status = t.get("status") or {}
     estimate = t.get("time_estimate")
@@ -104,6 +111,10 @@ def task_record(t: dict, tracker_ids: dict[str, str]) -> dict:
         "links": links,
         "url": t.get("url") or f"https://app.clickup.com/t/{t['id']}",
         "updated": int(t["date_updated"]) if t.get("date_updated") else None,
+        # For the calendar heat map (milliseconds since the epoch). A finished ticket with no close date falls back to its last update.
+        "created": _ms(t.get("date_created")),
+        "start": _ms(t.get("start_date")),
+        "closed": _ms(t.get("date_closed") or t.get("date_done")) or (_ms(t.get("date_updated")) if is_done(status) else None),
         "order": float(t.get("orderindex") or 0),
     }
 
