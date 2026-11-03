@@ -27,6 +27,7 @@
       <div class="controls">
         <label><input type="checkbox" id="soft"> Show related links (not blockers)</label>
         <label><input type="checkbox" id="imp" checked> Show the spokes from the hub ticket</label>
+        <label><input type="checkbox" id="closed"> Include closed tickets</label>
       </div>
       <svg id="wheel" viewBox="-560 -560 1120 1120" role="img" aria-label="Dependency wheel of all tickets"></svg>
       <div class="legend" id="legend"></div>
@@ -53,7 +54,7 @@
   </div>
   <section class="card" id="burndown" aria-labelledby="bd-h">
     <h2 id="bd-h">Burn-down: when the work lands, 40 hours a week</h2>
-    <p class="note">A projection, not a promise. One person works one ticket at a time. In-progress tickets go first, then tickets that are ready (To do, nothing unfinished blocking them), the one with the most work waiting behind it first. Each ticket is treated as closed when its estimated hours are used up, which makes the tickets behind it ready. Estimates are the only duration used.</p>
+    <p class="note">A projection, not a promise. One person works one ticket at a time. In-progress tickets go first, then tickets that are ready (To do, nothing unfinished blocking them), the one with the most work waiting behind it first. Each ticket is treated as closed when its estimated hours are used up, which makes the tickets behind it ready. Estimates are the only duration used. It covers open tickets only, whatever the wheel's “Include closed tickets” box says.</p>
     <div id="bd-mount"><p class="note">Loading…</p></div>
   </section>
   <p class="note">Every ticket shows its tracker ID (E28, H9, P3 and so on), and its name links to that task in ClickUp. Finished tickets are faded; a coloured ring shows any other status that isn't To do. Rebuilt from the same ClickUp snapshot as the status page, so it changes whenever the tasks do.</p>
@@ -65,10 +66,11 @@ const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'
 const label=s=>{s=String(s);return s.charAt(0).toUpperCase()+s.slice(1).toLowerCase()};
 const fmt=h=>h>=10?Math.round(h).toLocaleString():(+h.toFixed(1)).toString();
 const ago=iso=>{const s=(Date.now()-new Date(iso).getTime())/1000;if(s<90)return'just now';if(s<5400)return Math.round(s/60)+' min ago';if(s<129600)return Math.round(s/3600)+' h ago';return Math.round(s/86400)+' days ago'};
-fetch('status.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error(r.status);return r.json()}).then(build)
+fetch('status.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error(r.status);return r.json()}).then(d=>{const c=document.getElementById('closed');try{c.checked=localStorage.getItem('wheel-closed')==='1'}catch(e){}
+    c.onchange=()=>{try{localStorage.setItem('wheel-closed',c.checked?'1':'0')}catch(e){}build(d,c.checked)};build(d,c.checked)})
   .catch(()=>{document.getElementById('app').textContent='No ClickUp snapshot yet. It appears after the next hourly refresh.'});
 
-function build(data){
+function build(data,incl){
 // ---- Turn the snapshot into one node per top-level ticket ----
 const all=[];data.lists.forEach(l=>l.tasks.forEach(t=>all.push(Object.assign({list:l.name},t))));
 const byCU=Object.fromEntries(all.map(t=>[t.id,t]));
@@ -76,11 +78,13 @@ const topOf=id=>{let t=byCU[id],guard=0;while(t&&t.parent&&byCU[t.parent]&&guard
 const tops=all.filter(t=>!t.parent||!byCU[t.parent]);
 const kidsOf={};all.forEach(t=>{if(t.parent&&byCU[t.parent]){const p=topOf(t.id);(kidsOf[p]=kidsOf[p]||[]).push(t)}});
 const statusInfo=Object.fromEntries((data.statuses||[]).map(s=>[s.status,s]));
-const D=tops.map(t=>{const kids=kidsOf[t.id]||[];const fam=[t,...kids];
+// Open only (default): finished tickets, and finished subtasks, are left out of the wheel and its numbers.
+const D=tops.map(t=>{const kids=(kidsOf[t.id]||[]).filter(k=>incl||!k.done);if(!incl&&t.done&&!kids.length)return null;const fam=[t,...kids];
   const rel=k=>[...new Set(fam.flatMap(x=>x[k]||[]).map(topOf).filter(x=>x&&x!==t.id))];
   return{key:t.id,id:t.tracker_id||'·',name:t.name,list:t.list,url:t.url,status:t.status,color:t.status_color,done:t.done,
     open:statusInfo[t.status]?statusInfo[t.status].open:/^to ?do$/i.test(t.status),
-    h:fam.reduce((a,x)=>a+(x.estimate_hours||0),0),wait:rel('waits_on'),link:rel('links'),kids:kids.length,kidnames:kids.map(k=>k.name)}});
+    h:fam.reduce((a,x)=>a+(x.estimate_hours||0),0),wait:rel('waits_on'),link:rel('links'),kids:kids.length,kidnames:kids.map(k=>k.name)}}).filter(Boolean);
+const keep=new Set(D.map(n=>n.key));D.forEach(n=>{n.wait=n.wait.filter(k=>keep.has(k));n.link=n.link.filter(k=>keep.has(k))});
 const byId=Object.fromEntries(D.map(n=>[n.key,n]));
 const down={};D.forEach(n=>n.wait.forEach(w=>(down[w]=down[w]||[]).push(n.key)));
 const trans=(id,dir,seen=new Set())=>{(dir=='down'?(down[id]||[]):byId[id].wait).forEach(x=>{if(!seen.has(x)){seen.add(x);trans(x,dir,seen)}});return seen};
@@ -103,7 +107,7 @@ renderBurndown(data,document.getElementById('bd-mount'));
 document.getElementById('app').hidden=true;document.getElementById('main').hidden=false;document.getElementById('lower').hidden=false;
 
 // ---- Layout ----
-const svg=document.getElementById('wheel'),NS='http://www.w3.org/2000/svg';
+const svg=document.getElementById('wheel'),NS='http://www.w3.org/2000/svg';svg.textContent='';svg.classList.remove('dim');
 const hue={};ORDER.forEach((l,i)=>hue[l]=Math.round((i*360/ORDER.length+20)%360));
 const pos={},R1=150,R2=330;
 const rim=D.filter(n=>n.list!==hubList);
@@ -180,9 +184,10 @@ document.getElementById('bars').innerHTML=topList.map(n=>`<div class="bar" data-
 document.querySelectorAll('.bar').forEach(b=>{b.addEventListener('click',()=>select(b.dataset.id));b.addEventListener('keydown',e=>{if(e.key=='Enter')select(b.dataset.id)})});
 const late=todo.filter(n=>!n.blocked&&n.down==0&&n.h>=16).sort((a,b)=>b.h-a.h);
 document.getElementById('late').innerHTML=late.map(n=>`<li><span class="tid">${esc(n.id)}</span> ${cuLink(n,esc(n.name))} <span class="h">${fmt(n.h)} h</span></li>`).join('');
-document.getElementById('soft').addEventListener('change',e=>edges.forEach(x=>{if(x.kind=='soft')x.p.style.display=e.target.checked?'':'none'}));
-document.getElementById('imp').addEventListener('change',e=>edges.forEach(x=>{if(x.kind=='imp')x.p.style.display=e.target.checked?'':'none'}));
-svg.addEventListener('click',e=>{if(e.target===svg){svg.classList.remove('dim');Object.values(nodes).forEach(g=>g.classList.remove('on','sel'));edges.forEach(x=>x.p.classList.remove('on'))}});
+const applyEdges=()=>edges.forEach(x=>{if(x.kind=='soft')x.p.style.display=document.getElementById('soft').checked?'':'none';if(x.kind=='imp')x.p.style.display=document.getElementById('imp').checked?'':'none'});
+applyEdges();
+document.getElementById('soft').onchange=applyEdges;document.getElementById('imp').onchange=applyEdges;
+svg.onclick=(e=>{if(e.target===svg){svg.classList.remove('dim');Object.values(nodes).forEach(g=>g.classList.remove('on','sel'));edges.forEach(x=>x.p.classList.remove('on'))}});
 document.querySelectorAll('.bar a,.late a,#steps a').forEach(x=>x.addEventListener('click',e=>e.stopPropagation()));
 if(center)select(center.key);
 }
