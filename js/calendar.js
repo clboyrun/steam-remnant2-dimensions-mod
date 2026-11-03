@@ -12,15 +12,14 @@
   const level = n => Math.min(n, MAX) / MAX;
   const MONTH = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-  window.renderCalendar = function (data, includeClosed, mount) {
+  window.renderCalendar = function (data, mount) {
     const tasks = data.lists.flatMap(l => l.tasks);
     const now = Date.now(), today = dayStart(now);
     const dated = tasks.filter(t => t.created || t.start || t.closed);
     if (!dated.length) { mount.innerHTML = '<p class="note">Dates appear after the next hourly refresh.</p>'; return; }
 
-    // Open-only view: only tickets that are still open count, so nothing is ever closed on the calendar.
-    // Include closed: every ticket counts, with its full open span and its close day.
-    const used = tasks.filter(t => (includeClosed || !t.done) && (t.created || t.start || t.closed));
+    // Always every ticket, open and closed: the wheel's "Include closed tickets" box does not apply here.
+    const used = tasks.filter(t => t.created || t.start || t.closed);
     const open = {}, closed = {};
     used.forEach(t => {
       const from = dayStart(t.start || t.created || t.closed);
@@ -66,7 +65,6 @@
       '<span><b>Top right</b>: tickets open that day (from start or created date, until closed) ' + scale("cal-sw-o") + "</span>" +
       '<span><b>Bottom left</b>: tickets closed that day ' + scale("cal-sw-c") + "</span>" +
       "<span>0 to 5 tickets; 5 or more is full colour for both</span></div>" +
-      (includeClosed ? "" : '<p class="note">Only tickets that are still open are counted, so the bottom-left triangles stay empty. Tick “Include closed tickets” above the wheel to see completions and each finished ticket’s open days.</p>') +
       '<div class="cal-detail" id="cal-detail" aria-live="polite"><p class="note">Select a day to list its tickets.</p></div>';
 
     const detail = mount.querySelector("#cal-detail");
