@@ -4,9 +4,12 @@ name: Status page
 # (index.html, the sync script, its tests) lives on gh-pages; see its README.md.
 # This file has to be on the default branch because GitHub only runs scheduled workflows from there.
 # Needs the CLICKUP_API_TOKEN repository secret.
+# GitHub's own cron is best effort and drops runs on busy hours (this one fired about twice in 22 hours),
+# so each run also starts the next one itself, 10 minutes after it finishes. The cron stays as a restart
+# in case the chain ever breaks (a failed run, a cancelled run).
 on:
   schedule:
-    - cron: "3/15 * * * *" # 4 times per hour
+    - cron: "3/15 * * * *" # 4 times per hour, when GitHub gets to it
   workflow_dispatch:
   push: # first run as soon as this file is merged
     branches: [main]
@@ -14,6 +17,7 @@ on:
 
 permissions:
   contents: write
+  actions: write # lets the last step start the next run (see "Keep the timer going")
 
 concurrency:
   group: status-page
@@ -49,3 +53,13 @@ jobs:
           fi
           git commit -q -m "Status snapshot $(date -u +%Y-%m-%dT%H:%MZ)"
           git push -q origin HEAD:gh-pages
+      - name: Keep the timer going
+        # Always runs, even after a failure, so one bad refresh doesn't stop the timer.
+        # Starting a run with the built-in token is allowed for workflow_dispatch.
+        # Concurrency keeps one run going and one waiting, so extra chains collapse into one.
+        if: ${{ always() }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          sleep 600
+          gh workflow run status-page.yml --repo "$GITHUB_REPOSITORY" --ref "${{ github.event.repository.default_branch }}"
