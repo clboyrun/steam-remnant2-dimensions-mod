@@ -1,0 +1,10 @@
+# Generated build artifacts
+output/
+*.pak
+*.ucas
+*.utoc
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/

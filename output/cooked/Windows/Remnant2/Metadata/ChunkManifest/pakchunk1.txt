@@ -1,0 +1,2 @@
+D:\Git\steam-remnant2-dimensions-mod\Rem2Proj\Saved\Cooked\Windows\Remnant2\Content\_Core\Blueprints\Quests\Quest_RootQuest
+D:\Git\steam-remnant2-dimensions-mod\Rem2Proj\Saved\Cooked\Windows\Remnant2\Content\World_Base\Quests\Quest_Ward13\Quest_Ward13

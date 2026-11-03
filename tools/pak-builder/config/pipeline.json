@@ -1,0 +1,58 @@
+{
+  "engine": {
+    "version": "5.2",
+    "uproject": "C:/ModProject/ModProject.uproject",
+    "editor_cmd": "C:/UE_5.2/Engine/Binaries/Win64/UnrealEditor-Cmd.exe",
+    "unreal_pak": "C:/UE_5.2/Engine/Binaries/Win64/UnrealPak.exe"
+  },
+  "paths": {
+    "fmodel": "C:/FModel/Exports",
+    "orig": "workspace/orig",
+    "staged": "workspace/staged",
+    "cooked": "C:/ModProject/Saved/Cooked/Windows",
+    "output": "output/pak",
+    "backup": "workspace/backups"
+  },
+  "assets": [
+    {
+      "name": "BP_Example",
+      "original": "Game/Content/Characters/BP_Example.uasset",
+      "orig": {
+        "name": "BP_Example_ORIG",
+        "package": "/Game/Characters/BP_Example_ORIG",
+        "parent": "/Game/Characters/BP_Example_ORIG.BP_Example_ORIG_C"
+      },
+      "blueprint": {
+        "package": "/Game/Mods/Characters/BP_Example",
+        "parent": "/Game/Characters/BP_Example_ORIG.BP_Example_ORIG_C",
+        "components": [
+          {
+            "name": "DefaultSceneRoot",
+            "type": "SceneComponent",
+            "parent": null
+          },
+          {
+            "name": "Mesh",
+            "type": "StaticMeshComponent",
+            "parent": "DefaultSceneRoot"
+          },
+          {
+            "name": "CustomComponent",
+            "type": "SceneComponent",
+            "parent": "DefaultSceneRoot"
+          }
+        ]
+      },
+      "replace_extensions": [
+        ".uasset",
+        ".uexp"
+      ]
+    }
+  ],
+  "pak": {
+    "name": "MyMod_P.pak",
+    "mount_point": "../../../",
+    "response_file": "workspace/pak_response.txt"
+  },
+  "mappings": {}
+}

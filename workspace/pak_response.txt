@@ -1,0 +1,2 @@
+"D:\Git\steam-remnant2-dimensions-mod\output\cooked\Windows\Remnant2\Content\Dimensions\Original\Widget_InventoryList_Orig.uasset" "../../../Remnant2/Content/Dimensions/Original/Widget_InventoryList_Orig.uasset"
+"D:\Git\steam-remnant2-dimensions-mod\output\cooked\Windows\Remnant2\Content\Dimensions\Original\Widget_InventoryList_Orig.uexp" "../../../Remnant2/Content/Dimensions/Original/Widget_InventoryList_Orig.uexp"

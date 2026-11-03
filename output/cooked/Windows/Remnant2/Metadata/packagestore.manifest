@@ -1,0 +1,3579 @@
+{
+	"Files": [
+		{
+			"Path": "Engine/Content/Animation/DefaultRecorderBoneCompression.uasset",
+			"ChunkId": "3cb0431e18cb83db00000001"
+		},
+		{
+			"Path": "Engine/Content/ArtTools/RenderToTexture/Meshes/S_1_Unit_Plane.uasset",
+			"ChunkId": "7b9c08e592b6f57800000001"
+		},
+		{
+			"Path": "Engine/Content/BasicShapes/Cone.uasset",
+			"ChunkId": "f23f619700918ac500000001"
+		},
+		{
+			"Path": "Engine/Content/BasicShapes/Cube.uasset",
+			"ChunkId": "71fe0432abe4de2400000001"
+		},
+		{
+			"Path": "Engine/Content/BasicShapes/Cylinder.uasset",
+			"ChunkId": "7607d982d08b414700000001"
+		},
+		{
+			"Path": "Engine/Content/BasicShapes/Plane.uasset",
+			"ChunkId": "a44601bc68ca3f2400000001"
+		},
+		{
+			"Path": "Engine/Content/BasicShapes/Sphere.uasset",
+			"ChunkId": "4a782f60fcb4c26e00000001"
+		},
+		{
+			"Path": "Engine/Content/EngineDamageTypes/DmgTypeBP_Environmental.uasset",
+			"ChunkId": "79688f0e793acea100000001"
+		},
+		{
+			"Path": "Engine/Content/EngineDebugMaterials/DebugEditorMaterial.uasset",
+			"ChunkId": "7045cf1b55a1317500000001"
+		},
+		{
+			"Path": "Engine/Content/EngineDebugMaterials/DebugMeshMaterial.uasset",
+			"ChunkId": "d9ef76f15dcbda9d00000001"
+		},
+		{
+			"Path": "Engine/Content/EngineDebugMaterials/M_SimpleUnlitTranslucent.uasset",
+			"ChunkId": "a06a91154845992200000001"
+		},
+		{
+			"Path": "Engine/Content/EngineDebugMaterials/M_VolumeRenderSphereTracePP.uasset",
+			"ChunkId": "3bf2df25e14476d700000001"
+		},
+		{
+			"Path": "Engine/Content/EngineDebugMaterials/VolumeToRender.uasset",
+			"ChunkId": "7f8259be57e87dce00000001"
+		},
+		{
+			"Path": "Engine/Content/EngineFonts/Faces/DroidSansFallback.uasset",
+			"ChunkId": "a9e44eb998f07d0800000001"
+		},
+		{
+			"Path": "Engine/Content/EngineFonts/Faces/RobotoBold.uasset",
+			"ChunkId": "368e94bf2073b74d00000001"
+		},
+		{
+			"Path": "Engine/Content/EngineFonts/Faces/RobotoBoldItalic.uasset",
+			"ChunkId": "0fcbf7e6705a3afe00000001"
+		},
+		{
+			"Path": "Engine/Content/EngineFonts/Faces/RobotoItalic.uasset",
+			"ChunkId": "6ef7eb5c150af73a00000001"
+		},
+		{
+			"Path": "Engine/Content/EngineFonts/Faces/RobotoLight.uasset",
+			"ChunkId": "0668993fb5b5811c00000001"
+		},
+		{
+			"Path": "Engine/Content/EngineFonts/Faces/RobotoRegular.uasset",
+			"ChunkId": "5ba734afa75fb33c00000001"
+		},
+		{
+			"Path": "Engine/Content/EngineFonts/Faces/RobotoTiny.uasset",
+			"ChunkId": "9185e15ed1f5df5f00000001"
+		},
+		{
+			"Path": "Engine/Content/EngineFonts/Roboto.uasset",
+			"ChunkId": "08578f8490e5c66d00000001"
+		},
+		{
+			"Path": "Engine/Content/EngineFonts/RobotoDistanceField.uasset",
+			"ChunkId": "52a5c49a743a12b500000001"
+		},
+		{
+			"Path": "Engine/Content/EngineFonts/RobotoTiny.uasset",
+			"ChunkId": "67e0d5da2a9c1cfb00000001"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/BaseFlattenDiffuseMap.uasset",
+			"ChunkId": "641c8321450e97f400000001"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/BaseFlattenDiffuseMap_VT.uasset",
+			"ChunkId": "adba4404ca6448ad00000001"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/BaseFlattenDiffuseMap_VT.ubulk",
+			"ChunkId": "adba4404ca6448ad00000002"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/BaseFlattenEmissiveMap.uasset",
+			"ChunkId": "7ba7b2b1aeafb4cc00000001"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/BaseFlattenEmissiveMap_VT.uasset",
+			"ChunkId": "d77ca907bf9be46e00000001"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/BaseFlattenEmissiveMap_VT.ubulk",
+			"ChunkId": "d77ca907bf9be46e00000002"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/BaseFlattenGrayscaleMap.uasset",
+			"ChunkId": "2563b8e7aff6d26e00000001"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/BaseFlattenGrayscaleMap_VT.uasset",
+			"ChunkId": "0219c3161c6d6eb200000001"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/BaseFlattenGrayscaleMap_VT.ubulk",
+			"ChunkId": "0219c3161c6d6eb200000002"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/BaseFlattenLinearColor.uasset",
+			"ChunkId": "768633666781f70600000001"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/BaseFlattenLinearColor_VT.uasset",
+			"ChunkId": "c599b991259f3dc100000001"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/BaseFlattenLinearColor_VT.ubulk",
+			"ChunkId": "c599b991259f3dc100000002"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/BaseFlattenNormalMap.uasset",
+			"ChunkId": "c18dd883a0c55c8b00000001"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/BaseFlattenNormalMap_VT.uasset",
+			"ChunkId": "28ed83b8029dd22900000001"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/BaseFlattenNormalMap_VT.ubulk",
+			"ChunkId": "28ed83b8029dd22900000002"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/Black_1x1_EXR_Texture_VT.uasset",
+			"ChunkId": "4eefe050ec0582d800000001"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/Black_1x1_EXR_Texture_VT.ubulk",
+			"ChunkId": "4eefe050ec0582d800000002"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/BlendFunc_DefBase.uasset",
+			"ChunkId": "34b40296d0d3844e00000001"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/BlendFunc_DefBlend.uasset",
+			"ChunkId": "b1dd9666d4d25cf600000001"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/DefaultBloomKernel.uasset",
+			"ChunkId": "cbab6b01dd8b7ffe00000001"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/DefaultBokeh.uasset",
+			"ChunkId": "65401b411493477b00000001"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/DefaultCalibrationColor.uasset",
+			"ChunkId": "c8548e53bc64ae9400000001"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/DefaultCalibrationGrayscale.uasset",
+			"ChunkId": "b916d415e9289b5500000001"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/DefaultDeferredDecalMaterial.uasset",
+			"ChunkId": "ef400c1f3fd91f2a00000001"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/DefaultDestructiblePhysicalMaterial.uasset",
+			"ChunkId": "f324387808549ca400000001"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/DefaultDiffuse.uasset",
+			"ChunkId": "7539f12095a3f0d100000001"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/DefaultDiffuse.ubulk",
+			"ChunkId": "7539f12095a3f0d100000002"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/DefaultLightFunctionMaterial.uasset",
+			"ChunkId": "0125e0852ce3d3e700000001"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/DefaultMaterial.uasset",
+			"ChunkId": "b4d3126ba7954ec000000001"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/DefaultPhysicalMaterial.uasset",
+			"ChunkId": "86f514aa5cdc08e700000001"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/DefaultPostProcessMaterial.uasset",
+			"ChunkId": "6c3a98c4aa151a5300000001"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/DefaultTextMaterialOpaque.uasset",
+			"ChunkId": "e3ad05e4a2d7a17c00000001"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/DefaultWhiteGrid.uasset",
+			"ChunkId": "624f937426db20c500000001"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/DefaultWhiteGrid.ubulk",
+			"ChunkId": "624f937426db20c500000002"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/DefaultWhiteGrid_Low.uasset",
+			"ChunkId": "8500a33b2fedbab800000001"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/EmissiveMeshMaterial.uasset",
+			"ChunkId": "6ebbe4a6ced841cc00000001"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/FlattenMaterial.uasset",
+			"ChunkId": "2acd952336aab07f00000001"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/FlattenMaterial_VT.uasset",
+			"ChunkId": "f38cb73e67825d9600000001"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/FlattenMaterial_WS_Normal_VT.uasset",
+			"ChunkId": "da9ef9387e6c513600000001"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/GizmoMaterial.uasset",
+			"ChunkId": "4f766dcdfcc10abc00000001"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/Good64x64TilingNoiseHighFreq.uasset",
+			"ChunkId": "1c3a80931d7381bf00000001"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/InvalidLightmapSettings.uasset",
+			"ChunkId": "cdb6f2e8065df7c100000001"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/InvalidLightmapSettings.ubulk",
+			"ChunkId": "cdb6f2e8065df7c100000002"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/LandscapeHolePhysicalMaterial.uasset",
+			"ChunkId": "1e6d8045809cdfe100000001"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/M_InvalidLightmapSettings.uasset",
+			"ChunkId": "3c018da41573213600000001"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/MiniFont.uasset",
+			"ChunkId": "58ac407f95ae164b00000001"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/NaniteHiddenSectionMaterial.uasset",
+			"ChunkId": "27b794321822576600000001"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/PhAT_JointLimitMaterial.uasset",
+			"ChunkId": "305a1ec18dd5a4be00000001"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/PhysMat_Carboard.uasset",
+			"ChunkId": "05312b478e9df45f00000001"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/PhysMat_Ice.uasset",
+			"ChunkId": "d502658af5d5bc8100000001"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/PhysMat_Metal.uasset",
+			"ChunkId": "815802be5b7b800c00000001"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/PhysMat_Rubber.uasset",
+			"ChunkId": "7eca92f3c72d030000000001"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/PhysMat_Vehicle.uasset",
+			"ChunkId": "c0fcce7a5ba5716c00000001"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/PhysMat_VehicleRagdoll.uasset",
+			"ChunkId": "acf9400e32303fd600000001"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/PPM_DefaultCalibrationColor.uasset",
+			"ChunkId": "a4739b1d475b4a3e00000001"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/PPM_DefaultCalibrationGrayscale.uasset",
+			"ChunkId": "14c0e68102482a4700000001"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/PreintegratedSkinBRDF.uasset",
+			"ChunkId": "b60efe12572543e800000001"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/RemoveSurfaceMaterial.uasset",
+			"ChunkId": "f0a7f83421ac425b00000001"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/STBlueNoise_scalar_128x128x64.uasset",
+			"ChunkId": "20fa3a2484d4c32600000001"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/STBlueNoise_vec2_128x128x64.uasset",
+			"ChunkId": "ecd9b30185efcf5800000001"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/T_Default_Material_Grid_M.uasset",
+			"ChunkId": "b743bdd5e5df72a400000001"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/T_Default_Material_Grid_M.ubulk",
+			"ChunkId": "b743bdd5e5df72a400000002"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/T_Default_Material_Grid_N.uasset",
+			"ChunkId": "7a7173cfb4095b9f00000001"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/T_Default_Material_Grid_N.ubulk",
+			"ChunkId": "7a7173cfb4095b9f00000002"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/WeightMapPlaceholderTexture.uasset",
+			"ChunkId": "4077f21c1acd58d500000001"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/Widget3DPassThrough.uasset",
+			"ChunkId": "27d7aeddb1b7c7fc00000001"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/Widget3DPassThrough_Masked.uasset",
+			"ChunkId": "85eb7ec9f6c8613a00000001"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/Widget3DPassThrough_Masked_OneSided.uasset",
+			"ChunkId": "3a0245e4904b10b500000001"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/Widget3DPassThrough_Opaque.uasset",
+			"ChunkId": "dd353fe85598727e00000001"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/Widget3DPassThrough_Opaque_OneSided.uasset",
+			"ChunkId": "0e6a0028be3a2a6c00000001"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/Widget3DPassThrough_Translucent.uasset",
+			"ChunkId": "34868b7f9c10838900000001"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/Widget3DPassThrough_Translucent_OneSided.uasset",
+			"ChunkId": "2925796cddcc148c00000001"
+		},
+		{
+			"Path": "Engine/Content/EngineMaterials/WorldGridMaterial.uasset",
+			"ChunkId": "eeb296b2a739309500000001"
+		},
+		{
+			"Path": "Engine/Content/EngineMeshes/Sphere.uasset",
+			"ChunkId": "f421d8f857b9ed0300000001"
+		},
+		{
+			"Path": "Engine/Content/EngineResources/Black.uasset",
+			"ChunkId": "cda0cf6115260c9400000001"
+		},
+		{
+			"Path": "Engine/Content/EngineResources/DefaultTexture.uasset",
+			"ChunkId": "6baf53cf79c0948b00000001"
+		},
+		{
+			"Path": "Engine/Content/EngineResources/DefaultTexture.ubulk",
+			"ChunkId": "6baf53cf79c0948b00000002"
+		},
+		{
+			"Path": "Engine/Content/EngineResources/DefaultTextureCube.uasset",
+			"ChunkId": "3e6f2bc6739d380300000001"
+		},
+		{
+			"Path": "Engine/Content/EngineResources/DefaultVolumeTexture.uasset",
+			"ChunkId": "e6291a81a77661e900000001"
+		},
+		{
+			"Path": "Engine/Content/EngineResources/DefaultVolumeTexture2D.uasset",
+			"ChunkId": "6c54e7f6d4ea912200000001"
+		},
+		{
+			"Path": "Engine/Content/EngineResources/FilmGrains/Marcie_Grain_v3_128_M2_000.uasset",
+			"ChunkId": "ad84bf334b97e1af00000001"
+		},
+		{
+			"Path": "Engine/Content/EngineResources/GradientTexture0.uasset",
+			"ChunkId": "f87a01e7b138538a00000001"
+		},
+		{
+			"Path": "Engine/Content/EngineResources/WhiteSquareTexture.uasset",
+			"ChunkId": "b85ee5fd59f4dd2000000001"
+		},
+		{
+			"Path": "Engine/Content/EngineSky/M_SimpleSkyDome.uasset",
+			"ChunkId": "e61c20398c40eda200000001"
+		},
+		{
+			"Path": "Engine/Content/EngineSky/M_Sky_Panning_Clouds2.uasset",
+			"ChunkId": "6098725f85292e1b00000001"
+		},
+		{
+			"Path": "Engine/Content/EngineSky/SM_SkySphere.uasset",
+			"ChunkId": "48df828be219f7ad00000001"
+		},
+		{
+			"Path": "Engine/Content/EngineSky/T_Sky_Blue.uasset",
+			"ChunkId": "86737b633647e77300000001"
+		},
+		{
+			"Path": "Engine/Content/EngineSky/T_Sky_Blue.ubulk",
+			"ChunkId": "86737b633647e77300000002"
+		},
+		{
+			"Path": "Engine/Content/EngineSky/T_Sky_Clouds_M.uasset",
+			"ChunkId": "927b2fe4876a1f7400000001"
+		},
+		{
+			"Path": "Engine/Content/EngineSky/T_Sky_Clouds_M.ubulk",
+			"ChunkId": "927b2fe4876a1f7400000002"
+		},
+		{
+			"Path": "Engine/Content/EngineSky/T_Sky_Stars.uasset",
+			"ChunkId": "56d51199b9b2142a00000001"
+		},
+		{
+			"Path": "Engine/Content/EngineSky/T_Sky_Stars.ubulk",
+			"ChunkId": "56d51199b9b2142a00000002"
+		},
+		{
+			"Path": "Engine/Content/EngineSky/VolumetricClouds/CloudGradientTexture.uasset",
+			"ChunkId": "d28cf23bc747e18000000001"
+		},
+		{
+			"Path": "Engine/Content/EngineSky/VolumetricClouds/CloudWeatherTexture.uasset",
+			"ChunkId": "b3b465c34fc83f8e00000001"
+		},
+		{
+			"Path": "Engine/Content/EngineSky/VolumetricClouds/m_SimpleVolumetricCloud.uasset",
+			"ChunkId": "497b4263fbd333c800000001"
+		},
+		{
+			"Path": "Engine/Content/EngineSky/VolumetricClouds/m_SimpleVolumetricCloud_Inst.uasset",
+			"ChunkId": "4b7bf926a5212df600000001"
+		},
+		{
+			"Path": "Engine/Content/EngineSky/VolumetricClouds/T_NoiseErosion.uasset",
+			"ChunkId": "92d47df83dccf7d800000001"
+		},
+		{
+			"Path": "Engine/Content/EngineSky/VolumetricClouds/T_NoiseErosion.ubulk",
+			"ChunkId": "92d47df83dccf7d800000002"
+		},
+		{
+			"Path": "Engine/Content/EngineSky/VolumetricClouds/T_NoiseShape64.uasset",
+			"ChunkId": "a996adcfa357ed2d00000001"
+		},
+		{
+			"Path": "Engine/Content/EngineSky/VolumetricClouds/T_NoiseShape64.ubulk",
+			"ChunkId": "a996adcfa357ed2d00000002"
+		},
+		{
+			"Path": "Engine/Content/EngineSky/VolumetricClouds/T_VolumeNoiseErosion32.uasset",
+			"ChunkId": "e21a9990b0ff22d600000001"
+		},
+		{
+			"Path": "Engine/Content/EngineSky/VolumetricClouds/T_VolumeNoiseShape64.uasset",
+			"ChunkId": "730711032edb546300000001"
+		},
+		{
+			"Path": "Engine/Content/EngineSounds/Submixes/MasterEQEffectPreset.uasset",
+			"ChunkId": "7819480612024b3600000001"
+		},
+		{
+			"Path": "Engine/Content/EngineSounds/Submixes/MasterEQSubmixDefault.uasset",
+			"ChunkId": "cadc4d0ec817b83400000001"
+		},
+		{
+			"Path": "Engine/Content/EngineSounds/Submixes/MasterReverbEffectPreset.uasset",
+			"ChunkId": "abde94c25a5272fc00000001"
+		},
+		{
+			"Path": "Engine/Content/EngineSounds/Submixes/MasterReverbSubmixDefault.uasset",
+			"ChunkId": "cda0bce26734770500000001"
+		},
+		{
+			"Path": "Engine/Content/EngineSounds/Submixes/MasterSubmixDefault.uasset",
+			"ChunkId": "b059d54260cfd24100000001"
+		},
+		{
+			"Path": "Engine/Content/Functions/Engine_MaterialFunctions01/Gradient/LinearGradient.uasset",
+			"ChunkId": "e43855b9d402d6d500000001"
+		},
+		{
+			"Path": "Engine/Content/Functions/Engine_MaterialFunctions01/ImageAdjustment/CheapContrast.uasset",
+			"ChunkId": "dab3ede8bda8d8ca00000001"
+		},
+		{
+			"Path": "Engine/Content/Functions/Engine_MaterialFunctions01/Opacity/CameraDepthFade.uasset",
+			"ChunkId": "6a3b7a697242e13400000001"
+		},
+		{
+			"Path": "Engine/Content/Functions/Engine_MaterialFunctions01/Shading/ConvertFromDiffSpec.uasset",
+			"ChunkId": "6752d9e62e6e395700000001"
+		},
+		{
+			"Path": "Engine/Content/Functions/Engine_MaterialFunctions01/Shading/PowerToRoughness.uasset",
+			"ChunkId": "474711309ee6ba8900000001"
+		},
+		{
+			"Path": "Engine/Content/Functions/Engine_MaterialFunctions02/ObjectLocalBounds.uasset",
+			"ChunkId": "8d4486caf50605b200000001"
+		},
+		{
+			"Path": "Engine/Content/Functions/Engine_MaterialFunctions02/PivotPainter2/Black_1x1_EXR_Texture.uasset",
+			"ChunkId": "b60fa590a5fe4d6f00000001"
+		},
+		{
+			"Path": "Engine/Content/Functions/Engine_MaterialFunctions02/SafeNormalize.uasset",
+			"ChunkId": "b2e55f36209c19b000000001"
+		},
+		{
+			"Path": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components.uasset",
+			"ChunkId": "94d5e4cbc0f4380c00000001"
+		},
+		{
+			"Path": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat3Components.uasset",
+			"ChunkId": "7276d40fd50dba5900000001"
+		},
+		{
+			"Path": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/CameraDirectionVector.uasset",
+			"ChunkId": "5f510b7cd6e0bdc800000001"
+		},
+		{
+			"Path": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/MakeFloat2.uasset",
+			"ChunkId": "a29fb34f83f7d31a00000001"
+		},
+		{
+			"Path": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/MakeFloat3.uasset",
+			"ChunkId": "3f9ae4ae5e9a10b000000001"
+		},
+		{
+			"Path": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/VectorLength.uasset",
+			"ChunkId": "3f4f90b51972562400000001"
+		},
+		{
+			"Path": "Engine/Content/Functions/Engine_MaterialFunctions02/UVs/BoundingBoxBased_0-1_UVW.uasset",
+			"ChunkId": "c851afa144f311c000000001"
+		},
+		{
+			"Path": "Engine/Content/Functions/Engine_MaterialFunctions02/WorldPositionOffset/CameraOffset.uasset",
+			"ChunkId": "84ee12d7bc5f5a8000000001"
+		},
+		{
+			"Path": "Engine/Content/Functions/Engine_MaterialFunctions02/WorldPositionOffset/ObjectScale.uasset",
+			"ChunkId": "4762b775bfe4b22d00000001"
+		},
+		{
+			"Path": "Engine/Content/Functions/Engine_MaterialFunctions03/Blends/Blend_Overlay.uasset",
+			"ChunkId": "f0bdde7a2df6543900000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Entry.umap",
+			"ChunkId": "d31cf458faf4915200000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Entry_BuiltData.uasset",
+			"ChunkId": "f95ade32d57ba98c00000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld.ubulk",
+			"ChunkId": "876e71635f6a8ae500000002"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld.umap",
+			"ChunkId": "876e71635f6a8ae500000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-1_Y-1.ubulk",
+			"ChunkId": "3c096363bc550e7300000002"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-1_Y-1.umap",
+			"ChunkId": "3c096363bc550e7300000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-1_Y-2.ubulk",
+			"ChunkId": "6bc337480ecbf8f600000002"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-1_Y-2.umap",
+			"ChunkId": "6bc337480ecbf8f600000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-1_Y-3.ubulk",
+			"ChunkId": "283a1d96719009aa00000002"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-1_Y-3.umap",
+			"ChunkId": "283a1d96719009aa00000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-1_Y-4.ubulk",
+			"ChunkId": "fb65ffa2a3cde8c400000002"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-1_Y-4.umap",
+			"ChunkId": "fb65ffa2a3cde8c400000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-1_Y0.ubulk",
+			"ChunkId": "91a247c88b2b9a7700000002"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-1_Y0.umap",
+			"ChunkId": "91a247c88b2b9a7700000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-1_Y1.ubulk",
+			"ChunkId": "37b0fe853ba6e40f00000002"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-1_Y1.umap",
+			"ChunkId": "37b0fe853ba6e40f00000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-1_Y2.ubulk",
+			"ChunkId": "b79acc526b7a773000000002"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-1_Y2.umap",
+			"ChunkId": "b79acc526b7a773000000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-1_Y3.ubulk",
+			"ChunkId": "a9835baf7d9e8bef00000002"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-1_Y3.umap",
+			"ChunkId": "a9835baf7d9e8bef00000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-2_Y-1.ubulk",
+			"ChunkId": "269230ce2bfe767000000002"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-2_Y-1.umap",
+			"ChunkId": "269230ce2bfe767000000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-2_Y-2.ubulk",
+			"ChunkId": "3bcccc9a0036e48600000002"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-2_Y-2.umap",
+			"ChunkId": "3bcccc9a0036e48600000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-2_Y-3.ubulk",
+			"ChunkId": "8cd797f15436aa7c00000002"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-2_Y-3.umap",
+			"ChunkId": "8cd797f15436aa7c00000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-2_Y-4.ubulk",
+			"ChunkId": "b59d2a95bc65d41c00000002"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-2_Y-4.umap",
+			"ChunkId": "b59d2a95bc65d41c00000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-2_Y0.ubulk",
+			"ChunkId": "65d6f00719e11c8100000002"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-2_Y0.umap",
+			"ChunkId": "65d6f00719e11c8100000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-2_Y1.ubulk",
+			"ChunkId": "e91897219076bc2900000002"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-2_Y1.umap",
+			"ChunkId": "e91897219076bc2900000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-2_Y2.ubulk",
+			"ChunkId": "8c5c71a06334c1a700000002"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-2_Y2.umap",
+			"ChunkId": "8c5c71a06334c1a700000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-2_Y3.ubulk",
+			"ChunkId": "7ada034cdec6d00f00000002"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-2_Y3.umap",
+			"ChunkId": "7ada034cdec6d00f00000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-3_Y-1.ubulk",
+			"ChunkId": "fcf5ca8f74c265f500000002"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-3_Y-1.umap",
+			"ChunkId": "fcf5ca8f74c265f500000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-3_Y-2.ubulk",
+			"ChunkId": "5c15a055ef7970fa00000002"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-3_Y-2.umap",
+			"ChunkId": "5c15a055ef7970fa00000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-3_Y-3.ubulk",
+			"ChunkId": "616283edc68cb3d800000002"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-3_Y-3.umap",
+			"ChunkId": "616283edc68cb3d800000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-3_Y-4.ubulk",
+			"ChunkId": "6b3d308275bc22ec00000002"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-3_Y-4.umap",
+			"ChunkId": "6b3d308275bc22ec00000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-3_Y0.ubulk",
+			"ChunkId": "115e98bdaf971de500000002"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-3_Y0.umap",
+			"ChunkId": "115e98bdaf971de500000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-3_Y1.ubulk",
+			"ChunkId": "f37818df92d7168600000002"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-3_Y1.umap",
+			"ChunkId": "f37818df92d7168600000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-3_Y2.ubulk",
+			"ChunkId": "475e008e026e688d00000002"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-3_Y2.umap",
+			"ChunkId": "475e008e026e688d00000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-3_Y3.ubulk",
+			"ChunkId": "a86608f1916c740800000002"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-3_Y3.umap",
+			"ChunkId": "a86608f1916c740800000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-4_Y-1.ubulk",
+			"ChunkId": "544b930e94e7493000000002"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-4_Y-1.umap",
+			"ChunkId": "544b930e94e7493000000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-4_Y-2.ubulk",
+			"ChunkId": "ee1d4070577492d000000002"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-4_Y-2.umap",
+			"ChunkId": "ee1d4070577492d000000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-4_Y-3.ubulk",
+			"ChunkId": "bcda499c0e9e616b00000002"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-4_Y-3.umap",
+			"ChunkId": "bcda499c0e9e616b00000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-4_Y-4.ubulk",
+			"ChunkId": "0748407bd0398cd400000002"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-4_Y-4.umap",
+			"ChunkId": "0748407bd0398cd400000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-4_Y0.ubulk",
+			"ChunkId": "b183c29d6ca75aad00000002"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-4_Y0.umap",
+			"ChunkId": "b183c29d6ca75aad00000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-4_Y1.ubulk",
+			"ChunkId": "26641fb4ee821f0700000002"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-4_Y1.umap",
+			"ChunkId": "26641fb4ee821f0700000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-4_Y2.ubulk",
+			"ChunkId": "edd7dfa102bf220900000002"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-4_Y2.umap",
+			"ChunkId": "edd7dfa102bf220900000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-4_Y3.ubulk",
+			"ChunkId": "39289f2dff97af9400000002"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-4_Y3.umap",
+			"ChunkId": "39289f2dff97af9400000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X0_Y-1.ubulk",
+			"ChunkId": "666964b6599a74ff00000002"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X0_Y-1.umap",
+			"ChunkId": "666964b6599a74ff00000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X0_Y-2.ubulk",
+			"ChunkId": "47a568e738749a3300000002"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X0_Y-2.umap",
+			"ChunkId": "47a568e738749a3300000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X0_Y-3.ubulk",
+			"ChunkId": "9954a1b7a6b6ab1700000002"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X0_Y-3.umap",
+			"ChunkId": "9954a1b7a6b6ab1700000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X0_Y-4.ubulk",
+			"ChunkId": "37d23241726820ad00000002"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X0_Y-4.umap",
+			"ChunkId": "37d23241726820ad00000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X0_Y0.ubulk",
+			"ChunkId": "1efd19a0bba96d1500000002"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X0_Y0.umap",
+			"ChunkId": "1efd19a0bba96d1500000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X0_Y1.ubulk",
+			"ChunkId": "4aeab07a3570234700000002"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X0_Y1.umap",
+			"ChunkId": "4aeab07a3570234700000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X0_Y2.ubulk",
+			"ChunkId": "9efc001a266f916b00000002"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X0_Y2.umap",
+			"ChunkId": "9efc001a266f916b00000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X0_Y3.ubulk",
+			"ChunkId": "07d3ca28b3fb8a7c00000002"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X0_Y3.umap",
+			"ChunkId": "07d3ca28b3fb8a7c00000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X1_Y-1.ubulk",
+			"ChunkId": "6a8754ece57ec00a00000002"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X1_Y-1.umap",
+			"ChunkId": "6a8754ece57ec00a00000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X1_Y-2.ubulk",
+			"ChunkId": "59da57f2f4d5f78800000002"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X1_Y-2.umap",
+			"ChunkId": "59da57f2f4d5f78800000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X1_Y-3.ubulk",
+			"ChunkId": "ea652a98c93ca7c700000002"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X1_Y-3.umap",
+			"ChunkId": "ea652a98c93ca7c700000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X1_Y-4.ubulk",
+			"ChunkId": "abe7b04e156d9f7300000002"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X1_Y-4.umap",
+			"ChunkId": "abe7b04e156d9f7300000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X1_Y0.ubulk",
+			"ChunkId": "5587b86eb207fe9c00000002"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X1_Y0.umap",
+			"ChunkId": "5587b86eb207fe9c00000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X1_Y1.ubulk",
+			"ChunkId": "f95717f40eed139000000002"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X1_Y1.umap",
+			"ChunkId": "f95717f40eed139000000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X1_Y2.ubulk",
+			"ChunkId": "ba720c530069bdd200000002"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X1_Y2.umap",
+			"ChunkId": "ba720c530069bdd200000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X1_Y3.ubulk",
+			"ChunkId": "235d283d4e2f183900000002"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X1_Y3.umap",
+			"ChunkId": "235d283d4e2f183900000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X2_Y-1.ubulk",
+			"ChunkId": "5ed8e77a3582273600000002"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X2_Y-1.umap",
+			"ChunkId": "5ed8e77a3582273600000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X2_Y-2.ubulk",
+			"ChunkId": "8174a6beebed4f5700000002"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X2_Y-2.umap",
+			"ChunkId": "8174a6beebed4f5700000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X2_Y-3.ubulk",
+			"ChunkId": "daf408931ddf366d00000002"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X2_Y-3.umap",
+			"ChunkId": "daf408931ddf366d00000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X2_Y-4.ubulk",
+			"ChunkId": "47dc55d1949f5b8c00000002"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X2_Y-4.umap",
+			"ChunkId": "47dc55d1949f5b8c00000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X2_Y0.ubulk",
+			"ChunkId": "66f985eb4587320800000002"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X2_Y0.umap",
+			"ChunkId": "66f985eb4587320800000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X2_Y1.ubulk",
+			"ChunkId": "e11dc3fae81cbf7f00000002"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X2_Y1.umap",
+			"ChunkId": "e11dc3fae81cbf7f00000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X2_Y2.ubulk",
+			"ChunkId": "1f945539934aa69500000002"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X2_Y2.umap",
+			"ChunkId": "1f945539934aa69500000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X2_Y3.ubulk",
+			"ChunkId": "63d46d71dddea8f100000002"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X2_Y3.umap",
+			"ChunkId": "63d46d71dddea8f100000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X3_Y-1.ubulk",
+			"ChunkId": "7a7efc407c3bb71c00000002"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X3_Y-1.umap",
+			"ChunkId": "7a7efc407c3bb71c00000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X3_Y-2.ubulk",
+			"ChunkId": "802417206af8b1e900000002"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X3_Y-2.umap",
+			"ChunkId": "802417206af8b1e900000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X3_Y-3.ubulk",
+			"ChunkId": "3fa186413215934c00000002"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X3_Y-3.umap",
+			"ChunkId": "3fa186413215934c00000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X3_Y-4.ubulk",
+			"ChunkId": "48182b55f480343400000002"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X3_Y-4.umap",
+			"ChunkId": "48182b55f480343400000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X3_Y0.ubulk",
+			"ChunkId": "489d1d1285d9c79e00000002"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X3_Y0.umap",
+			"ChunkId": "489d1d1285d9c79e00000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X3_Y1.ubulk",
+			"ChunkId": "42c6f48fe3473c9300000002"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X3_Y1.umap",
+			"ChunkId": "42c6f48fe3473c9300000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X3_Y2.ubulk",
+			"ChunkId": "f02e7ee0d386f4ae00000002"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X3_Y2.umap",
+			"ChunkId": "f02e7ee0d386f4ae00000001"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X3_Y3.ubulk",
+			"ChunkId": "ec1faccb41b213d500000002"
+		},
+		{
+			"Path": "Engine/Content/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X3_Y3.umap",
+			"ChunkId": "ec1faccb41b213d500000001"
+		},
+		{
+			"Path": "Engine/Content/MobileResources/HUD/DefaultVirtualJoysticks.uasset",
+			"ChunkId": "37cdeb5ce1d3ccd800000001"
+		},
+		{
+			"Path": "Engine/Content/MobileResources/HUD/VirtualJoystick_Background.uasset",
+			"ChunkId": "c472a8877b0ae2f900000001"
+		},
+		{
+			"Path": "Engine/Content/MobileResources/HUD/VirtualJoystick_Thumb.uasset",
+			"ChunkId": "2a8ace463a029fae00000001"
+		},
+		{
+			"Path": "Engine/Content/OpenWorldTemplate/HLOD/HLOD0_Instancing.uasset",
+			"ChunkId": "51c6c530c6e9e7c500000001"
+		},
+		{
+			"Path": "Engine/Content/OpenWorldTemplate/LandscapeMaterial/M_ProcGrid.uasset",
+			"ChunkId": "801dc51816054cd400000001"
+		},
+		{
+			"Path": "Engine/Content/OpenWorldTemplate/LandscapeMaterial/MF_ProcGrid.uasset",
+			"ChunkId": "1a175ae23ad6d41400000001"
+		},
+		{
+			"Path": "Engine/Content/OpenWorldTemplate/LandscapeMaterial/T_GridChecker_A.uasset",
+			"ChunkId": "eb26c788a1a10ea100000001"
+		},
+		{
+			"Path": "Engine/Content/OpenWorldTemplate/LandscapeMaterial/T_GridChecker_A.ubulk",
+			"ChunkId": "eb26c788a1a10ea100000002"
+		},
+		{
+			"Path": "Engine/Plugins/2D/Paper2D/Content/DefaultPaperTerrainMaterial.uasset",
+			"ChunkId": "1eb36adebf3e8d6900000001"
+		},
+		{
+			"Path": "Engine/Plugins/2D/Paper2D/Content/DefaultSpriteMaterial.uasset",
+			"ChunkId": "12c2c1346a8453a600000001"
+		},
+		{
+			"Path": "Engine/Plugins/2D/Paper2D/Content/DummySprite.uasset",
+			"ChunkId": "7936cc24a0df034100000001"
+		},
+		{
+			"Path": "Engine/Plugins/2D/Paper2D/Content/MaskedUnlitSpriteMaterial.uasset",
+			"ChunkId": "603c62bd8092b35100000001"
+		},
+		{
+			"Path": "Engine/Plugins/2D/Paper2D/Content/OpaqueUnlitSpriteMaterial.uasset",
+			"ChunkId": "b2e758c7adce0aa000000001"
+		},
+		{
+			"Path": "Engine/Plugins/2D/Paper2D/Content/PlaceholderTextures/DummySpriteTexture.uasset",
+			"ChunkId": "2cc5808063f890db00000001"
+		},
+		{
+			"Path": "Engine/Plugins/2D/Paper2D/Content/PlaceholderTextures/DummySpriteTexture.ubulk",
+			"ChunkId": "2cc5808063f890db00000002"
+		},
+		{
+			"Path": "Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/Empty.uasset",
+			"ChunkId": "efd3b99beb745ea100000001"
+		},
+		{
+			"Path": "Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/EmptyNormal.uasset",
+			"ChunkId": "6f3a7c0fe1cf64ce00000001"
+		},
+		{
+			"Path": "Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/game_wind_noise.uasset",
+			"ChunkId": "27d3dbbd9cb5875a00000001"
+		},
+		{
+			"Path": "Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/game_wind_noise.ubulk",
+			"ChunkId": "27d3dbbd9cb5875a00000002"
+		},
+		{
+			"Path": "Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/SpeedTreeBillboard.uasset",
+			"ChunkId": "8fcb1cae0c92026900000001"
+		},
+		{
+			"Path": "Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/SpeedTreeBillboardMaster.uasset",
+			"ChunkId": "0ec7598e2050155600000001"
+		},
+		{
+			"Path": "Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/SpeedTreeBranchMotion.uasset",
+			"ChunkId": "bb0c9910913c4acc00000001"
+		},
+		{
+			"Path": "Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/SpeedTreeCameraFacing.uasset",
+			"ChunkId": "a8a408dbac6bb61700000001"
+		},
+		{
+			"Path": "Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/SpeedTreeMaster.uasset",
+			"ChunkId": "7bb897d6d85abe5e00000001"
+		},
+		{
+			"Path": "Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/SpeedTreeWind.uasset",
+			"ChunkId": "11e16642d5df4eca00000001"
+		},
+		{
+			"Path": "Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/SpeedTreeWindMotion.uasset",
+			"ChunkId": "3bd77c49df92ee7b00000001"
+		},
+		{
+			"Path": "Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/UnpackDirection.uasset",
+			"ChunkId": "931f8593c76b1a3700000001"
+		},
+		{
+			"Path": "Engine/Plugins/Editor/SpeedTreeImporter/Content/SpeedTree9/UnpackInteger3.uasset",
+			"ChunkId": "7b967f8ff09764ce00000001"
+		},
+		{
+			"Path": "Engine/Plugins/Interchange/Runtime/Content/Pipelines/DefaultAssetsPipeline.uasset",
+			"ChunkId": "723e23a2f95edb4b00000001"
+		},
+		{
+			"Path": "Engine/Plugins/Interchange/Runtime/Content/Pipelines/DefaultMaterialPipeline.uasset",
+			"ChunkId": "fb3fd515f165bb7100000001"
+		},
+		{
+			"Path": "Engine/Plugins/Interchange/Runtime/Content/Pipelines/DefaultSceneAssetsPipeline.uasset",
+			"ChunkId": "6e4ac6d8f5ca0a0300000001"
+		},
+		{
+			"Path": "Engine/Plugins/Interchange/Runtime/Content/Pipelines/DefaultSceneLevelPipeline.uasset",
+			"ChunkId": "7aba7a84b764bf1300000001"
+		},
+		{
+			"Path": "Engine/Plugins/Interchange/Runtime/Content/Pipelines/DefaultTexturePipeline.uasset",
+			"ChunkId": "1c2fd1107a52870200000001"
+		},
+		{
+			"Path": "Engine/Plugins/Media/MediaPlate/Content/SM_MediaPlateScreen.uasset",
+			"ChunkId": "306a2f803628deec00000001"
+		},
+		{
+			"Path": "Engine/Plugins/Runtime/MeshModelingToolset/Content/Materials/M_DynamicMeshComponentVtxColor.uasset",
+			"ChunkId": "f1ebd6418dba317a00000001"
+		},
+		{
+			"Path": "Remnant2/Content/_Core/Blueprints/Actions/Action_Buff.uasset",
+			"ChunkId": "c699a381026c2c9600000001"
+		},
+		{
+			"Path": "Remnant2/Content/_Core/Blueprints/Actions/Action_Buff_DurationMod.uasset",
+			"ChunkId": "edc588fb4d117e5700000001"
+		},
+		{
+			"Path": "Remnant2/Content/_Core/Blueprints/Actions/Action_HealOverTime.uasset",
+			"ChunkId": "04bb82b7b28febea00000001"
+		},
+		{
+			"Path": "Remnant2/Content/_Core/Blueprints/Actions/Action_list.uasset",
+			"ChunkId": "d94c8a11c6fdd42700000001"
+		},
+		{
+			"Path": "Remnant2/Content/_Core/Blueprints/Actions/Action_SharedBuff_Player.uasset",
+			"ChunkId": "815a547e4473eaa200000001"
+		},
+		{
+			"Path": "Remnant2/Content/_Core/Blueprints/Actions/Action_Shield.uasset",
+			"ChunkId": "98fb794969676f3000000001"
+		},
+		{
+			"Path": "Remnant2/Content/_Core/Blueprints/Actions/Action_Shield_Applier.uasset",
+			"ChunkId": "0bc0f057a7a37a0d00000001"
+		},
+		{
+			"Path": "Remnant2/Content/_Core/Blueprints/Actions/EStackRule.uasset",
+			"ChunkId": "0565b32da03925c900000001"
+		},
+		{
+			"Path": "Remnant2/Content/_Core/Blueprints/Actions/ShieldHealthBar/Action_Shield_HealthBar.uasset",
+			"ChunkId": "8824c7056f63510a00000001"
+		},
+		{
+			"Path": "Remnant2/Content/_Core/Blueprints/Actions/Status_Bulwark/Action_Bulwark_Player.uasset",
+			"ChunkId": "032b3739eb3100be00000001"
+		},
+		{
+			"Path": "Remnant2/Content/_Core/Blueprints/Actions/Status_TeamShared/Action_TeamShared_Buff.uasset",
+			"ChunkId": "8170cb0a17190e6000000001"
+		},
+		{
+			"Path": "Remnant2/Content/_Core/Blueprints/Base/DisplayInfoComponent.uasset",
+			"ChunkId": "1c356d224694bbe200000001"
+		},
+		{
+			"Path": "Remnant2/Content/_Core/Blueprints/Inspect/InspectActor.uasset",
+			"ChunkId": "a5e9f5cf2eeec59b00000001"
+		},
+		{
+			"Path": "Remnant2/Content/_Core/Blueprints/Quests/Quest_RootQuest.uasset",
+			"ChunkId": "3a0a35cbce58063000000001"
+		},
+		{
+			"Path": "Remnant2/Content/_Core/ItemTypes/ItemCategory_Consumables.uasset",
+			"ChunkId": "90e016cb832ae28700000001"
+		},
+		{
+			"Path": "Remnant2/Content/_Core/ItemTypes/ItemCategory_Trinket.uasset",
+			"ChunkId": "d2a6c59cb388e5b000000001"
+		},
+		{
+			"Path": "Remnant2/Content/_Core/ItemTypes/ItemType_DragonHeart.uasset",
+			"ChunkId": "7fb05d241b0e6aa100000001"
+		},
+		{
+			"Path": "Remnant2/Content/_Core/ItemTypes/ItemType_Gem_Base.uasset",
+			"ChunkId": "b0c21f1f45f1354d00000001"
+		},
+		{
+			"Path": "Remnant2/Content/_Core/ItemTypes/ItemType_MetaGem_Ranged.uasset",
+			"ChunkId": "8654d11fbcbc900c00000001"
+		},
+		{
+			"Path": "Remnant2/Content/_Core/ItemTypes/ItemType_RangedWeaponMod.uasset",
+			"ChunkId": "a906902eadc5772e00000001"
+		},
+		{
+			"Path": "Remnant2/Content/_Core/ItemTypes/ItemType_Ring.uasset",
+			"ChunkId": "da6c81a4860fdc0700000001"
+		},
+		{
+			"Path": "Remnant2/Content/_Core/Stats/Base/StatDef_Armor.uasset",
+			"ChunkId": "673f4bfc80f639ed00000001"
+		},
+		{
+			"Path": "Remnant2/Content/_Core/Stats/Base/StatDef_Character_StatCaps.uasset",
+			"ChunkId": "74cfc4cbc01cef9200000001"
+		},
+		{
+			"Path": "Remnant2/Content/_Core/Stats/Base/StatDef_EnemyCharacter.uasset",
+			"ChunkId": "a3332e36d3f5f6df00000001"
+		},
+		{
+			"Path": "Remnant2/Content/_Core/Stats/Base/StatDef_Item.uasset",
+			"ChunkId": "42b1895acc78fa3d00000001"
+		},
+		{
+			"Path": "Remnant2/Content/_Core/Stats/Base/StatDef_MeleeWeapon.uasset",
+			"ChunkId": "f331a7da586453f800000001"
+		},
+		{
+			"Path": "Remnant2/Content/_Core/Stats/Base/StatDef_RangedWeapon.uasset",
+			"ChunkId": "90c78ed6c20be8c100000001"
+		},
+		{
+			"Path": "Remnant2/Content/_Core/Stats/Base/StatDef_Scaling.uasset",
+			"ChunkId": "094dc8feb975351700000001"
+		},
+		{
+			"Path": "Remnant2/Content/_Core/Stats/Stats_Armor.uasset",
+			"ChunkId": "ce53e3b3d97efcb500000001"
+		},
+		{
+			"Path": "Remnant2/Content/_Core/Stats/Stats_Character_StatCaps.uasset",
+			"ChunkId": "b592d21f5e4cca4d00000001"
+		},
+		{
+			"Path": "Remnant2/Content/_Core/Stats/Stats_Items.uasset",
+			"ChunkId": "ccf08b67ec1417b200000001"
+		},
+		{
+			"Path": "Remnant2/Content/_Core/Stats/Stats_MeleeWeapon.uasset",
+			"ChunkId": "fea79733a84717e100000001"
+		},
+		{
+			"Path": "Remnant2/Content/_Core/Stats/Stats_RangedWeapon.uasset",
+			"ChunkId": "3ba208c20d72e70f00000001"
+		},
+		{
+			"Path": "Remnant2/Content/_Core/Stats/Stats_Scaling_Difficulty.uasset",
+			"ChunkId": "aaeb1490f3a097b700000001"
+		},
+		{
+			"Path": "Remnant2/Content/_Core/Stats/Stats_Scaling_NumPlayers.uasset",
+			"ChunkId": "3c774bc830f45cbd00000001"
+		},
+		{
+			"Path": "Remnant2/Content/Characters/NPC/Common/Character_Merchant_Base.uasset",
+			"ChunkId": "620579a0becce99800000001"
+		},
+		{
+			"Path": "Remnant2/Content/Characters/NPC/Common/Character_NPC.uasset",
+			"ChunkId": "b4f45fbd3731c81600000001"
+		},
+		{
+			"Path": "Remnant2/Content/Characters/Player/Input/Actions/Fire.uasset",
+			"ChunkId": "bc12137ccb95b92e00000001"
+		},
+		{
+			"Path": "Remnant2/Content/Characters/Player/Input/Actions/WeaponMod.uasset",
+			"ChunkId": "3ac93167f765f91e00000001"
+		},
+		{
+			"Path": "Remnant2/Content/Items/Common/Consumable_DragonHeart.uasset",
+			"ChunkId": "15c137f0cff667fb00000001"
+		},
+		{
+			"Path": "Remnant2/Content/Items/Common/Consumable_DragonHeart_Action.uasset",
+			"ChunkId": "7fa84980afc5d2d600000001"
+		},
+		{
+			"Path": "Remnant2/Content/Items/Common/Consumable_DragonHeart_Inspect.uasset",
+			"ChunkId": "9524cc60384c8cab00000001"
+		},
+		{
+			"Path": "Remnant2/Content/Items/Weapons/Common/Weapon_Boss_ComputedStats.uasset",
+			"ChunkId": "5ee62448aa86ad2800000001"
+		},
+		{
+			"Path": "Remnant2/Content/Items/Weapons/Common/Weapon_ComputedStats.uasset",
+			"ChunkId": "1516ed4c309abf4900000001"
+		},
+		{
+			"Path": "Remnant2/Content/Items/Weapons/Common/Weapon_Gun_Base.uasset",
+			"ChunkId": "7422f078d4a60a9700000001"
+		},
+		{
+			"Path": "Remnant2/Content/Items/Weapons/Common/Weapon_HandGun_Base.uasset",
+			"ChunkId": "db5cf8e0ea07eff700000001"
+		},
+		{
+			"Path": "Remnant2/Content/Items/Weapons/Common/Weapon_LongGun_Base.uasset",
+			"ChunkId": "21c6119de03cacc700000001"
+		},
+		{
+			"Path": "Remnant2/Content/Shared/Material/MASTER/M_MASTER_Character_Detail.uasset",
+			"ChunkId": "de322b06bcb2a4d100000001"
+		},
+		{
+			"Path": "Remnant2/Content/UI/UI_Inventory/Widget_InventoryList.uasset",
+			"ChunkId": "16fa34b1081c3eca00000001"
+		},
+		{
+			"Path": "Remnant2/Content/World_Base/Items/_Core/BP_Item.uasset",
+			"ChunkId": "16e2fe899aff3a1200000001"
+		},
+		{
+			"Path": "Remnant2/Content/World_Base/Items/_Core/Trinkets/Trinket_Base.uasset",
+			"ChunkId": "573fc8f9fb28b54f00000001"
+		},
+		{
+			"Path": "Remnant2/Content/World_Base/Items/_Core/Trinkets/Trinket_TriggerOnEquip.uasset",
+			"ChunkId": "c19df7908c5a357300000001"
+		},
+		{
+			"Path": "Remnant2/Content/World_Base/Items/Armor/Base/RelicTesting/Action_Relic_Base_Child.uasset",
+			"ChunkId": "716fe5f86fb81a1700000001"
+		},
+		{
+			"Path": "Remnant2/Content/World_Base/Items/Gems/_Core/Gem_Base.uasset",
+			"ChunkId": "4852b8c88a1bdd8100000001"
+		},
+		{
+			"Path": "Remnant2/Content/World_Base/Items/Gems/_Core/Gem_RelicFragment_Base.uasset",
+			"ChunkId": "5268cfa148b2fef200000001"
+		},
+		{
+			"Path": "Remnant2/Content/World_Base/Items/Gems/_Core/Gem_Simple.uasset",
+			"ChunkId": "ff035c5b3ccb9f7d00000001"
+		},
+		{
+			"Path": "Remnant2/Content/World_Base/Items/Materials/Scraps/Material_Scraps.uasset",
+			"ChunkId": "6c6be48aa0673f0600000001"
+		},
+		{
+			"Path": "Remnant2/Content/World_Base/Quests/Quest_Ward13/Quest_Ward13.uasset",
+			"ChunkId": "8b302bf07dc7672f00000001"
+		},
+		{
+			"Path": "Remnant2/Content/World_DLC1/Stats/Stats_Character_DLC1.uasset",
+			"ChunkId": "2dee9a8431f5621e00000001"
+		},
+		{
+			"Path": "Remnant2/Content/World_Fae/Stats/Stats_Character_Fae.uasset",
+			"ChunkId": "3f3c53073f32c46300000001"
+		},
+		{
+			"Path": "Remnant2/Content/World_Jungle/Stats/Stats_Character_Jungle.uasset",
+			"ChunkId": "bf0483421aa6eb8200000001"
+		},
+		{
+			"Path": "Remnant2/Content/World_Labyrinth/Stats/Stats_Character_Lab.uasset",
+			"ChunkId": "4512111f06bad27d00000001"
+		},
+		{
+			"Path": "Remnant2/Content/World_Nerud/Stats/Stats_Character_Nerud.uasset",
+			"ChunkId": "f675be15ad050ce200000001"
+		},
+		{
+			"Path": "Remnant2/Content/World_Root/Stats/Stats_Character_Root_World.uasset",
+			"ChunkId": "1a33d84e998c0fc400000001"
+		},
+		{
+			"Path": "Remnant2/Plugins/Shared/ACLPlugin/Content/ACLAnimBoneCompressionSettings.uasset",
+			"ChunkId": "cb8773fff36c1ce300000001"
+		},
+		{
+			"Path": "Remnant2/Plugins/Shared/ACLPlugin/Content/ACLAnimCurveCompressionSettings.uasset",
+			"ChunkId": "620388081e70557300000001"
+		}
+	],
+	"Packages": [
+		{
+			"Name": "/ACLPlugin/ACLAnimBoneCompressionSettings",
+			"ExportBundleChunkIds": [
+				"cb8773fff36c1ce300000001"
+			]
+		},
+		{
+			"Name": "/ACLPlugin/ACLAnimCurveCompressionSettings",
+			"ExportBundleChunkIds": [
+				"620388081e70557300000001"
+			]
+		},
+		{
+			"Name": "/Engine/Animation/DefaultRecorderBoneCompression",
+			"ExportBundleChunkIds": [
+				"3cb0431e18cb83db00000001"
+			]
+		},
+		{
+			"Name": "/Engine/ArtTools/RenderToTexture/Meshes/S_1_Unit_Plane",
+			"ExportBundleChunkIds": [
+				"7b9c08e592b6f57800000001"
+			]
+		},
+		{
+			"Name": "/Engine/BasicShapes/Cone",
+			"ExportBundleChunkIds": [
+				"f23f619700918ac500000001"
+			]
+		},
+		{
+			"Name": "/Engine/BasicShapes/Cube",
+			"ExportBundleChunkIds": [
+				"71fe0432abe4de2400000001"
+			]
+		},
+		{
+			"Name": "/Engine/BasicShapes/Cylinder",
+			"ExportBundleChunkIds": [
+				"7607d982d08b414700000001"
+			]
+		},
+		{
+			"Name": "/Engine/BasicShapes/Plane",
+			"ExportBundleChunkIds": [
+				"a44601bc68ca3f2400000001"
+			]
+		},
+		{
+			"Name": "/Engine/BasicShapes/Sphere",
+			"ExportBundleChunkIds": [
+				"4a782f60fcb4c26e00000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineDamageTypes/DmgTypeBP_Environmental",
+			"ExportBundleChunkIds": [
+				"79688f0e793acea100000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineDebugMaterials/DebugEditorMaterial",
+			"ExportBundleChunkIds": [
+				"7045cf1b55a1317500000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineDebugMaterials/DebugMeshMaterial",
+			"ExportBundleChunkIds": [
+				"d9ef76f15dcbda9d00000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineDebugMaterials/M_SimpleUnlitTranslucent",
+			"ExportBundleChunkIds": [
+				"a06a91154845992200000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineDebugMaterials/M_VolumeRenderSphereTracePP",
+			"ExportBundleChunkIds": [
+				"3bf2df25e14476d700000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineDebugMaterials/VolumeToRender",
+			"ExportBundleChunkIds": [
+				"7f8259be57e87dce00000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineFonts/Faces/DroidSansFallback",
+			"ExportBundleChunkIds": [
+				"a9e44eb998f07d0800000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineFonts/Faces/RobotoBold",
+			"ExportBundleChunkIds": [
+				"368e94bf2073b74d00000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineFonts/Faces/RobotoBoldItalic",
+			"ExportBundleChunkIds": [
+				"0fcbf7e6705a3afe00000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineFonts/Faces/RobotoItalic",
+			"ExportBundleChunkIds": [
+				"6ef7eb5c150af73a00000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineFonts/Faces/RobotoLight",
+			"ExportBundleChunkIds": [
+				"0668993fb5b5811c00000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineFonts/Faces/RobotoRegular",
+			"ExportBundleChunkIds": [
+				"5ba734afa75fb33c00000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineFonts/Faces/RobotoTiny",
+			"ExportBundleChunkIds": [
+				"9185e15ed1f5df5f00000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineFonts/Roboto",
+			"ExportBundleChunkIds": [
+				"08578f8490e5c66d00000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineFonts/RobotoDistanceField",
+			"ExportBundleChunkIds": [
+				"52a5c49a743a12b500000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineFonts/RobotoTiny",
+			"ExportBundleChunkIds": [
+				"67e0d5da2a9c1cfb00000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineMaterials/BaseFlattenDiffuseMap",
+			"ExportBundleChunkIds": [
+				"641c8321450e97f400000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineMaterials/BaseFlattenDiffuseMap_VT",
+			"ExportBundleChunkIds": [
+				"adba4404ca6448ad00000001"
+			],
+			"BulkDataChunkIds": [
+				"adba4404ca6448ad00000002"
+			]
+		},
+		{
+			"Name": "/Engine/EngineMaterials/BaseFlattenEmissiveMap",
+			"ExportBundleChunkIds": [
+				"7ba7b2b1aeafb4cc00000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineMaterials/BaseFlattenEmissiveMap_VT",
+			"ExportBundleChunkIds": [
+				"d77ca907bf9be46e00000001"
+			],
+			"BulkDataChunkIds": [
+				"d77ca907bf9be46e00000002"
+			]
+		},
+		{
+			"Name": "/Engine/EngineMaterials/BaseFlattenGrayscaleMap",
+			"ExportBundleChunkIds": [
+				"2563b8e7aff6d26e00000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineMaterials/BaseFlattenGrayscaleMap_VT",
+			"ExportBundleChunkIds": [
+				"0219c3161c6d6eb200000001"
+			],
+			"BulkDataChunkIds": [
+				"0219c3161c6d6eb200000002"
+			]
+		},
+		{
+			"Name": "/Engine/EngineMaterials/BaseFlattenLinearColor",
+			"ExportBundleChunkIds": [
+				"768633666781f70600000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineMaterials/BaseFlattenLinearColor_VT",
+			"ExportBundleChunkIds": [
+				"c599b991259f3dc100000001"
+			],
+			"BulkDataChunkIds": [
+				"c599b991259f3dc100000002"
+			]
+		},
+		{
+			"Name": "/Engine/EngineMaterials/BaseFlattenNormalMap",
+			"ExportBundleChunkIds": [
+				"c18dd883a0c55c8b00000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineMaterials/BaseFlattenNormalMap_VT",
+			"ExportBundleChunkIds": [
+				"28ed83b8029dd22900000001"
+			],
+			"BulkDataChunkIds": [
+				"28ed83b8029dd22900000002"
+			]
+		},
+		{
+			"Name": "/Engine/EngineMaterials/Black_1x1_EXR_Texture_VT",
+			"ExportBundleChunkIds": [
+				"4eefe050ec0582d800000001"
+			],
+			"BulkDataChunkIds": [
+				"4eefe050ec0582d800000002"
+			]
+		},
+		{
+			"Name": "/Engine/EngineMaterials/BlendFunc_DefBase",
+			"ExportBundleChunkIds": [
+				"34b40296d0d3844e00000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineMaterials/BlendFunc_DefBlend",
+			"ExportBundleChunkIds": [
+				"b1dd9666d4d25cf600000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineMaterials/DefaultBloomKernel",
+			"ExportBundleChunkIds": [
+				"cbab6b01dd8b7ffe00000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineMaterials/DefaultBokeh",
+			"ExportBundleChunkIds": [
+				"65401b411493477b00000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineMaterials/DefaultCalibrationColor",
+			"ExportBundleChunkIds": [
+				"c8548e53bc64ae9400000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineMaterials/DefaultCalibrationGrayscale",
+			"ExportBundleChunkIds": [
+				"b916d415e9289b5500000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineMaterials/DefaultDeferredDecalMaterial",
+			"ExportBundleChunkIds": [
+				"ef400c1f3fd91f2a00000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineMaterials/DefaultDestructiblePhysicalMaterial",
+			"ExportBundleChunkIds": [
+				"f324387808549ca400000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineMaterials/DefaultDiffuse",
+			"ExportBundleChunkIds": [
+				"7539f12095a3f0d100000001"
+			],
+			"BulkDataChunkIds": [
+				"7539f12095a3f0d100000002"
+			]
+		},
+		{
+			"Name": "/Engine/EngineMaterials/DefaultLightFunctionMaterial",
+			"ExportBundleChunkIds": [
+				"0125e0852ce3d3e700000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineMaterials/DefaultMaterial",
+			"ExportBundleChunkIds": [
+				"b4d3126ba7954ec000000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineMaterials/DefaultPhysicalMaterial",
+			"ExportBundleChunkIds": [
+				"86f514aa5cdc08e700000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineMaterials/DefaultPostProcessMaterial",
+			"ExportBundleChunkIds": [
+				"6c3a98c4aa151a5300000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineMaterials/DefaultTextMaterialOpaque",
+			"ExportBundleChunkIds": [
+				"e3ad05e4a2d7a17c00000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineMaterials/DefaultWhiteGrid",
+			"ExportBundleChunkIds": [
+				"624f937426db20c500000001"
+			],
+			"BulkDataChunkIds": [
+				"624f937426db20c500000002"
+			]
+		},
+		{
+			"Name": "/Engine/EngineMaterials/DefaultWhiteGrid_Low",
+			"ExportBundleChunkIds": [
+				"8500a33b2fedbab800000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineMaterials/EmissiveMeshMaterial",
+			"ExportBundleChunkIds": [
+				"6ebbe4a6ced841cc00000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineMaterials/FlattenMaterial",
+			"ExportBundleChunkIds": [
+				"2acd952336aab07f00000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineMaterials/FlattenMaterial_VT",
+			"ExportBundleChunkIds": [
+				"f38cb73e67825d9600000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineMaterials/FlattenMaterial_WS_Normal_VT",
+			"ExportBundleChunkIds": [
+				"da9ef9387e6c513600000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineMaterials/GizmoMaterial",
+			"ExportBundleChunkIds": [
+				"4f766dcdfcc10abc00000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineMaterials/Good64x64TilingNoiseHighFreq",
+			"ExportBundleChunkIds": [
+				"1c3a80931d7381bf00000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineMaterials/InvalidLightmapSettings",
+			"ExportBundleChunkIds": [
+				"cdb6f2e8065df7c100000001"
+			],
+			"BulkDataChunkIds": [
+				"cdb6f2e8065df7c100000002"
+			]
+		},
+		{
+			"Name": "/Engine/EngineMaterials/LandscapeHolePhysicalMaterial",
+			"ExportBundleChunkIds": [
+				"1e6d8045809cdfe100000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineMaterials/M_InvalidLightmapSettings",
+			"ExportBundleChunkIds": [
+				"3c018da41573213600000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineMaterials/MiniFont",
+			"ExportBundleChunkIds": [
+				"58ac407f95ae164b00000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineMaterials/NaniteHiddenSectionMaterial",
+			"ExportBundleChunkIds": [
+				"27b794321822576600000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineMaterials/PhAT_JointLimitMaterial",
+			"ExportBundleChunkIds": [
+				"305a1ec18dd5a4be00000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineMaterials/PhysMat_Carboard",
+			"ExportBundleChunkIds": [
+				"05312b478e9df45f00000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineMaterials/PhysMat_Ice",
+			"ExportBundleChunkIds": [
+				"d502658af5d5bc8100000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineMaterials/PhysMat_Metal",
+			"ExportBundleChunkIds": [
+				"815802be5b7b800c00000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineMaterials/PhysMat_Rubber",
+			"ExportBundleChunkIds": [
+				"7eca92f3c72d030000000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineMaterials/PhysMat_Vehicle",
+			"ExportBundleChunkIds": [
+				"c0fcce7a5ba5716c00000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineMaterials/PhysMat_VehicleRagdoll",
+			"ExportBundleChunkIds": [
+				"acf9400e32303fd600000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineMaterials/PPM_DefaultCalibrationColor",
+			"ExportBundleChunkIds": [
+				"a4739b1d475b4a3e00000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineMaterials/PPM_DefaultCalibrationGrayscale",
+			"ExportBundleChunkIds": [
+				"14c0e68102482a4700000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineMaterials/PreintegratedSkinBRDF",
+			"ExportBundleChunkIds": [
+				"b60efe12572543e800000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineMaterials/RemoveSurfaceMaterial",
+			"ExportBundleChunkIds": [
+				"f0a7f83421ac425b00000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineMaterials/STBlueNoise_scalar_128x128x64",
+			"ExportBundleChunkIds": [
+				"20fa3a2484d4c32600000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineMaterials/STBlueNoise_vec2_128x128x64",
+			"ExportBundleChunkIds": [
+				"ecd9b30185efcf5800000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineMaterials/T_Default_Material_Grid_M",
+			"ExportBundleChunkIds": [
+				"b743bdd5e5df72a400000001"
+			],
+			"BulkDataChunkIds": [
+				"b743bdd5e5df72a400000002"
+			]
+		},
+		{
+			"Name": "/Engine/EngineMaterials/T_Default_Material_Grid_N",
+			"ExportBundleChunkIds": [
+				"7a7173cfb4095b9f00000001"
+			],
+			"BulkDataChunkIds": [
+				"7a7173cfb4095b9f00000002"
+			]
+		},
+		{
+			"Name": "/Engine/EngineMaterials/WeightMapPlaceholderTexture",
+			"ExportBundleChunkIds": [
+				"4077f21c1acd58d500000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineMaterials/Widget3DPassThrough",
+			"ExportBundleChunkIds": [
+				"27d7aeddb1b7c7fc00000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineMaterials/Widget3DPassThrough_Masked",
+			"ExportBundleChunkIds": [
+				"85eb7ec9f6c8613a00000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineMaterials/Widget3DPassThrough_Masked_OneSided",
+			"ExportBundleChunkIds": [
+				"3a0245e4904b10b500000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineMaterials/Widget3DPassThrough_Opaque",
+			"ExportBundleChunkIds": [
+				"dd353fe85598727e00000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineMaterials/Widget3DPassThrough_Opaque_OneSided",
+			"ExportBundleChunkIds": [
+				"0e6a0028be3a2a6c00000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineMaterials/Widget3DPassThrough_Translucent",
+			"ExportBundleChunkIds": [
+				"34868b7f9c10838900000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineMaterials/Widget3DPassThrough_Translucent_OneSided",
+			"ExportBundleChunkIds": [
+				"2925796cddcc148c00000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineMaterials/WorldGridMaterial",
+			"ExportBundleChunkIds": [
+				"eeb296b2a739309500000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineMeshes/Sphere",
+			"ExportBundleChunkIds": [
+				"f421d8f857b9ed0300000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineResources/Black",
+			"ExportBundleChunkIds": [
+				"cda0cf6115260c9400000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineResources/DefaultTexture",
+			"ExportBundleChunkIds": [
+				"6baf53cf79c0948b00000001"
+			],
+			"BulkDataChunkIds": [
+				"6baf53cf79c0948b00000002"
+			]
+		},
+		{
+			"Name": "/Engine/EngineResources/DefaultTextureCube",
+			"ExportBundleChunkIds": [
+				"3e6f2bc6739d380300000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineResources/DefaultVolumeTexture",
+			"ExportBundleChunkIds": [
+				"e6291a81a77661e900000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineResources/DefaultVolumeTexture2D",
+			"ExportBundleChunkIds": [
+				"6c54e7f6d4ea912200000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineResources/FilmGrains/Marcie_Grain_v3_128_M2_000",
+			"ExportBundleChunkIds": [
+				"ad84bf334b97e1af00000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineResources/GradientTexture0",
+			"ExportBundleChunkIds": [
+				"f87a01e7b138538a00000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineResources/WhiteSquareTexture",
+			"ExportBundleChunkIds": [
+				"b85ee5fd59f4dd2000000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineSky/M_SimpleSkyDome",
+			"ExportBundleChunkIds": [
+				"e61c20398c40eda200000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineSky/M_Sky_Panning_Clouds2",
+			"ExportBundleChunkIds": [
+				"6098725f85292e1b00000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineSky/SM_SkySphere",
+			"ExportBundleChunkIds": [
+				"48df828be219f7ad00000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineSky/T_Sky_Blue",
+			"ExportBundleChunkIds": [
+				"86737b633647e77300000001"
+			],
+			"BulkDataChunkIds": [
+				"86737b633647e77300000002"
+			]
+		},
+		{
+			"Name": "/Engine/EngineSky/T_Sky_Clouds_M",
+			"ExportBundleChunkIds": [
+				"927b2fe4876a1f7400000001"
+			],
+			"BulkDataChunkIds": [
+				"927b2fe4876a1f7400000002"
+			]
+		},
+		{
+			"Name": "/Engine/EngineSky/T_Sky_Stars",
+			"ExportBundleChunkIds": [
+				"56d51199b9b2142a00000001"
+			],
+			"BulkDataChunkIds": [
+				"56d51199b9b2142a00000002"
+			]
+		},
+		{
+			"Name": "/Engine/EngineSky/VolumetricClouds/CloudGradientTexture",
+			"ExportBundleChunkIds": [
+				"d28cf23bc747e18000000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineSky/VolumetricClouds/CloudWeatherTexture",
+			"ExportBundleChunkIds": [
+				"b3b465c34fc83f8e00000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineSky/VolumetricClouds/m_SimpleVolumetricCloud",
+			"ExportBundleChunkIds": [
+				"497b4263fbd333c800000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineSky/VolumetricClouds/m_SimpleVolumetricCloud_Inst",
+			"ExportBundleChunkIds": [
+				"4b7bf926a5212df600000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineSky/VolumetricClouds/T_NoiseErosion",
+			"ExportBundleChunkIds": [
+				"92d47df83dccf7d800000001"
+			],
+			"BulkDataChunkIds": [
+				"92d47df83dccf7d800000002"
+			]
+		},
+		{
+			"Name": "/Engine/EngineSky/VolumetricClouds/T_NoiseShape64",
+			"ExportBundleChunkIds": [
+				"a996adcfa357ed2d00000001"
+			],
+			"BulkDataChunkIds": [
+				"a996adcfa357ed2d00000002"
+			]
+		},
+		{
+			"Name": "/Engine/EngineSky/VolumetricClouds/T_VolumeNoiseErosion32",
+			"ExportBundleChunkIds": [
+				"e21a9990b0ff22d600000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineSky/VolumetricClouds/T_VolumeNoiseShape64",
+			"ExportBundleChunkIds": [
+				"730711032edb546300000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineSounds/Submixes/MasterEQEffectPreset",
+			"ExportBundleChunkIds": [
+				"7819480612024b3600000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineSounds/Submixes/MasterEQSubmixDefault",
+			"ExportBundleChunkIds": [
+				"cadc4d0ec817b83400000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineSounds/Submixes/MasterReverbEffectPreset",
+			"ExportBundleChunkIds": [
+				"abde94c25a5272fc00000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineSounds/Submixes/MasterReverbSubmixDefault",
+			"ExportBundleChunkIds": [
+				"cda0bce26734770500000001"
+			]
+		},
+		{
+			"Name": "/Engine/EngineSounds/Submixes/MasterSubmixDefault",
+			"ExportBundleChunkIds": [
+				"b059d54260cfd24100000001"
+			]
+		},
+		{
+			"Name": "/Engine/Functions/Engine_MaterialFunctions01/Gradient/LinearGradient",
+			"ExportBundleChunkIds": [
+				"e43855b9d402d6d500000001"
+			]
+		},
+		{
+			"Name": "/Engine/Functions/Engine_MaterialFunctions01/ImageAdjustment/CheapContrast",
+			"ExportBundleChunkIds": [
+				"dab3ede8bda8d8ca00000001"
+			]
+		},
+		{
+			"Name": "/Engine/Functions/Engine_MaterialFunctions01/Opacity/CameraDepthFade",
+			"ExportBundleChunkIds": [
+				"6a3b7a697242e13400000001"
+			]
+		},
+		{
+			"Name": "/Engine/Functions/Engine_MaterialFunctions01/Shading/ConvertFromDiffSpec",
+			"ExportBundleChunkIds": [
+				"6752d9e62e6e395700000001"
+			]
+		},
+		{
+			"Name": "/Engine/Functions/Engine_MaterialFunctions01/Shading/PowerToRoughness",
+			"ExportBundleChunkIds": [
+				"474711309ee6ba8900000001"
+			]
+		},
+		{
+			"Name": "/Engine/Functions/Engine_MaterialFunctions02/ObjectLocalBounds",
+			"ExportBundleChunkIds": [
+				"8d4486caf50605b200000001"
+			]
+		},
+		{
+			"Name": "/Engine/Functions/Engine_MaterialFunctions02/PivotPainter2/Black_1x1_EXR_Texture",
+			"ExportBundleChunkIds": [
+				"b60fa590a5fe4d6f00000001"
+			]
+		},
+		{
+			"Name": "/Engine/Functions/Engine_MaterialFunctions02/SafeNormalize",
+			"ExportBundleChunkIds": [
+				"b2e55f36209c19b000000001"
+			]
+		},
+		{
+			"Name": "/Engine/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components",
+			"ExportBundleChunkIds": [
+				"94d5e4cbc0f4380c00000001"
+			]
+		},
+		{
+			"Name": "/Engine/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat3Components",
+			"ExportBundleChunkIds": [
+				"7276d40fd50dba5900000001"
+			]
+		},
+		{
+			"Name": "/Engine/Functions/Engine_MaterialFunctions02/Utility/CameraDirectionVector",
+			"ExportBundleChunkIds": [
+				"5f510b7cd6e0bdc800000001"
+			]
+		},
+		{
+			"Name": "/Engine/Functions/Engine_MaterialFunctions02/Utility/MakeFloat2",
+			"ExportBundleChunkIds": [
+				"a29fb34f83f7d31a00000001"
+			]
+		},
+		{
+			"Name": "/Engine/Functions/Engine_MaterialFunctions02/Utility/MakeFloat3",
+			"ExportBundleChunkIds": [
+				"3f9ae4ae5e9a10b000000001"
+			]
+		},
+		{
+			"Name": "/Engine/Functions/Engine_MaterialFunctions02/Utility/VectorLength",
+			"ExportBundleChunkIds": [
+				"3f4f90b51972562400000001"
+			]
+		},
+		{
+			"Name": "/Engine/Functions/Engine_MaterialFunctions02/UVs/BoundingBoxBased_0-1_UVW",
+			"ExportBundleChunkIds": [
+				"c851afa144f311c000000001"
+			]
+		},
+		{
+			"Name": "/Engine/Functions/Engine_MaterialFunctions02/WorldPositionOffset/CameraOffset",
+			"ExportBundleChunkIds": [
+				"84ee12d7bc5f5a8000000001"
+			]
+		},
+		{
+			"Name": "/Engine/Functions/Engine_MaterialFunctions02/WorldPositionOffset/ObjectScale",
+			"ExportBundleChunkIds": [
+				"4762b775bfe4b22d00000001"
+			]
+		},
+		{
+			"Name": "/Engine/Functions/Engine_MaterialFunctions03/Blends/Blend_Overlay",
+			"ExportBundleChunkIds": [
+				"f0bdde7a2df6543900000001"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Entry",
+			"ExportBundleChunkIds": [
+				"d31cf458faf4915200000001"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Entry_BuiltData",
+			"ExportBundleChunkIds": [
+				"f95ade32d57ba98c00000001"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Templates/OpenWorld",
+			"ExportBundleChunkIds": [
+				"876e71635f6a8ae500000001"
+			],
+			"BulkDataChunkIds": [
+				"876e71635f6a8ae500000002"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-1_Y-1",
+			"ExportBundleChunkIds": [
+				"3c096363bc550e7300000001"
+			],
+			"BulkDataChunkIds": [
+				"3c096363bc550e7300000002"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-1_Y-2",
+			"ExportBundleChunkIds": [
+				"6bc337480ecbf8f600000001"
+			],
+			"BulkDataChunkIds": [
+				"6bc337480ecbf8f600000002"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-1_Y-3",
+			"ExportBundleChunkIds": [
+				"283a1d96719009aa00000001"
+			],
+			"BulkDataChunkIds": [
+				"283a1d96719009aa00000002"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-1_Y-4",
+			"ExportBundleChunkIds": [
+				"fb65ffa2a3cde8c400000001"
+			],
+			"BulkDataChunkIds": [
+				"fb65ffa2a3cde8c400000002"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-1_Y0",
+			"ExportBundleChunkIds": [
+				"91a247c88b2b9a7700000001"
+			],
+			"BulkDataChunkIds": [
+				"91a247c88b2b9a7700000002"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-1_Y1",
+			"ExportBundleChunkIds": [
+				"37b0fe853ba6e40f00000001"
+			],
+			"BulkDataChunkIds": [
+				"37b0fe853ba6e40f00000002"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-1_Y2",
+			"ExportBundleChunkIds": [
+				"b79acc526b7a773000000001"
+			],
+			"BulkDataChunkIds": [
+				"b79acc526b7a773000000002"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-1_Y3",
+			"ExportBundleChunkIds": [
+				"a9835baf7d9e8bef00000001"
+			],
+			"BulkDataChunkIds": [
+				"a9835baf7d9e8bef00000002"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-2_Y-1",
+			"ExportBundleChunkIds": [
+				"269230ce2bfe767000000001"
+			],
+			"BulkDataChunkIds": [
+				"269230ce2bfe767000000002"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-2_Y-2",
+			"ExportBundleChunkIds": [
+				"3bcccc9a0036e48600000001"
+			],
+			"BulkDataChunkIds": [
+				"3bcccc9a0036e48600000002"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-2_Y-3",
+			"ExportBundleChunkIds": [
+				"8cd797f15436aa7c00000001"
+			],
+			"BulkDataChunkIds": [
+				"8cd797f15436aa7c00000002"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-2_Y-4",
+			"ExportBundleChunkIds": [
+				"b59d2a95bc65d41c00000001"
+			],
+			"BulkDataChunkIds": [
+				"b59d2a95bc65d41c00000002"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-2_Y0",
+			"ExportBundleChunkIds": [
+				"65d6f00719e11c8100000001"
+			],
+			"BulkDataChunkIds": [
+				"65d6f00719e11c8100000002"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-2_Y1",
+			"ExportBundleChunkIds": [
+				"e91897219076bc2900000001"
+			],
+			"BulkDataChunkIds": [
+				"e91897219076bc2900000002"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-2_Y2",
+			"ExportBundleChunkIds": [
+				"8c5c71a06334c1a700000001"
+			],
+			"BulkDataChunkIds": [
+				"8c5c71a06334c1a700000002"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-2_Y3",
+			"ExportBundleChunkIds": [
+				"7ada034cdec6d00f00000001"
+			],
+			"BulkDataChunkIds": [
+				"7ada034cdec6d00f00000002"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-3_Y-1",
+			"ExportBundleChunkIds": [
+				"fcf5ca8f74c265f500000001"
+			],
+			"BulkDataChunkIds": [
+				"fcf5ca8f74c265f500000002"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-3_Y-2",
+			"ExportBundleChunkIds": [
+				"5c15a055ef7970fa00000001"
+			],
+			"BulkDataChunkIds": [
+				"5c15a055ef7970fa00000002"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-3_Y-3",
+			"ExportBundleChunkIds": [
+				"616283edc68cb3d800000001"
+			],
+			"BulkDataChunkIds": [
+				"616283edc68cb3d800000002"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-3_Y-4",
+			"ExportBundleChunkIds": [
+				"6b3d308275bc22ec00000001"
+			],
+			"BulkDataChunkIds": [
+				"6b3d308275bc22ec00000002"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-3_Y0",
+			"ExportBundleChunkIds": [
+				"115e98bdaf971de500000001"
+			],
+			"BulkDataChunkIds": [
+				"115e98bdaf971de500000002"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-3_Y1",
+			"ExportBundleChunkIds": [
+				"f37818df92d7168600000001"
+			],
+			"BulkDataChunkIds": [
+				"f37818df92d7168600000002"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-3_Y2",
+			"ExportBundleChunkIds": [
+				"475e008e026e688d00000001"
+			],
+			"BulkDataChunkIds": [
+				"475e008e026e688d00000002"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-3_Y3",
+			"ExportBundleChunkIds": [
+				"a86608f1916c740800000001"
+			],
+			"BulkDataChunkIds": [
+				"a86608f1916c740800000002"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-4_Y-1",
+			"ExportBundleChunkIds": [
+				"544b930e94e7493000000001"
+			],
+			"BulkDataChunkIds": [
+				"544b930e94e7493000000002"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-4_Y-2",
+			"ExportBundleChunkIds": [
+				"ee1d4070577492d000000001"
+			],
+			"BulkDataChunkIds": [
+				"ee1d4070577492d000000002"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-4_Y-3",
+			"ExportBundleChunkIds": [
+				"bcda499c0e9e616b00000001"
+			],
+			"BulkDataChunkIds": [
+				"bcda499c0e9e616b00000002"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-4_Y-4",
+			"ExportBundleChunkIds": [
+				"0748407bd0398cd400000001"
+			],
+			"BulkDataChunkIds": [
+				"0748407bd0398cd400000002"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-4_Y0",
+			"ExportBundleChunkIds": [
+				"b183c29d6ca75aad00000001"
+			],
+			"BulkDataChunkIds": [
+				"b183c29d6ca75aad00000002"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-4_Y1",
+			"ExportBundleChunkIds": [
+				"26641fb4ee821f0700000001"
+			],
+			"BulkDataChunkIds": [
+				"26641fb4ee821f0700000002"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-4_Y2",
+			"ExportBundleChunkIds": [
+				"edd7dfa102bf220900000001"
+			],
+			"BulkDataChunkIds": [
+				"edd7dfa102bf220900000002"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X-4_Y3",
+			"ExportBundleChunkIds": [
+				"39289f2dff97af9400000001"
+			],
+			"BulkDataChunkIds": [
+				"39289f2dff97af9400000002"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X0_Y-1",
+			"ExportBundleChunkIds": [
+				"666964b6599a74ff00000001"
+			],
+			"BulkDataChunkIds": [
+				"666964b6599a74ff00000002"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X0_Y-2",
+			"ExportBundleChunkIds": [
+				"47a568e738749a3300000001"
+			],
+			"BulkDataChunkIds": [
+				"47a568e738749a3300000002"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X0_Y-3",
+			"ExportBundleChunkIds": [
+				"9954a1b7a6b6ab1700000001"
+			],
+			"BulkDataChunkIds": [
+				"9954a1b7a6b6ab1700000002"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X0_Y-4",
+			"ExportBundleChunkIds": [
+				"37d23241726820ad00000001"
+			],
+			"BulkDataChunkIds": [
+				"37d23241726820ad00000002"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X0_Y0",
+			"ExportBundleChunkIds": [
+				"1efd19a0bba96d1500000001"
+			],
+			"BulkDataChunkIds": [
+				"1efd19a0bba96d1500000002"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X0_Y1",
+			"ExportBundleChunkIds": [
+				"4aeab07a3570234700000001"
+			],
+			"BulkDataChunkIds": [
+				"4aeab07a3570234700000002"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X0_Y2",
+			"ExportBundleChunkIds": [
+				"9efc001a266f916b00000001"
+			],
+			"BulkDataChunkIds": [
+				"9efc001a266f916b00000002"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X0_Y3",
+			"ExportBundleChunkIds": [
+				"07d3ca28b3fb8a7c00000001"
+			],
+			"BulkDataChunkIds": [
+				"07d3ca28b3fb8a7c00000002"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X1_Y-1",
+			"ExportBundleChunkIds": [
+				"6a8754ece57ec00a00000001"
+			],
+			"BulkDataChunkIds": [
+				"6a8754ece57ec00a00000002"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X1_Y-2",
+			"ExportBundleChunkIds": [
+				"59da57f2f4d5f78800000001"
+			],
+			"BulkDataChunkIds": [
+				"59da57f2f4d5f78800000002"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X1_Y-3",
+			"ExportBundleChunkIds": [
+				"ea652a98c93ca7c700000001"
+			],
+			"BulkDataChunkIds": [
+				"ea652a98c93ca7c700000002"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X1_Y-4",
+			"ExportBundleChunkIds": [
+				"abe7b04e156d9f7300000001"
+			],
+			"BulkDataChunkIds": [
+				"abe7b04e156d9f7300000002"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X1_Y0",
+			"ExportBundleChunkIds": [
+				"5587b86eb207fe9c00000001"
+			],
+			"BulkDataChunkIds": [
+				"5587b86eb207fe9c00000002"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X1_Y1",
+			"ExportBundleChunkIds": [
+				"f95717f40eed139000000001"
+			],
+			"BulkDataChunkIds": [
+				"f95717f40eed139000000002"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X1_Y2",
+			"ExportBundleChunkIds": [
+				"ba720c530069bdd200000001"
+			],
+			"BulkDataChunkIds": [
+				"ba720c530069bdd200000002"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X1_Y3",
+			"ExportBundleChunkIds": [
+				"235d283d4e2f183900000001"
+			],
+			"BulkDataChunkIds": [
+				"235d283d4e2f183900000002"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X2_Y-1",
+			"ExportBundleChunkIds": [
+				"5ed8e77a3582273600000001"
+			],
+			"BulkDataChunkIds": [
+				"5ed8e77a3582273600000002"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X2_Y-2",
+			"ExportBundleChunkIds": [
+				"8174a6beebed4f5700000001"
+			],
+			"BulkDataChunkIds": [
+				"8174a6beebed4f5700000002"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X2_Y-3",
+			"ExportBundleChunkIds": [
+				"daf408931ddf366d00000001"
+			],
+			"BulkDataChunkIds": [
+				"daf408931ddf366d00000002"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X2_Y-4",
+			"ExportBundleChunkIds": [
+				"47dc55d1949f5b8c00000001"
+			],
+			"BulkDataChunkIds": [
+				"47dc55d1949f5b8c00000002"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X2_Y0",
+			"ExportBundleChunkIds": [
+				"66f985eb4587320800000001"
+			],
+			"BulkDataChunkIds": [
+				"66f985eb4587320800000002"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X2_Y1",
+			"ExportBundleChunkIds": [
+				"e11dc3fae81cbf7f00000001"
+			],
+			"BulkDataChunkIds": [
+				"e11dc3fae81cbf7f00000002"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X2_Y2",
+			"ExportBundleChunkIds": [
+				"1f945539934aa69500000001"
+			],
+			"BulkDataChunkIds": [
+				"1f945539934aa69500000002"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X2_Y3",
+			"ExportBundleChunkIds": [
+				"63d46d71dddea8f100000001"
+			],
+			"BulkDataChunkIds": [
+				"63d46d71dddea8f100000002"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X3_Y-1",
+			"ExportBundleChunkIds": [
+				"7a7efc407c3bb71c00000001"
+			],
+			"BulkDataChunkIds": [
+				"7a7efc407c3bb71c00000002"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X3_Y-2",
+			"ExportBundleChunkIds": [
+				"802417206af8b1e900000001"
+			],
+			"BulkDataChunkIds": [
+				"802417206af8b1e900000002"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X3_Y-3",
+			"ExportBundleChunkIds": [
+				"3fa186413215934c00000001"
+			],
+			"BulkDataChunkIds": [
+				"3fa186413215934c00000002"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X3_Y-4",
+			"ExportBundleChunkIds": [
+				"48182b55f480343400000001"
+			],
+			"BulkDataChunkIds": [
+				"48182b55f480343400000002"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X3_Y0",
+			"ExportBundleChunkIds": [
+				"489d1d1285d9c79e00000001"
+			],
+			"BulkDataChunkIds": [
+				"489d1d1285d9c79e00000002"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X3_Y1",
+			"ExportBundleChunkIds": [
+				"42c6f48fe3473c9300000001"
+			],
+			"BulkDataChunkIds": [
+				"42c6f48fe3473c9300000002"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X3_Y2",
+			"ExportBundleChunkIds": [
+				"f02e7ee0d386f4ae00000001"
+			],
+			"BulkDataChunkIds": [
+				"f02e7ee0d386f4ae00000002"
+			]
+		},
+		{
+			"Name": "/Engine/Maps/Templates/OpenWorld/_Generated_/OpenWorld_MainGrid_L0_X3_Y3",
+			"ExportBundleChunkIds": [
+				"ec1faccb41b213d500000001"
+			],
+			"BulkDataChunkIds": [
+				"ec1faccb41b213d500000002"
+			]
+		},
+		{
+			"Name": "/Engine/MobileResources/HUD/DefaultVirtualJoysticks",
+			"ExportBundleChunkIds": [
+				"37cdeb5ce1d3ccd800000001"
+			]
+		},
+		{
+			"Name": "/Engine/MobileResources/HUD/VirtualJoystick_Background",
+			"ExportBundleChunkIds": [
+				"c472a8877b0ae2f900000001"
+			]
+		},
+		{
+			"Name": "/Engine/MobileResources/HUD/VirtualJoystick_Thumb",
+			"ExportBundleChunkIds": [
+				"2a8ace463a029fae00000001"
+			]
+		},
+		{
+			"Name": "/Engine/OpenWorldTemplate/HLOD/HLOD0_Instancing",
+			"ExportBundleChunkIds": [
+				"51c6c530c6e9e7c500000001"
+			]
+		},
+		{
+			"Name": "/Engine/OpenWorldTemplate/LandscapeMaterial/M_ProcGrid",
+			"ExportBundleChunkIds": [
+				"801dc51816054cd400000001"
+			]
+		},
+		{
+			"Name": "/Engine/OpenWorldTemplate/LandscapeMaterial/MF_ProcGrid",
+			"ExportBundleChunkIds": [
+				"1a175ae23ad6d41400000001"
+			]
+		},
+		{
+			"Name": "/Engine/OpenWorldTemplate/LandscapeMaterial/T_GridChecker_A",
+			"ExportBundleChunkIds": [
+				"eb26c788a1a10ea100000001"
+			],
+			"BulkDataChunkIds": [
+				"eb26c788a1a10ea100000002"
+			]
+		},
+		{
+			"Name": "/Game/_Core/Blueprints/Actions/Action_Buff",
+			"ExportBundleChunkIds": [
+				"c699a381026c2c9600000001"
+			]
+		},
+		{
+			"Name": "/Game/_Core/Blueprints/Actions/Action_Buff_DurationMod",
+			"ExportBundleChunkIds": [
+				"edc588fb4d117e5700000001"
+			]
+		},
+		{
+			"Name": "/Game/_Core/Blueprints/Actions/Action_HealOverTime",
+			"ExportBundleChunkIds": [
+				"04bb82b7b28febea00000001"
+			]
+		},
+		{
+			"Name": "/Game/_Core/Blueprints/Actions/Action_list",
+			"ExportBundleChunkIds": [
+				"d94c8a11c6fdd42700000001"
+			]
+		},
+		{
+			"Name": "/Game/_Core/Blueprints/Actions/Action_SharedBuff_Player",
+			"ExportBundleChunkIds": [
+				"815a547e4473eaa200000001"
+			]
+		},
+		{
+			"Name": "/Game/_Core/Blueprints/Actions/Action_Shield",
+			"ExportBundleChunkIds": [
+				"98fb794969676f3000000001"
+			]
+		},
+		{
+			"Name": "/Game/_Core/Blueprints/Actions/Action_Shield_Applier",
+			"ExportBundleChunkIds": [
+				"0bc0f057a7a37a0d00000001"
+			]
+		},
+		{
+			"Name": "/Game/_Core/Blueprints/Actions/EStackRule",
+			"ExportBundleChunkIds": [
+				"0565b32da03925c900000001"
+			]
+		},
+		{
+			"Name": "/Game/_Core/Blueprints/Actions/ShieldHealthBar/Action_Shield_HealthBar",
+			"ExportBundleChunkIds": [
+				"8824c7056f63510a00000001"
+			]
+		},
+		{
+			"Name": "/Game/_Core/Blueprints/Actions/Status_Bulwark/Action_Bulwark_Player",
+			"ExportBundleChunkIds": [
+				"032b3739eb3100be00000001"
+			]
+		},
+		{
+			"Name": "/Game/_Core/Blueprints/Actions/Status_TeamShared/Action_TeamShared_Buff",
+			"ExportBundleChunkIds": [
+				"8170cb0a17190e6000000001"
+			]
+		},
+		{
+			"Name": "/Game/_Core/Blueprints/Base/DisplayInfoComponent",
+			"ExportBundleChunkIds": [
+				"1c356d224694bbe200000001"
+			]
+		},
+		{
+			"Name": "/Game/_Core/Blueprints/Inspect/InspectActor",
+			"ExportBundleChunkIds": [
+				"a5e9f5cf2eeec59b00000001"
+			]
+		},
+		{
+			"Name": "/Game/_Core/Blueprints/Quests/Quest_RootQuest",
+			"ExportBundleChunkIds": [
+				"3a0a35cbce58063000000001"
+			]
+		},
+		{
+			"Name": "/Game/_Core/ItemTypes/ItemCategory_Consumables",
+			"ExportBundleChunkIds": [
+				"90e016cb832ae28700000001"
+			]
+		},
+		{
+			"Name": "/Game/_Core/ItemTypes/ItemCategory_Trinket",
+			"ExportBundleChunkIds": [
+				"d2a6c59cb388e5b000000001"
+			]
+		},
+		{
+			"Name": "/Game/_Core/ItemTypes/ItemType_DragonHeart",
+			"ExportBundleChunkIds": [
+				"7fb05d241b0e6aa100000001"
+			]
+		},
+		{
+			"Name": "/Game/_Core/ItemTypes/ItemType_Gem_Base",
+			"ExportBundleChunkIds": [
+				"b0c21f1f45f1354d00000001"
+			]
+		},
+		{
+			"Name": "/Game/_Core/ItemTypes/ItemType_MetaGem_Ranged",
+			"ExportBundleChunkIds": [
+				"8654d11fbcbc900c00000001"
+			]
+		},
+		{
+			"Name": "/Game/_Core/ItemTypes/ItemType_RangedWeaponMod",
+			"ExportBundleChunkIds": [
+				"a906902eadc5772e00000001"
+			]
+		},
+		{
+			"Name": "/Game/_Core/ItemTypes/ItemType_Ring",
+			"ExportBundleChunkIds": [
+				"da6c81a4860fdc0700000001"
+			]
+		},
+		{
+			"Name": "/Game/_Core/Stats/Base/StatDef_Armor",
+			"ExportBundleChunkIds": [
+				"673f4bfc80f639ed00000001"
+			]
+		},
+		{
+			"Name": "/Game/_Core/Stats/Base/StatDef_Character_StatCaps",
+			"ExportBundleChunkIds": [
+				"74cfc4cbc01cef9200000001"
+			]
+		},
+		{
+			"Name": "/Game/_Core/Stats/Base/StatDef_EnemyCharacter",
+			"ExportBundleChunkIds": [
+				"a3332e36d3f5f6df00000001"
+			]
+		},
+		{
+			"Name": "/Game/_Core/Stats/Base/StatDef_Item",
+			"ExportBundleChunkIds": [
+				"42b1895acc78fa3d00000001"
+			]
+		},
+		{
+			"Name": "/Game/_Core/Stats/Base/StatDef_MeleeWeapon",
+			"ExportBundleChunkIds": [
+				"f331a7da586453f800000001"
+			]
+		},
+		{
+			"Name": "/Game/_Core/Stats/Base/StatDef_RangedWeapon",
+			"ExportBundleChunkIds": [
+				"90c78ed6c20be8c100000001"
+			]
+		},
+		{
+			"Name": "/Game/_Core/Stats/Base/StatDef_Scaling",
+			"ExportBundleChunkIds": [
+				"094dc8feb975351700000001"
+			]
+		},
+		{
+			"Name": "/Game/_Core/Stats/Stats_Armor",
+			"ExportBundleChunkIds": [
+				"ce53e3b3d97efcb500000001"
+			]
+		},
+		{
+			"Name": "/Game/_Core/Stats/Stats_Character_StatCaps",
+			"ExportBundleChunkIds": [
+				"b592d21f5e4cca4d00000001"
+			]
+		},
+		{
+			"Name": "/Game/_Core/Stats/Stats_Items",
+			"ExportBundleChunkIds": [
+				"ccf08b67ec1417b200000001"
+			]
+		},
+		{
+			"Name": "/Game/_Core/Stats/Stats_MeleeWeapon",
+			"ExportBundleChunkIds": [
+				"fea79733a84717e100000001"
+			]
+		},
+		{
+			"Name": "/Game/_Core/Stats/Stats_RangedWeapon",
+			"ExportBundleChunkIds": [
+				"3ba208c20d72e70f00000001"
+			]
+		},
+		{
+			"Name": "/Game/_Core/Stats/Stats_Scaling_Difficulty",
+			"ExportBundleChunkIds": [
+				"aaeb1490f3a097b700000001"
+			]
+		},
+		{
+			"Name": "/Game/_Core/Stats/Stats_Scaling_NumPlayers",
+			"ExportBundleChunkIds": [
+				"3c774bc830f45cbd00000001"
+			]
+		},
+		{
+			"Name": "/Game/Characters/NPC/Common/Character_Merchant_Base",
+			"ExportBundleChunkIds": [
+				"620579a0becce99800000001"
+			]
+		},
+		{
+			"Name": "/Game/Characters/NPC/Common/Character_NPC",
+			"ExportBundleChunkIds": [
+				"b4f45fbd3731c81600000001"
+			]
+		},
+		{
+			"Name": "/Game/Characters/Player/Input/Actions/Fire",
+			"ExportBundleChunkIds": [
+				"bc12137ccb95b92e00000001"
+			]
+		},
+		{
+			"Name": "/Game/Characters/Player/Input/Actions/WeaponMod",
+			"ExportBundleChunkIds": [
+				"3ac93167f765f91e00000001"
+			]
+		},
+		{
+			"Name": "/Game/Items/Common/Consumable_DragonHeart",
+			"ExportBundleChunkIds": [
+				"15c137f0cff667fb00000001"
+			]
+		},
+		{
+			"Name": "/Game/Items/Common/Consumable_DragonHeart_Action",
+			"ExportBundleChunkIds": [
+				"7fa84980afc5d2d600000001"
+			]
+		},
+		{
+			"Name": "/Game/Items/Common/Consumable_DragonHeart_Inspect",
+			"ExportBundleChunkIds": [
+				"9524cc60384c8cab00000001"
+			]
+		},
+		{
+			"Name": "/Game/Items/Weapons/Common/Weapon_Boss_ComputedStats",
+			"ExportBundleChunkIds": [
+				"5ee62448aa86ad2800000001"
+			]
+		},
+		{
+			"Name": "/Game/Items/Weapons/Common/Weapon_ComputedStats",
+			"ExportBundleChunkIds": [
+				"1516ed4c309abf4900000001"
+			]
+		},
+		{
+			"Name": "/Game/Items/Weapons/Common/Weapon_Gun_Base",
+			"ExportBundleChunkIds": [
+				"7422f078d4a60a9700000001"
+			]
+		},
+		{
+			"Name": "/Game/Items/Weapons/Common/Weapon_HandGun_Base",
+			"ExportBundleChunkIds": [
+				"db5cf8e0ea07eff700000001"
+			]
+		},
+		{
+			"Name": "/Game/Items/Weapons/Common/Weapon_LongGun_Base",
+			"ExportBundleChunkIds": [
+				"21c6119de03cacc700000001"
+			]
+		},
+		{
+			"Name": "/Game/Shared/Material/MASTER/M_MASTER_Character_Detail",
+			"ExportBundleChunkIds": [
+				"de322b06bcb2a4d100000001"
+			]
+		},
+		{
+			"Name": "/Game/UI/UI_Inventory/Widget_InventoryList",
+			"ExportBundleChunkIds": [
+				"16fa34b1081c3eca00000001"
+			]
+		},
+		{
+			"Name": "/Game/World_Base/Items/_Core/BP_Item",
+			"ExportBundleChunkIds": [
+				"16e2fe899aff3a1200000001"
+			]
+		},
+		{
+			"Name": "/Game/World_Base/Items/_Core/Trinkets/Trinket_Base",
+			"ExportBundleChunkIds": [
+				"573fc8f9fb28b54f00000001"
+			]
+		},
+		{
+			"Name": "/Game/World_Base/Items/_Core/Trinkets/Trinket_TriggerOnEquip",
+			"ExportBundleChunkIds": [
+				"c19df7908c5a357300000001"
+			]
+		},
+		{
+			"Name": "/Game/World_Base/Items/Armor/Base/RelicTesting/Action_Relic_Base_Child",
+			"ExportBundleChunkIds": [
+				"716fe5f86fb81a1700000001"
+			]
+		},
+		{
+			"Name": "/Game/World_Base/Items/Gems/_Core/Gem_Base",
+			"ExportBundleChunkIds": [
+				"4852b8c88a1bdd8100000001"
+			]
+		},
+		{
+			"Name": "/Game/World_Base/Items/Gems/_Core/Gem_RelicFragment_Base",
+			"ExportBundleChunkIds": [
+				"5268cfa148b2fef200000001"
+			]
+		},
+		{
+			"Name": "/Game/World_Base/Items/Gems/_Core/Gem_Simple",
+			"ExportBundleChunkIds": [
+				"ff035c5b3ccb9f7d00000001"
+			]
+		},
+		{
+			"Name": "/Game/World_Base/Items/Materials/Scraps/Material_Scraps",
+			"ExportBundleChunkIds": [
+				"6c6be48aa0673f0600000001"
+			]
+		},
+		{
+			"Name": "/Game/World_Base/Quests/Quest_Ward13/Quest_Ward13",
+			"ExportBundleChunkIds": [
+				"8b302bf07dc7672f00000001"
+			]
+		},
+		{
+			"Name": "/Game/World_DLC1/Stats/Stats_Character_DLC1",
+			"ExportBundleChunkIds": [
+				"2dee9a8431f5621e00000001"
+			]
+		},
+		{
+			"Name": "/Game/World_Fae/Stats/Stats_Character_Fae",
+			"ExportBundleChunkIds": [
+				"3f3c53073f32c46300000001"
+			]
+		},
+		{
+			"Name": "/Game/World_Jungle/Stats/Stats_Character_Jungle",
+			"ExportBundleChunkIds": [
+				"bf0483421aa6eb8200000001"
+			]
+		},
+		{
+			"Name": "/Game/World_Labyrinth/Stats/Stats_Character_Lab",
+			"ExportBundleChunkIds": [
+				"4512111f06bad27d00000001"
+			]
+		},
+		{
+			"Name": "/Game/World_Nerud/Stats/Stats_Character_Nerud",
+			"ExportBundleChunkIds": [
+				"f675be15ad050ce200000001"
+			]
+		},
+		{
+			"Name": "/Game/World_Root/Stats/Stats_Character_Root_World",
+			"ExportBundleChunkIds": [
+				"1a33d84e998c0fc400000001"
+			]
+		},
+		{
+			"Name": "/Interchange/Pipelines/DefaultAssetsPipeline",
+			"ExportBundleChunkIds": [
+				"723e23a2f95edb4b00000001"
+			]
+		},
+		{
+			"Name": "/Interchange/Pipelines/DefaultMaterialPipeline",
+			"ExportBundleChunkIds": [
+				"fb3fd515f165bb7100000001"
+			]
+		},
+		{
+			"Name": "/Interchange/Pipelines/DefaultSceneAssetsPipeline",
+			"ExportBundleChunkIds": [
+				"6e4ac6d8f5ca0a0300000001"
+			]
+		},
+		{
+			"Name": "/Interchange/Pipelines/DefaultSceneLevelPipeline",
+			"ExportBundleChunkIds": [
+				"7aba7a84b764bf1300000001"
+			]
+		},
+		{
+			"Name": "/Interchange/Pipelines/DefaultTexturePipeline",
+			"ExportBundleChunkIds": [
+				"1c2fd1107a52870200000001"
+			]
+		},
+		{
+			"Name": "/MediaPlate/SM_MediaPlateScreen",
+			"ExportBundleChunkIds": [
+				"306a2f803628deec00000001"
+			]
+		},
+		{
+			"Name": "/MeshModelingToolset/Materials/M_DynamicMeshComponentVtxColor",
+			"ExportBundleChunkIds": [
+				"f1ebd6418dba317a00000001"
+			]
+		},
+		{
+			"Name": "/Niagara/ParameterDefinitions/CoreParameters"
+		},
+		{
+			"Name": "/Niagara/ParameterDefinitions/DecalRenderer"
+		},
+		{
+			"Name": "/Niagara/ParameterDefinitions/LightRenderer"
+		},
+		{
+			"Name": "/Niagara/ParameterDefinitions/MeshRenderer"
+		},
+		{
+			"Name": "/Niagara/ParameterDefinitions/RibbonRenderer"
+		},
+		{
+			"Name": "/Niagara/ParameterDefinitions/SpriteRenderer"
+		},
+		{
+			"Name": "/Paper2D/DefaultPaperTerrainMaterial",
+			"ExportBundleChunkIds": [
+				"1eb36adebf3e8d6900000001"
+			]
+		},
+		{
+			"Name": "/Paper2D/DefaultSpriteMaterial",
+			"ExportBundleChunkIds": [
+				"12c2c1346a8453a600000001"
+			]
+		},
+		{
+			"Name": "/Paper2D/DummySprite",
+			"ExportBundleChunkIds": [
+				"7936cc24a0df034100000001"
+			]
+		},
+		{
+			"Name": "/Paper2D/MaskedUnlitSpriteMaterial",
+			"ExportBundleChunkIds": [
+				"603c62bd8092b35100000001"
+			]
+		},
+		{
+			"Name": "/Paper2D/OpaqueUnlitSpriteMaterial",
+			"ExportBundleChunkIds": [
+				"b2e758c7adce0aa000000001"
+			]
+		},
+		{
+			"Name": "/Paper2D/PlaceholderTextures/DummySpriteTexture",
+			"ExportBundleChunkIds": [
+				"2cc5808063f890db00000001"
+			],
+			"BulkDataChunkIds": [
+				"2cc5808063f890db00000002"
+			]
+		},
+		{
+			"Name": "/SpeedTreeImporter/SpeedTree9/Empty",
+			"ExportBundleChunkIds": [
+				"efd3b99beb745ea100000001"
+			]
+		},
+		{
+			"Name": "/SpeedTreeImporter/SpeedTree9/EmptyNormal",
+			"ExportBundleChunkIds": [
+				"6f3a7c0fe1cf64ce00000001"
+			]
+		},
+		{
+			"Name": "/SpeedTreeImporter/SpeedTree9/game_wind_noise",
+			"ExportBundleChunkIds": [
+				"27d3dbbd9cb5875a00000001"
+			],
+			"BulkDataChunkIds": [
+				"27d3dbbd9cb5875a00000002"
+			]
+		},
+		{
+			"Name": "/SpeedTreeImporter/SpeedTree9/SpeedTreeBillboard",
+			"ExportBundleChunkIds": [
+				"8fcb1cae0c92026900000001"
+			]
+		},
+		{
+			"Name": "/SpeedTreeImporter/SpeedTree9/SpeedTreeBillboardMaster",
+			"ExportBundleChunkIds": [
+				"0ec7598e2050155600000001"
+			]
+		},
+		{
+			"Name": "/SpeedTreeImporter/SpeedTree9/SpeedTreeBranchMotion",
+			"ExportBundleChunkIds": [
+				"bb0c9910913c4acc00000001"
+			]
+		},
+		{
+			"Name": "/SpeedTreeImporter/SpeedTree9/SpeedTreeCameraFacing",
+			"ExportBundleChunkIds": [
+				"a8a408dbac6bb61700000001"
+			]
+		},
+		{
+			"Name": "/SpeedTreeImporter/SpeedTree9/SpeedTreeMaster",
+			"ExportBundleChunkIds": [
+				"7bb897d6d85abe5e00000001"
+			]
+		},
+		{
+			"Name": "/SpeedTreeImporter/SpeedTree9/SpeedTreeWind",
+			"ExportBundleChunkIds": [
+				"11e16642d5df4eca00000001"
+			]
+		},
+		{
+			"Name": "/SpeedTreeImporter/SpeedTree9/SpeedTreeWindMotion",
+			"ExportBundleChunkIds": [
+				"3bd77c49df92ee7b00000001"
+			]
+		},
+		{
+			"Name": "/SpeedTreeImporter/SpeedTree9/UnpackDirection",
+			"ExportBundleChunkIds": [
+				"931f8593c76b1a3700000001"
+			]
+		},
+		{
+			"Name": "/SpeedTreeImporter/SpeedTree9/UnpackInteger3",
+			"ExportBundleChunkIds": [
+				"7b967f8ff09764ce00000001"
+			]
+		}
+	]
+}
