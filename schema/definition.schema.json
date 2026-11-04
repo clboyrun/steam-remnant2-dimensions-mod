@@ -1,0 +1,1833 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Dimensions content file",
+  "description": "One definition, or { \"definitions\": [ ... ] } holding several. Each definition has a kind and an id.",
+  "anyOf": [
+    {
+      "$ref": "#/$defs/definition"
+    },
+    {
+      "type": "object",
+      "properties": {
+        "$schema": {
+          "type": "string"
+        },
+        "definitions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/definition"
+          }
+        }
+      },
+      "required": [
+        "definitions"
+      ],
+      "additionalProperties": false
+    }
+  ],
+  "$defs": {
+    "base": {
+      "type": "object",
+      "properties": {
+        "$schema": {
+          "type": "string"
+        },
+        "kind": {
+          "type": "string"
+        },
+        "id": {
+          "$ref": "common.schema.json#/$defs/id"
+        },
+        "extends": {
+          "$ref": "common.schema.json#/$defs/id",
+          "description": "Another definition of the same kind to copy from. Objects merge key by key, everything else is replaced."
+        },
+        "abstract": {
+          "type": "boolean",
+          "description": "Only used as a base for 'extends'; nothing is generated for it."
+        },
+        "template": {
+          "$ref": "common.schema.json#/$defs/gamePath",
+          "description": "The game class or asset this is made from. Blueprints become children of it; other assets are copies of it."
+        },
+        "assetName": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_]*$",
+          "description": "Overrides the generated asset name."
+        },
+        "name": {
+          "$ref": "common.schema.json#/$defs/text"
+        },
+        "description": {
+          "$ref": "common.schema.json#/$defs/text"
+        },
+        "flavorText": {
+          "$ref": "common.schema.json#/$defs/text"
+        },
+        "icon": {
+          "$ref": "common.schema.json#/$defs/icon"
+        },
+        "acquisition": {
+          "$ref": "common.schema.json#/$defs/acquisition"
+        },
+        "properties": {
+          "$ref": "common.schema.json#/$defs/properties"
+        },
+        "components": {
+          "$ref": "common.schema.json#/$defs/components"
+        }
+      },
+      "required": [
+        "kind",
+        "id"
+      ]
+    },
+    "definition": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/weapon"
+        },
+        {
+          "$ref": "#/$defs/weaponMod"
+        },
+        {
+          "$ref": "#/$defs/mutator"
+        },
+        {
+          "$ref": "#/$defs/ring"
+        },
+        {
+          "$ref": "#/$defs/amulet"
+        },
+        {
+          "$ref": "#/$defs/armor"
+        },
+        {
+          "$ref": "#/$defs/trait"
+        },
+        {
+          "$ref": "#/$defs/archetype"
+        },
+        {
+          "$ref": "#/$defs/lootTable"
+        },
+        {
+          "$ref": "#/$defs/world"
+        },
+        {
+          "$ref": "#/$defs/adventure"
+        },
+        {
+          "$ref": "#/$defs/blueprint"
+        },
+        {
+          "$ref": "#/$defs/npc"
+        },
+        {
+          "$ref": "#/$defs/enemy"
+        },
+        {
+          "$ref": "#/$defs/animationSet"
+        },
+        {
+          "$ref": "#/$defs/dialogue"
+        },
+        {
+          "$ref": "#/$defs/quest"
+        },
+        {
+          "$ref": "#/$defs/questItem"
+        },
+        {
+          "$ref": "#/$defs/itemCategory"
+        },
+        {
+          "$ref": "#/$defs/difficulty"
+        }
+      ]
+    },
+    "weapon": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/base"
+        }
+      ],
+      "properties": {
+        "kind": {
+          "const": "weapon"
+        },
+        "weaponType": {
+          "enum": [
+            "longGun",
+            "handGun",
+            "melee"
+          ]
+        },
+        "model": {
+          "$ref": "common.schema.json#/$defs/model"
+        },
+        "stats": {
+          "description": "Ranged: the FRangedWeaponData row. Melee: the melee stats row. Any extra key is passed through as a row field.",
+          "type": "object",
+          "properties": {
+            "damage": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "rateOfFire": {
+              "type": "number",
+              "minimum": 0
+            },
+            "magazine": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "AmmoPerClip."
+            },
+            "maxAmmo": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "ammoPerReload": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "range": {
+              "type": "number",
+              "minimum": 0
+            },
+            "falloffStart": {
+              "type": "number",
+              "minimum": 0,
+              "description": "PrimaryFalloff."
+            },
+            "falloffEnd": {
+              "type": "number",
+              "minimum": 0,
+              "description": "SecondaryFalloff."
+            },
+            "spread": {
+              "type": "number",
+              "minimum": 0
+            },
+            "pellets": {
+              "type": "integer",
+              "minimum": 1,
+              "description": "SprayCount."
+            },
+            "automatic": {
+              "type": "boolean"
+            },
+            "burstCount": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "burstRateOfFire": {
+              "type": "number",
+              "minimum": 0
+            },
+            "scope": {
+              "type": "boolean"
+            },
+            "scopeFov": {
+              "type": "number",
+              "minimum": 0
+            }
+          },
+          "additionalProperties": {
+            "type": [
+              "number",
+              "boolean",
+              "string"
+            ]
+          }
+        },
+        "statsRow": {
+          "description": "Use this existing stats row instead of generating one from 'stats'.",
+          "type": "object",
+          "properties": {
+            "table": {
+              "$ref": "common.schema.json#/$defs/gamePath"
+            },
+            "row": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "table",
+            "row"
+          ],
+          "additionalProperties": false
+        },
+        "mod": {
+          "$ref": "common.schema.json#/$defs/ref",
+          "description": "A fixed weapon mod (boss weapons). Omit for a free mod slot."
+        },
+        "mutatorSlot": {
+          "type": "boolean",
+          "default": true
+        },
+        "category": {
+          "$ref": "common.schema.json#/$defs/ref",
+          "description": "Inventory category: an itemCategory id or a game UItemCategory class."
+        }
+      },
+      "unevaluatedProperties": false,
+      "anyOf": [
+        {
+          "required": [
+            "extends"
+          ]
+        },
+        {
+          "required": [
+            "weaponType"
+          ]
+        }
+      ]
+    },
+    "weaponMod": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/base"
+        }
+      ],
+      "properties": {
+        "kind": {
+          "const": "weaponMod"
+        },
+        "powerRequired": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "description": "Mod power needed per charge (PowerBasis)."
+        },
+        "charges": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 255,
+          "description": "MaxCharges."
+        },
+        "toggleable": {
+          "type": "boolean"
+        },
+        "stats": {
+          "$ref": "common.schema.json#/$defs/stats"
+        },
+        "category": {
+          "$ref": "common.schema.json#/$defs/ref",
+          "description": "Inventory category: an itemCategory id or a game UItemCategory class."
+        }
+      },
+      "unevaluatedProperties": false,
+      "anyOf": [
+        {
+          "required": [
+            "extends"
+          ]
+        },
+        {
+          "required": [
+            "template"
+          ]
+        }
+      ]
+    },
+    "mutator": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/base"
+        }
+      ],
+      "properties": {
+        "kind": {
+          "const": "mutator"
+        },
+        "slot": {
+          "enum": [
+            "ranged",
+            "melee"
+          ]
+        },
+        "maxLevel": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 20,
+          "default": 10
+        },
+        "levels": {
+          "description": "Stats at each level, first entry is level 1. Shorter arrays are padded with the last entry.",
+          "type": "array",
+          "items": {
+            "$ref": "common.schema.json#/$defs/stats"
+          }
+        },
+        "category": {
+          "$ref": "common.schema.json#/$defs/ref",
+          "description": "Inventory category: an itemCategory id or a game UItemCategory class."
+        }
+      },
+      "unevaluatedProperties": false,
+      "anyOf": [
+        {
+          "required": [
+            "extends"
+          ]
+        },
+        {
+          "required": [
+            "template",
+            "slot"
+          ]
+        }
+      ]
+    },
+    "ring": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/base"
+        }
+      ],
+      "properties": {
+        "kind": {
+          "const": "ring"
+        },
+        "stats": {
+          "$ref": "common.schema.json#/$defs/stats"
+        },
+        "category": {
+          "$ref": "common.schema.json#/$defs/ref",
+          "description": "Inventory category: an itemCategory id or a game UItemCategory class."
+        }
+      },
+      "unevaluatedProperties": false,
+      "anyOf": [
+        {
+          "required": [
+            "extends"
+          ]
+        },
+        {
+          "required": [
+            "template"
+          ]
+        }
+      ]
+    },
+    "amulet": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/base"
+        }
+      ],
+      "properties": {
+        "kind": {
+          "const": "amulet"
+        },
+        "stats": {
+          "$ref": "common.schema.json#/$defs/stats"
+        },
+        "category": {
+          "$ref": "common.schema.json#/$defs/ref",
+          "description": "Inventory category: an itemCategory id or a game UItemCategory class."
+        }
+      },
+      "unevaluatedProperties": false,
+      "anyOf": [
+        {
+          "required": [
+            "extends"
+          ]
+        },
+        {
+          "required": [
+            "template"
+          ]
+        }
+      ]
+    },
+    "armor": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/base"
+        }
+      ],
+      "properties": {
+        "kind": {
+          "const": "armor"
+        },
+        "slot": {
+          "enum": [
+            "head",
+            "body",
+            "hands",
+            "legs"
+          ]
+        },
+        "model": {
+          "$ref": "common.schema.json#/$defs/model"
+        },
+        "armor": {
+          "type": "number",
+          "minimum": 0
+        },
+        "weight": {
+          "type": "number",
+          "minimum": 0
+        },
+        "resistances": {
+          "type": "object",
+          "properties": {
+            "bleed": {
+              "type": "number"
+            },
+            "fire": {
+              "type": "number"
+            },
+            "shock": {
+              "type": "number"
+            },
+            "blight": {
+              "type": "number"
+            },
+            "toxin": {
+              "type": "number"
+            }
+          },
+          "additionalProperties": false
+        },
+        "stats": {
+          "$ref": "common.schema.json#/$defs/stats"
+        },
+        "category": {
+          "$ref": "common.schema.json#/$defs/ref",
+          "description": "Inventory category: an itemCategory id or a game UItemCategory class."
+        }
+      },
+      "unevaluatedProperties": false,
+      "anyOf": [
+        {
+          "required": [
+            "extends"
+          ]
+        },
+        {
+          "required": [
+            "template",
+            "slot"
+          ]
+        }
+      ]
+    },
+    "trait": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/base"
+        }
+      ],
+      "properties": {
+        "kind": {
+          "const": "trait"
+        },
+        "maxLevel": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 20,
+          "default": 10
+        },
+        "cost": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "levels": {
+          "description": "Stat name to one value per level.",
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            },
+            "minItems": 1
+          }
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "archetype": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/base"
+        }
+      ],
+      "properties": {
+        "kind": {
+          "const": "archetype"
+        },
+        "briefDescription": {
+          "$ref": "common.schema.json#/$defs/text"
+        },
+        "flavorTags": {
+          "type": "array",
+          "items": {
+            "$ref": "common.schema.json#/$defs/text"
+          }
+        },
+        "difficulty": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 5
+        },
+        "image": {
+          "$ref": "common.schema.json#/$defs/textureSource",
+          "description": "The archetype's portrait."
+        },
+        "archetypeTrait": {
+          "description": "The archetype's own trait (levels and perks).",
+          "type": "object",
+          "properties": {
+            "template": {
+              "$ref": "common.schema.json#/$defs/gamePath"
+            },
+            "levels": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                }
+              }
+            },
+            "properties": {
+              "$ref": "common.schema.json#/$defs/properties"
+            }
+          },
+          "additionalProperties": false
+        },
+        "engram": {
+          "description": "The engram item that unlocks the archetype.",
+          "type": "object",
+          "properties": {
+            "template": {
+              "$ref": "common.schema.json#/$defs/gamePath"
+            },
+            "name": {
+              "$ref": "common.schema.json#/$defs/text"
+            },
+            "description": {
+              "$ref": "common.schema.json#/$defs/text"
+            },
+            "icon": {
+              "$ref": "common.schema.json#/$defs/icon"
+            },
+            "acquisition": {
+              "$ref": "common.schema.json#/$defs/acquisition"
+            },
+            "properties": {
+              "$ref": "common.schema.json#/$defs/properties"
+            }
+          },
+          "additionalProperties": false
+        },
+        "startingGear": {
+          "type": "array",
+          "items": {
+            "$ref": "common.schema.json#/$defs/ref"
+          }
+        },
+        "startingTraits": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "trait": {
+                "$ref": "common.schema.json#/$defs/ref"
+              },
+              "level": {
+                "type": "integer",
+                "minimum": 1
+              }
+            },
+            "required": [
+              "trait"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "uiTags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "registration": {
+          "$ref": "common.schema.json#/$defs/registration"
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "lootTable": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/base"
+        }
+      ],
+      "properties": {
+        "kind": {
+          "const": "lootTable"
+        },
+        "tableType": {
+          "type": "string",
+          "description": "ESpawnTableType name, for example 'Single' or 'All'."
+        },
+        "rolls": {
+          "type": "object",
+          "properties": {
+            "min": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "max": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "additionalProperties": false
+        },
+        "entries": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "item": {
+                "$ref": "common.schema.json#/$defs/ref"
+              },
+              "table": {
+                "$ref": "common.schema.json#/$defs/ref",
+                "description": "A nested spawn table instead of an item."
+              },
+              "chance": {
+                "type": "integer",
+                "minimum": 0,
+                "default": 100
+              },
+              "quantity": {
+                "type": "integer",
+                "minimum": 1,
+                "default": 1
+              },
+              "levelMin": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "levelMax": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "tags": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "character": {
+                "$ref": "common.schema.json#/$defs/ref",
+                "description": "An enemy or NPC to spawn (encounter tables)."
+              }
+            },
+            "oneOf": [
+              {
+                "required": [
+                  "item"
+                ]
+              },
+              {
+                "required": [
+                  "table"
+                ]
+              },
+              {
+                "required": [
+                  "character"
+                ]
+              }
+            ],
+            "additionalProperties": false
+          }
+        },
+        "injectInto": {
+          "description": "Existing game spawn tables that get this table as a new entry.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "table": {
+                "$ref": "common.schema.json#/$defs/gamePath"
+              },
+              "chance": {
+                "type": "integer",
+                "minimum": 0,
+                "default": 100
+              }
+            },
+            "required": [
+              "table"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "world": {
+      "description": "A new world (biome): its zones, maps and loot. Maps are built by hand in the Unreal project under /Game/Dimensions/<id>/ and referenced here.",
+      "allOf": [
+        {
+          "$ref": "#/$defs/base"
+        }
+      ],
+      "properties": {
+        "kind": {
+          "const": "world"
+        },
+        "biomeName": {
+          "type": "string",
+          "description": "Internal biome name the quest and save use."
+        },
+        "zones": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "$ref": "common.schema.json#/$defs/id"
+              },
+              "name": {
+                "$ref": "common.schema.json#/$defs/text"
+              },
+              "template": {
+                "$ref": "common.schema.json#/$defs/gamePath",
+                "description": "An existing ZoneDef to make the zone from. Default: the native ZoneDef class."
+              },
+              "maps": {
+                "type": "array",
+                "items": {
+                  "$ref": "common.schema.json#/$defs/gamePath"
+                },
+                "description": "MapTemplates."
+              },
+              "tileSet": {
+                "$ref": "common.schema.json#/$defs/gamePath"
+              },
+              "loot": {
+                "$ref": "common.schema.json#/$defs/ref",
+                "description": "Spawn table for this zone's spawn list."
+              },
+              "encounters": {
+                "type": "array",
+                "items": {
+                  "$ref": "common.schema.json#/$defs/ref"
+                }
+              },
+              "properties": {
+                "$ref": "common.schema.json#/$defs/properties"
+              }
+            },
+            "required": [
+              "id"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "loot": {
+          "$ref": "common.schema.json#/$defs/ref",
+          "description": "World-wide loot table."
+        },
+        "registration": {
+          "$ref": "common.schema.json#/$defs/registration"
+        },
+        "campaign": {
+          "description": "Makes this world an extra roll for one of the base campaign's world slots. The base world stays in the pool.",
+          "type": "object",
+          "properties": {
+            "alternativeTo": {
+              "enum": [
+                "losomn",
+                "yaesha",
+                "nerud"
+              ],
+              "description": "The campaign slot this world can roll into."
+            },
+            "chance": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Chance this world rolls instead of the base one."
+            },
+            "quest": {
+              "$ref": "common.schema.json#/$defs/ref",
+              "description": "The world's campaign storyline quest (a quest or adventure id)."
+            }
+          },
+          "required": [
+            "alternativeTo",
+            "quest"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "unevaluatedProperties": false,
+      "anyOf": [
+        {
+          "required": [
+            "extends"
+          ]
+        },
+        {
+          "required": [
+            "zones"
+          ]
+        }
+      ]
+    },
+    "adventure": {
+      "description": "An Adventure mode option: a root quest that rolls one world.",
+      "allOf": [
+        {
+          "$ref": "#/$defs/base"
+        }
+      ],
+      "properties": {
+        "kind": {
+          "const": "adventure"
+        },
+        "world": {
+          "$ref": "common.schema.json#/$defs/ref"
+        },
+        "container": {
+          "$ref": "common.schema.json#/$defs/gamePath",
+          "description": "The persistent container map the quest streams zones into."
+        },
+        "levelMin": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "levelMax": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "rarity": {
+          "type": "string",
+          "description": "ERemnantQuestRarity name."
+        },
+        "storyline": {
+          "type": "array",
+          "description": "Quests this adventure can roll.",
+          "items": {
+            "anyOf": [
+              {
+                "$ref": "common.schema.json#/$defs/ref"
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "quest": {
+                    "$ref": "common.schema.json#/$defs/ref"
+                  },
+                  "chance": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1
+                  },
+                  "optional": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "quest"
+                ],
+                "additionalProperties": false
+              }
+            ]
+          }
+        },
+        "rewards": {
+          "type": "array",
+          "items": {
+            "$ref": "common.schema.json#/$defs/ref"
+          }
+        },
+        "registration": {
+          "$ref": "common.schema.json#/$defs/registration"
+        },
+        "mode": {
+          "enum": [
+            "adventure",
+            "storyCampaign"
+          ],
+          "default": "adventure",
+          "description": "adventure: an extra Adventure mode option. storyCampaign: a standalone story campaign picked from the campaign menu, like the DLC storylines."
+        },
+        "once": {
+          "type": "boolean",
+          "description": "storyCampaign: can only be completed once per character."
+        },
+        "difficulty": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Extra difficulty steps on top of the chosen difficulty (harder campaigns)."
+        }
+      },
+      "unevaluatedProperties": false,
+      "anyOf": [
+        {
+          "required": [
+            "extends"
+          ]
+        },
+        {
+          "required": [
+            "template",
+            "world"
+          ]
+        }
+      ]
+    },
+    "blueprint": {
+      "description": "Anything else: a child blueprint of any game class with raw property overrides.",
+      "allOf": [
+        {
+          "$ref": "#/$defs/base"
+        }
+      ],
+      "properties": {
+        "kind": {
+          "const": "blueprint"
+        },
+        "folder": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_/]+$",
+          "description": "Folder under the dimension's content root."
+        },
+        "asset": {
+          "enum": [
+            "blueprint",
+            "copy",
+            "dataAsset"
+          ],
+          "default": "blueprint"
+        }
+      },
+      "unevaluatedProperties": false,
+      "anyOf": [
+        {
+          "required": [
+            "extends"
+          ]
+        },
+        {
+          "required": [
+            "template"
+          ]
+        }
+      ]
+    },
+    "animBlueprint": {
+      "description": "A child of the template's animation blueprint with some of its animation layers swapped for your animation sets.",
+      "type": "object",
+      "properties": {
+        "template": {
+          "$ref": "common.schema.json#/$defs/gamePath"
+        },
+        "layers": {
+          "type": "object",
+          "description": "Animation layer NameID to an animationSet id (or game AnimationSet).",
+          "additionalProperties": {
+            "$ref": "common.schema.json#/$defs/ref"
+          }
+        },
+        "properties": {
+          "$ref": "common.schema.json#/$defs/properties"
+        }
+      },
+      "required": [
+        "template"
+      ],
+      "additionalProperties": false
+    },
+    "npc": {
+      "description": "A non-player character: a child blueprint of an existing NPC with your model, animations and dialogue. Place it in a map or spawn it from a quest.",
+      "allOf": [
+        {
+          "$ref": "#/$defs/base"
+        }
+      ],
+      "properties": {
+        "kind": {
+          "const": "npc"
+        },
+        "model": {
+          "$ref": "common.schema.json#/$defs/model"
+        },
+        "animBlueprint": {
+          "$ref": "#/$defs/animBlueprint"
+        },
+        "faction": {
+          "$ref": "common.schema.json#/$defs/gamePath",
+          "description": "UFaction class."
+        },
+        "stats": {
+          "type": "object",
+          "description": "The character's stats row (ACharacterGunfire.Data). Keys are the row struct's field names.",
+          "additionalProperties": {
+            "type": [
+              "number",
+              "boolean",
+              "string"
+            ]
+          }
+        },
+        "dialogue": {
+          "$ref": "common.schema.json#/$defs/ref",
+          "description": "A dialogue id: the NPC's conversation tree."
+        },
+        "dialogueComponent": {
+          "type": "string",
+          "description": "Component that holds the conversation. Default from the catalog."
+        },
+        "vendor": {
+          "type": "object",
+          "description": "Items this NPC sells.",
+          "properties": {
+            "items": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "item": {
+                    "$ref": "common.schema.json#/$defs/ref"
+                  },
+                  "scrap": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "materials": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "item": {
+                          "$ref": "common.schema.json#/$defs/ref"
+                        },
+                        "quantity": {
+                          "type": "integer",
+                          "minimum": 1
+                        }
+                      },
+                      "required": [
+                        "item",
+                        "quantity"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "requires": {
+                    "type": "array",
+                    "description": "Stock that only shows when the player owns these items (for example a campaign-complete token). Written as hidden ingredients, so they count toward the 4-ingredient limit.",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "item": {
+                          "$ref": "common.schema.json#/$defs/ref"
+                        },
+                        "quantity": {
+                          "type": "integer",
+                          "minimum": 0,
+                          "default": 1
+                        },
+                        "level": {
+                          "type": "integer",
+                          "minimum": 0,
+                          "description": "Ingredient level requirement."
+                        },
+                        "show": {
+                          "enum": [
+                            "hidden",
+                            "secret"
+                          ],
+                          "default": "hidden",
+                          "description": "hidden: the entry is not listed while missing. secret: listed as unknown (???)."
+                        }
+                      },
+                      "required": [
+                        "item"
+                      ],
+                      "additionalProperties": false
+                    }
+                  }
+                },
+                "required": [
+                  "item"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "property": {
+              "type": "string",
+              "description": "The NPC property that holds its recipe list. Default from the catalog."
+            }
+          },
+          "required": [
+            "items"
+          ],
+          "additionalProperties": false
+        },
+        "unlock": {
+          "type": "object",
+          "description": "When the NPC shows up: after a quest or campaign reaches a state (for example the Root Earth story is complete).",
+          "properties": {
+            "after": {
+              "$ref": "common.schema.json#/$defs/ref",
+              "description": "A quest id, or a game quest blueprint (a campaign's root or final quest)."
+            },
+            "state": {
+              "enum": [
+                "Active",
+                "Complete"
+              ],
+              "default": "Complete"
+            },
+            "objective": {
+              "type": "string",
+              "description": "Wait for this objective of that quest instead of the whole quest."
+            }
+          },
+          "required": [
+            "after"
+          ],
+          "additionalProperties": false
+        },
+        "location": {
+          "type": "object",
+          "description": "Where the NPC stands. A hub like Ward 13 is a game map, so placing her there needs the hub's spawn hook (catalog npc.hub).",
+          "properties": {
+            "map": {
+              "$ref": "common.schema.json#/$defs/gamePath",
+              "description": "The map, for example Ward 13's persistent level."
+            },
+            "hub": {
+              "enum": [
+                "ward13"
+              ],
+              "description": "Shortcut for a known hub map from the catalog."
+            },
+            "position": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              },
+              "minItems": 3,
+              "maxItems": 3
+            },
+            "rotation": {
+              "type": "number",
+              "description": "Yaw in degrees."
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "anyOf": [
+        {
+          "required": [
+            "extends"
+          ]
+        },
+        {
+          "required": [
+            "template"
+          ]
+        }
+      ],
+      "unevaluatedProperties": false
+    },
+    "enemy": {
+      "description": "An enemy: a child blueprint of an existing enemy (keeping its AI) with your model, animations, stats and loot. Spawn it from a loot table entry with 'character'.",
+      "allOf": [
+        {
+          "$ref": "#/$defs/base"
+        }
+      ],
+      "properties": {
+        "kind": {
+          "const": "enemy"
+        },
+        "model": {
+          "$ref": "common.schema.json#/$defs/model"
+        },
+        "animBlueprint": {
+          "$ref": "#/$defs/animBlueprint"
+        },
+        "faction": {
+          "$ref": "common.schema.json#/$defs/gamePath",
+          "description": "UFaction class."
+        },
+        "stats": {
+          "type": "object",
+          "description": "The character's stats row (ACharacterGunfire.Data). Keys are the row struct's field names.",
+          "additionalProperties": {
+            "type": [
+              "number",
+              "boolean",
+              "string"
+            ]
+          }
+        },
+        "loot": {
+          "$ref": "common.schema.json#/$defs/ref",
+          "description": "Spawn table dropped on death (a lootTable id or game table)."
+        },
+        "lootProperty": {
+          "type": "string",
+          "description": "The property that holds the death loot table. Default from the catalog."
+        }
+      },
+      "anyOf": [
+        {
+          "required": [
+            "extends"
+          ]
+        },
+        {
+          "required": [
+            "template"
+          ]
+        }
+      ],
+      "unevaluatedProperties": false
+    },
+    "animationSet": {
+      "description": "A Gunfire animation set: animation IDs the anim blueprint plays, each with one or more animations. Animations are FBX files imported onto the skeleton, or existing game animations.",
+      "allOf": [
+        {
+          "$ref": "#/$defs/base"
+        }
+      ],
+      "properties": {
+        "kind": {
+          "const": "animationSet"
+        },
+        "skeleton": {
+          "$ref": "common.schema.json#/$defs/gamePath"
+        },
+        "animations": {
+          "type": "object",
+          "description": "Animation ID (NameID) to its animations. IDs the template already has are replaced; others are added.",
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "files": {
+                "type": "array",
+                "items": {
+                  "$ref": "common.schema.json#/$defs/textureSource"
+                },
+                "minItems": 1,
+                "description": "FBX files (or game animation assets); several play at random."
+              },
+              "loop": {
+                "type": "boolean"
+              },
+              "blendTime": {
+                "type": "number",
+                "minimum": 0
+              },
+              "blendOut": {
+                "type": "number",
+                "minimum": 0
+              },
+              "startTime": {
+                "type": "number",
+                "minimum": 0
+              },
+              "tags": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "properties": {
+                "$ref": "common.schema.json#/$defs/properties"
+              }
+            },
+            "required": [
+              "files"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "anyOf": [
+        {
+          "required": [
+            "extends"
+          ]
+        },
+        {
+          "required": [
+            "skeleton"
+          ]
+        }
+      ],
+      "unevaluatedProperties": false
+    },
+    "dialogueNode": {
+      "type": "object",
+      "description": "One step of a conversation. Exactly one of say, choices, trigger, onItem, activateObjective, completeObjective, completeQuest, event, jump, exit, questSwitch, node.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z][A-Za-z0-9_]*$",
+          "description": "Name for 'jump' to target."
+        },
+        "once": {
+          "type": "boolean",
+          "description": "Only runs the first time (DoOnce)."
+        },
+        "say": {
+          "$ref": "common.schema.json#/$defs/text"
+        },
+        "audio": {
+          "$ref": "common.schema.json#/$defs/gamePath"
+        },
+        "facial": {
+          "$ref": "common.schema.json#/$defs/gamePath"
+        },
+        "choices": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "$ref": "common.schema.json#/$defs/text"
+              },
+              "hidden": {
+                "type": "boolean"
+              },
+              "then": {
+                "$ref": "#/$defs/dialogueNodes"
+              }
+            },
+            "required": [
+              "label"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "trigger": {
+          "type": "string",
+          "description": "A named trigger (for example the interact trigger); 'then' runs when it fires."
+        },
+        "onItem": {
+          "$ref": "common.schema.json#/$defs/ref",
+          "description": "Runs 'then' when the player hands over this item."
+        },
+        "then": {
+          "$ref": "#/$defs/dialogueNodes"
+        },
+        "activateObjective": {
+          "type": "string"
+        },
+        "completeObjective": {
+          "type": "string"
+        },
+        "completeQuest": {
+          "enum": [
+            "Success",
+            "Failure"
+          ]
+        },
+        "event": {
+          "type": "string",
+          "description": "Sends a named event to the quest or level blueprint."
+        },
+        "context": {
+          "type": "string"
+        },
+        "jump": {
+          "type": "string"
+        },
+        "exit": {
+          "const": true
+        },
+        "node": {
+          "$ref": "common.schema.json#/$defs/gamePath",
+          "description": "Any other EventTreeNode class, set up with 'properties'."
+        },
+        "properties": {
+          "$ref": "common.schema.json#/$defs/properties"
+        },
+        "questSwitch": {
+          "type": "array",
+          "description": "Branches on the state of the quest this conversation belongs to: the first branch whose state (and objectives) match runs.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "when": {
+                "enum": [
+                  "QuestNotStarted",
+                  "QuestInProgress",
+                  "QuestCompleteSuccess",
+                  "QuestCompleteFailure",
+                  "All"
+                ]
+              },
+              "objectives": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Only while these objectives are active."
+              },
+              "then": {
+                "$ref": "#/$defs/dialogueNodes"
+              }
+            },
+            "required": [
+              "when"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "dialogueNodes": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/dialogueNode"
+      }
+    },
+    "dialogue": {
+      "description": "A conversation tree (Gunfire event tree): lines, player choices, item hand-ins and quest steps.",
+      "allOf": [
+        {
+          "$ref": "#/$defs/base"
+        }
+      ],
+      "properties": {
+        "kind": {
+          "const": "dialogue"
+        },
+        "nodes": {
+          "$ref": "#/$defs/dialogueNodes"
+        }
+      },
+      "anyOf": [
+        {
+          "required": [
+            "extends"
+          ]
+        },
+        {
+          "required": [
+            "nodes"
+          ]
+        }
+      ],
+      "unevaluatedProperties": false
+    },
+    "quest": {
+      "description": "A quest (story or injectable): objectives, the NPCs and conversations that drive it, and its level range. Add it to an adventure's 'storyline' to make it roll.",
+      "allOf": [
+        {
+          "$ref": "#/$defs/base"
+        }
+      ],
+      "properties": {
+        "kind": {
+          "const": "quest"
+        },
+        "questType": {
+          "type": "string",
+          "description": "ERemnantQuestType name."
+        },
+        "levelMin": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "levelMax": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "container": {
+          "$ref": "common.schema.json#/$defs/gamePath",
+          "description": "The quest's own map (for injectables, the tile it adds)."
+        },
+        "objectives": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[A-Za-z][A-Za-z0-9_]*$"
+              },
+              "name": {
+                "$ref": "common.schema.json#/$defs/text"
+              },
+              "description": {
+                "$ref": "common.schema.json#/$defs/text"
+              },
+              "hidden": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "id",
+              "name"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "entities": {
+          "type": "array",
+          "description": "Quest entities: who talks and what they say during this quest.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[A-Za-z][A-Za-z0-9_]*$"
+              },
+              "name": {
+                "$ref": "common.schema.json#/$defs/text"
+              },
+              "npc": {
+                "$ref": "common.schema.json#/$defs/ref"
+              },
+              "dialogue": {
+                "$ref": "common.schema.json#/$defs/ref"
+              }
+            },
+            "required": [
+              "id",
+              "dialogue"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "rewards": {
+          "type": "array",
+          "items": {
+            "$ref": "common.schema.json#/$defs/ref"
+          }
+        }
+      },
+      "anyOf": [
+        {
+          "required": [
+            "extends"
+          ]
+        },
+        {
+          "required": [
+            "template"
+          ]
+        }
+      ],
+      "unevaluatedProperties": false
+    },
+    "questItem": {
+      "description": "A key item used by a quest (handed to an NPC, opens something).",
+      "allOf": [
+        {
+          "$ref": "#/$defs/base"
+        }
+      ],
+      "properties": {
+        "kind": {
+          "const": "questItem"
+        },
+        "quest": {
+          "$ref": "common.schema.json#/$defs/ref"
+        },
+        "category": {
+          "$ref": "common.schema.json#/$defs/ref",
+          "description": "Inventory category: an itemCategory id or a game UItemCategory class."
+        }
+      },
+      "anyOf": [
+        {
+          "required": [
+            "extends"
+          ]
+        },
+        {
+          "required": [
+            "template"
+          ]
+        }
+      ],
+      "unevaluatedProperties": false
+    },
+    "itemCategory": {
+      "description": "An inventory category (UItemCategory): its own section in the inventory with a label and icon. Items join it with 'category'.",
+      "allOf": [
+        {
+          "$ref": "#/$defs/base"
+        }
+      ],
+      "properties": {
+        "kind": {
+          "const": "itemCategory"
+        },
+        "group": {
+          "enum": [
+            "quest",
+            "playerQuest",
+            "other"
+          ],
+          "default": "playerQuest",
+          "description": "Which game category it's made from (template default): quest items, the player's own quest items, or the plain base class."
+        },
+        "order": {
+          "type": "integer",
+          "description": "Sort hint kept for the inventory override, if one turns out to be needed."
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "difficulty": {
+      "description": "A new difficulty above the game's own (Survivor, Veteran, Nightmare, Apocalypse): a row in the game's difficulty scaling table plus its entry in the difficulty menu.",
+      "allOf": [
+        {
+          "$ref": "#/$defs/base"
+        }
+      ],
+      "properties": {
+        "kind": {
+          "const": "difficulty"
+        },
+        "rank": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Its difficulty index. Default: right after the highest one the catalog knows (Apocalypse)."
+        },
+        "rowName": {
+          "type": "string",
+          "description": "Row name in the scaling table. Default: rank + 1 (the game's rows are '1' to '4')."
+        },
+        "enemyHealth": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "description": "EnemyHealthScalar."
+        },
+        "enemyDamage": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "description": "EnemyDamageScalar."
+        },
+        "spawnQuantity": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "description": "SpawnQuantityScalar."
+        },
+        "currency": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "description": "CurrencyScalar."
+        },
+        "experience": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "description": "ExperienceScalar."
+        },
+        "row": {
+          "type": "object",
+          "description": "Any other row fields, by their Unreal names."
+        },
+        "eliteHealth": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "description": "Elites, on top of enemyHealth."
+        },
+        "eliteDamage": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "bruteHealth": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "bruteDamage": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "aberrationHealth": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "aberrationDamage": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "miniBossHealth": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "miniBossDamage": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "worldBossHealth": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "worldBossDamage": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "healing": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "friendlyFire": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "playerStatusDamage": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "playerBlightBuildUp": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "consumableDrops": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "ammoDrops": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "gemDrops": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "basedOn": {
+          "enum": [
+            "Survivor",
+            "Veteran",
+            "Nightmare",
+            "Apocalypse"
+          ],
+          "default": "Apocalypse",
+          "description": "Fields you don't set are copied from this difficulty's row."
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "unevaluatedProperties": false
+    }
+  }
+}

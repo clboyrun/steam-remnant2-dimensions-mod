@@ -1,0 +1,342 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Shared building blocks for Dimensions definitions",
+  "$defs": {
+    "id": {
+      "description": "Identifier unique within the dimension. Becomes part of asset names, so keep it PascalCase.",
+      "type": "string",
+      "pattern": "^[A-Z][A-Za-z0-9_]{1,63}$"
+    },
+    "gamePath": {
+      "description": "An Unreal object path, for example /Game/World_Base/Items/_Core/BP_Item.BP_Item_C or /Script/Remnant.RemnantArchetype. Paths under /Game/Dimensions/<id>/ are your own hand-made assets in the Unreal project.",
+      "type": "string",
+      "pattern": "^/(Game|Script)/[^\\s]+$"
+    },
+    "ref": {
+      "description": "Either the id of another definition in this dimension, or a game path.",
+      "anyOf": [
+        {
+          "$ref": "#/$defs/id"
+        },
+        {
+          "$ref": "#/$defs/gamePath"
+        }
+      ]
+    },
+    "file": {
+      "description": "A file on disk, relative to the dimension's root folder (the folder with dimension.json).",
+      "type": "string",
+      "minLength": 1,
+      "not": {
+        "pattern": "^/(Game|Script)/"
+      }
+    },
+    "textureSource": {
+      "description": "A texture: a file to import, or an existing texture asset.",
+      "anyOf": [
+        {
+          "$ref": "#/$defs/file"
+        },
+        {
+          "$ref": "#/$defs/gamePath"
+        }
+      ]
+    },
+    "text": {
+      "description": "Text shown in game: a plain string, or one string per culture (en, de, fr, pt-BR...). The default culture is required.",
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "object",
+          "minProperties": 1,
+          "propertyNames": {
+            "pattern": "^[a-z]{2}(-[A-Za-z]{2,4})?$"
+          },
+          "additionalProperties": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "icon": {
+      "description": "UI art. PNG or TGA, imported as UI textures (no mips, no streaming).",
+      "type": "object",
+      "properties": {
+        "small": {
+          "$ref": "#/$defs/textureSource",
+          "description": "Inventory and tooltip icon (AItem.Icon)."
+        },
+        "large": {
+          "$ref": "#/$defs/textureSource",
+          "description": "Large inspect icon (AItem.LargeIcon)."
+        },
+        "hud": {
+          "$ref": "#/$defs/textureSource",
+          "description": "HUD icon (AItem.HUDIcon). Defaults to small."
+        }
+      },
+      "required": [
+        "small"
+      ],
+      "additionalProperties": false
+    },
+    "material": {
+      "description": "A material instance made from an existing parent material, with your textures plugged into its parameters.",
+      "type": "object",
+      "properties": {
+        "slot": {
+          "type": "string",
+          "description": "Material slot name on the mesh. Omit to use slot order."
+        },
+        "parent": {
+          "$ref": "#/$defs/gamePath",
+          "description": "Parent material, usually one of the game's master materials."
+        },
+        "textures": {
+          "type": "object",
+          "description": "Texture parameter name to texture.",
+          "additionalProperties": {
+            "$ref": "#/$defs/textureSource"
+          }
+        },
+        "scalars": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "number"
+          }
+        },
+        "vectors": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            },
+            "minItems": 3,
+            "maxItems": 4
+          }
+        }
+      },
+      "required": [
+        "parent"
+      ],
+      "additionalProperties": false
+    },
+    "model": {
+      "description": "A mesh to import (FBX or glTF) and the materials to put on it.",
+      "type": "object",
+      "properties": {
+        "mesh": {
+          "$ref": "#/$defs/file"
+        },
+        "type": {
+          "enum": [
+            "static",
+            "skeletal"
+          ],
+          "default": "skeletal"
+        },
+        "skeleton": {
+          "$ref": "#/$defs/gamePath",
+          "description": "Skeleton to bind a skeletal mesh to. Omit to create one from the file."
+        },
+        "scale": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "default": 1
+        },
+        "component": {
+          "type": "string",
+          "description": "Component on the template blueprint that shows the mesh.",
+          "default": "Mesh"
+        },
+        "materials": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/material"
+          }
+        },
+        "importOptions": {
+          "type": "object",
+          "description": "Extra FBX import settings passed to Unreal as-is (for example import_morph_targets).",
+          "additionalProperties": true
+        }
+      },
+      "required": [
+        "mesh"
+      ],
+      "additionalProperties": false
+    },
+    "stats": {
+      "description": "Stat name to value, as the game's stat tables name them.",
+      "type": "object",
+      "additionalProperties": {
+        "type": "number"
+      }
+    },
+    "properties": {
+      "description": "Escape hatch: raw Unreal property overrides set on the generated asset, by property name. Values may use the tagged forms in docs/authoring.md ($asset, $class, $text, $name, $new, $struct, $ref).",
+      "type": "object",
+      "additionalProperties": true
+    },
+    "components": {
+      "description": "Raw property overrides on the blueprint's components, by component name.",
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/$defs/properties"
+      }
+    },
+    "acquisition": {
+      "description": "Ways the player gets this. Each one adds the item to an existing game list, so the list is overridden in the pak.",
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "type": "object",
+            "properties": {
+              "type": {
+                "const": "loot"
+              },
+              "table": {
+                "$ref": "#/$defs/ref",
+                "description": "A spawn table (game path or a lootTable id)."
+              },
+              "chance": {
+                "type": "integer",
+                "minimum": 0,
+                "default": 100
+              },
+              "quantity": {
+                "type": "integer",
+                "minimum": 1,
+                "default": 1
+              },
+              "levelMin": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "levelMax": {
+                "type": "integer",
+                "minimum": 0
+              }
+            },
+            "required": [
+              "type",
+              "table"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "type": {
+                "enum": [
+                  "craft",
+                  "vendor"
+                ]
+              },
+              "recipeList": {
+                "$ref": "#/$defs/gamePath",
+                "description": "The crafting or vendor recipe list (UCraftingRecipeList)."
+              },
+              "materials": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "item": {
+                      "$ref": "#/$defs/ref"
+                    },
+                    "quantity": {
+                      "type": "integer",
+                      "minimum": 1
+                    }
+                  },
+                  "required": [
+                    "item",
+                    "quantity"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "scrap": {
+                "type": "integer",
+                "minimum": 0,
+                "description": "Scrap cost."
+              },
+              "properties": {
+                "$ref": "#/$defs/properties"
+              }
+            },
+            "required": [
+              "type",
+              "recipeList"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "type": {
+                "const": "questReward"
+              },
+              "quest": {
+                "$ref": "#/$defs/ref"
+              }
+            },
+            "required": [
+              "type",
+              "quest"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "type": {
+                "const": "startingGear"
+              },
+              "archetype": {
+                "$ref": "#/$defs/ref"
+              }
+            },
+            "required": [
+              "type",
+              "archetype"
+            ],
+            "additionalProperties": false
+          }
+        ]
+      }
+    },
+    "registration": {
+      "description": "How the game finds a new primary asset (world, adventure, archetype). 'discover' relies on the asset registry; 'append' adds it to an existing list asset; 'replace' takes over an existing one's slot.",
+      "type": "object",
+      "properties": {
+        "mode": {
+          "enum": [
+            "discover",
+            "append",
+            "replace"
+          ],
+          "default": "discover"
+        },
+        "list": {
+          "$ref": "#/$defs/gamePath",
+          "description": "append: the asset that holds the list."
+        },
+        "property": {
+          "type": "string",
+          "description": "append: the list property on that asset."
+        },
+        "replaces": {
+          "$ref": "#/$defs/gamePath",
+          "description": "replace: the asset whose slot this takes."
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}
