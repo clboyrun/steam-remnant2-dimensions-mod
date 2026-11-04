@@ -69,12 +69,79 @@ exposes.
 | Enemy | A spawn table entry (`USpawnTableCharacter`) used as a zone's encounter group | Encounter groups on the zone |
 | NPC | Placed in a map, or spawned by a quest | A blueprint; placement is open (below) |
 | Dialogue, objectives | A quest entity (`UQuestEntity.EventTree`) or an NPC's dialogue component | Components added to the quest |
-| Campaign alternative world | The campaign root quest's slot for that world (`losomn`, `yaesha` or `nerud` only; Hell needs a root-quest override) | Open until the catalog has `campaign.*` |
+| Campaign alternative world | The campaign root quest's slot for that world (three tag-picked story slots `World1` to `World3`; Hell needs a root-quest override) | Shape confirmed in the dump (`campaign.*` in the catalog); the slot-to-world mapping is open |
 
 Adding to a game list means packing a **modified copy** of that game asset (an override). Compatibility with other
 pak mods is **not a goal** (decided 2026-11-01): when overriding a game asset (the inventory widget, the campaign
 root quest, a hub quest) is the simplest way to add something, do that. Two separate mods
 that override the same game list conflict, so keep related additions to one list in a single override.
+
+## Confirmed by the FModel dump (2026-11-04)
+
+Astra dumped the game's properties with FModel to `workspace/extracted/Remnant2/Content/` on her machine (about
+17,000 JSON files; not in the repo). The files below were read for this section. Everything here is read from
+those files; anything the files do not show is listed under "Not shown by the dump". Package paths are the file path
+below `Content/` with `/Game/` in front (`Content/_Core/Stats/Stats_Armor.json` is `/Game/_Core/Stats/Stats_Armor`).
+
+**Tables and structs** (`Content/_Core/Stats/`). These are `DataTable` assets whose row struct is a *user-defined*
+struct under `/Game/_Core/Stats/Base/`. In the cooked JSON every row property is named `<Name>_<id>_<GUID>`, for
+example `Damage_2_201A70444998A31015340E9DF30CF2AF`; the game's own tools match on the part before the id.
+
+| Table | Rows | Struct | Fields |
+| --- | --- | --- | --- |
+| `Stats_RangedWeapon` | 72 (`Repeater`, `SMG`, `Special_*`, `Boss_*`, ...) | `StatDef_RangedWeapon` | Value, Damage, ImpactScalar, Range, PrimaryFalloff, SecondaryFalloff, SprayCount, Spread, MaxAmmo, AmmoPerClip, AmmoPerReload, RateOfFire, IsAutomatic, BurstCount, BurstRateOfFire, HasScope, ScopeFOV, MinCritRange, MaxCritRange, CritChance, ProcChance, WeakSpotDamageMod, CrouchSpreadScalar |
+| `Stats_MeleeWeapon` | 48 | `StatDef_MeleeWeapon` | Value, Damage, ImpactScalar, BleedCritChance, AttackSpeed, StaminaCost, CritChance, ProcChance, WeakSpotDamageMod |
+| `Stats_Armor` | 123 | `StatDef_Armor` | Value, Armor, Encumbrance, BleedResistance, BlightResistance, FireResistance, ShockResistance, AcidResistance |
+| `Stats_Items` | 37 | `StatDef_Item` | Value, SellValueScalar (a price table) |
+| `Stats_Scaling_Difficulty` | 4 (`"1"` to `"4"`) | `StatDef_Scaling` | 23 scalars (enemy, elite, brute, aberration, miniboss and world boss health and damage, spawn quantity and weight, healing, currency, experience, friendly fire, player status damage, blight build-up, consumable, ammo and gem drop chance) |
+
+Corrections to earlier assumptions: armor has `Encumbrance` (not `Weight`) and `AcidResistance` (not
+`ToxinResistance`); the ranged weapon struct is `StatDef_RangedWeapon`, not `GunfireRuntime.RangedWeaponData`; and
+`StatDef_Item` holds only prices, so it is not the struct for ring, amulet, mutator or trait effects. Difficulty is
+exactly four rows, so a fifth difficulty is a new row `"5"`.
+
+**Item types and categories** (`Content/_Core/ItemTypes/`). Both are Blueprint classes. `ItemCategory_*` derive
+from `/Script/GunfireRuntime.ItemCategory` and set `Label` and `Icon` (categories: All, Ammo, Armor, Consumables,
+Engrams, Equipment, Hidden, Items, Skin, Trinket, Weapons). `ItemType_*` derive from `/Script/GunfireRuntime.ItemType`
+and set `ItemStats` and `CharacterStats` (both `StatInfoSet` assets in `/Game/_Core/Stats/Inspect`), `Label`, `Icon`
+and `SortPriority`. There are item types for Ring, Amulet, Helmet/Body/Gloves/Legs, LongGun/HandGun/Melee/SpecialGun,
+Gem_* and MetaGem_* (mutators), PrismStone_Base, Quest and the vendor types.
+
+**Campaign root quest** (`Content/Campaign_Main/Quest_Campaign_Main.json`). `Quest_Campaign_Main_C` derives from
+`/Game/_Core/Blueprints/Quests/Quest_RootQuest.Quest_RootQuest_C`. Its defaults: `QuestGameMode = EQuestMode::Campaign`,
+`QuestNameID = MainCampaign`, `WorldTags = ["Nerud", "Fae", "Jungle"]`, plus `RemnantQuestSubQuest` components:
+
+| Component | Chooses its quest by | Level remapping |
+| --- | --- | --- |
+| `World1`, `World2`, `World3` | `QuestTags = ["Story"]` (no fixed quest) | World1 up to 5; World2 and World3 6 to 9 |
+| `RootEarth` | a fixed `QuestBP`: `Quest_RootEarth_Zone1` | 12 to 14 |
+| `Labyrinth` | a fixed `QuestBP`: `Quest_Story_Labyrinth`, `LevelMin 5` | none |
+
+`RemnantQuestZoneLink` components join the Labyrinth to each world (`Labyrinth_ToWorld1` to `World1_ToLabyrinth`, and
+so on, plus Root Earth). So the three rolled worlds are picked by tag, which fits the plan to add the Grimm, Lovecraft
+and Arcade worlds as story quests with matching tags. Root Earth is a fixed `QuestBP`, which confirms that Hell
+cannot be an extra roll and needs the root quest overridden. Functions on the quest include `AssignWorldTag`,
+`ActivateFirstValidWorld`, `IsWorldValid` and `OnRootEarth`.
+
+**Zone definition** (`Content/Campaign_Main/ZoneDefs/ZoneDef_RootEarth_City.json`). A Blueprint class derived from
+`/Script/Remnant.ZoneDef` whose defaults hold `TileSet` (a `TileSet` asset), `EncounterGroups` and `SkyBoxes`. The
+`Swarm` and `SwarmSpecial` groups have `SpawnTable = null` and are filled by `SpawnTags`; the fields are in
+`data/catalog.json` under `kinds.world.dumpFindings`. Only this one zone def was read.
+
+**Root Earth layout.** `Campaign_Main` also holds `Quests/Quest_RootEarth_Zone1`, `Zone2` and `TowerBoss`,
+`SpawnTables/` and `ZoneDefs/` (City, Seabed, Towerboss). Quest files can be very large (`Quest_Earth_City.json` is
+about 800 MB, `Quest_Earth_TowerBoss.json` about 300 MB), so they are not practical to stage or open whole.
+
+### Not shown by the dump
+
+- The JSON is the property view. Function graphs are listed by name only, so which World slot maps to which tag
+  (`AssignWorldTag`) and how the game picks a dungeon are **not** answered.
+- Which asset holds mutator, ring, trait or archetype level data, the difficulty menu list, the inventory widget's
+  tab list and the Ward 13 NPC spawn hook were not looked at yet.
+- `Quest_Base`, `Quest_AdventureMode_*`, `Quest_Dungeon_Base` and `Quest_RootQuest` (in
+  `Content/_Core/Blueprints/Quests/`) exist in the dump but sit too deep for the current file-staging tool, so they
+  have not been read. They are where the adventure template (item 2 below) and dungeon injection (test 6) get
+  answered.
 
 ## Risks and unknowns
 
@@ -82,20 +149,22 @@ that override the same game list conflict, so keep related additions to one list
    `AssetRegistry.bin`, so a new `RemnantArchetype`, `ZoneDef` or `Quest` in a mod pak may not be found by the scan.
    If it isn't, use an append (add to a list the game reads) or a replace (take over an existing slot,
    for example replace one adventure option). This is the first thing to test.
-2. **Unconfirmed catalog entries** (`verified: false`): the row structs for item, armor, mutator and trait stats,
-   armor stat field names, the archetype/engram templates, and the adventure template. Check them in FModel and fix
-   the catalog.
+2. **Unconfirmed catalog entries** (`verified: false`): weapon, armor and difficulty tables are now confirmed (see the
+   dump section). Still open: where ring, amulet, mutator and trait effects live (not `StatDef_Item`), the
+   archetype/engram templates, and the adventure template. Check them in FModel and fix the catalog.
 3. **Weapon mod slots**: slot NameIDs (`Mod`, `Gem`) are a guess; copy them from a real weapon.
 4. **New maps** are built by hand in the editor under `/Game/Dimensions/<id>/Maps/` (tiles, container map, quest
    graph). Nothing generates level geometry.
 5. **Localization**: only the default culture's text goes into assets; other cultures need a string-table step.
 6. **Campaign slots and story campaigns**: the mod adds four new worlds. Three fit the base campaign's rollable
-   slots through the campaign root quest's alternative-slot setting, which accepts only `losomn`, `yaesha` and `nerud`: the Grimm world is an
+   slots (the root quest's `World1` to `World3` sub quests, picked by tag): the Grimm world is an
    extra Yaesha roll, the Lovecraftian world an extra N'Erud roll and the Abandoned Arcade an extra Losomn roll, each
    by adding a sub-quest to the campaign root quest's slot. Hell (Root Earth) does **not** fit: Root Earth is a fixed
-   quest, not a rolled slot, so Hell probably needs the campaign root quest overridden (unverified; no catalog slot
-   exists for it yet). Which asset and property that is isn't known yet. Export `Quest_Campaign` (and a DLC story campaign's setup) from FModel
-   and fill in `campaign` in the catalog.
+   quest, not a rolled slot, so Hell needs the campaign root quest overridden (the fixed `QuestBP` is confirmed in the
+   dump; the override itself is untested). The dump confirms this shape: the campaign root is `Quest_Campaign_Main` with three tag-picked `World1` to
+   `World3` slots and a fixed Root Earth sub quest. The `losomn`/`yaesha`/`nerud` slot names above are not in the file;
+   it uses `WorldTags` `Nerud`, `Fae`, `Jungle`. Still unknown: which slot goes with which tag, and a DLC story
+   campaign's setup. `campaign` in the catalog is filled in from the dump.
 7. **Hub NPCs**: a pak can't safely add an actor to Ward 13's map (that would replace the whole map). The way the
    game makes NPCs appear there after story events (a hub quest, spawn points, a sequence) has to be found in FModel
    and recorded under `npc.hub` in the catalog. Vendor
@@ -106,8 +175,9 @@ that override the same game list conflict, so keep related additions to one list
    data. If the inventory groups by category on its own, the new section just appears; if its tabs are fixed in the
    inventory widget, that widget blueprint is overridden (`ui.inventoryWidget` in the catalog).
 9. **Difficulty**: a difficulty is an index into `DifficultyScalingTable` (rows of `FDifficultyScalingData`: enemy
-   health, enemy damage, spawn quantity, currency, experience). Adding a row is data; the table's asset path, the
-   difficulty menu's list, and how loot and enemy level follow the index still need finding in FModel.
+   health, enemy damage, spawn quantity, currency, experience). Adding a row is data; the table is
+   `/Game/_Core/Stats/Stats_Scaling_Difficulty` with rows `"1"` to `"4"` (confirmed in the dump). The difficulty
+   menu's list, and how loot and enemy level follow the index, still need finding in FModel.
 10. **Dialogue wiring**: node classes and fields come from the headers, but the trigger name the game fires on
    interact and the voice audio struct still need confirming.
 11. **retoc and UE 5.2**: retoc notes missing dependency data before 5.3 "should not be an issue for modding". If
