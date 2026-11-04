@@ -105,8 +105,10 @@ that override the same game list conflict; keep related content in one dimension
    graph). The JSON references them; it can't generate level geometry.
 5. **Localization**: only the default culture's text is written into assets so far; other cultures in the JSON
    are kept for a later string-table step.
-6. **Campaign slots and story campaigns**: making the Grimm world an extra Yaesha roll, or the Lovecraftian world an
-   extra N'Erud roll, means adding a sub-quest to the campaign root quest's slot. Which asset and property that is
+6. **Campaign slots and story campaigns**: the mod adds four new worlds. The Grimm world is an extra Yaesha roll,
+   the Lovecraftian world an extra N'Erud roll, the Abandoned Arcade an extra Losomn roll and Hell an extra Root
+   Earth roll. Each means adding a sub-quest to the campaign root quest's slot (Root Earth is a fixed quest, so Hell
+   needs the root quest overridden). Which asset and property that is
    isn't known yet, so the plan writes a note. Export `Quest_Campaign` (and a DLC story campaign's setup) from FModel
    and fill in `campaign` in the catalog.
 7. **Hub NPCs**: a pak can't safely add an actor to Ward 13's map (that would replace the whole map). The way the
@@ -138,3 +140,14 @@ Do these in order with the smallest content that answers each question, and reco
 4. **Discovery**: an archetype with `registration: discover`. If it doesn't appear at character creation, retry with
    `replace`, and set the default for archetypes, zones and adventures accordingly.
 5. **World**: one zone with a simple map, then the adventure quest and its container map.
+11. **Dungeon injection (investigate)**: before we write our own instance tables for the four new worlds (Grimm,
+   Lovecraft, Abandoned Arcade, Hell), find out how the game injects a dungeon into a zone and ties spawns to it.
+   Questions to answer from FModel and the UE4SS dump:
+   - Which asset picks a dungeon for a zone slot, and does it read `QuestTags` or a `USpawnTable` of dungeons?
+   - Where do per-dungeon instance tables (encounter groups, loot, minibosses) attach, and what links a table to
+     the dungeon that spawned (`URemnantQuestZone.OnZoneLoaded` and `SetSpawnTableOverride` are the suspects).
+   - Whether `lootTable.injectInto` and a zone's `encounters` are enough to attach our tables, or whether a
+     dungeon-level override is needed.
+   - Whether a pak-added dungeon quest is seen by the quest manager's `RegisteredQuests` (see item 6).
+   Until this is answered, `injectInto` entries for new dungeons are unverified. Tracked in ClickUp as
+   "#23 How dungeons are generated per zone".

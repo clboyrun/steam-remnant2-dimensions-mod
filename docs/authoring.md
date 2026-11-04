@@ -91,7 +91,12 @@ row, `mod` (a fixed weaponMod), `mutatorSlot`.
 **world**: `biomeName`, `loot`, `zones`: `[{ "id", "name", "template", "maps": ["/Game/Dimensions/<id>/Maps/..."], "tileSet", "loot", "encounters", "properties" }]`, `registration`.
 Maps are made by hand in the editor. `campaign`: `{ "alternativeTo": "yaesha", "chance": 0.25, "quest": "<storyline quest>" }`
 makes the world an **extra** roll for that base campaign slot (`losomn`, `yaesha`, `nerud`); the base world stays in
-the pool. This is how the World of Grimm (Yaesha slot) and the Lovecraftian world (N'Erud slot) plug in.
+the pool. This is how the four new worlds plug in: the World of Grimm (Yaesha slot), the Lovecraftian world (N'Erud slot),
+the Abandoned Arcade (Losomn slot) and Hell (Root Earth slot).
+
+> **To investigate:** how the game injects a dungeon into a zone, so a world's `loot` and `encounters` tables are
+> tied to the dungeon that spawned. Until that is confirmed (see `docs/architecture.md`, open question 11), treat
+> `injectInto` and per-dungeon instance tables as unverified.
 
 **adventure**: `template` (a root quest), `world`, `container` (the persistent map), `levelMin`, `levelMax`,
 `rarity` (`Common`...`Legendary`), `icon`, `registration`, `storyline` (quests it can roll: ids or
