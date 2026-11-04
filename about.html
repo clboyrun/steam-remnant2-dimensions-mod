@@ -18,6 +18,7 @@
     <span>Remnant 2 mod</span>
     <div class="links">
       <a href="#bosses">Bosses</a>
+      <a href="#equipment">Equipment</a>
       <a href="#signup">Mailing list</a>
       <a href="./">Project status →</a>
     </div>
@@ -78,6 +79,21 @@
     <div class="stat"><b>5th</b><span>Difficulty</span></div>
   </div>
 </div>
+
+<nav class="tabs" id="tabs" aria-label="Sections on this page">
+  <div class="wrap">
+    <div class="tabs-scroll" role="list">
+      <a role="listitem" href="#worlds" data-tab="worlds">Worlds</a>
+      <a role="listitem" href="#bosses" data-tab="bosses">Bosses</a>
+      <a role="listitem" href="#npcs" data-tab="npcs">Ward 13</a>
+      <a role="listitem" href="#gear" data-tab="gear">Gear</a>
+      <a role="listitem" href="#equipment" data-tab="equipment">Equipment gallery</a>
+      <a role="listitem" href="#progression" data-tab="progression">Ascension</a>
+      <a role="listitem" href="#interface" data-tab="interface">Quality of life</a>
+      <a role="listitem" href="#signup" data-tab="signup">Mailing list</a>
+    </div>
+  </div>
+</nav>
 
 <main class="wrap">
 
@@ -341,8 +357,24 @@
     </div>
   </section>
 
+  <section id="equipment">
+    <div class="sh"><span class="n">05</span><h2>Equipment gallery</h2></div>
+    <p class="intro">Every piece of new gear and every gear upgrade, sorted by the slot it goes in. Filter by slot, by world, and by where it comes from. Where a drop dungeon or boss has not been chosen yet, the card says <em>Unassigned</em> rather than guessing. Nothing here is final.</p>
+
+    <div class="gal-filters" id="gal-filters">
+      <div class="filters" role="group" aria-label="Filter equipment by slot" data-group="slot"></div>
+      <div class="filters" role="group" aria-label="Filter equipment by world" data-group="world"></div>
+      <div class="filters" role="group" aria-label="Filter equipment by source" data-group="source"></div>
+      <p class="fine"><span id="gal-count">0</span> shown <button type="button" class="chipbtn reset" id="gal-reset">Reset filters</button></p>
+    </div>
+
+    <div class="gallery" id="gallery" aria-live="polite"></div>
+    <p class="gal-empty" id="gal-empty" hidden>Nothing matches those filters. Try resetting them.</p>
+    <noscript><p class="fine">The gallery needs JavaScript. The Gear &amp; upgrades section above lists the same things.</p></noscript>
+  </section>
+
   <section id="progression">
-    <div class="sh"><span class="n">05</span><h2>Ascension</h2></div>
+    <div class="sh"><span class="n">06</span><h2>Ascension</h2></div>
     <p class="intro">Max out an archetype, then take it further. The AI ascends it with a Simulacrum, you level it again, and the trait points it gives stay with you for good.</p>
 
     <div class="ladder">
@@ -370,7 +402,7 @@
   </section>
 
   <section id="interface">
-    <div class="sh"><span class="n">06</span><h2>Quality of life</h2></div>
+    <div class="sh"><span class="n">07</span><h2>Quality of life</h2></div>
     <div class="ui">
       <div><h3>Equipment sorting</h3><p>Sort gear A–Z, Z–A, by upgrade level, or for weapons by highest or lowest DPS.</p></div>
       <div><h3>Quest Books on the map</h3><p>A map tab of their own, so new quests don't crowd your list. A book vanishes once you own its item.</p></div>
@@ -380,7 +412,7 @@
   </section>
 
   <section id="signup">
-    <div class="sh"><span class="n">07</span><h2>Mailing list</h2></div>
+    <div class="sh"><span class="n">08</span><h2>Mailing list</h2></div>
     <p class="intro">Want to hear when something lands, or help playtest it? Tell us what you care about.</p>
 
     <details class="signup">
@@ -463,5 +495,8 @@
 
 <script src="js/signup.js"></script>
 <script src="js/bosses.js"></script>
+<script src="js/equipment-data.js"></script>
+<script src="js/equipment.js"></script>
+<script src="js/tabs.js"></script>
 </body>
 </html>
