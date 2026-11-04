@@ -1,10 +1,10 @@
 # Content cards for the four new worlds
 
-ClickUp cards (one per item, parent set) were generated 2026-11-04 as `NEW - ...` cache files for each world and each main boss. They are scaffolds: known facts only, inferred items marked, open questions listed. Nothing defines campaign structure or boss mechanics.
+ClickUp cards (one per item; the sync cannot nest subtasks of subtasks, so none has a parent and each uses `blocks` to point at the card it informs) were generated 2026-11-04 as `NEW - ...` cache files for each world and each main boss. They are scaffolds: known facts only, inferred items marked, open questions listed. Nothing defines campaign structure or boss mechanics.
 
-Per world (parent: the world's story card): dungeon pool and roll rules, world drop rates, mob roster, NPCs, quest list, injectable reusability matrix.
+Per world (standalone; `blocks` the world's story card): dungeon pool and roll rules, world drop rates, mob roster, NPCs, quest list, injectable reusability matrix.
 
-Per boss (parent: the boss card): dungeon and arena, drop rates, mobs and adds, quest, injectable compatibility.
+Per boss (standalone; `blocks` the boss card): dungeon and arena, drop rates, mobs and adds, quest, injectable compatibility.
 
 | World | Slot | Story card | Bosses with card sets |
 | --- | --- | --- | --- |
