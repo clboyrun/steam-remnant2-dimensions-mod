@@ -12,6 +12,7 @@ A Remnant 2 content mod (new worlds, weapons, mutators, rings, armor, archetypes
 | `tools/pak-builder` (on the `pak-builder` branch for now) | The build path: generates Blueprints, cooks and packs the pak. Python. **All building goes through this.** |
 | `tools/clickup-sync` | ClickUp sync tray tool. |
 | `data/catalog.json` | Game facts (template paths, row structs, stat field names). Entries marked `verified: false` still need checking in FModel. |
+| `docs/pak-builder-json.md` | The JSON format pak-builder reads to create Blueprints and a pak. |
 | `docs/architecture.md` | How the game finds mod content, risks and unknowns, and the first in-game tests. |
 
 ## Building
