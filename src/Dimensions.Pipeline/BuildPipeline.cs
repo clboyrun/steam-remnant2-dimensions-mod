@@ -4,7 +4,7 @@ namespace Dimensions.Pipeline;
 
 public sealed record BuildOptions
 {
-    /// <summary>The Rem2Proj-based Unreal project (Remnant2.uproject).</summary>
+    /// <summary>The in-repo Rem2Proj/ Unreal project (Remnant2.uproject).</summary>
     public required string UProject { get; init; }
     /// <summary>UE 5.2 install folder (the one holding Engine/). Found automatically when null.</summary>
     public string? Engine { get; init; }

@@ -32,6 +32,7 @@ and `dimensions build` turns them into game assets in a UE 5.2 project, cooks th
 | `src/Dimensions.Pipeline` | Library: turns definitions into a build plan, runs the editor, cooks, packs, installs. |
 | `src/Dimensions.Cli` | The `dimensions` command. |
 | `data/catalog.json` | What the generator knows about the game's classes (templates, row structs, stat field names). Editable. |
+| `Rem2Proj/` | The UE 5.2 project (`Remnant2.uproject`, C++ headers, Config, stand-in Content) the build opens. Part of this repo, not a separate checkout. |
 | `unreal/Python` | The UE 5.2 editor script that applies a build plan to the project. |
 | `unreal/Plugins/DimensionsEditor` | A tiny editor plugin (one asset factory) the script uses for spawn tables and other plain objects. |
 | `examples/Ashfall` | A complete example dimension with placeholder art. |
@@ -40,24 +41,25 @@ and `dimensions build` turns them into game assets in a UE 5.2 project, cooks th
 ## Quick start
 
 You need: Windows, **Unreal Engine 5.2**, Visual Studio with C++ (to build the project once), the .NET 10 SDK,
-[Rem2Proj](https://github.com/narknon/Rem2Proj) (a UE 5.2 project that mirrors Remnant 2's classes), and for the
-game's IoStore format [retoc](https://github.com/trumank/retoc) on your PATH. Players need a pak signature bypass
-such as Narknon's "Allow Asset Mods", like every Remnant 2 asset mod.
+the `Rem2Proj/` folder of this repository (a UE 5.2 project that mirrors Remnant 2's classes; nothing else to clone),
+and for the game's IoStore format [retoc](https://github.com/trumank/retoc) on your PATH. Players need a pak
+signature bypass such as Narknon's "Allow Asset Mods", like every Remnant 2 asset mod.
 
 ```powershell
+# Run these from the repository root; Rem2Proj\Remnant2.uproject is the project in this repo.
 # 1. Once: put the editor plugin into the project, then build Remnant2.uproject in Visual Studio (Development Editor).
-dotnet run --project src/Dimensions.Cli -- setup --project C:\Mods\Rem2Proj\Remnant2.uproject
+dotnet run --project src/Dimensions.Cli -- setup --project Rem2Proj\Remnant2.uproject
 
 # 2. Check your dimension and see what it will do (no Unreal needed).
 dotnet run --project src/Dimensions.Cli -- validate examples/Ashfall
 dotnet run --project src/Dimensions.Cli -- plan examples/Ashfall -o plan.json
 
 # 3. Generate, cook, pack, and copy into the game.
-dotnet run --project src/Dimensions.Cli -- build examples/Ashfall --project C:\Mods\Rem2Proj\Remnant2.uproject --install
+dotnet run --project src/Dimensions.Cli -- build examples/Ashfall --project Rem2Proj\Remnant2.uproject --install
 ```
 
 `plan` lists the game assets that must be in the Unreal project before the editor step (the templates you derive
-from and any game lists you add to). Rem2Proj has some of them; export the rest from the game with FModel (using
+from and any game lists you add to). `Rem2Proj/` has some of them; export the rest from the game with FModel (using
 your `.usmap`) and import them at the same path with JsonAsAsset. The editor step stops and lists anything missing.
 
 Start your own with `dimensions new MyDimension --id MyDimension`.

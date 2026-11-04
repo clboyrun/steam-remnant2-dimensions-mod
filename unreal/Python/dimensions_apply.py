@@ -650,7 +650,7 @@ def check_required(ctx):
     missing = [a for a in ctx.plan.get("requiredAssets", []) if not assets.does_asset_exist(a)]
     for a in missing:
         ctx.error(
-            "missing from the project: {} (Rem2Proj has some game assets; export the rest from the game with FModel and "
+            "missing from the project: {} (the repo's Rem2Proj/ has some game assets; export the rest from the game with FModel and "
             "import them with JsonAsAsset at the same path)".format(a)
         )
     return not missing

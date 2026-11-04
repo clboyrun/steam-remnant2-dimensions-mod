@@ -90,12 +90,14 @@ row, `mod` (a fixed weaponMod), `mutatorSlot`.
 
 **world**: `biomeName`, `loot`, `zones`: `[{ "id", "name", "template", "maps": ["/Game/Dimensions/<id>/Maps/..."], "tileSet", "loot", "encounters", "properties" }]`, `registration`.
 Maps are made by hand in the editor. `campaign`: `{ "alternativeTo": "yaesha", "chance": 0.25, "quest": "<storyline quest>" }`
-makes the world an **extra** roll for that base campaign slot (`losomn`, `yaesha`, `nerud`); the base world stays in
-the pool. This is how the four new worlds plug in: the World of Grimm (Yaesha slot), the Lovecraftian world (N'Erud slot),
-the Abandoned Arcade (Losomn slot) and Hell (Root Earth slot).
+makes the world an **extra** roll for that base campaign slot (`losomn`, `yaesha`, `nerud`; no other value is
+accepted); the base world stays in the pool. Three of the four new worlds plug in this way: the World of Grimm
+(Yaesha slot), the Lovecraftian world (N'Erud slot) and the Abandoned Arcade (Losomn slot). Hell (Root Earth) does not
+fit: Root Earth is a fixed quest, so Hell probably needs the campaign root quest overridden instead (unverified, see
+`docs/architecture.md`, risk 6).
 
 > **To investigate:** how the game injects a dungeon into a zone, so a world's `loot` and `encounters` tables are
-> tied to the dungeon that spawned. Until that is confirmed (see `docs/architecture.md`, open question 11), treat
+> tied to the dungeon that spawned. Until that is confirmed (see `docs/architecture.md`, first test 6), treat
 > `injectInto` and per-dungeon instance tables as unverified.
 
 **adventure**: `template` (a root quest), `world`, `container` (the persistent map), `levelMin`, `levelMax`,
@@ -185,4 +187,4 @@ converted to the property's type. For values JSON can't express, use a tagged ob
 | `{ "$struct": { ... }, "$type": "StructName" }` | Struct (type needed inside empty arrays) |
 | `{ "$new": "/Script/Module.Class", "properties": { ... } }` | New instanced subobject (spawn table entries, recipes) |
 
-Property names come from the headers in Rem2Proj's `Source/` folder, or FModel.
+Property names come from the headers in this repo's `Rem2Proj/Source/` folder, or FModel.
