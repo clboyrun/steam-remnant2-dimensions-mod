@@ -112,7 +112,7 @@ public static class Program
             Console.WriteLine($"  {group.Count(),4} {group.Key}");
         if (plan.RequiredAssets.Count > 0)
         {
-            Console.WriteLine("\nThese game assets must be in the Unreal project before the editor step (Rem2Proj has some; import the rest with FModel + JsonAsAsset):");
+            Console.WriteLine("\nThese game assets must be in the Unreal project before the editor step (the repo's Rem2Proj/ has some; import the rest with FModel + JsonAsAsset):");
             foreach (var a in plan.RequiredAssets) Console.WriteLine($"  {a}");
         }
         if (plan.Overrides.Count > 0)

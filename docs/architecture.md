@@ -9,14 +9,18 @@ it through the same references it uses for its own content.
 The only runtime requirement is a pak signature bypass ("Allow Asset Mods" by Narknon), which every Remnant 2 asset
 mod needs because the shipped paks are signed.
 
+The Unreal project the build runs in is `Rem2Proj/` in this repository (`Rem2Proj/Remnant2.uproject`). It is ours to
+edit and is not a separate clone or submodule: its headers are regenerated from the UE4SS UHT dump, and the `dimensions` CLI is pointed at it with `--project Rem2Proj\Remnant2.uproject` or
+`DIMENSIONS_UPROJECT`.
+
 ## What the game looks like (research, 2026-11-01)
 
-From [Rem2Proj](https://github.com/narknon/Rem2Proj) (a UE 5.2 project with header stand-ins for the game's
-`Remnant` and `GunfireRuntime` modules) and the item database from
+From `Rem2Proj/` in this repo (a UE 5.2 project with header stand-ins for the game's `Remnant` and
+`GunfireRuntime` modules, started from the community Rem2Proj project) and the item database from
 [lib.remnant2.analyzer](https://github.com/AndrewSav/lib.remnant2.analyzer):
 
 - **Engine 5.2, IoStore** (`bUseIoStore=True`), Oodle compression, chunked paks. Mods cooked with UE 5.2 and packed as
-  pak/IoStore load (the existing pak mods on Nexus were made this way, with Rem2Proj).
+  pak/IoStore load (the existing pak mods on Nexus were made this way, with a project like Rem2Proj).
 - **Items** are blueprints derived from `AItem` (`AEquipment` → weapons, armor, trinkets, `AEquipmentMod` → mods and
   mutators). Display text, icons and a stats row (`FDataTableRowHandle Stats`) are properties on the class defaults.
 - **Weapon stats** are `FRangedWeaponData` rows (Damage, RateOfFire, AmmoPerClip, MaxAmmo, Range, falloff, spread,
@@ -30,7 +34,7 @@ From [Rem2Proj](https://github.com/narknon/Rem2Proj) (a UE 5.2 project with head
 - **Adventures** are root quests: `ARemnantQuest` with `QuestGameMode = Adventure`, a container map, level range,
   rarity and biome name. The quest graph that places zones, bosses and rewards lives in the container map.
 - The asset manager **scans /Game** for `ZoneDef`, `Quest`, `RecipeList` and `RemnantArchetype` primary assets
-  (Rem2Proj `DefaultGame.ini`).
+  (`Rem2Proj/Config/DefaultGame.ini`).
 
 ## Pipeline
 
@@ -62,7 +66,7 @@ JSON side modular: adding a field usually means a schema change and a few lines 
 
 ### Why a stand-in project works
 
-Rem2Proj has the game's C++ classes as headers, and some game blueprints as stand-ins. A new weapon is a child
+`Rem2Proj/` has the game's C++ classes as headers, and some game blueprints as stand-ins. A new weapon is a child
 blueprint of the stand-in `Weapon_LongGun_Base`; when cooked, the child refers to its parent by path, and in game
 that path resolves to the **real** parent in the game's paks, because the stand-in itself is never packed
 (`PakLayout` packs only the dimension's folder and the overrides). The child keeps everything it doesn't change
@@ -83,7 +87,7 @@ exposes.
 | Enemy | A spawn table entry (`USpawnTableCharacter`) used as a zone's encounter group | `encounters` |
 | NPC | Placed in a map, or spawned by a quest | A blueprint; placement is open (below) |
 | Dialogue, objectives | A quest entity (`UQuestEntity.EventTree`) or an NPC's dialogue component | `addComponents` on the quest |
-| Campaign alternative world | The campaign root quest's slot for that world | Note only until the catalog has `campaign.*` |
+| Campaign alternative world | The campaign root quest's slot for that world (`campaign.alternativeTo`: `losomn`, `yaesha` or `nerud` only; Hell needs a root-quest override) | Note only until the catalog has `campaign.*` |
 
 Adding to a game list means packing a **modified copy** of that game asset (an override). Compatibility with other
 pak mods is **not a goal** (decided 2026-11-01): when overriding a game asset (the inventory widget, the campaign
@@ -105,10 +109,12 @@ that override the same game list conflict; keep related content in one dimension
    graph). The JSON references them; it can't generate level geometry.
 5. **Localization**: only the default culture's text is written into assets so far; other cultures in the JSON
    are kept for a later string-table step.
-6. **Campaign slots and story campaigns**: the mod adds four new worlds. The Grimm world is an extra Yaesha roll,
-   the Lovecraftian world an extra N'Erud roll, the Abandoned Arcade an extra Losomn roll and Hell an extra Root
-   Earth roll. Each means adding a sub-quest to the campaign root quest's slot (Root Earth is a fixed quest, so Hell
-   needs the root quest overridden). Which asset and property that is
+6. **Campaign slots and story campaigns**: the mod adds four new worlds. Three fit the base campaign's rollable
+   slots through `campaign.alternativeTo`, which accepts only `losomn`, `yaesha` and `nerud`: the Grimm world is an
+   extra Yaesha roll, the Lovecraftian world an extra N'Erud roll and the Abandoned Arcade an extra Losomn roll, each
+   by adding a sub-quest to the campaign root quest's slot. Hell (Root Earth) does **not** fit: Root Earth is a fixed
+   quest, not a rolled slot, so Hell probably needs the campaign root quest overridden (unverified; no schema field
+   or catalog slot exists for it yet). Which asset and property that is
    isn't known yet, so the plan writes a note. Export `Quest_Campaign` (and a DLC story campaign's setup) from FModel
    and fill in `campaign` in the catalog.
 7. **Hub NPCs**: a pak can't safely add an actor to Ward 13's map (that would replace the whole map). The way the
@@ -140,7 +146,7 @@ Do these in order with the smallest content that answers each question, and reco
 4. **Discovery**: an archetype with `registration: discover`. If it doesn't appear at character creation, retry with
    `replace`, and set the default for archetypes, zones and adventures accordingly.
 5. **World**: one zone with a simple map, then the adventure quest and its container map.
-11. **Dungeon injection (investigate)**: before we write our own instance tables for the four new worlds (Grimm,
+6. **Dungeon injection (investigate)**: before we write our own instance tables for the four new worlds (Grimm,
    Lovecraft, Abandoned Arcade, Hell), find out how the game injects a dungeon into a zone and ties spawns to it.
    Questions to answer from FModel and the UE4SS dump:
    - Which asset picks a dungeon for a zone slot, and does it read `QuestTags` or a `USpawnTable` of dungeons?
