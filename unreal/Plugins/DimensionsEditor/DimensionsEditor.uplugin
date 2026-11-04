@@ -1,0 +1,12 @@
+{
+  "FileVersion": 3,
+  "Version": 1,
+  "VersionName": "1.0",
+  "FriendlyName": "Dimensions Editor",
+  "Description": "Editor-only helpers for the Dimensions build: a factory that makes an asset of any class (spawn tables and other plain objects the game has no editor factory for in Rem2Proj).",
+  "Category": "Editor",
+  "CanContainContent": false,
+  "Modules": [
+    { "Name": "DimensionsEditor", "Type": "Editor", "LoadingPhase": "Default" }
+  ]
+}
