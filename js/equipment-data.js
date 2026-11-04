@@ -19,7 +19,7 @@ window.EQUIPMENT = [
   { name: "Masterwork mutators", slot: "Mutator", type: "Mutator upgrade", world: "ward13", source: "crafting", where: "Masterwork", dungeon: "n/a", boss: "n/a",
     text: "Mutators climb from level 10 to 20 and turn gold past level 10." },
   { name: "Forged armor", slot: "Armor", type: "Armor upgrade", world: "ward13", source: "crafting", where: "The Forge", dungeon: "n/a", boss: "n/a",
-    text: "Ten Forge tiers per armor piece. Each tier adds 10% armor and +1 to every resistance." },
+    text: "Ten Forge tiers per armor piece. Each tier adds 10% armor and +1 to all five resistances (bleed, blight, fire, shock, acid)." },
   { name: "Prism fusions", slot: "Prism", type: "Prism fusion", world: "ward13", source: "crafting", where: "The Prism", dungeon: "n/a", boss: "n/a",
     text: "Every pair of fragments gets a fusion. The Prism holds up to five fusion fragments." },
   { name: "Grimm completion token", slot: "Quest item", type: "Quest item", world: "grimm", source: "boss", dungeon: "", boss: "",
