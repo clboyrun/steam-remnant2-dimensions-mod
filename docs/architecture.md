@@ -132,16 +132,65 @@ cannot be an extra roll and needs the root quest overridden. Functions on the qu
 `SpawnTables/` and `ZoneDefs/` (City, Seabed, Towerboss). Quest files can be very large (`Quest_Earth_City.json` is
 about 800 MB, `Quest_Earth_TowerBoss.json` about 300 MB), so they are not practical to stage or open whole.
 
+**Quests, adventures and dungeons** (`Content/_Core/Blueprints/Quests/`). `Quest_Base_C` derives from
+`/Script/Remnant` `RemnantQuest` and is the parent of the zone, dungeon, boss, miniboss and event quests.
+`Quest_RootQuest_C` (a `RemnantQuest` child) has `Type = Root`, `QuestGameMode = None`, `Container =
+/Game/Maps/Quest_Container` and `QuestTags = [Hidden]`.
+
+- **Adventure.** `Quest_AdventureMode_Base_C` derives from `Quest_RootQuest_C` and has one `RemnantQuestSubQuest`
+  component, `Quest`, whose completion calls `OnSubQuestComplete`. The zone quest `Quest_AdventureMode_1Zone_C`
+  (parent `Quest_Base_C`) has `QuestScope = Campaign` and `QuestTags = [AdventureMode, InsertBiomeHere]`, so a
+  biome-specific child replaces the placeholder tag.
+- **Parts are picked by tag.** The zone quest's sub quest components carry only `QuestTags`: `Boss` [City, Boss],
+  `Event` [City, Event], `MainDungeon` [City, Dungeon, Miniboss], `SideD` [City, Dungeon, Side], `OverworldPOI`
+  [City, OverworldPOI], `TraitBook` [City, Trait], and two `Simulacrum` slots [Simulacrum] with `ChanceToSpawn 20`.
+  It also has tiles (`Start`, `End`, `Dungeon1_Entrance`, `Dungeon1_Exit`, `Dungeon`) and zone links (`Trans`,
+  `Waypoint` using `Interactive_DragonCrystal`).
+- **Dungeon injection point.** `Quest_Dungeon_Base_C` has an optional sub quest `Injectable` (`QuestTags =
+  [Injectable]`) and a `TraitBook` sub quest (`[Trait]`), plus an AI director, `Start`/`End` tiles, a `Zone` and a
+  waypoint link. This answers the first two first-test-6 questions: dungeon content is chosen by `QuestTags`, and
+  the `Injectable` slot is where extra content attaches. Still open: the graph that does the choosing, and whether
+  a quest added by a mod pak is seen (the asset-registry question in Risk 1).
+
+**Items.**
+- **Rings** (`World_Base/Items/Trinkets/Rings/<Name>/`). `Ring_BlessedRing_C` derives from `Trinket_Base_C`
+  (`/Game/World_Base/Items/_Core/Trinkets/Trinket_Base`). Its properties are `StatsComp`, `PersistenceComp`,
+  `FilterTags` (`Defense`, `Relic`), `Label`, `Description`, `FlavorText`, `Icon`, `LargeIcon`, `HUDIcon`,
+  `InspectActor`. The effect is Blueprint logic (`OnEquipped`, `OnUnequipped`, `OnEvent`, `ModifyInspectInfo`) and
+  tuning numbers are Blueprint variables (`Duration`, `BulwarkStacks`). There is no ring stats table.
+- **Mutators** (`World_Base/Items/Gems/Ranged/MetaGems/<Name>/`). `MetaGem_Bandit_C` derives from `MetaGem_Ranged_C`,
+  which derives from `Gem_Meta_Base_C`. Levels come from `CurveData` (`MetaGemValueCurve`) and a `Tiers` array
+  (`Level`, `Label`, `Icon`, `RimColor`). Per-mutator tuning is Blueprint variables (`ReloadSpeedBonus`,
+  `MaxLevelDurationMax`, `MaxLevelStatBonus`, `MinValue`, `MaxValue`) and the behavior is in a sibling
+  `Action_MetaGem_<Name>` asset. Only the ranged chain was read; melee mutators were not.
+- **Archetypes** (`World_Base/Items/Archetypes/<Name>/`). `Archetype_Alchemist` has `EngramItem`, `IconColor`,
+  `RemnantArchetype` (a class reference to `Archetype_Alchemist_UI_C`), `Type = TraitType_Archetype`, `StatTable`,
+  `MaxLevel 10`, `Cost`, `Label`, `Description`, `FlavorText`, `Icon`. `StatTable` is `Archetype_Alchemist_Unlocks`,
+  a `DataTable` of `/Script/GunfireRuntime.StatModTableEntry` (29 rows; fields `Level`, `StatName`, `StatBonus`,
+  `ModifierBP`, `ModifierLevel`, `ModifierCapacity`, `OverrideExistingLevel`, `LevelScalingOwner`,
+  `RequiredContextSlot`, `AllowOverrideRequiredContextSlot`, `Description`, `Hidden`). The engram derives from
+  `Item_Engram_Base_C` (`/Game/Items/Common/Item_Engram_Base`). Trait types are classes in `/Game/_Core/TraitTypes`
+  (Archetype, Character, Gear, Perk, Skill); trait Blueprints are under `World_Base/Items/Traits/`.
+- **Item filters.** `/Game/UI/UI_Inventory/DataTable_ItemFilters` (row struct `ItemFilterRowData`, 23 rows such as
+  `Defense`, `Relic`, `FireRate`) defines the search chips; an item's `FilterTags` use those row names.
+
+**Inventory and menu UI** (`Content/UI/`). `Widget_InGameMenu` is the main menu with eight tab buttons: CHARACTER,
+INVENTORY, ARCHETYPE, TRAITS, FRAGMENTS, MAP, VENDOR and SYSTEM, each naming a panel. `Widget_InventoryList` defaults
+are `Sort = EItemQuerySortMethod::Sort`, `IgnoreTags = [HideInInventory]`, `DisplaySearch = true` and 21
+placeholders, and it builds its list in `Build Inventory List` / `Update Inventory List` with `GetQueryFilter`.
+`Widget_InventoryTab` has an `ItemCategory` property (default `ItemCategory_All_C`) and decides its visibility in
+`IsValidCategory` / `HasValidItems`. So a new inventory section means a tab whose `ItemCategory` is the new class. The
+widget that holds the row of tab instances was not in the files read. The main menu has no difficulty list.
+
 ### Not shown by the dump
 
 - The JSON is the property view. Function graphs are listed by name only, so which World slot maps to which tag
-  (`AssignWorldTag`) and how the game picks a dungeon are **not** answered.
-- Which asset holds mutator, ring, trait or archetype level data, the difficulty menu list, the inventory widget's
-  tab list and the Ward 13 NPC spawn hook were not looked at yet.
-- `Quest_Base`, `Quest_AdventureMode_*`, `Quest_Dungeon_Base` and `Quest_RootQuest` (in
-  `Content/_Core/Blueprints/Quests/`) exist in the dump but sit too deep for the current file-staging tool, so they
-  have not been read. They are where the adventure template (item 2 below) and dungeon injection (test 6) get
-  answered.
+  (`AssignWorldTag`), how the game picks a quest for an `Injectable` slot, and the logic of any ring or mutator are
+  **not** answered.
+- Not found or not read: the difficulty menu list, the widget holding the inventory tab row, melee mutators,
+  amulets, individual traits and armor Blueprints, biome-specific adventure quests, the Ward 13 NPC spawn hook, and
+  any zone def other than `ZoneDef_RootEarth_City`.
+- Folders left out of the copy (art, audio, maps, `Characters`, `Quest_Earth_City`) were not read.
 
 ## Risks and unknowns
 
@@ -150,8 +199,9 @@ about 800 MB, `Quest_Earth_TowerBoss.json` about 300 MB), so they are not practi
    If it isn't, use an append (add to a list the game reads) or a replace (take over an existing slot,
    for example replace one adventure option). This is the first thing to test.
 2. **Unconfirmed catalog entries** (`verified: false`): weapon, armor and difficulty tables are now confirmed (see the
-   dump section). Still open: where ring, amulet, mutator and trait effects live (not `StatDef_Item`), the
-   archetype/engram templates, and the adventure template. Check them in FModel and fix the catalog.
+   dump section). Rings, mutators and archetypes are also read (see the dump section): ring and mutator effects are Blueprint
+   logic, not table rows, and archetype levels are `StatModTableEntry` rows. Still open: amulets, melee mutators,
+   individual traits, and biome-specific adventure quests. Check them in FModel and fix the catalog.
 3. **Weapon mod slots**: slot NameIDs (`Mod`, `Gem`) are a guess; copy them from a real weapon.
 4. **New maps** are built by hand in the editor under `/Game/Dimensions/<id>/Maps/` (tiles, container map, quest
    graph). Nothing generates level geometry.
@@ -173,7 +223,9 @@ about 800 MB, `Quest_Earth_TowerBoss.json` about 300 MB), so they are not practi
 8. **Inventory sections**: an item's section comes from `AItem.Category` (a `UItemCategory` class with a label and
    icon), and inventory panels list items through `FItemQueryFilter.RequiredCategories`. A new category is plain
    data. If the inventory groups by category on its own, the new section just appears; if its tabs are fixed in the
-   inventory widget, that widget blueprint is overridden (`ui.inventoryWidget` in the catalog).
+   inventory widget, that widget blueprint is overridden (`ui.inventoryWidget` in the catalog). The dump shows
+   tabs are `Widget_InventoryTab` instances with an `ItemCategory` property, so a new section needs a tab; the
+   widget that holds the tab row is still to find.
 9. **Difficulty**: a difficulty is an index into `DifficultyScalingTable` (rows of `FDifficultyScalingData`: enemy
    health, enemy damage, spawn quantity, currency, experience). Adding a row is data; the table is
    `/Game/_Core/Stats/Stats_Scaling_Difficulty` with rows `"1"` to `"4"` (confirmed in the dump). The difficulty
@@ -204,5 +256,7 @@ Do these in order with the smallest content that answers each question, and reco
    - Whether a loot-table link and a zone's encounter groups are enough to attach our tables, or whether a
      dungeon-level override is needed.
    - Whether a pak-added dungeon quest is seen by the quest manager's `RegisteredQuests` (see item 6).
-   Until this is answered, spawn-table links for new dungeons are unverified. Tracked in ClickUp as
+   Partly answered by the dump: dungeons pick parts by `QuestTags`, with an optional `Injectable` sub quest slot (see
+   the dump section). The graph that does the choosing, and the registry question, are still open. Until then,
+   spawn-table links for new dungeons are unverified. Tracked in ClickUp as
    "#23 How dungeons are generated per zone".

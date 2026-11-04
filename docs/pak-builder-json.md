@@ -140,6 +140,10 @@ How to turn a dump path into the fields above:
 
 Worked example from the dump: a zone def mapping would have `parent_class` `/Script/Remnant.ZoneDef` (or
 `/Game/Campaign_Main/ZoneDefs/ZoneDef_RootEarth_City.ZoneDef_RootEarth_City_C` to inherit its encounter groups).
+Dump files differ in how they name the parent: classes whose parent is native use `SuperStruct`, and some Blueprint
+classes use `Super` instead (for example `Ring_BlessedRing_C`, parent `Trinket_Base_C`), so check both keys when finding
+`parent_class`.
+
 Nothing here has been run through pak-builder.
 
 ## Older `assets` format

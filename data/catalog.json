@@ -67,14 +67,63 @@
       "prefix": "MetaGem_",
       "levelStruct": null,
       "verified": false,
-      "$comment": "StatDef_Item only holds Value and SellValueScalar (confirmed in the dump), so it is not the level struct. The real mutator/trait level data is still to find."
+      "$comment": "StatDef_Item only holds Value and SellValueScalar (confirmed in the dump), so it is not the level struct. The real mutator/trait level data is still to find.",
+      "dumpFindings": {
+        "chain": [
+          "MetaGem_Bandit_C",
+          "MetaGem_Ranged_C (/Game/World_Base/Items/Gems/Ranged/MetaGem_Ranged)",
+          "Gem_Meta_Base_C (/Game/World_Base/Items/Gems/_Core/Gem_Meta_Base)"
+        ],
+        "valueCurve": "/Game/World_Base/Items/Gems/_Core/Curves/MetaGemValueCurve.MetaGemValueCurve",
+        "tierFields": [
+          "Level",
+          "Label",
+          "Icon",
+          "RimColor"
+        ],
+        "properties": [
+          "CurveData",
+          "Tiers",
+          "GemName",
+          "MinValue",
+          "MaxValue",
+          "MaxLevelStatBonus",
+          "FilterTags",
+          "Label",
+          "Icon",
+          "LargeIcon",
+          "HUDIcon"
+        ],
+        "$comment": "Read from MetaGem_Ranged and MetaGem_Bandit (2026-11-04). Mutators are Blueprints under Gems/Ranged/MetaGems/<Name>/ (and Melee). Levels are a CurveFloat (CurveData) plus Tiers (one entry per level 0..N with a label like ' +1'). Per-mutator numbers (ReloadSpeedBonus, MaxLevelDurationMax, MaxLevelStatBonus, MinValue, MaxValue) are class variables, and the behavior is in a separate Action_MetaGem_<Name> asset. Not a stats table. Only the Ranged chain was read."
+      }
     },
     "ring": {
       "folder": "Rings",
       "prefix": "Ring_",
       "statsStruct": null,
       "verified": false,
-      "$comment": "The dump shows /Game/_Core/Stats/Stats_Items (struct StatDef_Item, 37 rows) holds only Value and SellValueScalar, so it is a price table, not ring or amulet effects. Where a ring's effects live is not yet confirmed."
+      "$comment": "The dump shows /Game/_Core/Stats/Stats_Items (struct StatDef_Item, 37 rows) holds only Value and SellValueScalar, so it is a price table, not ring or amulet effects. Where a ring's effects live is not yet confirmed.",
+      "template": "/Game/World_Base/Items/_Core/Trinkets/Trinket_Base.Trinket_Base_C",
+      "dumpFindings": {
+        "example": "/Game/World_Base/Items/Trinkets/Rings/BlessedRing/Ring_BlessedRing",
+        "parent": "/Game/World_Base/Items/_Core/Trinkets/Trinket_Base.Trinket_Base_C",
+        "properties": [
+          "StatsComp",
+          "PersistenceComp",
+          "FilterTags",
+          "Label",
+          "Description",
+          "FlavorText",
+          "Icon",
+          "LargeIcon",
+          "HUDIcon",
+          "InspectActor",
+          "UseInteractInfo",
+          "InteractLabel",
+          "InteractIcon"
+        ],
+        "$comment": "Read from Ring_BlessedRing (2026-11-04). A ring is a Blueprint derived from Trinket_Base. Its effect is Blueprint logic (OnEquipped, OnUnequipped, OnEvent, ModifyInspectInfo, ...) with tuning numbers as class variables on the Blueprint (here Duration and BulwarkStacks), not rows in a stats table. FilterTags values (Defense, Relic) are row names of DataTable_ItemFilters. A reskinned ring can therefore be a child of an existing ring, but a new effect needs Blueprint graph work."
+      }
     },
     "amulet": {
       "folder": "Amulets",
@@ -113,7 +162,19 @@
       "template": "/Script/Remnant.RemnantTrait",
       "levelStruct": null,
       "verified": false,
-      "$comment": "StatDef_Item only holds Value and SellValueScalar (confirmed in the dump), so it is not the level struct. The real mutator/trait level data is still to find."
+      "$comment": "StatDef_Item only holds Value and SellValueScalar (confirmed in the dump), so it is not the level struct. The real mutator/trait level data is still to find.",
+      "dumpFindings": {
+        "traitTypes": [
+          "TraitType_Archetype",
+          "TraitType_Character",
+          "TraitType_Gear",
+          "TraitType_Perk",
+          "TraitType_Skill"
+        ],
+        "folder": "/Game/_Core/TraitTypes",
+        "traitBlueprints": "/Game/World_Base/Items/Traits/{Archetype,Core,Extra}",
+        "$comment": "Trait types are classes in /Game/_Core/TraitTypes. Trait Blueprints (for example Trait_Vigor) live under World_Base/Items/Traits. Level bonuses are DataTable rows of StatModTableEntry (see archetype.dumpFindings). Individual trait assets were not read."
+      }
     },
     "archetype": {
       "folder": "Archetypes",
@@ -121,7 +182,54 @@
       "template": "/Script/Remnant.RemnantArchetype",
       "traitTemplate": "/Script/Remnant.RemnantArchetypeTrait",
       "engramTemplate": "/Game/World_Base/Items/Archetypes/Alchemist/Engram_Alchemist.Engram_Alchemist_C",
-      "verified": false
+      "verified": false,
+      "engramParent": "/Game/Items/Common/Item_Engram_Base.Item_Engram_Base_C",
+      "dumpFindings": {
+        "example": "/Game/World_Base/Items/Archetypes/Alchemist/Archetype_Alchemist",
+        "properties": [
+          "EngramItem",
+          "IconColor",
+          "RemnantArchetype (class ref to Archetype_Alchemist_UI_C)",
+          "Type (TraitType_Archetype)",
+          "StatTable",
+          "MaxLevel",
+          "Cost",
+          "Label",
+          "Description",
+          "FlavorText",
+          "Icon"
+        ],
+        "maxLevel": 10,
+        "statTable": {
+          "asset": "/Game/World_Base/Items/Archetypes/Alchemist/Archetype_Alchemist_Unlocks",
+          "rowStruct": "/Script/GunfireRuntime.StatModTableEntry",
+          "rows": 29,
+          "rowFields": [
+            "Level",
+            "StatName",
+            "StatBonus",
+            "ModifierBP",
+            "ModifierLevel",
+            "ModifierCapacity",
+            "OverrideExistingLevel",
+            "LevelScalingOwner",
+            "RequiredContextSlot",
+            "AllowOverrideRequiredContextSlot",
+            "Description",
+            "Hidden"
+          ],
+          "rowNames": "Base_Trait_Vigor, Base_Trait_Endurance, Base_Trait_Spirit, Base_Trait_Expertise, Trait_Potency_1, ..."
+        },
+        "files": [
+          "Archetype_<Name>.json",
+          "Archetype_<Name>_UI.json",
+          "Archetype_<Name>_Unlocks.json",
+          "Engram_<Name>.json",
+          "Perks/",
+          "Skills/"
+        ],
+        "$comment": "Read from the Alchemist (2026-11-04). The engram derives from Item_Engram_Base_C. Unlock rows apply a modifier Blueprint (ModifierBP) at a Level. The parent class of Archetype_Alchemist_C is not shown by the export."
+      }
     },
     "lootTable": {
       "folder": "Loot",
@@ -181,7 +289,90 @@
       "folder": "Quests",
       "prefix": "Quest_AdventureMode_",
       "template": "/Game/_Core/Blueprints/Quests/Quest_RootQuest.Quest_RootQuest_C",
-      "verified": false
+      "verified": false,
+      "baseQuest": "/Game/_Core/Blueprints/Quests/Quest_AdventureMode_Base.Quest_AdventureMode_Base_C",
+      "dumpFindings": {
+        "adventureBase": {
+          "parent": "Quest_RootQuest_C",
+          "components": {
+            "Quest": "RemnantQuestSubQuest, completion bound to OnSubQuestComplete"
+          },
+          "functions": [
+            "OnBeginQuest"
+          ]
+        },
+        "zoneQuest": {
+          "asset": "/Game/_Core/Blueprints/Quests/Quest_AdventureMode_1Zone",
+          "parent": "Quest_Base_C",
+          "defaults": {
+            "QuestScope": "Campaign",
+            "QuestTags": [
+              "AdventureMode",
+              "InsertBiomeHere"
+            ]
+          },
+          "subQuests": {
+            "Boss": [
+              "City",
+              "Boss"
+            ],
+            "Event": [
+              "City",
+              "Event"
+            ],
+            "MainDungeon": [
+              "City",
+              "Dungeon",
+              "Miniboss"
+            ],
+            "SideD": [
+              "City",
+              "Dungeon",
+              "Side"
+            ],
+            "OverworldPOI": [
+              "City",
+              "OverworldPOI"
+            ],
+            "TraitBook": [
+              "City",
+              "Trait"
+            ],
+            "Simulacrum": [
+              "Simulacrum"
+            ],
+            "Dungeon_Simulacrum": [
+              "Simulacrum"
+            ]
+          },
+          "simulacrumChanceToSpawn": 20.0,
+          "tiles": [
+            "Start",
+            "End",
+            "Dungeon1_Entrance",
+            "Dungeon1_Exit",
+            "Dungeon"
+          ],
+          "zoneLinks": [
+            "Trans (to Dungeon1_Exit)",
+            "Waypoint (Interactive_DragonCrystal, StartsActive)"
+          ]
+        },
+        "rootQuest": {
+          "asset": "/Game/_Core/Blueprints/Quests/Quest_RootQuest",
+          "parent": "/Script/Remnant (RemnantQuest)",
+          "defaults": {
+            "Type": "ERemnantQuestType::Root",
+            "QuestGameMode": "EQuestMode::None",
+            "Container": "/Game/Maps/Quest_Container.Quest_Container",
+            "QuestTags": [
+              "Hidden"
+            ],
+            "IncludeGlobalQuests": true
+          }
+        },
+        "$comment": "Read 2026-11-04. An adventure is a root-quest child (Quest_AdventureMode_Base) that runs one zone quest. The zone quest picks its parts by QuestTags: a biome tag replaces the placeholder InsertBiomeHere, and each part (boss, event, dungeon, side dungeon, overworld POI, trait book) is a sub quest component matched by tags. Biome-specific adventure assets were not read."
+      }
     },
     "blueprint": {
       "folder": "Misc",
@@ -247,7 +438,25 @@
       "objectiveClass": "/Script/GunfireRuntime.QuestObjective",
       "entityClass": "/Script/GunfireRuntime.QuestEntity",
       "subQuestClass": "/Script/Remnant.RemnantQuestSubQuest",
-      "verified": false
+      "verified": false,
+      "dumpFindings": {
+        "baseChain": "Quest_Base_C (parent /Script/Remnant RemnantQuest), used by Quest_AdventureMode_1Zone, Quest_Dungeon_Base, Quest_Boss_Base, Quest_Miniboss_Base, Quest_Event, Quest_Biome and others in /Game/_Core/Blueprints/Quests",
+        "dungeonBase": {
+          "asset": "/Game/_Core/Blueprints/Quests/Quest_Dungeon_Base",
+          "components": {
+            "Zone_AIDirector": "RemnantQuestAIDirector (IncludeZoneGroups, bQuestAutoActivate)",
+            "Injectable": "RemnantQuestSubQuest, QuestTags ['Injectable'], Optional",
+            "TraitBook": "RemnantQuestSubQuest, QuestTags ['Trait']",
+            "Start, End": "RemnantQuestTile (TileNameID Start, End)",
+            "Zone": "RemnantQuestZone",
+            "Checkpoint": "RemnantQuestZoneLink (Waypoint, Interactive_DragonCrystal)"
+          },
+          "functions": [
+            "DoEncounter"
+          ]
+        },
+        "$comment": "Read 2026-11-04. A dungeon has an optional sub quest slot tagged 'Injectable' that the game fills with another quest by tag; that is the injection point for the mod's own dungeon content. The function graph that picks the quest (and the registry question) is not visible in the JSON."
+      }
     },
     "questItem": {
       "folder": "QuestItems",
@@ -292,11 +501,48 @@
           "Icon",
           "SortPriority"
         ],
-        "$comment": "Confirmed from the dump: category and item type are Blueprint classes that derive from GunfireRuntime ItemCategory and ItemType. A category has Label and Icon only. An item type has ItemStats and CharacterStats (StatInfoSet assets under /Game/_Core/Stats/Inspect), Label, Icon and SortPriority. There is no ItemCategory_Quest in this folder (there is ItemType_Quest); the /Script/Remnant.ItemCategory_Quest templates above are still unconfirmed."
+        "$comment": "Confirmed from the dump: category and item type are Blueprint classes that derive from GunfireRuntime ItemCategory and ItemType. A category has Label and Icon only. An item type has ItemStats and CharacterStats (StatInfoSet assets under /Game/_Core/Stats/Inspect), Label, Icon and SortPriority. There is no ItemCategory_Quest in this folder (there is ItemType_Quest); the /Script/Remnant.ItemCategory_Quest templates above are still unconfirmed.",
+        "inventoryFilters": {
+          "table": "/Game/UI/UI_Inventory/DataTable_ItemFilters",
+          "rowStruct": "/Script/GunfireRuntime.ItemFilterRowData",
+          "rowNames": [
+            "AllDamage",
+            "Ranged",
+            "FireRate",
+            "Melee",
+            "Mod",
+            "Skill",
+            "Elemental",
+            "StatusEffect",
+            "CriticalChance",
+            "CriticalDamage",
+            "Weakspot",
+            "Defense",
+            "Shield",
+            "Dodge",
+            "Relic",
+            "Health",
+            "Stamina",
+            "GreyHealth",
+            "Lifesteal",
+            "Summon",
+            "AOE",
+            "MoveSpeed",
+            "SpecialEffect"
+          ],
+          "rowFields": [
+            "DisplayName",
+            "SearchTerms",
+            "FilterTag",
+            "Icon",
+            "BackgroundColor",
+            "TextColor"
+          ]
+        }
       }
     },
     "difficulty": {
-      "$comment": "Confirmed from the dump: /Game/_Core/Stats/Stats_Scaling_Difficulty is a DataTable with row struct StatDef_Scaling and exactly four rows, '1' to '4' (Survivor to Apocalypse), 23 scalar fields (the 22 above plus SpawnWeightScalar). Row '4' enemy health 2.5, damage 2.75, spawn quantity 1.15, currency 1.3, experience 1.15. Property names carry a numeric id and GUID suffix in the cooked JSON. 'AberattionHealthScalar' is spelled that way in the game. The menu list and how loot and enemy level follow the index are still unfound.",
+      "$comment": "Confirmed from the dump: /Game/_Core/Stats/Stats_Scaling_Difficulty is a DataTable with row struct StatDef_Scaling and exactly four rows, '1' to '4' (Survivor to Apocalypse), 23 scalar fields (the 22 above plus SpawnWeightScalar). Row '4' enemy health 2.5, damage 2.75, spawn quantity 1.15, currency 1.3, experience 1.15. Property names carry a numeric id and GUID suffix in the cooked JSON. 'AberattionHealthScalar' is spelled that way in the game. The menu list and how loot and enemy level follow the index are still unfound. The difficulty menu was not found in Widget_InGameMenu (it has no difficulty list).",
       "rowStruct": "/Game/_Core/Stats/Base/StatDef_Scaling.StatDef_Scaling",
       "statFields": {
         "enemyHealth": "EnemyHealthScalar",
@@ -434,8 +680,60 @@
   },
   "ui": {
     "$comment": "Game UI assets that may need overriding. Fill in from FModel (the inventory screen's widget blueprint and the property holding its tabs/filters).",
-    "inventoryWidget": null,
-    "inventoryTabsProperty": null,
-    "verified": false
+    "inventoryWidget": "/Game/UI/UI_Inventory/Widget_InventoryList.Widget_InventoryList_C",
+    "inventoryTabsProperty": "ItemCategory (on each Widget_InventoryTab instance)",
+    "verified": false,
+    "inGameMenu": "/Game/UI/UI_InGameMenu/Widget_InGameMenu",
+    "dumpFindings": {
+      "inGameMenuTabs": {
+        "CharacterTab": "CHARACTER (CharacterPanel)",
+        "InventoryTab": "INVENTORY (InventoryPanel)",
+        "ArchetypeTab": "ARCHETYPE (ArchetypePanel)",
+        "TraitTab": "TRAITS (TraitPanel)",
+        "FragmentsTab": "FRAGMENTS (FragmentsPanel)",
+        "MapTab": "MAP (Map)",
+        "BuyTab": "VENDOR (Buy)",
+        "SystemTab": "SYSTEM (System)"
+      },
+      "inventoryList": {
+        "defaults": {
+          "Sort": "EItemQuerySortMethod::Sort",
+          "IgnoreTags": [
+            "HideInInventory"
+          ],
+          "MaximumPlaceHolders": 21,
+          "DisplaySearch": true,
+          "ListDimentions": {
+            "X": 980.0,
+            "Y": 490.0
+          }
+        },
+        "functions": [
+          "Build Inventory List",
+          "Update Inventory List",
+          "GetQueryFilter",
+          "ShouldAddItem",
+          "ShouldHideItem",
+          "HideItemUntilFound",
+          "SetItemType",
+          "RefreshInventory"
+        ]
+      },
+      "inventoryTab": {
+        "asset": "/Game/UI/UI_Inventory/Widget_InventoryTab",
+        "defaults": {
+          "ItemCategory": "ItemCategory_All_C",
+          "ShowEquipmentSlot": -1
+        },
+        "functions": [
+          "IsValidCategory",
+          "IsValidItemType",
+          "HasValidItems",
+          "EvaluateVisibility",
+          "GetLabel"
+        ]
+      },
+      "$comment": "Read 2026-11-04. The main menu is Widget_InGameMenu with eight tab buttons; each names a panel it creates through CreateTabPanel / CreateAndFocusWidgetSoftRef. The inventory list filters through GetQueryFilter and the tab's ItemCategory, so a new category needs a tab whose ItemCategory is the new class. The widget that holds the row of Widget_InventoryTab instances was not found in the files read."
+    }
   }
 }
