@@ -9,14 +9,14 @@ A Remnant 2 content mod (new worlds, weapons, mutators, rings, armor, archetypes
 | Path | What it is |
 | --- | --- |
 | `Rem2Proj/` | The UE 5.2 project (`Remnant2.uproject`, C++ headers, Config, stand-in Content) that content is built in. |
-| `tools/pak-builder` | The build path: generates Blueprints, cooks and packs the pak. Python. **All building goes through this.** |
+| `tools/pak-builder` (on the `pak-builder` branch for now) | The build path: generates Blueprints, cooks and packs the pak. Python. **All building goes through this.** |
 | `tools/clickup-sync` | ClickUp sync tray tool. |
 | `data/catalog.json` | Game facts (template paths, row structs, stat field names). Entries marked `verified: false` still need checking in FModel. |
 | `docs/architecture.md` | How the game finds mod content, risks and unknowns, and the first in-game tests. |
 
 ## Building
 
-Use `tools/pak-builder`; see [its README](tools/pak-builder/README.md).
+Use `tools/pak-builder`; see its README. It currently lives on the `pak-builder` branch and is not in `main` yet.
 
 ## History
 

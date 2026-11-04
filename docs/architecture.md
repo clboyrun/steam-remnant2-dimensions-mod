@@ -38,7 +38,7 @@ From `Rem2Proj/` in this repo (a UE 5.2 project with header stand-ins for the ga
 
 ## Build path
 
-All building goes through `tools/pak-builder` (Python). It generates the stub and child Blueprints in `Rem2Proj/`,
+All building goes through `tools/pak-builder` (Python; on the `pak-builder` branch until it is merged). It generates the stub and child Blueprints in `Rem2Proj/`,
 cooks the project, and packs the cooked files into a pak with UnrealPak. See `tools/pak-builder/README.md`.
 
 An earlier JSON-driven toolchain (a C# `dimensions` CLI with schemas, a planner and its own cook/pack stage) was
