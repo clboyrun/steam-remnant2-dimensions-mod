@@ -90,6 +90,7 @@
       <a role="listitem" href="#equipment" data-tab="equipment">Equipment gallery</a>
       <a role="listitem" href="#progression" data-tab="progression">Ascension</a>
       <a role="listitem" href="#interface" data-tab="interface">Quality of life</a>
+      <a role="listitem" href="#hood" data-tab="hood">Under the hood</a>
       <a role="listitem" href="#signup" data-tab="signup">Mailing list</a>
     </div>
   </div>
@@ -99,7 +100,7 @@
 
   <section id="worlds">
     <div class="sh"><span class="n">01</span><h2>New worlds</h2></div>
-    <p class="intro">Each new world is an extra roll for one of the base campaign's slots. The base worlds stay in the pool. Each is also a harder story campaign you can pick once, and an Adventure option. They stay hidden until your character finishes a campaign, then appear on an outer ring of the world map.</p>
+    <p class="intro">Three of the new worlds are extra rolls for slots the base campaign already has, so the base worlds stay in the pool. Hell is the exception: it is the end of the campaign's road, not a roll. Each is also a harder story campaign you can pick once, and an Adventure option. They stay hidden until your character finishes a campaign, then appear on an outer ring of the world map.</p>
 
     <div class="worlds">
       <article class="world grimm">
@@ -133,18 +134,19 @@
       </article>
 
       <article class="world hell">
-        <span class="slot">Rolls in Root Earth's slot</span>
+        <span class="slot">Replaces the Root Earth stop</span>
         <h3>Hell</h3>
         <p>A hell dimension ruled by the seven deadly sins, each one pushing its sin on you. At the end waits a clothed demon whose defeat releases four demonic angels and carries the fight across shifting realms.</p>
         <ul class="chips">
           <li>Gluttony</li><li>Lust</li><li>Sloth</li><li>Pride</li><li>Greed</li><li>Envy</li><li>Wrath</li><li><i>+</i> the demon</li>
         </ul>
         <p class="fine">Slaughterhouse · Frozen mountain · Destroyed moon</p>
+        <p class="fine">The game fixes Root Earth in place rather than rolling it, so Hell needs the campaign's start quest replaced. Not tested yet.</p>
       </article>
     </div>
 
     <div class="also">
-      <div class="mini"><span class="k">Difficulty</span><h4>Beyond Apocalypse</h4><p>A fifth difficulty for late-game builds, working name "Vex and Torment".</p></div>
+      <div class="mini"><span class="k">Difficulty</span><h4>Beyond Apocalypse</h4><p>A fifth difficulty for late-game builds, working name "Vex and Torment". The base game has four, so this is one more row on top of them.</p></div>
       <div class="mini"><span class="k">Dungeons</span><h4>Corrupted dungeons</h4><p>Any dungeon can roll Corrupted: every enemy inside spawns red and glitching. Up to a 10% chance on the hardest difficulties.</p></div>
       <div class="mini"><span class="k">Labyrinth</span><h4>Two new portals</h4><p>New gateways in the Labyrinth. After the full campaign, every new world can be reached from there.</p></div>
     </div>
@@ -348,7 +350,7 @@
     <div class="gear">
       <div class="g"><p class="big">+30<small>weapons</small></p><h3>Masterwork weapons</h3><p>Ten more levels for normal weapons (+21 to +30) and five for boss weapons (up to +15), on the base game's own damage curve.</p></div>
       <div class="g"><p class="big" style="color:var(--gold)">20<small>mutators</small></p><h3>Gold mutators</h3><p>Mutators climb to level 20, extending their own curves. Past level 10 their icons turn gold.</p></div>
-      <div class="g"><p class="big">+10<small>armor</small></p><h3>Forged armor</h3><p>Each Forge level adds 10% armor and +1 to every resistance.</p></div>
+      <div class="g"><p class="big">+10<small>armor</small></p><h3>Forged armor</h3><p>Each Forge level adds 10% armor and +1 to all five resistances (bleed, blight, fire, shock and acid).</p></div>
       <div class="g"><p class="big">8<small>rings</small></p><h3>Enchanted armor</h3><p>Each enchanted armor piece holds one extra ring, shown right next to it on the character screen.</p></div>
       <div class="g wide"><p class="big">990<small>pairs</small></p><h3>Prism: every fusion</h3><p>Every pair of Prism fragments gets a fusion, where the base game has only 23. At level 51, add a tenth fragment to merge a fifth fusion.</p></div>
       <div class="g"><h3>Sonar Neckpiece</h3><p>An amulet that pulses every 10 seconds and finds everything within 25 yards: allies in green, hostiles in red.</p></div>
@@ -411,8 +413,22 @@
     </div>
   </section>
 
+  <section id="hood">
+    <div class="sh"><span class="n">08</span><h2>Under the hood</h2></div>
+    <p class="intro">We read the base game's own data to check the plan against how Remnant 2 really works. This is what that showed. It is all still on paper: nothing here has been tested in game.</p>
+    <div class="also">
+      <div class="mini"><span class="k">Confirmed</span><h4>How worlds roll</h4><p>The base campaign picks three worlds by tag, so Grimm, Lovecraft and the Arcade can join those rolls. Root Earth is fixed, so Hell cannot.</p></div>
+      <div class="mini"><span class="k">Confirmed</span><h4>Where dungeons plug in</h4><p>Dungeons choose their parts by tag, and each has an open slot for extra content. That is where our own dungeons and bosses are meant to attach.</p></div>
+      <div class="mini"><span class="k">Confirmed</span><h4>Armor and difficulty</h4><p>Armor carries a weight and five resistances, and difficulty is exactly four steps. Our Forge tiers and fifth difficulty fit that shape.</p></div>
+      <div class="mini"><span class="k">Confirmed</span><h4>Rings and mutators</h4><p>Their effects are built from game logic, not from a table of numbers. New looks and names are easy; a brand-new effect takes real work.</p></div>
+      <div class="mini"><span class="k">Confirmed</span><h4>Menus</h4><p>The inventory is built from tabs, one per category, so our Completion Tokens section is a new tab. The map screen is a separate panel.</p></div>
+      <div class="mini"><span class="k">Still to check</span><h4>Open questions</h4><p>Whether the game finds quests and worlds added by a mod, how it chooses a dungeon for each slot, which tag belongs to which world, amulets, and melee mutators.</p></div>
+    </div>
+    <p class="fine">Everything is built and packed through one tool in the repository, so the result stays a single .pak file.</p>
+  </section>
+
   <section id="signup">
-    <div class="sh"><span class="n">08</span><h2>Mailing list</h2></div>
+    <div class="sh"><span class="n">09</span><h2>Mailing list</h2></div>
     <p class="intro">Want to hear when something lands, or help playtest it? Tell us what you care about.</p>
 
     <details class="signup">
