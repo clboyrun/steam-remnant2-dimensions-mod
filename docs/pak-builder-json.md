@@ -119,6 +119,33 @@ Each entry is added to the stub Blueprint:
 }
 ```
 
+## Reading the FModel dump for a mapping (2026-11-04)
+
+Astra's dump (`workspace/extracted/Remnant2/Content/...`) is FModel's **property view**: each asset is a `.json`
+file, not a `.uasset`/`.uexp` pair. pak-builder's `original_uasset` and `original_uexp` need the real cooked files,
+so export those separately (FModel "Export Raw Data", or UAssetGUI) and keep the JSON for reading values.
+
+How to turn a dump path into the fields above:
+
+- `unreal_package` and `parent_class`: the file path under `Content/` with `/Game/` in front and no extension.
+  `Content/_Core/ItemTypes/ItemType_Ring.json` is package `/Game/_Core/ItemTypes/ItemType_Ring`, and its class is
+  `/Game/_Core/ItemTypes/ItemType_Ring.ItemType_Ring_C`. The class is the first entry of the JSON
+  (`Type: BlueprintGeneratedClass`, `Name: ItemType_Ring_C`); its `SuperStruct` shows the parent
+  (`/Script/GunfireRuntime` `ItemType`).
+- A `parent_class` of a native class is `/Script/<Module>.<Class>`, for example `/Script/Remnant.ZoneDef` for a zone def.
+- The second JSON entry (`Default__<Name>_C`) holds the property values the child inherits, for example `TileSet`,
+  `EncounterGroups` and `SkyBoxes` on a zone def. Those are what a child Blueprint overrides.
+- Data tables (`Type: DataTable`) list `Rows` by name and a `RowStruct`. Row property names have a numeric id and GUID
+  suffix (`Damage_2_201A70...`); use the full name from the dump when writing rows, not the short one.
+
+Worked example from the dump: a zone def mapping would have `parent_class` `/Script/Remnant.ZoneDef` (or
+`/Game/Campaign_Main/ZoneDefs/ZoneDef_RootEarth_City.ZoneDef_RootEarth_City_C` to inherit its encounter groups).
+Dump files differ in how they name the parent: classes whose parent is native use `SuperStruct`, and some Blueprint
+classes use `Super` instead (for example `Ring_BlessedRing_C`, parent `Trinket_Base_C`), so check both keys when finding
+`parent_class`.
+
+Nothing here has been run through pak-builder.
+
 ## Older `assets` format
 
 If the config has no `mappings` key, pak-builder converts a top-level `assets` list into mappings (IDs `ID_001`,
