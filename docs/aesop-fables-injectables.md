@@ -40,6 +40,25 @@ Recommendation: start with A, because it keeps most of the work in data and the 
 
 The award must be granted on completion only, not on start, fail or abandon. Whether the quest's `Complete` state can trigger that without Blueprint is part of unknown 5.
 
+### Making the global copy a child of the Grimm copy (inferred, untested)
+
+Astra asked 2026-11-05 whether the global copy can be a Blueprint child of the Grimm copy with no further edits. Expected answer: almost, with two required overrides.
+
+- **Inherited:** sub quests, components, spawn data, objective and reward logic. In pak-builder this is one more mapping whose `parent_class` is the Grimm copy's class path (`/Game/.../Quest_Fable_X.Quest_Fable_X_C`), built as a stub plus custom child like any other mapping.
+- **Must override:** `QuestTags` (an array override replaces the parent's array and does not merge, so list the full set: drop the Grimm biome tag, keep `Injectable`) and `RequiredAward` (that fable's own award). With neither override the child would be identical to the Grimm copy and appear in the same places.
+- **Maintenance:** edits to the Grimm copy's objective, mobs or rewards flow into the global copy automatically.
+- **To test:** (1) whether `RegisteredQuests` and the Injectable tag pick treat a child class as its own entry rather than only as its parent; (2) the parent's completion logic grants the fable's award, so the child inherits that grant and re-grants the same award, which should be harmless but is unconfirmed.
+
+If the child pattern works, it replaces the "doubles assets" risk in option A with "one thin child per fable". Tracker card: "Test: global fable copy as a Blueprint child of the Grimm copy".
+
+## Tracker cards (ClickUp)
+
+Each item that still needs information has a standalone card (no subtasks of subtasks), written 2026-11-05 as `NEW - *.md` cache files:
+
+- Tests: Injectable pick across worlds; pak-added award and completion grant; global copy as child of the Grimm copy; Corrupted on injectable spawns; `SetSpawnTableOverride` need.
+- Research: quest Blueprint parent class and components from the dump; persistent per-quest choice flags.
+- Decisions (Astra): which fables to build first; fable rewards; whether morals branch rewards; whether non-Aesop fables come later.
+
 ## Data-only vs Blueprint (legend)
 
 - **Data**: encounter groups via `SpawnTags`, loot links via `USpawnTableLink`, quest tags, awards. Expressible as quest/spawn data.
@@ -231,7 +250,7 @@ Only F14 and F18 look close to data-only. Everything with a choice, escort, time
 
 ## pak-builder note
 
-Per [pak-builder-json.md](pak-builder-json.md), JSON only describes Blueprint inheritance and components, not quest data. A fable would be one mapping whose `parent_class` is a quest Blueprint class from the dump, with its components; tags, awards and spawn data are set in the editor or remain open work. No mapping is written here, because the real parent class and component list need the dump.
+Per [pak-builder-json.md](pak-builder-json.md), JSON only describes Blueprint inheritance and components, not quest data. A fable would be one mapping whose `parent_class` is a quest Blueprint class from the dump, with its components; tags, awards and spawn data are set in the editor or remain open work. No mapping is written here, because the real parent class and component list need the dump. The global copy would be a second mapping whose `parent_class` is the Grimm copy (see the child-copy section above).
 
 ## Open questions for Astra
 
