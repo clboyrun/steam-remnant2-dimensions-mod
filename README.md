@@ -14,6 +14,9 @@ A Remnant 2 content mod (new worlds, weapons, mutators, rings, armor, archetypes
 | `data/catalog.json` | Game facts (template paths, row structs, stat field names). Entries marked `verified: false` still need checking in FModel. |
 | `docs/pak-builder-json.md` | The JSON format pak-builder reads to create Blueprints and a pak. |
 | `docs/architecture.md` | How the game finds mod content, risks and unknowns, and the first in-game tests. |
+| `docs/injectable-reusability.md` | Which injectables can interact with which dungeon, per new world (all untested). |
+| `docs/aesop-fables-injectables.md` | Catalog of 18 Aesop's Fables as injectable quests: start in Grimm, then world-agnostic. Design options only. |
+| `docs/world-content-cards.md` | Index of the per-world and per-boss ClickUp content cards. |
 
 ## Building
 
