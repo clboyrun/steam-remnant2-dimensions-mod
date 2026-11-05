@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-05T01:00:32+00:00",
+ "generated_at": "2026-11-05T13:24:20+00:00",
  "folder": {
   "id": "90149675055",
   "name": "Dimensions Mod"
@@ -10,7 +10,7 @@
    "color": "#b5bcc2",
    "done": false,
    "open": true,
-   "count": 305
+   "count": 316
   },
   {
    "status": "in process",
@@ -2773,6 +2773,138 @@
      "assigned": false,
      "closed": null,
      "order": 10001793817112.617
+    },
+    {
+     "id": "86bcyurt4",
+     "tracker_id": null,
+     "name": "Decision: do fable morals only give flavor, or branch what is rewarded",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [],
+     "url": "https://app.clickup.com/t/86bcyurt4",
+     "updated": 1793884796112,
+     "created": 1793884786309,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793884786.354
+    },
+    {
+     "id": "86bcyurtd",
+     "tracker_id": null,
+     "name": "Decision: rewards for fables (kinds are suggestions only)",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [
+      "86bcw88tv"
+     ],
+     "url": "https://app.clickup.com/t/86bcyurtd",
+     "updated": 1793884797855,
+     "created": 1793884787282,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793884787.318
+    },
+    {
+     "id": "86bcyurth",
+     "tracker_id": null,
+     "name": "Decision: are non-Aesop fables in scope later",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [],
+     "url": "https://app.clickup.com/t/86bcyurth",
+     "updated": 1793884799547,
+     "created": 1793884787896,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793884787.922
+    },
+    {
+     "id": "86bcyurtn",
+     "tracker_id": null,
+     "name": "Decision: which of the 18 Aesop fables to build first",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [],
+     "url": "https://app.clickup.com/t/86bcyurtn",
+     "updated": 1793884800953,
+     "created": 1793884788401,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793884788.42
+    },
+    {
+     "id": "86bcyurtr",
+     "tracker_id": null,
+     "name": "Test: can a pak Blueprint keep a persistent per-quest choice flag (F4, F6, F15, F16)",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 2.0,
+     "waits_on": [],
+     "links": [
+      "86bcw87ab"
+     ],
+     "url": "https://app.clickup.com/t/86bcyurtr",
+     "updated": 1793884802564,
+     "created": 1793884788931,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793884788.953
+    },
+    {
+     "id": "86bcyuru1",
+     "tracker_id": null,
+     "name": "Find the real quest Blueprint parent class and components for a fable mapping",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 2.0,
+     "waits_on": [],
+     "links": [
+      "86bcw87a4"
+     ],
+     "url": "https://app.clickup.com/t/86bcyuru1",
+     "updated": 1793884804907,
+     "created": 1793884789985,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793884790.252
     }
    ]
   },
@@ -3335,7 +3467,8 @@
      "links": [
       "86bcw88kp",
       "86bcw88tw",
-      "86bcw88z5"
+      "86bcw88z5",
+      "86bcyurtd"
      ],
      "url": "https://app.clickup.com/t/86bcw88tv",
      "updated": 1793763706620,
@@ -3704,7 +3837,10 @@
       "86bcynn7j",
       "86bcynn7u",
       "86bcynn7w",
-      "86bcynn7y"
+      "86bcynn7y",
+      "86bcyuru1",
+      "86bcyurun",
+      "86bcyurv7"
      ],
      "url": "https://app.clickup.com/t/86bcw87a4",
      "updated": 1793802315308,
@@ -3751,7 +3887,9 @@
      "waits_on": [
       "86bcw878v"
      ],
-     "links": [],
+     "links": [
+      "86bcyurv1"
+     ],
      "url": "https://app.clickup.com/t/86bcw87av",
      "updated": 1793802317482,
      "created": 1793562316841,
@@ -4491,7 +4629,10 @@
      "waits_on": [
       "86bcw878v"
      ],
-     "links": [],
+     "links": [
+      "86bcyurtr",
+      "86bcyurv1"
+     ],
      "url": "https://app.clickup.com/t/86bcw87ab",
      "updated": 1793687065859,
      "created": 1793562315480,
@@ -4513,7 +4654,9 @@
      "estimate_hours": 4.0,
      "waits_on": [],
      "links": [
-      "86bcw87a4"
+      "86bcw87a4",
+      "86bcyurun",
+      "86bcyurv7"
      ],
      "url": "https://app.clickup.com/t/86bcyar70",
      "updated": 1793817115672,
@@ -4755,7 +4898,9 @@
       "86bcynmxn",
       "86bcynmy8",
       "86bcynn57",
-      "86bcynn82"
+      "86bcynn82",
+      "86bcyurux",
+      "86bcyurv7"
      ],
      "url": "https://app.clickup.com/t/86bcwayg0",
      "updated": 1793802326707,
@@ -5337,6 +5482,125 @@
      "assigned": true,
      "closed": 1793763447644,
      "order": 10001793763447.674
+    },
+    {
+     "id": "86bcyurue",
+     "tracker_id": null,
+     "name": "Test: does Corrupted apply to an injected fable's spawns",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [],
+     "url": "https://app.clickup.com/t/86bcyurue",
+     "updated": 1793884806240,
+     "created": 1793884791846,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793884791.977
+    },
+    {
+     "id": "86bcyurun",
+     "tracker_id": null,
+     "name": "Test: do fable encounter groups need SetSpawnTableOverride on the zone",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 2.0,
+     "waits_on": [],
+     "links": [
+      "86bcw87a4",
+      "86bcyar70"
+     ],
+     "url": "https://app.clickup.com/t/86bcyurun",
+     "updated": 1793884809863,
+     "created": 1793884792989,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793884793.139
+    },
+    {
+     "id": "86bcyurux",
+     "tracker_id": null,
+     "name": "Test: global fable copy as a Blueprint child of the Grimm copy",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 2.0,
+     "waits_on": [
+      "86bcyurv1"
+     ],
+     "links": [
+      "86bcwayg0"
+     ],
+     "url": "https://app.clickup.com/t/86bcyurux",
+     "updated": 1793884812445,
+     "created": 1793884793909,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793884793.93
+    },
+    {
+     "id": "86bcyurv1",
+     "tracker_id": null,
+     "name": "Test: can a pak add an account award and grant it on quest completion without Blueprint",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 3.0,
+     "waits_on": [],
+     "links": [
+      "86bcw87ab",
+      "86bcw87av"
+     ],
+     "url": "https://app.clickup.com/t/86bcyurv1",
+     "updated": 1793884815085,
+     "created": 1793884794413,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793884794.441
+    },
+    {
+     "id": "86bcyurv7",
+     "tracker_id": null,
+     "name": "Test: does a tag-matched Injectable quest from our pak get picked by dungeons of other worlds",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 3.0,
+     "waits_on": [],
+     "links": [
+      "86bcw87a4",
+      "86bcwayg0",
+      "86bcyar70"
+     ],
+     "url": "https://app.clickup.com/t/86bcyurv7",
+     "updated": 1793884818401,
+     "created": 1793884794967,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793884794.998
     }
    ]
   },
@@ -9151,7 +9415,7 @@
  ],
  "burndown": {
   "hours_per_week": 40.0,
-  "total_hours": 2725.5,
+  "total_hours": 2744.5,
   "week_count": 69,
   "tickets": [
    {
@@ -11003,6 +11267,20 @@
     "unblocked_by": []
    },
    {
+    "id": "86bcyurv1",
+    "tracker_id": null,
+    "name": "Test: can a pak add an account award and grant it on quest completion without Blueprint",
+    "url": "https://app.clickup.com/t/86bcyurv1",
+    "list": "Toolchain and in-game tests",
+    "status": "to do",
+    "hours": 3.0,
+    "in_flight": false,
+    "pick": 133,
+    "first_week": 6,
+    "last_week": 6,
+    "unblocked_by": []
+   },
+   {
     "id": "86bcw88z2",
     "tracker_id": "I2",
     "name": "Inventory: Completion Tokens section",
@@ -11011,8 +11289,8 @@
     "status": "to do",
     "hours": 8.0,
     "in_flight": false,
-    "pick": 133,
-    "first_week": 6,
+    "pick": 134,
+    "first_week": 7,
     "last_week": 7,
     "unblocked_by": [
      {
@@ -11032,7 +11310,7 @@
     "status": "to do",
     "hours": 24.0,
     "in_flight": false,
-    "pick": 134,
+    "pick": 135,
     "first_week": 7,
     "last_week": 7,
     "unblocked_by": []
@@ -11046,7 +11324,7 @@
     "status": "to do",
     "hours": 12.0,
     "in_flight": false,
-    "pick": 135,
+    "pick": 136,
     "first_week": 7,
     "last_week": 8,
     "unblocked_by": []
@@ -11060,7 +11338,7 @@
     "status": "to do",
     "hours": 20.0,
     "in_flight": false,
-    "pick": 136,
+    "pick": 137,
     "first_week": 8,
     "last_week": 8,
     "unblocked_by": []
@@ -11074,7 +11352,7 @@
     "status": "to do",
     "hours": 16.0,
     "in_flight": false,
-    "pick": 137,
+    "pick": 138,
     "first_week": 8,
     "last_week": 8,
     "unblocked_by": []
@@ -11088,8 +11366,8 @@
     "status": "to do",
     "hours": 24.0,
     "in_flight": false,
-    "pick": 138,
-    "first_week": 8,
+    "pick": 139,
+    "first_week": 9,
     "last_week": 9,
     "unblocked_by": [
      {
@@ -11109,7 +11387,7 @@
     "status": "to do",
     "hours": 3.0,
     "in_flight": false,
-    "pick": 139,
+    "pick": 140,
     "first_week": 9,
     "last_week": 9,
     "unblocked_by": []
@@ -11123,9 +11401,9 @@
     "status": "to do",
     "hours": 16.0,
     "in_flight": false,
-    "pick": 140,
+    "pick": 141,
     "first_week": 9,
-    "last_week": 9,
+    "last_week": 10,
     "unblocked_by": []
    },
    {
@@ -11137,7 +11415,7 @@
     "status": "to do",
     "hours": 24.0,
     "in_flight": false,
-    "pick": 141,
+    "pick": 142,
     "first_week": 10,
     "last_week": 10,
     "unblocked_by": []
@@ -11151,7 +11429,7 @@
     "status": "to do",
     "hours": 24.0,
     "in_flight": false,
-    "pick": 142,
+    "pick": 143,
     "first_week": 10,
     "last_week": 11,
     "unblocked_by": []
@@ -11165,7 +11443,7 @@
     "status": "to do",
     "hours": 4.0,
     "in_flight": false,
-    "pick": 143,
+    "pick": 144,
     "first_week": 11,
     "last_week": 11,
     "unblocked_by": []
@@ -11179,7 +11457,7 @@
     "status": "to do",
     "hours": 40.0,
     "in_flight": false,
-    "pick": 144,
+    "pick": 145,
     "first_week": 11,
     "last_week": 12,
     "unblocked_by": []
@@ -11193,7 +11471,7 @@
     "status": "to do",
     "hours": 4.0,
     "in_flight": false,
-    "pick": 145,
+    "pick": 146,
     "first_week": 12,
     "last_week": 12,
     "unblocked_by": []
@@ -11207,7 +11485,7 @@
     "status": "to do",
     "hours": 8.0,
     "in_flight": false,
-    "pick": 146,
+    "pick": 147,
     "first_week": 12,
     "last_week": 12,
     "unblocked_by": []
@@ -11221,7 +11499,7 @@
     "status": "to do",
     "hours": 6.0,
     "in_flight": false,
-    "pick": 147,
+    "pick": 148,
     "first_week": 12,
     "last_week": 12,
     "unblocked_by": []
@@ -11235,7 +11513,7 @@
     "status": "to do",
     "hours": 2.0,
     "in_flight": false,
-    "pick": 148,
+    "pick": 149,
     "first_week": 12,
     "last_week": 12,
     "unblocked_by": []
@@ -11249,7 +11527,7 @@
     "status": "to do",
     "hours": 4.0,
     "in_flight": false,
-    "pick": 149,
+    "pick": 150,
     "first_week": 12,
     "last_week": 12,
     "unblocked_by": []
@@ -11263,7 +11541,7 @@
     "status": "to do",
     "hours": 40.0,
     "in_flight": false,
-    "pick": 150,
+    "pick": 151,
     "first_week": 12,
     "last_week": 13,
     "unblocked_by": []
@@ -11277,7 +11555,7 @@
     "status": "to do",
     "hours": 16.0,
     "in_flight": false,
-    "pick": 151,
+    "pick": 152,
     "first_week": 13,
     "last_week": 14,
     "unblocked_by": []
@@ -11291,7 +11569,7 @@
     "status": "to do",
     "hours": 12.0,
     "in_flight": false,
-    "pick": 152,
+    "pick": 153,
     "first_week": 14,
     "last_week": 14,
     "unblocked_by": []
@@ -11305,7 +11583,7 @@
     "status": "to do",
     "hours": 20.0,
     "in_flight": false,
-    "pick": 153,
+    "pick": 154,
     "first_week": 14,
     "last_week": 15,
     "unblocked_by": []
@@ -11319,7 +11597,7 @@
     "status": "to do",
     "hours": 12.0,
     "in_flight": false,
-    "pick": 154,
+    "pick": 155,
     "first_week": 15,
     "last_week": 15,
     "unblocked_by": []
@@ -11333,7 +11611,7 @@
     "status": "to do",
     "hours": 12.0,
     "in_flight": false,
-    "pick": 155,
+    "pick": 156,
     "first_week": 15,
     "last_week": 15,
     "unblocked_by": [
@@ -11354,7 +11632,7 @@
     "status": "to do",
     "hours": 30.0,
     "in_flight": false,
-    "pick": 156,
+    "pick": 157,
     "first_week": 15,
     "last_week": 16,
     "unblocked_by": []
@@ -11368,7 +11646,7 @@
     "status": "to do",
     "hours": 16.0,
     "in_flight": false,
-    "pick": 157,
+    "pick": 158,
     "first_week": 16,
     "last_week": 16,
     "unblocked_by": []
@@ -11382,7 +11660,7 @@
     "status": "to do",
     "hours": 12.0,
     "in_flight": false,
-    "pick": 158,
+    "pick": 159,
     "first_week": 16,
     "last_week": 17,
     "unblocked_by": []
@@ -11396,7 +11674,7 @@
     "status": "to do",
     "hours": 12.0,
     "in_flight": false,
-    "pick": 159,
+    "pick": 160,
     "first_week": 17,
     "last_week": 17,
     "unblocked_by": [
@@ -11417,7 +11695,7 @@
     "status": "to do",
     "hours": 40.0,
     "in_flight": false,
-    "pick": 160,
+    "pick": 161,
     "first_week": 17,
     "last_week": 18,
     "unblocked_by": []
@@ -11431,7 +11709,7 @@
     "status": "to do",
     "hours": 40.0,
     "in_flight": false,
-    "pick": 161,
+    "pick": 162,
     "first_week": 18,
     "last_week": 19,
     "unblocked_by": []
@@ -11445,7 +11723,7 @@
     "status": "to do",
     "hours": 30.0,
     "in_flight": false,
-    "pick": 162,
+    "pick": 163,
     "first_week": 19,
     "last_week": 20,
     "unblocked_by": []
@@ -11459,7 +11737,7 @@
     "status": "to do",
     "hours": 2.0,
     "in_flight": false,
-    "pick": 163,
+    "pick": 164,
     "first_week": 20,
     "last_week": 20,
     "unblocked_by": []
@@ -11473,7 +11751,7 @@
     "status": "to do",
     "hours": 8.0,
     "in_flight": false,
-    "pick": 164,
+    "pick": 165,
     "first_week": 20,
     "last_week": 20,
     "unblocked_by": [
@@ -11494,9 +11772,9 @@
     "status": "to do",
     "hours": 60.0,
     "in_flight": false,
-    "pick": 165,
+    "pick": 166,
     "first_week": 20,
-    "last_week": 21,
+    "last_week": 22,
     "unblocked_by": [
      {
       "id": "86bcynmxe",
@@ -11515,9 +11793,9 @@
     "status": "to do",
     "hours": 0.5,
     "in_flight": false,
-    "pick": 166,
-    "first_week": 21,
-    "last_week": 21,
+    "pick": 167,
+    "first_week": 22,
+    "last_week": 22,
     "unblocked_by": []
    },
    {
@@ -11529,9 +11807,9 @@
     "status": "to do",
     "hours": 0.5,
     "in_flight": false,
-    "pick": 167,
-    "first_week": 21,
-    "last_week": 21,
+    "pick": 168,
+    "first_week": 22,
+    "last_week": 22,
     "unblocked_by": []
    },
    {
@@ -11543,9 +11821,9 @@
     "status": "to do",
     "hours": 0.5,
     "in_flight": false,
-    "pick": 168,
-    "first_week": 21,
-    "last_week": 21,
+    "pick": 169,
+    "first_week": 22,
+    "last_week": 22,
     "unblocked_by": []
    },
    {
@@ -11557,9 +11835,9 @@
     "status": "to do",
     "hours": 0.5,
     "in_flight": false,
-    "pick": 169,
-    "first_week": 21,
-    "last_week": 21,
+    "pick": 170,
+    "first_week": 22,
+    "last_week": 22,
     "unblocked_by": []
    },
    {
@@ -11571,7 +11849,7 @@
     "status": "to do",
     "hours": 0.5,
     "in_flight": false,
-    "pick": 170,
+    "pick": 171,
     "first_week": 22,
     "last_week": 22,
     "unblocked_by": []
@@ -11585,7 +11863,7 @@
     "status": "to do",
     "hours": 0.5,
     "in_flight": false,
-    "pick": 171,
+    "pick": 172,
     "first_week": 22,
     "last_week": 22,
     "unblocked_by": []
@@ -11599,7 +11877,7 @@
     "status": "to do",
     "hours": 0.5,
     "in_flight": false,
-    "pick": 172,
+    "pick": 173,
     "first_week": 22,
     "last_week": 22,
     "unblocked_by": []
@@ -11613,7 +11891,7 @@
     "status": "to do",
     "hours": 0.5,
     "in_flight": false,
-    "pick": 173,
+    "pick": 174,
     "first_week": 22,
     "last_week": 22,
     "unblocked_by": []
@@ -11627,7 +11905,7 @@
     "status": "to do",
     "hours": 0.5,
     "in_flight": false,
-    "pick": 174,
+    "pick": 175,
     "first_week": 22,
     "last_week": 22,
     "unblocked_by": []
@@ -11641,7 +11919,7 @@
     "status": "to do",
     "hours": 8.0,
     "in_flight": false,
-    "pick": 175,
+    "pick": 176,
     "first_week": 22,
     "last_week": 22,
     "unblocked_by": [
@@ -11662,7 +11940,7 @@
     "status": "to do",
     "hours": 16.0,
     "in_flight": false,
-    "pick": 176,
+    "pick": 177,
     "first_week": 22,
     "last_week": 22,
     "unblocked_by": []
@@ -11676,9 +11954,9 @@
     "status": "to do",
     "hours": 12.0,
     "in_flight": false,
-    "pick": 177,
+    "pick": 178,
     "first_week": 22,
-    "last_week": 22,
+    "last_week": 23,
     "unblocked_by": [
      {
       "id": "86bcw87a3",
@@ -11697,8 +11975,8 @@
     "status": "to do",
     "hours": 16.0,
     "in_flight": false,
-    "pick": 178,
-    "first_week": 22,
+    "pick": 179,
+    "first_week": 23,
     "last_week": 23,
     "unblocked_by": []
    },
@@ -11711,7 +11989,7 @@
     "status": "to do",
     "hours": 2.0,
     "in_flight": false,
-    "pick": 179,
+    "pick": 180,
     "first_week": 23,
     "last_week": 23,
     "unblocked_by": []
@@ -11725,7 +12003,7 @@
     "status": "to do",
     "hours": 2.0,
     "in_flight": false,
-    "pick": 180,
+    "pick": 181,
     "first_week": 23,
     "last_week": 23,
     "unblocked_by": []
@@ -11739,7 +12017,7 @@
     "status": "to do",
     "hours": 2.0,
     "in_flight": false,
-    "pick": 181,
+    "pick": 182,
     "first_week": 23,
     "last_week": 23,
     "unblocked_by": []
@@ -11753,7 +12031,7 @@
     "status": "to do",
     "hours": 1.0,
     "in_flight": false,
-    "pick": 182,
+    "pick": 183,
     "first_week": 23,
     "last_week": 23,
     "unblocked_by": []
@@ -11767,7 +12045,7 @@
     "status": "to do",
     "hours": 3.0,
     "in_flight": false,
-    "pick": 183,
+    "pick": 184,
     "first_week": 23,
     "last_week": 23,
     "unblocked_by": []
@@ -11781,7 +12059,7 @@
     "status": "to do",
     "hours": 0.5,
     "in_flight": false,
-    "pick": 184,
+    "pick": 185,
     "first_week": 23,
     "last_week": 23,
     "unblocked_by": []
@@ -11795,7 +12073,7 @@
     "status": "to do",
     "hours": 4.0,
     "in_flight": false,
-    "pick": 185,
+    "pick": 186,
     "first_week": 23,
     "last_week": 23,
     "unblocked_by": []
@@ -11809,7 +12087,7 @@
     "status": "to do",
     "hours": 4.0,
     "in_flight": false,
-    "pick": 186,
+    "pick": 187,
     "first_week": 23,
     "last_week": 23,
     "unblocked_by": []
@@ -11823,9 +12101,9 @@
     "status": "to do",
     "hours": 6.0,
     "in_flight": false,
-    "pick": 187,
+    "pick": 188,
     "first_week": 23,
-    "last_week": 23,
+    "last_week": 24,
     "unblocked_by": []
    },
    {
@@ -11837,8 +12115,8 @@
     "status": "to do",
     "hours": 3.0,
     "in_flight": false,
-    "pick": 188,
-    "first_week": 23,
+    "pick": 189,
+    "first_week": 24,
     "last_week": 24,
     "unblocked_by": []
    },
@@ -11851,7 +12129,7 @@
     "status": "to do",
     "hours": 3.0,
     "in_flight": false,
-    "pick": 189,
+    "pick": 190,
     "first_week": 24,
     "last_week": 24,
     "unblocked_by": []
@@ -11865,7 +12143,7 @@
     "status": "to do",
     "hours": 1.0,
     "in_flight": false,
-    "pick": 190,
+    "pick": 191,
     "first_week": 24,
     "last_week": 24,
     "unblocked_by": []
@@ -11879,7 +12157,91 @@
     "status": "to do",
     "hours": 0.5,
     "in_flight": false,
-    "pick": 191,
+    "pick": 192,
+    "first_week": 24,
+    "last_week": 24,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcyurt4",
+    "tracker_id": null,
+    "name": "Decision: do fable morals only give flavor, or branch what is rewarded",
+    "url": "https://app.clickup.com/t/86bcyurt4",
+    "list": "Risks and open questions",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 193,
+    "first_week": 24,
+    "last_week": 24,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcyurtd",
+    "tracker_id": null,
+    "name": "Decision: rewards for fables (kinds are suggestions only)",
+    "url": "https://app.clickup.com/t/86bcyurtd",
+    "list": "Risks and open questions",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 194,
+    "first_week": 24,
+    "last_week": 24,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcyurth",
+    "tracker_id": null,
+    "name": "Decision: are non-Aesop fables in scope later",
+    "url": "https://app.clickup.com/t/86bcyurth",
+    "list": "Risks and open questions",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 195,
+    "first_week": 24,
+    "last_week": 24,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcyurtn",
+    "tracker_id": null,
+    "name": "Decision: which of the 18 Aesop fables to build first",
+    "url": "https://app.clickup.com/t/86bcyurtn",
+    "list": "Risks and open questions",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 196,
+    "first_week": 24,
+    "last_week": 24,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcyurtr",
+    "tracker_id": null,
+    "name": "Test: can a pak Blueprint keep a persistent per-quest choice flag (F4, F6, F15, F16)",
+    "url": "https://app.clickup.com/t/86bcyurtr",
+    "list": "Risks and open questions",
+    "status": "to do",
+    "hours": 2.0,
+    "in_flight": false,
+    "pick": 197,
+    "first_week": 24,
+    "last_week": 24,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcyuru1",
+    "tracker_id": null,
+    "name": "Find the real quest Blueprint parent class and components for a fable mapping",
+    "url": "https://app.clickup.com/t/86bcyuru1",
+    "list": "Risks and open questions",
+    "status": "to do",
+    "hours": 2.0,
+    "in_flight": false,
+    "pick": 198,
     "first_week": 24,
     "last_week": 24,
     "unblocked_by": []
@@ -11893,9 +12255,9 @@
     "status": "to do",
     "hours": 30.0,
     "in_flight": false,
-    "pick": 192,
+    "pick": 199,
     "first_week": 24,
-    "last_week": 24,
+    "last_week": 25,
     "unblocked_by": []
    },
    {
@@ -11907,8 +12269,8 @@
     "status": "to do",
     "hours": 20.0,
     "in_flight": false,
-    "pick": 193,
-    "first_week": 24,
+    "pick": 200,
+    "first_week": 25,
     "last_week": 25,
     "unblocked_by": []
    },
@@ -11921,9 +12283,9 @@
     "status": "to do",
     "hours": 16.0,
     "in_flight": false,
-    "pick": 194,
+    "pick": 201,
     "first_week": 25,
-    "last_week": 25,
+    "last_week": 26,
     "unblocked_by": []
    },
    {
@@ -11935,9 +12297,9 @@
     "status": "to do",
     "hours": 40.0,
     "in_flight": false,
-    "pick": 195,
-    "first_week": 25,
-    "last_week": 26,
+    "pick": 202,
+    "first_week": 26,
+    "last_week": 27,
     "unblocked_by": []
    },
    {
@@ -11949,9 +12311,9 @@
     "status": "to do",
     "hours": 6.0,
     "in_flight": false,
-    "pick": 196,
-    "first_week": 26,
-    "last_week": 26,
+    "pick": 203,
+    "first_week": 27,
+    "last_week": 27,
     "unblocked_by": []
    },
    {
@@ -11963,8 +12325,8 @@
     "status": "to do",
     "hours": 16.0,
     "in_flight": false,
-    "pick": 197,
-    "first_week": 26,
+    "pick": 204,
+    "first_week": 27,
     "last_week": 27,
     "unblocked_by": [
      {
@@ -11984,9 +12346,9 @@
     "status": "to do",
     "hours": 16.0,
     "in_flight": false,
-    "pick": 198,
+    "pick": 205,
     "first_week": 27,
-    "last_week": 27,
+    "last_week": 28,
     "unblocked_by": []
    },
    {
@@ -11998,8 +12360,8 @@
     "status": "to do",
     "hours": 22.0,
     "in_flight": false,
-    "pick": 199,
-    "first_week": 27,
+    "pick": 206,
+    "first_week": 28,
     "last_week": 28,
     "unblocked_by": []
    },
@@ -12012,7 +12374,7 @@
     "status": "to do",
     "hours": 16.0,
     "in_flight": false,
-    "pick": 200,
+    "pick": 207,
     "first_week": 28,
     "last_week": 28,
     "unblocked_by": []
@@ -12026,7 +12388,7 @@
     "status": "to do",
     "hours": 16.0,
     "in_flight": false,
-    "pick": 201,
+    "pick": 208,
     "first_week": 28,
     "last_week": 29,
     "unblocked_by": [
@@ -12047,9 +12409,9 @@
     "status": "to do",
     "hours": 30.0,
     "in_flight": false,
-    "pick": 202,
+    "pick": 209,
     "first_week": 29,
-    "last_week": 29,
+    "last_week": 30,
     "unblocked_by": []
    },
    {
@@ -12061,8 +12423,8 @@
     "status": "to do",
     "hours": 10.0,
     "in_flight": false,
-    "pick": 203,
-    "first_week": 29,
+    "pick": 210,
+    "first_week": 30,
     "last_week": 30,
     "unblocked_by": [
      {
@@ -12082,7 +12444,7 @@
     "status": "to do",
     "hours": 20.0,
     "in_flight": false,
-    "pick": 204,
+    "pick": 211,
     "first_week": 30,
     "last_week": 30,
     "unblocked_by": []
@@ -12096,7 +12458,7 @@
     "status": "to do",
     "hours": 30.0,
     "in_flight": false,
-    "pick": 205,
+    "pick": 212,
     "first_week": 30,
     "last_week": 31,
     "unblocked_by": []
@@ -12110,7 +12472,7 @@
     "status": "to do",
     "hours": 6.0,
     "in_flight": false,
-    "pick": 206,
+    "pick": 213,
     "first_week": 31,
     "last_week": 31,
     "unblocked_by": [
@@ -12131,9 +12493,9 @@
     "status": "to do",
     "hours": 16.0,
     "in_flight": false,
-    "pick": 207,
+    "pick": 214,
     "first_week": 31,
-    "last_week": 31,
+    "last_week": 32,
     "unblocked_by": []
    },
    {
@@ -12145,8 +12507,8 @@
     "status": "to do",
     "hours": 20.0,
     "in_flight": false,
-    "pick": 208,
-    "first_week": 31,
+    "pick": 215,
+    "first_week": 32,
     "last_week": 32,
     "unblocked_by": [
      {
@@ -12166,7 +12528,7 @@
     "status": "to do",
     "hours": 12.0,
     "in_flight": false,
-    "pick": 209,
+    "pick": 216,
     "first_week": 32,
     "last_week": 32,
     "unblocked_by": []
@@ -12180,7 +12542,7 @@
     "status": "to do",
     "hours": 16.0,
     "in_flight": false,
-    "pick": 210,
+    "pick": 217,
     "first_week": 32,
     "last_week": 33,
     "unblocked_by": []
@@ -12194,7 +12556,7 @@
     "status": "to do",
     "hours": 8.0,
     "in_flight": false,
-    "pick": 211,
+    "pick": 218,
     "first_week": 33,
     "last_week": 33,
     "unblocked_by": []
@@ -12208,7 +12570,7 @@
     "status": "to do",
     "hours": 4.0,
     "in_flight": false,
-    "pick": 212,
+    "pick": 219,
     "first_week": 33,
     "last_week": 33,
     "unblocked_by": []
@@ -12222,7 +12584,7 @@
     "status": "to do",
     "hours": 3.0,
     "in_flight": false,
-    "pick": 213,
+    "pick": 220,
     "first_week": 33,
     "last_week": 33,
     "unblocked_by": []
@@ -12236,7 +12598,7 @@
     "status": "to do",
     "hours": 8.0,
     "in_flight": false,
-    "pick": 214,
+    "pick": 221,
     "first_week": 33,
     "last_week": 33,
     "unblocked_by": [
@@ -12257,9 +12619,9 @@
     "status": "to do",
     "hours": 2.0,
     "in_flight": false,
-    "pick": 215,
+    "pick": 222,
     "first_week": 33,
-    "last_week": 33,
+    "last_week": 34,
     "unblocked_by": []
    },
    {
@@ -12271,9 +12633,9 @@
     "status": "to do",
     "hours": 4.0,
     "in_flight": false,
-    "pick": 216,
-    "first_week": 33,
-    "last_week": 33,
+    "pick": 223,
+    "first_week": 34,
+    "last_week": 34,
     "unblocked_by": []
    },
    {
@@ -12285,9 +12647,9 @@
     "status": "to do",
     "hours": 4.0,
     "in_flight": false,
-    "pick": 217,
-    "first_week": 33,
-    "last_week": 33,
+    "pick": 224,
+    "first_week": 34,
+    "last_week": 34,
     "unblocked_by": [
      {
       "id": "86bcw87e8",
@@ -12306,8 +12668,8 @@
     "status": "to do",
     "hours": 12.0,
     "in_flight": false,
-    "pick": 218,
-    "first_week": 33,
+    "pick": 225,
+    "first_week": 34,
     "last_week": 34,
     "unblocked_by": [
      {
@@ -12327,7 +12689,7 @@
     "status": "to do",
     "hours": 4.0,
     "in_flight": false,
-    "pick": 219,
+    "pick": 226,
     "first_week": 34,
     "last_week": 34,
     "unblocked_by": [
@@ -12348,7 +12710,7 @@
     "status": "to do",
     "hours": 6.0,
     "in_flight": false,
-    "pick": 220,
+    "pick": 227,
     "first_week": 34,
     "last_week": 34,
     "unblocked_by": [
@@ -12369,9 +12731,9 @@
     "status": "to do",
     "hours": 16.0,
     "in_flight": false,
-    "pick": 221,
+    "pick": 228,
     "first_week": 34,
-    "last_week": 34,
+    "last_week": 35,
     "unblocked_by": [
      {
       "id": "86bcw87e8",
@@ -12390,9 +12752,9 @@
     "status": "to do",
     "hours": 3.0,
     "in_flight": false,
-    "pick": 222,
-    "first_week": 34,
-    "last_week": 34,
+    "pick": 229,
+    "first_week": 35,
+    "last_week": 35,
     "unblocked_by": [
      {
       "id": "86bcw87e8",
@@ -12411,8 +12773,8 @@
     "status": "to do",
     "hours": 3.0,
     "in_flight": false,
-    "pick": 223,
-    "first_week": 34,
+    "pick": 230,
+    "first_week": 35,
     "last_week": 35,
     "unblocked_by": [
      {
@@ -12432,7 +12794,7 @@
     "status": "to do",
     "hours": 8.0,
     "in_flight": false,
-    "pick": 224,
+    "pick": 231,
     "first_week": 35,
     "last_week": 35,
     "unblocked_by": []
@@ -12446,7 +12808,7 @@
     "status": "to do",
     "hours": 8.0,
     "in_flight": false,
-    "pick": 225,
+    "pick": 232,
     "first_week": 35,
     "last_week": 35,
     "unblocked_by": [
@@ -12467,7 +12829,7 @@
     "status": "to do",
     "hours": 2.0,
     "in_flight": false,
-    "pick": 226,
+    "pick": 233,
     "first_week": 35,
     "last_week": 35,
     "unblocked_by": [
@@ -12488,7 +12850,7 @@
     "status": "to do",
     "hours": 3.0,
     "in_flight": false,
-    "pick": 227,
+    "pick": 234,
     "first_week": 35,
     "last_week": 35,
     "unblocked_by": [
@@ -12509,7 +12871,7 @@
     "status": "to do",
     "hours": 0.5,
     "in_flight": false,
-    "pick": 228,
+    "pick": 235,
     "first_week": 35,
     "last_week": 35,
     "unblocked_by": [
@@ -12530,7 +12892,7 @@
     "status": "to do",
     "hours": 4.0,
     "in_flight": false,
-    "pick": 229,
+    "pick": 236,
     "first_week": 35,
     "last_week": 35,
     "unblocked_by": []
@@ -12544,9 +12906,9 @@
     "status": "to do",
     "hours": 3.0,
     "in_flight": false,
-    "pick": 230,
+    "pick": 237,
     "first_week": 35,
-    "last_week": 35,
+    "last_week": 36,
     "unblocked_by": []
    },
    {
@@ -12558,9 +12920,9 @@
     "status": "to do",
     "hours": 2.0,
     "in_flight": false,
-    "pick": 231,
-    "first_week": 35,
-    "last_week": 35,
+    "pick": 238,
+    "first_week": 36,
+    "last_week": 36,
     "unblocked_by": []
    },
    {
@@ -12572,9 +12934,9 @@
     "status": "to do",
     "hours": 2.0,
     "in_flight": false,
-    "pick": 232,
-    "first_week": 35,
-    "last_week": 35,
+    "pick": 239,
+    "first_week": 36,
+    "last_week": 36,
     "unblocked_by": []
    },
    {
@@ -12586,9 +12948,9 @@
     "status": "to do",
     "hours": 2.0,
     "in_flight": false,
-    "pick": 233,
-    "first_week": 35,
-    "last_week": 35,
+    "pick": 240,
+    "first_week": 36,
+    "last_week": 36,
     "unblocked_by": []
    },
    {
@@ -12600,9 +12962,9 @@
     "status": "to do",
     "hours": 2.0,
     "in_flight": false,
-    "pick": 234,
-    "first_week": 35,
-    "last_week": 35,
+    "pick": 241,
+    "first_week": 36,
+    "last_week": 36,
     "unblocked_by": []
    },
    {
@@ -12614,8 +12976,71 @@
     "status": "to do",
     "hours": 4.0,
     "in_flight": false,
-    "pick": 235,
-    "first_week": 35,
+    "pick": 242,
+    "first_week": 36,
+    "last_week": 36,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcyurue",
+    "tracker_id": null,
+    "name": "Test: does Corrupted apply to an injected fable's spawns",
+    "url": "https://app.clickup.com/t/86bcyurue",
+    "list": "Toolchain and in-game tests",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 243,
+    "first_week": 36,
+    "last_week": 36,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcyurun",
+    "tracker_id": null,
+    "name": "Test: do fable encounter groups need SetSpawnTableOverride on the zone",
+    "url": "https://app.clickup.com/t/86bcyurun",
+    "list": "Toolchain and in-game tests",
+    "status": "to do",
+    "hours": 2.0,
+    "in_flight": false,
+    "pick": 244,
+    "first_week": 36,
+    "last_week": 36,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcyurux",
+    "tracker_id": null,
+    "name": "Test: global fable copy as a Blueprint child of the Grimm copy",
+    "url": "https://app.clickup.com/t/86bcyurux",
+    "list": "Toolchain and in-game tests",
+    "status": "to do",
+    "hours": 2.0,
+    "in_flight": false,
+    "pick": 245,
+    "first_week": 36,
+    "last_week": 36,
+    "unblocked_by": [
+     {
+      "id": "86bcyurv1",
+      "tracker_id": null,
+      "name": "Test: can a pak add an account award and grant it on quest completion without Blueprint",
+      "url": "https://app.clickup.com/t/86bcyurv1"
+     }
+    ]
+   },
+   {
+    "id": "86bcyurv7",
+    "tracker_id": null,
+    "name": "Test: does a tag-matched Injectable quest from our pak get picked by dungeons of other worlds",
+    "url": "https://app.clickup.com/t/86bcyurv7",
+    "list": "Toolchain and in-game tests",
+    "status": "to do",
+    "hours": 3.0,
+    "in_flight": false,
+    "pick": 246,
+    "first_week": 36,
     "last_week": 36,
     "unblocked_by": []
    },
@@ -12628,7 +13053,7 @@
     "status": "to do",
     "hours": 12.0,
     "in_flight": false,
-    "pick": 236,
+    "pick": 247,
     "first_week": 36,
     "last_week": 36,
     "unblocked_by": []
@@ -12642,9 +13067,9 @@
     "status": "to do",
     "hours": 16.0,
     "in_flight": false,
-    "pick": 237,
+    "pick": 248,
     "first_week": 36,
-    "last_week": 36,
+    "last_week": 37,
     "unblocked_by": [
      {
       "id": "86bcynn5f",
@@ -12663,8 +13088,8 @@
     "status": "to do",
     "hours": 60.0,
     "in_flight": false,
-    "pick": 238,
-    "first_week": 36,
+    "pick": 249,
+    "first_week": 37,
     "last_week": 38,
     "unblocked_by": [
      {
@@ -12684,9 +13109,9 @@
     "status": "to do",
     "hours": 60.0,
     "in_flight": false,
-    "pick": 239,
+    "pick": 250,
     "first_week": 38,
-    "last_week": 39,
+    "last_week": 40,
     "unblocked_by": [
      {
       "id": "86bcynn3x",
@@ -12705,8 +13130,8 @@
     "status": "to do",
     "hours": 60.0,
     "in_flight": false,
-    "pick": 240,
-    "first_week": 39,
+    "pick": 251,
+    "first_week": 40,
     "last_week": 41,
     "unblocked_by": [
      {
@@ -12726,9 +13151,9 @@
     "status": "to do",
     "hours": 60.0,
     "in_flight": false,
-    "pick": 241,
+    "pick": 252,
     "first_week": 41,
-    "last_week": 42,
+    "last_week": 43,
     "unblocked_by": [
      {
       "id": "86bcynn7e",
@@ -12747,8 +13172,8 @@
     "status": "to do",
     "hours": 60.0,
     "in_flight": false,
-    "pick": 242,
-    "first_week": 42,
+    "pick": 253,
+    "first_week": 43,
     "last_week": 44,
     "unblocked_by": [
      {
@@ -12768,9 +13193,9 @@
     "status": "to do",
     "hours": 60.0,
     "in_flight": false,
-    "pick": 243,
+    "pick": 254,
     "first_week": 44,
-    "last_week": 45,
+    "last_week": 46,
     "unblocked_by": [
      {
       "id": "86bcynn4y",
@@ -12789,8 +13214,8 @@
     "status": "to do",
     "hours": 60.0,
     "in_flight": false,
-    "pick": 244,
-    "first_week": 45,
+    "pick": 255,
+    "first_week": 46,
     "last_week": 47,
     "unblocked_by": [
      {
@@ -12810,9 +13235,9 @@
     "status": "to do",
     "hours": 60.0,
     "in_flight": false,
-    "pick": 245,
+    "pick": 256,
     "first_week": 47,
-    "last_week": 48,
+    "last_week": 49,
     "unblocked_by": [
      {
       "id": "86bcynn36",
@@ -12831,9 +13256,9 @@
     "status": "to do",
     "hours": 1.0,
     "in_flight": false,
-    "pick": 246,
-    "first_week": 48,
-    "last_week": 48,
+    "pick": 257,
+    "first_week": 49,
+    "last_week": 49,
     "unblocked_by": []
    },
    {
@@ -12845,8 +13270,8 @@
     "status": "to do",
     "hours": 12.0,
     "in_flight": false,
-    "pick": 247,
-    "first_week": 48,
+    "pick": 258,
+    "first_week": 49,
     "last_week": 49,
     "unblocked_by": [
      {
@@ -12866,9 +13291,9 @@
     "status": "to do",
     "hours": 60.0,
     "in_flight": false,
-    "pick": 248,
+    "pick": 259,
     "first_week": 49,
-    "last_week": 50,
+    "last_week": 51,
     "unblocked_by": [
      {
       "id": "86bcynn03",
@@ -12887,8 +13312,8 @@
     "status": "to do",
     "hours": 60.0,
     "in_flight": false,
-    "pick": 249,
-    "first_week": 50,
+    "pick": 260,
+    "first_week": 51,
     "last_week": 52,
     "unblocked_by": [
      {
@@ -12908,9 +13333,9 @@
     "status": "to do",
     "hours": 60.0,
     "in_flight": false,
-    "pick": 250,
+    "pick": 261,
     "first_week": 52,
-    "last_week": 53,
+    "last_week": 54,
     "unblocked_by": [
      {
       "id": "86bcynn28",
@@ -12929,8 +13354,8 @@
     "status": "to do",
     "hours": 60.0,
     "in_flight": false,
-    "pick": 251,
-    "first_week": 53,
+    "pick": 262,
+    "first_week": 54,
     "last_week": 55,
     "unblocked_by": [
      {
@@ -12950,9 +13375,9 @@
     "status": "to do",
     "hours": 60.0,
     "in_flight": false,
-    "pick": 252,
+    "pick": 263,
     "first_week": 55,
-    "last_week": 56,
+    "last_week": 57,
     "unblocked_by": [
      {
       "id": "86bcynn0m",
@@ -12971,8 +13396,8 @@
     "status": "to do",
     "hours": 60.0,
     "in_flight": false,
-    "pick": 253,
-    "first_week": 56,
+    "pick": 264,
+    "first_week": 57,
     "last_week": 58,
     "unblocked_by": [
      {
@@ -12992,9 +13417,9 @@
     "status": "to do",
     "hours": 60.0,
     "in_flight": false,
-    "pick": 254,
+    "pick": 265,
     "first_week": 58,
-    "last_week": 59,
+    "last_week": 60,
     "unblocked_by": [
      {
       "id": "86bcynn2g",
@@ -13013,9 +13438,9 @@
     "status": "to do",
     "hours": 80.0,
     "in_flight": false,
-    "pick": 255,
-    "first_week": 59,
-    "last_week": 61,
+    "pick": 266,
+    "first_week": 60,
+    "last_week": 62,
     "unblocked_by": [
      {
       "id": "86bcynmy0",
@@ -13034,9 +13459,9 @@
     "status": "to do",
     "hours": 16.0,
     "in_flight": false,
-    "pick": 256,
-    "first_week": 61,
-    "last_week": 61,
+    "pick": 267,
+    "first_week": 62,
+    "last_week": 62,
     "unblocked_by": []
    },
    {
@@ -13048,9 +13473,9 @@
     "status": "to do",
     "hours": 40.0,
     "in_flight": false,
-    "pick": 257,
-    "first_week": 61,
-    "last_week": 62,
+    "pick": 268,
+    "first_week": 62,
+    "last_week": 63,
     "unblocked_by": []
    },
    {
@@ -13062,9 +13487,9 @@
     "status": "to do",
     "hours": 40.0,
     "in_flight": false,
-    "pick": 258,
-    "first_week": 62,
-    "last_week": 63,
+    "pick": 269,
+    "first_week": 63,
+    "last_week": 64,
     "unblocked_by": []
    },
    {
@@ -13076,9 +13501,9 @@
     "status": "to do",
     "hours": 40.0,
     "in_flight": false,
-    "pick": 259,
-    "first_week": 63,
-    "last_week": 64,
+    "pick": 270,
+    "first_week": 64,
+    "last_week": 65,
     "unblocked_by": []
    },
    {
@@ -13090,9 +13515,9 @@
     "status": "to do",
     "hours": 24.0,
     "in_flight": false,
-    "pick": 260,
-    "first_week": 64,
-    "last_week": 65,
+    "pick": 271,
+    "first_week": 65,
+    "last_week": 66,
     "unblocked_by": []
    },
    {
@@ -13104,8 +13529,8 @@
     "status": "to do",
     "hours": 24.0,
     "in_flight": false,
-    "pick": 261,
-    "first_week": 65,
+    "pick": 272,
+    "first_week": 66,
     "last_week": 66,
     "unblocked_by": []
    },
@@ -13118,9 +13543,9 @@
     "status": "to do",
     "hours": 24.0,
     "in_flight": false,
-    "pick": 262,
+    "pick": 273,
     "first_week": 66,
-    "last_week": 66,
+    "last_week": 67,
     "unblocked_by": []
    },
    {
@@ -13132,9 +13557,9 @@
     "status": "to do",
     "hours": 6.0,
     "in_flight": false,
-    "pick": 263,
-    "first_week": 66,
-    "last_week": 66,
+    "pick": 274,
+    "first_week": 67,
+    "last_week": 67,
     "unblocked_by": []
    },
    {
@@ -13146,9 +13571,9 @@
     "status": "to do",
     "hours": 40.0,
     "in_flight": false,
-    "pick": 264,
-    "first_week": 66,
-    "last_week": 67,
+    "pick": 275,
+    "first_week": 67,
+    "last_week": 68,
     "unblocked_by": []
    },
    {
@@ -13160,8 +13585,8 @@
     "status": "to do",
     "hours": 12.0,
     "in_flight": false,
-    "pick": 265,
-    "first_week": 67,
+    "pick": 276,
+    "first_week": 68,
     "last_week": 68,
     "unblocked_by": []
    },
@@ -13174,9 +13599,9 @@
     "status": "to do",
     "hours": 16.0,
     "in_flight": false,
-    "pick": 266,
+    "pick": 277,
     "first_week": 68,
-    "last_week": 68,
+    "last_week": 69,
     "unblocked_by": [
      {
       "id": "86bcynn87",
@@ -13195,9 +13620,9 @@
     "status": "to do",
     "hours": 8.0,
     "in_flight": false,
-    "pick": 267,
-    "first_week": 68,
-    "last_week": 68,
+    "pick": 278,
+    "first_week": 69,
+    "last_week": 69,
     "unblocked_by": []
    },
    {
@@ -13209,9 +13634,9 @@
     "status": "to do",
     "hours": 2.0,
     "in_flight": false,
-    "pick": 268,
-    "first_week": 68,
-    "last_week": 68,
+    "pick": 279,
+    "first_week": 69,
+    "last_week": 69,
     "unblocked_by": []
    },
    {
@@ -13223,9 +13648,9 @@
     "status": "to do",
     "hours": 4.0,
     "in_flight": false,
-    "pick": 269,
-    "first_week": 68,
-    "last_week": 68,
+    "pick": 280,
+    "first_week": 69,
+    "last_week": 69,
     "unblocked_by": []
    },
    {
@@ -13237,9 +13662,9 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 270,
-    "first_week": 68,
-    "last_week": 68,
+    "pick": 281,
+    "first_week": 69,
+    "last_week": 69,
     "unblocked_by": []
    },
    {
@@ -13251,9 +13676,9 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 271,
-    "first_week": 68,
-    "last_week": 68,
+    "pick": 282,
+    "first_week": 69,
+    "last_week": 69,
     "unblocked_by": []
    },
    {
@@ -13265,9 +13690,9 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 272,
-    "first_week": 68,
-    "last_week": 68,
+    "pick": 283,
+    "first_week": 69,
+    "last_week": 69,
     "unblocked_by": []
    },
    {
@@ -13279,9 +13704,9 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 273,
-    "first_week": 68,
-    "last_week": 68,
+    "pick": 284,
+    "first_week": 69,
+    "last_week": 69,
     "unblocked_by": []
    },
    {
@@ -13293,7 +13718,7 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 274,
+    "pick": 285,
     "first_week": 69,
     "last_week": 69,
     "unblocked_by": []
@@ -13307,7 +13732,7 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 275,
+    "pick": 286,
     "first_week": 69,
     "last_week": 69,
     "unblocked_by": []
@@ -13321,7 +13746,7 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 276,
+    "pick": 287,
     "first_week": 69,
     "last_week": 69,
     "unblocked_by": []
@@ -13335,7 +13760,7 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 277,
+    "pick": 288,
     "first_week": 69,
     "last_week": 69,
     "unblocked_by": []
@@ -13349,7 +13774,7 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 278,
+    "pick": 289,
     "first_week": 69,
     "last_week": 69,
     "unblocked_by": []
@@ -13363,7 +13788,7 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 279,
+    "pick": 290,
     "first_week": 69,
     "last_week": 69,
     "unblocked_by": []
@@ -13377,7 +13802,7 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 280,
+    "pick": 291,
     "first_week": 69,
     "last_week": 69,
     "unblocked_by": []
@@ -13391,7 +13816,7 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 281,
+    "pick": 292,
     "first_week": 69,
     "last_week": 69,
     "unblocked_by": []
@@ -13405,7 +13830,7 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 282,
+    "pick": 293,
     "first_week": 69,
     "last_week": 69,
     "unblocked_by": []
@@ -13419,7 +13844,7 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 283,
+    "pick": 294,
     "first_week": 69,
     "last_week": 69,
     "unblocked_by": []
@@ -13433,7 +13858,7 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 284,
+    "pick": 295,
     "first_week": 69,
     "last_week": 69,
     "unblocked_by": []
@@ -13447,7 +13872,7 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 285,
+    "pick": 296,
     "first_week": 69,
     "last_week": 69,
     "unblocked_by": []
@@ -13461,7 +13886,7 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 286,
+    "pick": 297,
     "first_week": 69,
     "last_week": 69,
     "unblocked_by": []
@@ -13475,7 +13900,7 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 287,
+    "pick": 298,
     "first_week": 69,
     "last_week": 69,
     "unblocked_by": []
@@ -13489,7 +13914,7 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 288,
+    "pick": 299,
     "first_week": 69,
     "last_week": 69,
     "unblocked_by": []
@@ -13503,7 +13928,7 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 289,
+    "pick": 300,
     "first_week": 69,
     "last_week": 69,
     "unblocked_by": []
@@ -13517,7 +13942,7 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 290,
+    "pick": 301,
     "first_week": 69,
     "last_week": 69,
     "unblocked_by": []
@@ -13531,7 +13956,7 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 291,
+    "pick": 302,
     "first_week": 69,
     "last_week": 69,
     "unblocked_by": []
@@ -13545,7 +13970,7 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 292,
+    "pick": 303,
     "first_week": 69,
     "last_week": 69,
     "unblocked_by": []
@@ -13559,7 +13984,7 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 293,
+    "pick": 304,
     "first_week": 69,
     "last_week": 69,
     "unblocked_by": []
@@ -13573,7 +13998,7 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 294,
+    "pick": 305,
     "first_week": 69,
     "last_week": 69,
     "unblocked_by": []
@@ -13587,7 +14012,7 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 295,
+    "pick": 306,
     "first_week": 69,
     "last_week": 69,
     "unblocked_by": []
@@ -13623,7 +14048,7 @@
      }
     ],
     "hours": 40.0,
-    "remaining_after": 2685.5
+    "remaining_after": 2704.5
    },
    {
     "week": 2,
@@ -13726,7 +14151,7 @@
      }
     ],
     "hours": 40.0,
-    "remaining_after": 2645.5
+    "remaining_after": 2664.5
    },
    {
     "week": 3,
@@ -13869,7 +14294,7 @@
      }
     ],
     "hours": 40.0,
-    "remaining_after": 2605.5
+    "remaining_after": 2624.5
    },
    {
     "week": 4,
@@ -14000,7 +14425,7 @@
      }
     ],
     "hours": 40.0,
-    "remaining_after": 2565.5
+    "remaining_after": 2584.5
    },
    {
     "week": 5,
@@ -14079,7 +14504,7 @@
      }
     ],
     "hours": 40.0,
-    "remaining_after": 2525.5
+    "remaining_after": 2544.5
    },
    {
     "week": 6,
@@ -14173,19 +14598,19 @@
       "hours": 1.0
      },
      {
-      "id": "86bcw88z2",
+      "id": "86bcyurv1",
       "hours": 3.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 2485.5
+    "remaining_after": 2504.5
    },
    {
     "week": 7,
     "segments": [
      {
       "id": "86bcw88z2",
-      "hours": 5.0
+      "hours": 8.0
      },
      {
       "id": "86bcw88z5",
@@ -14193,18 +14618,18 @@
      },
      {
       "id": "86bcw88z6",
-      "hours": 11.0
+      "hours": 8.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 2445.5
+    "remaining_after": 2464.5
    },
    {
     "week": 8,
     "segments": [
      {
       "id": "86bcw88z6",
-      "hours": 1.0
+      "hours": 4.0
      },
      {
       "id": "86bcw88z8",
@@ -14213,21 +14638,17 @@
      {
       "id": "86bcw88za",
       "hours": 16.0
-     },
-     {
-      "id": "86bcw88zc",
-      "hours": 3.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 2405.5
+    "remaining_after": 2424.5
    },
    {
     "week": 9,
     "segments": [
      {
       "id": "86bcw88zc",
-      "hours": 21.0
+      "hours": 24.0
      },
      {
       "id": "86bcwwjcn",
@@ -14235,33 +14656,37 @@
      },
      {
       "id": "86bcw88kz",
-      "hours": 16.0
+      "hours": 13.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 2365.5
+    "remaining_after": 2384.5
    },
    {
     "week": 10,
     "segments": [
+     {
+      "id": "86bcw88kz",
+      "hours": 3.0
+     },
      {
       "id": "86bcw88m0",
       "hours": 24.0
      },
      {
       "id": "86bcw88m3",
-      "hours": 16.0
+      "hours": 13.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 2325.5
+    "remaining_after": 2344.5
    },
    {
     "week": 11,
     "segments": [
      {
       "id": "86bcw88m3",
-      "hours": 8.0
+      "hours": 11.0
      },
      {
       "id": "86bcw88m6",
@@ -14269,18 +14694,18 @@
      },
      {
       "id": "86bcw88m7",
-      "hours": 28.0
+      "hours": 25.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 2285.5
+    "remaining_after": 2304.5
    },
    {
     "week": 12,
     "segments": [
      {
       "id": "86bcw88m7",
-      "hours": 12.0
+      "hours": 15.0
      },
      {
       "id": "86bcw89ac",
@@ -14304,33 +14729,33 @@
      },
      {
       "id": "86bcw88kp",
-      "hours": 4.0
+      "hours": 1.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 2245.5
+    "remaining_after": 2264.5
    },
    {
     "week": 13,
     "segments": [
      {
       "id": "86bcw88kp",
-      "hours": 36.0
+      "hours": 39.0
      },
      {
       "id": "86bcw88kr",
-      "hours": 4.0
+      "hours": 1.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 2205.5
+    "remaining_after": 2224.5
    },
    {
     "week": 14,
     "segments": [
      {
       "id": "86bcw88kr",
-      "hours": 12.0
+      "hours": 15.0
      },
      {
       "id": "86bcw88kt",
@@ -14338,18 +14763,18 @@
      },
      {
       "id": "86bcw88kv",
-      "hours": 16.0
+      "hours": 13.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 2165.5
+    "remaining_after": 2184.5
    },
    {
     "week": 15,
     "segments": [
      {
       "id": "86bcw88kv",
-      "hours": 4.0
+      "hours": 7.0
      },
      {
       "id": "86bcw88kw",
@@ -14361,18 +14786,18 @@
      },
      {
       "id": "86bcw88bh",
-      "hours": 12.0
+      "hours": 9.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 2125.5
+    "remaining_after": 2144.5
    },
    {
     "week": 16,
     "segments": [
      {
       "id": "86bcw88bh",
-      "hours": 18.0
+      "hours": 21.0
      },
      {
       "id": "86bcw88bk",
@@ -14380,18 +14805,18 @@
      },
      {
       "id": "86bcw88bm",
-      "hours": 6.0
+      "hours": 3.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 2085.5
+    "remaining_after": 2104.5
    },
    {
     "week": 17,
     "segments": [
      {
       "id": "86bcw88bm",
-      "hours": 6.0
+      "hours": 9.0
      },
      {
       "id": "86bcw88bn",
@@ -14399,48 +14824,48 @@
      },
      {
       "id": "86bcw88br",
-      "hours": 22.0
+      "hours": 19.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 2045.5
+    "remaining_after": 2064.5
    },
    {
     "week": 18,
     "segments": [
      {
       "id": "86bcw88br",
-      "hours": 18.0
+      "hours": 21.0
      },
      {
       "id": "86bcw88bt",
-      "hours": 22.0
+      "hours": 19.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 2005.5
+    "remaining_after": 2024.5
    },
    {
     "week": 19,
     "segments": [
      {
       "id": "86bcw88bt",
-      "hours": 18.0
+      "hours": 21.0
      },
      {
       "id": "86bcw88bw",
-      "hours": 22.0
+      "hours": 19.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 1965.5
+    "remaining_after": 1984.5
    },
    {
     "week": 20,
     "segments": [
      {
       "id": "86bcw88bw",
-      "hours": 8.0
+      "hours": 11.0
      },
      {
       "id": "86bcw88bx",
@@ -14452,18 +14877,29 @@
      },
      {
       "id": "86bcw88c0",
-      "hours": 22.0
+      "hours": 19.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 1925.5
+    "remaining_after": 1944.5
    },
    {
     "week": 21,
     "segments": [
      {
       "id": "86bcw88c0",
-      "hours": 38.0
+      "hours": 40.0
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 1904.5
+   },
+   {
+    "week": 22,
+    "segments": [
+     {
+      "id": "86bcw88c0",
+      "hours": 1.0
      },
      {
       "id": "86bcw899n",
@@ -14480,14 +14916,7 @@
      {
       "id": "86bcw899v",
       "hours": 0.5
-     }
-    ],
-    "hours": 40.0,
-    "remaining_after": 1885.5
-   },
-   {
-    "week": 22,
-    "segments": [
+     },
      {
       "id": "86bcw899x",
       "hours": 0.5
@@ -14518,22 +14947,22 @@
      },
      {
       "id": "86bcw88kk",
-      "hours": 12.0
-     },
-     {
-      "id": "86bcw88km",
-      "hours": 1.5
+      "hours": 10.5
      }
     ],
     "hours": 40.0,
-    "remaining_after": 1845.5
+    "remaining_after": 1864.5
    },
    {
     "week": 23,
     "segments": [
      {
+      "id": "86bcw88kk",
+      "hours": 1.5
+     },
+     {
       "id": "86bcw88km",
-      "hours": 14.5
+      "hours": 16.0
      },
      {
       "id": "86bcw88zj",
@@ -14569,22 +14998,22 @@
      },
      {
       "id": "86bcw8909",
-      "hours": 6.0
-     },
-     {
-      "id": "86bcw890a",
-      "hours": 1.0
+      "hours": 4.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 1805.5
+    "remaining_after": 1824.5
    },
    {
     "week": 24,
     "segments": [
      {
-      "id": "86bcw890a",
+      "id": "86bcw8909",
       "hours": 2.0
+     },
+     {
+      "id": "86bcw890a",
+      "hours": 3.0
      },
      {
       "id": "86bcwwjcu",
@@ -14599,42 +15028,77 @@
       "hours": 0.5
      },
      {
-      "id": "86bcw88u2",
-      "hours": 30.0
+      "id": "86bcyurt4",
+      "hours": 1.0
      },
      {
-      "id": "86bcw88u4",
-      "hours": 3.5
+      "id": "86bcyurtd",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcyurth",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcyurtn",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcyurtr",
+      "hours": 2.0
+     },
+     {
+      "id": "86bcyuru1",
+      "hours": 2.0
+     },
+     {
+      "id": "86bcw88u2",
+      "hours": 22.5
      }
     ],
     "hours": 40.0,
-    "remaining_after": 1765.5
+    "remaining_after": 1784.5
    },
    {
     "week": 25,
     "segments": [
      {
+      "id": "86bcw88u2",
+      "hours": 7.5
+     },
+     {
       "id": "86bcw88u4",
-      "hours": 16.5
+      "hours": 20.0
      },
      {
       "id": "86bcw88u6",
-      "hours": 16.0
-     },
-     {
-      "id": "86bcw88u9",
-      "hours": 7.5
+      "hours": 12.5
      }
     ],
     "hours": 40.0,
-    "remaining_after": 1725.5
+    "remaining_after": 1744.5
    },
    {
     "week": 26,
     "segments": [
      {
+      "id": "86bcw88u6",
+      "hours": 3.5
+     },
+     {
       "id": "86bcw88u9",
-      "hours": 32.5
+      "hours": 36.5
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 1704.5
+   },
+   {
+    "week": 27,
+    "segments": [
+     {
+      "id": "86bcw88u9",
+      "hours": 3.5
      },
      {
       "id": "86bcw88ua",
@@ -14642,37 +15106,26 @@
      },
      {
       "id": "86bcw88ub",
-      "hours": 1.5
-     }
-    ],
-    "hours": 40.0,
-    "remaining_after": 1685.5
-   },
-   {
-    "week": 27,
-    "segments": [
-     {
-      "id": "86bcw88ub",
-      "hours": 14.5
-     },
-     {
-      "id": "86bcw89aq",
       "hours": 16.0
      },
      {
-      "id": "86bcw89ax",
-      "hours": 9.5
+      "id": "86bcw89aq",
+      "hours": 14.5
      }
     ],
     "hours": 40.0,
-    "remaining_after": 1645.5
+    "remaining_after": 1664.5
    },
    {
     "week": 28,
     "segments": [
      {
+      "id": "86bcw89aq",
+      "hours": 1.5
+     },
+     {
       "id": "86bcw89ax",
-      "hours": 12.5
+      "hours": 22.0
      },
      {
       "id": "86bcw89ay",
@@ -14680,37 +15133,37 @@
      },
      {
       "id": "86bcw88t9",
-      "hours": 11.5
+      "hours": 0.5
      }
     ],
     "hours": 40.0,
-    "remaining_after": 1605.5
+    "remaining_after": 1624.5
    },
    {
     "week": 29,
     "segments": [
      {
       "id": "86bcw88t9",
-      "hours": 4.5
+      "hours": 15.5
      },
      {
       "id": "86bcw88ta",
-      "hours": 30.0
-     },
-     {
-      "id": "86bcw88tc",
-      "hours": 5.5
+      "hours": 24.5
      }
     ],
     "hours": 40.0,
-    "remaining_after": 1565.5
+    "remaining_after": 1584.5
    },
    {
     "week": 30,
     "segments": [
      {
+      "id": "86bcw88ta",
+      "hours": 5.5
+     },
+     {
       "id": "86bcw88tc",
-      "hours": 4.5
+      "hours": 10.0
      },
      {
       "id": "86bcw88te",
@@ -14718,18 +15171,18 @@
      },
      {
       "id": "86bcw88tf",
-      "hours": 15.5
+      "hours": 4.5
      }
     ],
     "hours": 40.0,
-    "remaining_after": 1525.5
+    "remaining_after": 1544.5
    },
    {
     "week": 31,
     "segments": [
      {
       "id": "86bcw88tf",
-      "hours": 14.5
+      "hours": 25.5
      },
      {
       "id": "86bcw88th",
@@ -14737,22 +15190,22 @@
      },
      {
       "id": "86bcw88tm",
-      "hours": 16.0
-     },
-     {
-      "id": "86bcw88tp",
-      "hours": 3.5
+      "hours": 8.5
      }
     ],
     "hours": 40.0,
-    "remaining_after": 1485.5
+    "remaining_after": 1504.5
    },
    {
     "week": 32,
     "segments": [
      {
+      "id": "86bcw88tm",
+      "hours": 7.5
+     },
+     {
       "id": "86bcw88tp",
-      "hours": 16.5
+      "hours": 20.0
      },
      {
       "id": "86bcw88tq",
@@ -14760,18 +15213,18 @@
      },
      {
       "id": "86bcw88tr",
-      "hours": 11.5
+      "hours": 0.5
      }
     ],
     "hours": 40.0,
-    "remaining_after": 1445.5
+    "remaining_after": 1464.5
    },
    {
     "week": 33,
     "segments": [
      {
       "id": "86bcw88tr",
-      "hours": 4.5
+      "hours": 15.5
      },
      {
       "id": "86bcw88tv",
@@ -14791,7 +15244,18 @@
      },
      {
       "id": "86bcy0nwt",
-      "hours": 2.0
+      "hours": 1.5
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 1424.5
+   },
+   {
+    "week": 34,
+    "segments": [
+     {
+      "id": "86bcy0nwt",
+      "hours": 0.5
      },
      {
       "id": "86bcyar70",
@@ -14803,18 +15267,7 @@
      },
      {
       "id": "86bcw87eb",
-      "hours": 2.5
-     }
-    ],
-    "hours": 40.0,
-    "remaining_after": 1405.5
-   },
-   {
-    "week": 34,
-    "segments": [
-     {
-      "id": "86bcw87eb",
-      "hours": 9.5
+      "hours": 12.0
      },
      {
       "id": "86bcw87ed",
@@ -14826,7 +15279,18 @@
      },
      {
       "id": "86bcw87eh",
-      "hours": 16.0
+      "hours": 9.5
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 1384.5
+   },
+   {
+    "week": 35,
+    "segments": [
+     {
+      "id": "86bcw87eh",
+      "hours": 6.5
      },
      {
       "id": "86bcw87em",
@@ -14834,18 +15298,7 @@
      },
      {
       "id": "86bcw87en",
-      "hours": 1.5
-     }
-    ],
-    "hours": 40.0,
-    "remaining_after": 1365.5
-   },
-   {
-    "week": 35,
-    "segments": [
-     {
-      "id": "86bcw87en",
-      "hours": 1.5
+      "hours": 3.0
      },
      {
       "id": "86bcw87eq",
@@ -14873,7 +15326,18 @@
      },
      {
       "id": "86bcwwjdd",
-      "hours": 3.0
+      "hours": 2.0
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 1344.5
+   },
+   {
+    "week": 36,
+    "segments": [
+     {
+      "id": "86bcwwjdd",
+      "hours": 1.0
      },
      {
       "id": "86bcwwjdq",
@@ -14893,18 +15357,23 @@
      },
      {
       "id": "86bcxgvbf",
-      "hours": 2.0
-     }
-    ],
-    "hours": 40.0,
-    "remaining_after": 1325.5
-   },
-   {
-    "week": 36,
-    "segments": [
+      "hours": 4.0
+     },
      {
-      "id": "86bcxgvbf",
+      "id": "86bcyurue",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcyurun",
       "hours": 2.0
+     },
+     {
+      "id": "86bcyurux",
+      "hours": 2.0
+     },
+     {
+      "id": "86bcyurv7",
+      "hours": 3.0
      },
      {
       "id": "86bcw888f",
@@ -14912,171 +15381,182 @@
      },
      {
       "id": "86bcw888g",
-      "hours": 16.0
-     },
-     {
-      "id": "86bcw888h",
-      "hours": 10.0
+      "hours": 7.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 1285.5
+    "remaining_after": 1304.5
    },
    {
     "week": 37,
     "segments": [
      {
+      "id": "86bcw888g",
+      "hours": 9.0
+     },
+     {
       "id": "86bcw888h",
-      "hours": 40.0
+      "hours": 31.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 1245.5
+    "remaining_after": 1264.5
    },
    {
     "week": 38,
     "segments": [
      {
       "id": "86bcw888h",
-      "hours": 10.0
+      "hours": 29.0
      },
      {
       "id": "86bcw888k",
-      "hours": 30.0
+      "hours": 11.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 1205.5
+    "remaining_after": 1224.5
    },
    {
     "week": 39,
     "segments": [
      {
       "id": "86bcw888k",
-      "hours": 30.0
-     },
-     {
-      "id": "86bcw888n",
-      "hours": 10.0
+      "hours": 40.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 1165.5
+    "remaining_after": 1184.5
    },
    {
     "week": 40,
     "segments": [
      {
+      "id": "86bcw888k",
+      "hours": 9.0
+     },
+     {
       "id": "86bcw888n",
-      "hours": 40.0
+      "hours": 31.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 1125.5
+    "remaining_after": 1144.5
    },
    {
     "week": 41,
     "segments": [
      {
       "id": "86bcw888n",
-      "hours": 10.0
+      "hours": 29.0
      },
      {
       "id": "86bcw888p",
-      "hours": 30.0
+      "hours": 11.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 1085.5
+    "remaining_after": 1104.5
    },
    {
     "week": 42,
     "segments": [
      {
       "id": "86bcw888p",
-      "hours": 30.0
-     },
-     {
-      "id": "86bcw888r",
-      "hours": 10.0
+      "hours": 40.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 1045.5
+    "remaining_after": 1064.5
    },
    {
     "week": 43,
     "segments": [
      {
+      "id": "86bcw888p",
+      "hours": 9.0
+     },
+     {
       "id": "86bcw888r",
-      "hours": 40.0
+      "hours": 31.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 1005.5
+    "remaining_after": 1024.5
    },
    {
     "week": 44,
     "segments": [
      {
       "id": "86bcw888r",
-      "hours": 10.0
+      "hours": 29.0
      },
      {
       "id": "86bcw888t",
-      "hours": 30.0
+      "hours": 11.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 965.5
+    "remaining_after": 984.5
    },
    {
     "week": 45,
     "segments": [
      {
       "id": "86bcw888t",
-      "hours": 30.0
-     },
-     {
-      "id": "86bcw888w",
-      "hours": 10.0
+      "hours": 40.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 925.5
+    "remaining_after": 944.5
    },
    {
     "week": 46,
     "segments": [
      {
+      "id": "86bcw888t",
+      "hours": 9.0
+     },
+     {
       "id": "86bcw888w",
-      "hours": 40.0
+      "hours": 31.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 885.5
+    "remaining_after": 904.5
    },
    {
     "week": 47,
     "segments": [
      {
       "id": "86bcw888w",
-      "hours": 10.0
+      "hours": 29.0
      },
      {
       "id": "86bcw888x",
-      "hours": 30.0
+      "hours": 11.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 845.5
+    "remaining_after": 864.5
    },
    {
     "week": 48,
     "segments": [
      {
       "id": "86bcw888x",
-      "hours": 30.0
+      "hours": 40.0
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 824.5
+   },
+   {
+    "week": 49,
+    "segments": [
+     {
+      "id": "86bcw888x",
+      "hours": 9.0
      },
      {
       "id": "86bcw888y",
@@ -15084,167 +15564,167 @@
      },
      {
       "id": "86bcw88ex",
-      "hours": 9.0
-     }
-    ],
-    "hours": 40.0,
-    "remaining_after": 805.5
-   },
-   {
-    "week": 49,
-    "segments": [
-     {
-      "id": "86bcw88ex",
-      "hours": 3.0
+      "hours": 12.0
      },
      {
       "id": "86bcw88ey",
-      "hours": 37.0
+      "hours": 18.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 765.5
+    "remaining_after": 784.5
    },
    {
     "week": 50,
     "segments": [
      {
       "id": "86bcw88ey",
-      "hours": 23.0
-     },
-     {
-      "id": "86bcw88f1",
-      "hours": 17.0
+      "hours": 40.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 725.5
+    "remaining_after": 744.5
    },
    {
     "week": 51,
     "segments": [
      {
+      "id": "86bcw88ey",
+      "hours": 2.0
+     },
+     {
       "id": "86bcw88f1",
-      "hours": 40.0
+      "hours": 38.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 685.5
+    "remaining_after": 704.5
    },
    {
     "week": 52,
     "segments": [
      {
       "id": "86bcw88f1",
-      "hours": 3.0
+      "hours": 22.0
      },
      {
       "id": "86bcw88f2",
-      "hours": 37.0
+      "hours": 18.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 645.5
+    "remaining_after": 664.5
    },
    {
     "week": 53,
     "segments": [
      {
       "id": "86bcw88f2",
-      "hours": 23.0
-     },
-     {
-      "id": "86bcw88f3",
-      "hours": 17.0
+      "hours": 40.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 605.5
+    "remaining_after": 624.5
    },
    {
     "week": 54,
     "segments": [
      {
+      "id": "86bcw88f2",
+      "hours": 2.0
+     },
+     {
       "id": "86bcw88f3",
-      "hours": 40.0
+      "hours": 38.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 565.5
+    "remaining_after": 584.5
    },
    {
     "week": 55,
     "segments": [
      {
       "id": "86bcw88f3",
-      "hours": 3.0
+      "hours": 22.0
      },
      {
       "id": "86bcw88f4",
-      "hours": 37.0
+      "hours": 18.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 525.5
+    "remaining_after": 544.5
    },
    {
     "week": 56,
     "segments": [
      {
       "id": "86bcw88f4",
-      "hours": 23.0
-     },
-     {
-      "id": "86bcw88f8",
-      "hours": 17.0
+      "hours": 40.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 485.5
+    "remaining_after": 504.5
    },
    {
     "week": 57,
     "segments": [
      {
+      "id": "86bcw88f4",
+      "hours": 2.0
+     },
+     {
       "id": "86bcw88f8",
-      "hours": 40.0
+      "hours": 38.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 445.5
+    "remaining_after": 464.5
    },
    {
     "week": 58,
     "segments": [
      {
       "id": "86bcw88f8",
-      "hours": 3.0
+      "hours": 22.0
      },
      {
       "id": "86bcw88f9",
-      "hours": 37.0
+      "hours": 18.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 405.5
+    "remaining_after": 424.5
    },
    {
     "week": 59,
     "segments": [
      {
       "id": "86bcw88f9",
-      "hours": 23.0
-     },
-     {
-      "id": "86bcw88fb",
-      "hours": 17.0
+      "hours": 40.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 365.5
+    "remaining_after": 384.5
    },
    {
     "week": 60,
+    "segments": [
+     {
+      "id": "86bcw88f9",
+      "hours": 2.0
+     },
+     {
+      "id": "86bcw88fb",
+      "hours": 38.0
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 344.5
+   },
+   {
+    "week": 61,
     "segments": [
      {
       "id": "86bcw88fb",
@@ -15252,14 +15732,14 @@
      }
     ],
     "hours": 40.0,
-    "remaining_after": 325.5
+    "remaining_after": 304.5
    },
    {
-    "week": 61,
+    "week": 62,
     "segments": [
      {
       "id": "86bcw88fb",
-      "hours": 23.0
+      "hours": 2.0
      },
      {
       "id": "86bcw88fc",
@@ -15267,82 +15747,82 @@
      },
      {
       "id": "86bcw88fe",
-      "hours": 1.0
+      "hours": 22.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 285.5
-   },
-   {
-    "week": 62,
-    "segments": [
-     {
-      "id": "86bcw88fe",
-      "hours": 39.0
-     },
-     {
-      "id": "86bcw88fg",
-      "hours": 1.0
-     }
-    ],
-    "hours": 40.0,
-    "remaining_after": 245.5
+    "remaining_after": 264.5
    },
    {
     "week": 63,
     "segments": [
      {
-      "id": "86bcw88fg",
-      "hours": 39.0
+      "id": "86bcw88fe",
+      "hours": 18.0
      },
      {
-      "id": "86bcw88fh",
-      "hours": 1.0
+      "id": "86bcw88fg",
+      "hours": 22.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 205.5
+    "remaining_after": 224.5
    },
    {
     "week": 64,
     "segments": [
      {
-      "id": "86bcw88fh",
-      "hours": 39.0
+      "id": "86bcw88fg",
+      "hours": 18.0
      },
      {
-      "id": "86bcw88fj",
-      "hours": 1.0
+      "id": "86bcw88fh",
+      "hours": 22.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 165.5
+    "remaining_after": 184.5
    },
    {
     "week": 65,
     "segments": [
      {
-      "id": "86bcw88fj",
-      "hours": 23.0
+      "id": "86bcw88fh",
+      "hours": 18.0
      },
      {
-      "id": "86bcw88fn",
-      "hours": 17.0
+      "id": "86bcw88fj",
+      "hours": 22.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 125.5
+    "remaining_after": 144.5
    },
    {
     "week": 66,
     "segments": [
      {
+      "id": "86bcw88fj",
+      "hours": 2.0
+     },
+     {
       "id": "86bcw88fn",
-      "hours": 7.0
+      "hours": 24.0
      },
      {
       "id": "86bcw88fq",
-      "hours": 24.0
+      "hours": 14.0
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 104.5
+   },
+   {
+    "week": 67,
+    "segments": [
+     {
+      "id": "86bcw88fq",
+      "hours": 10.0
      },
      {
       "id": "86bcw88fr",
@@ -15350,37 +15830,37 @@
      },
      {
       "id": "86bcw88fu",
-      "hours": 3.0
+      "hours": 24.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 85.5
-   },
-   {
-    "week": 67,
-    "segments": [
-     {
-      "id": "86bcw88fu",
-      "hours": 37.0
-     },
-     {
-      "id": "86bcw885b",
-      "hours": 3.0
-     }
-    ],
-    "hours": 40.0,
-    "remaining_after": 45.5
+    "remaining_after": 64.5
    },
    {
     "week": 68,
     "segments": [
      {
+      "id": "86bcw88fu",
+      "hours": 16.0
+     },
+     {
       "id": "86bcw885b",
-      "hours": 9.0
+      "hours": 12.0
      },
      {
       "id": "86bcw885d",
-      "hours": 16.0
+      "hours": 12.0
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 24.5
+   },
+   {
+    "week": 69,
+    "segments": [
+     {
+      "id": "86bcw885d",
+      "hours": 4.0
      },
      {
       "id": "86bcw885e",
@@ -15409,14 +15889,7 @@
      {
       "id": "86bcw898e",
       "hours": 0.25
-     }
-    ],
-    "hours": 40.0,
-    "remaining_after": 5.5
-   },
-   {
-    "week": 69,
-    "segments": [
+     },
      {
       "id": "86bcw898f",
       "hours": 0.25
@@ -15506,7 +15979,7 @@
       "hours": 0.25
      }
     ],
-    "hours": 5.5,
+    "hours": 24.5,
     "remaining_after": 0.0
    }
   ],
