@@ -4,7 +4,10 @@ Design catalog. The unlock rule below is decided (Astra, 2026-11-05); the fables
 
 ## Idea and unlock rule (Astra, 2026-11-05)
 
-Fables start in the Grimm world. Each fable unlocks **globally and individually, after it has been played**: playing one fable makes that fable (and only that one) world-agnostic, so it can be injected into any dungeon where it fits. Completing Grimm does not unlock the others.
+Fables start in the Grimm world. Each fable unlocks **globally and individually, after it has been played**: completing one fable makes that fable (and only that one) world-agnostic, so it can be injected into any dungeon where it fits. Completing Grimm does not unlock the others.
+
+- "Played" means completed. Failing or abandoning a fable does **not** unlock it.
+- Unlocking does not move the fable out of Grimm: it simply joins the global pool, so it stays available in Grimm as well as in every world where it fits.
 
 ## Realism check
 
@@ -26,16 +29,16 @@ Verdict: realistic as a small-quest system, with the per-fable unlock being the 
 
 ## Unlock lifecycle
 
-Decided: one unlock per fable, global, after that fable is played. Two ways to model it:
+Decided: one unlock per fable, global, granted only when that fable is completed. Two ways to model it:
 
 | Option | How | Data-only? | Risk |
 | --- | --- | --- | --- |
-| A. Two quest copies per fable | Grimm copy tagged `[Injectable, Jungle]`. A second copy tagged `[Injectable]` with `RequiredAward` set to that fable's own award, granted when the Grimm copy is played. | Mostly data; the award grant needs a completion hook (Blueprint). 18 fables means 18 awards | Doubles assets. Needs `RequiredAward` to filter selection (untested) |
+| A. Two quest copies per fable | Grimm copy tagged `[Injectable, Jungle]`. A second copy tagged `[Injectable]` with `RequiredAward` set to that fable's own award, granted when the Grimm copy is completed. | Mostly data; the award grant needs a completion hook (Blueprint). 18 fables means 18 awards | Doubles assets. Needs `RequiredAward` to filter selection (untested) |
 | B. One quest, tag swap | One quest; a Blueprint adds the world-agnostic tag on completion and stores a per-fable save flag | No, Blueprint logic and a persistent flag per fable | Needs a save-flag read at selection time (doc row 26/33) |
 
-Recommendation: start with A, because it keeps most of the work in data and the award is already account-level, which gives "global" for free. With A, the unlock state is one award per fable, so there is no shared counter to keep in sync.
+Recommendation: start with A, because it keeps most of the work in data and the award is already account-level, which gives "global" for free. With A, the unlock state is one award per fable, so there is no shared counter to keep in sync. Because an unlocked fable stays available in Grimm, the Grimm copy keeps its `Jungle` tag and the world-agnostic copy is added alongside it, never swapped for it.
 
-"Played" is taken to mean completed (any outcome that ends the quest). Whether abandoning or failing counts is an open question below.
+The award must be granted on completion only, not on start, fail or abandon. Whether the quest's `Complete` state can trigger that without Blueprint is part of unknown 5.
 
 ## Data-only vs Blueprint (legend)
 
@@ -224,7 +227,7 @@ Only F14 and F18 look close to data-only. Everything with a choice, escort, time
 1. F18 (data-only): does a tag-matched `Injectable` quest spawn in a Grimm-world dungeon at all, and does a pak-added quest reach `RegisteredQuests`?
 2. F14: same quest reused in a dungeon of another world. Answers reuse questions 1 to 3 in the reusability doc.
 3. F10: smallest Blueprint state (a counter). Tests whether a pak Blueprint can run on an injected quest.
-4. F4: persistent choice flag; also the first test of the per-fable unlock award (option A) or tag swap (option B), including whether playing it in Grimm unlocks only that fable elsewhere.
+4. F4: persistent choice flag; also the first test of the per-fable unlock award (option A) or tag swap (option B): completing it in Grimm must unlock only that fable elsewhere, failing or abandoning must not unlock it, and it must stay available in Grimm.
 
 ## pak-builder note
 
@@ -232,7 +235,7 @@ Per [pak-builder-json.md](pak-builder-json.md), JSON only describes Blueprint in
 
 ## Open questions for Astra
 
-1. Does "played" mean completed only, or do failing and abandoning also unlock the fable?
-2. Should a fable stay available inside Grimm after it unlocks, or only appear elsewhere?
-3. Are morals just flavor, or should a fable branch (kind vs greedy) change what is rewarded? (Branching needs Blueprint.)
-4. Is any non-Aesop fable (for example Panchatantra) in scope later?
+1. Are morals just flavor, or should a fable branch (kind vs greedy) change what is rewarded? (Branching needs Blueprint.)
+2. Is any non-Aesop fable (for example Panchatantra) in scope later?
+
+Answered 2026-11-05: unlock is per fable, global, on completion only (failing or abandoning does not count), and an unlocked fable stays in Grimm as part of the global pool.
