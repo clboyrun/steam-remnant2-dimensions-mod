@@ -25,7 +25,7 @@ Which injectables can interact with which dungeon, per new world. This is a scaf
 | Trait book | `TraitBook` `[Trait]` slot (separate from Injectable) | untested |
 | Simulacrum | zone slot `[Simulacrum]`, `ChanceToSpawn 20` | untested |
 | Corrupted roll | applies to any dungeon | rule known, per-world test open |
-| Fable quest | small quest tagged `Injectable`; starts in Grimm, world-agnostic after completion (see [aesop-fables-injectables.md](aesop-fables-injectables.md)) | untested |
+| Fable quest | small quest tagged `Injectable`; starts in Grimm, and each fable becomes world-agnostic individually after it has been played (see [aesop-fables-injectables.md](aesop-fables-injectables.md)) | untested |
 
 ## Matrix per world
 
@@ -51,4 +51,4 @@ Fable rows: the 18 Aesop fables each have a per-world fit and mostly-data-or-Blu
 2. Does reuse depend on extra tags (world biome tag) on the injectable?
 3. Can an Arcade machine dungeon use the same injectable as a Grimm tale dungeon?
 4. Does Corrupted apply to the injectable's spawns as well as the dungeon's?
-5. Can `RequiredAward` (or a save flag) gate an injectable so a fable unlocks for other worlds only after its Grimm run?
+5. Can `RequiredAward` (or a save flag) gate an injectable so each fable unlocks for other worlds only after its own Grimm run?
