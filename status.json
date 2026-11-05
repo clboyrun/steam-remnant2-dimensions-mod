@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-04T18:32:58+00:00",
+ "generated_at": "2026-11-05T01:00:32+00:00",
  "folder": {
   "id": "90149675055",
   "name": "Dimensions Mod"
@@ -10,7 +10,7 @@
    "color": "#b5bcc2",
    "done": false,
    "open": true,
-   "count": 195
+   "count": 305
   },
   {
    "status": "in process",
@@ -1277,12 +1277,19 @@
      "parent": null,
      "estimate_hours": 12.0,
      "waits_on": [
-      "86bcw87ak"
+      "86bcw87ak",
+      "86bcynmx7",
+      "86bcynmxg",
+      "86bcynmxj",
+      "86bcynmxm",
+      "86bcynmxn",
+      "86bcynmxq"
      ],
      "links": [
       "86bcw88ex",
       "86bcw88zc",
-      "86bcwayg0"
+      "86bcwayg0",
+      "86bcynmxe"
      ],
      "url": "https://app.clickup.com/t/86bcw88bf",
      "updated": 1793687064952,
@@ -1508,7 +1515,8 @@
      ],
      "links": [
       "86bcw88bn",
-      "86bcw88c0"
+      "86bcw88c0",
+      "86bcynmx9"
      ],
      "url": "https://app.clickup.com/t/86bcw88by",
      "updated": 1793687065809,
@@ -1529,7 +1537,13 @@
      "open": true,
      "parent": null,
      "estimate_hours": 60.0,
-     "waits_on": [],
+     "waits_on": [
+      "86bcynmx8",
+      "86bcynmx9",
+      "86bcynmxb",
+      "86bcynmxd",
+      "86bcynmxe"
+     ],
      "links": [
       "86bcw88by"
      ],
@@ -1730,6 +1744,258 @@
      "assigned": false,
      "closed": null,
      "order": 10001793562715.809
+    },
+    {
+     "id": "86bcynmx7",
+     "tracker_id": null,
+     "name": "Arcade: dungeon pool and roll rules",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 2.0,
+     "waits_on": [],
+     "links": [
+      "86bcw87a4"
+     ],
+     "url": "https://app.clickup.com/t/86bcynmx7",
+     "updated": 1793839866935,
+     "created": 1793839789730,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839789.764
+    },
+    {
+     "id": "86bcynmx8",
+     "tracker_id": null,
+     "name": "Arcade final boss: drop rates",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [
+      "86bcw88t9",
+      "86bcw88tw"
+     ],
+     "url": "https://app.clickup.com/t/86bcynmx8",
+     "updated": 1793839869963,
+     "created": 1793839790505,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839790.527
+    },
+    {
+     "id": "86bcynmx9",
+     "tracker_id": null,
+     "name": "Arcade final boss: dungeon and arena",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 2.0,
+     "waits_on": [],
+     "links": [
+      "86bcw87a4",
+      "86bcw88by"
+     ],
+     "url": "https://app.clickup.com/t/86bcynmx9",
+     "updated": 1793839872743,
+     "created": 1793839791067,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839791.104
+    },
+    {
+     "id": "86bcynmxb",
+     "tracker_id": null,
+     "name": "Arcade final boss: injectable compatibility",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [
+      "86bcw87a4"
+     ],
+     "url": "https://app.clickup.com/t/86bcynmxb",
+     "updated": 1793839875217,
+     "created": 1793839791870,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839791.945
+    },
+    {
+     "id": "86bcynmxd",
+     "tracker_id": null,
+     "name": "Arcade final boss: mobs and adds",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [],
+     "url": "https://app.clickup.com/t/86bcynmxd",
+     "updated": 1793839876739,
+     "created": 1793839792581,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839792.61
+    },
+    {
+     "id": "86bcynmxe",
+     "tracker_id": null,
+     "name": "Arcade final boss: quest",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [
+      "86bcw88bf"
+     ],
+     "url": "https://app.clickup.com/t/86bcynmxe",
+     "updated": 1793839878861,
+     "created": 1793839793078,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839793.1
+    },
+    {
+     "id": "86bcynmxg",
+     "tracker_id": null,
+     "name": "Arcade: injectable reusability matrix (dungeon x injectable)",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 2.0,
+     "waits_on": [],
+     "links": [
+      "86bcw87a4"
+     ],
+     "url": "https://app.clickup.com/t/86bcynmxg",
+     "updated": 1793839882797,
+     "created": 1793839793597,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839793.62
+    },
+    {
+     "id": "86bcynmxj",
+     "tracker_id": null,
+     "name": "Arcade: mob roster",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 2.0,
+     "waits_on": [],
+     "links": [
+      "86bcw87a4"
+     ],
+     "url": "https://app.clickup.com/t/86bcynmxj",
+     "updated": 1793839885305,
+     "created": 1793839794224,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839794.254
+    },
+    {
+     "id": "86bcynmxm",
+     "tracker_id": null,
+     "name": "Arcade: NPCs",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [],
+     "url": "https://app.clickup.com/t/86bcynmxm",
+     "updated": 1793839886842,
+     "created": 1793839794714,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839794.732
+    },
+    {
+     "id": "86bcynmxn",
+     "tracker_id": null,
+     "name": "Arcade: quest list",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [
+      "86bcwayg0"
+     ],
+     "url": "https://app.clickup.com/t/86bcynmxn",
+     "updated": 1793839890688,
+     "created": 1793839795239,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839795.273
+    },
+    {
+     "id": "86bcynmxq",
+     "tracker_id": null,
+     "name": "Arcade: world drop rates",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 2.0,
+     "waits_on": [],
+     "links": [
+      "86bcw88t9",
+      "86bcw88tw"
+     ],
+     "url": "https://app.clickup.com/t/86bcynmxq",
+     "updated": 1793839894965,
+     "created": 1793839795824,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839795.852
     }
    ]
   },
@@ -2774,7 +3040,28 @@
       "86bcw87en",
       "86bcw88kv",
       "86bcw88m6",
-      "86bcw88zq"
+      "86bcw88zq",
+      "86bcynmx8",
+      "86bcynmxq",
+      "86bcynmxv",
+      "86bcynmya",
+      "86bcynmyb",
+      "86bcynmyx",
+      "86bcynn0c",
+      "86bcynn0q",
+      "86bcynn1d",
+      "86bcynn1z",
+      "86bcynn2a",
+      "86bcynn2h",
+      "86bcynn37",
+      "86bcynn3m",
+      "86bcynn3z",
+      "86bcynn5f",
+      "86bcynn5p",
+      "86bcynn6q",
+      "86bcynn74",
+      "86bcynn7g",
+      "86bcynn87"
      ],
      "url": "https://app.clickup.com/t/86bcw88t9",
      "updated": 1793802289986,
@@ -3174,7 +3461,28 @@
       "86bcw88tv",
       "86bcw88z2",
       "86bcw8902",
-      "86bcwayg7"
+      "86bcwayg7",
+      "86bcynmx8",
+      "86bcynmxq",
+      "86bcynmxv",
+      "86bcynmya",
+      "86bcynmyb",
+      "86bcynmyx",
+      "86bcynn0c",
+      "86bcynn0q",
+      "86bcynn1d",
+      "86bcynn1z",
+      "86bcynn2a",
+      "86bcynn2h",
+      "86bcynn37",
+      "86bcynn3m",
+      "86bcynn3z",
+      "86bcynn5f",
+      "86bcynn5p",
+      "86bcynn6q",
+      "86bcynn74",
+      "86bcynn7g",
+      "86bcynn87"
      ],
      "url": "https://app.clickup.com/t/86bcw88tw",
      "updated": 1793687064565,
@@ -3350,7 +3658,53 @@
      ],
      "links": [
       "86bcyar70",
-      "86bcyarae"
+      "86bcyarae",
+      "86bcynmx7",
+      "86bcynmx9",
+      "86bcynmxb",
+      "86bcynmxg",
+      "86bcynmxj",
+      "86bcynmxw",
+      "86bcynmxy",
+      "86bcynmy1",
+      "86bcynmy2",
+      "86bcynmy3",
+      "86bcynmyc",
+      "86bcynmye",
+      "86bcynmz5",
+      "86bcynmzb",
+      "86bcynn0f",
+      "86bcynn0h",
+      "86bcynn0r",
+      "86bcynn0w",
+      "86bcynn1g",
+      "86bcynn1k",
+      "86bcynn21",
+      "86bcynn23",
+      "86bcynn2c",
+      "86bcynn2e",
+      "86bcynn2k",
+      "86bcynn2y",
+      "86bcynn39",
+      "86bcynn3d",
+      "86bcynn3r",
+      "86bcynn3t",
+      "86bcynn44",
+      "86bcynn4c",
+      "86bcynn50",
+      "86bcynn52",
+      "86bcynn53",
+      "86bcynn60",
+      "86bcynn68",
+      "86bcynn6t",
+      "86bcynn6v",
+      "86bcynn76",
+      "86bcynn77",
+      "86bcynn7h",
+      "86bcynn7j",
+      "86bcynn7u",
+      "86bcynn7w",
+      "86bcynn7y"
      ],
      "url": "https://app.clickup.com/t/86bcw87a4",
      "updated": 1793802315308,
@@ -4397,7 +4751,11 @@
       "86bcw888f",
       "86bcw88bf",
       "86bcw88zj",
-      "86bcyar9w"
+      "86bcyar9w",
+      "86bcynmxn",
+      "86bcynmy8",
+      "86bcynn57",
+      "86bcynn82"
      ],
      "url": "https://app.clickup.com/t/86bcwayg0",
      "updated": 1793802326707,
@@ -5027,13 +5385,27 @@
      "parent": null,
      "estimate_hours": 16.0,
      "waits_on": [
-      "86bcw878w"
+      "86bcw878w",
+      "86bcynn50",
+      "86bcynn52",
+      "86bcynn53",
+      "86bcynn55",
+      "86bcynn57",
+      "86bcynn5f"
      ],
      "links": [
       "86bcw885b",
       "86bcw885d",
       "86bcw888f",
-      "86bcwaygh"
+      "86bcwaygh",
+      "86bcynn36",
+      "86bcynn3j",
+      "86bcynn3x",
+      "86bcynn4y",
+      "86bcynn6n",
+      "86bcynn6y",
+      "86bcynn7e",
+      "86bcynn7n"
      ],
      "url": "https://app.clickup.com/t/86bcw888g",
      "updated": 1793687062473,
@@ -5055,7 +5427,12 @@
      "parent": null,
      "estimate_hours": 60.0,
      "waits_on": [
-      "86bcw87aj"
+      "86bcw87aj",
+      "86bcynn37",
+      "86bcynn39",
+      "86bcynn3d",
+      "86bcynn3g",
+      "86bcynn3j"
      ],
      "links": [
       "86bcw88ke"
@@ -5080,7 +5457,12 @@
      "parent": null,
      "estimate_hours": 60.0,
      "waits_on": [
-      "86bcw87aj"
+      "86bcw87aj",
+      "86bcynn3m",
+      "86bcynn3r",
+      "86bcynn3t",
+      "86bcynn3w",
+      "86bcynn3x"
      ],
      "links": [
       "86bcw88ke"
@@ -5105,7 +5487,12 @@
      "parent": null,
      "estimate_hours": 60.0,
      "waits_on": [
-      "86bcw87aj"
+      "86bcw87aj",
+      "86bcynn6q",
+      "86bcynn6t",
+      "86bcynn6v",
+      "86bcynn6w",
+      "86bcynn6y"
      ],
      "links": [
       "86bcw88ke"
@@ -5130,7 +5517,12 @@
      "parent": null,
      "estimate_hours": 60.0,
      "waits_on": [
-      "86bcw87aj"
+      "86bcw87aj",
+      "86bcynn74",
+      "86bcynn76",
+      "86bcynn77",
+      "86bcynn7a",
+      "86bcynn7e"
      ],
      "links": [
       "86bcw88ke"
@@ -5155,7 +5547,12 @@
      "parent": null,
      "estimate_hours": 60.0,
      "waits_on": [
-      "86bcw87aj"
+      "86bcw87aj",
+      "86bcynn7g",
+      "86bcynn7h",
+      "86bcynn7j",
+      "86bcynn7m",
+      "86bcynn7n"
      ],
      "links": [
       "86bcw88ey",
@@ -5181,7 +5578,12 @@
      "parent": null,
      "estimate_hours": 60.0,
      "waits_on": [
-      "86bcw87aj"
+      "86bcw87aj",
+      "86bcynn3z",
+      "86bcynn44",
+      "86bcynn4c",
+      "86bcynn4p",
+      "86bcynn4y"
      ],
      "links": [
       "86bcw88ke"
@@ -5206,7 +5608,12 @@
      "parent": null,
      "estimate_hours": 60.0,
      "waits_on": [
-      "86bcw87aj"
+      "86bcw87aj",
+      "86bcynn5p",
+      "86bcynn60",
+      "86bcynn68",
+      "86bcynn6g",
+      "86bcynn6n"
      ],
      "links": [
       "86bcw88ke"
@@ -5231,7 +5638,12 @@
      "parent": null,
      "estimate_hours": 60.0,
      "waits_on": [
-      "86bcw87aj"
+      "86bcw87aj",
+      "86bcynn2h",
+      "86bcynn2k",
+      "86bcynn2y",
+      "86bcynn2z",
+      "86bcynn36"
      ],
      "links": [
       "86bcw888y",
@@ -5260,7 +5672,8 @@
      "links": [
       "86bcw888x",
       "86bcw88m6",
-      "86bcw88tx"
+      "86bcw88tx",
+      "86bcynn2k"
      ],
      "url": "https://app.clickup.com/t/86bcw888y",
      "updated": 1793687065912,
@@ -5270,6 +5683,1056 @@
      "assigned": false,
      "closed": null,
      "order": 10001793562499.648
+    },
+    {
+     "id": "86bcynn2h",
+     "tracker_id": null,
+     "name": "Azathoth: drop rates",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [
+      "86bcw88t9",
+      "86bcw88tw"
+     ],
+     "url": "https://app.clickup.com/t/86bcynn2h",
+     "updated": 1793840044648,
+     "created": 1793839826844,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839826.951
+    },
+    {
+     "id": "86bcynn2k",
+     "tracker_id": null,
+     "name": "Azathoth: dungeon and arena",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 2.0,
+     "waits_on": [],
+     "links": [
+      "86bcw87a4",
+      "86bcw888y"
+     ],
+     "url": "https://app.clickup.com/t/86bcynn2k",
+     "updated": 1793840047108,
+     "created": 1793839827611,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839827.633
+    },
+    {
+     "id": "86bcynn2y",
+     "tracker_id": null,
+     "name": "Azathoth: injectable compatibility",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [
+      "86bcw87a4"
+     ],
+     "url": "https://app.clickup.com/t/86bcynn2y",
+     "updated": 1793840049174,
+     "created": 1793839828925,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839828.951
+    },
+    {
+     "id": "86bcynn2z",
+     "tracker_id": null,
+     "name": "Azathoth: mobs and adds",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [],
+     "url": "https://app.clickup.com/t/86bcynn2z",
+     "updated": 1793840050933,
+     "created": 1793839829480,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839829.506
+    },
+    {
+     "id": "86bcynn36",
+     "tracker_id": null,
+     "name": "Azathoth: quest",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [
+      "86bcw888g"
+     ],
+     "url": "https://app.clickup.com/t/86bcynn36",
+     "updated": 1793840053205,
+     "created": 1793839830186,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839830.22
+    },
+    {
+     "id": "86bcynn37",
+     "tracker_id": null,
+     "name": "Cthulhu: drop rates",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [
+      "86bcw88t9",
+      "86bcw88tw"
+     ],
+     "url": "https://app.clickup.com/t/86bcynn37",
+     "updated": 1793840055800,
+     "created": 1793839830677,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839830.697
+    },
+    {
+     "id": "86bcynn39",
+     "tracker_id": null,
+     "name": "Cthulhu: dungeon and arena",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 2.0,
+     "waits_on": [],
+     "links": [
+      "86bcw87a4"
+     ],
+     "url": "https://app.clickup.com/t/86bcynn39",
+     "updated": 1793840058029,
+     "created": 1793839831290,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839831.328
+    },
+    {
+     "id": "86bcynn3d",
+     "tracker_id": null,
+     "name": "Cthulhu: injectable compatibility",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [
+      "86bcw87a4"
+     ],
+     "url": "https://app.clickup.com/t/86bcynn3d",
+     "updated": 1793840060218,
+     "created": 1793839832091,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839832.111
+    },
+    {
+     "id": "86bcynn3g",
+     "tracker_id": null,
+     "name": "Cthulhu: mobs and adds",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [],
+     "url": "https://app.clickup.com/t/86bcynn3g",
+     "updated": 1793840062737,
+     "created": 1793839832959,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839833.117
+    },
+    {
+     "id": "86bcynn3j",
+     "tracker_id": null,
+     "name": "Cthulhu: quest",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [
+      "86bcw888g"
+     ],
+     "url": "https://app.clickup.com/t/86bcynn3j",
+     "updated": 1793840065378,
+     "created": 1793839833848,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839833.865
+    },
+    {
+     "id": "86bcynn3m",
+     "tracker_id": null,
+     "name": "Dagon: drop rates",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [
+      "86bcw88t9",
+      "86bcw88tw"
+     ],
+     "url": "https://app.clickup.com/t/86bcynn3m",
+     "updated": 1793840068798,
+     "created": 1793839834341,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839834.375
+    },
+    {
+     "id": "86bcynn3r",
+     "tracker_id": null,
+     "name": "Dagon: dungeon and arena",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 2.0,
+     "waits_on": [],
+     "links": [
+      "86bcw87a4"
+     ],
+     "url": "https://app.clickup.com/t/86bcynn3r",
+     "updated": 1793840072057,
+     "created": 1793839834982,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839835.004
+    },
+    {
+     "id": "86bcynn3t",
+     "tracker_id": null,
+     "name": "Dagon: injectable compatibility",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [
+      "86bcw87a4"
+     ],
+     "url": "https://app.clickup.com/t/86bcynn3t",
+     "updated": 1793840075502,
+     "created": 1793839835477,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839835.494
+    },
+    {
+     "id": "86bcynn3w",
+     "tracker_id": null,
+     "name": "Dagon: mobs and adds",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [],
+     "url": "https://app.clickup.com/t/86bcynn3w",
+     "updated": 1793840078415,
+     "created": 1793839836253,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839836.293
+    },
+    {
+     "id": "86bcynn3x",
+     "tracker_id": null,
+     "name": "Dagon: quest",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [
+      "86bcw888g"
+     ],
+     "url": "https://app.clickup.com/t/86bcynn3x",
+     "updated": 1793840083537,
+     "created": 1793839836808,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839836.852
+    },
+    {
+     "id": "86bcynn3z",
+     "tracker_id": null,
+     "name": "Hastur, the King in Yellow: drop rates",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [
+      "86bcw88t9",
+      "86bcw88tw"
+     ],
+     "url": "https://app.clickup.com/t/86bcynn3z",
+     "updated": 1793840087631,
+     "created": 1793839837692,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839837.758
+    },
+    {
+     "id": "86bcynn44",
+     "tracker_id": null,
+     "name": "Hastur, the King in Yellow: dungeon and arena",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 2.0,
+     "waits_on": [],
+     "links": [
+      "86bcw87a4"
+     ],
+     "url": "https://app.clickup.com/t/86bcynn44",
+     "updated": 1793840097779,
+     "created": 1793839838614,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839838.814
+    },
+    {
+     "id": "86bcynn4c",
+     "tracker_id": null,
+     "name": "Hastur, the King in Yellow: injectable compatibility",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [
+      "86bcw87a4"
+     ],
+     "url": "https://app.clickup.com/t/86bcynn4c",
+     "updated": 1793840099707,
+     "created": 1793839840339,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839840.465
+    },
+    {
+     "id": "86bcynn4p",
+     "tracker_id": null,
+     "name": "Hastur, the King in Yellow: mobs and adds",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [],
+     "url": "https://app.clickup.com/t/86bcynn4p",
+     "updated": 1793840101235,
+     "created": 1793839841112,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839841.14
+    },
+    {
+     "id": "86bcynn4y",
+     "tracker_id": null,
+     "name": "Hastur, the King in Yellow: quest",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [
+      "86bcw888g"
+     ],
+     "url": "https://app.clickup.com/t/86bcynn4y",
+     "updated": 1793840103754,
+     "created": 1793839842038,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839842.084
+    },
+    {
+     "id": "86bcynn50",
+     "tracker_id": null,
+     "name": "Lovecraft: dungeon pool and roll rules",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 2.0,
+     "waits_on": [],
+     "links": [
+      "86bcw87a4"
+     ],
+     "url": "https://app.clickup.com/t/86bcynn50",
+     "updated": 1793840106010,
+     "created": 1793839842916,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839842.936
+    },
+    {
+     "id": "86bcynn52",
+     "tracker_id": null,
+     "name": "Lovecraft: injectable reusability matrix (dungeon x injectable)",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 2.0,
+     "waits_on": [],
+     "links": [
+      "86bcw87a4"
+     ],
+     "url": "https://app.clickup.com/t/86bcynn52",
+     "updated": 1793840108089,
+     "created": 1793839843576,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839843.617
+    },
+    {
+     "id": "86bcynn53",
+     "tracker_id": null,
+     "name": "Lovecraft: mob roster",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 2.0,
+     "waits_on": [],
+     "links": [
+      "86bcw87a4"
+     ],
+     "url": "https://app.clickup.com/t/86bcynn53",
+     "updated": 1793840110438,
+     "created": 1793839844135,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839844.201
+    },
+    {
+     "id": "86bcynn55",
+     "tracker_id": null,
+     "name": "Lovecraft: NPCs",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [],
+     "url": "https://app.clickup.com/t/86bcynn55",
+     "updated": 1793840111816,
+     "created": 1793839844760,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839844.79
+    },
+    {
+     "id": "86bcynn57",
+     "tracker_id": null,
+     "name": "Lovecraft: quest list",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [
+      "86bcwayg0"
+     ],
+     "url": "https://app.clickup.com/t/86bcynn57",
+     "updated": 1793840114077,
+     "created": 1793839845441,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839845.482
+    },
+    {
+     "id": "86bcynn5f",
+     "tracker_id": null,
+     "name": "Lovecraft: world drop rates",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 2.0,
+     "waits_on": [],
+     "links": [
+      "86bcw88t9",
+      "86bcw88tw"
+     ],
+     "url": "https://app.clickup.com/t/86bcynn5f",
+     "updated": 1793840117398,
+     "created": 1793839846079,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839846.105
+    },
+    {
+     "id": "86bcynn5p",
+     "tracker_id": null,
+     "name": "Nyarlathotep: drop rates",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [
+      "86bcw88t9",
+      "86bcw88tw"
+     ],
+     "url": "https://app.clickup.com/t/86bcynn5p",
+     "updated": 1793840120464,
+     "created": 1793839846582,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839846.605
+    },
+    {
+     "id": "86bcynn60",
+     "tracker_id": null,
+     "name": "Nyarlathotep: dungeon and arena",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 2.0,
+     "waits_on": [],
+     "links": [
+      "86bcw87a4"
+     ],
+     "url": "https://app.clickup.com/t/86bcynn60",
+     "updated": 1793840122710,
+     "created": 1793839847190,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839847.23
+    },
+    {
+     "id": "86bcynn68",
+     "tracker_id": null,
+     "name": "Nyarlathotep: injectable compatibility",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [
+      "86bcw87a4"
+     ],
+     "url": "https://app.clickup.com/t/86bcynn68",
+     "updated": 1793840125164,
+     "created": 1793839848209,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839848.246
+    },
+    {
+     "id": "86bcynn6g",
+     "tracker_id": null,
+     "name": "Nyarlathotep: mobs and adds",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [],
+     "url": "https://app.clickup.com/t/86bcynn6g",
+     "updated": 1793840126716,
+     "created": 1793839849039,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839849.072
+    },
+    {
+     "id": "86bcynn6n",
+     "tracker_id": null,
+     "name": "Nyarlathotep: quest",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [
+      "86bcw888g"
+     ],
+     "url": "https://app.clickup.com/t/86bcynn6n",
+     "updated": 1793840128638,
+     "created": 1793839849520,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839849.54
+    },
+    {
+     "id": "86bcynn6q",
+     "tracker_id": null,
+     "name": "Shoggoth: drop rates",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [
+      "86bcw88t9",
+      "86bcw88tw"
+     ],
+     "url": "https://app.clickup.com/t/86bcynn6q",
+     "updated": 1793840132158,
+     "created": 1793839850009,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839850.035
+    },
+    {
+     "id": "86bcynn6t",
+     "tracker_id": null,
+     "name": "Shoggoth: dungeon and arena",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 2.0,
+     "waits_on": [],
+     "links": [
+      "86bcw87a4"
+     ],
+     "url": "https://app.clickup.com/t/86bcynn6t",
+     "updated": 1793840135591,
+     "created": 1793839850584,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839850.615
+    },
+    {
+     "id": "86bcynn6v",
+     "tracker_id": null,
+     "name": "Shoggoth: injectable compatibility",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [
+      "86bcw87a4"
+     ],
+     "url": "https://app.clickup.com/t/86bcynn6v",
+     "updated": 1793840139729,
+     "created": 1793839851174,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839851.201
+    },
+    {
+     "id": "86bcynn6w",
+     "tracker_id": null,
+     "name": "Shoggoth: mobs and adds",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [],
+     "url": "https://app.clickup.com/t/86bcynn6w",
+     "updated": 1793840143603,
+     "created": 1793839851676,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839851.717
+    },
+    {
+     "id": "86bcynn6y",
+     "tracker_id": null,
+     "name": "Shoggoth: quest",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [
+      "86bcw888g"
+     ],
+     "url": "https://app.clickup.com/t/86bcynn6y",
+     "updated": 1793840147175,
+     "created": 1793839852200,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839852.223
+    },
+    {
+     "id": "86bcynn74",
+     "tracker_id": null,
+     "name": "Shub-Niggurath: drop rates",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [
+      "86bcw88t9",
+      "86bcw88tw"
+     ],
+     "url": "https://app.clickup.com/t/86bcynn74",
+     "updated": 1793840159782,
+     "created": 1793839852871,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839852.898
+    },
+    {
+     "id": "86bcynn76",
+     "tracker_id": null,
+     "name": "Shub-Niggurath: dungeon and arena",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 2.0,
+     "waits_on": [],
+     "links": [
+      "86bcw87a4"
+     ],
+     "url": "https://app.clickup.com/t/86bcynn76",
+     "updated": 1793840162445,
+     "created": 1793839853439,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839853.469
+    },
+    {
+     "id": "86bcynn77",
+     "tracker_id": null,
+     "name": "Shub-Niggurath: injectable compatibility",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [
+      "86bcw87a4"
+     ],
+     "url": "https://app.clickup.com/t/86bcynn77",
+     "updated": 1793840165431,
+     "created": 1793839854298,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839854.33
+    },
+    {
+     "id": "86bcynn7a",
+     "tracker_id": null,
+     "name": "Shub-Niggurath: mobs and adds",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [],
+     "url": "https://app.clickup.com/t/86bcynn7a",
+     "updated": 1793840167067,
+     "created": 1793839855094,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839855.295
+    },
+    {
+     "id": "86bcynn7e",
+     "tracker_id": null,
+     "name": "Shub-Niggurath: quest",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [
+      "86bcw888g"
+     ],
+     "url": "https://app.clickup.com/t/86bcynn7e",
+     "updated": 1793840169142,
+     "created": 1793839855984,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839856.045
+    },
+    {
+     "id": "86bcynn7g",
+     "tracker_id": null,
+     "name": "The Hounds of Tindalos: drop rates",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [
+      "86bcw88t9",
+      "86bcw88tw"
+     ],
+     "url": "https://app.clickup.com/t/86bcynn7g",
+     "updated": 1793840171906,
+     "created": 1793839856642,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839856.668
+    },
+    {
+     "id": "86bcynn7h",
+     "tracker_id": null,
+     "name": "The Hounds of Tindalos: dungeon and arena",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 2.0,
+     "waits_on": [],
+     "links": [
+      "86bcw87a4"
+     ],
+     "url": "https://app.clickup.com/t/86bcynn7h",
+     "updated": 1793840173876,
+     "created": 1793839857411,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839857.508
+    },
+    {
+     "id": "86bcynn7j",
+     "tracker_id": null,
+     "name": "The Hounds of Tindalos: injectable compatibility",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [
+      "86bcw87a4"
+     ],
+     "url": "https://app.clickup.com/t/86bcynn7j",
+     "updated": 1793840176919,
+     "created": 1793839858210,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839858.23
+    },
+    {
+     "id": "86bcynn7m",
+     "tracker_id": null,
+     "name": "The Hounds of Tindalos: mobs and adds",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [],
+     "url": "https://app.clickup.com/t/86bcynn7m",
+     "updated": 1793840178642,
+     "created": 1793839858849,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839858.877
+    },
+    {
+     "id": "86bcynn7n",
+     "tracker_id": null,
+     "name": "The Hounds of Tindalos: quest",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [
+      "86bcw888g"
+     ],
+     "url": "https://app.clickup.com/t/86bcynn7n",
+     "updated": 1793840180746,
+     "created": 1793839859438,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839859.62
     }
    ]
   },
@@ -5288,12 +6751,26 @@
      "parent": null,
      "estimate_hours": 12.0,
      "waits_on": [
-      "86bcw87an"
+      "86bcw87an",
+      "86bcynmy1",
+      "86bcynmy2",
+      "86bcynmy3",
+      "86bcynmy5",
+      "86bcynmy8",
+      "86bcynmya"
      ],
      "links": [
       "86bcw88bf",
       "86bcw88zc",
-      "86bcyar9w"
+      "86bcyar9w",
+      "86bcynmy0",
+      "86bcynmyj",
+      "86bcynn03",
+      "86bcynn0m",
+      "86bcynn19",
+      "86bcynn1v",
+      "86bcynn28",
+      "86bcynn2g"
      ],
      "url": "https://app.clickup.com/t/86bcw88ex",
      "updated": 1793802298646,
@@ -5315,7 +6792,12 @@
      "parent": null,
      "estimate_hours": 60.0,
      "waits_on": [
-      "86bcw87aj"
+      "86bcw87aj",
+      "86bcynmyx",
+      "86bcynmz5",
+      "86bcynmzb",
+      "86bcynmzh",
+      "86bcynn03"
      ],
      "links": [
       "86bcw888r",
@@ -5341,7 +6823,12 @@
      "parent": null,
      "estimate_hours": 60.0,
      "waits_on": [
-      "86bcw87aj"
+      "86bcw87aj",
+      "86bcynn0q",
+      "86bcynn0r",
+      "86bcynn0w",
+      "86bcynn11",
+      "86bcynn19"
      ],
      "links": [
       "86bcw88kj"
@@ -5366,7 +6853,12 @@
      "parent": null,
      "estimate_hours": 60.0,
      "waits_on": [
-      "86bcw87aj"
+      "86bcw87aj",
+      "86bcynn1z",
+      "86bcynn21",
+      "86bcynn23",
+      "86bcynn26",
+      "86bcynn28"
      ],
      "links": [],
      "url": "https://app.clickup.com/t/86bcw88f2",
@@ -5389,7 +6881,12 @@
      "parent": null,
      "estimate_hours": 60.0,
      "waits_on": [
-      "86bcw87aj"
+      "86bcw87aj",
+      "86bcynn1d",
+      "86bcynn1g",
+      "86bcynn1k",
+      "86bcynn1r",
+      "86bcynn1v"
      ],
      "links": [],
      "url": "https://app.clickup.com/t/86bcw88f3",
@@ -5412,7 +6909,12 @@
      "parent": null,
      "estimate_hours": 60.0,
      "waits_on": [
-      "86bcw87aj"
+      "86bcw87aj",
+      "86bcynn0c",
+      "86bcynn0f",
+      "86bcynn0h",
+      "86bcynn0j",
+      "86bcynn0m"
      ],
      "links": [],
      "url": "https://app.clickup.com/t/86bcw88f4",
@@ -5435,7 +6937,12 @@
      "parent": null,
      "estimate_hours": 60.0,
      "waits_on": [
-      "86bcw87aj"
+      "86bcw87aj",
+      "86bcynmyb",
+      "86bcynmyc",
+      "86bcynmye",
+      "86bcynmyg",
+      "86bcynmyj"
      ],
      "links": [],
      "url": "https://app.clickup.com/t/86bcw88f8",
@@ -5458,7 +6965,12 @@
      "parent": null,
      "estimate_hours": 60.0,
      "waits_on": [
-      "86bcw87aj"
+      "86bcw87aj",
+      "86bcynn2a",
+      "86bcynn2c",
+      "86bcynn2e",
+      "86bcynn2f",
+      "86bcynn2g"
      ],
      "links": [
       "86bcwaygn"
@@ -5482,7 +6994,13 @@
      "open": true,
      "parent": null,
      "estimate_hours": 80.0,
-     "waits_on": [],
+     "waits_on": [
+      "86bcynmxv",
+      "86bcynmxw",
+      "86bcynmxy",
+      "86bcynmxz",
+      "86bcynmy0"
+     ],
      "links": [
       "86bcw88fc",
       "86bcw88fj",
@@ -5539,7 +7057,8 @@
      "waits_on": [],
      "links": [
       "86bcw88fc",
-      "86bcw88fq"
+      "86bcw88fq",
+      "86bcynmxw"
      ],
      "url": "https://app.clickup.com/t/86bcw88fe",
      "updated": 1793687151752,
@@ -5562,7 +7081,8 @@
      "estimate_hours": 40.0,
      "waits_on": [],
      "links": [
-      "86bcw88fc"
+      "86bcw88fc",
+      "86bcynmxw"
      ],
      "url": "https://app.clickup.com/t/86bcw88fg",
      "updated": 1793687151774,
@@ -5586,7 +7106,8 @@
      "waits_on": [],
      "links": [
       "86bcw88fc",
-      "86bcw88fr"
+      "86bcw88fr",
+      "86bcynmxw"
      ],
      "url": "https://app.clickup.com/t/86bcw88fh",
      "updated": 1793687151755,
@@ -5705,7 +7226,8 @@
      "links": [
       "86bcw88fb",
       "86bcw88fc",
-      "86bcw88fq"
+      "86bcw88fq",
+      "86bcynmxw"
      ],
      "url": "https://app.clickup.com/t/86bcw88fu",
      "updated": 1793687151762,
@@ -5715,6 +7237,1059 @@
      "assigned": false,
      "closed": null,
      "order": 10001793562556.107
+    },
+    {
+     "id": "86bcynmxv",
+     "tracker_id": null,
+     "name": "Demon (Hell final boss): drop rates",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [
+      "86bcw88t9",
+      "86bcw88tw"
+     ],
+     "url": "https://app.clickup.com/t/86bcynmxv",
+     "updated": 1793839899608,
+     "created": 1793839796400,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839796.432
+    },
+    {
+     "id": "86bcynmxw",
+     "tracker_id": null,
+     "name": "Demon (Hell final boss): dungeon and arena",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 2.0,
+     "waits_on": [],
+     "links": [
+      "86bcw87a4",
+      "86bcw88fe",
+      "86bcw88fg",
+      "86bcw88fh",
+      "86bcw88fu"
+     ],
+     "url": "https://app.clickup.com/t/86bcynmxw",
+     "updated": 1793839906975,
+     "created": 1793839796962,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839796.988
+    },
+    {
+     "id": "86bcynmxy",
+     "tracker_id": null,
+     "name": "Demon (Hell final boss): injectable compatibility",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [
+      "86bcw87a4"
+     ],
+     "url": "https://app.clickup.com/t/86bcynmxy",
+     "updated": 1793839911354,
+     "created": 1793839797784,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839797.84
+    },
+    {
+     "id": "86bcynmxz",
+     "tracker_id": null,
+     "name": "Demon (Hell final boss): mobs and adds",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [],
+     "url": "https://app.clickup.com/t/86bcynmxz",
+     "updated": 1793839913013,
+     "created": 1793839798363,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839798.383
+    },
+    {
+     "id": "86bcynmy0",
+     "tracker_id": null,
+     "name": "Demon (Hell final boss): quest",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [
+      "86bcw88ex"
+     ],
+     "url": "https://app.clickup.com/t/86bcynmy0",
+     "updated": 1793839916554,
+     "created": 1793839798890,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839798.908
+    },
+    {
+     "id": "86bcynmy1",
+     "tracker_id": null,
+     "name": "Hell: dungeon pool and roll rules",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 2.0,
+     "waits_on": [],
+     "links": [
+      "86bcw87a4"
+     ],
+     "url": "https://app.clickup.com/t/86bcynmy1",
+     "updated": 1793839919344,
+     "created": 1793839799380,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839799.402
+    },
+    {
+     "id": "86bcynmy2",
+     "tracker_id": null,
+     "name": "Hell: injectable reusability matrix (dungeon x injectable)",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 2.0,
+     "waits_on": [],
+     "links": [
+      "86bcw87a4"
+     ],
+     "url": "https://app.clickup.com/t/86bcynmy2",
+     "updated": 1793839921920,
+     "created": 1793839799905,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839799.928
+    },
+    {
+     "id": "86bcynmy3",
+     "tracker_id": null,
+     "name": "Hell: mob roster",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 2.0,
+     "waits_on": [],
+     "links": [
+      "86bcw87a4"
+     ],
+     "url": "https://app.clickup.com/t/86bcynmy3",
+     "updated": 1793839924367,
+     "created": 1793839800427,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839800.443
+    },
+    {
+     "id": "86bcynmy5",
+     "tracker_id": null,
+     "name": "Hell: NPCs",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [],
+     "url": "https://app.clickup.com/t/86bcynmy5",
+     "updated": 1793839926527,
+     "created": 1793839800899,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839800.938
+    },
+    {
+     "id": "86bcynmy8",
+     "tracker_id": null,
+     "name": "Hell: quest list",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [
+      "86bcwayg0"
+     ],
+     "url": "https://app.clickup.com/t/86bcynmy8",
+     "updated": 1793839928963,
+     "created": 1793839801422,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839801.53
+    },
+    {
+     "id": "86bcynmya",
+     "tracker_id": null,
+     "name": "Hell: world drop rates",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 2.0,
+     "waits_on": [],
+     "links": [
+      "86bcw88t9",
+      "86bcw88tw"
+     ],
+     "url": "https://app.clickup.com/t/86bcynmya",
+     "updated": 1793839931912,
+     "created": 1793839802114,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839802.133
+    },
+    {
+     "id": "86bcynmyb",
+     "tracker_id": null,
+     "name": "Sin: Envy: drop rates",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [
+      "86bcw88t9",
+      "86bcw88tw"
+     ],
+     "url": "https://app.clickup.com/t/86bcynmyb",
+     "updated": 1793839935275,
+     "created": 1793839802668,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839802.691
+    },
+    {
+     "id": "86bcynmyc",
+     "tracker_id": null,
+     "name": "Sin: Envy: dungeon and arena",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 2.0,
+     "waits_on": [],
+     "links": [
+      "86bcw87a4"
+     ],
+     "url": "https://app.clickup.com/t/86bcynmyc",
+     "updated": 1793839937277,
+     "created": 1793839803223,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839803.252
+    },
+    {
+     "id": "86bcynmye",
+     "tracker_id": null,
+     "name": "Sin: Envy: injectable compatibility",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [
+      "86bcw87a4"
+     ],
+     "url": "https://app.clickup.com/t/86bcynmye",
+     "updated": 1793839939399,
+     "created": 1793839803762,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839803.781
+    },
+    {
+     "id": "86bcynmyg",
+     "tracker_id": null,
+     "name": "Sin: Envy: mobs and adds",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [],
+     "url": "https://app.clickup.com/t/86bcynmyg",
+     "updated": 1793839942060,
+     "created": 1793839804262,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839804.318
+    },
+    {
+     "id": "86bcynmyj",
+     "tracker_id": null,
+     "name": "Sin: Envy: quest",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [
+      "86bcw88ex"
+     ],
+     "url": "https://app.clickup.com/t/86bcynmyj",
+     "updated": 1793839944794,
+     "created": 1793839805693,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839805.967
+    },
+    {
+     "id": "86bcynmyx",
+     "tracker_id": null,
+     "name": "Sin: Gluttony: drop rates",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [
+      "86bcw88t9",
+      "86bcw88tw"
+     ],
+     "url": "https://app.clickup.com/t/86bcynmyx",
+     "updated": 1793839948098,
+     "created": 1793839807353,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839807.377
+    },
+    {
+     "id": "86bcynmz5",
+     "tracker_id": null,
+     "name": "Sin: Gluttony: dungeon and arena",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 2.0,
+     "waits_on": [],
+     "links": [
+      "86bcw87a4"
+     ],
+     "url": "https://app.clickup.com/t/86bcynmz5",
+     "updated": 1793839951323,
+     "created": 1793839807953,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839807.973
+    },
+    {
+     "id": "86bcynmzb",
+     "tracker_id": null,
+     "name": "Sin: Gluttony: injectable compatibility",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [
+      "86bcw87a4"
+     ],
+     "url": "https://app.clickup.com/t/86bcynmzb",
+     "updated": 1793839955084,
+     "created": 1793839808474,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839808.508
+    },
+    {
+     "id": "86bcynmzh",
+     "tracker_id": null,
+     "name": "Sin: Gluttony: mobs and adds",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [],
+     "url": "https://app.clickup.com/t/86bcynmzh",
+     "updated": 1793839957378,
+     "created": 1793839809202,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839809.273
+    },
+    {
+     "id": "86bcynn03",
+     "tracker_id": null,
+     "name": "Sin: Gluttony: quest",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [
+      "86bcw88ex"
+     ],
+     "url": "https://app.clickup.com/t/86bcynn03",
+     "updated": 1793839962896,
+     "created": 1793839810292,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839810.32
+    },
+    {
+     "id": "86bcynn0c",
+     "tracker_id": null,
+     "name": "Sin: Greed: drop rates",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [
+      "86bcw88t9",
+      "86bcw88tw"
+     ],
+     "url": "https://app.clickup.com/t/86bcynn0c",
+     "updated": 1793839967071,
+     "created": 1793839810938,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839810.967
+    },
+    {
+     "id": "86bcynn0f",
+     "tracker_id": null,
+     "name": "Sin: Greed: dungeon and arena",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 2.0,
+     "waits_on": [],
+     "links": [
+      "86bcw87a4"
+     ],
+     "url": "https://app.clickup.com/t/86bcynn0f",
+     "updated": 1793839973075,
+     "created": 1793839811534,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839811.564
+    },
+    {
+     "id": "86bcynn0h",
+     "tracker_id": null,
+     "name": "Sin: Greed: injectable compatibility",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [
+      "86bcw87a4"
+     ],
+     "url": "https://app.clickup.com/t/86bcynn0h",
+     "updated": 1793839975218,
+     "created": 1793839812193,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839812.254
+    },
+    {
+     "id": "86bcynn0j",
+     "tracker_id": null,
+     "name": "Sin: Greed: mobs and adds",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [],
+     "url": "https://app.clickup.com/t/86bcynn0j",
+     "updated": 1793839977273,
+     "created": 1793839812814,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839812.848
+    },
+    {
+     "id": "86bcynn0m",
+     "tracker_id": null,
+     "name": "Sin: Greed: quest",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [
+      "86bcw88ex"
+     ],
+     "url": "https://app.clickup.com/t/86bcynn0m",
+     "updated": 1793839979444,
+     "created": 1793839813356,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839813.385
+    },
+    {
+     "id": "86bcynn0q",
+     "tracker_id": null,
+     "name": "Sin: Lust: drop rates",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [
+      "86bcw88t9",
+      "86bcw88tw"
+     ],
+     "url": "https://app.clickup.com/t/86bcynn0q",
+     "updated": 1793839983057,
+     "created": 1793839814054,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839814.082
+    },
+    {
+     "id": "86bcynn0r",
+     "tracker_id": null,
+     "name": "Sin: Lust: dungeon and arena",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 2.0,
+     "waits_on": [],
+     "links": [
+      "86bcw87a4"
+     ],
+     "url": "https://app.clickup.com/t/86bcynn0r",
+     "updated": 1793839985254,
+     "created": 1793839814659,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839814.715
+    },
+    {
+     "id": "86bcynn0w",
+     "tracker_id": null,
+     "name": "Sin: Lust: injectable compatibility",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [
+      "86bcw87a4"
+     ],
+     "url": "https://app.clickup.com/t/86bcynn0w",
+     "updated": 1793839987578,
+     "created": 1793839815557,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839815.664
+    },
+    {
+     "id": "86bcynn11",
+     "tracker_id": null,
+     "name": "Sin: Lust: mobs and adds",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [],
+     "url": "https://app.clickup.com/t/86bcynn11",
+     "updated": 1793839989497,
+     "created": 1793839816372,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839816.402
+    },
+    {
+     "id": "86bcynn19",
+     "tracker_id": null,
+     "name": "Sin: Lust: quest",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [
+      "86bcw88ex"
+     ],
+     "url": "https://app.clickup.com/t/86bcynn19",
+     "updated": 1793839991948,
+     "created": 1793839816858,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839816.89
+    },
+    {
+     "id": "86bcynn1d",
+     "tracker_id": null,
+     "name": "Sin: Pride: drop rates",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [
+      "86bcw88t9",
+      "86bcw88tw"
+     ],
+     "url": "https://app.clickup.com/t/86bcynn1d",
+     "updated": 1793839995279,
+     "created": 1793839817489,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839817.525
+    },
+    {
+     "id": "86bcynn1g",
+     "tracker_id": null,
+     "name": "Sin: Pride: dungeon and arena",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 2.0,
+     "waits_on": [],
+     "links": [
+      "86bcw87a4"
+     ],
+     "url": "https://app.clickup.com/t/86bcynn1g",
+     "updated": 1793839997659,
+     "created": 1793839818115,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839818.14
+    },
+    {
+     "id": "86bcynn1k",
+     "tracker_id": null,
+     "name": "Sin: Pride: injectable compatibility",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [
+      "86bcw87a4"
+     ],
+     "url": "https://app.clickup.com/t/86bcynn1k",
+     "updated": 1793839999674,
+     "created": 1793839819085,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839819.207
+    },
+    {
+     "id": "86bcynn1r",
+     "tracker_id": null,
+     "name": "Sin: Pride: mobs and adds",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [],
+     "url": "https://app.clickup.com/t/86bcynn1r",
+     "updated": 1793840002058,
+     "created": 1793839819906,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839819.95
+    },
+    {
+     "id": "86bcynn1v",
+     "tracker_id": null,
+     "name": "Sin: Pride: quest",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [
+      "86bcw88ex"
+     ],
+     "url": "https://app.clickup.com/t/86bcynn1v",
+     "updated": 1793840004848,
+     "created": 1793839820435,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839820.453
+    },
+    {
+     "id": "86bcynn1z",
+     "tracker_id": null,
+     "name": "Sin: Sloth: drop rates",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [
+      "86bcw88t9",
+      "86bcw88tw"
+     ],
+     "url": "https://app.clickup.com/t/86bcynn1z",
+     "updated": 1793840008070,
+     "created": 1793839820942,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839820.973
+    },
+    {
+     "id": "86bcynn21",
+     "tracker_id": null,
+     "name": "Sin: Sloth: dungeon and arena",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 2.0,
+     "waits_on": [],
+     "links": [
+      "86bcw87a4"
+     ],
+     "url": "https://app.clickup.com/t/86bcynn21",
+     "updated": 1793840011188,
+     "created": 1793839821455,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839821.475
+    },
+    {
+     "id": "86bcynn23",
+     "tracker_id": null,
+     "name": "Sin: Sloth: injectable compatibility",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [
+      "86bcw87a4"
+     ],
+     "url": "https://app.clickup.com/t/86bcynn23",
+     "updated": 1793840015112,
+     "created": 1793839821956,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839821.975
+    },
+    {
+     "id": "86bcynn26",
+     "tracker_id": null,
+     "name": "Sin: Sloth: mobs and adds",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [],
+     "url": "https://app.clickup.com/t/86bcynn26",
+     "updated": 1793840017398,
+     "created": 1793839822504,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839822.596
+    },
+    {
+     "id": "86bcynn28",
+     "tracker_id": null,
+     "name": "Sin: Sloth: quest",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [
+      "86bcw88ex"
+     ],
+     "url": "https://app.clickup.com/t/86bcynn28",
+     "updated": 1793840022915,
+     "created": 1793839823111,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839823.129
+    },
+    {
+     "id": "86bcynn2a",
+     "tracker_id": null,
+     "name": "Sin: Wrath: drop rates",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [
+      "86bcw88t9",
+      "86bcw88tw"
+     ],
+     "url": "https://app.clickup.com/t/86bcynn2a",
+     "updated": 1793840026990,
+     "created": 1793839823634,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839823.652
+    },
+    {
+     "id": "86bcynn2c",
+     "tracker_id": null,
+     "name": "Sin: Wrath: dungeon and arena",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 2.0,
+     "waits_on": [],
+     "links": [
+      "86bcw87a4"
+     ],
+     "url": "https://app.clickup.com/t/86bcynn2c",
+     "updated": 1793840034928,
+     "created": 1793839824130,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839824.158
+    },
+    {
+     "id": "86bcynn2e",
+     "tracker_id": null,
+     "name": "Sin: Wrath: injectable compatibility",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [
+      "86bcw87a4"
+     ],
+     "url": "https://app.clickup.com/t/86bcynn2e",
+     "updated": 1793840037357,
+     "created": 1793839824904,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839824.992
+    },
+    {
+     "id": "86bcynn2f",
+     "tracker_id": null,
+     "name": "Sin: Wrath: mobs and adds",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [],
+     "url": "https://app.clickup.com/t/86bcynn2f",
+     "updated": 1793840039003,
+     "created": 1793839825637,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839825.69
+    },
+    {
+     "id": "86bcynn2g",
+     "tracker_id": null,
+     "name": "Sin: Wrath: quest",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [
+      "86bcw88ex"
+     ],
+     "url": "https://app.clickup.com/t/86bcynn2g",
+     "updated": 1793840041678,
+     "created": 1793839826164,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839826.195
     }
    ]
   },
@@ -5764,7 +8339,14 @@
      "parent": null,
      "estimate_hours": 16.0,
      "waits_on": [
-      "86bcw878w"
+      "86bcw878w",
+      "86bcynn7u",
+      "86bcynn7w",
+      "86bcynn7y",
+      "86bcynn80",
+      "86bcynn82",
+      "86bcynn85",
+      "86bcynn87"
      ],
      "links": [
       "86bcw885b",
@@ -5817,7 +8399,8 @@
      "waits_on": [],
      "links": [
       "86bcw885e",
-      "86bcw885h"
+      "86bcw885h",
+      "86bcynn85"
      ],
      "url": "https://app.clickup.com/t/86bcw885g",
      "updated": 1793687065636,
@@ -6402,14 +8985,174 @@
      "assigned": false,
      "closed": null,
      "order": 10001793562712.48
+    },
+    {
+     "id": "86bcynn7u",
+     "tracker_id": null,
+     "name": "Grimm: dungeon pool and roll rules",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 2.0,
+     "waits_on": [],
+     "links": [
+      "86bcw87a4"
+     ],
+     "url": "https://app.clickup.com/t/86bcynn7u",
+     "updated": 1793840182789,
+     "created": 1793839861843,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839861.87
+    },
+    {
+     "id": "86bcynn7w",
+     "tracker_id": null,
+     "name": "Grimm: injectable reusability matrix (dungeon x injectable)",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 2.0,
+     "waits_on": [],
+     "links": [
+      "86bcw87a4"
+     ],
+     "url": "https://app.clickup.com/t/86bcynn7w",
+     "updated": 1793840185091,
+     "created": 1793839862417,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839862.438
+    },
+    {
+     "id": "86bcynn7y",
+     "tracker_id": null,
+     "name": "Grimm: mob roster",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 2.0,
+     "waits_on": [],
+     "links": [
+      "86bcw87a4"
+     ],
+     "url": "https://app.clickup.com/t/86bcynn7y",
+     "updated": 1793840187305,
+     "created": 1793839862908,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839862.928
+    },
+    {
+     "id": "86bcynn80",
+     "tracker_id": null,
+     "name": "Grimm: NPCs",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [],
+     "url": "https://app.clickup.com/t/86bcynn80",
+     "updated": 1793840188958,
+     "created": 1793839863381,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839863.4
+    },
+    {
+     "id": "86bcynn82",
+     "tracker_id": null,
+     "name": "Grimm: quest list",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [
+      "86bcwayg0"
+     ],
+     "url": "https://app.clickup.com/t/86bcynn82",
+     "updated": 1793840191308,
+     "created": 1793839863887,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839863.914
+    },
+    {
+     "id": "86bcynn85",
+     "tracker_id": null,
+     "name": "Grimm: story final boss (undefined)",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 1.0,
+     "waits_on": [],
+     "links": [
+      "86bcw885g"
+     ],
+     "url": "https://app.clickup.com/t/86bcynn85",
+     "updated": 1793840193558,
+     "created": 1793839864428,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839864.447
+    },
+    {
+     "id": "86bcynn87",
+     "tracker_id": null,
+     "name": "Grimm: world drop rates",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": 2.0,
+     "waits_on": [],
+     "links": [
+      "86bcw88t9",
+      "86bcw88tw"
+     ],
+     "url": "https://app.clickup.com/t/86bcynn87",
+     "updated": 1793840196619,
+     "created": 1793839865005,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793839865.03
     }
    ]
   }
  ],
  "burndown": {
   "hours_per_week": 40.0,
-  "total_hours": 2582.5,
-  "week_count": 65,
+  "total_hours": 2725.5,
+  "week_count": 69,
   "tickets": [
    {
     "id": "86bcw88yz",
@@ -6510,6 +9253,1196 @@
     "unblocked_by": []
    },
    {
+    "id": "86bcynmxv",
+    "tracker_id": null,
+    "name": "Demon (Hell final boss): drop rates",
+    "url": "https://app.clickup.com/t/86bcynmxv",
+    "list": "Hell (Root Earth variant)",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 8,
+    "first_week": 2,
+    "last_week": 2,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynmxw",
+    "tracker_id": null,
+    "name": "Demon (Hell final boss): dungeon and arena",
+    "url": "https://app.clickup.com/t/86bcynmxw",
+    "list": "Hell (Root Earth variant)",
+    "status": "to do",
+    "hours": 2.0,
+    "in_flight": false,
+    "pick": 9,
+    "first_week": 2,
+    "last_week": 2,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynmxy",
+    "tracker_id": null,
+    "name": "Demon (Hell final boss): injectable compatibility",
+    "url": "https://app.clickup.com/t/86bcynmxy",
+    "list": "Hell (Root Earth variant)",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 10,
+    "first_week": 2,
+    "last_week": 2,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynmxz",
+    "tracker_id": null,
+    "name": "Demon (Hell final boss): mobs and adds",
+    "url": "https://app.clickup.com/t/86bcynmxz",
+    "list": "Hell (Root Earth variant)",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 11,
+    "first_week": 2,
+    "last_week": 2,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynmy0",
+    "tracker_id": null,
+    "name": "Demon (Hell final boss): quest",
+    "url": "https://app.clickup.com/t/86bcynmy0",
+    "list": "Hell (Root Earth variant)",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 12,
+    "first_week": 2,
+    "last_week": 2,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynmx8",
+    "tracker_id": null,
+    "name": "Arcade final boss: drop rates",
+    "url": "https://app.clickup.com/t/86bcynmx8",
+    "list": "Abandoned Arcade",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 13,
+    "first_week": 2,
+    "last_week": 2,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynmx9",
+    "tracker_id": null,
+    "name": "Arcade final boss: dungeon and arena",
+    "url": "https://app.clickup.com/t/86bcynmx9",
+    "list": "Abandoned Arcade",
+    "status": "to do",
+    "hours": 2.0,
+    "in_flight": false,
+    "pick": 14,
+    "first_week": 2,
+    "last_week": 2,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynmxb",
+    "tracker_id": null,
+    "name": "Arcade final boss: injectable compatibility",
+    "url": "https://app.clickup.com/t/86bcynmxb",
+    "list": "Abandoned Arcade",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 15,
+    "first_week": 2,
+    "last_week": 2,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynmxd",
+    "tracker_id": null,
+    "name": "Arcade final boss: mobs and adds",
+    "url": "https://app.clickup.com/t/86bcynmxd",
+    "list": "Abandoned Arcade",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 16,
+    "first_week": 2,
+    "last_week": 2,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynmxe",
+    "tracker_id": null,
+    "name": "Arcade final boss: quest",
+    "url": "https://app.clickup.com/t/86bcynmxe",
+    "list": "Abandoned Arcade",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 17,
+    "first_week": 2,
+    "last_week": 2,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn2h",
+    "tracker_id": null,
+    "name": "Azathoth: drop rates",
+    "url": "https://app.clickup.com/t/86bcynn2h",
+    "list": "Lovecraftian world",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 18,
+    "first_week": 2,
+    "last_week": 2,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn2k",
+    "tracker_id": null,
+    "name": "Azathoth: dungeon and arena",
+    "url": "https://app.clickup.com/t/86bcynn2k",
+    "list": "Lovecraftian world",
+    "status": "to do",
+    "hours": 2.0,
+    "in_flight": false,
+    "pick": 19,
+    "first_week": 2,
+    "last_week": 2,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn2y",
+    "tracker_id": null,
+    "name": "Azathoth: injectable compatibility",
+    "url": "https://app.clickup.com/t/86bcynn2y",
+    "list": "Lovecraftian world",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 20,
+    "first_week": 2,
+    "last_week": 2,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn2z",
+    "tracker_id": null,
+    "name": "Azathoth: mobs and adds",
+    "url": "https://app.clickup.com/t/86bcynn2z",
+    "list": "Lovecraftian world",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 21,
+    "first_week": 2,
+    "last_week": 2,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn36",
+    "tracker_id": null,
+    "name": "Azathoth: quest",
+    "url": "https://app.clickup.com/t/86bcynn36",
+    "list": "Lovecraftian world",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 22,
+    "first_week": 2,
+    "last_week": 2,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn37",
+    "tracker_id": null,
+    "name": "Cthulhu: drop rates",
+    "url": "https://app.clickup.com/t/86bcynn37",
+    "list": "Lovecraftian world",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 23,
+    "first_week": 2,
+    "last_week": 2,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn39",
+    "tracker_id": null,
+    "name": "Cthulhu: dungeon and arena",
+    "url": "https://app.clickup.com/t/86bcynn39",
+    "list": "Lovecraftian world",
+    "status": "to do",
+    "hours": 2.0,
+    "in_flight": false,
+    "pick": 24,
+    "first_week": 2,
+    "last_week": 2,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn3d",
+    "tracker_id": null,
+    "name": "Cthulhu: injectable compatibility",
+    "url": "https://app.clickup.com/t/86bcynn3d",
+    "list": "Lovecraftian world",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 25,
+    "first_week": 2,
+    "last_week": 2,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn3g",
+    "tracker_id": null,
+    "name": "Cthulhu: mobs and adds",
+    "url": "https://app.clickup.com/t/86bcynn3g",
+    "list": "Lovecraftian world",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 26,
+    "first_week": 2,
+    "last_week": 2,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn3j",
+    "tracker_id": null,
+    "name": "Cthulhu: quest",
+    "url": "https://app.clickup.com/t/86bcynn3j",
+    "list": "Lovecraftian world",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 27,
+    "first_week": 2,
+    "last_week": 2,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn3m",
+    "tracker_id": null,
+    "name": "Dagon: drop rates",
+    "url": "https://app.clickup.com/t/86bcynn3m",
+    "list": "Lovecraftian world",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 28,
+    "first_week": 2,
+    "last_week": 2,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn3r",
+    "tracker_id": null,
+    "name": "Dagon: dungeon and arena",
+    "url": "https://app.clickup.com/t/86bcynn3r",
+    "list": "Lovecraftian world",
+    "status": "to do",
+    "hours": 2.0,
+    "in_flight": false,
+    "pick": 29,
+    "first_week": 2,
+    "last_week": 2,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn3t",
+    "tracker_id": null,
+    "name": "Dagon: injectable compatibility",
+    "url": "https://app.clickup.com/t/86bcynn3t",
+    "list": "Lovecraftian world",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 30,
+    "first_week": 3,
+    "last_week": 3,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn3w",
+    "tracker_id": null,
+    "name": "Dagon: mobs and adds",
+    "url": "https://app.clickup.com/t/86bcynn3w",
+    "list": "Lovecraftian world",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 31,
+    "first_week": 3,
+    "last_week": 3,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn3x",
+    "tracker_id": null,
+    "name": "Dagon: quest",
+    "url": "https://app.clickup.com/t/86bcynn3x",
+    "list": "Lovecraftian world",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 32,
+    "first_week": 3,
+    "last_week": 3,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn3z",
+    "tracker_id": null,
+    "name": "Hastur, the King in Yellow: drop rates",
+    "url": "https://app.clickup.com/t/86bcynn3z",
+    "list": "Lovecraftian world",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 33,
+    "first_week": 3,
+    "last_week": 3,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn44",
+    "tracker_id": null,
+    "name": "Hastur, the King in Yellow: dungeon and arena",
+    "url": "https://app.clickup.com/t/86bcynn44",
+    "list": "Lovecraftian world",
+    "status": "to do",
+    "hours": 2.0,
+    "in_flight": false,
+    "pick": 34,
+    "first_week": 3,
+    "last_week": 3,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn4c",
+    "tracker_id": null,
+    "name": "Hastur, the King in Yellow: injectable compatibility",
+    "url": "https://app.clickup.com/t/86bcynn4c",
+    "list": "Lovecraftian world",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 35,
+    "first_week": 3,
+    "last_week": 3,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn4p",
+    "tracker_id": null,
+    "name": "Hastur, the King in Yellow: mobs and adds",
+    "url": "https://app.clickup.com/t/86bcynn4p",
+    "list": "Lovecraftian world",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 36,
+    "first_week": 3,
+    "last_week": 3,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn4y",
+    "tracker_id": null,
+    "name": "Hastur, the King in Yellow: quest",
+    "url": "https://app.clickup.com/t/86bcynn4y",
+    "list": "Lovecraftian world",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 37,
+    "first_week": 3,
+    "last_week": 3,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn5p",
+    "tracker_id": null,
+    "name": "Nyarlathotep: drop rates",
+    "url": "https://app.clickup.com/t/86bcynn5p",
+    "list": "Lovecraftian world",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 38,
+    "first_week": 3,
+    "last_week": 3,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn60",
+    "tracker_id": null,
+    "name": "Nyarlathotep: dungeon and arena",
+    "url": "https://app.clickup.com/t/86bcynn60",
+    "list": "Lovecraftian world",
+    "status": "to do",
+    "hours": 2.0,
+    "in_flight": false,
+    "pick": 39,
+    "first_week": 3,
+    "last_week": 3,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn68",
+    "tracker_id": null,
+    "name": "Nyarlathotep: injectable compatibility",
+    "url": "https://app.clickup.com/t/86bcynn68",
+    "list": "Lovecraftian world",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 40,
+    "first_week": 3,
+    "last_week": 3,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn6g",
+    "tracker_id": null,
+    "name": "Nyarlathotep: mobs and adds",
+    "url": "https://app.clickup.com/t/86bcynn6g",
+    "list": "Lovecraftian world",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 41,
+    "first_week": 3,
+    "last_week": 3,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn6n",
+    "tracker_id": null,
+    "name": "Nyarlathotep: quest",
+    "url": "https://app.clickup.com/t/86bcynn6n",
+    "list": "Lovecraftian world",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 42,
+    "first_week": 3,
+    "last_week": 3,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn6q",
+    "tracker_id": null,
+    "name": "Shoggoth: drop rates",
+    "url": "https://app.clickup.com/t/86bcynn6q",
+    "list": "Lovecraftian world",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 43,
+    "first_week": 3,
+    "last_week": 3,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn6t",
+    "tracker_id": null,
+    "name": "Shoggoth: dungeon and arena",
+    "url": "https://app.clickup.com/t/86bcynn6t",
+    "list": "Lovecraftian world",
+    "status": "to do",
+    "hours": 2.0,
+    "in_flight": false,
+    "pick": 44,
+    "first_week": 3,
+    "last_week": 3,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn6v",
+    "tracker_id": null,
+    "name": "Shoggoth: injectable compatibility",
+    "url": "https://app.clickup.com/t/86bcynn6v",
+    "list": "Lovecraftian world",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 45,
+    "first_week": 3,
+    "last_week": 3,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn6w",
+    "tracker_id": null,
+    "name": "Shoggoth: mobs and adds",
+    "url": "https://app.clickup.com/t/86bcynn6w",
+    "list": "Lovecraftian world",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 46,
+    "first_week": 3,
+    "last_week": 3,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn6y",
+    "tracker_id": null,
+    "name": "Shoggoth: quest",
+    "url": "https://app.clickup.com/t/86bcynn6y",
+    "list": "Lovecraftian world",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 47,
+    "first_week": 3,
+    "last_week": 3,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn74",
+    "tracker_id": null,
+    "name": "Shub-Niggurath: drop rates",
+    "url": "https://app.clickup.com/t/86bcynn74",
+    "list": "Lovecraftian world",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 48,
+    "first_week": 3,
+    "last_week": 3,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn76",
+    "tracker_id": null,
+    "name": "Shub-Niggurath: dungeon and arena",
+    "url": "https://app.clickup.com/t/86bcynn76",
+    "list": "Lovecraftian world",
+    "status": "to do",
+    "hours": 2.0,
+    "in_flight": false,
+    "pick": 49,
+    "first_week": 3,
+    "last_week": 3,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn77",
+    "tracker_id": null,
+    "name": "Shub-Niggurath: injectable compatibility",
+    "url": "https://app.clickup.com/t/86bcynn77",
+    "list": "Lovecraftian world",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 50,
+    "first_week": 3,
+    "last_week": 3,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn7a",
+    "tracker_id": null,
+    "name": "Shub-Niggurath: mobs and adds",
+    "url": "https://app.clickup.com/t/86bcynn7a",
+    "list": "Lovecraftian world",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 51,
+    "first_week": 3,
+    "last_week": 3,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn7e",
+    "tracker_id": null,
+    "name": "Shub-Niggurath: quest",
+    "url": "https://app.clickup.com/t/86bcynn7e",
+    "list": "Lovecraftian world",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 52,
+    "first_week": 3,
+    "last_week": 3,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn7g",
+    "tracker_id": null,
+    "name": "The Hounds of Tindalos: drop rates",
+    "url": "https://app.clickup.com/t/86bcynn7g",
+    "list": "Lovecraftian world",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 53,
+    "first_week": 3,
+    "last_week": 3,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn7h",
+    "tracker_id": null,
+    "name": "The Hounds of Tindalos: dungeon and arena",
+    "url": "https://app.clickup.com/t/86bcynn7h",
+    "list": "Lovecraftian world",
+    "status": "to do",
+    "hours": 2.0,
+    "in_flight": false,
+    "pick": 54,
+    "first_week": 3,
+    "last_week": 3,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn7j",
+    "tracker_id": null,
+    "name": "The Hounds of Tindalos: injectable compatibility",
+    "url": "https://app.clickup.com/t/86bcynn7j",
+    "list": "Lovecraftian world",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 55,
+    "first_week": 3,
+    "last_week": 3,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn7m",
+    "tracker_id": null,
+    "name": "The Hounds of Tindalos: mobs and adds",
+    "url": "https://app.clickup.com/t/86bcynn7m",
+    "list": "Lovecraftian world",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 56,
+    "first_week": 3,
+    "last_week": 3,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn7n",
+    "tracker_id": null,
+    "name": "The Hounds of Tindalos: quest",
+    "url": "https://app.clickup.com/t/86bcynn7n",
+    "list": "Lovecraftian world",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 57,
+    "first_week": 3,
+    "last_week": 3,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynmyb",
+    "tracker_id": null,
+    "name": "Sin: Envy: drop rates",
+    "url": "https://app.clickup.com/t/86bcynmyb",
+    "list": "Hell (Root Earth variant)",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 58,
+    "first_week": 3,
+    "last_week": 3,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynmyc",
+    "tracker_id": null,
+    "name": "Sin: Envy: dungeon and arena",
+    "url": "https://app.clickup.com/t/86bcynmyc",
+    "list": "Hell (Root Earth variant)",
+    "status": "to do",
+    "hours": 2.0,
+    "in_flight": false,
+    "pick": 59,
+    "first_week": 3,
+    "last_week": 3,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynmye",
+    "tracker_id": null,
+    "name": "Sin: Envy: injectable compatibility",
+    "url": "https://app.clickup.com/t/86bcynmye",
+    "list": "Hell (Root Earth variant)",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 60,
+    "first_week": 3,
+    "last_week": 3,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynmyg",
+    "tracker_id": null,
+    "name": "Sin: Envy: mobs and adds",
+    "url": "https://app.clickup.com/t/86bcynmyg",
+    "list": "Hell (Root Earth variant)",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 61,
+    "first_week": 3,
+    "last_week": 3,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynmyj",
+    "tracker_id": null,
+    "name": "Sin: Envy: quest",
+    "url": "https://app.clickup.com/t/86bcynmyj",
+    "list": "Hell (Root Earth variant)",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 62,
+    "first_week": 3,
+    "last_week": 3,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynmyx",
+    "tracker_id": null,
+    "name": "Sin: Gluttony: drop rates",
+    "url": "https://app.clickup.com/t/86bcynmyx",
+    "list": "Hell (Root Earth variant)",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 63,
+    "first_week": 3,
+    "last_week": 3,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynmz5",
+    "tracker_id": null,
+    "name": "Sin: Gluttony: dungeon and arena",
+    "url": "https://app.clickup.com/t/86bcynmz5",
+    "list": "Hell (Root Earth variant)",
+    "status": "to do",
+    "hours": 2.0,
+    "in_flight": false,
+    "pick": 64,
+    "first_week": 4,
+    "last_week": 4,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynmzb",
+    "tracker_id": null,
+    "name": "Sin: Gluttony: injectable compatibility",
+    "url": "https://app.clickup.com/t/86bcynmzb",
+    "list": "Hell (Root Earth variant)",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 65,
+    "first_week": 4,
+    "last_week": 4,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynmzh",
+    "tracker_id": null,
+    "name": "Sin: Gluttony: mobs and adds",
+    "url": "https://app.clickup.com/t/86bcynmzh",
+    "list": "Hell (Root Earth variant)",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 66,
+    "first_week": 4,
+    "last_week": 4,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn03",
+    "tracker_id": null,
+    "name": "Sin: Gluttony: quest",
+    "url": "https://app.clickup.com/t/86bcynn03",
+    "list": "Hell (Root Earth variant)",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 67,
+    "first_week": 4,
+    "last_week": 4,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn0c",
+    "tracker_id": null,
+    "name": "Sin: Greed: drop rates",
+    "url": "https://app.clickup.com/t/86bcynn0c",
+    "list": "Hell (Root Earth variant)",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 68,
+    "first_week": 4,
+    "last_week": 4,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn0f",
+    "tracker_id": null,
+    "name": "Sin: Greed: dungeon and arena",
+    "url": "https://app.clickup.com/t/86bcynn0f",
+    "list": "Hell (Root Earth variant)",
+    "status": "to do",
+    "hours": 2.0,
+    "in_flight": false,
+    "pick": 69,
+    "first_week": 4,
+    "last_week": 4,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn0h",
+    "tracker_id": null,
+    "name": "Sin: Greed: injectable compatibility",
+    "url": "https://app.clickup.com/t/86bcynn0h",
+    "list": "Hell (Root Earth variant)",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 70,
+    "first_week": 4,
+    "last_week": 4,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn0j",
+    "tracker_id": null,
+    "name": "Sin: Greed: mobs and adds",
+    "url": "https://app.clickup.com/t/86bcynn0j",
+    "list": "Hell (Root Earth variant)",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 71,
+    "first_week": 4,
+    "last_week": 4,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn0m",
+    "tracker_id": null,
+    "name": "Sin: Greed: quest",
+    "url": "https://app.clickup.com/t/86bcynn0m",
+    "list": "Hell (Root Earth variant)",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 72,
+    "first_week": 4,
+    "last_week": 4,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn0q",
+    "tracker_id": null,
+    "name": "Sin: Lust: drop rates",
+    "url": "https://app.clickup.com/t/86bcynn0q",
+    "list": "Hell (Root Earth variant)",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 73,
+    "first_week": 4,
+    "last_week": 4,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn0r",
+    "tracker_id": null,
+    "name": "Sin: Lust: dungeon and arena",
+    "url": "https://app.clickup.com/t/86bcynn0r",
+    "list": "Hell (Root Earth variant)",
+    "status": "to do",
+    "hours": 2.0,
+    "in_flight": false,
+    "pick": 74,
+    "first_week": 4,
+    "last_week": 4,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn0w",
+    "tracker_id": null,
+    "name": "Sin: Lust: injectable compatibility",
+    "url": "https://app.clickup.com/t/86bcynn0w",
+    "list": "Hell (Root Earth variant)",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 75,
+    "first_week": 4,
+    "last_week": 4,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn11",
+    "tracker_id": null,
+    "name": "Sin: Lust: mobs and adds",
+    "url": "https://app.clickup.com/t/86bcynn11",
+    "list": "Hell (Root Earth variant)",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 76,
+    "first_week": 4,
+    "last_week": 4,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn19",
+    "tracker_id": null,
+    "name": "Sin: Lust: quest",
+    "url": "https://app.clickup.com/t/86bcynn19",
+    "list": "Hell (Root Earth variant)",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 77,
+    "first_week": 4,
+    "last_week": 4,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn1d",
+    "tracker_id": null,
+    "name": "Sin: Pride: drop rates",
+    "url": "https://app.clickup.com/t/86bcynn1d",
+    "list": "Hell (Root Earth variant)",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 78,
+    "first_week": 4,
+    "last_week": 4,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn1g",
+    "tracker_id": null,
+    "name": "Sin: Pride: dungeon and arena",
+    "url": "https://app.clickup.com/t/86bcynn1g",
+    "list": "Hell (Root Earth variant)",
+    "status": "to do",
+    "hours": 2.0,
+    "in_flight": false,
+    "pick": 79,
+    "first_week": 4,
+    "last_week": 4,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn1k",
+    "tracker_id": null,
+    "name": "Sin: Pride: injectable compatibility",
+    "url": "https://app.clickup.com/t/86bcynn1k",
+    "list": "Hell (Root Earth variant)",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 80,
+    "first_week": 4,
+    "last_week": 4,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn1r",
+    "tracker_id": null,
+    "name": "Sin: Pride: mobs and adds",
+    "url": "https://app.clickup.com/t/86bcynn1r",
+    "list": "Hell (Root Earth variant)",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 81,
+    "first_week": 4,
+    "last_week": 4,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn1v",
+    "tracker_id": null,
+    "name": "Sin: Pride: quest",
+    "url": "https://app.clickup.com/t/86bcynn1v",
+    "list": "Hell (Root Earth variant)",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 82,
+    "first_week": 4,
+    "last_week": 4,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn1z",
+    "tracker_id": null,
+    "name": "Sin: Sloth: drop rates",
+    "url": "https://app.clickup.com/t/86bcynn1z",
+    "list": "Hell (Root Earth variant)",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 83,
+    "first_week": 4,
+    "last_week": 4,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn21",
+    "tracker_id": null,
+    "name": "Sin: Sloth: dungeon and arena",
+    "url": "https://app.clickup.com/t/86bcynn21",
+    "list": "Hell (Root Earth variant)",
+    "status": "to do",
+    "hours": 2.0,
+    "in_flight": false,
+    "pick": 84,
+    "first_week": 4,
+    "last_week": 4,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn23",
+    "tracker_id": null,
+    "name": "Sin: Sloth: injectable compatibility",
+    "url": "https://app.clickup.com/t/86bcynn23",
+    "list": "Hell (Root Earth variant)",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 85,
+    "first_week": 4,
+    "last_week": 4,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn26",
+    "tracker_id": null,
+    "name": "Sin: Sloth: mobs and adds",
+    "url": "https://app.clickup.com/t/86bcynn26",
+    "list": "Hell (Root Earth variant)",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 86,
+    "first_week": 4,
+    "last_week": 4,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn28",
+    "tracker_id": null,
+    "name": "Sin: Sloth: quest",
+    "url": "https://app.clickup.com/t/86bcynn28",
+    "list": "Hell (Root Earth variant)",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 87,
+    "first_week": 4,
+    "last_week": 4,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn2a",
+    "tracker_id": null,
+    "name": "Sin: Wrath: drop rates",
+    "url": "https://app.clickup.com/t/86bcynn2a",
+    "list": "Hell (Root Earth variant)",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 88,
+    "first_week": 4,
+    "last_week": 4,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn2c",
+    "tracker_id": null,
+    "name": "Sin: Wrath: dungeon and arena",
+    "url": "https://app.clickup.com/t/86bcynn2c",
+    "list": "Hell (Root Earth variant)",
+    "status": "to do",
+    "hours": 2.0,
+    "in_flight": false,
+    "pick": 89,
+    "first_week": 4,
+    "last_week": 4,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn2e",
+    "tracker_id": null,
+    "name": "Sin: Wrath: injectable compatibility",
+    "url": "https://app.clickup.com/t/86bcynn2e",
+    "list": "Hell (Root Earth variant)",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 90,
+    "first_week": 4,
+    "last_week": 4,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn2f",
+    "tracker_id": null,
+    "name": "Sin: Wrath: mobs and adds",
+    "url": "https://app.clickup.com/t/86bcynn2f",
+    "list": "Hell (Root Earth variant)",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 91,
+    "first_week": 4,
+    "last_week": 4,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn2g",
+    "tracker_id": null,
+    "name": "Sin: Wrath: quest",
+    "url": "https://app.clickup.com/t/86bcynn2g",
+    "list": "Hell (Root Earth variant)",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 92,
+    "first_week": 4,
+    "last_week": 4,
+    "unblocked_by": []
+   },
+   {
     "id": "86bcwwjd3",
     "tracker_id": null,
     "name": "Decision: Masterwork cost materials",
@@ -6518,9 +10451,9 @@
     "status": "to do",
     "hours": 1.0,
     "in_flight": false,
-    "pick": 8,
-    "first_week": 2,
-    "last_week": 2,
+    "pick": 93,
+    "first_week": 4,
+    "last_week": 4,
     "unblocked_by": []
    },
    {
@@ -6532,9 +10465,9 @@
     "status": "to do",
     "hours": 6.0,
     "in_flight": false,
-    "pick": 9,
-    "first_week": 2,
-    "last_week": 2,
+    "pick": 94,
+    "first_week": 4,
+    "last_week": 5,
     "unblocked_by": []
    },
    {
@@ -6546,9 +10479,9 @@
     "status": "to do",
     "hours": 1.0,
     "in_flight": false,
-    "pick": 10,
-    "first_week": 2,
-    "last_week": 2,
+    "pick": 95,
+    "first_week": 5,
+    "last_week": 5,
     "unblocked_by": []
    },
    {
@@ -6560,9 +10493,9 @@
     "status": "to do",
     "hours": 1.5,
     "in_flight": false,
-    "pick": 11,
-    "first_week": 2,
-    "last_week": 2,
+    "pick": 96,
+    "first_week": 5,
+    "last_week": 5,
     "unblocked_by": []
    },
    {
@@ -6574,9 +10507,9 @@
     "status": "to do",
     "hours": 0.5,
     "in_flight": false,
-    "pick": 12,
-    "first_week": 2,
-    "last_week": 2,
+    "pick": 97,
+    "first_week": 5,
+    "last_week": 5,
     "unblocked_by": []
    },
    {
@@ -6588,9 +10521,9 @@
     "status": "to do",
     "hours": 1.0,
     "in_flight": false,
-    "pick": 13,
-    "first_week": 2,
-    "last_week": 2,
+    "pick": 98,
+    "first_week": 5,
+    "last_week": 5,
     "unblocked_by": []
    },
    {
@@ -6602,9 +10535,9 @@
     "status": "to do",
     "hours": 0.5,
     "in_flight": false,
-    "pick": 14,
-    "first_week": 2,
-    "last_week": 2,
+    "pick": 99,
+    "first_week": 5,
+    "last_week": 5,
     "unblocked_by": []
    },
    {
@@ -6616,9 +10549,9 @@
     "status": "to do",
     "hours": 6.0,
     "in_flight": false,
-    "pick": 15,
-    "first_week": 2,
-    "last_week": 2,
+    "pick": 100,
+    "first_week": 5,
+    "last_week": 5,
     "unblocked_by": []
    },
    {
@@ -6630,9 +10563,9 @@
     "status": "to do",
     "hours": 6.0,
     "in_flight": false,
-    "pick": 16,
-    "first_week": 2,
-    "last_week": 2,
+    "pick": 101,
+    "first_week": 5,
+    "last_week": 5,
     "unblocked_by": []
    },
    {
@@ -6644,9 +10577,359 @@
     "status": "to do",
     "hours": 6.0,
     "in_flight": false,
-    "pick": 17,
-    "first_week": 2,
-    "last_week": 3,
+    "pick": 102,
+    "first_week": 5,
+    "last_week": 5,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn50",
+    "tracker_id": null,
+    "name": "Lovecraft: dungeon pool and roll rules",
+    "url": "https://app.clickup.com/t/86bcynn50",
+    "list": "Lovecraftian world",
+    "status": "to do",
+    "hours": 2.0,
+    "in_flight": false,
+    "pick": 103,
+    "first_week": 5,
+    "last_week": 5,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn52",
+    "tracker_id": null,
+    "name": "Lovecraft: injectable reusability matrix (dungeon x injectable)",
+    "url": "https://app.clickup.com/t/86bcynn52",
+    "list": "Lovecraftian world",
+    "status": "to do",
+    "hours": 2.0,
+    "in_flight": false,
+    "pick": 104,
+    "first_week": 5,
+    "last_week": 5,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn53",
+    "tracker_id": null,
+    "name": "Lovecraft: mob roster",
+    "url": "https://app.clickup.com/t/86bcynn53",
+    "list": "Lovecraftian world",
+    "status": "to do",
+    "hours": 2.0,
+    "in_flight": false,
+    "pick": 105,
+    "first_week": 5,
+    "last_week": 5,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn55",
+    "tracker_id": null,
+    "name": "Lovecraft: NPCs",
+    "url": "https://app.clickup.com/t/86bcynn55",
+    "list": "Lovecraftian world",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 106,
+    "first_week": 5,
+    "last_week": 5,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn57",
+    "tracker_id": null,
+    "name": "Lovecraft: quest list",
+    "url": "https://app.clickup.com/t/86bcynn57",
+    "list": "Lovecraftian world",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 107,
+    "first_week": 5,
+    "last_week": 5,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn5f",
+    "tracker_id": null,
+    "name": "Lovecraft: world drop rates",
+    "url": "https://app.clickup.com/t/86bcynn5f",
+    "list": "Lovecraftian world",
+    "status": "to do",
+    "hours": 2.0,
+    "in_flight": false,
+    "pick": 108,
+    "first_week": 5,
+    "last_week": 5,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn7u",
+    "tracker_id": null,
+    "name": "Grimm: dungeon pool and roll rules",
+    "url": "https://app.clickup.com/t/86bcynn7u",
+    "list": "World of Grimm",
+    "status": "to do",
+    "hours": 2.0,
+    "in_flight": false,
+    "pick": 109,
+    "first_week": 5,
+    "last_week": 5,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn7w",
+    "tracker_id": null,
+    "name": "Grimm: injectable reusability matrix (dungeon x injectable)",
+    "url": "https://app.clickup.com/t/86bcynn7w",
+    "list": "World of Grimm",
+    "status": "to do",
+    "hours": 2.0,
+    "in_flight": false,
+    "pick": 110,
+    "first_week": 5,
+    "last_week": 5,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn7y",
+    "tracker_id": null,
+    "name": "Grimm: mob roster",
+    "url": "https://app.clickup.com/t/86bcynn7y",
+    "list": "World of Grimm",
+    "status": "to do",
+    "hours": 2.0,
+    "in_flight": false,
+    "pick": 111,
+    "first_week": 5,
+    "last_week": 6,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn80",
+    "tracker_id": null,
+    "name": "Grimm: NPCs",
+    "url": "https://app.clickup.com/t/86bcynn80",
+    "list": "World of Grimm",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 112,
+    "first_week": 6,
+    "last_week": 6,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn82",
+    "tracker_id": null,
+    "name": "Grimm: quest list",
+    "url": "https://app.clickup.com/t/86bcynn82",
+    "list": "World of Grimm",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 113,
+    "first_week": 6,
+    "last_week": 6,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn85",
+    "tracker_id": null,
+    "name": "Grimm: story final boss (undefined)",
+    "url": "https://app.clickup.com/t/86bcynn85",
+    "list": "World of Grimm",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 114,
+    "first_week": 6,
+    "last_week": 6,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynn87",
+    "tracker_id": null,
+    "name": "Grimm: world drop rates",
+    "url": "https://app.clickup.com/t/86bcynn87",
+    "list": "World of Grimm",
+    "status": "to do",
+    "hours": 2.0,
+    "in_flight": false,
+    "pick": 115,
+    "first_week": 6,
+    "last_week": 6,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynmx7",
+    "tracker_id": null,
+    "name": "Arcade: dungeon pool and roll rules",
+    "url": "https://app.clickup.com/t/86bcynmx7",
+    "list": "Abandoned Arcade",
+    "status": "to do",
+    "hours": 2.0,
+    "in_flight": false,
+    "pick": 116,
+    "first_week": 6,
+    "last_week": 6,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynmxg",
+    "tracker_id": null,
+    "name": "Arcade: injectable reusability matrix (dungeon x injectable)",
+    "url": "https://app.clickup.com/t/86bcynmxg",
+    "list": "Abandoned Arcade",
+    "status": "to do",
+    "hours": 2.0,
+    "in_flight": false,
+    "pick": 117,
+    "first_week": 6,
+    "last_week": 6,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynmxj",
+    "tracker_id": null,
+    "name": "Arcade: mob roster",
+    "url": "https://app.clickup.com/t/86bcynmxj",
+    "list": "Abandoned Arcade",
+    "status": "to do",
+    "hours": 2.0,
+    "in_flight": false,
+    "pick": 118,
+    "first_week": 6,
+    "last_week": 6,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynmxm",
+    "tracker_id": null,
+    "name": "Arcade: NPCs",
+    "url": "https://app.clickup.com/t/86bcynmxm",
+    "list": "Abandoned Arcade",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 119,
+    "first_week": 6,
+    "last_week": 6,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynmxn",
+    "tracker_id": null,
+    "name": "Arcade: quest list",
+    "url": "https://app.clickup.com/t/86bcynmxn",
+    "list": "Abandoned Arcade",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 120,
+    "first_week": 6,
+    "last_week": 6,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynmxq",
+    "tracker_id": null,
+    "name": "Arcade: world drop rates",
+    "url": "https://app.clickup.com/t/86bcynmxq",
+    "list": "Abandoned Arcade",
+    "status": "to do",
+    "hours": 2.0,
+    "in_flight": false,
+    "pick": 121,
+    "first_week": 6,
+    "last_week": 6,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynmy1",
+    "tracker_id": null,
+    "name": "Hell: dungeon pool and roll rules",
+    "url": "https://app.clickup.com/t/86bcynmy1",
+    "list": "Hell (Root Earth variant)",
+    "status": "to do",
+    "hours": 2.0,
+    "in_flight": false,
+    "pick": 122,
+    "first_week": 6,
+    "last_week": 6,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynmy2",
+    "tracker_id": null,
+    "name": "Hell: injectable reusability matrix (dungeon x injectable)",
+    "url": "https://app.clickup.com/t/86bcynmy2",
+    "list": "Hell (Root Earth variant)",
+    "status": "to do",
+    "hours": 2.0,
+    "in_flight": false,
+    "pick": 123,
+    "first_week": 6,
+    "last_week": 6,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynmy3",
+    "tracker_id": null,
+    "name": "Hell: mob roster",
+    "url": "https://app.clickup.com/t/86bcynmy3",
+    "list": "Hell (Root Earth variant)",
+    "status": "to do",
+    "hours": 2.0,
+    "in_flight": false,
+    "pick": 124,
+    "first_week": 6,
+    "last_week": 6,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynmy5",
+    "tracker_id": null,
+    "name": "Hell: NPCs",
+    "url": "https://app.clickup.com/t/86bcynmy5",
+    "list": "Hell (Root Earth variant)",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 125,
+    "first_week": 6,
+    "last_week": 6,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynmy8",
+    "tracker_id": null,
+    "name": "Hell: quest list",
+    "url": "https://app.clickup.com/t/86bcynmy8",
+    "list": "Hell (Root Earth variant)",
+    "status": "to do",
+    "hours": 1.0,
+    "in_flight": false,
+    "pick": 126,
+    "first_week": 6,
+    "last_week": 6,
+    "unblocked_by": []
+   },
+   {
+    "id": "86bcynmya",
+    "tracker_id": null,
+    "name": "Hell: world drop rates",
+    "url": "https://app.clickup.com/t/86bcynmya",
+    "list": "Hell (Root Earth variant)",
+    "status": "to do",
+    "hours": 2.0,
+    "in_flight": false,
+    "pick": 127,
+    "first_week": 6,
+    "last_week": 6,
     "unblocked_by": []
    },
    {
@@ -6658,9 +10941,9 @@
     "status": "to do",
     "hours": 0.5,
     "in_flight": false,
-    "pick": 18,
-    "first_week": 3,
-    "last_week": 3,
+    "pick": 128,
+    "first_week": 6,
+    "last_week": 6,
     "unblocked_by": []
    },
    {
@@ -6672,9 +10955,9 @@
     "status": "to do",
     "hours": 1.0,
     "in_flight": false,
-    "pick": 19,
-    "first_week": 3,
-    "last_week": 3,
+    "pick": 129,
+    "first_week": 6,
+    "last_week": 6,
     "unblocked_by": []
    },
    {
@@ -6686,9 +10969,9 @@
     "status": "to do",
     "hours": 1.0,
     "in_flight": false,
-    "pick": 20,
-    "first_week": 3,
-    "last_week": 3,
+    "pick": 130,
+    "first_week": 6,
+    "last_week": 6,
     "unblocked_by": []
    },
    {
@@ -6700,9 +10983,9 @@
     "status": "to do",
     "hours": 8.0,
     "in_flight": false,
-    "pick": 21,
-    "first_week": 3,
-    "last_week": 3,
+    "pick": 131,
+    "first_week": 6,
+    "last_week": 6,
     "unblocked_by": []
    },
    {
@@ -6714,9 +10997,9 @@
     "status": "to do",
     "hours": 1.0,
     "in_flight": false,
-    "pick": 22,
-    "first_week": 3,
-    "last_week": 3,
+    "pick": 132,
+    "first_week": 6,
+    "last_week": 6,
     "unblocked_by": []
    },
    {
@@ -6728,9 +11011,9 @@
     "status": "to do",
     "hours": 8.0,
     "in_flight": false,
-    "pick": 23,
-    "first_week": 3,
-    "last_week": 3,
+    "pick": 133,
+    "first_week": 6,
+    "last_week": 7,
     "unblocked_by": [
      {
       "id": "86bcyar90",
@@ -6749,9 +11032,9 @@
     "status": "to do",
     "hours": 24.0,
     "in_flight": false,
-    "pick": 24,
-    "first_week": 3,
-    "last_week": 4,
+    "pick": 134,
+    "first_week": 7,
+    "last_week": 7,
     "unblocked_by": []
    },
    {
@@ -6763,9 +11046,9 @@
     "status": "to do",
     "hours": 12.0,
     "in_flight": false,
-    "pick": 25,
-    "first_week": 4,
-    "last_week": 4,
+    "pick": 135,
+    "first_week": 7,
+    "last_week": 8,
     "unblocked_by": []
    },
    {
@@ -6777,9 +11060,9 @@
     "status": "to do",
     "hours": 20.0,
     "in_flight": false,
-    "pick": 26,
-    "first_week": 4,
-    "last_week": 4,
+    "pick": 136,
+    "first_week": 8,
+    "last_week": 8,
     "unblocked_by": []
    },
    {
@@ -6791,9 +11074,9 @@
     "status": "to do",
     "hours": 16.0,
     "in_flight": false,
-    "pick": 27,
-    "first_week": 4,
-    "last_week": 5,
+    "pick": 137,
+    "first_week": 8,
+    "last_week": 8,
     "unblocked_by": []
    },
    {
@@ -6805,9 +11088,9 @@
     "status": "to do",
     "hours": 24.0,
     "in_flight": false,
-    "pick": 28,
-    "first_week": 5,
-    "last_week": 5,
+    "pick": 138,
+    "first_week": 8,
+    "last_week": 9,
     "unblocked_by": [
      {
       "id": "86bcw87av",
@@ -6826,9 +11109,9 @@
     "status": "to do",
     "hours": 3.0,
     "in_flight": false,
-    "pick": 29,
-    "first_week": 5,
-    "last_week": 6,
+    "pick": 139,
+    "first_week": 9,
+    "last_week": 9,
     "unblocked_by": []
    },
    {
@@ -6840,9 +11123,9 @@
     "status": "to do",
     "hours": 16.0,
     "in_flight": false,
-    "pick": 30,
-    "first_week": 6,
-    "last_week": 6,
+    "pick": 140,
+    "first_week": 9,
+    "last_week": 9,
     "unblocked_by": []
    },
    {
@@ -6854,9 +11137,9 @@
     "status": "to do",
     "hours": 24.0,
     "in_flight": false,
-    "pick": 31,
-    "first_week": 6,
-    "last_week": 7,
+    "pick": 141,
+    "first_week": 10,
+    "last_week": 10,
     "unblocked_by": []
    },
    {
@@ -6868,9 +11151,9 @@
     "status": "to do",
     "hours": 24.0,
     "in_flight": false,
-    "pick": 32,
-    "first_week": 7,
-    "last_week": 7,
+    "pick": 142,
+    "first_week": 10,
+    "last_week": 11,
     "unblocked_by": []
    },
    {
@@ -6882,9 +11165,9 @@
     "status": "to do",
     "hours": 4.0,
     "in_flight": false,
-    "pick": 33,
-    "first_week": 7,
-    "last_week": 7,
+    "pick": 143,
+    "first_week": 11,
+    "last_week": 11,
     "unblocked_by": []
    },
    {
@@ -6896,9 +11179,9 @@
     "status": "to do",
     "hours": 40.0,
     "in_flight": false,
-    "pick": 34,
-    "first_week": 7,
-    "last_week": 8,
+    "pick": 144,
+    "first_week": 11,
+    "last_week": 12,
     "unblocked_by": []
    },
    {
@@ -6910,9 +11193,9 @@
     "status": "to do",
     "hours": 4.0,
     "in_flight": false,
-    "pick": 35,
-    "first_week": 8,
-    "last_week": 8,
+    "pick": 145,
+    "first_week": 12,
+    "last_week": 12,
     "unblocked_by": []
    },
    {
@@ -6924,9 +11207,9 @@
     "status": "to do",
     "hours": 8.0,
     "in_flight": false,
-    "pick": 36,
-    "first_week": 8,
-    "last_week": 9,
+    "pick": 146,
+    "first_week": 12,
+    "last_week": 12,
     "unblocked_by": []
    },
    {
@@ -6938,9 +11221,9 @@
     "status": "to do",
     "hours": 6.0,
     "in_flight": false,
-    "pick": 37,
-    "first_week": 9,
-    "last_week": 9,
+    "pick": 147,
+    "first_week": 12,
+    "last_week": 12,
     "unblocked_by": []
    },
    {
@@ -6952,9 +11235,9 @@
     "status": "to do",
     "hours": 2.0,
     "in_flight": false,
-    "pick": 38,
-    "first_week": 9,
-    "last_week": 9,
+    "pick": 148,
+    "first_week": 12,
+    "last_week": 12,
     "unblocked_by": []
    },
    {
@@ -6966,9 +11249,9 @@
     "status": "to do",
     "hours": 4.0,
     "in_flight": false,
-    "pick": 39,
-    "first_week": 9,
-    "last_week": 9,
+    "pick": 149,
+    "first_week": 12,
+    "last_week": 12,
     "unblocked_by": []
    },
    {
@@ -6980,9 +11263,9 @@
     "status": "to do",
     "hours": 40.0,
     "in_flight": false,
-    "pick": 40,
-    "first_week": 9,
-    "last_week": 10,
+    "pick": 150,
+    "first_week": 12,
+    "last_week": 13,
     "unblocked_by": []
    },
    {
@@ -6994,9 +11277,9 @@
     "status": "to do",
     "hours": 16.0,
     "in_flight": false,
-    "pick": 41,
-    "first_week": 10,
-    "last_week": 10,
+    "pick": 151,
+    "first_week": 13,
+    "last_week": 14,
     "unblocked_by": []
    },
    {
@@ -7008,9 +11291,9 @@
     "status": "to do",
     "hours": 12.0,
     "in_flight": false,
-    "pick": 42,
-    "first_week": 10,
-    "last_week": 11,
+    "pick": 152,
+    "first_week": 14,
+    "last_week": 14,
     "unblocked_by": []
    },
    {
@@ -7022,9 +11305,9 @@
     "status": "to do",
     "hours": 20.0,
     "in_flight": false,
-    "pick": 43,
-    "first_week": 11,
-    "last_week": 11,
+    "pick": 153,
+    "first_week": 14,
+    "last_week": 15,
     "unblocked_by": []
    },
    {
@@ -7036,9 +11319,9 @@
     "status": "to do",
     "hours": 12.0,
     "in_flight": false,
-    "pick": 44,
-    "first_week": 11,
-    "last_week": 11,
+    "pick": 154,
+    "first_week": 15,
+    "last_week": 15,
     "unblocked_by": []
    },
    {
@@ -7050,10 +11333,17 @@
     "status": "to do",
     "hours": 12.0,
     "in_flight": false,
-    "pick": 45,
-    "first_week": 11,
-    "last_week": 12,
-    "unblocked_by": []
+    "pick": 155,
+    "first_week": 15,
+    "last_week": 15,
+    "unblocked_by": [
+     {
+      "id": "86bcynmxq",
+      "tracker_id": null,
+      "name": "Arcade: world drop rates",
+      "url": "https://app.clickup.com/t/86bcynmxq"
+     }
+    ]
    },
    {
     "id": "86bcw88bh",
@@ -7064,9 +11354,9 @@
     "status": "to do",
     "hours": 30.0,
     "in_flight": false,
-    "pick": 46,
-    "first_week": 12,
-    "last_week": 12,
+    "pick": 156,
+    "first_week": 15,
+    "last_week": 16,
     "unblocked_by": []
    },
    {
@@ -7078,9 +11368,9 @@
     "status": "to do",
     "hours": 16.0,
     "in_flight": false,
-    "pick": 47,
-    "first_week": 12,
-    "last_week": 13,
+    "pick": 157,
+    "first_week": 16,
+    "last_week": 16,
     "unblocked_by": []
    },
    {
@@ -7092,9 +11382,9 @@
     "status": "to do",
     "hours": 12.0,
     "in_flight": false,
-    "pick": 48,
-    "first_week": 13,
-    "last_week": 13,
+    "pick": 158,
+    "first_week": 16,
+    "last_week": 17,
     "unblocked_by": []
    },
    {
@@ -7106,9 +11396,9 @@
     "status": "to do",
     "hours": 12.0,
     "in_flight": false,
-    "pick": 49,
-    "first_week": 13,
-    "last_week": 13,
+    "pick": 159,
+    "first_week": 17,
+    "last_week": 17,
     "unblocked_by": [
      {
       "id": "86bcw87a4",
@@ -7127,9 +11417,9 @@
     "status": "to do",
     "hours": 40.0,
     "in_flight": false,
-    "pick": 50,
-    "first_week": 13,
-    "last_week": 14,
+    "pick": 160,
+    "first_week": 17,
+    "last_week": 18,
     "unblocked_by": []
    },
    {
@@ -7141,9 +11431,9 @@
     "status": "to do",
     "hours": 40.0,
     "in_flight": false,
-    "pick": 51,
-    "first_week": 14,
-    "last_week": 15,
+    "pick": 161,
+    "first_week": 18,
+    "last_week": 19,
     "unblocked_by": []
    },
    {
@@ -7155,9 +11445,9 @@
     "status": "to do",
     "hours": 30.0,
     "in_flight": false,
-    "pick": 52,
-    "first_week": 15,
-    "last_week": 16,
+    "pick": 162,
+    "first_week": 19,
+    "last_week": 20,
     "unblocked_by": []
    },
    {
@@ -7169,9 +11459,9 @@
     "status": "to do",
     "hours": 2.0,
     "in_flight": false,
-    "pick": 53,
-    "first_week": 16,
-    "last_week": 16,
+    "pick": 163,
+    "first_week": 20,
+    "last_week": 20,
     "unblocked_by": []
    },
    {
@@ -7183,9 +11473,9 @@
     "status": "to do",
     "hours": 8.0,
     "in_flight": false,
-    "pick": 54,
-    "first_week": 16,
-    "last_week": 16,
+    "pick": 164,
+    "first_week": 20,
+    "last_week": 20,
     "unblocked_by": [
      {
       "id": "86bcw87at",
@@ -7204,10 +11494,17 @@
     "status": "to do",
     "hours": 60.0,
     "in_flight": false,
-    "pick": 55,
-    "first_week": 16,
-    "last_week": 18,
-    "unblocked_by": []
+    "pick": 165,
+    "first_week": 20,
+    "last_week": 21,
+    "unblocked_by": [
+     {
+      "id": "86bcynmxe",
+      "tracker_id": null,
+      "name": "Arcade final boss: quest",
+      "url": "https://app.clickup.com/t/86bcynmxe"
+     }
+    ]
    },
    {
     "id": "86bcw899n",
@@ -7218,9 +11515,9 @@
     "status": "to do",
     "hours": 0.5,
     "in_flight": false,
-    "pick": 56,
-    "first_week": 18,
-    "last_week": 18,
+    "pick": 166,
+    "first_week": 21,
+    "last_week": 21,
     "unblocked_by": []
    },
    {
@@ -7232,9 +11529,9 @@
     "status": "to do",
     "hours": 0.5,
     "in_flight": false,
-    "pick": 57,
-    "first_week": 18,
-    "last_week": 18,
+    "pick": 167,
+    "first_week": 21,
+    "last_week": 21,
     "unblocked_by": []
    },
    {
@@ -7246,9 +11543,9 @@
     "status": "to do",
     "hours": 0.5,
     "in_flight": false,
-    "pick": 58,
-    "first_week": 18,
-    "last_week": 18,
+    "pick": 168,
+    "first_week": 21,
+    "last_week": 21,
     "unblocked_by": []
    },
    {
@@ -7260,9 +11557,9 @@
     "status": "to do",
     "hours": 0.5,
     "in_flight": false,
-    "pick": 59,
-    "first_week": 18,
-    "last_week": 18,
+    "pick": 169,
+    "first_week": 21,
+    "last_week": 21,
     "unblocked_by": []
    },
    {
@@ -7274,9 +11571,9 @@
     "status": "to do",
     "hours": 0.5,
     "in_flight": false,
-    "pick": 60,
-    "first_week": 18,
-    "last_week": 18,
+    "pick": 170,
+    "first_week": 22,
+    "last_week": 22,
     "unblocked_by": []
    },
    {
@@ -7288,9 +11585,9 @@
     "status": "to do",
     "hours": 0.5,
     "in_flight": false,
-    "pick": 61,
-    "first_week": 18,
-    "last_week": 18,
+    "pick": 171,
+    "first_week": 22,
+    "last_week": 22,
     "unblocked_by": []
    },
    {
@@ -7302,9 +11599,9 @@
     "status": "to do",
     "hours": 0.5,
     "in_flight": false,
-    "pick": 62,
-    "first_week": 18,
-    "last_week": 18,
+    "pick": 172,
+    "first_week": 22,
+    "last_week": 22,
     "unblocked_by": []
    },
    {
@@ -7316,9 +11613,9 @@
     "status": "to do",
     "hours": 0.5,
     "in_flight": false,
-    "pick": 63,
-    "first_week": 18,
-    "last_week": 18,
+    "pick": 173,
+    "first_week": 22,
+    "last_week": 22,
     "unblocked_by": []
    },
    {
@@ -7330,9 +11627,9 @@
     "status": "to do",
     "hours": 0.5,
     "in_flight": false,
-    "pick": 64,
-    "first_week": 18,
-    "last_week": 18,
+    "pick": 174,
+    "first_week": 22,
+    "last_week": 22,
     "unblocked_by": []
    },
    {
@@ -7344,9 +11641,9 @@
     "status": "to do",
     "hours": 8.0,
     "in_flight": false,
-    "pick": 65,
-    "first_week": 18,
-    "last_week": 18,
+    "pick": 175,
+    "first_week": 22,
+    "last_week": 22,
     "unblocked_by": [
      {
       "id": "86bcyar9c",
@@ -7365,9 +11662,9 @@
     "status": "to do",
     "hours": 16.0,
     "in_flight": false,
-    "pick": 66,
-    "first_week": 18,
-    "last_week": 19,
+    "pick": 176,
+    "first_week": 22,
+    "last_week": 22,
     "unblocked_by": []
    },
    {
@@ -7379,9 +11676,9 @@
     "status": "to do",
     "hours": 12.0,
     "in_flight": false,
-    "pick": 67,
-    "first_week": 19,
-    "last_week": 19,
+    "pick": 177,
+    "first_week": 22,
+    "last_week": 22,
     "unblocked_by": [
      {
       "id": "86bcw87a3",
@@ -7400,9 +11697,9 @@
     "status": "to do",
     "hours": 16.0,
     "in_flight": false,
-    "pick": 68,
-    "first_week": 19,
-    "last_week": 19,
+    "pick": 178,
+    "first_week": 22,
+    "last_week": 23,
     "unblocked_by": []
    },
    {
@@ -7414,9 +11711,9 @@
     "status": "to do",
     "hours": 2.0,
     "in_flight": false,
-    "pick": 69,
-    "first_week": 19,
-    "last_week": 19,
+    "pick": 179,
+    "first_week": 23,
+    "last_week": 23,
     "unblocked_by": []
    },
    {
@@ -7428,9 +11725,9 @@
     "status": "to do",
     "hours": 2.0,
     "in_flight": false,
-    "pick": 70,
-    "first_week": 19,
-    "last_week": 19,
+    "pick": 180,
+    "first_week": 23,
+    "last_week": 23,
     "unblocked_by": []
    },
    {
@@ -7442,9 +11739,9 @@
     "status": "to do",
     "hours": 2.0,
     "in_flight": false,
-    "pick": 71,
-    "first_week": 19,
-    "last_week": 19,
+    "pick": 181,
+    "first_week": 23,
+    "last_week": 23,
     "unblocked_by": []
    },
    {
@@ -7456,9 +11753,9 @@
     "status": "to do",
     "hours": 1.0,
     "in_flight": false,
-    "pick": 72,
-    "first_week": 19,
-    "last_week": 19,
+    "pick": 182,
+    "first_week": 23,
+    "last_week": 23,
     "unblocked_by": []
    },
    {
@@ -7470,9 +11767,9 @@
     "status": "to do",
     "hours": 3.0,
     "in_flight": false,
-    "pick": 73,
-    "first_week": 19,
-    "last_week": 20,
+    "pick": 183,
+    "first_week": 23,
+    "last_week": 23,
     "unblocked_by": []
    },
    {
@@ -7484,9 +11781,9 @@
     "status": "to do",
     "hours": 0.5,
     "in_flight": false,
-    "pick": 74,
-    "first_week": 20,
-    "last_week": 20,
+    "pick": 184,
+    "first_week": 23,
+    "last_week": 23,
     "unblocked_by": []
    },
    {
@@ -7498,9 +11795,9 @@
     "status": "to do",
     "hours": 4.0,
     "in_flight": false,
-    "pick": 75,
-    "first_week": 20,
-    "last_week": 20,
+    "pick": 185,
+    "first_week": 23,
+    "last_week": 23,
     "unblocked_by": []
    },
    {
@@ -7512,9 +11809,9 @@
     "status": "to do",
     "hours": 4.0,
     "in_flight": false,
-    "pick": 76,
-    "first_week": 20,
-    "last_week": 20,
+    "pick": 186,
+    "first_week": 23,
+    "last_week": 23,
     "unblocked_by": []
    },
    {
@@ -7526,9 +11823,9 @@
     "status": "to do",
     "hours": 6.0,
     "in_flight": false,
-    "pick": 77,
-    "first_week": 20,
-    "last_week": 20,
+    "pick": 187,
+    "first_week": 23,
+    "last_week": 23,
     "unblocked_by": []
    },
    {
@@ -7540,9 +11837,9 @@
     "status": "to do",
     "hours": 3.0,
     "in_flight": false,
-    "pick": 78,
-    "first_week": 20,
-    "last_week": 20,
+    "pick": 188,
+    "first_week": 23,
+    "last_week": 24,
     "unblocked_by": []
    },
    {
@@ -7554,9 +11851,9 @@
     "status": "to do",
     "hours": 3.0,
     "in_flight": false,
-    "pick": 79,
-    "first_week": 20,
-    "last_week": 20,
+    "pick": 189,
+    "first_week": 24,
+    "last_week": 24,
     "unblocked_by": []
    },
    {
@@ -7568,9 +11865,9 @@
     "status": "to do",
     "hours": 1.0,
     "in_flight": false,
-    "pick": 80,
-    "first_week": 20,
-    "last_week": 20,
+    "pick": 190,
+    "first_week": 24,
+    "last_week": 24,
     "unblocked_by": []
    },
    {
@@ -7582,9 +11879,9 @@
     "status": "to do",
     "hours": 0.5,
     "in_flight": false,
-    "pick": 81,
-    "first_week": 20,
-    "last_week": 20,
+    "pick": 191,
+    "first_week": 24,
+    "last_week": 24,
     "unblocked_by": []
    },
    {
@@ -7596,9 +11893,9 @@
     "status": "to do",
     "hours": 30.0,
     "in_flight": false,
-    "pick": 82,
-    "first_week": 20,
-    "last_week": 21,
+    "pick": 192,
+    "first_week": 24,
+    "last_week": 24,
     "unblocked_by": []
    },
    {
@@ -7610,9 +11907,9 @@
     "status": "to do",
     "hours": 20.0,
     "in_flight": false,
-    "pick": 83,
-    "first_week": 21,
-    "last_week": 21,
+    "pick": 193,
+    "first_week": 24,
+    "last_week": 25,
     "unblocked_by": []
    },
    {
@@ -7624,9 +11921,9 @@
     "status": "to do",
     "hours": 16.0,
     "in_flight": false,
-    "pick": 84,
-    "first_week": 21,
-    "last_week": 22,
+    "pick": 194,
+    "first_week": 25,
+    "last_week": 25,
     "unblocked_by": []
    },
    {
@@ -7638,9 +11935,9 @@
     "status": "to do",
     "hours": 40.0,
     "in_flight": false,
-    "pick": 85,
-    "first_week": 22,
-    "last_week": 23,
+    "pick": 195,
+    "first_week": 25,
+    "last_week": 26,
     "unblocked_by": []
    },
    {
@@ -7652,9 +11949,9 @@
     "status": "to do",
     "hours": 6.0,
     "in_flight": false,
-    "pick": 86,
-    "first_week": 23,
-    "last_week": 23,
+    "pick": 196,
+    "first_week": 26,
+    "last_week": 26,
     "unblocked_by": []
    },
    {
@@ -7666,9 +11963,9 @@
     "status": "to do",
     "hours": 16.0,
     "in_flight": false,
-    "pick": 87,
-    "first_week": 23,
-    "last_week": 23,
+    "pick": 197,
+    "first_week": 26,
+    "last_week": 27,
     "unblocked_by": [
      {
       "id": "86bcyar8j",
@@ -7687,9 +11984,9 @@
     "status": "to do",
     "hours": 16.0,
     "in_flight": false,
-    "pick": 88,
-    "first_week": 23,
-    "last_week": 24,
+    "pick": 198,
+    "first_week": 27,
+    "last_week": 27,
     "unblocked_by": []
    },
    {
@@ -7701,9 +11998,9 @@
     "status": "to do",
     "hours": 22.0,
     "in_flight": false,
-    "pick": 89,
-    "first_week": 24,
-    "last_week": 24,
+    "pick": 199,
+    "first_week": 27,
+    "last_week": 28,
     "unblocked_by": []
    },
    {
@@ -7715,9 +12012,9 @@
     "status": "to do",
     "hours": 16.0,
     "in_flight": false,
-    "pick": 90,
-    "first_week": 24,
-    "last_week": 25,
+    "pick": 200,
+    "first_week": 28,
+    "last_week": 28,
     "unblocked_by": []
    },
    {
@@ -7729,9 +12026,9 @@
     "status": "to do",
     "hours": 16.0,
     "in_flight": false,
-    "pick": 91,
-    "first_week": 25,
-    "last_week": 25,
+    "pick": 201,
+    "first_week": 28,
+    "last_week": 29,
     "unblocked_by": [
      {
       "id": "86bcy0nwu",
@@ -7750,9 +12047,9 @@
     "status": "to do",
     "hours": 30.0,
     "in_flight": false,
-    "pick": 92,
-    "first_week": 25,
-    "last_week": 26,
+    "pick": 202,
+    "first_week": 29,
+    "last_week": 29,
     "unblocked_by": []
    },
    {
@@ -7764,9 +12061,9 @@
     "status": "to do",
     "hours": 10.0,
     "in_flight": false,
-    "pick": 93,
-    "first_week": 26,
-    "last_week": 26,
+    "pick": 203,
+    "first_week": 29,
+    "last_week": 30,
     "unblocked_by": [
      {
       "id": "86bcyar82",
@@ -7785,9 +12082,9 @@
     "status": "to do",
     "hours": 20.0,
     "in_flight": false,
-    "pick": 94,
-    "first_week": 26,
-    "last_week": 27,
+    "pick": 204,
+    "first_week": 30,
+    "last_week": 30,
     "unblocked_by": []
    },
    {
@@ -7799,9 +12096,9 @@
     "status": "to do",
     "hours": 30.0,
     "in_flight": false,
-    "pick": 95,
-    "first_week": 27,
-    "last_week": 27,
+    "pick": 205,
+    "first_week": 30,
+    "last_week": 31,
     "unblocked_by": []
    },
    {
@@ -7813,9 +12110,9 @@
     "status": "to do",
     "hours": 6.0,
     "in_flight": false,
-    "pick": 96,
-    "first_week": 27,
-    "last_week": 27,
+    "pick": 206,
+    "first_week": 31,
+    "last_week": 31,
     "unblocked_by": [
      {
       "id": "86bcw87a3",
@@ -7834,9 +12131,9 @@
     "status": "to do",
     "hours": 16.0,
     "in_flight": false,
-    "pick": 97,
-    "first_week": 27,
-    "last_week": 28,
+    "pick": 207,
+    "first_week": 31,
+    "last_week": 31,
     "unblocked_by": []
    },
    {
@@ -7848,9 +12145,9 @@
     "status": "to do",
     "hours": 20.0,
     "in_flight": false,
-    "pick": 98,
-    "first_week": 28,
-    "last_week": 28,
+    "pick": 208,
+    "first_week": 31,
+    "last_week": 32,
     "unblocked_by": [
      {
       "id": "86bcyar7e",
@@ -7869,9 +12166,9 @@
     "status": "to do",
     "hours": 12.0,
     "in_flight": false,
-    "pick": 99,
-    "first_week": 28,
-    "last_week": 29,
+    "pick": 209,
+    "first_week": 32,
+    "last_week": 32,
     "unblocked_by": []
    },
    {
@@ -7883,9 +12180,9 @@
     "status": "to do",
     "hours": 16.0,
     "in_flight": false,
-    "pick": 100,
-    "first_week": 29,
-    "last_week": 29,
+    "pick": 210,
+    "first_week": 32,
+    "last_week": 33,
     "unblocked_by": []
    },
    {
@@ -7897,9 +12194,9 @@
     "status": "to do",
     "hours": 8.0,
     "in_flight": false,
-    "pick": 101,
-    "first_week": 29,
-    "last_week": 29,
+    "pick": 211,
+    "first_week": 33,
+    "last_week": 33,
     "unblocked_by": []
    },
    {
@@ -7911,9 +12208,9 @@
     "status": "to do",
     "hours": 4.0,
     "in_flight": false,
-    "pick": 102,
-    "first_week": 29,
-    "last_week": 29,
+    "pick": 212,
+    "first_week": 33,
+    "last_week": 33,
     "unblocked_by": []
    },
    {
@@ -7925,9 +12222,9 @@
     "status": "to do",
     "hours": 3.0,
     "in_flight": false,
-    "pick": 103,
-    "first_week": 29,
-    "last_week": 29,
+    "pick": 213,
+    "first_week": 33,
+    "last_week": 33,
     "unblocked_by": []
    },
    {
@@ -7939,9 +12236,9 @@
     "status": "to do",
     "hours": 8.0,
     "in_flight": false,
-    "pick": 104,
-    "first_week": 29,
-    "last_week": 30,
+    "pick": 214,
+    "first_week": 33,
+    "last_week": 33,
     "unblocked_by": [
      {
       "id": "86bcwwjc8",
@@ -7960,9 +12257,9 @@
     "status": "to do",
     "hours": 2.0,
     "in_flight": false,
-    "pick": 105,
-    "first_week": 30,
-    "last_week": 30,
+    "pick": 215,
+    "first_week": 33,
+    "last_week": 33,
     "unblocked_by": []
    },
    {
@@ -7974,9 +12271,9 @@
     "status": "to do",
     "hours": 4.0,
     "in_flight": false,
-    "pick": 106,
-    "first_week": 30,
-    "last_week": 30,
+    "pick": 216,
+    "first_week": 33,
+    "last_week": 33,
     "unblocked_by": []
    },
    {
@@ -7988,9 +12285,9 @@
     "status": "to do",
     "hours": 4.0,
     "in_flight": false,
-    "pick": 107,
-    "first_week": 30,
-    "last_week": 30,
+    "pick": 217,
+    "first_week": 33,
+    "last_week": 33,
     "unblocked_by": [
      {
       "id": "86bcw87e8",
@@ -8009,9 +12306,9 @@
     "status": "to do",
     "hours": 12.0,
     "in_flight": false,
-    "pick": 108,
-    "first_week": 30,
-    "last_week": 30,
+    "pick": 218,
+    "first_week": 33,
+    "last_week": 34,
     "unblocked_by": [
      {
       "id": "86bcw87e8",
@@ -8030,9 +12327,9 @@
     "status": "to do",
     "hours": 4.0,
     "in_flight": false,
-    "pick": 109,
-    "first_week": 30,
-    "last_week": 30,
+    "pick": 219,
+    "first_week": 34,
+    "last_week": 34,
     "unblocked_by": [
      {
       "id": "86bcw87e8",
@@ -8051,9 +12348,9 @@
     "status": "to do",
     "hours": 6.0,
     "in_flight": false,
-    "pick": 110,
-    "first_week": 30,
-    "last_week": 30,
+    "pick": 220,
+    "first_week": 34,
+    "last_week": 34,
     "unblocked_by": [
      {
       "id": "86bcw87e8",
@@ -8072,9 +12369,9 @@
     "status": "to do",
     "hours": 16.0,
     "in_flight": false,
-    "pick": 111,
-    "first_week": 30,
-    "last_week": 31,
+    "pick": 221,
+    "first_week": 34,
+    "last_week": 34,
     "unblocked_by": [
      {
       "id": "86bcw87e8",
@@ -8093,9 +12390,9 @@
     "status": "to do",
     "hours": 3.0,
     "in_flight": false,
-    "pick": 112,
-    "first_week": 31,
-    "last_week": 31,
+    "pick": 222,
+    "first_week": 34,
+    "last_week": 34,
     "unblocked_by": [
      {
       "id": "86bcw87e8",
@@ -8114,9 +12411,9 @@
     "status": "to do",
     "hours": 3.0,
     "in_flight": false,
-    "pick": 113,
-    "first_week": 31,
-    "last_week": 31,
+    "pick": 223,
+    "first_week": 34,
+    "last_week": 35,
     "unblocked_by": [
      {
       "id": "86bcw87e8",
@@ -8135,9 +12432,9 @@
     "status": "to do",
     "hours": 8.0,
     "in_flight": false,
-    "pick": 114,
-    "first_week": 31,
-    "last_week": 31,
+    "pick": 224,
+    "first_week": 35,
+    "last_week": 35,
     "unblocked_by": []
    },
    {
@@ -8149,9 +12446,9 @@
     "status": "to do",
     "hours": 8.0,
     "in_flight": false,
-    "pick": 115,
-    "first_week": 31,
-    "last_week": 31,
+    "pick": 225,
+    "first_week": 35,
+    "last_week": 35,
     "unblocked_by": [
      {
       "id": "86bcw87e8",
@@ -8170,9 +12467,9 @@
     "status": "to do",
     "hours": 2.0,
     "in_flight": false,
-    "pick": 116,
-    "first_week": 31,
-    "last_week": 31,
+    "pick": 226,
+    "first_week": 35,
+    "last_week": 35,
     "unblocked_by": [
      {
       "id": "86bcw87e8",
@@ -8191,9 +12488,9 @@
     "status": "to do",
     "hours": 3.0,
     "in_flight": false,
-    "pick": 117,
-    "first_week": 31,
-    "last_week": 31,
+    "pick": 227,
+    "first_week": 35,
+    "last_week": 35,
     "unblocked_by": [
      {
       "id": "86bcw87e8",
@@ -8212,9 +12509,9 @@
     "status": "to do",
     "hours": 0.5,
     "in_flight": false,
-    "pick": 118,
-    "first_week": 31,
-    "last_week": 31,
+    "pick": 228,
+    "first_week": 35,
+    "last_week": 35,
     "unblocked_by": [
      {
       "id": "86bcw87e8",
@@ -8233,9 +12530,9 @@
     "status": "to do",
     "hours": 4.0,
     "in_flight": false,
-    "pick": 119,
-    "first_week": 32,
-    "last_week": 32,
+    "pick": 229,
+    "first_week": 35,
+    "last_week": 35,
     "unblocked_by": []
    },
    {
@@ -8247,9 +12544,9 @@
     "status": "to do",
     "hours": 3.0,
     "in_flight": false,
-    "pick": 120,
-    "first_week": 32,
-    "last_week": 32,
+    "pick": 230,
+    "first_week": 35,
+    "last_week": 35,
     "unblocked_by": []
    },
    {
@@ -8261,9 +12558,9 @@
     "status": "to do",
     "hours": 2.0,
     "in_flight": false,
-    "pick": 121,
-    "first_week": 32,
-    "last_week": 32,
+    "pick": 231,
+    "first_week": 35,
+    "last_week": 35,
     "unblocked_by": []
    },
    {
@@ -8275,9 +12572,9 @@
     "status": "to do",
     "hours": 2.0,
     "in_flight": false,
-    "pick": 122,
-    "first_week": 32,
-    "last_week": 32,
+    "pick": 232,
+    "first_week": 35,
+    "last_week": 35,
     "unblocked_by": []
    },
    {
@@ -8289,9 +12586,9 @@
     "status": "to do",
     "hours": 2.0,
     "in_flight": false,
-    "pick": 123,
-    "first_week": 32,
-    "last_week": 32,
+    "pick": 233,
+    "first_week": 35,
+    "last_week": 35,
     "unblocked_by": []
    },
    {
@@ -8303,9 +12600,9 @@
     "status": "to do",
     "hours": 2.0,
     "in_flight": false,
-    "pick": 124,
-    "first_week": 32,
-    "last_week": 32,
+    "pick": 234,
+    "first_week": 35,
+    "last_week": 35,
     "unblocked_by": []
    },
    {
@@ -8317,9 +12614,9 @@
     "status": "to do",
     "hours": 4.0,
     "in_flight": false,
-    "pick": 125,
-    "first_week": 32,
-    "last_week": 32,
+    "pick": 235,
+    "first_week": 35,
+    "last_week": 36,
     "unblocked_by": []
    },
    {
@@ -8331,9 +12628,9 @@
     "status": "to do",
     "hours": 12.0,
     "in_flight": false,
-    "pick": 126,
-    "first_week": 32,
-    "last_week": 32,
+    "pick": 236,
+    "first_week": 36,
+    "last_week": 36,
     "unblocked_by": []
    },
    {
@@ -8345,10 +12642,17 @@
     "status": "to do",
     "hours": 16.0,
     "in_flight": false,
-    "pick": 127,
-    "first_week": 32,
-    "last_week": 33,
-    "unblocked_by": []
+    "pick": 237,
+    "first_week": 36,
+    "last_week": 36,
+    "unblocked_by": [
+     {
+      "id": "86bcynn5f",
+      "tracker_id": null,
+      "name": "Lovecraft: world drop rates",
+      "url": "https://app.clickup.com/t/86bcynn5f"
+     }
+    ]
    },
    {
     "id": "86bcw888h",
@@ -8359,10 +12663,17 @@
     "status": "to do",
     "hours": 60.0,
     "in_flight": false,
-    "pick": 128,
-    "first_week": 33,
-    "last_week": 34,
-    "unblocked_by": []
+    "pick": 238,
+    "first_week": 36,
+    "last_week": 38,
+    "unblocked_by": [
+     {
+      "id": "86bcynn3j",
+      "tracker_id": null,
+      "name": "Cthulhu: quest",
+      "url": "https://app.clickup.com/t/86bcynn3j"
+     }
+    ]
    },
    {
     "id": "86bcw888k",
@@ -8373,10 +12684,17 @@
     "status": "to do",
     "hours": 60.0,
     "in_flight": false,
-    "pick": 129,
-    "first_week": 34,
-    "last_week": 36,
-    "unblocked_by": []
+    "pick": 239,
+    "first_week": 38,
+    "last_week": 39,
+    "unblocked_by": [
+     {
+      "id": "86bcynn3x",
+      "tracker_id": null,
+      "name": "Dagon: quest",
+      "url": "https://app.clickup.com/t/86bcynn3x"
+     }
+    ]
    },
    {
     "id": "86bcw888n",
@@ -8387,10 +12705,17 @@
     "status": "to do",
     "hours": 60.0,
     "in_flight": false,
-    "pick": 130,
-    "first_week": 36,
-    "last_week": 37,
-    "unblocked_by": []
+    "pick": 240,
+    "first_week": 39,
+    "last_week": 41,
+    "unblocked_by": [
+     {
+      "id": "86bcynn6y",
+      "tracker_id": null,
+      "name": "Shoggoth: quest",
+      "url": "https://app.clickup.com/t/86bcynn6y"
+     }
+    ]
    },
    {
     "id": "86bcw888p",
@@ -8401,10 +12726,17 @@
     "status": "to do",
     "hours": 60.0,
     "in_flight": false,
-    "pick": 131,
-    "first_week": 37,
-    "last_week": 39,
-    "unblocked_by": []
+    "pick": 241,
+    "first_week": 41,
+    "last_week": 42,
+    "unblocked_by": [
+     {
+      "id": "86bcynn7e",
+      "tracker_id": null,
+      "name": "Shub-Niggurath: quest",
+      "url": "https://app.clickup.com/t/86bcynn7e"
+     }
+    ]
    },
    {
     "id": "86bcw888r",
@@ -8415,10 +12747,17 @@
     "status": "to do",
     "hours": 60.0,
     "in_flight": false,
-    "pick": 132,
-    "first_week": 39,
-    "last_week": 40,
-    "unblocked_by": []
+    "pick": 242,
+    "first_week": 42,
+    "last_week": 44,
+    "unblocked_by": [
+     {
+      "id": "86bcynn7n",
+      "tracker_id": null,
+      "name": "The Hounds of Tindalos: quest",
+      "url": "https://app.clickup.com/t/86bcynn7n"
+     }
+    ]
    },
    {
     "id": "86bcw888t",
@@ -8429,10 +12768,17 @@
     "status": "to do",
     "hours": 60.0,
     "in_flight": false,
-    "pick": 133,
-    "first_week": 40,
-    "last_week": 42,
-    "unblocked_by": []
+    "pick": 243,
+    "first_week": 44,
+    "last_week": 45,
+    "unblocked_by": [
+     {
+      "id": "86bcynn4y",
+      "tracker_id": null,
+      "name": "Hastur, the King in Yellow: quest",
+      "url": "https://app.clickup.com/t/86bcynn4y"
+     }
+    ]
    },
    {
     "id": "86bcw888w",
@@ -8443,10 +12789,17 @@
     "status": "to do",
     "hours": 60.0,
     "in_flight": false,
-    "pick": 134,
-    "first_week": 42,
-    "last_week": 43,
-    "unblocked_by": []
+    "pick": 244,
+    "first_week": 45,
+    "last_week": 47,
+    "unblocked_by": [
+     {
+      "id": "86bcynn6n",
+      "tracker_id": null,
+      "name": "Nyarlathotep: quest",
+      "url": "https://app.clickup.com/t/86bcynn6n"
+     }
+    ]
    },
    {
     "id": "86bcw888x",
@@ -8457,10 +12810,17 @@
     "status": "to do",
     "hours": 60.0,
     "in_flight": false,
-    "pick": 135,
-    "first_week": 43,
-    "last_week": 45,
-    "unblocked_by": []
+    "pick": 245,
+    "first_week": 47,
+    "last_week": 48,
+    "unblocked_by": [
+     {
+      "id": "86bcynn36",
+      "tracker_id": null,
+      "name": "Azathoth: quest",
+      "url": "https://app.clickup.com/t/86bcynn36"
+     }
+    ]
    },
    {
     "id": "86bcw888y",
@@ -8471,9 +12831,9 @@
     "status": "to do",
     "hours": 1.0,
     "in_flight": false,
-    "pick": 136,
-    "first_week": 45,
-    "last_week": 45,
+    "pick": 246,
+    "first_week": 48,
+    "last_week": 48,
     "unblocked_by": []
    },
    {
@@ -8485,10 +12845,17 @@
     "status": "to do",
     "hours": 12.0,
     "in_flight": false,
-    "pick": 137,
-    "first_week": 45,
-    "last_week": 45,
-    "unblocked_by": []
+    "pick": 247,
+    "first_week": 48,
+    "last_week": 49,
+    "unblocked_by": [
+     {
+      "id": "86bcynmya",
+      "tracker_id": null,
+      "name": "Hell: world drop rates",
+      "url": "https://app.clickup.com/t/86bcynmya"
+     }
+    ]
    },
    {
     "id": "86bcw88ey",
@@ -8499,10 +12866,17 @@
     "status": "to do",
     "hours": 60.0,
     "in_flight": false,
-    "pick": 138,
-    "first_week": 45,
-    "last_week": 46,
-    "unblocked_by": []
+    "pick": 248,
+    "first_week": 49,
+    "last_week": 50,
+    "unblocked_by": [
+     {
+      "id": "86bcynn03",
+      "tracker_id": null,
+      "name": "Sin: Gluttony: quest",
+      "url": "https://app.clickup.com/t/86bcynn03"
+     }
+    ]
    },
    {
     "id": "86bcw88f1",
@@ -8513,10 +12887,17 @@
     "status": "to do",
     "hours": 60.0,
     "in_flight": false,
-    "pick": 139,
-    "first_week": 47,
-    "last_week": 48,
-    "unblocked_by": []
+    "pick": 249,
+    "first_week": 50,
+    "last_week": 52,
+    "unblocked_by": [
+     {
+      "id": "86bcynn19",
+      "tracker_id": null,
+      "name": "Sin: Lust: quest",
+      "url": "https://app.clickup.com/t/86bcynn19"
+     }
+    ]
    },
    {
     "id": "86bcw88f2",
@@ -8527,10 +12908,17 @@
     "status": "to do",
     "hours": 60.0,
     "in_flight": false,
-    "pick": 140,
-    "first_week": 48,
-    "last_week": 49,
-    "unblocked_by": []
+    "pick": 250,
+    "first_week": 52,
+    "last_week": 53,
+    "unblocked_by": [
+     {
+      "id": "86bcynn28",
+      "tracker_id": null,
+      "name": "Sin: Sloth: quest",
+      "url": "https://app.clickup.com/t/86bcynn28"
+     }
+    ]
    },
    {
     "id": "86bcw88f3",
@@ -8541,10 +12929,17 @@
     "status": "to do",
     "hours": 60.0,
     "in_flight": false,
-    "pick": 141,
-    "first_week": 50,
-    "last_week": 51,
-    "unblocked_by": []
+    "pick": 251,
+    "first_week": 53,
+    "last_week": 55,
+    "unblocked_by": [
+     {
+      "id": "86bcynn1v",
+      "tracker_id": null,
+      "name": "Sin: Pride: quest",
+      "url": "https://app.clickup.com/t/86bcynn1v"
+     }
+    ]
    },
    {
     "id": "86bcw88f4",
@@ -8555,10 +12950,17 @@
     "status": "to do",
     "hours": 60.0,
     "in_flight": false,
-    "pick": 142,
-    "first_week": 51,
-    "last_week": 52,
-    "unblocked_by": []
+    "pick": 252,
+    "first_week": 55,
+    "last_week": 56,
+    "unblocked_by": [
+     {
+      "id": "86bcynn0m",
+      "tracker_id": null,
+      "name": "Sin: Greed: quest",
+      "url": "https://app.clickup.com/t/86bcynn0m"
+     }
+    ]
    },
    {
     "id": "86bcw88f8",
@@ -8569,10 +12971,17 @@
     "status": "to do",
     "hours": 60.0,
     "in_flight": false,
-    "pick": 143,
-    "first_week": 53,
-    "last_week": 54,
-    "unblocked_by": []
+    "pick": 253,
+    "first_week": 56,
+    "last_week": 58,
+    "unblocked_by": [
+     {
+      "id": "86bcynmyj",
+      "tracker_id": null,
+      "name": "Sin: Envy: quest",
+      "url": "https://app.clickup.com/t/86bcynmyj"
+     }
+    ]
    },
    {
     "id": "86bcw88f9",
@@ -8583,10 +12992,17 @@
     "status": "to do",
     "hours": 60.0,
     "in_flight": false,
-    "pick": 144,
-    "first_week": 54,
-    "last_week": 55,
-    "unblocked_by": []
+    "pick": 254,
+    "first_week": 58,
+    "last_week": 59,
+    "unblocked_by": [
+     {
+      "id": "86bcynn2g",
+      "tracker_id": null,
+      "name": "Sin: Wrath: quest",
+      "url": "https://app.clickup.com/t/86bcynn2g"
+     }
+    ]
    },
    {
     "id": "86bcw88fb",
@@ -8597,10 +13013,17 @@
     "status": "to do",
     "hours": 80.0,
     "in_flight": false,
-    "pick": 145,
-    "first_week": 56,
-    "last_week": 57,
-    "unblocked_by": []
+    "pick": 255,
+    "first_week": 59,
+    "last_week": 61,
+    "unblocked_by": [
+     {
+      "id": "86bcynmy0",
+      "tracker_id": null,
+      "name": "Demon (Hell final boss): quest",
+      "url": "https://app.clickup.com/t/86bcynmy0"
+     }
+    ]
    },
    {
     "id": "86bcw88fc",
@@ -8611,9 +13034,9 @@
     "status": "to do",
     "hours": 16.0,
     "in_flight": false,
-    "pick": 146,
-    "first_week": 58,
-    "last_week": 58,
+    "pick": 256,
+    "first_week": 61,
+    "last_week": 61,
     "unblocked_by": []
    },
    {
@@ -8625,9 +13048,9 @@
     "status": "to do",
     "hours": 40.0,
     "in_flight": false,
-    "pick": 147,
-    "first_week": 58,
-    "last_week": 59,
+    "pick": 257,
+    "first_week": 61,
+    "last_week": 62,
     "unblocked_by": []
    },
    {
@@ -8639,9 +13062,9 @@
     "status": "to do",
     "hours": 40.0,
     "in_flight": false,
-    "pick": 148,
-    "first_week": 59,
-    "last_week": 60,
+    "pick": 258,
+    "first_week": 62,
+    "last_week": 63,
     "unblocked_by": []
    },
    {
@@ -8653,9 +13076,9 @@
     "status": "to do",
     "hours": 40.0,
     "in_flight": false,
-    "pick": 149,
-    "first_week": 60,
-    "last_week": 61,
+    "pick": 259,
+    "first_week": 63,
+    "last_week": 64,
     "unblocked_by": []
    },
    {
@@ -8667,9 +13090,9 @@
     "status": "to do",
     "hours": 24.0,
     "in_flight": false,
-    "pick": 150,
-    "first_week": 61,
-    "last_week": 61,
+    "pick": 260,
+    "first_week": 64,
+    "last_week": 65,
     "unblocked_by": []
    },
    {
@@ -8681,9 +13104,9 @@
     "status": "to do",
     "hours": 24.0,
     "in_flight": false,
-    "pick": 151,
-    "first_week": 62,
-    "last_week": 62,
+    "pick": 261,
+    "first_week": 65,
+    "last_week": 66,
     "unblocked_by": []
    },
    {
@@ -8695,9 +13118,9 @@
     "status": "to do",
     "hours": 24.0,
     "in_flight": false,
-    "pick": 152,
-    "first_week": 62,
-    "last_week": 63,
+    "pick": 262,
+    "first_week": 66,
+    "last_week": 66,
     "unblocked_by": []
    },
    {
@@ -8709,9 +13132,9 @@
     "status": "to do",
     "hours": 6.0,
     "in_flight": false,
-    "pick": 153,
-    "first_week": 63,
-    "last_week": 63,
+    "pick": 263,
+    "first_week": 66,
+    "last_week": 66,
     "unblocked_by": []
    },
    {
@@ -8723,9 +13146,9 @@
     "status": "to do",
     "hours": 40.0,
     "in_flight": false,
-    "pick": 154,
-    "first_week": 63,
-    "last_week": 64,
+    "pick": 264,
+    "first_week": 66,
+    "last_week": 67,
     "unblocked_by": []
    },
    {
@@ -8737,9 +13160,9 @@
     "status": "to do",
     "hours": 12.0,
     "in_flight": false,
-    "pick": 155,
-    "first_week": 64,
-    "last_week": 64,
+    "pick": 265,
+    "first_week": 67,
+    "last_week": 68,
     "unblocked_by": []
    },
    {
@@ -8751,10 +13174,17 @@
     "status": "to do",
     "hours": 16.0,
     "in_flight": false,
-    "pick": 156,
-    "first_week": 64,
-    "last_week": 65,
-    "unblocked_by": []
+    "pick": 266,
+    "first_week": 68,
+    "last_week": 68,
+    "unblocked_by": [
+     {
+      "id": "86bcynn87",
+      "tracker_id": null,
+      "name": "Grimm: world drop rates",
+      "url": "https://app.clickup.com/t/86bcynn87"
+     }
+    ]
    },
    {
     "id": "86bcw885e",
@@ -8765,9 +13195,9 @@
     "status": "to do",
     "hours": 8.0,
     "in_flight": false,
-    "pick": 157,
-    "first_week": 65,
-    "last_week": 65,
+    "pick": 267,
+    "first_week": 68,
+    "last_week": 68,
     "unblocked_by": []
    },
    {
@@ -8779,9 +13209,9 @@
     "status": "to do",
     "hours": 2.0,
     "in_flight": false,
-    "pick": 158,
-    "first_week": 65,
-    "last_week": 65,
+    "pick": 268,
+    "first_week": 68,
+    "last_week": 68,
     "unblocked_by": []
    },
    {
@@ -8793,9 +13223,9 @@
     "status": "to do",
     "hours": 4.0,
     "in_flight": false,
-    "pick": 159,
-    "first_week": 65,
-    "last_week": 65,
+    "pick": 269,
+    "first_week": 68,
+    "last_week": 68,
     "unblocked_by": []
    },
    {
@@ -8807,9 +13237,9 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 160,
-    "first_week": 65,
-    "last_week": 65,
+    "pick": 270,
+    "first_week": 68,
+    "last_week": 68,
     "unblocked_by": []
    },
    {
@@ -8821,9 +13251,9 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 161,
-    "first_week": 65,
-    "last_week": 65,
+    "pick": 271,
+    "first_week": 68,
+    "last_week": 68,
     "unblocked_by": []
    },
    {
@@ -8835,9 +13265,9 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 162,
-    "first_week": 65,
-    "last_week": 65,
+    "pick": 272,
+    "first_week": 68,
+    "last_week": 68,
     "unblocked_by": []
    },
    {
@@ -8849,9 +13279,9 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 163,
-    "first_week": 65,
-    "last_week": 65,
+    "pick": 273,
+    "first_week": 68,
+    "last_week": 68,
     "unblocked_by": []
    },
    {
@@ -8863,9 +13293,9 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 164,
-    "first_week": 65,
-    "last_week": 65,
+    "pick": 274,
+    "first_week": 69,
+    "last_week": 69,
     "unblocked_by": []
    },
    {
@@ -8877,9 +13307,9 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 165,
-    "first_week": 65,
-    "last_week": 65,
+    "pick": 275,
+    "first_week": 69,
+    "last_week": 69,
     "unblocked_by": []
    },
    {
@@ -8891,9 +13321,9 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 166,
-    "first_week": 65,
-    "last_week": 65,
+    "pick": 276,
+    "first_week": 69,
+    "last_week": 69,
     "unblocked_by": []
    },
    {
@@ -8905,9 +13335,9 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 167,
-    "first_week": 65,
-    "last_week": 65,
+    "pick": 277,
+    "first_week": 69,
+    "last_week": 69,
     "unblocked_by": []
    },
    {
@@ -8919,9 +13349,9 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 168,
-    "first_week": 65,
-    "last_week": 65,
+    "pick": 278,
+    "first_week": 69,
+    "last_week": 69,
     "unblocked_by": []
    },
    {
@@ -8933,9 +13363,9 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 169,
-    "first_week": 65,
-    "last_week": 65,
+    "pick": 279,
+    "first_week": 69,
+    "last_week": 69,
     "unblocked_by": []
    },
    {
@@ -8947,9 +13377,9 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 170,
-    "first_week": 65,
-    "last_week": 65,
+    "pick": 280,
+    "first_week": 69,
+    "last_week": 69,
     "unblocked_by": []
    },
    {
@@ -8961,9 +13391,9 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 171,
-    "first_week": 65,
-    "last_week": 65,
+    "pick": 281,
+    "first_week": 69,
+    "last_week": 69,
     "unblocked_by": []
    },
    {
@@ -8975,9 +13405,9 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 172,
-    "first_week": 65,
-    "last_week": 65,
+    "pick": 282,
+    "first_week": 69,
+    "last_week": 69,
     "unblocked_by": []
    },
    {
@@ -8989,9 +13419,9 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 173,
-    "first_week": 65,
-    "last_week": 65,
+    "pick": 283,
+    "first_week": 69,
+    "last_week": 69,
     "unblocked_by": []
    },
    {
@@ -9003,9 +13433,9 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 174,
-    "first_week": 65,
-    "last_week": 65,
+    "pick": 284,
+    "first_week": 69,
+    "last_week": 69,
     "unblocked_by": []
    },
    {
@@ -9017,9 +13447,9 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 175,
-    "first_week": 65,
-    "last_week": 65,
+    "pick": 285,
+    "first_week": 69,
+    "last_week": 69,
     "unblocked_by": []
    },
    {
@@ -9031,9 +13461,9 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 176,
-    "first_week": 65,
-    "last_week": 65,
+    "pick": 286,
+    "first_week": 69,
+    "last_week": 69,
     "unblocked_by": []
    },
    {
@@ -9045,9 +13475,9 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 177,
-    "first_week": 65,
-    "last_week": 65,
+    "pick": 287,
+    "first_week": 69,
+    "last_week": 69,
     "unblocked_by": []
    },
    {
@@ -9059,9 +13489,9 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 178,
-    "first_week": 65,
-    "last_week": 65,
+    "pick": 288,
+    "first_week": 69,
+    "last_week": 69,
     "unblocked_by": []
    },
    {
@@ -9073,9 +13503,9 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 179,
-    "first_week": 65,
-    "last_week": 65,
+    "pick": 289,
+    "first_week": 69,
+    "last_week": 69,
     "unblocked_by": []
    },
    {
@@ -9087,9 +13517,9 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 180,
-    "first_week": 65,
-    "last_week": 65,
+    "pick": 290,
+    "first_week": 69,
+    "last_week": 69,
     "unblocked_by": []
    },
    {
@@ -9101,9 +13531,9 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 181,
-    "first_week": 65,
-    "last_week": 65,
+    "pick": 291,
+    "first_week": 69,
+    "last_week": 69,
     "unblocked_by": []
    },
    {
@@ -9115,9 +13545,9 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 182,
-    "first_week": 65,
-    "last_week": 65,
+    "pick": 292,
+    "first_week": 69,
+    "last_week": 69,
     "unblocked_by": []
    },
    {
@@ -9129,9 +13559,9 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 183,
-    "first_week": 65,
-    "last_week": 65,
+    "pick": 293,
+    "first_week": 69,
+    "last_week": 69,
     "unblocked_by": []
    },
    {
@@ -9143,9 +13573,9 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 184,
-    "first_week": 65,
-    "last_week": 65,
+    "pick": 294,
+    "first_week": 69,
+    "last_week": 69,
     "unblocked_by": []
    },
    {
@@ -9157,9 +13587,9 @@
     "status": "to do",
     "hours": 0.25,
     "in_flight": false,
-    "pick": 185,
-    "first_week": 65,
-    "last_week": 65,
+    "pick": 295,
+    "first_week": 69,
+    "last_week": 69,
     "unblocked_by": []
    }
   ],
@@ -9193,7 +13623,7 @@
      }
     ],
     "hours": 40.0,
-    "remaining_after": 2542.5
+    "remaining_after": 2685.5
    },
    {
     "week": 2,
@@ -9207,12 +13637,377 @@
       "hours": 2.0
      },
      {
+      "id": "86bcynmxv",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynmxw",
+      "hours": 2.0
+     },
+     {
+      "id": "86bcynmxy",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynmxz",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynmy0",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynmx8",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynmx9",
+      "hours": 2.0
+     },
+     {
+      "id": "86bcynmxb",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynmxd",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynmxe",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynn2h",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynn2k",
+      "hours": 2.0
+     },
+     {
+      "id": "86bcynn2y",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynn2z",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynn36",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynn37",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynn39",
+      "hours": 2.0
+     },
+     {
+      "id": "86bcynn3d",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynn3g",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynn3j",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynn3m",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynn3r",
+      "hours": 2.0
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 2645.5
+   },
+   {
+    "week": 3,
+    "segments": [
+     {
+      "id": "86bcynn3t",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynn3w",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynn3x",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynn3z",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynn44",
+      "hours": 2.0
+     },
+     {
+      "id": "86bcynn4c",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynn4p",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynn4y",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynn5p",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynn60",
+      "hours": 2.0
+     },
+     {
+      "id": "86bcynn68",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynn6g",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynn6n",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynn6q",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynn6t",
+      "hours": 2.0
+     },
+     {
+      "id": "86bcynn6v",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynn6w",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynn6y",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynn74",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynn76",
+      "hours": 2.0
+     },
+     {
+      "id": "86bcynn77",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynn7a",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynn7e",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynn7g",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynn7h",
+      "hours": 2.0
+     },
+     {
+      "id": "86bcynn7j",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynn7m",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynn7n",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynmyb",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynmyc",
+      "hours": 2.0
+     },
+     {
+      "id": "86bcynmye",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynmyg",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynmyj",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynmyx",
+      "hours": 1.0
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 2605.5
+   },
+   {
+    "week": 4,
+    "segments": [
+     {
+      "id": "86bcynmz5",
+      "hours": 2.0
+     },
+     {
+      "id": "86bcynmzb",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynmzh",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynn03",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynn0c",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynn0f",
+      "hours": 2.0
+     },
+     {
+      "id": "86bcynn0h",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynn0j",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynn0m",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynn0q",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynn0r",
+      "hours": 2.0
+     },
+     {
+      "id": "86bcynn0w",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynn11",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynn19",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynn1d",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynn1g",
+      "hours": 2.0
+     },
+     {
+      "id": "86bcynn1k",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynn1r",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynn1v",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynn1z",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynn21",
+      "hours": 2.0
+     },
+     {
+      "id": "86bcynn23",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynn26",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynn28",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynn2a",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynn2c",
+      "hours": 2.0
+     },
+     {
+      "id": "86bcynn2e",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynn2f",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynn2g",
+      "hours": 1.0
+     },
+     {
       "id": "86bcwwjd3",
       "hours": 1.0
      },
      {
       "id": "86bcxv3rn",
-      "hours": 6.0
+      "hours": 4.0
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 2565.5
+   },
+   {
+    "week": 5,
+    "segments": [
+     {
+      "id": "86bcxv3rn",
+      "hours": 2.0
      },
      {
       "id": "86bcw87a4",
@@ -9244,18 +14039,118 @@
      },
      {
       "id": "86bcy0nwu",
-      "hours": 3.5
+      "hours": 6.0
+     },
+     {
+      "id": "86bcynn50",
+      "hours": 2.0
+     },
+     {
+      "id": "86bcynn52",
+      "hours": 2.0
+     },
+     {
+      "id": "86bcynn53",
+      "hours": 2.0
+     },
+     {
+      "id": "86bcynn55",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynn57",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynn5f",
+      "hours": 2.0
+     },
+     {
+      "id": "86bcynn7u",
+      "hours": 2.0
+     },
+     {
+      "id": "86bcynn7w",
+      "hours": 2.0
+     },
+     {
+      "id": "86bcynn7y",
+      "hours": 1.5
      }
     ],
     "hours": 40.0,
-    "remaining_after": 2502.5
+    "remaining_after": 2525.5
    },
    {
-    "week": 3,
+    "week": 6,
     "segments": [
      {
-      "id": "86bcy0nwu",
-      "hours": 2.5
+      "id": "86bcynn7y",
+      "hours": 0.5
+     },
+     {
+      "id": "86bcynn80",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynn82",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynn85",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynn87",
+      "hours": 2.0
+     },
+     {
+      "id": "86bcynmx7",
+      "hours": 2.0
+     },
+     {
+      "id": "86bcynmxg",
+      "hours": 2.0
+     },
+     {
+      "id": "86bcynmxj",
+      "hours": 2.0
+     },
+     {
+      "id": "86bcynmxm",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynmxn",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynmxq",
+      "hours": 2.0
+     },
+     {
+      "id": "86bcynmy1",
+      "hours": 2.0
+     },
+     {
+      "id": "86bcynmy2",
+      "hours": 2.0
+     },
+     {
+      "id": "86bcynmy3",
+      "hours": 2.0
+     },
+     {
+      "id": "86bcynmy5",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynmy8",
+      "hours": 1.0
+     },
+     {
+      "id": "86bcynmya",
+      "hours": 2.0
      },
      {
       "id": "86bcyar82",
@@ -9279,26 +14174,37 @@
      },
      {
       "id": "86bcw88z2",
-      "hours": 8.0
-     },
-     {
-      "id": "86bcw88z5",
-      "hours": 18.0
+      "hours": 3.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 2462.5
+    "remaining_after": 2485.5
    },
    {
-    "week": 4,
+    "week": 7,
     "segments": [
      {
+      "id": "86bcw88z2",
+      "hours": 5.0
+     },
+     {
       "id": "86bcw88z5",
-      "hours": 6.0
+      "hours": 24.0
      },
      {
       "id": "86bcw88z6",
-      "hours": 12.0
+      "hours": 11.0
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 2445.5
+   },
+   {
+    "week": 8,
+    "segments": [
+     {
+      "id": "86bcw88z6",
+      "hours": 1.0
      },
      {
       "id": "86bcw88z8",
@@ -9306,60 +14212,56 @@
      },
      {
       "id": "86bcw88za",
-      "hours": 2.0
-     }
-    ],
-    "hours": 40.0,
-    "remaining_after": 2422.5
-   },
-   {
-    "week": 5,
-    "segments": [
-     {
-      "id": "86bcw88za",
-      "hours": 14.0
+      "hours": 16.0
      },
      {
       "id": "86bcw88zc",
-      "hours": 24.0
-     },
-     {
-      "id": "86bcwwjcn",
-      "hours": 2.0
+      "hours": 3.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 2382.5
+    "remaining_after": 2405.5
    },
    {
-    "week": 6,
+    "week": 9,
     "segments": [
      {
+      "id": "86bcw88zc",
+      "hours": 21.0
+     },
+     {
       "id": "86bcwwjcn",
-      "hours": 1.0
+      "hours": 3.0
      },
      {
       "id": "86bcw88kz",
       "hours": 16.0
-     },
-     {
-      "id": "86bcw88m0",
-      "hours": 23.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 2342.5
+    "remaining_after": 2365.5
    },
    {
-    "week": 7,
+    "week": 10,
     "segments": [
      {
       "id": "86bcw88m0",
-      "hours": 1.0
+      "hours": 24.0
      },
      {
       "id": "86bcw88m3",
-      "hours": 24.0
+      "hours": 16.0
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 2325.5
+   },
+   {
+    "week": 11,
+    "segments": [
+     {
+      "id": "86bcw88m3",
+      "hours": 8.0
      },
      {
       "id": "86bcw88m6",
@@ -9367,18 +14269,18 @@
      },
      {
       "id": "86bcw88m7",
-      "hours": 11.0
+      "hours": 28.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 2302.5
+    "remaining_after": 2285.5
    },
    {
-    "week": 8,
+    "week": 12,
     "segments": [
      {
       "id": "86bcw88m7",
-      "hours": 29.0
+      "hours": 12.0
      },
      {
       "id": "86bcw89ac",
@@ -9386,18 +14288,7 @@
      },
      {
       "id": "86bcw89af",
-      "hours": 7.0
-     }
-    ],
-    "hours": 40.0,
-    "remaining_after": 2262.5
-   },
-   {
-    "week": 9,
-    "segments": [
-     {
-      "id": "86bcw89af",
-      "hours": 1.0
+      "hours": 8.0
      },
      {
       "id": "86bcw89ah",
@@ -9413,41 +14304,52 @@
      },
      {
       "id": "86bcw88kp",
-      "hours": 27.0
+      "hours": 4.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 2222.5
+    "remaining_after": 2245.5
    },
    {
-    "week": 10,
+    "week": 13,
     "segments": [
      {
       "id": "86bcw88kp",
-      "hours": 13.0
+      "hours": 36.0
      },
      {
       "id": "86bcw88kr",
-      "hours": 16.0
-     },
-     {
-      "id": "86bcw88kt",
-      "hours": 11.0
+      "hours": 4.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 2182.5
+    "remaining_after": 2205.5
    },
    {
-    "week": 11,
+    "week": 14,
     "segments": [
      {
+      "id": "86bcw88kr",
+      "hours": 12.0
+     },
+     {
       "id": "86bcw88kt",
-      "hours": 1.0
+      "hours": 12.0
      },
      {
       "id": "86bcw88kv",
-      "hours": 20.0
+      "hours": 16.0
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 2165.5
+   },
+   {
+    "week": 15,
+    "segments": [
+     {
+      "id": "86bcw88kv",
+      "hours": 4.0
      },
      {
       "id": "86bcw88kw",
@@ -9455,41 +14357,41 @@
      },
      {
       "id": "86bcw88bf",
-      "hours": 7.0
-     }
-    ],
-    "hours": 40.0,
-    "remaining_after": 2142.5
-   },
-   {
-    "week": 12,
-    "segments": [
-     {
-      "id": "86bcw88bf",
-      "hours": 5.0
+      "hours": 12.0
      },
      {
       "id": "86bcw88bh",
-      "hours": 30.0
-     },
-     {
-      "id": "86bcw88bk",
-      "hours": 5.0
+      "hours": 12.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 2102.5
+    "remaining_after": 2125.5
    },
    {
-    "week": 13,
+    "week": 16,
     "segments": [
      {
+      "id": "86bcw88bh",
+      "hours": 18.0
+     },
+     {
       "id": "86bcw88bk",
-      "hours": 11.0
+      "hours": 16.0
      },
      {
       "id": "86bcw88bm",
-      "hours": 12.0
+      "hours": 6.0
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 2085.5
+   },
+   {
+    "week": 17,
+    "segments": [
+     {
+      "id": "86bcw88bm",
+      "hours": 6.0
      },
      {
       "id": "86bcw88bn",
@@ -9497,48 +14399,48 @@
      },
      {
       "id": "86bcw88br",
-      "hours": 5.0
+      "hours": 22.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 2062.5
+    "remaining_after": 2045.5
    },
    {
-    "week": 14,
+    "week": 18,
     "segments": [
      {
       "id": "86bcw88br",
-      "hours": 35.0
+      "hours": 18.0
      },
      {
       "id": "86bcw88bt",
-      "hours": 5.0
+      "hours": 22.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 2022.5
+    "remaining_after": 2005.5
    },
    {
-    "week": 15,
+    "week": 19,
     "segments": [
      {
       "id": "86bcw88bt",
-      "hours": 35.0
+      "hours": 18.0
      },
      {
       "id": "86bcw88bw",
-      "hours": 5.0
+      "hours": 22.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 1982.5
+    "remaining_after": 1965.5
    },
    {
-    "week": 16,
+    "week": 20,
     "segments": [
      {
       "id": "86bcw88bw",
-      "hours": 25.0
+      "hours": 8.0
      },
      {
       "id": "86bcw88bx",
@@ -9550,29 +14452,18 @@
      },
      {
       "id": "86bcw88c0",
-      "hours": 5.0
+      "hours": 22.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 1942.5
+    "remaining_after": 1925.5
    },
    {
-    "week": 17,
+    "week": 21,
     "segments": [
      {
       "id": "86bcw88c0",
-      "hours": 40.0
-     }
-    ],
-    "hours": 40.0,
-    "remaining_after": 1902.5
-   },
-   {
-    "week": 18,
-    "segments": [
-     {
-      "id": "86bcw88c0",
-      "hours": 15.0
+      "hours": 38.0
      },
      {
       "id": "86bcw899n",
@@ -9589,7 +14480,14 @@
      {
       "id": "86bcw899v",
       "hours": 0.5
-     },
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 1885.5
+   },
+   {
+    "week": 22,
+    "segments": [
      {
       "id": "86bcw899x",
       "hours": 0.5
@@ -9616,18 +14514,7 @@
      },
      {
       "id": "86bcw88kj",
-      "hours": 12.5
-     }
-    ],
-    "hours": 40.0,
-    "remaining_after": 1862.5
-   },
-   {
-    "week": 19,
-    "segments": [
-     {
-      "id": "86bcw88kj",
-      "hours": 3.5
+      "hours": 16.0
      },
      {
       "id": "86bcw88kk",
@@ -9635,7 +14522,18 @@
      },
      {
       "id": "86bcw88km",
-      "hours": 16.0
+      "hours": 1.5
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 1845.5
+   },
+   {
+    "week": 23,
+    "segments": [
+     {
+      "id": "86bcw88km",
+      "hours": 14.5
      },
      {
       "id": "86bcw88zj",
@@ -9655,18 +14553,7 @@
      },
      {
       "id": "86bcw88zu",
-      "hours": 1.5
-     }
-    ],
-    "hours": 40.0,
-    "remaining_after": 1822.5
-   },
-   {
-    "week": 20,
-    "segments": [
-     {
-      "id": "86bcw88zu",
-      "hours": 1.5
+      "hours": 3.0
      },
      {
       "id": "86bcw88zx",
@@ -9686,7 +14573,18 @@
      },
      {
       "id": "86bcw890a",
-      "hours": 3.0
+      "hours": 1.0
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 1805.5
+   },
+   {
+    "week": 24,
+    "segments": [
+     {
+      "id": "86bcw890a",
+      "hours": 2.0
      },
      {
       "id": "86bcwwjcu",
@@ -9702,52 +14600,41 @@
      },
      {
       "id": "86bcw88u2",
-      "hours": 16.5
-     }
-    ],
-    "hours": 40.0,
-    "remaining_after": 1782.5
-   },
-   {
-    "week": 21,
-    "segments": [
-     {
-      "id": "86bcw88u2",
-      "hours": 13.5
+      "hours": 30.0
      },
      {
       "id": "86bcw88u4",
-      "hours": 20.0
-     },
-     {
-      "id": "86bcw88u6",
-      "hours": 6.5
+      "hours": 3.5
      }
     ],
     "hours": 40.0,
-    "remaining_after": 1742.5
+    "remaining_after": 1765.5
    },
    {
-    "week": 22,
+    "week": 25,
     "segments": [
      {
+      "id": "86bcw88u4",
+      "hours": 16.5
+     },
+     {
       "id": "86bcw88u6",
-      "hours": 9.5
+      "hours": 16.0
      },
      {
       "id": "86bcw88u9",
-      "hours": 30.5
+      "hours": 7.5
      }
     ],
     "hours": 40.0,
-    "remaining_after": 1702.5
+    "remaining_after": 1725.5
    },
    {
-    "week": 23,
+    "week": 26,
     "segments": [
      {
       "id": "86bcw88u9",
-      "hours": 9.5
+      "hours": 32.5
      },
      {
       "id": "86bcw88ua",
@@ -9755,83 +14642,94 @@
      },
      {
       "id": "86bcw88ub",
-      "hours": 16.0
-     },
-     {
-      "id": "86bcw89aq",
-      "hours": 8.5
+      "hours": 1.5
      }
     ],
     "hours": 40.0,
-    "remaining_after": 1662.5
-   },
-   {
-    "week": 24,
-    "segments": [
-     {
-      "id": "86bcw89aq",
-      "hours": 7.5
-     },
-     {
-      "id": "86bcw89ax",
-      "hours": 22.0
-     },
-     {
-      "id": "86bcw89ay",
-      "hours": 10.5
-     }
-    ],
-    "hours": 40.0,
-    "remaining_after": 1622.5
-   },
-   {
-    "week": 25,
-    "segments": [
-     {
-      "id": "86bcw89ay",
-      "hours": 5.5
-     },
-     {
-      "id": "86bcw88t9",
-      "hours": 16.0
-     },
-     {
-      "id": "86bcw88ta",
-      "hours": 18.5
-     }
-    ],
-    "hours": 40.0,
-    "remaining_after": 1582.5
-   },
-   {
-    "week": 26,
-    "segments": [
-     {
-      "id": "86bcw88ta",
-      "hours": 11.5
-     },
-     {
-      "id": "86bcw88tc",
-      "hours": 10.0
-     },
-     {
-      "id": "86bcw88te",
-      "hours": 18.5
-     }
-    ],
-    "hours": 40.0,
-    "remaining_after": 1542.5
+    "remaining_after": 1685.5
    },
    {
     "week": 27,
     "segments": [
      {
+      "id": "86bcw88ub",
+      "hours": 14.5
+     },
+     {
+      "id": "86bcw89aq",
+      "hours": 16.0
+     },
+     {
+      "id": "86bcw89ax",
+      "hours": 9.5
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 1645.5
+   },
+   {
+    "week": 28,
+    "segments": [
+     {
+      "id": "86bcw89ax",
+      "hours": 12.5
+     },
+     {
+      "id": "86bcw89ay",
+      "hours": 16.0
+     },
+     {
+      "id": "86bcw88t9",
+      "hours": 11.5
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 1605.5
+   },
+   {
+    "week": 29,
+    "segments": [
+     {
+      "id": "86bcw88t9",
+      "hours": 4.5
+     },
+     {
+      "id": "86bcw88ta",
+      "hours": 30.0
+     },
+     {
+      "id": "86bcw88tc",
+      "hours": 5.5
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 1565.5
+   },
+   {
+    "week": 30,
+    "segments": [
+     {
+      "id": "86bcw88tc",
+      "hours": 4.5
+     },
+     {
       "id": "86bcw88te",
-      "hours": 1.5
+      "hours": 20.0
      },
      {
       "id": "86bcw88tf",
-      "hours": 30.0
+      "hours": 15.5
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 1525.5
+   },
+   {
+    "week": 31,
+    "segments": [
+     {
+      "id": "86bcw88tf",
+      "hours": 14.5
      },
      {
       "id": "86bcw88th",
@@ -9839,41 +14737,41 @@
      },
      {
       "id": "86bcw88tm",
-      "hours": 2.5
-     }
-    ],
-    "hours": 40.0,
-    "remaining_after": 1502.5
-   },
-   {
-    "week": 28,
-    "segments": [
-     {
-      "id": "86bcw88tm",
-      "hours": 13.5
+      "hours": 16.0
      },
      {
       "id": "86bcw88tp",
-      "hours": 20.0
-     },
-     {
-      "id": "86bcw88tq",
-      "hours": 6.5
+      "hours": 3.5
      }
     ],
     "hours": 40.0,
-    "remaining_after": 1462.5
+    "remaining_after": 1485.5
    },
    {
-    "week": 29,
+    "week": 32,
     "segments": [
      {
+      "id": "86bcw88tp",
+      "hours": 16.5
+     },
+     {
       "id": "86bcw88tq",
-      "hours": 5.5
+      "hours": 12.0
      },
      {
       "id": "86bcw88tr",
-      "hours": 16.0
+      "hours": 11.5
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 1445.5
+   },
+   {
+    "week": 33,
+    "segments": [
+     {
+      "id": "86bcw88tr",
+      "hours": 4.5
      },
      {
       "id": "86bcw88tv",
@@ -9889,18 +14787,7 @@
      },
      {
       "id": "86bcwwjcg",
-      "hours": 3.5
-     }
-    ],
-    "hours": 40.0,
-    "remaining_after": 1422.5
-   },
-   {
-    "week": 30,
-    "segments": [
-     {
-      "id": "86bcwwjcg",
-      "hours": 4.5
+      "hours": 8.0
      },
      {
       "id": "86bcy0nwt",
@@ -9916,7 +14803,18 @@
      },
      {
       "id": "86bcw87eb",
-      "hours": 12.0
+      "hours": 2.5
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 1405.5
+   },
+   {
+    "week": 34,
+    "segments": [
+     {
+      "id": "86bcw87eb",
+      "hours": 9.5
      },
      {
       "id": "86bcw87ed",
@@ -9928,18 +14826,7 @@
      },
      {
       "id": "86bcw87eh",
-      "hours": 3.5
-     }
-    ],
-    "hours": 40.0,
-    "remaining_after": 1382.5
-   },
-   {
-    "week": 31,
-    "segments": [
-     {
-      "id": "86bcw87eh",
-      "hours": 12.5
+      "hours": 16.0
      },
      {
       "id": "86bcw87em",
@@ -9947,7 +14834,18 @@
      },
      {
       "id": "86bcw87en",
-      "hours": 3.0
+      "hours": 1.5
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 1365.5
+   },
+   {
+    "week": 35,
+    "segments": [
+     {
+      "id": "86bcw87en",
+      "hours": 1.5
      },
      {
       "id": "86bcw87eq",
@@ -9968,14 +14866,7 @@
      {
       "id": "86bcwaygn",
       "hours": 0.5
-     }
-    ],
-    "hours": 40.0,
-    "remaining_after": 1342.5
-   },
-   {
-    "week": 32,
-    "segments": [
+     },
      {
       "id": "86bcwwjda",
       "hours": 4.0
@@ -10002,7 +14893,18 @@
      },
      {
       "id": "86bcxgvbf",
-      "hours": 4.0
+      "hours": 2.0
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 1325.5
+   },
+   {
+    "week": 36,
+    "segments": [
+     {
+      "id": "86bcxgvbf",
+      "hours": 2.0
      },
      {
       "id": "86bcw888f",
@@ -10010,182 +14912,171 @@
      },
      {
       "id": "86bcw888g",
-      "hours": 9.0
-     }
-    ],
-    "hours": 40.0,
-    "remaining_after": 1302.5
-   },
-   {
-    "week": 33,
-    "segments": [
-     {
-      "id": "86bcw888g",
-      "hours": 7.0
+      "hours": 16.0
      },
      {
       "id": "86bcw888h",
-      "hours": 33.0
+      "hours": 10.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 1262.5
-   },
-   {
-    "week": 34,
-    "segments": [
-     {
-      "id": "86bcw888h",
-      "hours": 27.0
-     },
-     {
-      "id": "86bcw888k",
-      "hours": 13.0
-     }
-    ],
-    "hours": 40.0,
-    "remaining_after": 1222.5
-   },
-   {
-    "week": 35,
-    "segments": [
-     {
-      "id": "86bcw888k",
-      "hours": 40.0
-     }
-    ],
-    "hours": 40.0,
-    "remaining_after": 1182.5
-   },
-   {
-    "week": 36,
-    "segments": [
-     {
-      "id": "86bcw888k",
-      "hours": 7.0
-     },
-     {
-      "id": "86bcw888n",
-      "hours": 33.0
-     }
-    ],
-    "hours": 40.0,
-    "remaining_after": 1142.5
+    "remaining_after": 1285.5
    },
    {
     "week": 37,
     "segments": [
      {
-      "id": "86bcw888n",
-      "hours": 27.0
-     },
-     {
-      "id": "86bcw888p",
-      "hours": 13.0
+      "id": "86bcw888h",
+      "hours": 40.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 1102.5
+    "remaining_after": 1245.5
    },
    {
     "week": 38,
     "segments": [
      {
-      "id": "86bcw888p",
-      "hours": 40.0
+      "id": "86bcw888h",
+      "hours": 10.0
+     },
+     {
+      "id": "86bcw888k",
+      "hours": 30.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 1062.5
+    "remaining_after": 1205.5
    },
    {
     "week": 39,
     "segments": [
      {
-      "id": "86bcw888p",
-      "hours": 7.0
+      "id": "86bcw888k",
+      "hours": 30.0
      },
      {
-      "id": "86bcw888r",
-      "hours": 33.0
+      "id": "86bcw888n",
+      "hours": 10.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 1022.5
+    "remaining_after": 1165.5
    },
    {
     "week": 40,
     "segments": [
      {
-      "id": "86bcw888r",
-      "hours": 27.0
-     },
-     {
-      "id": "86bcw888t",
-      "hours": 13.0
+      "id": "86bcw888n",
+      "hours": 40.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 982.5
+    "remaining_after": 1125.5
    },
    {
     "week": 41,
     "segments": [
      {
-      "id": "86bcw888t",
-      "hours": 40.0
+      "id": "86bcw888n",
+      "hours": 10.0
+     },
+     {
+      "id": "86bcw888p",
+      "hours": 30.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 942.5
+    "remaining_after": 1085.5
    },
    {
     "week": 42,
     "segments": [
      {
-      "id": "86bcw888t",
-      "hours": 7.0
+      "id": "86bcw888p",
+      "hours": 30.0
      },
      {
-      "id": "86bcw888w",
-      "hours": 33.0
+      "id": "86bcw888r",
+      "hours": 10.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 902.5
+    "remaining_after": 1045.5
    },
    {
     "week": 43,
     "segments": [
      {
-      "id": "86bcw888w",
-      "hours": 27.0
-     },
-     {
-      "id": "86bcw888x",
-      "hours": 13.0
+      "id": "86bcw888r",
+      "hours": 40.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 862.5
+    "remaining_after": 1005.5
    },
    {
     "week": 44,
     "segments": [
      {
-      "id": "86bcw888x",
-      "hours": 40.0
+      "id": "86bcw888r",
+      "hours": 10.0
+     },
+     {
+      "id": "86bcw888t",
+      "hours": 30.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 822.5
+    "remaining_after": 965.5
    },
    {
     "week": 45,
     "segments": [
      {
+      "id": "86bcw888t",
+      "hours": 30.0
+     },
+     {
+      "id": "86bcw888w",
+      "hours": 10.0
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 925.5
+   },
+   {
+    "week": 46,
+    "segments": [
+     {
+      "id": "86bcw888w",
+      "hours": 40.0
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 885.5
+   },
+   {
+    "week": 47,
+    "segments": [
+     {
+      "id": "86bcw888w",
+      "hours": 10.0
+     },
+     {
       "id": "86bcw888x",
-      "hours": 7.0
+      "hours": 30.0
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 845.5
+   },
+   {
+    "week": 48,
+    "segments": [
+     {
+      "id": "86bcw888x",
+      "hours": 30.0
      },
      {
       "id": "86bcw888y",
@@ -10193,151 +15084,167 @@
      },
      {
       "id": "86bcw88ex",
-      "hours": 12.0
-     },
-     {
-      "id": "86bcw88ey",
-      "hours": 20.0
+      "hours": 9.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 782.5
-   },
-   {
-    "week": 46,
-    "segments": [
-     {
-      "id": "86bcw88ey",
-      "hours": 40.0
-     }
-    ],
-    "hours": 40.0,
-    "remaining_after": 742.5
-   },
-   {
-    "week": 47,
-    "segments": [
-     {
-      "id": "86bcw88f1",
-      "hours": 40.0
-     }
-    ],
-    "hours": 40.0,
-    "remaining_after": 702.5
-   },
-   {
-    "week": 48,
-    "segments": [
-     {
-      "id": "86bcw88f1",
-      "hours": 20.0
-     },
-     {
-      "id": "86bcw88f2",
-      "hours": 20.0
-     }
-    ],
-    "hours": 40.0,
-    "remaining_after": 662.5
+    "remaining_after": 805.5
    },
    {
     "week": 49,
     "segments": [
      {
-      "id": "86bcw88f2",
-      "hours": 40.0
+      "id": "86bcw88ex",
+      "hours": 3.0
+     },
+     {
+      "id": "86bcw88ey",
+      "hours": 37.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 622.5
+    "remaining_after": 765.5
    },
    {
     "week": 50,
     "segments": [
      {
-      "id": "86bcw88f3",
-      "hours": 40.0
+      "id": "86bcw88ey",
+      "hours": 23.0
+     },
+     {
+      "id": "86bcw88f1",
+      "hours": 17.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 582.5
+    "remaining_after": 725.5
    },
    {
     "week": 51,
     "segments": [
      {
-      "id": "86bcw88f3",
-      "hours": 20.0
-     },
-     {
-      "id": "86bcw88f4",
-      "hours": 20.0
+      "id": "86bcw88f1",
+      "hours": 40.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 542.5
+    "remaining_after": 685.5
    },
    {
     "week": 52,
     "segments": [
      {
-      "id": "86bcw88f4",
-      "hours": 40.0
+      "id": "86bcw88f1",
+      "hours": 3.0
+     },
+     {
+      "id": "86bcw88f2",
+      "hours": 37.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 502.5
+    "remaining_after": 645.5
    },
    {
     "week": 53,
     "segments": [
      {
-      "id": "86bcw88f8",
-      "hours": 40.0
+      "id": "86bcw88f2",
+      "hours": 23.0
+     },
+     {
+      "id": "86bcw88f3",
+      "hours": 17.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 462.5
+    "remaining_after": 605.5
    },
    {
     "week": 54,
     "segments": [
      {
-      "id": "86bcw88f8",
-      "hours": 20.0
-     },
-     {
-      "id": "86bcw88f9",
-      "hours": 20.0
+      "id": "86bcw88f3",
+      "hours": 40.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 422.5
+    "remaining_after": 565.5
    },
    {
     "week": 55,
     "segments": [
      {
-      "id": "86bcw88f9",
-      "hours": 40.0
+      "id": "86bcw88f3",
+      "hours": 3.0
+     },
+     {
+      "id": "86bcw88f4",
+      "hours": 37.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 382.5
+    "remaining_after": 525.5
    },
    {
     "week": 56,
     "segments": [
      {
-      "id": "86bcw88fb",
+      "id": "86bcw88f4",
+      "hours": 23.0
+     },
+     {
+      "id": "86bcw88f8",
+      "hours": 17.0
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 485.5
+   },
+   {
+    "week": 57,
+    "segments": [
+     {
+      "id": "86bcw88f8",
       "hours": 40.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 342.5
+    "remaining_after": 445.5
    },
    {
-    "week": 57,
+    "week": 58,
+    "segments": [
+     {
+      "id": "86bcw88f8",
+      "hours": 3.0
+     },
+     {
+      "id": "86bcw88f9",
+      "hours": 37.0
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 405.5
+   },
+   {
+    "week": 59,
+    "segments": [
+     {
+      "id": "86bcw88f9",
+      "hours": 23.0
+     },
+     {
+      "id": "86bcw88fb",
+      "hours": 17.0
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 365.5
+   },
+   {
+    "week": 60,
     "segments": [
      {
       "id": "86bcw88fb",
@@ -10345,89 +15252,97 @@
      }
     ],
     "hours": 40.0,
-    "remaining_after": 302.5
+    "remaining_after": 325.5
    },
    {
-    "week": 58,
+    "week": 61,
     "segments": [
+     {
+      "id": "86bcw88fb",
+      "hours": 23.0
+     },
      {
       "id": "86bcw88fc",
       "hours": 16.0
      },
      {
       "id": "86bcw88fe",
-      "hours": 24.0
+      "hours": 1.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 262.5
-   },
-   {
-    "week": 59,
-    "segments": [
-     {
-      "id": "86bcw88fe",
-      "hours": 16.0
-     },
-     {
-      "id": "86bcw88fg",
-      "hours": 24.0
-     }
-    ],
-    "hours": 40.0,
-    "remaining_after": 222.5
-   },
-   {
-    "week": 60,
-    "segments": [
-     {
-      "id": "86bcw88fg",
-      "hours": 16.0
-     },
-     {
-      "id": "86bcw88fh",
-      "hours": 24.0
-     }
-    ],
-    "hours": 40.0,
-    "remaining_after": 182.5
-   },
-   {
-    "week": 61,
-    "segments": [
-     {
-      "id": "86bcw88fh",
-      "hours": 16.0
-     },
-     {
-      "id": "86bcw88fj",
-      "hours": 24.0
-     }
-    ],
-    "hours": 40.0,
-    "remaining_after": 142.5
+    "remaining_after": 285.5
    },
    {
     "week": 62,
     "segments": [
      {
-      "id": "86bcw88fn",
-      "hours": 24.0
+      "id": "86bcw88fe",
+      "hours": 39.0
      },
      {
-      "id": "86bcw88fq",
-      "hours": 16.0
+      "id": "86bcw88fg",
+      "hours": 1.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 102.5
+    "remaining_after": 245.5
    },
    {
     "week": 63,
     "segments": [
      {
+      "id": "86bcw88fg",
+      "hours": 39.0
+     },
+     {
+      "id": "86bcw88fh",
+      "hours": 1.0
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 205.5
+   },
+   {
+    "week": 64,
+    "segments": [
+     {
+      "id": "86bcw88fh",
+      "hours": 39.0
+     },
+     {
+      "id": "86bcw88fj",
+      "hours": 1.0
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 165.5
+   },
+   {
+    "week": 65,
+    "segments": [
+     {
+      "id": "86bcw88fj",
+      "hours": 23.0
+     },
+     {
+      "id": "86bcw88fn",
+      "hours": 17.0
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 125.5
+   },
+   {
+    "week": 66,
+    "segments": [
+     {
+      "id": "86bcw88fn",
+      "hours": 7.0
+     },
+     {
       "id": "86bcw88fq",
-      "hours": 8.0
+      "hours": 24.0
      },
      {
       "id": "86bcw88fr",
@@ -10435,37 +15350,37 @@
      },
      {
       "id": "86bcw88fu",
-      "hours": 26.0
+      "hours": 3.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 62.5
+    "remaining_after": 85.5
    },
    {
-    "week": 64,
+    "week": 67,
     "segments": [
      {
       "id": "86bcw88fu",
-      "hours": 14.0
+      "hours": 37.0
      },
      {
       "id": "86bcw885b",
-      "hours": 12.0
-     },
-     {
-      "id": "86bcw885d",
-      "hours": 14.0
+      "hours": 3.0
      }
     ],
     "hours": 40.0,
-    "remaining_after": 22.5
+    "remaining_after": 45.5
    },
    {
-    "week": 65,
+    "week": 68,
     "segments": [
      {
+      "id": "86bcw885b",
+      "hours": 9.0
+     },
+     {
       "id": "86bcw885d",
-      "hours": 2.0
+      "hours": 16.0
      },
      {
       "id": "86bcw885e",
@@ -10494,7 +15409,14 @@
      {
       "id": "86bcw898e",
       "hours": 0.25
-     },
+     }
+    ],
+    "hours": 40.0,
+    "remaining_after": 5.5
+   },
+   {
+    "week": 69,
+    "segments": [
      {
       "id": "86bcw898f",
       "hours": 0.25
@@ -10584,7 +15506,7 @@
       "hours": 0.25
      }
     ],
-    "hours": 22.5,
+    "hours": 5.5,
     "remaining_after": 0.0
    }
   ],
