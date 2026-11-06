@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-05T13:24:20+00:00",
+ "generated_at": "2026-11-06T10:47:36+00:00",
  "folder": {
   "id": "90149675055",
   "name": "Dimensions Mod"
@@ -10,7 +10,7 @@
    "color": "#b5bcc2",
    "done": false,
    "open": true,
-   "count": 316
+   "count": 333
   },
   {
    "status": "in process",
@@ -9411,6 +9411,404 @@
      "order": 10001793839865.03
     }
    ]
+  },
+  {
+   "id": "901423041034",
+   "name": "Templates",
+   "tasks": [
+    {
+     "id": "86bczf0c0",
+     "tracker_id": null,
+     "name": "TEMPLATE: New enemy type \u2014 [Enemy name]",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": null,
+     "estimate_hours": null,
+     "waits_on": [],
+     "links": [],
+     "url": "https://app.clickup.com/t/86bczf0c0",
+     "updated": 1793961605070,
+     "created": 1793961605070,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793961605.12
+    },
+    {
+     "id": "86bczf0e3",
+     "tracker_id": null,
+     "name": "[Enemy name] \u2014 01 Concept and design brief",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": "86bczf0c0",
+     "estimate_hours": null,
+     "waits_on": [],
+     "links": [],
+     "url": "https://app.clickup.com/t/86bczf0e3",
+     "updated": 1793961634419,
+     "created": 1793961634419,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793961634.445
+    },
+    {
+     "id": "86bczf0ec",
+     "tracker_id": null,
+     "name": "[Enemy name] \u2014 02 Mesh / model",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": "86bczf0c0",
+     "estimate_hours": null,
+     "waits_on": [
+      "86bczf0e3"
+     ],
+     "links": [],
+     "url": "https://app.clickup.com/t/86bczf0ec",
+     "updated": 1793961635229,
+     "created": 1793961635229,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793961635.27
+    },
+    {
+     "id": "86bczf0eg",
+     "tracker_id": null,
+     "name": "[Enemy name] \u2014 03 Rig / skeleton",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": "86bczf0c0",
+     "estimate_hours": null,
+     "waits_on": [
+      "86bczf0ec"
+     ],
+     "links": [],
+     "url": "https://app.clickup.com/t/86bczf0eg",
+     "updated": 1793961636269,
+     "created": 1793961636269,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793961636.373
+    },
+    {
+     "id": "86bczf0en",
+     "tracker_id": null,
+     "name": "[Enemy name] \u2014 04 Animations (idle, move, attack, hit, death, spawn)",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": "86bczf0c0",
+     "estimate_hours": null,
+     "waits_on": [
+      "86bczf0eg"
+     ],
+     "links": [],
+     "url": "https://app.clickup.com/t/86bczf0en",
+     "updated": 1793961637212,
+     "created": 1793961637212,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793961637.24
+    },
+    {
+     "id": "86bczf0er",
+     "tracker_id": null,
+     "name": "[Enemy name] \u2014 05 Textures",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": "86bczf0c0",
+     "estimate_hours": null,
+     "waits_on": [
+      "86bczf0ec"
+     ],
+     "links": [],
+     "url": "https://app.clickup.com/t/86bczf0er",
+     "updated": 1793961637964,
+     "created": 1793961637964,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793961637.996
+    },
+    {
+     "id": "86bczf0eu",
+     "tracker_id": null,
+     "name": "[Enemy name] \u2014 06 Materials",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": "86bczf0c0",
+     "estimate_hours": null,
+     "waits_on": [
+      "86bczf0er"
+     ],
+     "links": [],
+     "url": "https://app.clickup.com/t/86bczf0eu",
+     "updated": 1793961638715,
+     "created": 1793961638715,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793961638.752
+    },
+    {
+     "id": "86bczf0ez",
+     "tracker_id": null,
+     "name": "[Enemy name] \u2014 07 Character Blueprint / actor class",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": "86bczf0c0",
+     "estimate_hours": null,
+     "waits_on": [
+      "86bczf0en",
+      "86bczf0eu"
+     ],
+     "links": [],
+     "url": "https://app.clickup.com/t/86bczf0ez",
+     "updated": 1793961639676,
+     "created": 1793961639676,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793961639.701
+    },
+    {
+     "id": "86bczf0f2",
+     "tracker_id": null,
+     "name": "[Enemy name] \u2014 08 AI behavior tree and blackboard",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": "86bczf0c0",
+     "estimate_hours": null,
+     "waits_on": [
+      "86bczf0ez"
+     ],
+     "links": [],
+     "url": "https://app.clickup.com/t/86bczf0f2",
+     "updated": 1793961640450,
+     "created": 1793961640450,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793961640.49
+    },
+    {
+     "id": "86bczf0f7",
+     "tracker_id": null,
+     "name": "[Enemy name] \u2014 09 Stats (health, damage, resists, faction)",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": "86bczf0c0",
+     "estimate_hours": null,
+     "waits_on": [
+      "86bczf0ez"
+     ],
+     "links": [],
+     "url": "https://app.clickup.com/t/86bczf0f7",
+     "updated": 1793961641241,
+     "created": 1793961641241,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793961641.268
+    },
+    {
+     "id": "86bczf0fb",
+     "tracker_id": null,
+     "name": "[Enemy name] \u2014 10 Audio",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": "86bczf0c0",
+     "estimate_hours": null,
+     "waits_on": [
+      "86bczf0en"
+     ],
+     "links": [],
+     "url": "https://app.clickup.com/t/86bczf0fb",
+     "updated": 1793961642226,
+     "created": 1793961642226,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793961642.246
+    },
+    {
+     "id": "86bczf0ff",
+     "tracker_id": null,
+     "name": "[Enemy name] \u2014 11 VFX",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": "86bczf0c0",
+     "estimate_hours": null,
+     "waits_on": [
+      "86bczf0eu"
+     ],
+     "links": [],
+     "url": "https://app.clickup.com/t/86bczf0ff",
+     "updated": 1793961643971,
+     "created": 1793961643971,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793961644.045
+    },
+    {
+     "id": "86bczf0fg",
+     "tracker_id": null,
+     "name": "[Enemy name] \u2014 12 Loot / drops",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": "86bczf0c0",
+     "estimate_hours": null,
+     "waits_on": [
+      "86bczf0f7"
+     ],
+     "links": [],
+     "url": "https://app.clickup.com/t/86bczf0fg",
+     "updated": 1793961645106,
+     "created": 1793961645106,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793961645.254
+    },
+    {
+     "id": "86bczf0fh",
+     "tracker_id": null,
+     "name": "[Enemy name] \u2014 13 Spawn regions, world and dungeon assignment",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": "86bczf0c0",
+     "estimate_hours": null,
+     "waits_on": [
+      "86bczf0f7"
+     ],
+     "links": [],
+     "url": "https://app.clickup.com/t/86bczf0fh",
+     "updated": 1793961646065,
+     "created": 1793961646065,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793961646.102
+    },
+    {
+     "id": "86bczf0fk",
+     "tracker_id": null,
+     "name": "[Enemy name] \u2014 14 Pak-builder JSON entry",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": "86bczf0c0",
+     "estimate_hours": null,
+     "waits_on": [
+      "86bczf0f2",
+      "86bczf0fb",
+      "86bczf0ff",
+      "86bczf0fg",
+      "86bczf0fh"
+     ],
+     "links": [],
+     "url": "https://app.clickup.com/t/86bczf0fk",
+     "updated": 1793961646958,
+     "created": 1793961646958,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793961647.002
+    },
+    {
+     "id": "86bczf0fm",
+     "tracker_id": null,
+     "name": "[Enemy name] \u2014 15 In-game test",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": "86bczf0c0",
+     "estimate_hours": null,
+     "waits_on": [
+      "86bczf0fk"
+     ],
+     "links": [],
+     "url": "https://app.clickup.com/t/86bczf0fm",
+     "updated": 1793961647906,
+     "created": 1793961647906,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793961647.932
+    },
+    {
+     "id": "86bczf0fn",
+     "tracker_id": null,
+     "name": "[Enemy name] \u2014 16 Balance pass",
+     "status": "to do",
+     "status_color": "#b5bcc2",
+     "done": false,
+     "open": true,
+     "parent": "86bczf0c0",
+     "estimate_hours": null,
+     "waits_on": [
+      "86bczf0fm"
+     ],
+     "links": [],
+     "url": "https://app.clickup.com/t/86bczf0fn",
+     "updated": 1793961648729,
+     "created": 1793961648729,
+     "start": null,
+     "due": null,
+     "assigned": false,
+     "closed": null,
+     "order": 10001793961648.916
+    }
+   ]
   }
  ],
  "burndown": {
@@ -16086,6 +16484,108 @@
      "tracker_id": null,
      "name": "Milestone: Quality of life",
      "url": "https://app.clickup.com/t/86bcx2w9r"
+    },
+    {
+     "id": "86bczf0c0",
+     "tracker_id": null,
+     "name": "TEMPLATE: New enemy type \u2014 [Enemy name]",
+     "url": "https://app.clickup.com/t/86bczf0c0"
+    },
+    {
+     "id": "86bczf0e3",
+     "tracker_id": null,
+     "name": "[Enemy name] \u2014 01 Concept and design brief",
+     "url": "https://app.clickup.com/t/86bczf0e3"
+    },
+    {
+     "id": "86bczf0ec",
+     "tracker_id": null,
+     "name": "[Enemy name] \u2014 02 Mesh / model",
+     "url": "https://app.clickup.com/t/86bczf0ec"
+    },
+    {
+     "id": "86bczf0eg",
+     "tracker_id": null,
+     "name": "[Enemy name] \u2014 03 Rig / skeleton",
+     "url": "https://app.clickup.com/t/86bczf0eg"
+    },
+    {
+     "id": "86bczf0en",
+     "tracker_id": null,
+     "name": "[Enemy name] \u2014 04 Animations (idle, move, attack, hit, death, spawn)",
+     "url": "https://app.clickup.com/t/86bczf0en"
+    },
+    {
+     "id": "86bczf0er",
+     "tracker_id": null,
+     "name": "[Enemy name] \u2014 05 Textures",
+     "url": "https://app.clickup.com/t/86bczf0er"
+    },
+    {
+     "id": "86bczf0eu",
+     "tracker_id": null,
+     "name": "[Enemy name] \u2014 06 Materials",
+     "url": "https://app.clickup.com/t/86bczf0eu"
+    },
+    {
+     "id": "86bczf0ez",
+     "tracker_id": null,
+     "name": "[Enemy name] \u2014 07 Character Blueprint / actor class",
+     "url": "https://app.clickup.com/t/86bczf0ez"
+    },
+    {
+     "id": "86bczf0f2",
+     "tracker_id": null,
+     "name": "[Enemy name] \u2014 08 AI behavior tree and blackboard",
+     "url": "https://app.clickup.com/t/86bczf0f2"
+    },
+    {
+     "id": "86bczf0f7",
+     "tracker_id": null,
+     "name": "[Enemy name] \u2014 09 Stats (health, damage, resists, faction)",
+     "url": "https://app.clickup.com/t/86bczf0f7"
+    },
+    {
+     "id": "86bczf0fb",
+     "tracker_id": null,
+     "name": "[Enemy name] \u2014 10 Audio",
+     "url": "https://app.clickup.com/t/86bczf0fb"
+    },
+    {
+     "id": "86bczf0ff",
+     "tracker_id": null,
+     "name": "[Enemy name] \u2014 11 VFX",
+     "url": "https://app.clickup.com/t/86bczf0ff"
+    },
+    {
+     "id": "86bczf0fg",
+     "tracker_id": null,
+     "name": "[Enemy name] \u2014 12 Loot / drops",
+     "url": "https://app.clickup.com/t/86bczf0fg"
+    },
+    {
+     "id": "86bczf0fh",
+     "tracker_id": null,
+     "name": "[Enemy name] \u2014 13 Spawn regions, world and dungeon assignment",
+     "url": "https://app.clickup.com/t/86bczf0fh"
+    },
+    {
+     "id": "86bczf0fk",
+     "tracker_id": null,
+     "name": "[Enemy name] \u2014 14 Pak-builder JSON entry",
+     "url": "https://app.clickup.com/t/86bczf0fk"
+    },
+    {
+     "id": "86bczf0fm",
+     "tracker_id": null,
+     "name": "[Enemy name] \u2014 15 In-game test",
+     "url": "https://app.clickup.com/t/86bczf0fm"
+    },
+    {
+     "id": "86bczf0fn",
+     "tracker_id": null,
+     "name": "[Enemy name] \u2014 16 Balance pass",
+     "url": "https://app.clickup.com/t/86bczf0fn"
     }
    ],
    "cycles": [],
@@ -16093,6 +16593,6 @@
    "unknown_dependency": [],
    "blocked": []
   },
-  "unscheduled_count": 17
+  "unscheduled_count": 34
  }
 }
